@@ -1,0 +1,59 @@
+(footprint "LED Strip Connector" (version 20221018) (generator pcbnew)
+  (layer "F.Cu")
+  (attr through_hole)
+  (fp_text reference "REF**" (at -5 0.05 90 unlocked) (layer "F.SilkS")
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 5f4019c0-65f7-4a0e-8664-48e91606cda5)
+  )
+  (fp_text value "LED Strip Connector" (at -0.05 2.85 unlocked) (layer "F.Fab")
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp eb21f361-d82e-44dc-87ca-b2e13a787e31)
+  )
+  (fp_text user "GND" (at 2.7 -1.45 90 unlocked) (layer "F.SilkS")
+      (effects (font (size 1 1) (thickness 0.15)) (justify left))
+    (tstamp 15bdfead-f058-4a57-82c8-abed7cfccd22)
+  )
+  (fp_text user "DATA" (at -0.9 -1.45 90 unlocked) (layer "F.SilkS")
+      (effects (font (size 1 1) (thickness 0.15)) (justify left))
+    (tstamp 4b652aac-4565-41a9-a607-954b5e56ff0f)
+  )
+  (fp_text user "VCC" (at -2.7 -1.45 90 unlocked) (layer "F.SilkS")
+      (effects (font (size 1 1) (thickness 0.15)) (justify left))
+    (tstamp b77e2cc2-499d-4fdd-a1a9-e82ffa8d6366)
+  )
+  (fp_text user "B_DATA" (at 0.9 -1.45 90 unlocked) (layer "F.SilkS")
+      (effects (font (size 1 1) (thickness 0.15)) (justify left))
+    (tstamp bd865371-b8ea-45d4-8745-bd557ff22977)
+  )
+  (fp_text user "${REFERENCE}" (at -0.05 4.35 unlocked) (layer "F.Fab")
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 45ecd93b-59e5-4fe3-8707-73c4f61d7b45)
+  )
+  (fp_rect (start -3.85 -1.15) (end 3.85 1.25)
+    (stroke (width 0.12) (type default)) (fill none) (layer "F.SilkS") (tstamp 7a4fd4ed-aebe-4242-809f-66d7f65435db))
+  (pad "1" thru_hole rect (at -2.7 0.05) (size 1.524 1.524) (drill 0.762) (layers "*.Cu" "*.Mask")
+    (clearance 0.138) (tstamp b69caddf-c238-4ca4-9dac-276a95e199f0))
+  (pad "2" thru_hole circle (at -0.9 0.05) (size 1.524 1.524) (drill 0.762) (layers "*.Cu" "*.Mask")
+    (clearance 0.138) (tstamp 5706d34e-90d2-44b8-b037-f4374c3b8851))
+  (pad "3" thru_hole circle (at 0.9 0.05) (size 1.524 1.524) (drill 0.762) (layers "*.Cu" "*.Mask")
+    (clearance 0.138) (tstamp 3d267722-ced1-40c5-b8ab-6b79daa42a39))
+  (pad "4" thru_hole circle (at 2.7 0.05) (size 1.524 1.524) (drill 0.762) (layers "*.Cu" "*.Mask")
+    (clearance 0.138) (tstamp 35c1f56e-322d-4e39-a1d9-f6412acd9803))
+  (group "" (id f16a771b-07b2-4891-be48-78d00b0b8d42)
+    (members
+      35c1f56e-322d-4e39-a1d9-f6412acd9803
+      3d267722-ced1-40c5-b8ab-6b79daa42a39
+      5706d34e-90d2-44b8-b037-f4374c3b8851
+      7a4fd4ed-aebe-4242-809f-66d7f65435db
+      b69caddf-c238-4ca4-9dac-276a95e199f0
+    )
+  )
+  (group "" (id a0f2a48c-bafc-4c6e-9ac1-31dc8fec17e9)
+    (members
+      15bdfead-f058-4a57-82c8-abed7cfccd22
+      4b652aac-4565-41a9-a607-954b5e56ff0f
+      b77e2cc2-499d-4fdd-a1a9-e82ffa8d6366
+      bd865371-b8ea-45d4-8745-bd557ff22977
+    )
+  )
+)

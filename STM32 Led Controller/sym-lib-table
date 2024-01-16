@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "mini360")(type "Legacy")(uri "C:/Users/user/Documents/KiCad/libraries/kicad-misc-components/Mini360_step_down_converter/Mini360_lib/mini360.lib")(options "")(descr ""))
+)
