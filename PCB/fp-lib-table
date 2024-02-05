@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "Mini360_step-down")(type "KiCad")(uri "C:/Users/user/Documents/KiCad/libraries/kicad-misc-components/Mini360_step_down_converter/Mini360_step-down.pretty")(options "")(descr ""))
   (lib (name "Custom Connectors")(type "KiCad")(uri "${KIPRJMOD}/Custom Connectors.pretty")(options "")(descr ""))
+  (lib (name "Custom")(type "KiCad")(uri "${KIPRJMOD}/custom.pretty")(options "")(descr ""))
 )
