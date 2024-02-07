@@ -1,0 +1,6 @@
+../USB_Device/App/usbd_dfu_flash.c:154:10:FLASH_If_Init	1
+../USB_Device/App/usbd_dfu_flash.c:177:10:FLASH_If_Erase	1
+../USB_Device/App/usbd_dfu_flash.c:192:10:FLASH_If_Write	1
+../USB_Device/App/usbd_dfu_flash.c:206:10:FLASH_If_Read	1
+../USB_Device/App/usbd_dfu_flash.c:221:10:FLASH_If_GetStatus	1
+../USB_Device/App/usbd_dfu_flash.c:165:10:FLASH_If_DeInit	1

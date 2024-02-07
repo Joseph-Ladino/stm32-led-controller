@@ -67,7 +67,7 @@ static void MX_USART1_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+const char *data = "Hello World from USB CDC\n";
 /* USER CODE END 0 */
 
 /**
@@ -105,15 +105,19 @@ int main(void)
   MX_USB_Device_Init();
   /* USER CODE BEGIN 2 */
 
+  // enable W5500 ethernet controller
+  HAL_GPIO_WritePin(ETH_RSTn_GPIO_Port, ETH_RSTn_Pin, GPIO_PIN_RESET);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
+  while (1) {
+	  HAL_GPIO_TogglePin(TEST_LED_GPIO_Port, TEST_LED_Pin);\
+	  HAL_Delay(500);
+	  CDC_Transmit_FS(data, strlen(data));
     /* USER CODE END WHILE */
-	  HAL_GPIO_WritePin(ETH_RSTn_GPIO_Port, ETH_RSTn_Pin, GPIO_PIN_SET);
-	  HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_SET);
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -372,8 +376,8 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOA, ETH_SCSn_Pin|ETH_RSTn_Pin|LED_PWR_EN_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|TEST_LED_Pin|ESP_IO2_Pin|ESP_IO0_Pin
-                          |ESP_EN_Pin|ESP_RSTn_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, TEST_LED_Pin|ESP_IO2_Pin|ESP_IO0_Pin|ESP_EN_Pin
+                          |ESP_RSTn_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : ETH_INTn_Pin */
   GPIO_InitStruct.Pin = ETH_INTn_Pin;
@@ -388,10 +392,10 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PB0 TEST_LED_Pin ESP_IO2_Pin ESP_IO0_Pin
-                           ESP_EN_Pin ESP_RSTn_Pin */
-  GPIO_InitStruct.Pin = GPIO_PIN_0|TEST_LED_Pin|ESP_IO2_Pin|ESP_IO0_Pin
-                          |ESP_EN_Pin|ESP_RSTn_Pin;
+  /*Configure GPIO pins : TEST_LED_Pin ESP_IO2_Pin ESP_IO0_Pin ESP_EN_Pin
+                           ESP_RSTn_Pin */
+  GPIO_InitStruct.Pin = TEST_LED_Pin|ESP_IO2_Pin|ESP_IO0_Pin|ESP_EN_Pin
+                          |ESP_RSTn_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
