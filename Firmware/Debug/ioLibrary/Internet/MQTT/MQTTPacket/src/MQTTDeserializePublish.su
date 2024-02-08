@@ -1,0 +1,2 @@
+../ioLibrary/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.c:36:5:MQTTDeserialize_publish	56	static
+../ioLibrary/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.c:82:5:MQTTDeserialize_ack	56	static
