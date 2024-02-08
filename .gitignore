@@ -2,6 +2,7 @@
 **.d
 **.o
 **.su
+**.mk
 Firmware/Release/*
 Firmware/Debug/*
 !**.elf
