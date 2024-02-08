@@ -29,4 +29,12 @@ Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src \
 Middlewares/ST/STM32_USB_Device_Library/Core/Src \
 USB_Device/App \
 USB_Device/Target \
+ioLibrary/Ethernet/W5100 \
+ioLibrary/Ethernet/W5100S \
+ioLibrary/Ethernet/W5200 \
+ioLibrary/Ethernet/W5300 \
+ioLibrary/Ethernet/W5500 \
+ioLibrary/Ethernet \
+ioLibrary/Internet/MQTT \
+ioLibrary/Internet/MQTT/MQTTPacket/src \
 

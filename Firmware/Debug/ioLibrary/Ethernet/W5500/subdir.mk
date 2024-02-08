@@ -5,29 +5,23 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../USB_Device/App/usb_device.c \
-../USB_Device/App/usbd_cdc_if.c \
-../USB_Device/App/usbd_desc.c 
+../ioLibrary/Ethernet/W5500/w5500.c 
 
 OBJS += \
-./USB_Device/App/usb_device.o \
-./USB_Device/App/usbd_cdc_if.o \
-./USB_Device/App/usbd_desc.o 
+./ioLibrary/Ethernet/W5500/w5500.o 
 
 C_DEPS += \
-./USB_Device/App/usb_device.d \
-./USB_Device/App/usbd_cdc_if.d \
-./USB_Device/App/usbd_desc.d 
+./ioLibrary/Ethernet/W5500/w5500.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-USB_Device/App/%.o USB_Device/App/%.su USB_Device/App/%.cyclo: ../USB_Device/App/%.c USB_Device/App/subdir.mk
+ioLibrary/Ethernet/W5500/%.o ioLibrary/Ethernet/W5500/%.su ioLibrary/Ethernet/W5500/%.cyclo: ../ioLibrary/Ethernet/W5500/%.c ioLibrary/Ethernet/W5500/subdir.mk
 	arm-none-eabi-gcc "$<" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B0xx -c -I../USB_Device/App -I../USB_Device/Target -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../ioLibrary/Ethernet -I../ioLibrary/Ethernet/W5500 -I../ioLibrary/Internet/MQTT -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@"
 
-clean: clean-USB_Device-2f-App
+clean: clean-ioLibrary-2f-Ethernet-2f-W5500
 
-clean-USB_Device-2f-App:
-	-$(RM) ./USB_Device/App/usb_device.cyclo ./USB_Device/App/usb_device.d ./USB_Device/App/usb_device.o ./USB_Device/App/usb_device.su ./USB_Device/App/usbd_cdc_if.cyclo ./USB_Device/App/usbd_cdc_if.d ./USB_Device/App/usbd_cdc_if.o ./USB_Device/App/usbd_cdc_if.su ./USB_Device/App/usbd_desc.cyclo ./USB_Device/App/usbd_desc.d ./USB_Device/App/usbd_desc.o ./USB_Device/App/usbd_desc.su
+clean-ioLibrary-2f-Ethernet-2f-W5500:
+	-$(RM) ./ioLibrary/Ethernet/W5500/w5500.cyclo ./ioLibrary/Ethernet/W5500/w5500.d ./ioLibrary/Ethernet/W5500/w5500.o ./ioLibrary/Ethernet/W5500/w5500.su
 
-.PHONY: clean-USB_Device-2f-App
+.PHONY: clean-ioLibrary-2f-Ethernet-2f-W5500
 

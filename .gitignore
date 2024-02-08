@@ -1,0 +1,7 @@
+**.cyclo
+**.d
+**.o
+**.su
+Firmware/Release/*
+Firmware/Debug/*
+!**.elf
