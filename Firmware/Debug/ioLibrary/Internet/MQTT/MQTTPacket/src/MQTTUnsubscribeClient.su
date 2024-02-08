@@ -1,0 +1,3 @@
+../ioLibrary/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.c:28:5:MQTTSerialize_unsubscribeLength	24	static
+../ioLibrary/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.c:49:5:MQTTSerialize_unsubscribe	56	static
+../ioLibrary/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.c:92:5:MQTTDeserialize_unsuback	48	static
