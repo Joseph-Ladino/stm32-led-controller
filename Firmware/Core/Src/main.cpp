@@ -25,6 +25,8 @@
 #include "W5500Interface.hpp"
 #include "usbd_cdc_if.h"
 #include "stdarg.h"
+#include "stdio.h"
+#include "globals.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -34,6 +36,20 @@ using namespace JOELIB;
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+int _write(int file, char *ptr, int len) {
+    static uint8_t rc = USBD_OK;
+
+    do {
+        rc = CDC_Transmit_FS((uint8_t*)ptr, len);
+    } while (USBD_BUSY == rc);
+
+    if (USBD_FAIL == rc) {
+        /// NOTE: Should never reach here.
+        /// TODO: Handle this error.
+        return 0;
+    }
+    return len;
+}
 
 /* USER CODE END PD */
 
@@ -420,26 +436,26 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void USB_Printf(const char *fmt, ...) {
-#ifdef DEBUG
-	static char buff[2048];
-	va_list args;
-	va_start(args, fmt);
-	vsnprintf(buff, sizeof(buff), fmt, args);
-//    HAL_UART_Transmit(&huart1, (uint8_t*)buff, strlen(buff),
-//                      HAL_MAX_DELAY);
-
-	uint8_t result, tries = 0;
-	do {
-		result = CDC_Transmit_FS((unsigned char*) buff,
-				strlen((const char*) buff));
-		if (result != USBD_OK)
-			HAL_Delay(1);
-	} while (result != USBD_OK && ++tries < 3);
-
-	va_end(args);
-#endif
-}
+//void USB_Printf(const char *fmt, ...) {
+//#ifdef DEBUG_SB_OLD
+//	static char buff[2048];
+//	va_list args;
+//	va_start(args, fmt);
+//	vsnprintf(buff, sizeof(buff), fmt, args);
+////    HAL_UART_Transmit(&huart1, (uint8_t*)buff, strlen(buff),
+////                      HAL_MAX_DELAY);
+//
+//	uint8_t result, tries = 0;
+//	do {
+//		result = CDC_Transmit_FS((unsigned char*) buff,
+//				strlen((const char*) buff));
+//		if (result != USBD_OK)
+//			HAL_Delay(1);
+//	} while (result != USBD_OK && ++tries < 3);
+//
+//	va_end(args);
+//#endif
+//}
 /* USER CODE END 4 */
 
 /**

@@ -11,11 +11,13 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+#include "stdio.h"
 
 #define ETH_DEBUG
 
 
-void USB_Printf(const char* format, ...);
+//void USB_Printf(const char* format, ...);
+#define USB_Printf(...) printf(__VA_ARGS__)
 
 
 #ifdef __cplusplus

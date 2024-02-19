@@ -73,7 +73,7 @@ void W5500_Interface::writeByte(uint8_t byte) {
 
 void W5500_Interface::CB_DHCP_IPAssigned() {
 	instance().ipAssigned = true;
-	ETH_Printf("Callback: IP assigned! Leased time: %d sec\n",
+	ETH_Printf("Callback: IP assigned! Leased time: %ul sec\n",
 			getDHCPLeasetime());
 }
 
