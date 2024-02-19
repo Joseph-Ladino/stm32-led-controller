@@ -55,17 +55,16 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+void SystemClock_Config(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define ETH_INTn_Pin GPIO_PIN_3
-#define ETH_INTn_GPIO_Port GPIOA
-#define ETH_INTn_EXTI_IRQn EXTI2_3_IRQn
-#define ETH_SCSn_Pin GPIO_PIN_4
-#define ETH_SCSn_GPIO_Port GPIOA
-#define ETH_RSTn_Pin GPIO_PIN_5
+#define ETH_RSTn_Pin GPIO_PIN_0
 #define ETH_RSTn_GPIO_Port GPIOA
+#define ETH_INTn_Pin GPIO_PIN_1
+#define ETH_INTn_GPIO_Port GPIOA
+#define ETH_SCSn_Pin GPIO_PIN_7
+#define ETH_SCSn_GPIO_Port GPIOA
 #define TEST_LED_Pin GPIO_PIN_1
 #define TEST_LED_GPIO_Port GPIOB
 #define LED_PWR_OK_Pin GPIO_PIN_15
