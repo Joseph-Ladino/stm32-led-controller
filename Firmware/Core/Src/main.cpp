@@ -1,20 +1,20 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2024 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file           : main.c
+ * @brief          : Main program body
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2024 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -22,12 +22,14 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "W5500Interface.hpp"
+#include "usbd_cdc_if.h"
+#include "stdarg.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+using namespace JOELIB;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -42,8 +44,6 @@
 
 /* Private variables ---------------------------------------------------------*/
 SPI_HandleTypeDef hspi1;
-DMA_HandleTypeDef hdma_spi1_rx;
-DMA_HandleTypeDef hdma_spi1_tx;
 
 TIM_HandleTypeDef htim1;
 DMA_HandleTypeDef hdma_tim1_ch1;
@@ -51,7 +51,7 @@ DMA_HandleTypeDef hdma_tim1_ch1;
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
-
+volatile W5500_Interface &eth = W5500_Interface::instance();
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -67,7 +67,7 @@ static void MX_USART1_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-const char *data = "Hello World from USB CDC\n";
+
 /* USER CODE END 0 */
 
 /**
@@ -105,21 +105,29 @@ int main(void)
   MX_USB_Device_Init();
   /* USER CODE BEGIN 2 */
 
-  // enable W5500 ethernet controller
-  HAL_GPIO_WritePin(ETH_RSTn_GPIO_Port, ETH_RSTn_Pin, GPIO_PIN_RESET);
+#ifdef DEBUG
+	// allow time for terminal to connect to USB
+	HAL_Delay(1000);
+#endif
+
+	W5500_Interface::init(&hspi1, ETH_SCSn_GPIO_Port,
+			ETH_SCSn_Pin, ETH_RSTn_GPIO_Port, ETH_RSTn_Pin);
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1) {
-	  HAL_GPIO_TogglePin(TEST_LED_GPIO_Port, TEST_LED_Pin);\
-	  HAL_Delay(500);
-	  CDC_Transmit_FS(data, strlen(data));
+	while (1) {
+		HAL_GPIO_TogglePin(TEST_LED_GPIO_Port, TEST_LED_Pin);
+//	  HAL_GPIO_TogglePin(ETH_RSTn_GPIO_Port, ETH_RSTn_Pin);
+		HAL_Delay(500);
+
+//	  USB_Printf(data);
+//	  eth.triggerReset();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  }
+	}
   /* USER CODE END 3 */
 }
 
@@ -190,13 +198,13 @@ static void MX_SPI1_Init(void)
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
   hspi1.Init.CRCPolynomial = 7;
   hspi1.Init.CRCLength = SPI_CRC_LENGTH_DATASIZE;
-  hspi1.Init.NSSPMode = SPI_NSS_PULSE_ENABLE;
+  hspi1.Init.NSSPMode = SPI_NSS_PULSE_DISABLE;
   if (HAL_SPI_Init(&hspi1) != HAL_OK)
   {
     Error_Handler();
@@ -350,9 +358,6 @@ static void MX_DMA_Init(void)
   /* DMA1_Channel1_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
-  /* DMA1_Channel2_3_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(DMA1_Channel2_3_IRQn);
 
 }
 
@@ -373,24 +378,27 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, ETH_SCSn_Pin|ETH_RSTn_Pin|LED_PWR_EN_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, ETH_RSTn_Pin|ETH_SCSn_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, TEST_LED_Pin|ESP_IO2_Pin|ESP_IO0_Pin|ESP_EN_Pin
                           |ESP_RSTn_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : ETH_INTn_Pin */
-  GPIO_InitStruct.Pin = ETH_INTn_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(ETH_INTn_GPIO_Port, &GPIO_InitStruct);
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(LED_PWR_EN_GPIO_Port, LED_PWR_EN_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : ETH_SCSn_Pin ETH_RSTn_Pin LED_PWR_EN_Pin */
-  GPIO_InitStruct.Pin = ETH_SCSn_Pin|ETH_RSTn_Pin|LED_PWR_EN_Pin;
+  /*Configure GPIO pins : ETH_RSTn_Pin ETH_SCSn_Pin LED_PWR_EN_Pin */
+  GPIO_InitStruct.Pin = ETH_RSTn_Pin|ETH_SCSn_Pin|LED_PWR_EN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : ETH_INTn_Pin */
+  GPIO_InitStruct.Pin = ETH_INTn_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(ETH_INTn_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : TEST_LED_Pin ESP_IO2_Pin ESP_IO0_Pin ESP_EN_Pin
                            ESP_RSTn_Pin */
@@ -407,16 +415,31 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(LED_PWR_OK_GPIO_Port, &GPIO_InitStruct);
 
-  /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI2_3_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(EXTI2_3_IRQn);
-
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
+void USB_Printf(const char *fmt, ...) {
+#ifdef DEBUG
+	static char buff[2048];
+	va_list args;
+	va_start(args, fmt);
+	vsnprintf(buff, sizeof(buff), fmt, args);
+//    HAL_UART_Transmit(&huart1, (uint8_t*)buff, strlen(buff),
+//                      HAL_MAX_DELAY);
 
+	uint8_t result, tries = 0;
+	do {
+		result = CDC_Transmit_FS((unsigned char*) buff,
+				strlen((const char*) buff));
+		if (result != USBD_OK)
+			HAL_Delay(1);
+	} while (result != USBD_OK && ++tries < 3);
+
+	va_end(args);
+#endif
+}
 /* USER CODE END 4 */
 
 /**
@@ -426,11 +449,11 @@ static void MX_GPIO_Init(void)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
-  __disable_irq();
-  while (1)
-  {
-  }
+	/* User can add his own implementation to report the HAL error return state */
+	__disable_irq();
+	USB_Printf("\n\n\tERROR OCCURED\n\n");
+	while (1) {
+	}
   /* USER CODE END Error_Handler_Debug */
 }
 
