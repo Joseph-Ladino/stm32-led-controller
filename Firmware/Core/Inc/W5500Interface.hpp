@@ -17,53 +17,58 @@
 
 namespace JOELIB {
 
-	// singleton
-	class W5500_Interface {
-	private:
+// singleton
+class W5500_Interface {
+private:
 
-		SPI_HandleTypeDef* spi;
+	SPI_HandleTypeDef *spi;
 
-		GPIO_TypeDef *chipSelectPort;
-		uint16_t chipSelectPin;
-		GPIO_TypeDef *resetPort;
-		uint16_t resetPin;
-
+	GPIO_TypeDef *chipSelectPort;
+	uint16_t chipSelectPin;
+	GPIO_TypeDef *resetPort;
+	uint16_t resetPin;
 
 #define ETH_BUFFER_SIZE 2048
-		// 1K should be enough, see https://forum.wiznet.io/t/topic/1612/2
-		volatile uint8_t DHCPBuffer[ETH_BUFFER_SIZE];
-		// 1K seems to be enough for this buffer as well
-		volatile uint8_t DNSBuffer[ETH_BUFFER_SIZE];
 
-		wiz_NetInfo netInfo;
-		bool ipAssigned = false;
+	bool ipAssigned = false;
 
-		static void readBuffer(uint8_t* buf, uint16_t len);
-		static void writeBuffer(uint8_t* buf, uint16_t len);
+	static void readBuffer(uint8_t *buf, uint16_t len);
+	static void writeBuffer(uint8_t *buf, uint16_t len);
 
-		static uint8_t readByte();
-		static void writeByte(uint8_t byte);
+	static uint8_t readByte();
+	static void writeByte(uint8_t byte);
 
-		static void enableChipSelect();
-		static void disableChipSelect();
+	static void enableChipSelect();
+	static void disableChipSelect();
 
-		static void CB_DHCP_IPAssigned();
-		static void CB_DHCP_IPConflict();
+	static void CB_DHCP_IPAssigned();
+	static void CB_DHCP_IPConflict();
 
-		W5500_Interface();
+	void initChip();
+	void initDHCP();
+
+	W5500_Interface();
 //		virtual ~W5500_Interface();
 
-	public:
+public:
+	// 1K should be enough, see https://forum.wiznet.io/t/topic/1612/2
+	inline static volatile uint8_t DHCPBuffer[ETH_BUFFER_SIZE];
+	// 1K seems to be enough for this buffer as well
+	inline static volatile uint8_t DNSBuffer[ETH_BUFFER_SIZE];
 
-		static W5500_Interface& instance();
-		static W5500_Interface& init(SPI_HandleTypeDef* spi, GPIO_TypeDef* chipSelectPort, uint16_t chipSelectPin, GPIO_TypeDef* resetPort, uint16_t resetPin);
+	static W5500_Interface& instance();
+	static void init(SPI_HandleTypeDef *spi,
+			GPIO_TypeDef *chipSelectPort, uint16_t chipSelectPin,
+			GPIO_TypeDef *resetPort, uint16_t resetPin);
 
-		void triggerReset();
+	void triggerReset();
+	wiz_NetInfo getNetInfo();
+	void setNetInfo(wiz_NetInfo* netInfo);
 
-		// prevent copies of singleton being generated
-		W5500_Interface(W5500_Interface const&) = delete;
-		void  operator=(W5500_Interface const&) = delete;
-	};
+	// prevent copies of singleton being generated
+	W5500_Interface(W5500_Interface const&) = delete;
+	void operator=(W5500_Interface const&) = delete;
+};
 
 }
 

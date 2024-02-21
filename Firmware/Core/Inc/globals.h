@@ -13,6 +13,7 @@ extern "C" {
 #endif
 #include "stdio.h"
 
+#define USE_USB_DEBUG
 #define ETH_DEBUG
 
 
