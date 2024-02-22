@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdtprojectproperties>
+  <section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.IncludePaths">
+    <language id="org.eclipse.cdt.core.assembly" name="s,S"/>
+    <language id="org.eclipse.cdt.core.gcc" name="C Source File">
+      <includepath>USB_Device/App</includepath>
+      <includepath>USB_Device/Target</includepath>
+      <includepath>Core/Inc</includepath>
+      <includepath>Drivers/STM32G0xx_HAL_Driver/Inc</includepath>
+      <includepath>Drivers/STM32G0xx_HAL_Driver/Inc/Legacy</includepath>
+      <includepath>Middlewares/ST/STM32_USB_Device_Library/Core/Inc</includepath>
+      <includepath>Drivers/CMSIS/Device/ST/STM32G0xx/Include</includepath>
+      <includepath>Drivers/CMSIS/Include</includepath>
+      <includepath>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc</includepath>
+      <includepath>ioLibrary/Ethernet</includepath>
+      <includepath>ioLibrary/Ethernet/W5500</includepath>
+      <includepath>ioLibrary/Internet/MQTT</includepath>
+      <includepath>ioLibrary/Internet/DHCP</includepath>
+      <includepath>ioLibrary/Internet/DNS</includepath>
+      <includepath>Core/JEthernet/include</includepath>
+    </language>
+    <language id="org.eclipse.cdt.core.g++" name="C++ Source File">
+      <includepath>USB_Device/App</includepath>
+      <includepath>USB_Device/Target</includepath>
+      <includepath>Core/Inc</includepath>
+      <includepath>Drivers/STM32G0xx_HAL_Driver/Inc</includepath>
+      <includepath>Drivers/STM32G0xx_HAL_Driver/Inc/Legacy</includepath>
+      <includepath>Middlewares/ST/STM32_USB_Device_Library/Core/Inc</includepath>
+      <includepath>Drivers/CMSIS/Device/ST/STM32G0xx/Include</includepath>
+      <includepath>Drivers/CMSIS/Include</includepath>
+      <includepath>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc</includepath>
+      <includepath>ioLibrary/Ethernet</includepath>
+      <includepath>ioLibrary/Ethernet/W5500</includepath>
+      <includepath>ioLibrary/Internet/MQTT</includepath>
+      <includepath>ioLibrary/Internet/DHCP</includepath>
+      <includepath>ioLibrary/Internet/DNS</includepath>
+    </language>
+    <language name="Object File"/>
+  </section>
+</cdtprojectproperties>

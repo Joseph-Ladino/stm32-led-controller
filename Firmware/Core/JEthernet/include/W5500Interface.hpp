@@ -14,8 +14,31 @@
 #include "socket.h"
 #include "dhcp.h"
 #include "dns.h"
+#include "EthernetHC.hpp";
 
 namespace JOELIB {
+
+class W5500HC : public EthernetHC {
+private:
+	SPI_HandleTypeDef *spi;
+	GPIO_TypeDef *chipSelectPort, *resetPort;
+	uint16_t chipSelectPin, resetPin;
+
+	void enableChipSelect();
+
+	void initChip();
+	void initDHCP();
+
+public:
+
+	void setConfig(NetConfig& netConfig) override;
+	NetConfig getConfig() override;
+
+	NetConfig getConfigFromDHCP() override;
+	bool applyConfigFromDHCP() override;
+	bool phyAvailable() override;
+	bool init() override;
+};
 
 // singleton
 class W5500_Interface {

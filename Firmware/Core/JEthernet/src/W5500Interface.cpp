@@ -213,4 +213,29 @@ void W5500_Interface::setNetInfo(wiz_NetInfo *netInfo) {
 	wizchip_setnetinfo(netInfo);
 }
 
+void W5500HC::enableChipSelect() {
+
+}
+
+void W5500HC::initChip() {
+//	static W5500HC* obj = this;
+	auto genEnableChipSelect = [this]() mutable {
+		static W5500HC *ptr = this;
+		return [](void) {
+			HAL_GPIO_WritePin(ptr->chipSelectPort, ptr->chipSelectPin,
+					GPIO_PIN_RESET);
+		};
+	};
+
+	auto genDisableChipSelect = [this]() mutable {
+		static W5500HC *ptr = this;
+		return [](void) {
+			HAL_GPIO_WritePin(ptr->chipSelectPort, ptr->chipSelectPin,
+					GPIO_PIN_SET);
+		};
+	};
+
+	reg_wizchip_cs_cbfunc(genEnableChipSelect(), genDisableChipSelect());
+}
+
 } /* namespace JOELIB */
