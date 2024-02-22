@@ -25,6 +25,9 @@
 #include "W5500Interface.hpp"
 #include "usbd_cdc_if.h"
 #include "stdarg.h"
+#include "stdio.h"
+#include "globals.h"
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -34,7 +37,25 @@ using namespace JOELIB;
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+extern "C" {
+int _write(int file, char *ptr, int len) {
 
+#ifdef USE_USB_DEBUG
+	static uint8_t rc = USBD_OK;
+
+	do {
+		rc = CDC_Transmit_FS((uint8_t*) ptr, len);
+	} while (USBD_BUSY == rc);
+
+	if (USBD_FAIL == rc) {
+		HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_SET);
+		return 0;
+	}
+#endif
+	return len;
+}
+
+}
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -46,12 +67,14 @@ using namespace JOELIB;
 SPI_HandleTypeDef hspi1;
 
 TIM_HandleTypeDef htim1;
+TIM_HandleTypeDef htim3;
 DMA_HandleTypeDef hdma_tim1_ch1;
 
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
 volatile W5500_Interface &eth = W5500_Interface::instance();
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -61,13 +84,21 @@ static void MX_DMA_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_USART1_UART_Init(void);
+static void MX_TIM3_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 
+	if(htim == &htim3) {
+		DHCP_time_handler();
+//		USB_Printf("1 sec int\n"); // NOTE: CDC uses interrupts so this will never return
+		HAL_GPIO_TogglePin(TEST_LED_GPIO_Port, TEST_LED_Pin);
+	}
+}
 /* USER CODE END 0 */
 
 /**
@@ -103,24 +134,28 @@ int main(void)
   MX_SPI1_Init();
   MX_USART1_UART_Init();
   MX_USB_Device_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
 
 #ifdef DEBUG
 	// allow time for terminal to connect to USB
 	HAL_Delay(1000);
 #endif
+	printf("\n\n");
+
+	HAL_TIM_Base_Start_IT(&htim3);
 
 	W5500_Interface::init(&hspi1, ETH_SCSn_GPIO_Port,
-			ETH_SCSn_Pin, ETH_RSTn_GPIO_Port, ETH_RSTn_Pin);
+	ETH_SCSn_Pin, ETH_RSTn_GPIO_Port, ETH_RSTn_Pin);
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 	while (1) {
-		HAL_GPIO_TogglePin(TEST_LED_GPIO_Port, TEST_LED_Pin);
-//	  HAL_GPIO_TogglePin(ETH_RSTn_GPIO_Port, ETH_RSTn_Pin);
-		HAL_Delay(500);
+//		HAL_GPIO_TogglePin(TEST_LED_GPIO_Port, TEST_LED_Pin);
+////	  HAL_GPIO_TogglePin(ETH_RSTn_GPIO_Port, ETH_RSTn_Pin);
+//		HAL_Delay(500);
 
 //	  USB_Printf(data);
 //	  eth.triggerReset();
@@ -298,6 +333,51 @@ static void MX_TIM1_Init(void)
 }
 
 /**
+  * @brief TIM3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM3_Init(void)
+{
+
+  /* USER CODE BEGIN TIM3_Init 0 */
+
+  /* USER CODE END TIM3_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM3_Init 1 */
+
+  /* USER CODE END TIM3_Init 1 */
+  htim3.Instance = TIM3;
+  htim3.Init.Prescaler = 1023;
+  htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim3.Init.Period = 62499;
+  htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim3, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM3_Init 2 */
+
+  /* USER CODE END TIM3_Init 2 */
+
+}
+
+/**
   * @brief USART1 Initialization Function
   * @param None
   * @retval None
@@ -420,26 +500,26 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void USB_Printf(const char *fmt, ...) {
-#ifdef DEBUG
-	static char buff[2048];
-	va_list args;
-	va_start(args, fmt);
-	vsnprintf(buff, sizeof(buff), fmt, args);
-//    HAL_UART_Transmit(&huart1, (uint8_t*)buff, strlen(buff),
-//                      HAL_MAX_DELAY);
-
-	uint8_t result, tries = 0;
-	do {
-		result = CDC_Transmit_FS((unsigned char*) buff,
-				strlen((const char*) buff));
-		if (result != USBD_OK)
-			HAL_Delay(1);
-	} while (result != USBD_OK && ++tries < 3);
-
-	va_end(args);
-#endif
-}
+//void USB_Printf(const char *fmt, ...) {
+//#ifdef DEBUG_SB_OLD
+//	static char buff[2048];
+//	va_list args;
+//	va_start(args, fmt);
+//	vsnprintf(buff, sizeof(buff), fmt, args);
+////    HAL_UART_Transmit(&huart1, (uint8_t*)buff, strlen(buff),
+////                      HAL_MAX_DELAY);
+//
+//	uint8_t result, tries = 0;
+//	do {
+//		result = CDC_Transmit_FS((unsigned char*) buff,
+//				strlen((const char*) buff));
+//		if (result != USBD_OK)
+//			HAL_Delay(1);
+//	} while (result != USBD_OK && ++tries < 3);
+//
+//	va_end(args);
+//#endif
+//}
 /* USER CODE END 4 */
 
 /**
@@ -453,6 +533,7 @@ void Error_Handler(void)
 	__disable_irq();
 	USB_Printf("\n\n\tERROR OCCURED\n\n");
 	while (1) {
+
 	}
   /* USER CODE END Error_Handler_Debug */
 }
