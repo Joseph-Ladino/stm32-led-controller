@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "W5500Interface.hpp"
+#include "W5500HC.hpp"
 #include "usbd_cdc_if.h"
 #include "stdarg.h"
 #include "stdio.h"
@@ -73,8 +73,8 @@ DMA_HandleTypeDef hdma_tim1_ch1;
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
-volatile W5500_Interface &eth = W5500_Interface::instance();
-
+//volatile W5500_Interface &eth = W5500_Interface::instance();
+JOELIB::W5500HC eth;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -94,7 +94,7 @@ static void MX_TIM3_Init(void);
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 
 	if(htim == &htim3) {
-		DHCP_time_handler();
+		eth.oneSecondPassed();
 //		USB_Printf("1 sec int\n"); // NOTE: CDC uses interrupts so this will never return
 		HAL_GPIO_TogglePin(TEST_LED_GPIO_Port, TEST_LED_Pin);
 	}
@@ -145,20 +145,19 @@ int main(void)
 
 	HAL_TIM_Base_Start_IT(&htim3);
 
-	W5500_Interface::init(&hspi1, ETH_SCSn_GPIO_Port,
-	ETH_SCSn_Pin, ETH_RSTn_GPIO_Port, ETH_RSTn_Pin);
+	W5500Config conf {&hspi1, ETH_SCSn_GPIO_Port,
+			ETH_SCSn_Pin, ETH_RSTn_GPIO_Port, ETH_RSTn_Pin};
+
+	if(!eth.init(&conf)) USB_Printf("Unable to initiate chip\n");
+	if(!eth.waitForPhyLink()) USB_Printf("Unable to get PHY link connection\n");
+	if(!eth.enableDHCP()) USB_Printf("Unable to initiate DHCP\n");
+
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 	while (1) {
-//		HAL_GPIO_TogglePin(TEST_LED_GPIO_Port, TEST_LED_Pin);
-////	  HAL_GPIO_TogglePin(ETH_RSTn_GPIO_Port, ETH_RSTn_Pin);
-//		HAL_Delay(500);
-
-//	  USB_Printf(data);
-//	  eth.triggerReset();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

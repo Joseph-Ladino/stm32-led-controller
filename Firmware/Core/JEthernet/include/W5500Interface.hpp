@@ -14,34 +14,19 @@
 #include "socket.h"
 #include "dhcp.h"
 #include "dns.h"
-#include "EthernetHC.hpp";
 
 namespace JOELIB {
 
-class W5500HC : public EthernetHC {
-private:
-	SPI_HandleTypeDef *spi;
-	GPIO_TypeDef *chipSelectPort, *resetPort;
-	uint16_t chipSelectPin, resetPin;
+#ifdef ETH_DEBUG
+#define ETH_Printf(...) USB_Printf(__VA_ARGS__)
+#else
+#define ETH_Printf(...)
+#endif
 
-	void enableChipSelect();
 
-	void initChip();
-	void initDHCP();
-
-public:
-
-	void setConfig(NetConfig& netConfig) override;
-	NetConfig getConfig() override;
-
-	NetConfig getConfigFromDHCP() override;
-	bool applyConfigFromDHCP() override;
-	bool phyAvailable() override;
-	bool init() override;
-};
 
 // singleton
-class W5500_Interface {
+class W5500Interface {
 private:
 
 	SPI_HandleTypeDef *spi;
@@ -51,7 +36,7 @@ private:
 	GPIO_TypeDef *resetPort;
 	uint16_t resetPin;
 
-#define ETH_BUFFER_SIZE 2048
+#define ETH_BUFFER_SIZE 1024
 
 	bool ipAssigned = false;
 
@@ -67,20 +52,29 @@ private:
 	static void CB_DHCP_IPAssigned();
 	static void CB_DHCP_IPConflict();
 
-	void initChip();
-	void initDHCP();
 
-	W5500_Interface();
+	W5500Interface() = default;
 //		virtual ~W5500_Interface();
 
 public:
+	enum class Socket : uint8_t {
+		DHCP = 0,
+		DNS,
+		HTTP
+	};
+
+	bool initChip();
+	bool initDHCP();
+	bool initDNS();
+
+	void printNetInfo();
 	// 1K should be enough, see https://forum.wiznet.io/t/topic/1612/2
 	inline static volatile uint8_t DHCPBuffer[ETH_BUFFER_SIZE];
 	// 1K seems to be enough for this buffer as well
 	inline static volatile uint8_t DNSBuffer[ETH_BUFFER_SIZE];
 
-	static W5500_Interface& instance();
-	static void init(SPI_HandleTypeDef *spi,
+	static W5500Interface& instance();
+	static bool init(SPI_HandleTypeDef *spi,
 			GPIO_TypeDef *chipSelectPort, uint16_t chipSelectPin,
 			GPIO_TypeDef *resetPort, uint16_t resetPin);
 
@@ -89,8 +83,8 @@ public:
 	void setNetInfo(wiz_NetInfo* netInfo);
 
 	// prevent copies of singleton being generated
-	W5500_Interface(W5500_Interface const&) = delete;
-	void operator=(W5500_Interface const&) = delete;
+	W5500Interface(W5500Interface const&) = delete;
+	void operator=(W5500Interface const&) = delete;
 };
 
 }
