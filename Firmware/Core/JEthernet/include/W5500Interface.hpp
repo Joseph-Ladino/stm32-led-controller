@@ -10,6 +10,7 @@
 #define W5500INTERFACE_H_
 
 #include "stm32g0xx_hal.h"
+#include "EthernetHC.hpp"
 #include "globals.h"
 #include "socket.h"
 #include "dhcp.h"
@@ -23,64 +24,58 @@ namespace JOELIB {
 #define ETH_Printf(...)
 #endif
 
+#ifndef ETH_BUFFER_SIZE
+#define ETH_BUFFER_SIZE 1 // kb
+#endif
 
-
-// singleton
-class W5500Interface {
-private:
-
+struct W5500Config {
 	SPI_HandleTypeDef *spi;
-
 	GPIO_TypeDef *chipSelectPort;
 	uint16_t chipSelectPin;
 	GPIO_TypeDef *resetPort;
 	uint16_t resetPin;
+};
 
-#define ETH_BUFFER_SIZE 1024
-
-	bool ipAssigned = false;
-
-	static void readBuffer(uint8_t *buf, uint16_t len);
-	static void writeBuffer(uint8_t *buf, uint16_t len);
-
-	static uint8_t readByte();
-	static void writeByte(uint8_t byte);
-
-	static void enableChipSelect();
-	static void disableChipSelect();
-
-	static void CB_DHCP_IPAssigned();
-	static void CB_DHCP_IPConflict();
+// singleton
+class W5500Interface {
+private:
+	inline static W5500Config config;
+	inline static bool ipAssigned = false;
 
 
 	W5500Interface() = default;
 //		virtual ~W5500_Interface();
 
 public:
+
+	friend class W5500HC;
+
 	enum class Socket : uint8_t {
 		DHCP = 0,
 		DNS,
 		HTTP
 	};
 
+	friend void readBuffer(uint8_t *buf, uint16_t len);
+	friend void writeBuffer(uint8_t *buf, uint16_t len);
+
+	friend uint8_t readByte();
+	friend void writeByte(uint8_t byte);
+
+	friend void enableChipSelect();
+	friend void disableChipSelect();
+
+	friend void CB_DHCP_IPAssigned();
+	friend void CB_DHCP_IPConflict();
+
 	bool initChip();
-	bool initDHCP();
+	bool initDHCP(NetConfig *conf);
 	bool initDNS();
 
-	void printNetInfo();
-	// 1K should be enough, see https://forum.wiznet.io/t/topic/1612/2
-	inline static volatile uint8_t DHCPBuffer[ETH_BUFFER_SIZE];
-	// 1K seems to be enough for this buffer as well
-	inline static volatile uint8_t DNSBuffer[ETH_BUFFER_SIZE];
-
 	static W5500Interface& instance();
-	static bool init(SPI_HandleTypeDef *spi,
-			GPIO_TypeDef *chipSelectPort, uint16_t chipSelectPin,
-			GPIO_TypeDef *resetPort, uint16_t resetPin);
+	static bool init(W5500Config config);
 
 	void triggerReset();
-	wiz_NetInfo getNetInfo();
-	void setNetInfo(wiz_NetInfo* netInfo);
 
 	// prevent copies of singleton being generated
 	W5500Interface(W5500Interface const&) = delete;

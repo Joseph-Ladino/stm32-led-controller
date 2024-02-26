@@ -14,14 +14,6 @@
 
 namespace JOELIB {
 
-struct W5500Config {
-	SPI_HandleTypeDef *spi;
-	GPIO_TypeDef *chipSelectPort;
-	uint16_t chipSelectPin;
-	GPIO_TypeDef *resetPort;
-	uint16_t resetPin;
-};
-
 class W5500HC: public EthernetHC {
 private:
 	W5500Config hwConfig;

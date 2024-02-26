@@ -23,11 +23,12 @@ void W5500HC::setConfig(NetConfig &netConfig) {
 	MemcopyConfig(wNetInfo.dns, netConfig.dns);
 	MemcopyConfig(wNetInfo.mac, netConfig.macAddress);
 
-	hw.setNetInfo(&wNetInfo);
+	wizchip_setnetinfo(&wNetInfo);
 }
 
 NetConfig W5500HC::getConfig() {
-	wiz_NetInfo wNetInfo = hw.getNetInfo();
+	wiz_NetInfo wNetInfo;
+	wizchip_getnetinfo(&wNetInfo);
 
 	NetConfig netConfig = { 0 };
 	MemcopyConfig(netConfig.ipAddress, wNetInfo.ip);
@@ -53,18 +54,21 @@ bool W5500HC::phyLinkStatus() {
 }
 
 bool W5500HC::enableDHCP() {
-	if(!(initSuccess && phyLinkStatus())) return false;
+	if (!(initSuccess && phyLinkStatus()))
+		return false;
 
-	dhcpSuccess = hw.initDHCP();
+	NetConfig netConfig = getConfig();
+	dhcpSuccess = hw.initDHCP(&netConfig);
+
+	if(dhcpSuccess) setConfig(netConfig);
+
 	return dhcpSuccess;
 }
 
 bool W5500HC::init(void *config) {
 	hwConfig = *(W5500Config*) config;
-	bool ret = hw.init(hwConfig.spi, hwConfig.chipSelectPort,
-			hwConfig.chipSelectPin, hwConfig.resetPort, hwConfig.resetPin);
+	initSuccess = hw.init(hwConfig);
 
-	initSuccess = ret;
 	return initSuccess;
 }
 

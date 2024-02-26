@@ -117,14 +117,14 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="USB_Device"/>
-						<entry excluding="*.h" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="ioLibrary/Ethernet"/>
 						<entry excluding="*.h" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="ioLibrary/Internet/DHCP"/>
-						<entry excluding="*.h" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="ioLibrary/Internet/DNS"/>
 						<entry excluding="*.h" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="ioLibrary/Internet/MQTT"/>
+						<entry excluding="*.h" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="ioLibrary/Internet/DNS"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
+						<entry excluding="*.h" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="ioLibrary/Ethernet"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

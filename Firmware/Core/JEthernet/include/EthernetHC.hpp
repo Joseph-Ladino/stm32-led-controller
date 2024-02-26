@@ -11,12 +11,12 @@
 #include "stm32g0xx_hal.h"
 
 struct NetConfig {
-	uint8_t macAddress[6];    ///< Source Mac Address
-	uint8_t ipAddress[4];     ///< Source IP Address
-	uint8_t subnet[4];     ///< Subnet Mask
-	uint8_t gateway[4];     ///< Gateway IP Address
-	uint8_t dns[4];    ///< DNS server IP Address
-	bool dhcpEnabled;  ///< true - DHCP, false - Static
+	uint8_t macAddress[6];
+	uint8_t ipAddress[4];
+	uint8_t subnet[4];
+	uint8_t gateway[4];
+	uint8_t dns[4];
+	bool dhcpEnabled;
 };
 
 class EthernetHC {
