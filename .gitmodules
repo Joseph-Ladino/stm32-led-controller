@@ -1,3 +1,6 @@
 [submodule "Firmware/ioLibrary"]
 	path = Firmware/ioLibrary
 	url = https://github.com/Wiznet/ioLibrary_Driver.git
+[submodule "Firmware/MQTT"]
+	path = Firmware/MQTT
+	url = https://github.com/eclipse/paho.mqtt.embedded-c.git
