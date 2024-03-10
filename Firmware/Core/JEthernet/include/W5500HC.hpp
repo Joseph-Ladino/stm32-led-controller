@@ -12,7 +12,7 @@
 #include "W5500Interface.hpp"
 #include "EthernetHC.hpp"
 
-namespace JOELIB {
+namespace JETHERNET {
 
 class W5500HC: public EthernetHC {
 private:

@@ -16,7 +16,7 @@
 #include "dhcp.h"
 #include "dns.h"
 
-namespace JOELIB {
+namespace JETHERNET {
 
 #ifdef ETH_DEBUG
 #define ETH_Printf(...) USB_Printf(__VA_ARGS__)
@@ -42,7 +42,6 @@ private:
 	inline static W5500Config config;
 	inline static bool ipAssigned = false;
 
-
 	W5500Interface() = default;
 //		virtual ~W5500_Interface();
 
@@ -50,10 +49,10 @@ public:
 
 	friend class W5500HC;
 
-	enum class Socket : uint8_t {
+	enum class Socket : int {
 		DHCP = 0,
-		DNS,
-		HTTP
+		DNS  = 1,
+		MQTT = 2
 	};
 
 	friend void readBuffer(uint8_t *buf, uint16_t len);

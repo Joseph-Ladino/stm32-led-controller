@@ -11,7 +11,7 @@
 #include "wizchip_conf.h"
 #include "dhcp.h"
 
-namespace JOELIB {
+namespace JETHERNET {
 
 #define MemcopyConfig(member1, member2) memcpy(member1, member2, (sizeof(member1) < sizeof(member2)) ? sizeof(member1) : sizeof(member2))
 

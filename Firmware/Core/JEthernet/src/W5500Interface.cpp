@@ -16,7 +16,7 @@
 //#endif
 //}
 
-namespace JOELIB {
+namespace JETHERNET {
 
 #define getInst() W5500Interface::instance()
 

@@ -28,11 +28,14 @@
 #include "stdio.h"
 #include "globals.h"
 #include <string.h>
+#include "MQTTClient.h"
+#include "mqtt_interface.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-using namespace JOELIB;
+using namespace JETHERNET;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -74,7 +77,9 @@ UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
 //volatile W5500_Interface &eth = W5500_Interface::instance();
-JOELIB::W5500HC eth;
+JETHERNET::W5500HC eth;
+
+Network mqttNetwork;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -152,6 +157,11 @@ int main(void)
 	if(!eth.waitForPhyLink()) USB_Printf("Unable to get PHY link connection\n");
 	if(!eth.enableDHCP()) USB_Printf("Unable to initiate DHCP\n");
 
+//	uint8_t mqttServerIp[4] = { 192, 168, 7, 221 };
+//	uint16_t mqttServerPort = 8883;
+//
+//	NewNetwork(&mqttNetwork, (int)W5500Interface::Socket::MQTT);
+//	ConnectNetwork(&mqttNetwork, mqttServerIp, mqttServerPort);
 
   /* USER CODE END 2 */
 
