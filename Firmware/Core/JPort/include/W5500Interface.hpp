@@ -41,6 +41,7 @@ class W5500Interface {
 private:
 	inline static W5500Config config;
 	inline static bool ipAssigned = false;
+	inline static bool dhcpEnabled = false;
 
 	W5500Interface() = default;
 //		virtual ~W5500_Interface();

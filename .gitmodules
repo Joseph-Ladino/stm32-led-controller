@@ -3,4 +3,4 @@
 	url = https://github.com/Wiznet/ioLibrary_Driver.git
 [submodule "Firmware/MQTT"]
 	path = Firmware/MQTT
-	url = https://github.com/eclipse/paho.mqtt.embedded-c.git
+	url = https://github.com/Joseph-Ladino/paho.mqtt.embedded-c.git

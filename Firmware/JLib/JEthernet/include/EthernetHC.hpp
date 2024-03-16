@@ -8,18 +8,13 @@
 #ifndef INC_ETHERNETHC_H_
 #define INC_ETHERNETHC_H_
 
-#include "stm32g0xx_hal.h"
+#include <stdint.h>
+#include "NetConfig.hpp"
 
-struct NetConfig {
-	uint8_t macAddress[6];
-	uint8_t ipAddress[4];
-	uint8_t subnet[4];
-	uint8_t gateway[4];
-	uint8_t dns[4];
-	bool dhcpEnabled;
-};
+namespace JETHERNET {
 
-class EthernetHC {
+class EthernetSOCK;
+class EthernetHC { // @suppress("Class has a virtual method and non-virtual destructor")
 protected:
 	bool dhcpSuccess = false;
 	bool initSuccess = false;
@@ -38,7 +33,17 @@ public:
 	virtual bool waitForPhyLink() = 0;
 	virtual bool init(void*) = 0;
 
-	~EthernetHC() = default;
+	// new 03/14
+//	virtual void deinit() = 0;
+//	virtual bool enableDNS() = 0;
+//	virtual bool domainToIP(const char * domain, uint8_t* ipOut) = 0;
+	virtual EthernetSOCK& getFreeSocket() = 0;
+//	virtual void openSocket(EthernetSOCK& sock) = 0;
+//	virtual void closeSocket(EthernetSOCK& sock) = 0;
+
+	virtual ~EthernetHC() {};
 };
+
+}
 
 #endif /* INC_ETHERNETHC_H_ */
