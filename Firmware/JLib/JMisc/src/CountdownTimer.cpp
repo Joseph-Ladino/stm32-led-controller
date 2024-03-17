@@ -8,7 +8,7 @@
 #include "CountdownTimer.hpp"
 
 void CountdownTimer::countdown_ms(uint32_t ms) {
-	endMs = HAL_GetTick() + ms;
+	endMs = tick + ms;
 }
 
 void CountdownTimer::countdown(uint16_t sec) {
@@ -16,8 +16,6 @@ void CountdownTimer::countdown(uint16_t sec) {
 }
 
 uint32_t CountdownTimer::left_ms() {
-	auto tick = HAL_GetTick();
-
 	if (expired())
 		return 0;
 
@@ -27,7 +25,11 @@ uint32_t CountdownTimer::left_ms() {
 bool CountdownTimer::expired() {
 	// handles overflow
 	// https://luckyresistor.me/2019/07/10/real-time-counter-and-integer-overflow/
-	return int32_t(endMs - HAL_GetTick()) < 1;
+	return int32_t(endMs - tick) < 1;
+}
+
+void CountdownTimer::msTick() {
+	tick++;
 }
 
 CountdownTimer::CountdownTimer() {

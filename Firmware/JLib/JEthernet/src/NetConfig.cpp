@@ -5,6 +5,7 @@
  *      Author: user
  */
 
+#include <cstdio>
 #include "NetConfig.hpp"
 
 namespace JETHERNET {

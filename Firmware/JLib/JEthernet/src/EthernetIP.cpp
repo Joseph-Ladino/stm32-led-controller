@@ -4,8 +4,8 @@
  *  Created on: Mar 15, 2024
  *      Author: user
  */
+#include <cstdio>
 #include "EthernetIP.hpp"
-#include "stdio.h"
 
 namespace JETHERNET {
 
@@ -35,6 +35,14 @@ EthernetIP::EthernetIP(uint8_t n0, uint8_t n1, uint8_t n2, uint8_t n3) {
 
 EthernetIP::EthernetIP(uint32_t ip) :
 		num(ip) {
+}
+
+bool EthernetIP::operator ==(const EthernetIP &rhs) const {
+	return num == rhs.num;
+}
+
+bool EthernetIP::operator !=(const EthernetIP &rhs) const {
+	return num != rhs.num;
 }
 
 }

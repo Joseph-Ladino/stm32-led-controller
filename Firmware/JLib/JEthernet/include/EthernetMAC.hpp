@@ -7,7 +7,7 @@
 
 #ifndef JETHERNET_INCLUDE_ETHERNETMAC_HPP_
 #define JETHERNET_INCLUDE_ETHERNETMAC_HPP_
-#include "stdint.h"
+#include <cstdint>
 
 namespace JETHERNET {
 
@@ -17,15 +17,16 @@ struct EthernetMAC {
 		uint8_t raw[6];
 	};
 
-
 	// returns max 17 chars (18 w/ null char)
-	int cString(char* buf);
+	int cString(char *buf);
 
 	uint8_t& operator[](uint8_t x);
 	const uint8_t& operator[](uint8_t x) const;
 
 	EthernetMAC& operator=(const EthernetMAC &rhs) = default;
 	EthernetMAC& operator=(const uint32_t mac);
+	bool operator==(const EthernetMAC &rhs) const;
+	bool operator!=(const EthernetMAC &rhs) const;
 
 	EthernetMAC();
 	EthernetMAC(EthernetMAC &addr) = default;

@@ -36,6 +36,7 @@ struct W5500Config {
 	uint16_t resetPin;
 };
 
+class W5500Socket;
 // singleton
 class W5500Interface {
 private:
@@ -50,12 +51,6 @@ public:
 
 	friend class W5500HC;
 
-	enum class Socket : int {
-		DHCP = 0,
-		DNS  = 1,
-		MQTT = 2
-	};
-
 	friend void readBuffer(uint8_t *buf, uint16_t len);
 	friend void writeBuffer(uint8_t *buf, uint16_t len);
 
@@ -69,7 +64,7 @@ public:
 	friend void CB_DHCP_IPConflict();
 
 	bool initChip();
-	bool initDHCP(NetConfig *conf);
+	bool initDHCP(W5500Socket& sock, NetConfig* conf, uint16_t timeoutMs);
 	bool initDNS();
 
 	static W5500Interface& instance();

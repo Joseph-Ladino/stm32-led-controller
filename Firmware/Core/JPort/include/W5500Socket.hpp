@@ -8,7 +8,7 @@
 #ifndef JETHERNET_INCLUDE_W5500SOCKET_HPP_
 #define JETHERNET_INCLUDE_W5500SOCKET_HPP_
 
-#include "stdint.h"
+#include <cstdint>
 #include "EthernetSOCK.hpp"
 
 namespace JETHERNET {
@@ -17,13 +17,20 @@ class W5500HC;
 class W5500Socket : public EthernetSOCK {
 private:
 	W5500HC* ethHC;
-	int socketNum;
+	int socketNum = -1;
+	EthernetConnectMode connectMode;
 
 public:
-	void open() override;
-	void close(void* sock) override;
+	bool open(EthernetIP ip, uint16_t port, EthernetConnectMode mode) override;
+	bool close() override;
+	bool connectTCP(EthernetIP ip, uint16_t port) override;
+	bool disconnect() override;
 	bool write(uint8_t* dataIn, uint16_t len) override;
 	bool read(uint8_t* dataOut, uint16_t len) override;
+
+	int getSocketNum() const;
+	bool isConnected() const;
+	operator bool() const;
 
 	friend class W5500HC;
 

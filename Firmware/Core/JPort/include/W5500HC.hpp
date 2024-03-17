@@ -9,13 +9,20 @@
 #define JETHERNET_INCLUDE_W5500HC_HPP_
 
 #include "W5500Interface.hpp"
-#include "EthernetHC.hpp"
 #include "W5500Socket.hpp"
 #include "EthernetIP.hpp"
+#include "EthernetHC.hpp"
 
 namespace JETHERNET {
 
 class W5500HC : public EthernetHC {
+protected:
+	bool dhcpSuccess = false;
+	bool initSuccess = false;
+	bool phyTimeout = false;
+
+	W5500Socket sockets[8];
+
 private:
 	W5500Config hwConfig;
 	W5500Interface &hw = W5500Interface::instance();
@@ -23,14 +30,13 @@ private:
 	bool dhcpEnabled;
 
 public:
-	void oneSecondPassed() override;
-
 	void setConfig(NetConfig &netConfig) override;
 	NetConfig getConfig() override;
 
-	bool enableDHCP() override;
+	void msTick() override;
+	bool enableDHCP(uint16_t timeoutMs) override;
 	bool phyLinkStatus() override;
-	bool waitForPhyLink() override;
+	bool waitForLink(uint16_t timeoutMs) override;
 	bool init(void*) override;
 
 	W5500Socket& getFreeSocket() ;

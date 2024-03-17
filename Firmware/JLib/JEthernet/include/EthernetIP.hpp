@@ -8,7 +8,7 @@
 #ifndef JETHERNET_INCLUDE_ETHERNETIP_HPP_
 #define JETHERNET_INCLUDE_ETHERNETIP_HPP_
 
-#include "stdint.h"
+#include <cstdint>
 
 namespace JETHERNET {
 
@@ -19,13 +19,15 @@ struct EthernetIP {
 	};
 
 	// returns max 15 chars (16 w/ null char)
-	int cString(char* buf);
+	int cString(char *buf);
 
 	uint8_t& operator[](uint8_t x);
 	const uint8_t& operator[](uint8_t x) const;
 
 	EthernetIP& operator=(const EthernetIP &rhs) = default;
 	EthernetIP& operator=(const uint32_t ip);
+	bool operator==(const EthernetIP &rhs) const;
+	bool operator!=(const EthernetIP &rhs) const;
 
 	EthernetIP() = default;
 	EthernetIP(EthernetIP &addr) = default;

@@ -7,7 +7,8 @@
 
 #ifndef JETHERNET_INCLUDE_COUNTDOWNTIMER_HPP_
 #define JETHERNET_INCLUDE_COUNTDOWNTIMER_HPP_
-#include "stm32g0xx_hal.h"
+
+#include <cstdint>
 
 struct CountdownTimer {
 
@@ -20,8 +21,13 @@ struct CountdownTimer {
 	CountdownTimer();
 	CountdownTimer(uint32_t ms);
 
+	static void msTick();
+
 private:
-	uint32_t endMs;
+	uint32_t endMs = 0;
+
+protected:
+	inline static uint32_t tick = 0;
 };
 
 #endif /* JETHERNET_INCLUDE_COUNTDOWNTIMER_HPP_ */

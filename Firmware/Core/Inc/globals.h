@@ -11,7 +11,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-#include "stdio.h"
+#include <cstdio>
 
 #define USE_USB_DEBUG
 #define ETH_DEBUG

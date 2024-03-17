@@ -8,29 +8,21 @@
 #ifndef INC_ETHERNETHC_H_
 #define INC_ETHERNETHC_H_
 
-#include <stdint.h>
+#include <cstdint>
 #include "NetConfig.hpp"
 
 namespace JETHERNET {
 
 class EthernetSOCK;
 class EthernetHC { // @suppress("Class has a virtual method and non-virtual destructor")
-protected:
-	bool dhcpSuccess = false;
-	bool initSuccess = false;
-	bool phyTimeout = false;
-	uint32_t phyTimeoutSeconds = 10;
-
-	volatile uint32_t secondsCounter = 0;
-
 public:
-	virtual void oneSecondPassed() = 0;
 	virtual void setConfig(NetConfig& netConfig) = 0;
 	virtual NetConfig getConfig() = 0;
 
-	virtual bool enableDHCP() = 0;
+	virtual void msTick() = 0;
+	virtual bool enableDHCP(uint16_t timeoutMs) = 0;
 	virtual bool phyLinkStatus() = 0;
-	virtual bool waitForPhyLink() = 0;
+	virtual bool waitForLink(uint16_t timeoutMs) = 0;
 	virtual bool init(void*) = 0;
 
 	// new 03/14

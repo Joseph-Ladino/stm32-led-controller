@@ -5,10 +5,13 @@
  *      Author: Joseph Ladino
  */
 
+#include <cstring>
+
 #include "W5500Interface.hpp"
+#include "W5500Socket.hpp"
+#include "CountdownTimer.hpp"
 #include "globals.h"
 #include "wizchip_conf.h"
-#include "string.h"
 
 //void ETH_Printf(const char * fmt, ...) {
 //#ifdef ETH_Debug
@@ -110,23 +113,15 @@ bool W5500Interface::initChip() {
 	return true;
 }
 
-bool W5500Interface::initDHCP(NetConfig *conf) {
+bool W5500Interface::initDHCP(W5500Socket& sock, NetConfig *conf, uint16_t timeoutMs) {
 	ETH_Printf("Calling DHCP_init()...\n");
 	setSHAR(conf->mac.raw);
-	DHCP_init((uint8_t) Socket::DHCP, (uint8_t*) DHCPBuffer);
+	DHCP_init(sock.getSocketNum(), (uint8_t*) DHCPBuffer);
 
 	ETH_Printf("Calling DHCP_run()...\n");
 
-	uint8_t dhcpRet = 0;
-	uint16_t dhcpTries = 0;
-
-	while (dhcpTries < 5) {
-		dhcpRet = DHCP_run();
-		if (dhcpRet == DHCP_FAILED)
-			dhcpTries++;
-		else if (dhcpRet == DHCP_IP_LEASED)
-			break;
-	}
+	CountdownTimer timer(timeoutMs);
+	while(!(DHCP_run() == DHCP_IP_LEASED || timer.expired())) ;
 
 	if (!ipAssigned) {
 		ETH_Printf("\nIP was not assigned :(\n");

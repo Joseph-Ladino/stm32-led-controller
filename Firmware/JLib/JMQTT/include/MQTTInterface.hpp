@@ -7,10 +7,12 @@
 
 #ifndef JETHERNET_INCLUDE_MQTTINTERFACE_HPP_
 #define JETHERNET_INCLUDE_MQTTINTERFACE_HPP_
+
 #define MQTTCLIENT_QOS2 2
+
+#include <cstdio>
 #include "MQTTClient.h"
 #include "CountdownTimer.hpp"
-#include "stdint.h"
 
 namespace JMQTT {
 

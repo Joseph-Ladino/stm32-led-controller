@@ -10,7 +10,6 @@
 
 #include "EthernetMAC.hpp"
 #include "EthernetIP.hpp"
-#include "stdio.h"
 
 namespace JETHERNET {
 

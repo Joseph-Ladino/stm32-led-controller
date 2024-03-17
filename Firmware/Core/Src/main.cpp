@@ -6,7 +6,7 @@
  ******************************************************************************
  * @attention
  *
- * Copyright (c) 2024 STMicroelectronics.
+ * Copyright (c) 2024 Joseph-Ladino.
  * All rights reserved.
  *
  * This software is licensed under terms that can be found in the LICENSE file
@@ -22,9 +22,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <cstdarg>
+#include <cstdio>
+
 #include "usbd_cdc_if.h"
-#include "stdarg.h"
-#include "stdio.h"
 #include "globals.h"
 #include "secrets.hpp"
 
@@ -118,7 +119,7 @@ void messageArrivedDefault(MQTT::MessageData &md) {
 	messageArrived(md);
 }
 
-W5500MqttNetwork network((int) W5500Interface::Socket::MQTT);
+W5500MqttNetwork network(2);
 W5500MqttClient client(network);
 
 /* USER CODE END 0 */
@@ -178,48 +179,49 @@ int main(void) {
 
 	if (!eth.init(&conf))
 		USB_Printf("Unable to initiate chip\n");
-	if (!eth.waitForPhyLink())
+	if (!eth.waitForLink(5000))
 		USB_Printf("Unable to get PHY link connection\n");
-	if (!eth.enableDHCP())
+	if (!eth.enableDHCP(5000))
 		USB_Printf("Unable to initiate DHCP\n");
 
 	using namespace JSECRETS;
 
-	int rc = network.connect(MQTT_SERVER_IP, MQTT_SERVER_PORT);
-	if (rc != SOCK_OK) {
-		USB_Printf("Unable to connect to MQTT socket\n");
+	auto& sock = eth.getFreeSocket();
+	if(!sock.connectTCP(MQTT_SERVER_IP, MQTT_SERVER_PORT)) {
+		USB_Printf("Unable to connect socket to MQTT server");
 	}
 
-	MQTTPacket_connectData data = MQTTPacket_connectData_initializer;
-	data.MQTTVersion = 4;
-	data.clientID.cstring = MQTT_CLIENT_ID;
-	data.username.cstring = MQTT_SERVER_USERNAME;
-	data.password.cstring = MQTT_SERVER_PASSWORD;
+	int rc;
+//	int rc = network.connect(MQTT_SERVER_IP, MQTT_SERVER_PORT);
+//	if (rc != SOCK_OK) {
+//		USB_Printf("Unable to connect to MQTT socket\n");
+//	}
 
-	rc = client.connect(data);
-	if (rc != 0) {
-		USB_Printf("Unable to connect to MQTT broker\n");
-	}
-
-	if (client.isConnected()) {
-		USB_Printf("Connected to MQTT broker!\n");
-	}
-
-	// FIXES ISSUE
-	client.setDefaultMessageHandler(messageArrivedDefault);
-
-	static const char *topic = "test2";
-	rc = client.subscribe(topic, MQTT::QOS2, messageArrived);
-	if (rc != MQTT::SUCCESS) {
-		USB_Printf("Unable to subscribe to MQTT topic\n");
-	}
+//	MQTTPacket_connectData data = MQTTPacket_connectData_initializer;
+//	data.MQTTVersion = 4;
+//	data.clientID.cstring = MQTT_CLIENT_ID;
+//	data.username.cstring = MQTT_SERVER_USERNAME;
+//	data.password.cstring = MQTT_SERVER_PASSWORD;
+//
+//	rc = client.connect(data);
+//	if (rc != 0) {
+//		USB_Printf("Unable to connect to MQTT broker\n");
+//	} else {
+//		USB_Printf("Connected to MQTT broker!\n");
+//	}
+//
+//	client.setDefaultMessageHandler(messageArrivedDefault);
+//
+//	static const char *topic = "test2";
+//	rc = client.subscribe(topic, MQTT::QOS2, messageArrived);
+//	if (rc != MQTT::SUCCESS) {
+//		USB_Printf("Unable to subscribe to MQTT topic\n");
+//	}
 
 	/* USER CODE END 2 */
 
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
-
-	client.setMessageHandler(topic, messageArrived);
 
 	int oldRc = rc;
 	while (1) {
@@ -228,37 +230,37 @@ int main(void) {
 			USB_Printf("TEST\n");
 		}
 
-		rc = client.yield();
-		if (rc != oldRc) {
-			USB_Printf("MQTT Return code: %d\n", rc);
-			oldRc = rc;
-		}
-
-		if (!client.isConnected()) {
-			if (network.isConnected()) {
-				client.disconnect();
-			} else {
-				network.disconnect();
-				HAL_Delay(5);
-				rc = network.connect(MQTT_SERVER_IP, MQTT_SERVER_PORT);
-				if (rc != SOCK_OK) {
-					USB_Printf("Unable to reconnect socket!!\n");
-				} else {
-					client.disconnect();
-					data.cleansession = (unsigned char) 1;
-					if (client.connect(data) == MQTT::SUCCESS) {
-						client.setDefaultMessageHandler(messageArrivedDefault);
-						rc = client.subscribe(topic, MQTT::QOS2,
-								messageArrived);
-						if (rc != MQTT::SUCCESS) {
-							USB_Printf("Unable to subscribe to MQTT topic\n");
-						}
-					}
-				}
-			}
-		}
-
-		HAL_Delay(25);
+//		rc = client.yield();
+//		if (rc != oldRc) {
+//			USB_Printf("MQTT Return code: %d\n", rc);
+//			oldRc = rc;
+//		}
+//
+//		if (!client.isConnected()) {
+//			if (network.isConnected()) {
+//				client.disconnect();
+//			} else {
+//				network.disconnect();
+//				HAL_Delay(5);
+//				rc = network.connect(MQTT_SERVER_IP, MQTT_SERVER_PORT);
+//				if (rc != SOCK_OK) {
+//					USB_Printf("Unable to reconnect socket!!\n");
+//				} else {
+//					client.disconnect();
+//					data.cleansession = (unsigned char) 1;
+//					if (client.connect(data) == MQTT::SUCCESS) {
+//						client.setDefaultMessageHandler(messageArrivedDefault);
+//						rc = client.subscribe(topic, MQTT::QOS2,
+//								messageArrived);
+//						if (rc != MQTT::SUCCESS) {
+//							USB_Printf("Unable to subscribe to MQTT topic\n");
+//						}
+//					}
+//				}
+//			}
+//		}
+//
+//		HAL_Delay(25);
 		/* USER CODE BEGIN 3 */
 	}
 	/* USER CODE END 3 */
@@ -616,7 +618,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 	/* USER CODE BEGIN Callback 0 */
 
 	if (htim == &htim3) {
-		eth.oneSecondPassed();
 		//		USB_Printf("1 sec int\n"); // NOTE: CDC uses interrupts so this will never return
 		HAL_GPIO_TogglePin(TEST_LED_GPIO_Port, TEST_LED_Pin);
 	}
@@ -624,6 +625,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 	/* USER CODE END Callback 0 */
 	if (htim->Instance == TIM6) {
 		HAL_IncTick();
+		CountdownTimer::msTick();
+		eth.msTick();
 	}
 	/* USER CODE BEGIN Callback 1 */
 	/* USER CODE END Callback 1 */

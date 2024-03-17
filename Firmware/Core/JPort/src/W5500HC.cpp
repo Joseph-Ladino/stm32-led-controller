@@ -5,12 +5,15 @@
  *      Author: DRTNT
  */
 
-#include <W5500HC.hpp>
 #include <cstring>
+#include <cstdint>
+
 #include "wizchip_conf.h"
 #include "dhcp.h"
+
+#include "W5500HC.hpp"
 #include "W5500Socket.hpp"
-#include <stdint.h>
+#include "CountdownTimer.hpp"
 
 namespace JETHERNET {
 
@@ -77,16 +80,16 @@ bool W5500HC::phyLinkStatus() {
 	return state == PHY_LINK_ON;
 }
 
-bool W5500HC::enableDHCP() {
+bool W5500HC::enableDHCP(uint16_t timeoutMs) {
 	if (!(initSuccess && phyLinkStatus()))
 		return false;
 
 	NetConfig netConfig = getConfig();
 
-	netConfig.mac = {0x00, 0x08, 0xDC, 0x11, 0x22, 0x33 };
+	netConfig.mac = { 0x00, 0x08, 0xDC, 0x11, 0x22, 0x33 };
 
-	dhcpSuccess = hw.initDHCP(&netConfig);
-	if(dhcpSuccess) {
+	dhcpSuccess = hw.initDHCP(getFreeSocket(), &netConfig, timeoutMs);
+	if (dhcpSuccess) {
 		setConfig(netConfig);
 
 	}
@@ -98,41 +101,57 @@ bool W5500HC::init(void *config) {
 	hwConfig = *(W5500Config*) config;
 	initSuccess = hw.init(hwConfig);
 
+	if (initSuccess) {
+		for (uint8_t i = 0; i < 8; i++) {
+			sockets[i].socketNum = i;
+			sockets[i].ethHC = this;
+		}
+	}
+
 	return initSuccess;
 }
 
 // returns true if PHY becomes available before timeout
-bool W5500HC::waitForPhyLink() {
-	uint32_t start = secondsCounter;
-	while (!phyLinkStatus()) {
-		if (secondsCounter - start > phyTimeoutSeconds) {
-			phyTimeout = true;
-			return false;
-		}
-	}
+bool W5500HC::waitForLink(uint16_t timeoutMs) {
+	CountdownTimer timer(timeoutMs);
+	while (!(phyLinkStatus() || timer.expired()))
+		;
 
-	return true;
+	return phyLinkStatus();
 }
 
 W5500Socket& W5500HC::getFreeSocket() {
 
+	static W5500Socket blank;
+
+	for (uint8_t i = 0; i < 8; i++) {
+		auto &sock = sockets[i];
+		if (!sock.isConnected())
+			return sock;
+	}
+
+	return blank;
+
 	// NOTE:
 	// static is for testing purposes ONLY
 	// socket objects will eventually be stored in an array in W5500HC/W5500Interface
-	static W5500Socket sock((int)W5500Interface::Socket::DHCP + 1);
+//	static W5500Socket sock((int) W5500Interface::Socket::DNS);
+//
+//	sock.ethHC = this;
+//
+//	return sock;
+}
 
-	sock.ethHC = this;
+void W5500HC::msTick() {
+	static uint32_t tick = 0;
+	tick++;
 
-	return sock;
+	if (tick % 1000 == 0)
+		DHCP_time_handler();
 }
 
 W5500HC::~W5500HC() {
 
-}
-
-void W5500HC::oneSecondPassed() {
-	secondsCounter++;
-	DHCP_time_handler();
 }
 
 } /* namespace JOELIB */
