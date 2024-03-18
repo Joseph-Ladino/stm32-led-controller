@@ -13,23 +13,13 @@
 #include "globals.h"
 #include "wizchip_conf.h"
 
-//void ETH_Printf(const char * fmt, ...) {
-//#ifdef ETH_Debug
-//	USB_Printf(fmt, ...args);
-//#endif
-//}
-
 namespace JETHERNET {
 
 #define getInst() W5500Interface::instance()
 
-//static W5500Interface& inst = W5500Interface::instance();
+volatile uint8_t DHCPBuffer[1024];
+volatile uint8_t DNSBuffer[1024];
 
-volatile uint8_t DHCPBuffer[ETH_BUFFER_SIZE * 1024];
-volatile uint8_t DNSBuffer[ETH_BUFFER_SIZE * 1024];
-
-//wiz_NetInfo getNetInfo();
-//void setNetInfo();
 void printNetInfo(NetConfig*);
 
 void enableChipSelect() {
@@ -44,7 +34,8 @@ void disableChipSelect() {
 
 void readBuffer(uint8_t *buf, uint16_t len) {
 	auto &conf = W5500Interface::config;
-	while (HAL_SPI_GetState(conf.spi) != HAL_SPI_STATE_READY)
+	CountdownTimer t(500);
+	while (HAL_SPI_GetState(conf.spi) != HAL_SPI_STATE_READY && !t.expired())
 		;
 	auto res = HAL_SPI_Receive(conf.spi, buf, len, 50);
 	if (res != HAL_OK) {
@@ -54,7 +45,8 @@ void readBuffer(uint8_t *buf, uint16_t len) {
 
 void writeBuffer(uint8_t *buf, uint16_t len) {
 	auto &conf = W5500Interface::config;
-	while (HAL_SPI_GetState(conf.spi) != HAL_SPI_STATE_READY)
+	CountdownTimer t(500);
+	while (HAL_SPI_GetState(conf.spi) != HAL_SPI_STATE_READY && !t.expired())
 		;
 	auto res = HAL_SPI_Transmit(conf.spi, buf, len, 50);
 	if (res != HAL_OK) {
@@ -96,17 +88,16 @@ void W5500Interface::triggerReset() {
 
 bool W5500Interface::initChip() {
 	ETH_Printf("Calling wizchip_init()...\n");
-	uint8_t rx_tx_buff_sizes[2][8] = { { 4, 4, 8, 0, 0, 0, 0, 0 }, { 4, 4, 8, 0,
-			0, 0, 0, 0 } };
+	uint8_t rx_tx_buff_sizes[2][8] = { { 2, 2, 2, 2, 2, 2, 2, 2 }, { 2, 2, 2, 2, 2, 2, 2, 2 } };
 
 	if (ctlwizchip(CW_INIT_WIZCHIP, (void*) rx_tx_buff_sizes) == -1) {
-		ETH_Printf("W5x00 initialized fail.\n");
+		ETH_Printf("W5500 initialized fail.\n");
 		return false;
 	}
 
 	intr_kind intrTmp = IK_DEST_UNREACH;
 	if (ctlwizchip(CW_SET_INTRMASK, &intrTmp) == -1) {
-		ETH_Printf("W5x00 interrupt\n");
+		ETH_Printf("W5500 interrupt\n");
 		return false;
 	}
 
@@ -133,28 +124,19 @@ bool W5500Interface::initDHCP(W5500Socket& sock, NetConfig *conf, uint16_t timeo
 	getSNfromDHCP(conf->subnet.raw);
 	getDNSfromDHCP(conf->dns.raw);
 
-	// apply IP assigned by router
-//	setNetInfo(&netInfo);
 	printNetInfo(conf);
 
 	return true;
 }
 
-bool W5500Interface::initDNS() {
-	return false;
+void W5500Interface::initDNS(W5500Socket& sock) {
+	ETH_Printf("Calling DNS_init()...\n");
+	DNS_init((uint8_t)sock.getSocketNum(), (uint8_t*) DNSBuffer);
 }
 
 bool W5500Interface::init(W5500Config _config) {
-	ETH_Printf("\ninit() called!\n");
-
 	auto &inst = instance();
 	inst.config = _config;
-
-//	conf.spi = spi;
-//	conf.chipSelectPort = chipSelectPort;
-//	conf.chipSelectPin = chipSelectPin;
-//	conf.resetPort = resetPort;
-//	conf.resetPin = resetPin;
 
 	inst.triggerReset();
 	HAL_Delay(10);
@@ -168,8 +150,6 @@ bool W5500Interface::init(W5500Config _config) {
 	reg_dhcp_cbfunc(CB_DHCP_IPAssigned, CB_DHCP_IPAssigned, CB_DHCP_IPConflict);
 
 	return inst.initChip();
-
-//	inst.initDHCP();
 }
 
 wiz_NetInfo getNetInfo() {

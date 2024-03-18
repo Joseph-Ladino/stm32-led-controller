@@ -25,9 +25,10 @@ public:
 	bool close() override;
 	bool connectTCP(EthernetIP ip, uint16_t port) override;
 	bool disconnect() override;
-	bool write(uint8_t* dataIn, uint16_t len) override;
-	bool read(uint8_t* dataOut, uint16_t len) override;
+	int write(uint8_t* dataIn, uint16_t len) override;
+	int read(uint8_t* dataOut, uint16_t len) override;
 
+	uint8_t getWizSocketStatus() const;
 	int getSocketNum() const;
 	bool isConnected() const;
 	operator bool() const;

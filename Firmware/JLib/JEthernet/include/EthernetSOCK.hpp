@@ -31,8 +31,8 @@ public:
 	virtual bool close() = 0;
 	virtual bool connectTCP(EthernetIP ip, uint16_t port) = 0;
 	virtual bool disconnect() = 0;
-	virtual bool write(uint8_t* dataIn, uint16_t len) = 0;
-	virtual bool read(uint8_t* dataOut, uint16_t len) = 0;
+	virtual int write(uint8_t* dataIn, uint16_t len) = 0;
+	virtual int read(uint8_t* dataOut, uint16_t len) = 0;
 
 	// return true if socket is open and false if closed
 	virtual bool isConnected() const = 0;

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cdtprojectproperties>
   <section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.IncludePaths">
-    <language id="org.eclipse.cdt.core.assembly" name="s,S"/>
+    <language id="org.eclipse.cdt.core.assembly" name="s,S">
+      <includepath>JLib/JEthernet/include</includepath>
+      <includepath>Core/JPort/include</includepath>
+    </language>
     <language id="org.eclipse.cdt.core.gcc" name="C Source File">
       <includepath>USB_Device/App</includepath>
       <includepath>USB_Device/Target</includepath>
@@ -14,10 +17,12 @@
       <includepath>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc</includepath>
       <includepath>ioLibrary/Ethernet</includepath>
       <includepath>ioLibrary/Ethernet/W5500</includepath>
-      <includepath>ioLibrary/Internet/MQTT</includepath>
       <includepath>ioLibrary/Internet/DHCP</includepath>
       <includepath>ioLibrary/Internet/DNS</includepath>
-      <includepath>Core/JEthernet/include</includepath>
+      <includepath>MQTT/MQTTPacket/src</includepath>
+      <includepath>MQTT/MQTTClient/src</includepath>
+      <includepath>JLib/JEthernet/include</includepath>
+      <includepath>Core/JPort/include</includepath>
     </language>
     <language id="org.eclipse.cdt.core.g++" name="C++ Source File">
       <includepath>USB_Device/App</includepath>
@@ -31,9 +36,14 @@
       <includepath>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc</includepath>
       <includepath>ioLibrary/Ethernet</includepath>
       <includepath>ioLibrary/Ethernet/W5500</includepath>
-      <includepath>ioLibrary/Internet/MQTT</includepath>
       <includepath>ioLibrary/Internet/DHCP</includepath>
       <includepath>ioLibrary/Internet/DNS</includepath>
+      <includepath>MQTT/MQTTPacket/src</includepath>
+      <includepath>MQTT/MQTTClient/src</includepath>
+      <includepath>JLib/JEthernet/include</includepath>
+      <includepath>JLib/JMisc/include</includepath>
+      <includepath>JLib/JMQTT/include</includepath>
+      <includepath>Core/JPort/include</includepath>
     </language>
     <language name="Object File"/>
   </section>

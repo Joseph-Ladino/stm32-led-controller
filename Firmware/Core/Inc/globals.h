@@ -18,8 +18,11 @@ extern "C" {
 
 
 //void USB_Printf(const char* format, ...);
+#ifdef DEBUG
 #define USB_Printf(...) printf(__VA_ARGS__)
-
+#else
+#define USB_Printf(...)
+#endif
 
 #ifdef __cplusplus
 }

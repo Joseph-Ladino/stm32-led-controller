@@ -12,15 +12,15 @@ namespace JMQTT {
 
 /* wrappers for socket API */
 
-int8_t wizSocket(uint8_t sn, uint8_t protocol, uint16_t port, uint8_t flag) {
+static int8_t wizSocket(uint8_t sn, uint8_t protocol, uint16_t port, uint8_t flag) {
 	return socket(sn, protocol, port, flag);
 }
 
-int8_t wizConnect(uint8_t sn, uint8_t *addr, uint16_t port) {
+static int8_t wizConnect(uint8_t sn, uint8_t *addr, uint16_t port) {
 	return connect(sn, addr, port);
 }
 
-int8_t wizDisconnect(uint8_t sn) {
+static int8_t wizDisconnect(uint8_t sn) {
 	return disconnect(sn);
 }
 

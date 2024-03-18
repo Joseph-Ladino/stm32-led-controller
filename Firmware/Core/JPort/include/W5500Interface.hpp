@@ -24,10 +24,6 @@ namespace JETHERNET {
 #define ETH_Printf(...)
 #endif
 
-#ifndef ETH_BUFFER_SIZE
-#define ETH_BUFFER_SIZE 1 // kb
-#endif
-
 struct W5500Config {
 	SPI_HandleTypeDef *spi;
 	GPIO_TypeDef *chipSelectPort;
@@ -65,7 +61,7 @@ public:
 
 	bool initChip();
 	bool initDHCP(W5500Socket& sock, NetConfig* conf, uint16_t timeoutMs);
-	bool initDNS();
+	void initDNS(W5500Socket& sock);
 
 	static W5500Interface& instance();
 	static bool init(W5500Config config);

@@ -5,8 +5,9 @@
  *      Author: user
  */
 
-#include <W5500Socket.hpp>
 #include "socket.h"
+#include "W5500Socket.hpp"
+#include "CountdownTimer.hpp"
 
 static int8_t wizSocket(uint8_t sn, uint8_t protocol, uint16_t port,
 		uint8_t flag) {
@@ -44,25 +45,33 @@ bool W5500Socket::connectTCP(EthernetIP ip, uint16_t port) {
 	if (connectMode != EthernetConnectMode::TCP)
 		return false;
 
-	return wizConnect(socketNum, ip.raw, port);
+	// might add timeout to method signature in the future
+	CountdownTimer t(5);
+	int8_t rc;
+
+	do {
+		rc = wizConnect(socketNum, ip.raw, port);
+	} while(rc != SOCK_OK && !t.expired());
+
+	return rc == SOCK_OK;
 }
 
 bool W5500Socket::disconnect() {
 	return wizDisconnect(socketNum) == SOCK_OK;
 }
 
-bool W5500Socket::write(uint8_t *dataIn, uint16_t len) {
+int W5500Socket::write(uint8_t *dataIn, uint16_t len) {
 	if (isConnected())
-		return send(socketNum, dataIn, len) == len;
+		return send(socketNum, dataIn, len);
 
-	return false;
+	return 0;
 }
 
-bool W5500Socket::read(uint8_t *dataOut, uint16_t len) {
+int W5500Socket::read(uint8_t *dataOut, uint16_t len) {
 	if (isConnected() && getSn_RX_RSR(socketNum) > 0)
-		return recv(socketNum, dataOut, len) == len;
+		return recv(socketNum, dataOut, len);
 
-	return false;
+	return 0;
 }
 
 int W5500Socket::getSocketNum() const {
@@ -70,8 +79,8 @@ int W5500Socket::getSocketNum() const {
 }
 
 bool W5500Socket::isConnected() const {
-	auto rc = getSn_SR(socketNum);
-	return rc != SOCK_CLOSE_WAIT && rc != SOCK_CLOSED;
+	auto rc = getWizSocketStatus();
+	return /* rc != SOCK_CLOSE_WAIT && */ rc != SOCK_CLOSED;
 }
 
 W5500Socket::operator bool() const {
@@ -83,6 +92,10 @@ W5500Socket::W5500Socket() {
 
 W5500Socket::W5500Socket(int sn) :
 		socketNum(sn) {
+}
+
+uint8_t W5500Socket::getWizSocketStatus() const {
+	return getSn_SR(socketNum);
 }
 
 } /* namespace JETHERNET */

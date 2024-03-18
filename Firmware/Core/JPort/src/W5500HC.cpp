@@ -20,15 +20,6 @@ namespace JETHERNET {
 #define MemcopyConfig(member1, member2) memcpy(member1, member2, (sizeof(member1) < sizeof(member2)) ? sizeof(member1) : sizeof(member2))
 
 void W5500HC::setConfig(NetConfig &netConfig) {
-//	wiz_NetInfo wNetInfo = { 0 };
-//	MemcopyConfig(wNetInfo.ip, netConfig.ip.raw);
-//	MemcopyConfig(wNetInfo.sn, netConfig.subnet.raw);
-//	MemcopyConfig(wNetInfo.gw, netConfig.gateway.raw);
-//	MemcopyConfig(wNetInfo.dns, netConfig.dns.raw);
-//	MemcopyConfig(wNetInfo.mac, netConfig.mac.raw);
-//
-//	wizchip_setnetinfo(&wNetInfo);
-
 	setSHAR(netConfig.mac.raw);
 	setGAR(netConfig.gateway.raw);
 	setSUBR(netConfig.subnet.raw);
@@ -36,26 +27,10 @@ void W5500HC::setConfig(NetConfig &netConfig) {
 
 	// ignore dhcpEnabled as that is set via enableDHCP
 	// dhcpEnabled = netConfig.dhcpEnabled
-	dnsAddress = netConfig.dns;
-
-	// TODO: dns + dhcpEnabled
+	if(netConfig.dns.num != 0) dnsAddress = netConfig.dns;
 }
 
 NetConfig W5500HC::getConfig() {
-//	wiz_NetInfo wNetInfo;
-//	wizchip_getnetinfo(&wNetInfo);
-//
-//	NetConfig netConfig = { 0 };
-//	MemcopyConfig(netConfig.ipAddress, wNetInfo.ip);
-//	MemcopyConfig(netConfig.subnet, wNetInfo.sn);
-//	MemcopyConfig(netConfig.gateway, wNetInfo.gw);
-//	MemcopyConfig(netConfig.dns, wNetInfo.dns);
-//	MemcopyConfig(netConfig.macAddress, wNetInfo.mac);
-//
-//	netConfig.dhcpEnabled = wNetInfo.dhcp == NETINFO_DHCP;
-//
-//	return netConfig;
-
 	NetConfig netConfig;
 
 	getSHAR(netConfig.mac.raw);
@@ -90,11 +65,35 @@ bool W5500HC::enableDHCP(uint16_t timeoutMs) {
 
 	dhcpSuccess = hw.initDHCP(getFreeSocket(), &netConfig, timeoutMs);
 	if (dhcpSuccess) {
+		dhcpEnabled = true;
 		setConfig(netConfig);
-
+	} else {
+		dhcpEnabled = false;
 	}
 
 	return dhcpSuccess;
+}
+
+bool W5500HC::enableDNS(EthernetIP dns) {
+	if(dns.num != 0) {
+		dnsAddress = dns;
+	} else if(dnsAddress.num == 0) {
+		return false;
+	}
+
+	return true;
+}
+
+// ip will be 0 if failure
+EthernetIP W5500HC::domainToIP(const char * domain, uint16_t timeoutMs) {
+	CountdownTimer t(timeoutMs);
+	EthernetIP ip;
+
+	// socket is closed in DNS_run
+	hw.initDNS(getFreeSocket());
+	while(DNS_run(dnsAddress.raw, (uint8_t *)domain, ip.raw) != 1 && !t.expired());
+
+	return ip;
 }
 
 bool W5500HC::init(void *config) {
@@ -121,8 +120,7 @@ bool W5500HC::waitForLink(uint16_t timeoutMs) {
 }
 
 W5500Socket& W5500HC::getFreeSocket() {
-
-	static W5500Socket blank;
+	static W5500Socket empty;
 
 	for (uint8_t i = 0; i < 8; i++) {
 		auto &sock = sockets[i];
@@ -130,24 +128,17 @@ W5500Socket& W5500HC::getFreeSocket() {
 			return sock;
 	}
 
-	return blank;
-
-	// NOTE:
-	// static is for testing purposes ONLY
-	// socket objects will eventually be stored in an array in W5500HC/W5500Interface
-//	static W5500Socket sock((int) W5500Interface::Socket::DNS);
-//
-//	sock.ethHC = this;
-//
-//	return sock;
+	return empty;
 }
 
 void W5500HC::msTick() {
 	static uint32_t tick = 0;
 	tick++;
 
-	if (tick % 1000 == 0)
+	if (tick % 1000 == 0) {
 		DHCP_time_handler();
+		DNS_time_handler();
+	}
 }
 
 W5500HC::~W5500HC() {

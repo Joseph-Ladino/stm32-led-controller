@@ -34,9 +34,14 @@ public:
 	NetConfig getConfig() override;
 
 	void msTick() override;
+
 	bool enableDHCP(uint16_t timeoutMs) override;
+	bool enableDNS(EthernetIP dns = 0) override;
+	EthernetIP domainToIP(const char * domain, uint16_t timeoutMs) override;
+
 	bool phyLinkStatus() override;
 	bool waitForLink(uint16_t timeoutMs) override;
+
 	bool init(void*) override;
 
 	W5500Socket& getFreeSocket() ;

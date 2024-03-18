@@ -30,15 +30,16 @@
 #include "secrets.hpp"
 
 #include "W5500HC.hpp"
-#include "MQTTInterface.hpp"
+//#include "MQTTInterface.hpp"
+#include "CountdownTimer.hpp"
+#include "PAHOClient.hpp"
 
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
 using namespace JETHERNET;
-using namespace JMQTT;
-using namespace MQTT;
+//using namespace JMQTT;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -85,6 +86,7 @@ UART_HandleTypeDef huart1;
 /* USER CODE BEGIN PV */
 
 W5500HC eth;
+JMQTT::PAHOClient mqtt;
 
 /* USER CODE END PV */
 
@@ -103,24 +105,27 @@ static void MX_TIM3_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-static unsigned int arrivedcount = 0;
-void messageArrived(MQTT::MessageData &md) {
-	MQTT::Message &message = md.message;
+//static unsigned int arrivedcount = 0;
+//void messageArrived(MQTT::MessageData &md) {
+//	MQTT::Message &message = md.message;
+//
+//	USB_Printf("Message %d arrived: qos %d, retained %d, dup %d, packetid %d\n",
+//			++arrivedcount, message.qos, message.retained, message.dup,
+//			message.id);
+//	USB_Printf("Payload %.*s\n", (int ) message.payloadlen,
+//			(char* ) message.payload);
+//}
+//
+//void messageArrivedDefault(MQTT::MessageData &md) {
+//	USB_Printf("\nDefault handler called:\n");
+//	messageArrived(md);
+//}
 
-	USB_Printf("Message %d arrived: qos %d, retained %d, dup %d, packetid %d\n",
-			++arrivedcount, message.qos, message.retained, message.dup,
-			message.id);
-	USB_Printf("Payload %.*s\n", (int ) message.payloadlen,
-			(char* ) message.payload);
+
+void messageReceived(JMQTT::Message msg){
+	USB_Printf("\n%s: %s\n", msg.topic.data(), msg.payload.data());
 }
 
-void messageArrivedDefault(MQTT::MessageData &md) {
-	USB_Printf("\nDefault handler called:\n");
-	messageArrived(md);
-}
-
-W5500MqttNetwork network(2);
-W5500MqttClient client(network);
 
 /* USER CODE END 0 */
 
@@ -164,7 +169,7 @@ int main(void) {
 #ifdef DEBUG
 	// allow time for terminal to connect to USB
 	uint32_t timeout = 1000;
-	CountdownTimer usbTimeout(1000);
+	CountdownTimer usbTimeout(timeout);
 	while (!usbTimeout.expired()
 			&& CDC_Get_Device_State() != USBD_STATE_CONFIGURED)
 		;
@@ -183,52 +188,48 @@ int main(void) {
 		USB_Printf("Unable to get PHY link connection\n");
 	if (!eth.enableDHCP(5000))
 		USB_Printf("Unable to initiate DHCP\n");
-
-	using namespace JSECRETS;
-
-	auto& sock = eth.getFreeSocket();
-	if(!sock.connectTCP(MQTT_SERVER_IP, MQTT_SERVER_PORT)) {
-		USB_Printf("Unable to connect socket to MQTT server");
+	if (!eth.enableDNS()) {
+		USB_Printf("Unable to initiate DNS\n");
 	}
 
-	int rc;
-//	int rc = network.connect(MQTT_SERVER_IP, MQTT_SERVER_PORT);
-//	if (rc != SOCK_OK) {
-//		USB_Printf("Unable to connect to MQTT socket\n");
-//	}
+	auto ip = eth.domainToIP("google.com", 3000);
+	char buf[25];
+	ip.cString(buf);
+	USB_Printf("google: %s\n", buf);
 
-//	MQTTPacket_connectData data = MQTTPacket_connectData_initializer;
-//	data.MQTTVersion = 4;
-//	data.clientID.cstring = MQTT_CLIENT_ID;
-//	data.username.cstring = MQTT_SERVER_USERNAME;
-//	data.password.cstring = MQTT_SERVER_PASSWORD;
-//
-//	rc = client.connect(data);
-//	if (rc != 0) {
-//		USB_Printf("Unable to connect to MQTT broker\n");
-//	} else {
-//		USB_Printf("Connected to MQTT broker!\n");
-//	}
-//
-//	client.setDefaultMessageHandler(messageArrivedDefault);
-//
-//	static const char *topic = "test2";
-//	rc = client.subscribe(topic, MQTT::QOS2, messageArrived);
-//	if (rc != MQTT::SUCCESS) {
-//		USB_Printf("Unable to subscribe to MQTT topic\n");
-//	}
+	auto& sock = eth.getFreeSocket();
+	if(sock.connectTCP(JSECRETS::MQTT_SERVER_IP, JSECRETS::MQTT_SERVER_PORT)) {
+		USB_Printf("Connected socket to MQTT server!\n");
+	} else {
+		USB_Printf("Error connecting socket to MQTT server!\n");
+	}
+
+	JMQTT::ClientConfig mqttConf;
+	mqttConf.clientName = JSECRETS::MQTT_CLIENT_ID;
+	mqttConf.username = JSECRETS::MQTT_SERVER_USERNAME;
+	mqttConf.password = JSECRETS::MQTT_SERVER_PASSWORD;
+
+
+	if(mqtt.connect(sock, mqttConf)) {
+		USB_Printf("Connected client to MQTT server!\n");
+	} else {
+		USB_Printf("Error connecting socket to MQTT server!\n");
+	}
+
+	mqtt.setMessageHandler(messageReceived);
+	mqtt.publish({"test", "test"});
 
 	/* USER CODE END 2 */
 
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
 
-	int oldRc = rc;
+//	int oldRc = rc;
 	while (1) {
 		/* USER CODE END WHILE */
-		if (arrivedcount == 20) {
-			USB_Printf("TEST\n");
-		}
+//		if (arrivedcount == 20) {
+//			USB_Printf("TEST\n");
+//		}
 
 //		rc = client.yield();
 //		if (rc != oldRc) {
