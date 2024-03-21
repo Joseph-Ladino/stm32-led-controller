@@ -123,7 +123,12 @@ static void MX_TIM3_Init(void);
 
 
 void messageReceived(JMQTT::Message msg){
-	USB_Printf("\n%s: %s\n", msg.topic.data(), msg.payload.data());
+	USB_Printf("%s: %s\n", msg.topic.data(), msg.payload.data());
+}
+
+void mqttOnConnected(JMQTT::PAHOClient& client) {
+	client.publish({"test", "test"});
+	client.subscribe("test/#");
 }
 
 
@@ -173,7 +178,6 @@ int main(void) {
 	while (!usbTimeout.expired()
 			&& CDC_Get_Device_State() != USBD_STATE_CONFIGURED)
 		;
-//	HAL_Delay(100);
 	USB_Printf("\n\n");
 	USB_Printf("%lums to initialize USB\n", timeout - usbTimeout.left_ms());
 
@@ -188,14 +192,14 @@ int main(void) {
 		USB_Printf("Unable to get PHY link connection\n");
 	if (!eth.enableDHCP(5000))
 		USB_Printf("Unable to initiate DHCP\n");
-	if (!eth.enableDNS()) {
+	if (!eth.enableDNS())
 		USB_Printf("Unable to initiate DNS\n");
-	}
 
-	auto ip = eth.domainToIP("google.com", 3000);
-	char buf[25];
-	ip.cString(buf);
-	USB_Printf("google: %s\n", buf);
+
+//	auto ip = eth.domainToIP("google.com", 3000);
+//	char buf[25];
+//	ip.cString(buf);
+//	USB_Printf("google: %s\n", buf);
 
 	auto& sock = eth.getFreeSocket();
 	if(sock.connectTCP(JSECRETS::MQTT_SERVER_IP, JSECRETS::MQTT_SERVER_PORT)) {
@@ -209,6 +213,8 @@ int main(void) {
 	mqttConf.username = JSECRETS::MQTT_SERVER_USERNAME;
 	mqttConf.password = JSECRETS::MQTT_SERVER_PASSWORD;
 
+	mqtt.setConnectCallback(mqttOnConnected);
+	mqtt.setMessageCallback(messageReceived);
 
 	if(mqtt.connect(sock, mqttConf)) {
 		USB_Printf("Connected client to MQTT server!\n");
@@ -216,20 +222,27 @@ int main(void) {
 		USB_Printf("Error connecting socket to MQTT server!\n");
 	}
 
-	mqtt.setMessageHandler(messageReceived);
-	mqtt.publish({"test", "test"});
-
 	/* USER CODE END 2 */
 
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
 
 //	int oldRc = rc;
+	uint32_t reconnectTimeMs = 1500;
+	CountdownTimer reconnectTimer(reconnectTimeMs);
 	while (1) {
 		/* USER CODE END WHILE */
 //		if (arrivedcount == 20) {
 //			USB_Printf("TEST\n");
 //		}
+
+		auto connected = mqtt.update(500);
+		if(!connected && reconnectTimer.expired()) {
+			USB_Printf("\nClient disconnected! Reconnecting...\n");
+			connected = mqtt.reconnect();
+			USB_Printf("%s!\n", (connected ? "success" : "fail"));
+			reconnectTimer.countdown_ms(reconnectTimeMs);
+		}
 
 //		rc = client.yield();
 //		if (rc != oldRc) {

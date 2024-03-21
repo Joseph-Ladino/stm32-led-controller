@@ -10,9 +10,11 @@
 
 #include <cstdint>
 #include <string_view>
+#include <string>
 #include "EthernetSOCK.hpp"
 
 using std::string_view;
+using std::string;
 
 namespace JMQTT {
 
@@ -23,8 +25,8 @@ enum class QOS : uint8_t {
 };
 
 struct Message {
-	string_view topic = "";
-	string_view payload = "";
+	string topic = "";
+	string payload = "";
 	QOS qos = QOS::QOS0;
 };
 
@@ -36,9 +38,9 @@ enum class MQTTVersion : uint8_t {
 
 struct ClientConfig {
 	MQTTVersion version = MQTTVersion::MQTT311;
-	const char * clientName = "JMQTTClient";
-	const char * username = "";
-	const char * password = "";
+	string clientName = "JMQTTClient";
+	string username = "";
+	string password = "";
 };
 
 class Client {
