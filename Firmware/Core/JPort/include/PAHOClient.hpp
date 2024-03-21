@@ -50,11 +50,10 @@ private:
 	MQTT::Client<PAHONetwork, CountdownTimer> client;
 	messageCallbackFunc onMessageCallback;
 	connectCallbackFunc onConnectCallback;
+	bool connect();
 
 public:
 
-	void pahoMessageReceived(MQTT::MessageData &data);
-	bool connect();
 
 	bool publish(Message msg);
 	bool subscribe(string_view topic, QOS qos = QOS::QOS0);
@@ -64,6 +63,7 @@ public:
 
 	void setMessageCallback(messageCallbackFunc func);
 	void setConnectCallback(connectCallbackFunc func);
+	void pahoMessageReceived(MQTT::MessageData &data);
 
 	bool update(uint16_t timeout);
 	bool isConnected();
