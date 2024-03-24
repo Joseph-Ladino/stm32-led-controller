@@ -20,7 +20,8 @@ bool PAHOClient::publish(Message msg) {
 }
 
 bool PAHOClient::subscribe(string_view topic, QOS qos) {
-	auto rc = client.subscribe(topic.data(), (MQTT::QoS)qos, {this, &PAHOClient::pahoMessageReceived});
+	auto rc = client.subscribe(topic.data(), (MQTT::QoS) qos, { this,
+			&PAHOClient::pahoMessageReceived });
 
 	return rc == MQTT::SUCCESS;
 }
@@ -35,28 +36,43 @@ bool PAHOClient::connect(EthernetSOCK &sock, const ClientConfig config) {
 bool PAHOClient::connect() {
 	MQTTPacket_connectData data = MQTTPacket_connectData_initializer;
 
-		data.MQTTVersion = (uint8_t) net.conf.version;
-		data.clientID.cstring = (char*)net.conf.clientName.data();
-		data.username.cstring = (char*)net.conf.username.data();
-		data.password.cstring = (char*)net.conf.password.data();
+	data.MQTTVersion = (uint8_t) net.conf.version;
+	data.clientID.cstring = (char*) net.conf.clientName.data();
+	data.username.cstring = (char*) net.conf.username.data();
+	data.password.cstring = (char*) net.conf.password.data();
 
-		bool connected = client.connect(data) == MQTT::SUCCESS;
-		if (!connected)
-			return false;
+	// connect socket to broker
+	if (!net.sock->isConnected()
+			&& !net.sock->connectTCP(net.conf.brokerIP, net.conf.brokerPort)) {
+		return false;
+	}
 
-		client.setDefaultMessageHandler(this, &PAHOClient::pahoMessageReceived);
+	// connect client (through socket) to broker
+	if (!client.connect(data) == MQTT::SUCCESS)
+		return false;
 
-		if(onConnectCallback)
-			onConnectCallback(*this);
+	client.setDefaultMessageHandler(
+			{ this, &PAHOClient::pahoMessageReceived });
 
-		return true;
+	if (onConnect)
+		onConnect(*this);
+
+	return true;
 }
 
 void PAHOClient::disconnect() {
 	client.disconnect();
+	net.sock->disconnect();
+	net.sock->close();
 }
 
 bool PAHOClient::reconnect() {
+	return connect();
+}
+
+bool PAHOClient::reconnect(EthernetSOCK &sock) {
+	net.sock = &sock;
+
 	return connect();
 }
 
@@ -64,7 +80,7 @@ bool PAHOClient::update(uint16_t timeoutMs) {
 	CountdownTimer t(timeoutMs);
 	auto rc = client.yield(timeoutMs);
 
-	if(rc != MQTT::SUCCESS) {
+	if (rc != MQTT::SUCCESS) {
 		disconnect();
 		return false;
 	}
@@ -80,28 +96,30 @@ PAHOClient::PAHOClient() :
 		client(net) {
 }
 
-PAHOClient::~PAHOClient() {}
-
-void PAHOClient::setMessageCallback(PAHOClient::messageCallbackFunc func) {
-	onMessageCallback = func;
+PAHOClient::~PAHOClient() {
 }
 
-void PAHOClient::setConnectCallback(PAHOClient::connectCallbackFunc func) {
-	onConnectCallback = func;
+void PAHOClient::setMessageCallback(PAHOClient::MessageCB func) {
+	onMessage = func;
+}
+
+void PAHOClient::setConnectCallback(PAHOClient::ConnectCB func) {
+	onConnect = func;
 }
 
 void PAHOClient::pahoMessageReceived(MQTT::MessageData &data) {
 
-	if(!onMessageCallback) return;
+	if (!onMessage)
+		return;
 
 	JMQTT::Message msg;
-	msg.topic = string(data.topicName.lenstring.data, data.topicName.lenstring.len);
-	msg.payload = string((char*)data.message.payload, data.message.payloadlen);
+	msg.topic = string(data.topicName.lenstring.data,
+			data.topicName.lenstring.len);
+	msg.payload = string((char*) data.message.payload, data.message.payloadlen);
 	msg.qos = (JMQTT::QOS) data.message.qos;
 
-	onMessageCallback(msg);
+	onMessage(*this, msg);
 //	msg.qos = data
 }
-
 
 } /* namespace JMQTT */

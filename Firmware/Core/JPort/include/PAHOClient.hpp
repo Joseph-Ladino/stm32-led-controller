@@ -23,33 +23,33 @@ struct PAHONetwork {
 	JETHERNET::EthernetSOCK *sock = nullptr;
 	ClientConfig conf;
 	inline int read(uint8_t *buffer, uint16_t len, uint16_t timeoutMs) {
-		if (!sock)
+		if (!this->operator bool())
 			return -1;
 
 		return sock->read(buffer, len);
 	}
 	inline int write(uint8_t *buffer, uint16_t len, uint16_t timeoutMs) {
-		if (!sock)
+		if (!this->operator bool())
 			return -1;
 
 		return sock->write(buffer, len);
 	}
 
-	operator bool() const {
-		return sock != nullptr;
+	inline operator bool() const {
+		return sock != nullptr && sock->isConnected();
 	}
 };
 
-class PAHOClient {
+class PAHOClient : public JMQTT::Client {
 public:
-	using connectCallbackFunc = std::function<void(JMQTT::PAHOClient&)> ;
-	using messageCallbackFunc = std::function<void(Message)>;
+//	using ConnectCB = std::function<void(JMQTT::PAHOClient&)> ;
+//	using MessageCB = std::function<void(JMQTT::PAHOClient&, Message)>;
 
 private:
 	PAHONetwork net;
 	MQTT::Client<PAHONetwork, CountdownTimer> client;
-	messageCallbackFunc onMessageCallback;
-	connectCallbackFunc onConnectCallback;
+	MessageCB onMessage;
+	ConnectCB onConnect;
 	bool connect();
 
 public:
@@ -57,16 +57,18 @@ public:
 
 	bool publish(Message msg);
 	bool subscribe(string_view topic, QOS qos = QOS::QOS0);
-	bool connect(JETHERNET::EthernetSOCK &sock, const ClientConfig config);
-	void disconnect();
-	bool reconnect();
+	bool update(uint16_t timeout);
 
-	void setMessageCallback(messageCallbackFunc func);
-	void setConnectCallback(connectCallbackFunc func);
+	bool connect(JETHERNET::EthernetSOCK &sock, const ClientConfig config);
+	bool reconnect();
+	bool reconnect(JETHERNET::EthernetSOCK &sock);
+	void disconnect();
+	bool isConnected();
+
+	void setMessageCallback(MessageCB func);
+	void setConnectCallback(ConnectCB func);
 	void pahoMessageReceived(MQTT::MessageData &data);
 
-	bool update(uint16_t timeout);
-	bool isConnected();
 
 	PAHOClient();
 	~PAHOClient();

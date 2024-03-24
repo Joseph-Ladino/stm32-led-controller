@@ -6,6 +6,7 @@
  */
 
 #include "socket.h"
+#include "W5500HC.hpp"
 #include "W5500Socket.hpp"
 #include "CountdownTimer.hpp"
 
@@ -80,7 +81,7 @@ int W5500Socket::getSocketNum() const {
 
 bool W5500Socket::isConnected() const {
 	auto rc = getWizSocketStatus();
-	return /* rc != SOCK_CLOSE_WAIT && */ rc != SOCK_CLOSED;
+	return /* rc != SOCK_CLOSE_WAIT && */ rc != SOCK_CLOSED && ethHC->phyLinkStatus();
 }
 
 W5500Socket::operator bool() const {

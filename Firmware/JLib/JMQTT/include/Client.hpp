@@ -9,8 +9,8 @@
 #define JMQTT_INCLUDE_CLIENT_HPP_
 
 #include <cstdint>
-#include <string_view>
 #include <string>
+#include <functional>
 #include "EthernetSOCK.hpp"
 
 using std::string_view;
@@ -38,6 +38,8 @@ enum class MQTTVersion : uint8_t {
 
 struct ClientConfig {
 	MQTTVersion version = MQTTVersion::MQTT311;
+	JETHERNET::EthernetIP brokerIP = 0;
+	uint16_t brokerPort = 0;
 	string clientName = "JMQTTClient";
 	string username = "";
 	string password = "";
@@ -45,12 +47,21 @@ struct ClientConfig {
 
 class Client {
 public:
-	virtual void publish(const char * topic, const char * message, QOS qos = QOS::QOS0) = 0;
-	virtual void subscribe(const char * topic, QOS qos = QOS::QOS0) = 0;
-	virtual bool connect(JETHERNET::EthernetSOCK& sock, ClientConfig config) = 0;
-	virtual void disconnect() = 0;
 
-	virtual void messageReceived(Message* msg) = 0;
+	using ConnectCB = std::function<void(Client&)>;
+	using MessageCB = std::function<void(Client&, Message)>;
+
+	virtual bool publish(Message msg) = 0;
+	virtual bool subscribe(string_view topic, QOS qos = QOS::QOS0) = 0;
+	virtual bool update(uint16_t timeoutMs) = 0;
+
+	virtual bool connect(JETHERNET::EthernetSOCK &sock, const ClientConfig config) = 0;
+	virtual bool reconnect() = 0;
+	virtual void disconnect() = 0;
+	virtual bool isConnected() = 0;
+
+	virtual void setMessageCallback(MessageCB func) = 0;
+	virtual void setConnectCallback(ConnectCB func) = 0;
 
 	virtual ~Client() {}
 //	Client(EthernetSOCK& sock, ClientConfig config);

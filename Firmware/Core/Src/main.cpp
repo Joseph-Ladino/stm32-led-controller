@@ -120,17 +120,33 @@ static void MX_TIM3_Init(void);
 //	USB_Printf("\nDefault handler called:\n");
 //	messageArrived(md);
 //}
-
-
-void messageReceived(JMQTT::Message msg){
+void messageReceived(JMQTT::Client &client, JMQTT::Message msg) {
 	USB_Printf("%s: %s\n", msg.topic.data(), msg.payload.data());
 }
 
-void mqttOnConnected(JMQTT::PAHOClient& client) {
-	client.publish({"test", "test"});
+void mqttOnConnected(JMQTT::Client &client) {
+	client.publish( { "test", "test" });
 	client.subscribe("test/#");
 }
 
+bool connectEth() {
+	if (!eth.waitForLink(5000)) {
+		USB_Printf("Unable to get PHY link connection\n");
+		return false;
+	}
+
+	if (!eth.enableDHCP(5000)) {
+		USB_Printf("Unable to initiate DHCP\n");
+		return false;
+	}
+
+	if (!eth.enableDNS()) {
+		USB_Printf("Unable to initiate DNS\n");
+		return false;
+	}
+
+	return true;
+}
 
 /* USER CODE END 0 */
 
@@ -186,29 +202,28 @@ int main(void) {
 	W5500Config conf { &hspi1, ETH_SCSn_GPIO_Port,
 	ETH_SCSn_Pin, ETH_RSTn_GPIO_Port, ETH_RSTn_Pin };
 
-	if (!eth.init(&conf))
+	if (!eth.init(&conf)) {
 		USB_Printf("Unable to initiate chip\n");
-	if (!eth.waitForLink(5000))
-		USB_Printf("Unable to get PHY link connection\n");
-	if (!eth.enableDHCP(5000))
-		USB_Printf("Unable to initiate DHCP\n");
-	if (!eth.enableDNS())
-		USB_Printf("Unable to initiate DNS\n");
+		return false;
+	}
 
+	connectEth();
 
 //	auto ip = eth.domainToIP("google.com", 3000);
 //	char buf[25];
 //	ip.cString(buf);
 //	USB_Printf("google: %s\n", buf);
 
-	auto& sock = eth.getFreeSocket();
-	if(sock.connectTCP(JSECRETS::MQTT_SERVER_IP, JSECRETS::MQTT_SERVER_PORT)) {
-		USB_Printf("Connected socket to MQTT server!\n");
-	} else {
-		USB_Printf("Error connecting socket to MQTT server!\n");
-	}
+	auto &sock = eth.getFreeSocket();
+//	if(sock.connectTCP(JSECRETS::MQTT_SERVER_IP, JSECRETS::MQTT_SERVER_PORT)) {
+//		USB_Printf("Connected socket to MQTT server!\n");
+//	} else {
+//		USB_Printf("Error connecting socket to MQTT server!\n");
+//	}
 
 	JMQTT::ClientConfig mqttConf;
+	mqttConf.brokerIP = JSECRETS::MQTT_SERVER_IP;
+	mqttConf.brokerPort = JSECRETS::MQTT_SERVER_PORT;
 	mqttConf.clientName = JSECRETS::MQTT_CLIENT_ID;
 	mqttConf.username = JSECRETS::MQTT_SERVER_USERNAME;
 	mqttConf.password = JSECRETS::MQTT_SERVER_PASSWORD;
@@ -216,10 +231,10 @@ int main(void) {
 	mqtt.setConnectCallback(mqttOnConnected);
 	mqtt.setMessageCallback(messageReceived);
 
-	if(mqtt.connect(sock, mqttConf)) {
+	if (mqtt.connect(sock, mqttConf)) {
 		USB_Printf("Connected client to MQTT server!\n");
 	} else {
-		USB_Printf("Error connecting socket to MQTT server!\n");
+		USB_Printf("Error connecting client to MQTT server!\n");
 	}
 
 	/* USER CODE END 2 */
@@ -228,7 +243,7 @@ int main(void) {
 	/* USER CODE BEGIN WHILE */
 
 //	int oldRc = rc;
-	uint32_t reconnectTimeMs = 1500;
+	uint32_t reconnectTimeMs = 2500;
 	CountdownTimer reconnectTimer(reconnectTimeMs);
 	while (1) {
 		/* USER CODE END WHILE */
@@ -237,11 +252,29 @@ int main(void) {
 //		}
 
 		auto connected = mqtt.update(500);
-		if(!connected && reconnectTimer.expired()) {
-			USB_Printf("\nClient disconnected! Reconnecting...\n");
-			connected = mqtt.reconnect();
-			USB_Printf("%s!\n", (connected ? "success" : "fail"));
-			reconnectTimer.countdown_ms(reconnectTimeMs);
+		if (!connected && reconnectTimer.expired()) {
+			USB_Printf("\nClient disconnected!\n");
+
+			bool success = false;
+			// if no physical connection, try to establish one
+			if (!eth.phyLinkStatus()) {
+				eth.softReset();
+				success = connectEth(); // try to wait for connection
+				if (!success)
+					goto RECONNECT_EXIT;
+			}
+
+			mqtt.disconnect();
+			// issue has to be related to client/server connection
+			success = mqtt.reconnect(eth.getFreeSocket());
+
+			if (success) {
+				USB_Printf("Connected client to MQTT server!\n");
+			} else {
+				USB_Printf("Error connecting client to MQTT server!\n");
+			}
+
+			RECONNECT_EXIT: reconnectTimer.countdown_ms(reconnectTimeMs);
 		}
 
 //		rc = client.yield();

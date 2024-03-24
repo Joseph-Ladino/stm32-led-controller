@@ -96,6 +96,19 @@ EthernetIP W5500HC::domainToIP(const char * domain, uint16_t timeoutMs) {
 	return ip;
 }
 
+
+void W5500HC::softReset() {
+	dhcpEnabled = false;
+	dhcpSuccess = false;
+	phyTimeout = false;
+	dnsAddress = 0;
+
+	for(auto& s : sockets) {
+		s.close();
+		s.disconnect();
+	}
+}
+
 bool W5500HC::init(void *config) {
 	hwConfig = *(W5500Config*) config;
 	initSuccess = hw.init(hwConfig);
