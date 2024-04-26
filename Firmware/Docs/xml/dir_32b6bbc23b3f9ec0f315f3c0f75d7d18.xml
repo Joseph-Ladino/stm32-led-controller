@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="dir_32b6bbc23b3f9ec0f315f3c0f75d7d18" kind="dir">
+    <compoundname>Core/JPort/include</compoundname>
+    <innerfile refid="_p_a_h_o_client_8hpp">PAHOClient.hpp</innerfile>
+    <innerfile refid="_w5500_h_c_8hpp">W5500HC.hpp</innerfile>
+    <innerfile refid="_w5500_interface_8hpp">W5500Interface.hpp</innerfile>
+    <innerfile refid="_w5500_socket_8hpp">W5500Socket.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Core/JPort/include/"/>
+  </compounddef>
+</doxygen>

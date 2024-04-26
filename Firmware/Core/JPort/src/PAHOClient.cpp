@@ -26,7 +26,7 @@ bool PAHOClient::subscribe(string_view topic, QOS qos) {
 	return rc == MQTT::SUCCESS;
 }
 
-bool PAHOClient::connect(EthernetSOCK &sock, const ClientConfig config) {
+bool PAHOClient::connect(NetSock &sock, const ClientConfig config) {
 	net.sock = &sock;
 	net.conf = config;
 
@@ -70,7 +70,7 @@ bool PAHOClient::reconnect() {
 	return connect();
 }
 
-bool PAHOClient::reconnect(EthernetSOCK &sock) {
+bool PAHOClient::reconnect(NetSock &sock) {
 	net.sock = &sock;
 
 	return connect();

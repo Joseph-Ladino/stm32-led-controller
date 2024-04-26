@@ -1,0 +1,78 @@
+.TH "JETHERNET::W5500Interface" 3 "Thu Apr 25 2024" "Version 0.1.1" "CSTM32LedController" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JETHERNET::W5500Interface
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBinitChip\fP ()"
+.br
+.ti -1c
+.RI "bool \fBinitDHCP\fP (\fBW5500Socket\fP &sock, \fBNetConfig\fP *conf, uint16_t timeoutMs)"
+.br
+.ti -1c
+.RI "void \fBinitDNS\fP (\fBW5500Socket\fP &sock)"
+.br
+.ti -1c
+.RI "void \fBtriggerReset\fP ()"
+.br
+.ti -1c
+.RI "\fBW5500Interface\fP (\fBW5500Interface\fP const &)=delete"
+.br
+.ti -1c
+.RI "void \fBoperator=\fP (\fBW5500Interface\fP const &)=delete"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBW5500Interface\fP & \fBinstance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBinit\fP (\fBW5500Config\fP config)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBW5500HC\fP"
+.br
+.ti -1c
+.RI "void \fBreadBuffer\fP (uint8_t *buf, uint16_t len)"
+.br
+.ti -1c
+.RI "void \fBwriteBuffer\fP (uint8_t *buf, uint16_t len)"
+.br
+.ti -1c
+.RI "uint8_t \fBreadByte\fP ()"
+.br
+.ti -1c
+.RI "void \fBwriteByte\fP (uint8_t byte)"
+.br
+.ti -1c
+.RI "void \fBenableChipSelect\fP ()"
+.br
+.ti -1c
+.RI "void \fBdisableChipSelect\fP ()"
+.br
+.ti -1c
+.RI "void \fBCB_DHCP_IPAssigned\fP ()"
+.br
+.ti -1c
+.RI "void \fBCB_DHCP_IPConflict\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 37 of file W5500Interface\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSTM32LedController from the source code\&.

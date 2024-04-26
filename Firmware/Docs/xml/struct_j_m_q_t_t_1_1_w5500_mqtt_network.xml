@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="struct_j_m_q_t_t_1_1_w5500_mqtt_network" kind="struct" language="C++" prot="public">
+    <compoundname>JMQTT::W5500MqttNetwork</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a914bbdc5c0561d9938a3bf87014845d2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int JMQTT::W5500MqttNetwork::socketNum</definition>
+        <argsstring></argsstring>
+        <name>socketNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/MQTTInterface.hpp" line="18" column="5" bodyfile="JLib/JMQTT/include/MQTTInterface.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a41a09a8fd79d62d52f5ce0ff4d2e2723" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool JMQTT::W5500MqttNetwork::isConnected</definition>
+        <argsstring>()</argsstring>
+        <name>isConnected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/MQTTInterface.hpp" line="23" column="6" bodyfile="JLib/JMQTT/src/MQTTInterface.cpp" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1aee3fe0f042a9ed67d21ae0cb49355468" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void JMQTT::W5500MqttNetwork::setSocket</definition>
+        <argsstring>(int socketNum)</argsstring>
+        <name>setSocket</name>
+        <param>
+          <type>int</type>
+          <declname>socketNum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/MQTTInterface.hpp" line="24" column="6" bodyfile="JLib/JMQTT/src/MQTTInterface.cpp" bodystart="66" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a4d02403adcff198cdaa44c1e7f91bbaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int JMQTT::W5500MqttNetwork::connect</definition>
+        <argsstring>(const char *hostname, uint16_t port)</argsstring>
+        <name>connect</name>
+        <param>
+          <type>const char *</type>
+          <declname>hostname</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/MQTTInterface.hpp" line="26" column="5" bodyfile="JLib/JMQTT/src/MQTTInterface.cpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a9192f60f83f6d5f5d7ae7ccb34cfea6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int JMQTT::W5500MqttNetwork::connect</definition>
+        <argsstring>(uint8_t *ip, uint16_t port)</argsstring>
+        <name>connect</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>ip</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/MQTTInterface.hpp" line="27" column="5" bodyfile="JLib/JMQTT/src/MQTTInterface.cpp" bodystart="34" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1aa80e6b76bfb01c241ab91604714042cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void JMQTT::W5500MqttNetwork::disconnect</definition>
+        <argsstring>()</argsstring>
+        <name>disconnect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/MQTTInterface.hpp" line="28" column="6" bodyfile="JLib/JMQTT/src/MQTTInterface.cpp" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a08e3a3faead9d84bddd16177baa8574c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int JMQTT::W5500MqttNetwork::read</definition>
+        <argsstring>(unsigned char *buffer, int len, int timeout_ms)</argsstring>
+        <name>read</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>timeout_ms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/MQTTInterface.hpp" line="30" column="5" bodyfile="JLib/JMQTT/src/MQTTInterface.cpp" bodystart="48" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a0614007fa4c8d9602647510fe732be38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int JMQTT::W5500MqttNetwork::write</definition>
+        <argsstring>(unsigned char *buffer, int len, int timeout)</argsstring>
+        <name>write</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/MQTTInterface.hpp" line="31" column="5" bodyfile="JLib/JMQTT/src/MQTTInterface.cpp" bodystart="55" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1aca47fb04224edb2de5e283d78d6ec174" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JMQTT::W5500MqttNetwork::W5500MqttNetwork</definition>
+        <argsstring>()</argsstring>
+        <name>W5500MqttNetwork</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/MQTTInterface.hpp" line="33" column="1" bodyfile="JLib/JMQTT/src/MQTTInterface.cpp" bodystart="76" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a1f8ac87b3170cfdae999e40ce2d818d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JMQTT::W5500MqttNetwork::W5500MqttNetwork</definition>
+        <argsstring>(int socketNum)</argsstring>
+        <name>W5500MqttNetwork</name>
+        <param>
+          <type>int</type>
+          <declname>socketNum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/MQTTInterface.hpp" line="34" column="1" bodyfile="JLib/JMQTT/src/MQTTInterface.cpp" bodystart="72" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="JLib/JMQTT/include/MQTTInterface.hpp" line="17" column="23" bodyfile="JLib/JMQTT/include/MQTTInterface.hpp" bodystart="17" bodyend="35"/>
+    <listofallmembers>
+      <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a4d02403adcff198cdaa44c1e7f91bbaf" prot="public" virt="non-virtual"><scope>JMQTT::W5500MqttNetwork</scope><name>connect</name></member>
+      <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a9192f60f83f6d5f5d7ae7ccb34cfea6b" prot="public" virt="non-virtual"><scope>JMQTT::W5500MqttNetwork</scope><name>connect</name></member>
+      <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1aa80e6b76bfb01c241ab91604714042cc" prot="public" virt="non-virtual"><scope>JMQTT::W5500MqttNetwork</scope><name>disconnect</name></member>
+      <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a41a09a8fd79d62d52f5ce0ff4d2e2723" prot="public" virt="non-virtual"><scope>JMQTT::W5500MqttNetwork</scope><name>isConnected</name></member>
+      <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a08e3a3faead9d84bddd16177baa8574c" prot="public" virt="non-virtual"><scope>JMQTT::W5500MqttNetwork</scope><name>read</name></member>
+      <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1aee3fe0f042a9ed67d21ae0cb49355468" prot="public" virt="non-virtual"><scope>JMQTT::W5500MqttNetwork</scope><name>setSocket</name></member>
+      <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a914bbdc5c0561d9938a3bf87014845d2" prot="public" virt="non-virtual"><scope>JMQTT::W5500MqttNetwork</scope><name>socketNum</name></member>
+      <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1aca47fb04224edb2de5e283d78d6ec174" prot="public" virt="non-virtual"><scope>JMQTT::W5500MqttNetwork</scope><name>W5500MqttNetwork</name></member>
+      <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a1f8ac87b3170cfdae999e40ce2d818d4" prot="public" virt="non-virtual"><scope>JMQTT::W5500MqttNetwork</scope><name>W5500MqttNetwork</name></member>
+      <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a0614007fa4c8d9602647510fe732be38" prot="public" virt="non-virtual"><scope>JMQTT::W5500MqttNetwork</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

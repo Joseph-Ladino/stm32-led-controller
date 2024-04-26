@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="namespace_j_m_q_t_t" kind="namespace" language="C++">
+    <compoundname>JMQTT</compoundname>
+    <innerclass refid="class_j_m_q_t_t_1_1_client" prot="public">JMQTT::Client</innerclass>
+    <innerclass refid="struct_j_m_q_t_t_1_1_client_config" prot="public">JMQTT::ClientConfig</innerclass>
+    <innerclass refid="struct_j_m_q_t_t_1_1_message" prot="public">JMQTT::Message</innerclass>
+    <innerclass refid="class_j_m_q_t_t_1_1_p_a_h_o_client" prot="public">JMQTT::PAHOClient</innerclass>
+    <innerclass refid="struct_j_m_q_t_t_1_1_p_a_h_o_network" prot="public">JMQTT::PAHONetwork</innerclass>
+    <innerclass refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network" prot="public">JMQTT::W5500MqttNetwork</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_client_8hpp_1ae20074947d69a428122e13962b0b54e3" prot="public" static="no" strong="yes">
+        <type>uint8_t</type>
+        <name>QOS</name>
+        <enumvalue id="_client_8hpp_1ae20074947d69a428122e13962b0b54e3a065532b760e1ff433556caf8cff11819" prot="public">
+          <name>QOS0</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_client_8hpp_1ae20074947d69a428122e13962b0b54e3a42c6763919390c440401d176611e39fa" prot="public">
+          <name>QOS1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_client_8hpp_1ae20074947d69a428122e13962b0b54e3a4cc41cf3d090303c0e5d9e0bcb842165" prot="public">
+          <name>QOS2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/Client.hpp" line="21" column="15" bodyfile="JLib/JMQTT/include/Client.hpp" bodystart="21" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="enum" id="_client_8hpp_1ad2b6f21f1fd9d7e8d6be0b4eeb30fc43" prot="public" static="no" strong="yes">
+        <type>uint8_t</type>
+        <name>MQTTVersion</name>
+        <enumvalue id="_client_8hpp_1ad2b6f21f1fd9d7e8d6be0b4eeb30fc43aa1f18342e0d9cf4895a44aacce1ca57d" prot="public">
+          <name>MQTT3</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_client_8hpp_1ad2b6f21f1fd9d7e8d6be0b4eeb30fc43a80b2283e2aabba0c02ae6f3dafa6b33a" prot="public">
+          <name>MQTT311</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_client_8hpp_1ad2b6f21f1fd9d7e8d6be0b4eeb30fc43ad50ad0b9201edf6806fafa17de7e42d8" prot="public">
+          <name>MQTT5</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/Client.hpp" line="33" column="23" bodyfile="JLib/JMQTT/include/Client.hpp" bodystart="33" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_m_q_t_t_interface_8hpp_1ace298a5bb1e1d19cde831f121e67da36" prot="public" static="no">
+        <type>MQTT::Client&lt; <ref refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network" kindref="compound">W5500MqttNetwork</ref>, <ref refid="struct_countdown_timer" kindref="compound">CountdownTimer</ref>, 500 &gt;</type>
+        <definition>using JMQTT::W5500MqttClient = typedef MQTT::Client&lt;W5500MqttNetwork, CountdownTimer, 500&gt;</definition>
+        <argsstring></argsstring>
+        <name>W5500MqttClient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/MQTTInterface.hpp" line="37" column="1" bodyfile="JLib/JMQTT/include/MQTTInterface.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_m_q_t_t_interface_8cpp_1ac8d1f640695e173e6e646a7c676e05be" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>static int8_t JMQTT::wizSocket</definition>
+        <argsstring>(uint8_t sn, uint8_t protocol, uint16_t port, uint8_t flag)</argsstring>
+        <name>wizSocket</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>sn</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>protocol</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/src/MQTTInterface.cpp" line="15" column="15" bodyfile="JLib/JMQTT/src/MQTTInterface.cpp" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_q_t_t_interface_8cpp_1abf0b82c3ca233fde73fb1a354f8f4f22" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>static int8_t JMQTT::wizConnect</definition>
+        <argsstring>(uint8_t sn, uint8_t *addr, uint16_t port)</argsstring>
+        <name>wizConnect</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>sn</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/src/MQTTInterface.cpp" line="19" column="15" bodyfile="JLib/JMQTT/src/MQTTInterface.cpp" bodystart="19" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_q_t_t_interface_8cpp_1a2a6ab90774d74ee8f164d53275fa641d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>static int8_t JMQTT::wizDisconnect</definition>
+        <argsstring>(uint8_t sn)</argsstring>
+        <name>wizDisconnect</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>sn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/src/MQTTInterface.cpp" line="23" column="15" bodyfile="JLib/JMQTT/src/MQTTInterface.cpp" bodystart="23" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="JLib/JMQTT/include/Client.hpp" line="19" column="15"/>
+  </compounddef>
+</doxygen>

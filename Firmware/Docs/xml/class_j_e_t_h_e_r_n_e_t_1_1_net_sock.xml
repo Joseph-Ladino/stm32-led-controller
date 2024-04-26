@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>JETHERNET::NetSock</compoundname>
+    <derivedcompoundref refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket" prot="public" virt="non-virtual">JETHERNET::W5500Socket</derivedcompoundref>
+    <includes refid="_net_sock_8hpp" local="no">NetSock.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1abe1b9e145bdd796464e8666db6df511d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool JETHERNET::NetSock::open</definition>
+        <argsstring>(NetIP ip, uint16_t port, SockConnectMode mode)=0</argsstring>
+        <name>open</name>
+        <reimplementedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a8ca576edc220f26e969b55404ed9bdc6">open</reimplementedby>
+        <param>
+          <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref></type>
+          <declname>ip</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>SockConnectMode</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>destination IP </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>destination port </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>connection mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if socket successfully opened </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetSock.hpp" line="47" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1abced4845fbe84804cd64597c39f2b1b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool JETHERNET::NetSock::close</definition>
+        <argsstring>()=0</argsstring>
+        <name>close</name>
+        <reimplementedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a30252f2d5b5820955e2ddfc905258de4">close</reimplementedby>
+        <briefdescription>
+<para>close socket </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if socket successfully closed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetSock.hpp" line="53" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1ad4fcf93b2ec7285a632c4b51777c0beb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool JETHERNET::NetSock::connectTCP</definition>
+        <argsstring>(NetIP ip, uint16_t port)=0</argsstring>
+        <name>connectTCP</name>
+        <reimplementedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae899a9827e9773e01163d893c48deeae">connectTCP</reimplementedby>
+        <param>
+          <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref></type>
+          <declname>ip</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+<para>connect to TCP server </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>destination IP </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>destination port </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successfully connected </para>
+</simplesect>
+<simplesect kind="note"><para>will attempt to open socket if not open when called </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetSock.hpp" line="62" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a5f4da6ea7d0538048a8e1e70f5d69ea0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool JETHERNET::NetSock::disconnect</definition>
+        <argsstring>()=0</argsstring>
+        <name>disconnect</name>
+        <reimplementedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1aaaa05a73924134dafddd1aa8eb0bcd02">disconnect</reimplementedby>
+        <briefdescription>
+<para>disconnect socket </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if socket successfully disconnected from server </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetSock.hpp" line="68" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a9fa1b012c538e35f38780a1fd84f618e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int JETHERNET::NetSock::write</definition>
+        <argsstring>(uint8_t *dataIn, uint16_t len)=0</argsstring>
+        <name>write</name>
+        <reimplementedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a6405fcf9acb90e76d8b138d5ba9775a0">write</reimplementedby>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dataIn</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>send data </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataIn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data to be written </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes to be written </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of bytes written </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetSock.hpp" line="76" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1ac352a31bb144160f2a060c2609cee259" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int JETHERNET::NetSock::read</definition>
+        <argsstring>(uint8_t *dataOut, uint16_t len)=0</argsstring>
+        <name>read</name>
+        <reimplementedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a6f49d3a309be5c3b9d2e3a3aaae6a883">read</reimplementedby>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dataOut</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>receive data </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataOut</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer for data to be received into </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes to be received </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of bytes read </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetSock.hpp" line="84" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a41db618756cf90001a219180d152ecde" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool JETHERNET::NetSock::isConnected</definition>
+        <argsstring>() const =0</argsstring>
+        <name>isConnected</name>
+        <reimplementedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae1e6ed02559892e71752470e125bc60e">isConnected</reimplementedby>
+        <briefdescription>
+<para>check if socket is connected/open </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if socket is open or connected </para>
+</simplesect>
+<simplesect kind="warning"><para>misleading name, will probably correct in the future </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetSock.hpp" line="92" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a9b8b34ac38e7cc54c2f54bf781d6d691" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual JETHERNET::NetSock::~NetSock</definition>
+        <argsstring>()</argsstring>
+        <name>~NetSock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetSock.hpp" line="94" column="9" bodyfile="JLib/JEthernet/include/NetSock.hpp" bodystart="94" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Virtual class designed to represent a network socket. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para>SockConnectMode </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>JETHERNET::NetSock</label>
+        <link refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock"/>
+      </node>
+      <node id="2">
+        <label>JETHERNET::W5500Socket</label>
+        <link refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="JLib/JEthernet/include/NetSock.hpp" line="35" column="14" bodyfile="JLib/JEthernet/include/NetSock.hpp" bodystart="35" bodyend="96"/>
+    <listofallmembers>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1abced4845fbe84804cd64597c39f2b1b5" prot="public" virt="pure-virtual"><scope>JETHERNET::NetSock</scope><name>close</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1ad4fcf93b2ec7285a632c4b51777c0beb" prot="public" virt="pure-virtual"><scope>JETHERNET::NetSock</scope><name>connectTCP</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a5f4da6ea7d0538048a8e1e70f5d69ea0" prot="public" virt="pure-virtual"><scope>JETHERNET::NetSock</scope><name>disconnect</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a41db618756cf90001a219180d152ecde" prot="public" virt="pure-virtual"><scope>JETHERNET::NetSock</scope><name>isConnected</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1abe1b9e145bdd796464e8666db6df511d" prot="public" virt="pure-virtual"><scope>JETHERNET::NetSock</scope><name>open</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1ac352a31bb144160f2a060c2609cee259" prot="public" virt="pure-virtual"><scope>JETHERNET::NetSock</scope><name>read</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a9fa1b012c538e35f38780a1fd84f618e" prot="public" virt="pure-virtual"><scope>JETHERNET::NetSock</scope><name>write</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a9b8b34ac38e7cc54c2f54bf781d6d691" prot="public" virt="virtual"><scope>JETHERNET::NetSock</scope><name>~NetSock</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

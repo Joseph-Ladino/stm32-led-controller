@@ -1,0 +1,154 @@
+.TH "JETHERNET::NetIP" 3 "Thu Apr 25 2024" "Version 0.1.1" "CSTM32LedController" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JETHERNET::NetIP \- IP address stored internally as a uint32\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <NetIP\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBcString\fP (char *buf)"
+.br
+.RI "Print formatted IP address to output buffer\&. "
+.ti -1c
+.RI "uint8_t & \fBoperator[]\fP (uint8_t index)"
+.br
+.RI "Access IP bytes\&. "
+.ti -1c
+.RI "const uint8_t & \fBoperator[]\fP (uint8_t index) const"
+.br
+.RI "Access IP bytes\&. "
+.ti -1c
+.RI "\fBNetIP\fP & \fBoperator=\fP (const \fBNetIP\fP &rhs)=default"
+.br
+.ti -1c
+.RI "\fBNetIP\fP & \fBoperator=\fP (const uint32_t ip)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBNetIP\fP &rhs) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBNetIP\fP &rhs) const"
+.br
+.ti -1c
+.RI "\fBNetIP\fP (\fBNetIP\fP &addr)=default"
+.br
+.ti -1c
+.RI "\fBNetIP\fP (uint8_t n0, uint8_t n1, uint8_t n2, uint8_t n3)"
+.br
+.ti -1c
+.RI "\fBNetIP\fP (uint32_t ip)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   uint32_t \fBnum\fP = 0"
+.br
+.ti -1c
+.RI "   uint8_t \fBraw\fP [4]"
+.br
+.ti -1c
+.RI "}; "
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+IP address stored internally as a uint32\&. 
+
+
+.PP
+\fBNote\fP
+.RS 4
+MSB is raw[0], LSB is raw[3] 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBNetSock\fP 
+.PP
+\fBNetConfig\fP 
+.PP
+\fBEthernetHC\fP 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file NetIP\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int JETHERNET::NetIP::cString (char * buf)"
+
+.PP
+Print formatted IP address to output buffer\&. 
+.PP
+\fBNote\fP
+.RS 4
+maximum 15 characters written (16 w/ null char) 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIbuf\fP output buffer 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+number of bytes written 
+.RE
+.PP
+
+.PP
+Definition at line 12 of file NetIP\&.cpp\&.
+.PP
+Referenced by JETHERNET::NetConfig::cString()\&.
+.SS "uint8_t & JETHERNET::NetIP::operator[] (uint8_t index)"
+
+.PP
+Access IP bytes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP (0-3) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+byte representing part of an IP address 
+.RE
+.PP
+
+.PP
+Definition at line 16 of file NetIP\&.cpp\&.
+.SS "const uint8_t & JETHERNET::NetIP::operator[] (uint8_t index) const"
+
+.PP
+Access IP bytes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP (0-3) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+byte representing part of an IP address 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file NetIP\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSTM32LedController from the source code\&.

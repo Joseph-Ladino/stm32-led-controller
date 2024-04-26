@@ -1,0 +1,74 @@
+.TH "JLED::Color" 3 "Thu Apr 25 2024" "Version 0.1.1" "CSTM32LedController" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JLED::Color
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "uint8_t & \fBoperator[]\fP (uint8_t n)"
+.br
+.ti -1c
+.RI "const uint8_t & \fBoperator[]\fP (uint8_t n) const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBColor\fP &rhs) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBColor\fP &rhs) const"
+.br
+.ti -1c
+.RI "\fBColor\fP & \fBoperator=\fP (const uint32_t rhs)"
+.br
+.ti -1c
+.RI "\fBColor\fP & \fBoperator=\fP (const \fBColor\fP &rhs)=default"
+.br
+.ti -1c
+.RI "\fBColor\fP (\fBColor\fP &c)=default"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      uint8_t \fBw\fP"
+.br
+.ti -1c
+.RI "      uint8_t \fBb\fP"
+.br
+.ti -1c
+.RI "      uint8_t \fBg\fP"
+.br
+.ti -1c
+.RI "      uint8_t \fBr\fP"
+.br
+.ti -1c
+.RI "   } "
+.br
+.ti -1c
+.RI "   uint8_t \fBraw\fP [4]"
+.br
+.ti -1c
+.RI "   uint32_t \fBnum\fP = 0"
+.br
+.ti -1c
+.RI "}; "
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 17 of file Color\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSTM32LedController from the source code\&.

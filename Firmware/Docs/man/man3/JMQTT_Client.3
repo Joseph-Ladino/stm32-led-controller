@@ -1,0 +1,58 @@
+.TH "JMQTT::Client" 3 "Thu Apr 25 2024" "Version 0.1.1" "CSTM32LedController" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JMQTT::Client
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBJMQTT::PAHOClient\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBConnectCB\fP = std::function< void(\fBClient\fP &)>"
+.br
+.ti -1c
+.RI "using \fBMessageCB\fP = std::function< void(\fBClient\fP &, \fBMessage\fP)>"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBpublish\fP (\fBMessage\fP msg)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBsubscribe\fP (string_view topic, QOS qos=QOS::QOS0)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBupdate\fP (uint16_t timeoutMs)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBconnect\fP (\fBJETHERNET::NetSock\fP &sock, const \fBClientConfig\fP config)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBreconnect\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBdisconnect\fP ()=0"
+.br
+.ti -1c
+.RI "virtual bool \fBisConnected\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetMessageCallback\fP (MessageCB func)=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetConnectCallback\fP (ConnectCB func)=0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 48 of file Client\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSTM32LedController from the source code\&.

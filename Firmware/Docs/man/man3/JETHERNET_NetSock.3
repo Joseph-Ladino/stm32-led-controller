@@ -1,0 +1,195 @@
+.TH "JETHERNET::NetSock" 3 "Thu Apr 25 2024" "Version 0.1.1" "CSTM32LedController" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JETHERNET::NetSock \- Virtual class designed to represent a network socket\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <NetSock\&.hpp>\fP
+.PP
+Inherited by \fBJETHERNET::W5500Socket\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBopen\fP (\fBNetIP\fP ip, uint16_t port, SockConnectMode mode)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBclose\fP ()=0"
+.br
+.RI "close socket "
+.ti -1c
+.RI "virtual bool \fBconnectTCP\fP (\fBNetIP\fP ip, uint16_t port)=0"
+.br
+.RI "connect to TCP server "
+.ti -1c
+.RI "virtual bool \fBdisconnect\fP ()=0"
+.br
+.RI "disconnect socket "
+.ti -1c
+.RI "virtual int \fBwrite\fP (uint8_t *dataIn, uint16_t len)=0"
+.br
+.RI "send data "
+.ti -1c
+.RI "virtual int \fBread\fP (uint8_t *dataOut, uint16_t len)=0"
+.br
+.RI "receive data "
+.ti -1c
+.RI "virtual bool \fBisConnected\fP () const =0"
+.br
+.RI "check if socket is connected/open "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Virtual class designed to represent a network socket\&. 
+
+
+.PP
+\fBSee also\fP
+.RS 4
+SockConnectMode 
+.PP
+\fBNetIP\fP 
+.RE
+.PP
+
+.PP
+Definition at line 35 of file NetSock\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual bool JETHERNET::NetSock::close ()\fC [pure virtual]\fP"
+
+.PP
+close socket 
+.PP
+\fBReturns\fP
+.RS 4
+true if socket successfully closed 
+.RE
+.PP
+
+.PP
+Implemented in \fBJETHERNET::W5500Socket\fP\&.
+.SS "virtual bool JETHERNET::NetSock::connectTCP (\fBNetIP\fP ip, uint16_t port)\fC [pure virtual]\fP"
+
+.PP
+connect to TCP server 
+.PP
+\fBParameters\fP
+.RS 4
+\fIip\fP destination IP 
+.br
+\fIport\fP destination port 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if successfully connected 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+will attempt to open socket if not open when called 
+.RE
+.PP
+
+.PP
+Implemented in \fBJETHERNET::W5500Socket\fP\&.
+.SS "virtual bool JETHERNET::NetSock::disconnect ()\fC [pure virtual]\fP"
+
+.PP
+disconnect socket 
+.PP
+\fBReturns\fP
+.RS 4
+true if socket successfully disconnected from server 
+.RE
+.PP
+
+.PP
+Implemented in \fBJETHERNET::W5500Socket\fP\&.
+.SS "virtual bool JETHERNET::NetSock::isConnected () const\fC [pure virtual]\fP"
+
+.PP
+check if socket is connected/open 
+.PP
+\fBReturns\fP
+.RS 4
+true if socket is open or connected 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+misleading name, will probably correct in the future 
+.RE
+.PP
+
+.PP
+Implemented in \fBJETHERNET::W5500Socket\fP\&.
+.SS "virtual bool JETHERNET::NetSock::open (\fBNetIP\fP ip, uint16_t port, SockConnectMode mode)\fC [pure virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIip\fP destination IP 
+.br
+\fIport\fP destination port 
+.br
+\fImode\fP connection mode 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if socket successfully opened 
+.RE
+.PP
+
+.PP
+Implemented in \fBJETHERNET::W5500Socket\fP\&.
+.SS "virtual int JETHERNET::NetSock::read (uint8_t * dataOut, uint16_t len)\fC [pure virtual]\fP"
+
+.PP
+receive data 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdataOut\fP buffer for data to be received into 
+.br
+\fIlen\fP number of bytes to be received 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+number of bytes read 
+.RE
+.PP
+
+.PP
+Implemented in \fBJETHERNET::W5500Socket\fP\&.
+.SS "virtual int JETHERNET::NetSock::write (uint8_t * dataIn, uint16_t len)\fC [pure virtual]\fP"
+
+.PP
+send data 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdataIn\fP data to be written 
+.br
+\fIlen\fP number of bytes to be written 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+number of bytes written 
+.RE
+.PP
+
+.PP
+Implemented in \fBJETHERNET::W5500Socket\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSTM32LedController from the source code\&.

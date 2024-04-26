@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="struct_j_m_q_t_t_1_1_p_a_h_o_network" kind="struct" language="C++" prot="public">
+    <compoundname>JMQTT::PAHONetwork</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_j_m_q_t_t_1_1_p_a_h_o_network_1ae86aeca997e66b080f31cf0bde7a629c" prot="public" static="no" mutable="no">
+        <type><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" kindref="compound">JETHERNET::NetSock</ref> *</type>
+        <definition>JETHERNET::NetSock* JMQTT::PAHONetwork::sock</definition>
+        <argsstring></argsstring>
+        <name>sock</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/PAHOClient.hpp" line="23" column="20" bodyfile="Core/JPort/include/PAHOClient.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_m_q_t_t_1_1_p_a_h_o_network_1a73498b1a7ccea5e4e3e9136ba321403d" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_j_m_q_t_t_1_1_client_config" kindref="compound">ClientConfig</ref></type>
+        <definition>ClientConfig JMQTT::PAHONetwork::conf</definition>
+        <argsstring></argsstring>
+        <name>conf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/PAHOClient.hpp" line="24" column="14" bodyfile="Core/JPort/include/PAHOClient.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_j_m_q_t_t_1_1_p_a_h_o_network_1aa0aa90f178a7796b44b9b3677fee09de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int JMQTT::PAHONetwork::read</definition>
+        <argsstring>(uint8_t *buffer, uint16_t len, uint16_t timeoutMs)</argsstring>
+        <name>read</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>timeoutMs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/PAHOClient.hpp" line="25" column="12" bodyfile="Core/JPort/include/PAHOClient.hpp" bodystart="25" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_m_q_t_t_1_1_p_a_h_o_network_1a63b196ebc3e5d3d279ebc794bfbf199a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int JMQTT::PAHONetwork::write</definition>
+        <argsstring>(uint8_t *buffer, uint16_t len, uint16_t timeoutMs)</argsstring>
+        <name>write</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>timeoutMs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/PAHOClient.hpp" line="31" column="12" bodyfile="Core/JPort/include/PAHOClient.hpp" bodystart="31" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_m_q_t_t_1_1_p_a_h_o_network_1a4b545a8666452b5ce582136c748a220b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>JMQTT::PAHONetwork::operator bool</definition>
+        <argsstring>() const</argsstring>
+        <name>operator bool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/PAHOClient.hpp" line="38" column="8" bodyfile="Core/JPort/include/PAHOClient.hpp" bodystart="38" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5">
+        <label>JETHERNET::NetSock</label>
+        <link refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock"/>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>JETHERNET::NetIP</label>
+        <link refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p"/>
+      </node>
+      <node id="1">
+        <label>JMQTT::PAHONetwork</label>
+        <link refid="struct_j_m_q_t_t_1_1_p_a_h_o_network"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>conf</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>sock</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>JMQTT::ClientConfig</label>
+        <link refid="struct_j_m_q_t_t_1_1_client_config"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>password</edgelabel>
+          <edgelabel>clientName</edgelabel>
+          <edgelabel>username</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>brokerIP</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Core/JPort/include/PAHOClient.hpp" line="22" column="18" bodyfile="Core/JPort/include/PAHOClient.hpp" bodystart="22" bodyend="41"/>
+    <listofallmembers>
+      <member refid="struct_j_m_q_t_t_1_1_p_a_h_o_network_1a73498b1a7ccea5e4e3e9136ba321403d" prot="public" virt="non-virtual"><scope>JMQTT::PAHONetwork</scope><name>conf</name></member>
+      <member refid="struct_j_m_q_t_t_1_1_p_a_h_o_network_1a4b545a8666452b5ce582136c748a220b" prot="public" virt="non-virtual"><scope>JMQTT::PAHONetwork</scope><name>operator bool</name></member>
+      <member refid="struct_j_m_q_t_t_1_1_p_a_h_o_network_1aa0aa90f178a7796b44b9b3677fee09de" prot="public" virt="non-virtual"><scope>JMQTT::PAHONetwork</scope><name>read</name></member>
+      <member refid="struct_j_m_q_t_t_1_1_p_a_h_o_network_1ae86aeca997e66b080f31cf0bde7a629c" prot="public" virt="non-virtual"><scope>JMQTT::PAHONetwork</scope><name>sock</name></member>
+      <member refid="struct_j_m_q_t_t_1_1_p_a_h_o_network_1a63b196ebc3e5d3d279ebc794bfbf199a" prot="public" virt="non-virtual"><scope>JMQTT::PAHONetwork</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

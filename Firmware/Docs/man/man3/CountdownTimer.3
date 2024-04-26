@@ -1,0 +1,48 @@
+.TH "CountdownTimer" 3 "Thu Apr 25 2024" "Version 0.1.1" "CSTM32LedController" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CountdownTimer
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcountdown_ms\fP (uint32_t ms)"
+.br
+.ti -1c
+.RI "void \fBcountdown\fP (uint16_t sec)"
+.br
+.ti -1c
+.RI "uint32_t \fBleft_ms\fP ()"
+.br
+.ti -1c
+.RI "bool \fBexpired\fP ()"
+.br
+.ti -1c
+.RI "\fBCountdownTimer\fP (uint32_t ms)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmsTick\fP ()"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static uint32_t \fBtick\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 13 of file CountdownTimer\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSTM32LedController from the source code\&.

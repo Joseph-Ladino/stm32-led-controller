@@ -1,0 +1,70 @@
+.TH "JETHERNET::W5500HC" 3 "Thu Apr 25 2024" "Version 0.1.1" "CSTM32LedController" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JETHERNET::W5500HC
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBJETHERNET::EthernetHC\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetConfig\fP (\fBNetConfig\fP &netConfig) override"
+.br
+.ti -1c
+.RI "\fBNetConfig\fP \fBgetConfig\fP () override"
+.br
+.ti -1c
+.RI "void \fBmsTick\fP () override"
+.br
+.ti -1c
+.RI "bool \fBenableDHCP\fP (uint16_t timeoutMs) override"
+.br
+.ti -1c
+.RI "bool \fBenableDNS\fP (\fBNetIP\fP dns=0) override"
+.br
+.ti -1c
+.RI "\fBNetIP\fP \fBdomainToIP\fP (const char *domain, uint16_t timeoutMs) override"
+.br
+.ti -1c
+.RI "bool \fBphyLinkStatus\fP () override"
+.br
+.ti -1c
+.RI "bool \fBwaitForLink\fP (uint16_t timeoutMs) override"
+.br
+.ti -1c
+.RI "void \fBsoftReset\fP ()"
+.br
+.ti -1c
+.RI "bool \fBinit\fP (void *) override"
+.br
+.ti -1c
+.RI "\fBW5500Socket\fP & \fBgetFreeSocket\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBdhcpSuccess\fP = false"
+.br
+.ti -1c
+.RI "bool \fBinitSuccess\fP = false"
+.br
+.ti -1c
+.RI "bool \fBphyTimeout\fP = false"
+.br
+.ti -1c
+.RI "\fBW5500Socket\fP \fBsockets\fP [8]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 18 of file W5500HC\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSTM32LedController from the source code\&.

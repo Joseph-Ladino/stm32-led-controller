@@ -8,22 +8,22 @@
 #ifndef JETHERNET_INCLUDE_W5500SOCKET_HPP_
 #define JETHERNET_INCLUDE_W5500SOCKET_HPP_
 
+#include <NetSock.hpp>
 #include <cstdint>
-#include "EthernetSOCK.hpp"
 
 namespace JETHERNET {
 
 class W5500HC;
-class W5500Socket : public EthernetSOCK {
+class W5500Socket : public NetSock {
 private:
 	W5500HC* ethHC;
 	int socketNum = -1;
-	EthernetConnectMode connectMode;
+	SockConnectMode connectMode;
 
 public:
-	bool open(EthernetIP ip, uint16_t port, EthernetConnectMode mode) override;
+	bool open(NetIP ip, uint16_t port, SockConnectMode mode) override;
 	bool close() override;
-	bool connectTCP(EthernetIP ip, uint16_t port) override;
+	bool connectTCP(NetIP ip, uint16_t port) override;
 	bool disconnect() override;
 	int write(uint8_t* dataIn, uint16_t len) override;
 	int read(uint8_t* dataOut, uint16_t len) override;

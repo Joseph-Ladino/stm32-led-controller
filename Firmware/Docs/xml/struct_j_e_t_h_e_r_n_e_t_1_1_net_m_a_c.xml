@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kind="struct" language="C++" prot="public">
+    <compoundname>JETHERNET::NetMAC</compoundname>
+    <includes refid="_net_m_a_c_8hpp" local="no">NetMAC.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a981fc3ca441bef4f8e749f9a1ee294be" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t JETHERNET::NetMAC::num</definition>
+        <argsstring></argsstring>
+        <name>num</name>
+        <bitfield> 48</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetMAC.hpp" line="23" column="10" bodyfile="JLib/JEthernet/include/NetMAC.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1ab2d7fa28425227ed5f42f6dd29fa1fa0" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t JETHERNET::NetMAC::raw[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>raw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetMAC.hpp" line="24" column="9" bodyfile="JLib/JEthernet/include/NetMAC.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a8f1514c2bc0bffdcf94c180df22fc3a6" prot="public" static="no" mutable="no">
+        <type>union JETHERNET::NetMAC::@2</type>
+        <definition>union JETHERNET::NetMAC::@2 JETHERNET::NetMAC::@3</definition>
+        <argsstring></argsstring>
+        <name>@3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetMAC.hpp" line="25" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a145d5c857df32f5cad1279217b9535cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int JETHERNET::NetMAC::cString</definition>
+        <argsstring>(char *buf)</argsstring>
+        <name>cString</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+<para>Print formatted MAC address to output buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>maximum 17 characters written (18 w/ null char) </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of bytes written </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetMAC.hpp" line="33" column="5" bodyfile="JLib/JEthernet/src/NetMAC.cpp" bodystart="11" bodyend="14"/>
+        <referencedby refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_config_1a8c31d1edc201aabb1ed0b0f7ee1be790" compoundref="_net_config_8cpp" startline="13" endline="32">JETHERNET::NetConfig::cString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a8a23080bf5843f9c247661ba5ba9f895" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t &amp;</type>
+        <definition>uint8_t &amp; JETHERNET::NetMAC::operator[]</definition>
+        <argsstring>(uint8_t index)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Access MAC bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(0-5) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>byte representing part of a MAC address </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetMAC.hpp" line="40" column="9" bodyfile="JLib/JEthernet/src/NetMAC.cpp" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a05e9675bc0ba6d5bcdc2b86b9c96ebcf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const uint8_t &amp;</type>
+        <definition>const uint8_t &amp; JETHERNET::NetMAC::operator[]</definition>
+        <argsstring>(uint8_t index) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Access MAC bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(0-5) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>byte representing part of a MAC address </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetMAC.hpp" line="47" column="15" bodyfile="JLib/JEthernet/src/NetMAC.cpp" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a170f3c76bce132f52b5fd008686fd188" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref> &amp;</type>
+        <definition>NetMAC&amp; JETHERNET::NetMAC::operator=</definition>
+        <argsstring>(const NetMAC &amp;rhs)=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetMAC.hpp" line="49" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1af7dcc6bf7f5847293ff77f43d8122726" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref> &amp;</type>
+        <definition>NetMAC &amp; JETHERNET::NetMAC::operator=</definition>
+        <argsstring>(const uint32_t mac)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const uint32_t</type>
+          <declname>mac</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetMAC.hpp" line="50" column="8" bodyfile="JLib/JEthernet/src/NetMAC.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a9f29bc694d2e1708253c17030f86e82f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool JETHERNET::NetMAC::operator==</definition>
+        <argsstring>(const NetMAC &amp;rhs) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetMAC.hpp" line="51" column="6" bodyfile="JLib/JEthernet/src/NetMAC.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1ad3f3a3b4935ce2754608f5b9223d0dff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool JETHERNET::NetMAC::operator!=</definition>
+        <argsstring>(const NetMAC &amp;rhs) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetMAC.hpp" line="52" column="6" bodyfile="JLib/JEthernet/src/NetMAC.cpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a3ff7e557caf600f75272648722c74bde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JETHERNET::NetMAC::NetMAC</definition>
+        <argsstring>()</argsstring>
+        <name>NetMAC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetMAC.hpp" line="54" column="1" bodyfile="JLib/JEthernet/src/NetMAC.cpp" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1ae0545f404e4f0b2786fb28a20297479e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JETHERNET::NetMAC::NetMAC</definition>
+        <argsstring>(NetMAC &amp;addr)=default</argsstring>
+        <name>NetMAC</name>
+        <param>
+          <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref> &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetMAC.hpp" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1aab9be044862c467ee9bfabc1a08d2ab4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JETHERNET::NetMAC::NetMAC</definition>
+        <argsstring>(uint8_t n0, uint8_t n1, uint8_t n2, uint8_t n3, uint8_t n4, uint8_t n5)</argsstring>
+        <name>NetMAC</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>n2</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>n3</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>n4</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>n5</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetMAC.hpp" line="56" column="1" bodyfile="JLib/JEthernet/src/NetMAC.cpp" bodystart="33" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1ad786967113504c05bf4a79c5ee69073d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JETHERNET::NetMAC::NetMAC</definition>
+        <argsstring>(uint64_t mac)</argsstring>
+        <name>NetMAC</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>mac</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/NetMAC.hpp" line="58" column="1" bodyfile="JLib/JEthernet/src/NetMAC.cpp" bodystart="51" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>MAC address stored internally as a 48 bit bitset. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>MSB is raw[0], LSB is raw[5] </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" kindref="compound">NetSock</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_config" kindref="compound">NetConfig</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c" kindref="compound">EthernetHC</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="JLib/JEthernet/include/NetMAC.hpp" line="21" column="13" bodyfile="JLib/JEthernet/include/NetMAC.hpp" bodystart="21" bodyend="59"/>
+    <listofallmembers>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a145d5c857df32f5cad1279217b9535cb" prot="public" virt="non-virtual"><scope>JETHERNET::NetMAC</scope><name>cString</name></member>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a3ff7e557caf600f75272648722c74bde" prot="public" virt="non-virtual"><scope>JETHERNET::NetMAC</scope><name>NetMAC</name></member>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1ae0545f404e4f0b2786fb28a20297479e" prot="public" virt="non-virtual"><scope>JETHERNET::NetMAC</scope><name>NetMAC</name></member>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1aab9be044862c467ee9bfabc1a08d2ab4" prot="public" virt="non-virtual"><scope>JETHERNET::NetMAC</scope><name>NetMAC</name></member>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1ad786967113504c05bf4a79c5ee69073d" prot="public" virt="non-virtual"><scope>JETHERNET::NetMAC</scope><name>NetMAC</name></member>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a981fc3ca441bef4f8e749f9a1ee294be" prot="public" virt="non-virtual"><scope>JETHERNET::NetMAC</scope><name>num</name></member>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1ad3f3a3b4935ce2754608f5b9223d0dff" prot="public" virt="non-virtual"><scope>JETHERNET::NetMAC</scope><name>operator!=</name></member>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a170f3c76bce132f52b5fd008686fd188" prot="public" virt="non-virtual"><scope>JETHERNET::NetMAC</scope><name>operator=</name></member>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1af7dcc6bf7f5847293ff77f43d8122726" prot="public" virt="non-virtual"><scope>JETHERNET::NetMAC</scope><name>operator=</name></member>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a9f29bc694d2e1708253c17030f86e82f" prot="public" virt="non-virtual"><scope>JETHERNET::NetMAC</scope><name>operator==</name></member>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a8a23080bf5843f9c247661ba5ba9f895" prot="public" virt="non-virtual"><scope>JETHERNET::NetMAC</scope><name>operator[]</name></member>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a05e9675bc0ba6d5bcdc2b86b9c96ebcf" prot="public" virt="non-virtual"><scope>JETHERNET::NetMAC</scope><name>operator[]</name></member>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1ab2d7fa28425227ed5f42f6dd29fa1fa0" prot="public" virt="non-virtual"><scope>JETHERNET::NetMAC</scope><name>raw</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

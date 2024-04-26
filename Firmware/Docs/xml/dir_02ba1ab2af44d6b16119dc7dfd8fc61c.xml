@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="dir_02ba1ab2af44d6b16119dc7dfd8fc61c" kind="dir">
+    <compoundname>JLib/JMQTT</compoundname>
+    <innerdir refid="dir_69a9451abb0a9a5e227f3c1e82a0ea82">JLib/JMQTT/include</innerdir>
+    <innerdir refid="dir_d1cc4cb7b0ffdb2793cf0c8ecb4d09bb">JLib/JMQTT/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="JLib/JMQTT/"/>
+  </compounddef>
+</doxygen>

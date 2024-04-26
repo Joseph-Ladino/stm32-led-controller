@@ -13,8 +13,8 @@
 
 namespace JETHERNET {
 
-class EthernetIP;
-class EthernetSOCK;
+class NetIP;
+class NetSock;
 class EthernetHC { // @suppress("Class has a virtual method and non-virtual destructor")
 public:
 	virtual void setConfig(NetConfig& netConfig) = 0;
@@ -28,9 +28,9 @@ public:
 
 	// new 03/14
 //	virtual void deinit() = 0;
-	virtual bool enableDNS(EthernetIP dns) = 0;
-	virtual EthernetIP domainToIP(const char * domain, uint16_t timeoutMs) = 0;
-	virtual EthernetSOCK& getFreeSocket() = 0;
+	virtual bool enableDNS(NetIP dns) = 0;
+	virtual NetIP domainToIP(const char * domain, uint16_t timeoutMs) = 0;
+	virtual NetSock& getFreeSocket() = 0;
 
 	virtual ~EthernetHC() {};
 };

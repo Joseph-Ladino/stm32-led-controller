@@ -74,7 +74,7 @@ bool W5500HC::enableDHCP(uint16_t timeoutMs) {
 	return dhcpSuccess;
 }
 
-bool W5500HC::enableDNS(EthernetIP dns) {
+bool W5500HC::enableDNS(NetIP dns) {
 	if(dns.num != 0) {
 		dnsAddress = dns;
 	} else if(dnsAddress.num == 0) {
@@ -85,9 +85,9 @@ bool W5500HC::enableDNS(EthernetIP dns) {
 }
 
 // ip will be 0 if failure
-EthernetIP W5500HC::domainToIP(const char * domain, uint16_t timeoutMs) {
+NetIP W5500HC::domainToIP(const char * domain, uint16_t timeoutMs) {
 	CountdownTimer t(timeoutMs);
-	EthernetIP ip;
+	NetIP ip;
 
 	// socket is closed in DNS_run
 	hw.initDNS(getFreeSocket());

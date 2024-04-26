@@ -1,0 +1,92 @@
+.TH "JETHERNET::NetConfig" 3 "Thu Apr 25 2024" "Version 0.1.1" "CSTM32LedController" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JETHERNET::NetConfig \- Network configuration\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <NetConfig\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBcString\fP (char *buf)"
+.br
+.RI "Print formatted network config to output buffer\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBNetMAC\fP \fBmac\fP"
+.br
+.ti -1c
+.RI "\fBNetIP\fP \fBip\fP"
+.br
+.ti -1c
+.RI "\fBNetIP\fP \fBsubnet\fP"
+.br
+.ti -1c
+.RI "\fBNetIP\fP \fBgateway\fP"
+.br
+.ti -1c
+.RI "\fBNetIP\fP \fBdns\fP"
+.br
+.ti -1c
+.RI "bool \fBdhcpEnabled\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Network configuration\&. 
+
+
+.PP
+\fBSee also\fP
+.RS 4
+\fBNetIP\fP 
+.PP
+\fBNetMAC\fP 
+.PP
+\fBNetSock\fP 
+.PP
+\fBEthernetHC\fP 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file NetConfig\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int JETHERNET::NetConfig::cString (char * buf)"
+
+.PP
+Print formatted network config to output buffer\&. 
+.PP
+\fBNote\fP
+.RS 4
+maximum 152 characters written (153 w/ null char) 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIbuf\fP output buffer 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+number of bytes written 
+.RE
+.PP
+
+.PP
+Definition at line 13 of file NetConfig\&.cpp\&.
+.PP
+References JETHERNET::NetMAC::cString(), and JETHERNET::NetIP::cString()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSTM32LedController from the source code\&.

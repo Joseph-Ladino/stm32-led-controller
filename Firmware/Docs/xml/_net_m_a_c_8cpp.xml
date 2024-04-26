@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="_net_m_a_c_8cpp" kind="file" language="C++">
+    <compoundname>NetMAC.cpp</compoundname>
+    <includes refid="_net_m_a_c_8hpp" local="no">NetMAC.hpp</includes>
+    <includes local="no">cstdio</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>JLib/JEthernet/src/NetMAC.cpp</label>
+        <link refid="_net_m_a_c_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="2">
+        <label>NetMAC.hpp</label>
+        <link refid="_net_m_a_c_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cstdio</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_j_e_t_h_e_r_n_e_t">JETHERNET</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>EthernetMAC.cpp</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Mar<sp/>15,<sp/>2024</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>user</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;NetMAC.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdio&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">JETHERNET<sp/>{</highlight></codeline>
+<codeline lineno="11" refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a145d5c857df32f5cad1279217b9535cb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a145d5c857df32f5cad1279217b9535cb" kindref="member">NetMAC::cString</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sprintf(buf,<sp/></highlight><highlight class="stringliteral">&quot;%02X:%02X:%02X:%02X:%02X:%02X&quot;</highlight><highlight class="normal">,<sp/>raw[0],<sp/>raw[1],<sp/>raw[2],</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>raw[3],<sp/>raw[4],<sp/>raw[5]);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a8a23080bf5843f9c247661ba5ba9f895" refkind="member"><highlight class="normal">uint8_t&amp;<sp/><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a8a23080bf5843f9c247661ba5ba9f895" kindref="member">NetMAC::operator []</ref>(uint8_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>raw[x];</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a05e9675bc0ba6d5bcdc2b86b9c96ebcf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t&amp;<sp/><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a8a23080bf5843f9c247661ba5ba9f895" kindref="member">NetMAC::operator []</ref>(uint8_t<sp/>x)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>raw[x];</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref>&amp;<sp/>NetMAC::operator<sp/>=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>mac)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>num<sp/>=<sp/>mac;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">NetMAC::NetMAC()<sp/>:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>num(0)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">NetMAC::NetMAC(uint8_t<sp/>n0,<sp/>uint8_t<sp/>n1,<sp/>uint8_t<sp/>n2,<sp/>uint8_t<sp/>n3,<sp/>uint8_t<sp/>n4,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>n5)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>raw[0]<sp/>=<sp/>n0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>raw[1]<sp/>=<sp/>n1;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>raw[2]<sp/>=<sp/>n2;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>raw[3]<sp/>=<sp/>n3;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>raw[4]<sp/>=<sp/>n4;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>raw[5]<sp/>=<sp/>n5;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>NetMAC::operator<sp/>==(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NetMAC<sp/>&amp;rhs)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>num<sp/>==<sp/>rhs.num;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>NetMAC::operator<sp/>!=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NetMAC<sp/>&amp;rhs)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>num<sp/>!=<sp/>rhs.num;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">NetMAC::NetMAC(uint64_t<sp/>mac)<sp/>:</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>num(mac)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="JLib/JEthernet/src/NetMAC.cpp"/>
+  </compounddef>
+</doxygen>

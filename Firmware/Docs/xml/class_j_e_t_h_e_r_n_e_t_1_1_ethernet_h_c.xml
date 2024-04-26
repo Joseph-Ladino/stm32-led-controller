@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>JETHERNET::EthernetHC</compoundname>
+    <derivedcompoundref refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c" prot="public" virt="non-virtual">JETHERNET::W5500HC</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a869154c83a1821b0738e13ae3f0d961f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void JETHERNET::EthernetHC::setConfig</definition>
+        <argsstring>(NetConfig &amp;netConfig)=0</argsstring>
+        <name>setConfig</name>
+        <reimplementedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1aacca281855fcad880940cd893c52ca8d">setConfig</reimplementedby>
+        <param>
+          <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_config" kindref="compound">NetConfig</ref> &amp;</type>
+          <declname>netConfig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/EthernetHC.hpp" line="20" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a06b567bffaf6eb147859edf317d4b9bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_config" kindref="compound">NetConfig</ref></type>
+        <definition>virtual NetConfig JETHERNET::EthernetHC::getConfig</definition>
+        <argsstring>()=0</argsstring>
+        <name>getConfig</name>
+        <reimplementedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a64c78f800ddded81d687e0689d97d765">getConfig</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/EthernetHC.hpp" line="21" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a816685c872acf0ef6864633c90488020" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void JETHERNET::EthernetHC::msTick</definition>
+        <argsstring>()=0</argsstring>
+        <name>msTick</name>
+        <reimplementedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1aa45237fe2b5d878be315a8fd3420e864">msTick</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/EthernetHC.hpp" line="23" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a92d9cc9e5308c2c635d6e97947140149" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool JETHERNET::EthernetHC::enableDHCP</definition>
+        <argsstring>(uint16_t timeoutMs)=0</argsstring>
+        <name>enableDHCP</name>
+        <reimplementedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a7832805e05a042f25c71b1f8cbc0109f">enableDHCP</reimplementedby>
+        <param>
+          <type>uint16_t</type>
+          <declname>timeoutMs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/EthernetHC.hpp" line="24" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1aec53d829385f6ee0d0296af3943ffe4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool JETHERNET::EthernetHC::phyLinkStatus</definition>
+        <argsstring>()=0</argsstring>
+        <name>phyLinkStatus</name>
+        <reimplementedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a8d3fb687280b9f4e521280d7a977260c">phyLinkStatus</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/EthernetHC.hpp" line="25" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a1e547d7e6984e2c800d7fecf0260d046" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool JETHERNET::EthernetHC::waitForLink</definition>
+        <argsstring>(uint16_t timeoutMs)=0</argsstring>
+        <name>waitForLink</name>
+        <reimplementedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a005dc035acbb966e4de3734c27118f33">waitForLink</reimplementedby>
+        <param>
+          <type>uint16_t</type>
+          <declname>timeoutMs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/EthernetHC.hpp" line="26" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a6e380cb6bb273af7aaac85f1df1de3ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool JETHERNET::EthernetHC::init</definition>
+        <argsstring>(void *)=0</argsstring>
+        <name>init</name>
+        <reimplementedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a7c8f7dead6c7c61f8ac1c8d784ff3a07">init</reimplementedby>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/EthernetHC.hpp" line="27" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a40a80ea845fb029ca403eb106ed3e3d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool JETHERNET::EthernetHC::enableDNS</definition>
+        <argsstring>(NetIP dns)=0</argsstring>
+        <name>enableDNS</name>
+        <reimplementedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a3e0c3dfaf31ead59c516baa72570cfd6">enableDNS</reimplementedby>
+        <param>
+          <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref></type>
+          <declname>dns</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/EthernetHC.hpp" line="31" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a6036a12d452cc14f70357bfdba6e2a68" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref></type>
+        <definition>virtual NetIP JETHERNET::EthernetHC::domainToIP</definition>
+        <argsstring>(const char *domain, uint16_t timeoutMs)=0</argsstring>
+        <name>domainToIP</name>
+        <reimplementedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1ade44d55a425f5c775db9e12b9c37383b">domainToIP</reimplementedby>
+        <param>
+          <type>const char *</type>
+          <declname>domain</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>timeoutMs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/EthernetHC.hpp" line="32" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1acfe59ff019e1503239f127c7c2eb4ad1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" kindref="compound">NetSock</ref> &amp;</type>
+        <definition>virtual NetSock&amp; JETHERNET::EthernetHC::getFreeSocket</definition>
+        <argsstring>()=0</argsstring>
+        <name>getFreeSocket</name>
+        <reimplementedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a2c573a9eda6ad102424c056f7ed9c270">getFreeSocket</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/EthernetHC.hpp" line="33" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a5f2760472e72efc27c79d83301c9412e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual JETHERNET::EthernetHC::~EthernetHC</definition>
+        <argsstring>()</argsstring>
+        <name>~EthernetHC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JEthernet/include/EthernetHC.hpp" line="35" column="9" bodyfile="JLib/JEthernet/include/EthernetHC.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>JETHERNET::EthernetHC</label>
+        <link refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c"/>
+      </node>
+      <node id="2">
+        <label>JETHERNET::W5500HC</label>
+        <link refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="JLib/JEthernet/include/EthernetHC.hpp" line="18" column="17" bodyfile="JLib/JEthernet/include/EthernetHC.hpp" bodystart="18" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a6036a12d452cc14f70357bfdba6e2a68" prot="public" virt="pure-virtual"><scope>JETHERNET::EthernetHC</scope><name>domainToIP</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a92d9cc9e5308c2c635d6e97947140149" prot="public" virt="pure-virtual"><scope>JETHERNET::EthernetHC</scope><name>enableDHCP</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a40a80ea845fb029ca403eb106ed3e3d0" prot="public" virt="pure-virtual"><scope>JETHERNET::EthernetHC</scope><name>enableDNS</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a06b567bffaf6eb147859edf317d4b9bb" prot="public" virt="pure-virtual"><scope>JETHERNET::EthernetHC</scope><name>getConfig</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1acfe59ff019e1503239f127c7c2eb4ad1" prot="public" virt="pure-virtual"><scope>JETHERNET::EthernetHC</scope><name>getFreeSocket</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a6e380cb6bb273af7aaac85f1df1de3ac" prot="public" virt="pure-virtual"><scope>JETHERNET::EthernetHC</scope><name>init</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a816685c872acf0ef6864633c90488020" prot="public" virt="pure-virtual"><scope>JETHERNET::EthernetHC</scope><name>msTick</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1aec53d829385f6ee0d0296af3943ffe4a" prot="public" virt="pure-virtual"><scope>JETHERNET::EthernetHC</scope><name>phyLinkStatus</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a869154c83a1821b0738e13ae3f0d961f" prot="public" virt="pure-virtual"><scope>JETHERNET::EthernetHC</scope><name>setConfig</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a1e547d7e6984e2c800d7fecf0260d046" prot="public" virt="pure-virtual"><scope>JETHERNET::EthernetHC</scope><name>waitForLink</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a5f2760472e72efc27c79d83301c9412e" prot="public" virt="virtual"><scope>JETHERNET::EthernetHC</scope><name>~EthernetHC</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

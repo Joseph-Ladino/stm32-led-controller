@@ -1,0 +1,50 @@
+.TH "JMQTT::W5500MqttNetwork" 3 "Thu Apr 25 2024" "Version 0.1.1" "CSTM32LedController" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JMQTT::W5500MqttNetwork
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBisConnected\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetSocket\fP (int socketNum)"
+.br
+.ti -1c
+.RI "int \fBconnect\fP (const char *hostname, uint16_t port)"
+.br
+.ti -1c
+.RI "int \fBconnect\fP (uint8_t *ip, uint16_t port)"
+.br
+.ti -1c
+.RI "void \fBdisconnect\fP ()"
+.br
+.ti -1c
+.RI "int \fBread\fP (unsigned char *buffer, int len, int timeout_ms)"
+.br
+.ti -1c
+.RI "int \fBwrite\fP (unsigned char *buffer, int len, int timeout)"
+.br
+.ti -1c
+.RI "\fBW5500MqttNetwork\fP (int socketNum)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBsocketNum\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 17 of file MQTTInterface\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSTM32LedController from the source code\&.

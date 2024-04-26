@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="dir_f71ce90c3b32c022ba4c95c8cd55af10" kind="dir">
+    <compoundname>JLib/JMisc</compoundname>
+    <innerdir refid="dir_fefde071d46456f90ed347462faa2851">JLib/JMisc/include</innerdir>
+    <innerdir refid="dir_9fc67812253a94405d4ea53f5861f347">JLib/JMisc/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="JLib/JMisc/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="_net_m_a_c_8hpp" kind="file" language="C++">
+    <compoundname>NetMAC.hpp</compoundname>
+    <includes local="no">cstdint</includes>
+    <includedby refid="_net_config_8hpp" local="no">JLib/JEthernet/include/NetConfig.hpp</includedby>
+    <includedby refid="_net_m_a_c_8cpp" local="no">JLib/JEthernet/src/NetMAC.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+      <node id="1">
+        <label>JLib/JEthernet/include/NetMAC.hpp</label>
+        <link refid="_net_m_a_c_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7">
+        <label>Core/JPort/src/W5500Socket.cpp</label>
+        <link refid="_w5500_socket_8cpp_source"/>
+      </node>
+      <node id="10">
+        <label>JLib/JEthernet/src/NetMAC.cpp</label>
+        <link refid="_net_m_a_c_8cpp_source"/>
+      </node>
+      <node id="1">
+        <label>JLib/JEthernet/include/NetMAC.hpp</label>
+        <link refid="_net_m_a_c_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>JLib/JEthernet/src/NetConfig.cpp</label>
+        <link refid="_net_config_8cpp_source"/>
+      </node>
+      <node id="6">
+        <label>Core/JPort/src/W5500HC.cpp</label>
+        <link refid="_w5500_h_c_8cpp_source"/>
+      </node>
+      <node id="5">
+        <label>Core/JPort/include/W5500HC.hpp</label>
+        <link refid="_w5500_h_c_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>JLib/JEthernet/include/EthernetHC.hpp</label>
+        <link refid="_ethernet_h_c_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Core/JPort/include/W5500Interface.hpp</label>
+        <link refid="_w5500_interface_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Core/JPort/src/W5500Interface.cpp</label>
+        <link refid="_w5500_interface_8cpp_source"/>
+      </node>
+      <node id="2">
+        <label>JLib/JEthernet/include/NetConfig.hpp</label>
+        <link refid="_net_config_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" prot="public">JETHERNET::NetMAC</innerclass>
+    <innernamespace refid="namespace_j_e_t_h_e_r_n_e_t">JETHERNET</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>EthernetMAC.hpp</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Mar<sp/>15,<sp/>2024</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>user</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>JETHERNET_INCLUDE_NETMAC_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JETHERNET_INCLUDE_NETMAC_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">JETHERNET<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>num<sp/>:<sp/>48;<sp/></highlight><highlight class="comment">//<sp/>48<sp/>bit<sp/>int,<sp/>use<sp/>less<sp/>memory<sp/>i<sp/>think</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>raw[6];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a145d5c857df32f5cad1279217b9535cb" kindref="member">cString</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t&amp;<sp/><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a8a23080bf5843f9c247661ba5ba9f895" kindref="member">operator[]</ref>(uint8_t<sp/>index);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t&amp;<sp/><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a8a23080bf5843f9c247661ba5ba9f895" kindref="member">operator[]</ref>(uint8_t<sp/>index)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref><sp/>&amp;rhs)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>mac);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator==(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref><sp/>&amp;rhs)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator!=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref><sp/>&amp;rhs)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref>(<ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref><sp/>&amp;addr)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref>(uint8_t<sp/>n0,<sp/>uint8_t<sp/>n1,<sp/>uint8_t<sp/>n2,<sp/>uint8_t<sp/>n3,<sp/>uint8_t<sp/>n4,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>n5);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref>(uint64_t<sp/>mac);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>namespace<sp/>JETHERNET<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>JETHERNET_INCLUDE_NETMAC_HPP_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="JLib/JEthernet/include/NetMAC.hpp"/>
+  </compounddef>
+</doxygen>

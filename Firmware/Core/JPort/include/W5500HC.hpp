@@ -8,9 +8,9 @@
 #ifndef JETHERNET_INCLUDE_W5500HC_HPP_
 #define JETHERNET_INCLUDE_W5500HC_HPP_
 
+#include <NetIP.hpp>
 #include "W5500Interface.hpp"
 #include "W5500Socket.hpp"
-#include "EthernetIP.hpp"
 #include "EthernetHC.hpp"
 
 namespace JETHERNET {
@@ -26,7 +26,7 @@ protected:
 private:
 	W5500Config hwConfig;
 	W5500Interface &hw = W5500Interface::instance();
-	EthernetIP dnsAddress;
+	NetIP dnsAddress;
 	bool dhcpEnabled;
 
 public:
@@ -36,8 +36,8 @@ public:
 	void msTick() override;
 
 	bool enableDHCP(uint16_t timeoutMs) override;
-	bool enableDNS(EthernetIP dns = 0) override;
-	EthernetIP domainToIP(const char * domain, uint16_t timeoutMs) override;
+	bool enableDNS(NetIP dns = 0) override;
+	NetIP domainToIP(const char * domain, uint16_t timeoutMs) override;
 
 	bool phyLinkStatus() override;
 	bool waitForLink(uint16_t timeoutMs) override;

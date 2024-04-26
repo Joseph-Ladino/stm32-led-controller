@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="struct_j_l_e_d_1_1_color" kind="struct" language="C++" prot="public">
+    <compoundname>JLED::Color</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_j_l_e_d_1_1_color_1a9f7236e92911fde997f9ed1a2ab9bd0f" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t JLED::Color::w</definition>
+        <argsstring></argsstring>
+        <name>w</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JLED/include/Color.hpp" line="21" column="9" bodyfile="JLib/JLED/include/Color.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_l_e_d_1_1_color_1abc9619ad0b5523617ab8073e9d75a6b7" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t JLED::Color::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JLED/include/Color.hpp" line="22" column="9" bodyfile="JLib/JLED/include/Color.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_l_e_d_1_1_color_1a53b60a1180be5dca5879493599c3c924" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t JLED::Color::g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JLED/include/Color.hpp" line="23" column="9" bodyfile="JLib/JLED/include/Color.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_l_e_d_1_1_color_1a450cffa91c156cbc2fdd5f4dda74b9da" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t JLED::Color::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JLED/include/Color.hpp" line="24" column="9" bodyfile="JLib/JLED/include/Color.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_l_e_d_1_1_color_1ac2553ef03f3016ee30a946ff5ab45720" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t JLED::Color::raw[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>raw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JLED/include/Color.hpp" line="26" column="9" bodyfile="JLib/JLED/include/Color.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_l_e_d_1_1_color_1a7697370bee3952e1fd6d7fdad83908fc" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t JLED::Color::num</definition>
+        <argsstring></argsstring>
+        <name>num</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JLED/include/Color.hpp" line="27" column="10" bodyfile="JLib/JLED/include/Color.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_l_e_d_1_1_color_1aa57072b778f58837631241f3f819b6c1" prot="public" static="no" mutable="no">
+        <type>union JLED::Color::@4</type>
+        <definition>union JLED::Color::@4 JLED::Color::@5</definition>
+        <argsstring></argsstring>
+        <name>@5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JLED/include/Color.hpp" line="28" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_j_l_e_d_1_1_color_1ac64920ab6a0d7f4dbd30d8c936667b27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t &amp;</type>
+        <definition>uint8_t&amp; JLED::Color::operator[]</definition>
+        <argsstring>(uint8_t n)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JLED/include/Color.hpp" line="31" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_l_e_d_1_1_color_1a596985ada13dbd3eaa9035844fb252d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const uint8_t &amp;</type>
+        <definition>const uint8_t&amp; JLED::Color::operator[]</definition>
+        <argsstring>(uint8_t n) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JLED/include/Color.hpp" line="32" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_l_e_d_1_1_color_1ac370745c0d987394fff68cec181eb3de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool JLED::Color::operator==</definition>
+        <argsstring>(const Color &amp;rhs) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="struct_j_l_e_d_1_1_color" kindref="compound">Color</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JLED/include/Color.hpp" line="34" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_l_e_d_1_1_color_1a3a29afe4842aaf7bb3733cc7e5a286dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool JLED::Color::operator!=</definition>
+        <argsstring>(const Color &amp;rhs) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="struct_j_l_e_d_1_1_color" kindref="compound">Color</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JLED/include/Color.hpp" line="35" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_l_e_d_1_1_color_1a7456c3a959b054301eeeae5ff4f591e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_j_l_e_d_1_1_color" kindref="compound">Color</ref> &amp;</type>
+        <definition>Color&amp; JLED::Color::operator=</definition>
+        <argsstring>(const uint32_t rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const uint32_t</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JLED/include/Color.hpp" line="37" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_l_e_d_1_1_color_1a0969c340dd86d60277b05015914f6b9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_j_l_e_d_1_1_color" kindref="compound">Color</ref> &amp;</type>
+        <definition>Color&amp; JLED::Color::operator=</definition>
+        <argsstring>(const Color &amp;rhs)=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="struct_j_l_e_d_1_1_color" kindref="compound">Color</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JLED/include/Color.hpp" line="38" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_l_e_d_1_1_color_1a53ce5313bbe5a9fa9a39f9b5faefb1c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JLED::Color::Color</definition>
+        <argsstring>()=default</argsstring>
+        <name>Color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JLED/include/Color.hpp" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_j_l_e_d_1_1_color_1afbc287e5115aab0ff3dcc64d0f4d5391" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JLED::Color::Color</definition>
+        <argsstring>(Color &amp;c)=default</argsstring>
+        <name>Color</name>
+        <param>
+          <type><ref refid="struct_j_l_e_d_1_1_color" kindref="compound">Color</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JLED/include/Color.hpp" line="41" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="JLib/JLED/include/Color.hpp" line="17" column="12" bodyfile="JLib/JLED/include/Color.hpp" bodystart="17" bodyend="42"/>
+    <listofallmembers>
+      <member refid="struct_j_l_e_d_1_1_color_1abc9619ad0b5523617ab8073e9d75a6b7" prot="public" virt="non-virtual"><scope>JLED::Color</scope><name>b</name></member>
+      <member refid="struct_j_l_e_d_1_1_color_1a53ce5313bbe5a9fa9a39f9b5faefb1c0" prot="public" virt="non-virtual"><scope>JLED::Color</scope><name>Color</name></member>
+      <member refid="struct_j_l_e_d_1_1_color_1afbc287e5115aab0ff3dcc64d0f4d5391" prot="public" virt="non-virtual"><scope>JLED::Color</scope><name>Color</name></member>
+      <member refid="struct_j_l_e_d_1_1_color_1a53b60a1180be5dca5879493599c3c924" prot="public" virt="non-virtual"><scope>JLED::Color</scope><name>g</name></member>
+      <member refid="struct_j_l_e_d_1_1_color_1a7697370bee3952e1fd6d7fdad83908fc" prot="public" virt="non-virtual"><scope>JLED::Color</scope><name>num</name></member>
+      <member refid="struct_j_l_e_d_1_1_color_1a3a29afe4842aaf7bb3733cc7e5a286dc" prot="public" virt="non-virtual"><scope>JLED::Color</scope><name>operator!=</name></member>
+      <member refid="struct_j_l_e_d_1_1_color_1a7456c3a959b054301eeeae5ff4f591e3" prot="public" virt="non-virtual"><scope>JLED::Color</scope><name>operator=</name></member>
+      <member refid="struct_j_l_e_d_1_1_color_1a0969c340dd86d60277b05015914f6b9a" prot="public" virt="non-virtual"><scope>JLED::Color</scope><name>operator=</name></member>
+      <member refid="struct_j_l_e_d_1_1_color_1ac370745c0d987394fff68cec181eb3de" prot="public" virt="non-virtual"><scope>JLED::Color</scope><name>operator==</name></member>
+      <member refid="struct_j_l_e_d_1_1_color_1ac64920ab6a0d7f4dbd30d8c936667b27" prot="public" virt="non-virtual"><scope>JLED::Color</scope><name>operator[]</name></member>
+      <member refid="struct_j_l_e_d_1_1_color_1a596985ada13dbd3eaa9035844fb252d1" prot="public" virt="non-virtual"><scope>JLED::Color</scope><name>operator[]</name></member>
+      <member refid="struct_j_l_e_d_1_1_color_1a450cffa91c156cbc2fdd5f4dda74b9da" prot="public" virt="non-virtual"><scope>JLED::Color</scope><name>r</name></member>
+      <member refid="struct_j_l_e_d_1_1_color_1ac2553ef03f3016ee30a946ff5ab45720" prot="public" virt="non-virtual"><scope>JLED::Color</scope><name>raw</name></member>
+      <member refid="struct_j_l_e_d_1_1_color_1a9f7236e92911fde997f9ed1a2ab9bd0f" prot="public" virt="non-virtual"><scope>JLED::Color</scope><name>w</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

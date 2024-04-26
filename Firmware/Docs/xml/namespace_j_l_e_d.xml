@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="namespace_j_l_e_d" kind="namespace" language="C++">
+    <compoundname>JLED</compoundname>
+    <innerclass refid="struct_j_l_e_d_1_1_color" prot="public">JLED::Color</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="JLib/JLED/include/Color.hpp" line="12" column="14"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,356 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.16">
+  <compound refid="class_j_m_q_t_t_1_1_client" kind="class"><name>JMQTT::Client</name>
+    <member refid="class_j_m_q_t_t_1_1_client_1a5baa97eaa06bfc44647d2420a1c613b2" kind="typedef"><name>ConnectCB</name></member>
+    <member refid="class_j_m_q_t_t_1_1_client_1afdd270cfe93363df3d9076452ace76fa" kind="typedef"><name>MessageCB</name></member>
+    <member refid="class_j_m_q_t_t_1_1_client_1a8e4b70bb656d1d7b5ba4f11d7e64e5aa" kind="function"><name>publish</name></member>
+    <member refid="class_j_m_q_t_t_1_1_client_1a61f9bb3e61ba5fa6e516e2b5729074be" kind="function"><name>subscribe</name></member>
+    <member refid="class_j_m_q_t_t_1_1_client_1aa04cc45d722283c9e871980f4d1a27c1" kind="function"><name>update</name></member>
+    <member refid="class_j_m_q_t_t_1_1_client_1a32cc54d1b9285f0ba99dfabda2a03bd5" kind="function"><name>connect</name></member>
+    <member refid="class_j_m_q_t_t_1_1_client_1ac2c1c3f2c2ac1938661dbaae2ecbf39c" kind="function"><name>reconnect</name></member>
+    <member refid="class_j_m_q_t_t_1_1_client_1a3581c3e4959d19a43f30b8eb70e69493" kind="function"><name>disconnect</name></member>
+    <member refid="class_j_m_q_t_t_1_1_client_1a70dab29288dc7daad9b1c1587e569441" kind="function"><name>isConnected</name></member>
+    <member refid="class_j_m_q_t_t_1_1_client_1a1fbf4f35c4d0e9bfa93d2d3f3d3c86a4" kind="function"><name>setMessageCallback</name></member>
+    <member refid="class_j_m_q_t_t_1_1_client_1a9c50f65617e65d5e863a984d94890a59" kind="function"><name>setConnectCallback</name></member>
+    <member refid="class_j_m_q_t_t_1_1_client_1a75de2ea57ef30e60bc7fbd6350e47a1d" kind="function"><name>~Client</name></member>
+  </compound>
+  <compound refid="struct_j_m_q_t_t_1_1_client_config" kind="struct"><name>JMQTT::ClientConfig</name>
+    <member refid="struct_j_m_q_t_t_1_1_client_config_1adaf4490b2a554690a8b155c3f0683dd5" kind="variable"><name>version</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_client_config_1a6da016f97b0800325683bfae4d5e1cb0" kind="variable"><name>brokerIP</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_client_config_1aa879edf93bc829164b9724b092c77669" kind="variable"><name>brokerPort</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_client_config_1afe121029b64aeb950a7b4ca28eeb2d3a" kind="variable"><name>clientName</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_client_config_1a266098173864ed535b7d368fbf18112b" kind="variable"><name>username</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_client_config_1a750576b79628cbcd0297c4e3ebf5ac73" kind="variable"><name>password</name></member>
+  </compound>
+  <compound refid="struct_j_l_e_d_1_1_color" kind="struct"><name>JLED::Color</name>
+    <member refid="struct_j_l_e_d_1_1_color_1a9f7236e92911fde997f9ed1a2ab9bd0f" kind="variable"><name>w</name></member>
+    <member refid="struct_j_l_e_d_1_1_color_1abc9619ad0b5523617ab8073e9d75a6b7" kind="variable"><name>b</name></member>
+    <member refid="struct_j_l_e_d_1_1_color_1a53b60a1180be5dca5879493599c3c924" kind="variable"><name>g</name></member>
+    <member refid="struct_j_l_e_d_1_1_color_1a450cffa91c156cbc2fdd5f4dda74b9da" kind="variable"><name>r</name></member>
+    <member refid="struct_j_l_e_d_1_1_color_1ac2553ef03f3016ee30a946ff5ab45720" kind="variable"><name>raw</name></member>
+    <member refid="struct_j_l_e_d_1_1_color_1a7697370bee3952e1fd6d7fdad83908fc" kind="variable"><name>num</name></member>
+    <member refid="struct_j_l_e_d_1_1_color_1aa57072b778f58837631241f3f819b6c1" kind="variable"><name>@5</name></member>
+    <member refid="struct_j_l_e_d_1_1_color_1ac64920ab6a0d7f4dbd30d8c936667b27" kind="function"><name>operator[]</name></member>
+    <member refid="struct_j_l_e_d_1_1_color_1a596985ada13dbd3eaa9035844fb252d1" kind="function"><name>operator[]</name></member>
+    <member refid="struct_j_l_e_d_1_1_color_1ac370745c0d987394fff68cec181eb3de" kind="function"><name>operator==</name></member>
+    <member refid="struct_j_l_e_d_1_1_color_1a3a29afe4842aaf7bb3733cc7e5a286dc" kind="function"><name>operator!=</name></member>
+    <member refid="struct_j_l_e_d_1_1_color_1a7456c3a959b054301eeeae5ff4f591e3" kind="function"><name>operator=</name></member>
+    <member refid="struct_j_l_e_d_1_1_color_1a0969c340dd86d60277b05015914f6b9a" kind="function"><name>operator=</name></member>
+    <member refid="struct_j_l_e_d_1_1_color_1a53ce5313bbe5a9fa9a39f9b5faefb1c0" kind="function"><name>Color</name></member>
+    <member refid="struct_j_l_e_d_1_1_color_1afbc287e5115aab0ff3dcc64d0f4d5391" kind="function"><name>Color</name></member>
+  </compound>
+  <compound refid="struct_countdown_timer" kind="struct"><name>CountdownTimer</name>
+    <member refid="struct_countdown_timer_1aec9aa3f7dfa76848d41da8ac01398c1f" kind="variable"><name>endMs</name></member>
+    <member refid="struct_countdown_timer_1adc81e626332259b1811fdb9012efcb5c" kind="variable"><name>tick</name></member>
+    <member refid="struct_countdown_timer_1ae938bf04669e4db43d9793ec66f451d0" kind="function"><name>countdown_ms</name></member>
+    <member refid="struct_countdown_timer_1a2d673c7a79fc69a2bd480f40ffb65f3c" kind="function"><name>countdown</name></member>
+    <member refid="struct_countdown_timer_1a7b3f51afa536ffed772f1c62de543e43" kind="function"><name>left_ms</name></member>
+    <member refid="struct_countdown_timer_1a3c03271b786ef9a0d43f0b2937fe8183" kind="function"><name>expired</name></member>
+    <member refid="struct_countdown_timer_1a4d930a016b5118d0a5fc4e8ff04f668f" kind="function"><name>CountdownTimer</name></member>
+    <member refid="struct_countdown_timer_1a063ec0ed50acbd662071121338dd0509" kind="function"><name>CountdownTimer</name></member>
+    <member refid="struct_countdown_timer_1a766d43746a33928f83b0c80e47c3da2c" kind="function"><name>msTick</name></member>
+  </compound>
+  <compound refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c" kind="class"><name>JETHERNET::EthernetHC</name>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a869154c83a1821b0738e13ae3f0d961f" kind="function"><name>setConfig</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a06b567bffaf6eb147859edf317d4b9bb" kind="function"><name>getConfig</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a816685c872acf0ef6864633c90488020" kind="function"><name>msTick</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a92d9cc9e5308c2c635d6e97947140149" kind="function"><name>enableDHCP</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1aec53d829385f6ee0d0296af3943ffe4a" kind="function"><name>phyLinkStatus</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a1e547d7e6984e2c800d7fecf0260d046" kind="function"><name>waitForLink</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a6e380cb6bb273af7aaac85f1df1de3ac" kind="function"><name>init</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a40a80ea845fb029ca403eb106ed3e3d0" kind="function"><name>enableDNS</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a6036a12d452cc14f70357bfdba6e2a68" kind="function"><name>domainToIP</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1acfe59ff019e1503239f127c7c2eb4ad1" kind="function"><name>getFreeSocket</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a5f2760472e72efc27c79d83301c9412e" kind="function"><name>~EthernetHC</name></member>
+  </compound>
+  <compound refid="struct_j_m_q_t_t_1_1_message" kind="struct"><name>JMQTT::Message</name>
+    <member refid="struct_j_m_q_t_t_1_1_message_1a1f5f5601ec0d1b2d5b96d8c2ccfa99c2" kind="variable"><name>topic</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_message_1a8b052e26ae6631e381d29cabdd07d384" kind="variable"><name>payload</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_message_1a20c27d887cf1ff51e4b65c5f6f32cf5e" kind="variable"><name>qos</name></member>
+  </compound>
+  <compound refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_config" kind="struct"><name>JETHERNET::NetConfig</name>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_config_1a348d8f4705812bf0c808d4f692c4c1fe" kind="variable"><name>mac</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_config_1a15633d6f722dc68b31dab9d8de300da7" kind="variable"><name>ip</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_config_1a0a29b0b50f49a334107bc987557fb0e2" kind="variable"><name>subnet</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_config_1abd640ce8bf534dfed2edb6d4d30eb708" kind="variable"><name>gateway</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_config_1a4834d9cd546a8cdd754de6aba2b83cc9" kind="variable"><name>dns</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_config_1acaecb870dd38076d47e3ace2cea2b738" kind="variable"><name>dhcpEnabled</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_config_1a8c31d1edc201aabb1ed0b0f7ee1be790" kind="function"><name>cString</name></member>
+  </compound>
+  <compound refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kind="struct"><name>JETHERNET::NetIP</name>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1a2b107533f39fd496cc2e485a9ecc2f99" kind="variable"><name>num</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1a232d117efc1173373972c819a0e48e64" kind="variable"><name>raw</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1a13f9249293143ac671883087c22ef6ff" kind="variable"><name>@1</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1abf6814cc0fd7e20073cea1abdbc1e1a2" kind="function"><name>cString</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1af39e5551f77da937526feebef81baeb4" kind="function"><name>operator[]</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1a42698f2fadba42d38703e1603e64cb87" kind="function"><name>operator[]</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1a562d2695488d6c851f944029fa18f590" kind="function"><name>operator=</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1ab3e8343d4b135803c689ba6243ed8e5d" kind="function"><name>operator=</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1a7cf99bd3c7bf715c1769afc915af3da0" kind="function"><name>operator==</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1a4d3970e5ab85c1802a71022e4628b113" kind="function"><name>operator!=</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1ae1c1e097f01e141013dbee53ebeec7ab" kind="function"><name>NetIP</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1a78458fcfe4a79e82d9855e2ad9621044" kind="function"><name>NetIP</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1a03deafaaa850d2e53e51f0049e764840" kind="function"><name>NetIP</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1aa2075e36a3d56a6ad52d3a06946b9c9b" kind="function"><name>NetIP</name></member>
+  </compound>
+  <compound refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kind="struct"><name>JETHERNET::NetMAC</name>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a981fc3ca441bef4f8e749f9a1ee294be" kind="variable"><name>num</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1ab2d7fa28425227ed5f42f6dd29fa1fa0" kind="variable"><name>raw</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a8f1514c2bc0bffdcf94c180df22fc3a6" kind="variable"><name>@3</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a145d5c857df32f5cad1279217b9535cb" kind="function"><name>cString</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a8a23080bf5843f9c247661ba5ba9f895" kind="function"><name>operator[]</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a05e9675bc0ba6d5bcdc2b86b9c96ebcf" kind="function"><name>operator[]</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a170f3c76bce132f52b5fd008686fd188" kind="function"><name>operator=</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1af7dcc6bf7f5847293ff77f43d8122726" kind="function"><name>operator=</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a9f29bc694d2e1708253c17030f86e82f" kind="function"><name>operator==</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1ad3f3a3b4935ce2754608f5b9223d0dff" kind="function"><name>operator!=</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a3ff7e557caf600f75272648722c74bde" kind="function"><name>NetMAC</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1ae0545f404e4f0b2786fb28a20297479e" kind="function"><name>NetMAC</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1aab9be044862c467ee9bfabc1a08d2ab4" kind="function"><name>NetMAC</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1ad786967113504c05bf4a79c5ee69073d" kind="function"><name>NetMAC</name></member>
+  </compound>
+  <compound refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" kind="class"><name>JETHERNET::NetSock</name>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1abe1b9e145bdd796464e8666db6df511d" kind="function"><name>open</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1abced4845fbe84804cd64597c39f2b1b5" kind="function"><name>close</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1ad4fcf93b2ec7285a632c4b51777c0beb" kind="function"><name>connectTCP</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a5f4da6ea7d0538048a8e1e70f5d69ea0" kind="function"><name>disconnect</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a9fa1b012c538e35f38780a1fd84f618e" kind="function"><name>write</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1ac352a31bb144160f2a060c2609cee259" kind="function"><name>read</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a41db618756cf90001a219180d152ecde" kind="function"><name>isConnected</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a9b8b34ac38e7cc54c2f54bf781d6d691" kind="function"><name>~NetSock</name></member>
+  </compound>
+  <compound refid="class_j_m_q_t_t_1_1_p_a_h_o_client" kind="class"><name>JMQTT::PAHOClient</name>
+    <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1a5ed4b543097ac1b75ac2eb06885fbfb3" kind="variable"><name>net</name></member>
+    <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1ae7215d3229b8ef988b1d91ca2b3e8a24" kind="variable"><name>client</name></member>
+    <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1a5f4668cdd326873ca784c2740aedbb01" kind="variable"><name>onMessage</name></member>
+    <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1ab16041f68f299716da2ef9c770430549" kind="variable"><name>onConnect</name></member>
+    <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1afae6b32bdc6732ccf658c02049e86cf9" kind="function"><name>connect</name></member>
+    <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1a5bbf16a26e74c93a9a8b372d7548cba9" kind="function"><name>publish</name></member>
+    <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1a3811ba986b402d0066c0e868d6a1113e" kind="function"><name>subscribe</name></member>
+    <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1ab6a8114c17036596b81f37a292741d7e" kind="function"><name>update</name></member>
+    <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1a9a94024ef51ef3c1c26f5f6d23160c1f" kind="function"><name>connect</name></member>
+    <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1a106782e6d80da9c3269c004eec75ec07" kind="function"><name>reconnect</name></member>
+    <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1adfb668e97d68912349291000810d3e63" kind="function"><name>reconnect</name></member>
+    <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1a2592dfc13815f6bb46f0dc10e6b67ee4" kind="function"><name>disconnect</name></member>
+    <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1a512779577f19fd55308ec4d5bb23a56c" kind="function"><name>isConnected</name></member>
+    <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1aafe1ca238b53d18a689f22a309017fdf" kind="function"><name>setMessageCallback</name></member>
+    <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1a9e623915c12da35dc7a9d0be2cbfe8b7" kind="function"><name>setConnectCallback</name></member>
+    <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1a607bcae635e895968efb49dd8eae533a" kind="function"><name>pahoMessageReceived</name></member>
+    <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1abaeb8974cfc89361cafecc674b6aaf4e" kind="function"><name>PAHOClient</name></member>
+    <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1a6f0ae3731325e9ab016bb07e1f977ccb" kind="function"><name>~PAHOClient</name></member>
+  </compound>
+  <compound refid="struct_j_m_q_t_t_1_1_p_a_h_o_network" kind="struct"><name>JMQTT::PAHONetwork</name>
+    <member refid="struct_j_m_q_t_t_1_1_p_a_h_o_network_1ae86aeca997e66b080f31cf0bde7a629c" kind="variable"><name>sock</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_p_a_h_o_network_1a73498b1a7ccea5e4e3e9136ba321403d" kind="variable"><name>conf</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_p_a_h_o_network_1aa0aa90f178a7796b44b9b3677fee09de" kind="function"><name>read</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_p_a_h_o_network_1a63b196ebc3e5d3d279ebc794bfbf199a" kind="function"><name>write</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_p_a_h_o_network_1a4b545a8666452b5ce582136c748a220b" kind="function"><name>operator bool</name></member>
+  </compound>
+  <compound refid="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config" kind="struct"><name>JETHERNET::W5500Config</name>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_1af4b6ac2300be6775fd30e74dfa06babc" kind="variable"><name>spi</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_1ab6d0e79fe1e2b8872171136977d23499" kind="variable"><name>chipSelectPort</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_1a321ce81de4647a007d957ca4b1aab38e" kind="variable"><name>chipSelectPin</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_1a0d72f294c3e7d6143642b8817cac726f" kind="variable"><name>resetPort</name></member>
+    <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_1a4989fb5f65b0849b4483891b844c104f" kind="variable"><name>resetPin</name></member>
+  </compound>
+  <compound refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c" kind="class"><name>JETHERNET::W5500HC</name>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a4d4950762a8d89067160c7754a97ce52" kind="variable"><name>dhcpSuccess</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1ad159ed22180c186a3947a5a9f5d1b694" kind="variable"><name>initSuccess</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a66330e647066a6f6551165b7d6ce94f4" kind="variable"><name>phyTimeout</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a6922de2cabee2f645173cd2f6fd3ca93" kind="variable"><name>sockets</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1ae40e90cf376217f41325d954d1261512" kind="variable"><name>hwConfig</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a743ab4c02a729459a580c20a183acf78" kind="variable"><name>hw</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a5123b81991bb027f4e0371c62c3835e4" kind="variable"><name>dnsAddress</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a0ce5227bcab6fdd0538c78c64c0dbbbb" kind="variable"><name>dhcpEnabled</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1aacca281855fcad880940cd893c52ca8d" kind="function"><name>setConfig</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a64c78f800ddded81d687e0689d97d765" kind="function"><name>getConfig</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1aa45237fe2b5d878be315a8fd3420e864" kind="function"><name>msTick</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a7832805e05a042f25c71b1f8cbc0109f" kind="function"><name>enableDHCP</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a3e0c3dfaf31ead59c516baa72570cfd6" kind="function"><name>enableDNS</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1ade44d55a425f5c775db9e12b9c37383b" kind="function"><name>domainToIP</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a8d3fb687280b9f4e521280d7a977260c" kind="function"><name>phyLinkStatus</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a005dc035acbb966e4de3734c27118f33" kind="function"><name>waitForLink</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1aa94ada9cbdc61fda72a8d8f081501b6d" kind="function"><name>softReset</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a7c8f7dead6c7c61f8ac1c8d784ff3a07" kind="function"><name>init</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a2c573a9eda6ad102424c056f7ed9c270" kind="function"><name>getFreeSocket</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1ac0da98304ab49a78c4291b7673fc87ce" kind="function"><name>~W5500HC</name></member>
+  </compound>
+  <compound refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface" kind="class"><name>JETHERNET::W5500Interface</name>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a926675b05c4442bdce1b085bb993ae30" kind="variable"><name>config</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a3fab63d1801763acd6e8b36e8600e99b" kind="variable"><name>ipAssigned</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a01d79faf86b4561e3584769fee48c473" kind="variable"><name>dhcpEnabled</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1ae4496b2bb9acc463e6410c3b4cf1bd20" kind="friend"><name>W5500HC</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a9b867262fb1648b34b00bd3ce8ea6366" kind="friend"><name>readBuffer</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a941d19f895de5d339c2c33444575aea9" kind="friend"><name>writeBuffer</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a9b760904bbc60f357339dc98253d6d17" kind="friend"><name>readByte</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a699306e6c14403e4b704222c1f563a97" kind="friend"><name>writeByte</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1afb1a7f35c6139dc58d7326c2f2c9415e" kind="friend"><name>enableChipSelect</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a666e8918b1e1c3a16b84f9af2154dbcc" kind="friend"><name>disableChipSelect</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1ab10efff60c8c417e1d2bfd55b62d6d99" kind="friend"><name>CB_DHCP_IPAssigned</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a39c1c2baaa63c496a10cd53ddd25dd9c" kind="friend"><name>CB_DHCP_IPConflict</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1aa89348093c27c5829755ca57fd8270f9" kind="function"><name>W5500Interface</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1aff3e558de69fda526a439c95757ccad0" kind="function"><name>initChip</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a4cba0c9cc794ebe8199ffafbe342d375" kind="function"><name>initDHCP</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1af111b2830d3a6171ed28a70efc782713" kind="function"><name>initDNS</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a8533e709aa935bf63b96ea9346a861b1" kind="function"><name>triggerReset</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a68719cbb52d8c4c5388b479021cdf048" kind="function"><name>W5500Interface</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a9330e7e1ae475691ebadb6aef9c17b66" kind="function"><name>operator=</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1af79e30d3b1adb47d652f82c045832f66" kind="function"><name>instance</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1abe7d564e593a26c9802116f740b1e4e8" kind="function"><name>init</name></member>
+  </compound>
+  <compound refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network" kind="struct"><name>JMQTT::W5500MqttNetwork</name>
+    <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a914bbdc5c0561d9938a3bf87014845d2" kind="variable"><name>socketNum</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a41a09a8fd79d62d52f5ce0ff4d2e2723" kind="function"><name>isConnected</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1aee3fe0f042a9ed67d21ae0cb49355468" kind="function"><name>setSocket</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a4d02403adcff198cdaa44c1e7f91bbaf" kind="function"><name>connect</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a9192f60f83f6d5f5d7ae7ccb34cfea6b" kind="function"><name>connect</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1aa80e6b76bfb01c241ab91604714042cc" kind="function"><name>disconnect</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a08e3a3faead9d84bddd16177baa8574c" kind="function"><name>read</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a0614007fa4c8d9602647510fe732be38" kind="function"><name>write</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1aca47fb04224edb2de5e283d78d6ec174" kind="function"><name>W5500MqttNetwork</name></member>
+    <member refid="struct_j_m_q_t_t_1_1_w5500_mqtt_network_1a1f8ac87b3170cfdae999e40ce2d818d4" kind="function"><name>W5500MqttNetwork</name></member>
+  </compound>
+  <compound refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket" kind="class"><name>JETHERNET::W5500Socket</name>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1adbdd8be994c3bf3d103ea22da51249ee" kind="variable"><name>ethHC</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ad7dfce53b06073f8994af2d801473629" kind="variable"><name>socketNum</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae25d54b1e4fd0f726255db351f1a2141" kind="variable"><name>connectMode</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae4496b2bb9acc463e6410c3b4cf1bd20" kind="friend"><name>W5500HC</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a8ca576edc220f26e969b55404ed9bdc6" kind="function"><name>open</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a30252f2d5b5820955e2ddfc905258de4" kind="function"><name>close</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae899a9827e9773e01163d893c48deeae" kind="function"><name>connectTCP</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1aaaa05a73924134dafddd1aa8eb0bcd02" kind="function"><name>disconnect</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a6405fcf9acb90e76d8b138d5ba9775a0" kind="function"><name>write</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a6f49d3a309be5c3b9d2e3a3aaae6a883" kind="function"><name>read</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a3e04828e428a45fdcb75c8baa05c45d9" kind="function"><name>getWizSocketStatus</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a7ab00d6cd578c68d97a287367fefeb16" kind="function"><name>getSocketNum</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae1e6ed02559892e71752470e125bc60e" kind="function"><name>isConnected</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ab9b3589fea9a0df24cfe2a1f1074b792" kind="function"><name>operator bool</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a1f4b3dc87d3933e3e276a06b10c09ad3" kind="function"><name>W5500Socket</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a98e23b5bf25f1b5a668917a260367e03" kind="function"><name>W5500Socket</name></member>
+    <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a3b86269ab4b0c30ce103efb4e15c2ae7" kind="function"><name>~W5500Socket</name></member>
+  </compound>
+  <compound refid="namespace_j_e_t_h_e_r_n_e_t" kind="namespace"><name>JETHERNET</name>
+    <member refid="_net_sock_8hpp_1a2bcff7d05aee5335790afea11e197ca1" kind="enum"><name>SockConnectMode</name></member>
+    <member refid="_net_sock_8hpp_1a2bcff7d05aee5335790afea11e197ca1ab136ef5f6a01d816991fe3cf7a6ac763" kind="enumvalue"><name>TCP</name></member>
+    <member refid="_net_sock_8hpp_1a2bcff7d05aee5335790afea11e197ca1af5ef036b4d8b630721e51fe23489fbc9" kind="enumvalue"><name>UDP</name></member>
+    <member refid="_net_sock_8hpp_1a2bcff7d05aee5335790afea11e197ca1ac5e644af7e77a1d8c565037a46b76962" kind="enumvalue"><name>RAWIP</name></member>
+    <member refid="_net_sock_8hpp_1a2bcff7d05aee5335790afea11e197ca1a5d07b94b0ac1f5024a8dc70adeefa6a0" kind="enumvalue"><name>RAWMAC</name></member>
+    <member refid="_w5500_interface_8cpp_1a1c40bf58d99cca0c3f57450c4deb4a35" kind="variable"><name>DHCPBuffer</name></member>
+    <member refid="_w5500_interface_8cpp_1ab3f91ca6aa8357215f5398055e8799fb" kind="variable"><name>DNSBuffer</name></member>
+    <member refid="_w5500_interface_8cpp_1a96e4747ccfa9e4e1c4d80c98d32c6e8a" kind="function"><name>printNetInfo</name></member>
+    <member refid="_w5500_interface_8cpp_1ab6036d4f6b27262f34c6cb2bfde405e3" kind="function"><name>enableChipSelect</name></member>
+    <member refid="_w5500_interface_8cpp_1a7700f08effc5acd4d9b3ece18a04bc4c" kind="function"><name>disableChipSelect</name></member>
+    <member refid="_w5500_interface_8cpp_1a495c13f1de2800e18d462a089fc38d47" kind="function"><name>readBuffer</name></member>
+    <member refid="_w5500_interface_8cpp_1abee57ef47590ad5046d75bef2955a7f9" kind="function"><name>writeBuffer</name></member>
+    <member refid="_w5500_interface_8cpp_1a16198c04d679e46f5e790d267be725fb" kind="function"><name>readByte</name></member>
+    <member refid="_w5500_interface_8cpp_1a74ab9008d1d7e98fb6d573da77e8c9ac" kind="function"><name>writeByte</name></member>
+    <member refid="_w5500_interface_8cpp_1a2862902ca3d224c96d7fbe14deebb8f8" kind="function"><name>CB_DHCP_IPAssigned</name></member>
+    <member refid="_w5500_interface_8cpp_1a97102a718babdde7d7f04c865a3d49c5" kind="function"><name>CB_DHCP_IPConflict</name></member>
+    <member refid="_w5500_interface_8cpp_1aea849ead1fa4bbcbe6c3a8e9748435e9" kind="function"><name>getNetInfo</name></member>
+    <member refid="_w5500_interface_8cpp_1ad9df5ab2a2e4f4bd4c1d0093af407e96" kind="function"><name>setNetInfo</name></member>
+  </compound>
+  <compound refid="namespace_j_l_e_d" kind="namespace"><name>JLED</name>
+  </compound>
+  <compound refid="namespace_j_m_q_t_t" kind="namespace"><name>JMQTT</name>
+    <member refid="_client_8hpp_1ae20074947d69a428122e13962b0b54e3" kind="enum"><name>QOS</name></member>
+    <member refid="_client_8hpp_1ae20074947d69a428122e13962b0b54e3a065532b760e1ff433556caf8cff11819" kind="enumvalue"><name>QOS0</name></member>
+    <member refid="_client_8hpp_1ae20074947d69a428122e13962b0b54e3a42c6763919390c440401d176611e39fa" kind="enumvalue"><name>QOS1</name></member>
+    <member refid="_client_8hpp_1ae20074947d69a428122e13962b0b54e3a4cc41cf3d090303c0e5d9e0bcb842165" kind="enumvalue"><name>QOS2</name></member>
+    <member refid="_client_8hpp_1ad2b6f21f1fd9d7e8d6be0b4eeb30fc43" kind="enum"><name>MQTTVersion</name></member>
+    <member refid="_client_8hpp_1ad2b6f21f1fd9d7e8d6be0b4eeb30fc43aa1f18342e0d9cf4895a44aacce1ca57d" kind="enumvalue"><name>MQTT3</name></member>
+    <member refid="_client_8hpp_1ad2b6f21f1fd9d7e8d6be0b4eeb30fc43a80b2283e2aabba0c02ae6f3dafa6b33a" kind="enumvalue"><name>MQTT311</name></member>
+    <member refid="_client_8hpp_1ad2b6f21f1fd9d7e8d6be0b4eeb30fc43ad50ad0b9201edf6806fafa17de7e42d8" kind="enumvalue"><name>MQTT5</name></member>
+    <member refid="_m_q_t_t_interface_8hpp_1ace298a5bb1e1d19cde831f121e67da36" kind="typedef"><name>W5500MqttClient</name></member>
+    <member refid="_m_q_t_t_interface_8cpp_1ac8d1f640695e173e6e646a7c676e05be" kind="function"><name>wizSocket</name></member>
+    <member refid="_m_q_t_t_interface_8cpp_1abf0b82c3ca233fde73fb1a354f8f4f22" kind="function"><name>wizConnect</name></member>
+    <member refid="_m_q_t_t_interface_8cpp_1a2a6ab90774d74ee8f164d53275fa641d" kind="function"><name>wizDisconnect</name></member>
+  </compound>
+  <compound refid="_p_a_h_o_client_8hpp" kind="file"><name>PAHOClient.hpp</name>
+    <member refid="_p_a_h_o_client_8hpp_1a9a9b4371a3a4f049f9f2cb2624f0c5ac" kind="define"><name>MQTTCLIENT_QOS2</name></member>
+  </compound>
+  <compound refid="_w5500_h_c_8hpp" kind="file"><name>W5500HC.hpp</name>
+  </compound>
+  <compound refid="_w5500_interface_8hpp" kind="file"><name>W5500Interface.hpp</name>
+    <member refid="_w5500_interface_8hpp_1a7d200943f83896b8be6e2c6a28d097f5" kind="define"><name>ETH_Printf</name></member>
+  </compound>
+  <compound refid="_w5500_socket_8hpp" kind="file"><name>W5500Socket.hpp</name>
+  </compound>
+  <compound refid="_p_a_h_o_client_8cpp" kind="file"><name>PAHOClient.cpp</name>
+  </compound>
+  <compound refid="_w5500_h_c_8cpp" kind="file"><name>W5500HC.cpp</name>
+    <member refid="_w5500_h_c_8cpp_1a86203bdf1ba3e5632f4c78c9194434f8" kind="define"><name>MemcopyConfig</name></member>
+  </compound>
+  <compound refid="_w5500_interface_8cpp" kind="file"><name>W5500Interface.cpp</name>
+    <member refid="_w5500_interface_8cpp_1ad6d821d382488987802df0e58c6bde92" kind="define"><name>getInst</name></member>
+  </compound>
+  <compound refid="_w5500_socket_8cpp" kind="file"><name>W5500Socket.cpp</name>
+    <member refid="_w5500_socket_8cpp_1ac44722b488f5a65fde33169dff6edd58" kind="function"><name>wizSocket</name></member>
+    <member refid="_w5500_socket_8cpp_1a14eb8b5122007d10f69ae1ebb6aa07e7" kind="function"><name>wizConnect</name></member>
+    <member refid="_w5500_socket_8cpp_1a5b585db8118be3867c3ae33d82802ab8" kind="function"><name>wizDisconnect</name></member>
+    <member refid="_w5500_socket_8cpp_1a7525176f3438d01395c5787ed7a885a1" kind="function"><name>wizClose</name></member>
+  </compound>
+  <compound refid="_ethernet_h_c_8hpp" kind="file"><name>EthernetHC.hpp</name>
+  </compound>
+  <compound refid="_net_config_8hpp" kind="file"><name>NetConfig.hpp</name>
+  </compound>
+  <compound refid="_net_i_p_8hpp" kind="file"><name>NetIP.hpp</name>
+  </compound>
+  <compound refid="_net_m_a_c_8hpp" kind="file"><name>NetMAC.hpp</name>
+  </compound>
+  <compound refid="_net_sock_8hpp" kind="file"><name>NetSock.hpp</name>
+  </compound>
+  <compound refid="_net_config_8cpp" kind="file"><name>NetConfig.cpp</name>
+  </compound>
+  <compound refid="_net_i_p_8cpp" kind="file"><name>NetIP.cpp</name>
+  </compound>
+  <compound refid="_net_m_a_c_8cpp" kind="file"><name>NetMAC.cpp</name>
+  </compound>
+  <compound refid="_color_8hpp" kind="file"><name>Color.hpp</name>
+  </compound>
+  <compound refid="_color_8cpp" kind="file"><name>Color.cpp</name>
+  </compound>
+  <compound refid="_countdown_timer_8hpp" kind="file"><name>CountdownTimer.hpp</name>
+  </compound>
+  <compound refid="_countdown_timer_8cpp" kind="file"><name>CountdownTimer.cpp</name>
+  </compound>
+  <compound refid="_client_8hpp" kind="file"><name>Client.hpp</name>
+  </compound>
+  <compound refid="_m_q_t_t_interface_8hpp" kind="file"><name>MQTTInterface.hpp</name>
+  </compound>
+  <compound refid="_m_q_t_t_interface_8cpp" kind="file"><name>MQTTInterface.cpp</name>
+  </compound>
+  <compound refid="dir_c6310732a22f63c0c2fc5595561e68f1" kind="dir"><name>Core</name>
+  </compound>
+  <compound refid="dir_3b5cc51619fe0c4181bab69a56ba03ec" kind="dir"><name>JLib/JLED/include</name>
+  </compound>
+  <compound refid="dir_69a9451abb0a9a5e227f3c1e82a0ea82" kind="dir"><name>JLib/JMQTT/include</name>
+  </compound>
+  <compound refid="dir_32b6bbc23b3f9ec0f315f3c0f75d7d18" kind="dir"><name>Core/JPort/include</name>
+  </compound>
+  <compound refid="dir_fefde071d46456f90ed347462faa2851" kind="dir"><name>JLib/JMisc/include</name>
+  </compound>
+  <compound refid="dir_74d0f207d1721f4ad215c17376b403ad" kind="dir"><name>JLib/JEthernet/include</name>
+  </compound>
+  <compound refid="dir_05830cfb6e7906158397cbaffc637a8b" kind="dir"><name>JLib/JEthernet</name>
+  </compound>
+  <compound refid="dir_3b6c162ae2489bac649bcc7da4759da0" kind="dir"><name>JLib/JLED</name>
+  </compound>
+  <compound refid="dir_de5be4730c0b17ffbde58f2b18780e9a" kind="dir"><name>JLib</name>
+  </compound>
+  <compound refid="dir_f71ce90c3b32c022ba4c95c8cd55af10" kind="dir"><name>JLib/JMisc</name>
+  </compound>
+  <compound refid="dir_02ba1ab2af44d6b16119dc7dfd8fc61c" kind="dir"><name>JLib/JMQTT</name>
+  </compound>
+  <compound refid="dir_58519601c452f60486f278062753da6d" kind="dir"><name>Core/JPort</name>
+  </compound>
+  <compound refid="dir_856c1a74dacf57b9e134692189e3794c" kind="dir"><name>Core/JPort/src</name>
+  </compound>
+  <compound refid="dir_090a56b687170a9597cd5c6344c94120" kind="dir"><name>JLib/JEthernet/src</name>
+  </compound>
+  <compound refid="dir_12b1eb872196fa843401ddae246ab2ea" kind="dir"><name>JLib/JLED/src</name>
+  </compound>
+  <compound refid="dir_d1cc4cb7b0ffdb2793cf0c8ecb4d09bb" kind="dir"><name>JLib/JMQTT/src</name>
+  </compound>
+  <compound refid="dir_9fc67812253a94405d4ea53f5861f347" kind="dir"><name>JLib/JMisc/src</name>
+  </compound>
+</doxygenindex>

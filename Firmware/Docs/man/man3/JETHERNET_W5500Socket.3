@@ -1,0 +1,222 @@
+.TH "JETHERNET::W5500Socket" 3 "Thu Apr 25 2024" "Version 0.1.1" "CSTM32LedController" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JETHERNET::W5500Socket
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBJETHERNET::NetSock\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBopen\fP (\fBNetIP\fP ip, uint16_t port, SockConnectMode mode) override"
+.br
+.ti -1c
+.RI "bool \fBclose\fP () override"
+.br
+.RI "close socket "
+.ti -1c
+.RI "bool \fBconnectTCP\fP (\fBNetIP\fP ip, uint16_t port) override"
+.br
+.RI "connect to TCP server "
+.ti -1c
+.RI "bool \fBdisconnect\fP () override"
+.br
+.RI "disconnect socket "
+.ti -1c
+.RI "int \fBwrite\fP (uint8_t *dataIn, uint16_t len) override"
+.br
+.RI "send data "
+.ti -1c
+.RI "int \fBread\fP (uint8_t *dataOut, uint16_t len) override"
+.br
+.RI "receive data "
+.ti -1c
+.RI "uint8_t \fBgetWizSocketStatus\fP () const"
+.br
+.ti -1c
+.RI "int \fBgetSocketNum\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisConnected\fP () const"
+.br
+.RI "check if socket is connected/open "
+.ti -1c
+.RI "\fBoperator bool\fP () const"
+.br
+.ti -1c
+.RI "\fBW5500Socket\fP (int sn)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBW5500HC\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 17 of file W5500Socket\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool JETHERNET::W5500Socket::close ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+close socket 
+.PP
+\fBReturns\fP
+.RS 4
+true if socket successfully closed 
+.RE
+.PP
+
+.PP
+Implements \fBJETHERNET::NetSock\fP\&.
+.PP
+Definition at line 37 of file W5500Socket\&.cpp\&.
+.SS "bool JETHERNET::W5500Socket::connectTCP (\fBNetIP\fP ip, uint16_t port)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+connect to TCP server 
+.PP
+\fBParameters\fP
+.RS 4
+\fIip\fP destination IP 
+.br
+\fIport\fP destination port 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if successfully connected 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+will attempt to open socket if not open when called 
+.RE
+.PP
+
+.PP
+Implements \fBJETHERNET::NetSock\fP\&.
+.PP
+Definition at line 41 of file W5500Socket\&.cpp\&.
+.PP
+References isConnected(), and open()\&.
+.SS "bool JETHERNET::W5500Socket::disconnect ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+disconnect socket 
+.PP
+\fBReturns\fP
+.RS 4
+true if socket successfully disconnected from server 
+.RE
+.PP
+
+.PP
+Implements \fBJETHERNET::NetSock\fP\&.
+.PP
+Definition at line 60 of file W5500Socket\&.cpp\&.
+.SS "bool JETHERNET::W5500Socket::isConnected () const\fC [virtual]\fP"
+
+.PP
+check if socket is connected/open 
+.PP
+\fBReturns\fP
+.RS 4
+true if socket is open or connected 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+misleading name, will probably correct in the future 
+.RE
+.PP
+
+.PP
+Implements \fBJETHERNET::NetSock\fP\&.
+.PP
+Definition at line 82 of file W5500Socket\&.cpp\&.
+.PP
+Referenced by connectTCP(), read(), and write()\&.
+.SS "bool JETHERNET::W5500Socket::open (\fBNetIP\fP ip, uint16_t port, SockConnectMode mode)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIip\fP destination IP 
+.br
+\fIport\fP destination port 
+.br
+\fImode\fP connection mode 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if socket successfully opened 
+.RE
+.PP
+
+.PP
+Implements \fBJETHERNET::NetSock\fP\&.
+.PP
+Definition at line 32 of file W5500Socket\&.cpp\&.
+.PP
+Referenced by connectTCP()\&.
+.SS "int JETHERNET::W5500Socket::read (uint8_t * dataOut, uint16_t len)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+receive data 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdataOut\fP buffer for data to be received into 
+.br
+\fIlen\fP number of bytes to be received 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+number of bytes read 
+.RE
+.PP
+
+.PP
+Implements \fBJETHERNET::NetSock\fP\&.
+.PP
+Definition at line 71 of file W5500Socket\&.cpp\&.
+.PP
+References isConnected()\&.
+.SS "int JETHERNET::W5500Socket::write (uint8_t * dataIn, uint16_t len)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+send data 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdataIn\fP data to be written 
+.br
+\fIlen\fP number of bytes to be written 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+number of bytes written 
+.RE
+.PP
+
+.PP
+Implements \fBJETHERNET::NetSock\fP\&.
+.PP
+Definition at line 64 of file W5500Socket\&.cpp\&.
+.PP
+References isConnected()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSTM32LedController from the source code\&.

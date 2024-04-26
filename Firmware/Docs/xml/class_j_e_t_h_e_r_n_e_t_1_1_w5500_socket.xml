@@ -1,0 +1,446 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket" kind="class" language="C++" prot="public">
+    <compoundname>JETHERNET::W5500Socket</compoundname>
+    <basecompoundref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" prot="public" virt="non-virtual">JETHERNET::NetSock</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1adbdd8be994c3bf3d103ea22da51249ee" prot="private" static="no" mutable="no">
+        <type><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c" kindref="compound">W5500HC</ref> *</type>
+        <definition>W5500HC* JETHERNET::W5500Socket::ethHC</definition>
+        <argsstring></argsstring>
+        <name>ethHC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Socket.hpp" line="19" column="9" bodyfile="Core/JPort/include/W5500Socket.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ad7dfce53b06073f8994af2d801473629" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int JETHERNET::W5500Socket::socketNum</definition>
+        <argsstring></argsstring>
+        <name>socketNum</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Socket.hpp" line="20" column="5" bodyfile="Core/JPort/include/W5500Socket.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae25d54b1e4fd0f726255db351f1a2141" prot="private" static="no" mutable="no">
+        <type>SockConnectMode</type>
+        <definition>SockConnectMode JETHERNET::W5500Socket::connectMode</definition>
+        <argsstring></argsstring>
+        <name>connectMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Socket.hpp" line="21" column="17" bodyfile="Core/JPort/include/W5500Socket.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae4496b2bb9acc463e6410c3b4cf1bd20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class W5500HC</definition>
+        <argsstring></argsstring>
+        <name>W5500HC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Socket.hpp" line="36" column="1" bodyfile="Core/JPort/include/W5500Socket.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a8ca576edc220f26e969b55404ed9bdc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool JETHERNET::W5500Socket::open</definition>
+        <argsstring>(NetIP ip, uint16_t port, SockConnectMode mode) override</argsstring>
+        <name>open</name>
+        <reimplements refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1abe1b9e145bdd796464e8666db6df511d">open</reimplements>
+        <param>
+          <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref></type>
+          <declname>ip</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>SockConnectMode</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>destination IP </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>destination port </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>connection mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if socket successfully opened </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Socket.hpp" line="24" column="6" bodyfile="Core/JPort/src/W5500Socket.cpp" bodystart="32" bodyend="35"/>
+        <referencedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae899a9827e9773e01163d893c48deeae" compoundref="_w5500_socket_8cpp" startline="41" endline="58">connectTCP</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a30252f2d5b5820955e2ddfc905258de4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool JETHERNET::W5500Socket::close</definition>
+        <argsstring>() override</argsstring>
+        <name>close</name>
+        <reimplements refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1abced4845fbe84804cd64597c39f2b1b5">close</reimplements>
+        <briefdescription>
+<para>close socket </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if socket successfully closed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Socket.hpp" line="25" column="6" bodyfile="Core/JPort/src/W5500Socket.cpp" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae899a9827e9773e01163d893c48deeae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool JETHERNET::W5500Socket::connectTCP</definition>
+        <argsstring>(NetIP ip, uint16_t port) override</argsstring>
+        <name>connectTCP</name>
+        <reimplements refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1ad4fcf93b2ec7285a632c4b51777c0beb">connectTCP</reimplements>
+        <param>
+          <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref></type>
+          <declname>ip</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+<para>connect to TCP server </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>destination IP </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>destination port </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successfully connected </para>
+</simplesect>
+<simplesect kind="note"><para>will attempt to open socket if not open when called </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Socket.hpp" line="26" column="6" bodyfile="Core/JPort/src/W5500Socket.cpp" bodystart="41" bodyend="58"/>
+        <references refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae1e6ed02559892e71752470e125bc60e" compoundref="_w5500_socket_8cpp" startline="82" endline="85">isConnected</references>
+        <references refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a8ca576edc220f26e969b55404ed9bdc6" compoundref="_w5500_socket_8cpp" startline="32" endline="35">open</references>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1aaaa05a73924134dafddd1aa8eb0bcd02" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool JETHERNET::W5500Socket::disconnect</definition>
+        <argsstring>() override</argsstring>
+        <name>disconnect</name>
+        <reimplements refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a5f4da6ea7d0538048a8e1e70f5d69ea0">disconnect</reimplements>
+        <briefdescription>
+<para>disconnect socket </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if socket successfully disconnected from server </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Socket.hpp" line="27" column="6" bodyfile="Core/JPort/src/W5500Socket.cpp" bodystart="60" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a6405fcf9acb90e76d8b138d5ba9775a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int JETHERNET::W5500Socket::write</definition>
+        <argsstring>(uint8_t *dataIn, uint16_t len) override</argsstring>
+        <name>write</name>
+        <reimplements refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a9fa1b012c538e35f38780a1fd84f618e">write</reimplements>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dataIn</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>send data </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataIn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data to be written </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes to be written </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of bytes written </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Socket.hpp" line="28" column="5" bodyfile="Core/JPort/src/W5500Socket.cpp" bodystart="64" bodyend="69"/>
+        <references refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae1e6ed02559892e71752470e125bc60e" compoundref="_w5500_socket_8cpp" startline="82" endline="85">isConnected</references>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a6f49d3a309be5c3b9d2e3a3aaae6a883" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int JETHERNET::W5500Socket::read</definition>
+        <argsstring>(uint8_t *dataOut, uint16_t len) override</argsstring>
+        <name>read</name>
+        <reimplements refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1ac352a31bb144160f2a060c2609cee259">read</reimplements>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dataOut</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>receive data </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataOut</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer for data to be received into </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes to be received </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of bytes read </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Socket.hpp" line="29" column="5" bodyfile="Core/JPort/src/W5500Socket.cpp" bodystart="71" bodyend="76"/>
+        <references refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae1e6ed02559892e71752470e125bc60e" compoundref="_w5500_socket_8cpp" startline="82" endline="85">isConnected</references>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a3e04828e428a45fdcb75c8baa05c45d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t JETHERNET::W5500Socket::getWizSocketStatus</definition>
+        <argsstring>() const</argsstring>
+        <name>getWizSocketStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Socket.hpp" line="31" column="9" bodyfile="Core/JPort/src/W5500Socket.cpp" bodystart="98" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a7ab00d6cd578c68d97a287367fefeb16" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int JETHERNET::W5500Socket::getSocketNum</definition>
+        <argsstring>() const</argsstring>
+        <name>getSocketNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Socket.hpp" line="32" column="5" bodyfile="Core/JPort/src/W5500Socket.cpp" bodystart="78" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae1e6ed02559892e71752470e125bc60e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool JETHERNET::W5500Socket::isConnected</definition>
+        <argsstring>() const</argsstring>
+        <name>isConnected</name>
+        <reimplements refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a41db618756cf90001a219180d152ecde">isConnected</reimplements>
+        <briefdescription>
+<para>check if socket is connected/open </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if socket is open or connected </para>
+</simplesect>
+<simplesect kind="warning"><para>misleading name, will probably correct in the future </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Socket.hpp" line="33" column="6" bodyfile="Core/JPort/src/W5500Socket.cpp" bodystart="82" bodyend="85"/>
+        <referencedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae899a9827e9773e01163d893c48deeae" compoundref="_w5500_socket_8cpp" startline="41" endline="58">connectTCP</referencedby>
+        <referencedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a6f49d3a309be5c3b9d2e3a3aaae6a883" compoundref="_w5500_socket_8cpp" startline="71" endline="76">read</referencedby>
+        <referencedby refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a6405fcf9acb90e76d8b138d5ba9775a0" compoundref="_w5500_socket_8cpp" startline="64" endline="69">write</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ab9b3589fea9a0df24cfe2a1f1074b792" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JETHERNET::W5500Socket::operator bool</definition>
+        <argsstring>() const</argsstring>
+        <name>operator bool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Socket.hpp" line="34" column="1" bodyfile="Core/JPort/src/W5500Socket.cpp" bodystart="87" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a1f4b3dc87d3933e3e276a06b10c09ad3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JETHERNET::W5500Socket::W5500Socket</definition>
+        <argsstring>()</argsstring>
+        <name>W5500Socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Socket.hpp" line="38" column="1" bodyfile="Core/JPort/src/W5500Socket.cpp" bodystart="91" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a98e23b5bf25f1b5a668917a260367e03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JETHERNET::W5500Socket::W5500Socket</definition>
+        <argsstring>(int sn)</argsstring>
+        <name>W5500Socket</name>
+        <param>
+          <type>int</type>
+          <declname>sn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Socket.hpp" line="39" column="1" bodyfile="Core/JPort/src/W5500Socket.cpp" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a3b86269ab4b0c30ce103efb4e15c2ae7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JETHERNET::W5500Socket::~W5500Socket</definition>
+        <argsstring>()=default</argsstring>
+        <name>~W5500Socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Socket.hpp" line="40" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>JETHERNET::NetSock</label>
+        <link refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock"/>
+      </node>
+      <node id="1">
+        <label>JETHERNET::W5500Socket</label>
+        <link refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>JETHERNET::NetSock</label>
+        <link refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock"/>
+      </node>
+      <node id="1">
+        <label>JETHERNET::W5500Socket</label>
+        <link refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Core/JPort/include/W5500Socket.hpp" line="17" column="33" bodyfile="Core/JPort/include/W5500Socket.hpp" bodystart="17" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a30252f2d5b5820955e2ddfc905258de4" prot="public" virt="virtual"><scope>JETHERNET::W5500Socket</scope><name>close</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae25d54b1e4fd0f726255db351f1a2141" prot="private" virt="non-virtual"><scope>JETHERNET::W5500Socket</scope><name>connectMode</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae899a9827e9773e01163d893c48deeae" prot="public" virt="virtual"><scope>JETHERNET::W5500Socket</scope><name>connectTCP</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1aaaa05a73924134dafddd1aa8eb0bcd02" prot="public" virt="virtual"><scope>JETHERNET::W5500Socket</scope><name>disconnect</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1adbdd8be994c3bf3d103ea22da51249ee" prot="private" virt="non-virtual"><scope>JETHERNET::W5500Socket</scope><name>ethHC</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a7ab00d6cd578c68d97a287367fefeb16" prot="public" virt="non-virtual"><scope>JETHERNET::W5500Socket</scope><name>getSocketNum</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a3e04828e428a45fdcb75c8baa05c45d9" prot="public" virt="non-virtual"><scope>JETHERNET::W5500Socket</scope><name>getWizSocketStatus</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae1e6ed02559892e71752470e125bc60e" prot="public" virt="virtual"><scope>JETHERNET::W5500Socket</scope><name>isConnected</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a8ca576edc220f26e969b55404ed9bdc6" prot="public" virt="virtual"><scope>JETHERNET::W5500Socket</scope><name>open</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ab9b3589fea9a0df24cfe2a1f1074b792" prot="public" virt="non-virtual"><scope>JETHERNET::W5500Socket</scope><name>operator bool</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a6f49d3a309be5c3b9d2e3a3aaae6a883" prot="public" virt="virtual"><scope>JETHERNET::W5500Socket</scope><name>read</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ad7dfce53b06073f8994af2d801473629" prot="private" virt="non-virtual"><scope>JETHERNET::W5500Socket</scope><name>socketNum</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1ae4496b2bb9acc463e6410c3b4cf1bd20" prot="public" virt="non-virtual"><scope>JETHERNET::W5500Socket</scope><name>W5500HC</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a1f4b3dc87d3933e3e276a06b10c09ad3" prot="public" virt="non-virtual"><scope>JETHERNET::W5500Socket</scope><name>W5500Socket</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a98e23b5bf25f1b5a668917a260367e03" prot="public" virt="non-virtual"><scope>JETHERNET::W5500Socket</scope><name>W5500Socket</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a6405fcf9acb90e76d8b138d5ba9775a0" prot="public" virt="virtual"><scope>JETHERNET::W5500Socket</scope><name>write</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a9b8b34ac38e7cc54c2f54bf781d6d691" prot="public" virt="virtual"><scope>JETHERNET::W5500Socket</scope><name>~NetSock</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_1a3b86269ab4b0c30ce103efb4e15c2ae7" prot="public" virt="non-virtual"><scope>JETHERNET::W5500Socket</scope><name>~W5500Socket</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

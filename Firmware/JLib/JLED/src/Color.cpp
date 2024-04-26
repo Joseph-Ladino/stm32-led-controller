@@ -5,7 +5,7 @@
  *      Author: user
  */
 
-#include "../include/Color.hpp"
+#include "Color.hpp"
 
 namespace JLED {
 

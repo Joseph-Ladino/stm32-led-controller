@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="dir_3b5cc51619fe0c4181bab69a56ba03ec" kind="dir">
+    <compoundname>JLib/JLED/include</compoundname>
+    <innerfile refid="_color_8hpp">Color.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="JLib/JLED/include/"/>
+  </compounddef>
+</doxygen>

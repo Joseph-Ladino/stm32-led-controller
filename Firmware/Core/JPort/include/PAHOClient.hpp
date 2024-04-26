@@ -20,7 +20,7 @@
 namespace JMQTT {
 
 struct PAHONetwork {
-	JETHERNET::EthernetSOCK *sock = nullptr;
+	JETHERNET::NetSock *sock = nullptr;
 	ClientConfig conf;
 	inline int read(uint8_t *buffer, uint16_t len, uint16_t timeoutMs) {
 		if (!this->operator bool())
@@ -59,9 +59,9 @@ public:
 	bool subscribe(string_view topic, QOS qos = QOS::QOS0);
 	bool update(uint16_t timeout);
 
-	bool connect(JETHERNET::EthernetSOCK &sock, const ClientConfig config);
+	bool connect(JETHERNET::NetSock &sock, const ClientConfig config);
 	bool reconnect();
-	bool reconnect(JETHERNET::EthernetSOCK &sock);
+	bool reconnect(JETHERNET::NetSock &sock);
 	void disconnect();
 	bool isConnected();
 

@@ -8,10 +8,10 @@
 #ifndef JMQTT_INCLUDE_CLIENT_HPP_
 #define JMQTT_INCLUDE_CLIENT_HPP_
 
+#include <NetSock.hpp>
 #include <cstdint>
 #include <string>
 #include <functional>
-#include "EthernetSOCK.hpp"
 
 using std::string_view;
 using std::string;
@@ -38,7 +38,7 @@ enum class MQTTVersion : uint8_t {
 
 struct ClientConfig {
 	MQTTVersion version = MQTTVersion::MQTT311;
-	JETHERNET::EthernetIP brokerIP = 0;
+	JETHERNET::NetIP brokerIP = 0;
 	uint16_t brokerPort = 0;
 	string clientName = "JMQTTClient";
 	string username = "";
@@ -55,7 +55,7 @@ public:
 	virtual bool subscribe(string_view topic, QOS qos = QOS::QOS0) = 0;
 	virtual bool update(uint16_t timeoutMs) = 0;
 
-	virtual bool connect(JETHERNET::EthernetSOCK &sock, const ClientConfig config) = 0;
+	virtual bool connect(JETHERNET::NetSock &sock, const ClientConfig config) = 0;
 	virtual bool reconnect() = 0;
 	virtual void disconnect() = 0;
 	virtual bool isConnected() = 0;

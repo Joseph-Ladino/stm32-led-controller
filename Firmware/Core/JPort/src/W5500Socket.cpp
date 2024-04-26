@@ -29,7 +29,7 @@ static int8_t wizClose(uint8_t sn) {
 
 namespace JETHERNET {
 
-bool W5500Socket::open(EthernetIP ip, uint16_t port, EthernetConnectMode mode) {
+bool W5500Socket::open(NetIP ip, uint16_t port, SockConnectMode mode) {
 	connectMode = mode;
 	return wizSocket(socketNum, (uint8_t) mode, port, 0) == socketNum;
 }
@@ -38,12 +38,12 @@ bool W5500Socket::close() {
 	return wizClose(socketNum) == SOCK_OK;
 }
 
-bool W5500Socket::connectTCP(EthernetIP ip, uint16_t port) {
+bool W5500Socket::connectTCP(NetIP ip, uint16_t port) {
 
-	if (!isConnected() && !open(ip, port, EthernetConnectMode::TCP))
+	if (!isConnected() && !open(ip, port, SockConnectMode::TCP))
 		return false;
 
-	if (connectMode != EthernetConnectMode::TCP)
+	if (connectMode != SockConnectMode::TCP)
 		return false;
 
 	// might add timeout to method signature in the future

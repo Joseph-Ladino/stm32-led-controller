@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="dir_090a56b687170a9597cd5c6344c94120" kind="dir">
+    <compoundname>JLib/JEthernet/src</compoundname>
+    <innerfile refid="_net_config_8cpp">NetConfig.cpp</innerfile>
+    <innerfile refid="_net_i_p_8cpp">NetIP.cpp</innerfile>
+    <innerfile refid="_net_m_a_c_8cpp">NetMAC.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="JLib/JEthernet/src/"/>
+  </compounddef>
+</doxygen>

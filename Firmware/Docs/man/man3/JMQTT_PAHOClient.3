@@ -1,0 +1,55 @@
+.TH "JMQTT::PAHOClient" 3 "Thu Apr 25 2024" "Version 0.1.1" "CSTM32LedController" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JMQTT::PAHOClient
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBJMQTT::Client\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBpublish\fP (\fBMessage\fP msg)"
+.br
+.ti -1c
+.RI "bool \fBsubscribe\fP (string_view topic, QOS qos=QOS::QOS0)"
+.br
+.ti -1c
+.RI "bool \fBupdate\fP (uint16_t timeout)"
+.br
+.ti -1c
+.RI "bool \fBconnect\fP (\fBJETHERNET::NetSock\fP &sock, const \fBClientConfig\fP config)"
+.br
+.ti -1c
+.RI "bool \fBreconnect\fP ()"
+.br
+.ti -1c
+.RI "bool \fBreconnect\fP (\fBJETHERNET::NetSock\fP &sock)"
+.br
+.ti -1c
+.RI "void \fBdisconnect\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisConnected\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMessageCallback\fP (MessageCB func)"
+.br
+.ti -1c
+.RI "void \fBsetConnectCallback\fP (ConnectCB func)"
+.br
+.ti -1c
+.RI "void \fBpahoMessageReceived\fP (MQTT::MessageData &data)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line 43 of file PAHOClient\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSTM32LedController from the source code\&.
