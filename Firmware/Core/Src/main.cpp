@@ -27,7 +27,10 @@
 
 #include "usbd_cdc_if.h"
 #include "globals.h"
+
+#ifdef BUILD_WITH_SECRETS
 #include "secrets.hpp"
+#endif
 
 #include "W5500HC.hpp"
 //#include "MQTTInterface.hpp"
@@ -209,24 +212,20 @@ int main(void) {
 
 	connectEth();
 
-//	auto ip = eth.domainToIP("google.com", 3000);
-//	char buf[25];
-//	ip.cString(buf);
-//	USB_Printf("google: %s\n", buf);
-
-	auto &sock = eth.getFreeSocket();
-//	if(sock.connectTCP(JSECRETS::MQTT_SERVER_IP, JSECRETS::MQTT_SERVER_PORT)) {
-//		USB_Printf("Connected socket to MQTT server!\n");
-//	} else {
-//		USB_Printf("Error connecting socket to MQTT server!\n");
-//	}
-
 	JMQTT::ClientConfig mqttConf;
-	mqttConf.brokerIP = JSECRETS::MQTT_SERVER_IP;
-	mqttConf.brokerPort = JSECRETS::MQTT_SERVER_PORT;
+	auto& sock = eth.getFreeSocket();
+
+#ifdef BUILD_WITH_SECRETS
+	if(sock.connectTCP(JSECRETS::MQTT_SERVER_IP, JSECRETS::MQTT_SERVER_PORT)) {
+		USB_Printf("Connected socket to MQTT server!\n");
+	} else {
+		USB_Printf("Error connecting socket to MQTT server!\n");
+	}
+    
 	mqttConf.clientName = JSECRETS::MQTT_CLIENT_ID;
 	mqttConf.username = JSECRETS::MQTT_SERVER_USERNAME;
 	mqttConf.password = JSECRETS::MQTT_SERVER_PASSWORD;
+#endif
 
 	mqtt.setConnectCallback(mqttOnConnected);
 	mqtt.setMessageCallback(messageReceived);
