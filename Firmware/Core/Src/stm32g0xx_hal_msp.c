@@ -20,7 +20,6 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
@@ -66,6 +65,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
   */
 void HAL_MspInit(void)
 {
+
   /* USER CODE BEGIN MspInit 0 */
 
   /* USER CODE END MspInit 0 */
@@ -174,8 +174,8 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
     hdma_tim1_ch1.Init.Direction = DMA_MEMORY_TO_PERIPH;
     hdma_tim1_ch1.Init.PeriphInc = DMA_PINC_DISABLE;
     hdma_tim1_ch1.Init.MemInc = DMA_MINC_ENABLE;
-    hdma_tim1_ch1.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
-    hdma_tim1_ch1.Init.MemDataAlignment = DMA_MDATAALIGN_HALFWORD;
+    hdma_tim1_ch1.Init.PeriphDataAlignment = DMA_PDATAALIGN_WORD;
+    hdma_tim1_ch1.Init.MemDataAlignment = DMA_MDATAALIGN_WORD;
     hdma_tim1_ch1.Init.Mode = DMA_CIRCULAR;
     hdma_tim1_ch1.Init.Priority = DMA_PRIORITY_LOW;
     if (HAL_DMA_Init(&hdma_tim1_ch1) != HAL_OK)
@@ -185,6 +185,11 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
 
     __HAL_LINKDMA(htim_base,hdma[TIM_DMA_ID_CC1],hdma_tim1_ch1);
 
+    /* TIM1 interrupt Init */
+    HAL_NVIC_SetPriority(TIM1_BRK_UP_TRG_COM_IRQn, 1, 0);
+    HAL_NVIC_EnableIRQ(TIM1_BRK_UP_TRG_COM_IRQn);
+    HAL_NVIC_SetPriority(TIM1_CC_IRQn, 1, 0);
+    HAL_NVIC_EnableIRQ(TIM1_CC_IRQn);
   /* USER CODE BEGIN TIM1_MspInit 1 */
 
   /* USER CODE END TIM1_MspInit 1 */
@@ -250,6 +255,10 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base)
 
     /* TIM1 DMA DeInit */
     HAL_DMA_DeInit(htim_base->hdma[TIM_DMA_ID_CC1]);
+
+    /* TIM1 interrupt DeInit */
+    HAL_NVIC_DisableIRQ(TIM1_BRK_UP_TRG_COM_IRQn);
+    HAL_NVIC_DisableIRQ(TIM1_CC_IRQn);
   /* USER CODE BEGIN TIM1_MspDeInit 1 */
 
   /* USER CODE END TIM1_MspDeInit 1 */

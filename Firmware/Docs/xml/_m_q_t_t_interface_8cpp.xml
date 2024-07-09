@@ -1,19 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="_m_q_t_t_interface_8cpp" kind="file" language="C++">
     <compoundname>MQTTInterface.cpp</compoundname>
     <includes refid="_m_q_t_t_interface_8hpp" local="yes">MQTTInterface.hpp</includes>
     <includes local="yes">socket.h</includes>
     <incdepgraph>
-      <node id="6">
-        <label>cstdint</label>
-      </node>
-      <node id="5">
-        <label>CountdownTimer.hpp</label>
-        <link refid="_countdown_timer_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
       <node id="2">
         <label>MQTTInterface.hpp</label>
         <link refid="_m_q_t_t_interface_8hpp_source"/>
@@ -24,15 +15,6 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="7">
-        <label>socket.h</label>
-      </node>
-      <node id="3">
-        <label>cstdio</label>
-      </node>
-      <node id="4">
-        <label>MQTTClient.h</label>
-      </node>
       <node id="1">
         <label>JLib/JMQTT/src/MQTTInterface.cpp</label>
         <link refid="_m_q_t_t_interface_8cpp"/>
@@ -40,6 +22,24 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+      </node>
+      <node id="5">
+        <label>CountdownTimer.hpp</label>
+        <link refid="_countdown_timer_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>MQTTClient.h</label>
+      </node>
+      <node id="6">
+        <label>cstdint</label>
+      </node>
+      <node id="3">
+        <label>cstdio</label>
+      </node>
+      <node id="7">
+        <label>socket.h</label>
       </node>
     </incdepgraph>
     <innernamespace refid="namespace_j_m_q_t_t">JMQTT</innernamespace>

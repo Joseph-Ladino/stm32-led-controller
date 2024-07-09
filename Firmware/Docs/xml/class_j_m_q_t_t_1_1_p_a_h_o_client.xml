@@ -1,14 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="class_j_m_q_t_t_1_1_p_a_h_o_client" kind="class" language="C++" prot="public">
     <compoundname>JMQTT::PAHOClient</compoundname>
     <basecompoundref refid="class_j_m_q_t_t_1_1_client" prot="public" virt="non-virtual">JMQTT::Client</basecompoundref>
-      <sectiondef kind="private-attrib">
+    <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_j_m_q_t_t_1_1_p_a_h_o_client_1a5ed4b543097ac1b75ac2eb06885fbfb3" prot="private" static="no" mutable="no">
         <type><ref refid="struct_j_m_q_t_t_1_1_p_a_h_o_network" kindref="compound">PAHONetwork</ref></type>
         <definition>PAHONetwork JMQTT::PAHOClient::net</definition>
         <argsstring></argsstring>
         <name>net</name>
+        <qualifiedname>JMQTT::PAHOClient::net</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -22,6 +23,7 @@
         <definition>MQTT::Client&lt;PAHONetwork, CountdownTimer&gt; JMQTT::PAHOClient::client</definition>
         <argsstring></argsstring>
         <name>client</name>
+        <qualifiedname>JMQTT::PAHOClient::client</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -35,6 +37,7 @@
         <definition>MessageCB JMQTT::PAHOClient::onMessage</definition>
         <argsstring></argsstring>
         <name>onMessage</name>
+        <qualifiedname>JMQTT::PAHOClient::onMessage</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -48,6 +51,7 @@
         <definition>ConnectCB JMQTT::PAHOClient::onConnect</definition>
         <argsstring></argsstring>
         <name>onConnect</name>
+        <qualifiedname>JMQTT::PAHOClient::onConnect</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -56,13 +60,14 @@
         </inbodydescription>
         <location file="Core/JPort/include/PAHOClient.hpp" line="52" column="11" bodyfile="Core/JPort/include/PAHOClient.hpp" bodystart="52" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-func">
+    </sectiondef>
+    <sectiondef kind="private-func">
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_p_a_h_o_client_1afae6b32bdc6732ccf658c02049e86cf9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">bool</ref></type>
         <definition>bool JMQTT::PAHOClient::connect</definition>
         <argsstring>()</argsstring>
         <name>connect</name>
+        <qualifiedname>JMQTT::PAHOClient::connect</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -71,13 +76,14 @@
         </inbodydescription>
         <location file="Core/JPort/include/PAHOClient.hpp" line="53" column="6" bodyfile="Core/JPort/src/PAHOClient.cpp" bodystart="36" bodyend="61"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
+    </sectiondef>
+    <sectiondef kind="public-func">
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_p_a_h_o_client_1a5bbf16a26e74c93a9a8b372d7548cba9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">bool</ref></type>
         <definition>bool JMQTT::PAHOClient::publish</definition>
         <argsstring>(Message msg)</argsstring>
         <name>publish</name>
+        <qualifiedname>JMQTT::PAHOClient::publish</qualifiedname>
         <reimplements refid="class_j_m_q_t_t_1_1_client_1a8e4b70bb656d1d7b5ba4f11d7e64e5aa">publish</reimplements>
         <param>
           <type><ref refid="struct_j_m_q_t_t_1_1_message" kindref="compound">Message</ref></type>
@@ -92,10 +98,11 @@
         <location file="Core/JPort/include/PAHOClient.hpp" line="58" column="6" bodyfile="Core/JPort/src/PAHOClient.cpp" bodystart="15" bodyend="20"/>
       </memberdef>
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_p_a_h_o_client_1a3811ba986b402d0066c0e868d6a1113e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">bool</ref></type>
         <definition>bool JMQTT::PAHOClient::subscribe</definition>
         <argsstring>(string_view topic, QOS qos=QOS::QOS0)</argsstring>
         <name>subscribe</name>
+        <qualifiedname>JMQTT::PAHOClient::subscribe</qualifiedname>
         <reimplements refid="class_j_m_q_t_t_1_1_client_1a61f9bb3e61ba5fa6e516e2b5729074be">subscribe</reimplements>
         <param>
           <type>string_view</type>
@@ -115,13 +122,14 @@
         <location file="Core/JPort/include/PAHOClient.hpp" line="59" column="6" bodyfile="Core/JPort/src/PAHOClient.cpp" bodystart="22" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_p_a_h_o_client_1ab6a8114c17036596b81f37a292741d7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">bool</ref></type>
         <definition>bool JMQTT::PAHOClient::update</definition>
         <argsstring>(uint16_t timeout)</argsstring>
         <name>update</name>
+        <qualifiedname>JMQTT::PAHOClient::update</qualifiedname>
         <reimplements refid="class_j_m_q_t_t_1_1_client_1aa04cc45d722283c9e871980f4d1a27c1">update</reimplements>
         <param>
-          <type>uint16_t</type>
+          <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">uint16_t</ref></type>
           <declname>timeout</declname>
         </param>
         <briefdescription>
@@ -133,17 +141,18 @@
         <location file="Core/JPort/include/PAHOClient.hpp" line="60" column="6" bodyfile="Core/JPort/src/PAHOClient.cpp" bodystart="79" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_p_a_h_o_client_1a9a94024ef51ef3c1c26f5f6d23160c1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">bool</ref></type>
         <definition>bool JMQTT::PAHOClient::connect</definition>
         <argsstring>(JETHERNET::NetSock &amp;sock, const ClientConfig config)</argsstring>
         <name>connect</name>
+        <qualifiedname>JMQTT::PAHOClient::connect</qualifiedname>
         <reimplements refid="class_j_m_q_t_t_1_1_client_1a32cc54d1b9285f0ba99dfabda2a03bd5">connect</reimplements>
         <param>
           <type><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" kindref="compound">JETHERNET::NetSock</ref> &amp;</type>
           <declname>sock</declname>
         </param>
         <param>
-          <type>const <ref refid="struct_j_m_q_t_t_1_1_client_config" kindref="compound">ClientConfig</ref></type>
+          <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">const</ref> <ref refid="struct_j_m_q_t_t_1_1_client_config" kindref="compound">ClientConfig</ref></type>
           <declname>config</declname>
         </param>
         <briefdescription>
@@ -155,10 +164,11 @@
         <location file="Core/JPort/include/PAHOClient.hpp" line="62" column="6" bodyfile="Core/JPort/src/PAHOClient.cpp" bodystart="29" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_p_a_h_o_client_1a106782e6d80da9c3269c004eec75ec07" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">bool</ref></type>
         <definition>bool JMQTT::PAHOClient::reconnect</definition>
         <argsstring>()</argsstring>
         <name>reconnect</name>
+        <qualifiedname>JMQTT::PAHOClient::reconnect</qualifiedname>
         <reimplements refid="class_j_m_q_t_t_1_1_client_1ac2c1c3f2c2ac1938661dbaae2ecbf39c">reconnect</reimplements>
         <briefdescription>
         </briefdescription>
@@ -169,10 +179,11 @@
         <location file="Core/JPort/include/PAHOClient.hpp" line="63" column="6" bodyfile="Core/JPort/src/PAHOClient.cpp" bodystart="69" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_p_a_h_o_client_1adfb668e97d68912349291000810d3e63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">bool</ref></type>
         <definition>bool JMQTT::PAHOClient::reconnect</definition>
         <argsstring>(JETHERNET::NetSock &amp;sock)</argsstring>
         <name>reconnect</name>
+        <qualifiedname>JMQTT::PAHOClient::reconnect</qualifiedname>
         <param>
           <type><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" kindref="compound">JETHERNET::NetSock</ref> &amp;</type>
           <declname>sock</declname>
@@ -186,10 +197,11 @@
         <location file="Core/JPort/include/PAHOClient.hpp" line="64" column="6" bodyfile="Core/JPort/src/PAHOClient.cpp" bodystart="73" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_p_a_h_o_client_1a2592dfc13815f6bb46f0dc10e6b67ee4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">void</ref></type>
         <definition>void JMQTT::PAHOClient::disconnect</definition>
         <argsstring>()</argsstring>
         <name>disconnect</name>
+        <qualifiedname>JMQTT::PAHOClient::disconnect</qualifiedname>
         <reimplements refid="class_j_m_q_t_t_1_1_client_1a3581c3e4959d19a43f30b8eb70e69493">disconnect</reimplements>
         <briefdescription>
         </briefdescription>
@@ -200,10 +212,11 @@
         <location file="Core/JPort/include/PAHOClient.hpp" line="65" column="6" bodyfile="Core/JPort/src/PAHOClient.cpp" bodystart="63" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_p_a_h_o_client_1a512779577f19fd55308ec4d5bb23a56c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">bool</ref></type>
         <definition>bool JMQTT::PAHOClient::isConnected</definition>
         <argsstring>()</argsstring>
         <name>isConnected</name>
+        <qualifiedname>JMQTT::PAHOClient::isConnected</qualifiedname>
         <reimplements refid="class_j_m_q_t_t_1_1_client_1a70dab29288dc7daad9b1c1587e569441">isConnected</reimplements>
         <briefdescription>
         </briefdescription>
@@ -214,10 +227,11 @@
         <location file="Core/JPort/include/PAHOClient.hpp" line="66" column="6" bodyfile="Core/JPort/src/PAHOClient.cpp" bodystart="91" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_p_a_h_o_client_1aafe1ca238b53d18a689f22a309017fdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">void</ref></type>
         <definition>void JMQTT::PAHOClient::setMessageCallback</definition>
         <argsstring>(MessageCB func)</argsstring>
         <name>setMessageCallback</name>
+        <qualifiedname>JMQTT::PAHOClient::setMessageCallback</qualifiedname>
         <reimplements refid="class_j_m_q_t_t_1_1_client_1a1fbf4f35c4d0e9bfa93d2d3f3d3c86a4">setMessageCallback</reimplements>
         <param>
           <type>MessageCB</type>
@@ -232,10 +246,11 @@
         <location file="Core/JPort/include/PAHOClient.hpp" line="68" column="6" bodyfile="Core/JPort/src/PAHOClient.cpp" bodystart="102" bodyend="104"/>
       </memberdef>
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_p_a_h_o_client_1a9e623915c12da35dc7a9d0be2cbfe8b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">void</ref></type>
         <definition>void JMQTT::PAHOClient::setConnectCallback</definition>
         <argsstring>(ConnectCB func)</argsstring>
         <name>setConnectCallback</name>
+        <qualifiedname>JMQTT::PAHOClient::setConnectCallback</qualifiedname>
         <reimplements refid="class_j_m_q_t_t_1_1_client_1a9c50f65617e65d5e863a984d94890a59">setConnectCallback</reimplements>
         <param>
           <type>ConnectCB</type>
@@ -250,10 +265,11 @@
         <location file="Core/JPort/include/PAHOClient.hpp" line="69" column="6" bodyfile="Core/JPort/src/PAHOClient.cpp" bodystart="106" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_p_a_h_o_client_1a607bcae635e895968efb49dd8eae533a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">void</ref></type>
         <definition>void JMQTT::PAHOClient::pahoMessageReceived</definition>
         <argsstring>(MQTT::MessageData &amp;data)</argsstring>
         <name>pahoMessageReceived</name>
+        <qualifiedname>JMQTT::PAHOClient::pahoMessageReceived</qualifiedname>
         <param>
           <type>MQTT::MessageData &amp;</type>
           <declname>data</declname>
@@ -271,6 +287,7 @@
         <definition>JMQTT::PAHOClient::PAHOClient</definition>
         <argsstring>()</argsstring>
         <name>PAHOClient</name>
+        <qualifiedname>JMQTT::PAHOClient::PAHOClient</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -284,6 +301,7 @@
         <definition>JMQTT::PAHOClient::~PAHOClient</definition>
         <argsstring>()</argsstring>
         <name>~PAHOClient</name>
+        <qualifiedname>JMQTT::PAHOClient::~PAHOClient</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -292,36 +310,36 @@
         </inbodydescription>
         <location file="Core/JPort/include/PAHOClient.hpp" line="74" column="1" bodyfile="Core/JPort/src/PAHOClient.cpp" bodystart="99" bodyend="100"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="2">
+        <label>JMQTT::Client</label>
+        <link refid="class_j_m_q_t_t_1_1_client"/>
+      </node>
       <node id="1">
         <label>JMQTT::PAHOClient</label>
         <link refid="class_j_m_q_t_t_1_1_p_a_h_o_client"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
-      </node>
-      <node id="2">
-        <label>JMQTT::Client</label>
-        <link refid="class_j_m_q_t_t_1_1_client"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
+      <node id="2">
+        <label>JMQTT::Client</label>
+        <link refid="class_j_m_q_t_t_1_1_client"/>
+      </node>
       <node id="1">
         <label>JMQTT::PAHOClient</label>
         <link refid="class_j_m_q_t_t_1_1_p_a_h_o_client"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="2">
-        <label>JMQTT::Client</label>
-        <link refid="class_j_m_q_t_t_1_1_client"/>
-      </node>
     </collaborationgraph>
-    <location file="Core/JPort/include/PAHOClient.hpp" line="43" column="38" bodyfile="Core/JPort/include/PAHOClient.hpp" bodystart="43" bodyend="75"/>
+    <location file="Core/JPort/include/PAHOClient.hpp" line="43" column="1" bodyfile="Core/JPort/include/PAHOClient.hpp" bodystart="43" bodyend="75"/>
     <listofallmembers>
       <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1ae7215d3229b8ef988b1d91ca2b3e8a24" prot="private" virt="non-virtual"><scope>JMQTT::PAHOClient</scope><name>client</name></member>
       <member refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1afae6b32bdc6732ccf658c02049e86cf9" prot="private" virt="non-virtual"><scope>JMQTT::PAHOClient</scope><name>connect</name></member>

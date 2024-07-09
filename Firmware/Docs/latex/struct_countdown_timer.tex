@@ -1,0 +1,240 @@
+\doxysection{Countdown\+Timer Struct Reference}
+\hypertarget{struct_countdown_timer}{}\label{struct_countdown_timer}\index{CountdownTimer@{CountdownTimer}}
+
+
+Generic user-\/controlled timer with millisecond precision.  
+
+
+
+
+{\ttfamily \#include $<$Countdown\+Timer.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{struct_countdown_timer_ae938bf04669e4db43d9793ec66f451d0}{countdown\+\_\+ms}} (uint32\+\_\+t ms)
+\begin{DoxyCompactList}\small\item\em set timer duration in milliseconds \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_countdown_timer_a68daf8bef73e1544fd759f7ca29e0af4}{countdown\+MS}} (uint32\+\_\+t ms)
+\begin{DoxyCompactList}\small\item\em set timer duration in milliseconds \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_countdown_timer_a2d673c7a79fc69a2bd480f40ffb65f3c}{countdown}} (uint16\+\_\+t sec)
+\begin{DoxyCompactList}\small\item\em set timer duration in seconds \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_countdown_timer_a7b3f51afa536ffed772f1c62de543e43}{left\+\_\+ms}} ()
+\begin{DoxyCompactList}\small\item\em remaining timer duration \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_countdown_timer_a639e0a8ae10bb025be52dfd4b4d481c7}{left\+Ms}} ()
+\begin{DoxyCompactList}\small\item\em remaining timer duration \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_countdown_timer_a3c03271b786ef9a0d43f0b2937fe8183}{expired}} ()
+\begin{DoxyCompactList}\small\item\em check if timer is expired \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_countdown_timer_a4d930a016b5118d0a5fc4e8ff04f668f}{Countdown\+Timer}} ()
+\item 
+\mbox{\hyperlink{struct_countdown_timer_a063ec0ed50acbd662071121338dd0509}{Countdown\+Timer}} (uint32\+\_\+t ms)
+\begin{DoxyCompactList}\small\item\em initialize timer with millisecond duration \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{struct_countdown_timer_a766d43746a33928f83b0c80e47c3da2c}{ms\+Tick}} ()
+\begin{DoxyCompactList}\small\item\em advance all timer instances by one millisecond ~\newline
+ must be called reliably every millisecond \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{struct_countdown_timer_adc81e626332259b1811fdb9012efcb5c}{tick}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic user-\/controlled timer with millisecond precision. 
+
+Definition at line \mbox{\hyperlink{_countdown_timer_8hpp_source_l00016}{16}} of file \mbox{\hyperlink{_countdown_timer_8hpp_source}{Countdown\+Timer.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_countdown_timer_a4d930a016b5118d0a5fc4e8ff04f668f}\label{struct_countdown_timer_a4d930a016b5118d0a5fc4e8ff04f668f} 
+\index{CountdownTimer@{CountdownTimer}!CountdownTimer@{CountdownTimer}}
+\index{CountdownTimer@{CountdownTimer}!CountdownTimer@{CountdownTimer}}
+\doxysubsubsection{\texorpdfstring{CountdownTimer()}{CountdownTimer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Countdown\+Timer\+::\+Countdown\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
+
+\Hypertarget{struct_countdown_timer_a063ec0ed50acbd662071121338dd0509}\label{struct_countdown_timer_a063ec0ed50acbd662071121338dd0509} 
+\index{CountdownTimer@{CountdownTimer}!CountdownTimer@{CountdownTimer}}
+\index{CountdownTimer@{CountdownTimer}!CountdownTimer@{CountdownTimer}}
+\doxysubsubsection{\texorpdfstring{CountdownTimer()}{CountdownTimer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Countdown\+Timer\+::\+Countdown\+Timer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ms }\end{DoxyParamCaption})}
+
+
+
+initialize timer with millisecond duration 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & milliseconds \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_countdown_timer_a2d673c7a79fc69a2bd480f40ffb65f3c}\label{struct_countdown_timer_a2d673c7a79fc69a2bd480f40ffb65f3c} 
+\index{CountdownTimer@{CountdownTimer}!countdown@{countdown}}
+\index{countdown@{countdown}!CountdownTimer@{CountdownTimer}}
+\doxysubsubsection{\texorpdfstring{countdown()}{countdown()}}
+{\footnotesize\ttfamily void Countdown\+Timer\+::countdown (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{sec }\end{DoxyParamCaption})}
+
+
+
+set timer duration in seconds 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sec} & seconds \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
+
+\Hypertarget{struct_countdown_timer_ae938bf04669e4db43d9793ec66f451d0}\label{struct_countdown_timer_ae938bf04669e4db43d9793ec66f451d0} 
+\index{CountdownTimer@{CountdownTimer}!countdown\_ms@{countdown\_ms}}
+\index{countdown\_ms@{countdown\_ms}!CountdownTimer@{CountdownTimer}}
+\doxysubsubsection{\texorpdfstring{countdown\_ms()}{countdown\_ms()}}
+{\footnotesize\ttfamily void Countdown\+Timer\+::countdown\+\_\+ms (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ms }\end{DoxyParamCaption})}
+
+
+
+set timer duration in milliseconds 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & milliseconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+camelcase naming pattern is not followed due to this class being directly used in \href{https://modelbasedtesting.co.uk/2014/08/25/porting-a-paho-embedded-c-client/}{\texttt{ PAHOMqtt}} 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
+
+\Hypertarget{struct_countdown_timer_a68daf8bef73e1544fd759f7ca29e0af4}\label{struct_countdown_timer_a68daf8bef73e1544fd759f7ca29e0af4} 
+\index{CountdownTimer@{CountdownTimer}!countdownMS@{countdownMS}}
+\index{countdownMS@{countdownMS}!CountdownTimer@{CountdownTimer}}
+\doxysubsubsection{\texorpdfstring{countdownMS()}{countdownMS()}}
+{\footnotesize\ttfamily void Countdown\+Timer\+::countdown\+MS (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set timer duration in milliseconds 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & milliseconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+alias for \doxylink{struct_countdown_timer_ae938bf04669e4db43d9793ec66f451d0}{countdown\+\_\+ms()} 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{_countdown_timer_8hpp_source_l00030}{30}} of file \mbox{\hyperlink{_countdown_timer_8hpp_source}{Countdown\+Timer.\+hpp}}.
+
+\Hypertarget{struct_countdown_timer_a3c03271b786ef9a0d43f0b2937fe8183}\label{struct_countdown_timer_a3c03271b786ef9a0d43f0b2937fe8183} 
+\index{CountdownTimer@{CountdownTimer}!expired@{expired}}
+\index{expired@{expired}!CountdownTimer@{CountdownTimer}}
+\doxysubsubsection{\texorpdfstring{expired()}{expired()}}
+{\footnotesize\ttfamily bool Countdown\+Timer\+::expired (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+check if timer is expired 
+
+\begin{DoxyReturn}{Returns}
+true if timer is expired 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
+
+\Hypertarget{struct_countdown_timer_a7b3f51afa536ffed772f1c62de543e43}\label{struct_countdown_timer_a7b3f51afa536ffed772f1c62de543e43} 
+\index{CountdownTimer@{CountdownTimer}!left\_ms@{left\_ms}}
+\index{left\_ms@{left\_ms}!CountdownTimer@{CountdownTimer}}
+\doxysubsubsection{\texorpdfstring{left\_ms()}{left\_ms()}}
+{\footnotesize\ttfamily uint32\+\_\+t Countdown\+Timer\+::left\+\_\+ms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+remaining timer duration 
+
+\begin{DoxyReturn}{Returns}
+milliseconds left until timer expires 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+camelcase naming pattern is not followed due to this class being directly used in \href{https://modelbasedtesting.co.uk/2014/08/25/porting-a-paho-embedded-c-client/}{\texttt{ PAHOMqtt}} 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
+
+\Hypertarget{struct_countdown_timer_a639e0a8ae10bb025be52dfd4b4d481c7}\label{struct_countdown_timer_a639e0a8ae10bb025be52dfd4b4d481c7} 
+\index{CountdownTimer@{CountdownTimer}!leftMs@{leftMs}}
+\index{leftMs@{leftMs}!CountdownTimer@{CountdownTimer}}
+\doxysubsubsection{\texorpdfstring{leftMs()}{leftMs()}}
+{\footnotesize\ttfamily uint32\+\_\+t Countdown\+Timer\+::left\+Ms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+remaining timer duration 
+
+\begin{DoxyReturn}{Returns}
+milliseconds left until timer expires 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+alias for \doxylink{struct_countdown_timer_a7b3f51afa536ffed772f1c62de543e43}{left\+\_\+ms()} 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{_countdown_timer_8hpp_source_l00052}{52}} of file \mbox{\hyperlink{_countdown_timer_8hpp_source}{Countdown\+Timer.\+hpp}}.
+
+\Hypertarget{struct_countdown_timer_a766d43746a33928f83b0c80e47c3da2c}\label{struct_countdown_timer_a766d43746a33928f83b0c80e47c3da2c} 
+\index{CountdownTimer@{CountdownTimer}!msTick@{msTick}}
+\index{msTick@{msTick}!CountdownTimer@{CountdownTimer}}
+\doxysubsubsection{\texorpdfstring{msTick()}{msTick()}}
+{\footnotesize\ttfamily void Countdown\+Timer\+::ms\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+advance all timer instances by one millisecond ~\newline
+ must be called reliably every millisecond 
+
+\begin{DoxyWarning}{Warning}
+call this method only once in the program, not once per instance 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_countdown_timer_adc81e626332259b1811fdb9012efcb5c}\label{struct_countdown_timer_adc81e626332259b1811fdb9012efcb5c} 
+\index{CountdownTimer@{CountdownTimer}!tick@{tick}}
+\index{tick@{tick}!CountdownTimer@{CountdownTimer}}
+\doxysubsubsection{\texorpdfstring{tick}{tick}}
+{\footnotesize\ttfamily uint32\+\_\+t Countdown\+Timer\+::tick = 0\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_countdown_timer_8hpp_source_l00081}{81}} of file \mbox{\hyperlink{_countdown_timer_8hpp_source}{Countdown\+Timer.\+hpp}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+JLib/\+JMisc/include/\mbox{\hyperlink{_countdown_timer_8hpp}{Countdown\+Timer.\+hpp}}\item 
+JLib/\+JMisc/src/\mbox{\hyperlink{_countdown_timer_8cpp}{Countdown\+Timer.\+cpp}}\end{DoxyCompactItemize}

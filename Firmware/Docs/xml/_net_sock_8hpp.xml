@@ -1,15 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="_net_sock_8hpp" kind="file" language="C++">
     <compoundname>NetSock.hpp</compoundname>
     <includes refid="_net_i_p_8hpp" local="no">NetIP.hpp</includes>
     <includes local="no">cstdint</includes>
-    <includedby refid="_client_8hpp" local="no">JLib/JMQTT/include/Client.hpp</includedby>
     <includedby refid="_w5500_socket_8hpp" local="no">Core/JPort/include/W5500Socket.hpp</includedby>
+    <includedby refid="_client_8hpp" local="no">JLib/JMQTT/include/Client.hpp</includedby>
     <incdepgraph>
-      <node id="3">
-        <label>cstdint</label>
-      </node>
       <node id="2">
         <label>NetIP.hpp</label>
         <link refid="_net_i_p_8hpp_source"/>
@@ -24,63 +21,66 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
       <node id="8">
-        <label>Core/JPort/src/W5500Socket.cpp</label>
-        <link refid="_w5500_socket_8cpp_source"/>
-      </node>
-      <node id="2">
-        <label>JLib/JMQTT/include/Client.hpp</label>
-        <link refid="_client_8hpp_source"/>
-        <childnode refid="3" relation="include">
+        <label>Core/JPort/include/PAHOClient.hpp</label>
+        <link refid="_p_a_h_o_client_8hpp_source"/>
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="3">
+        <label>Core/JPort/include/W5500HC.hpp</label>
+        <link refid="_w5500_h_c_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Core/JPort/include/W5500Socket.hpp</label>
+        <link refid="_w5500_socket_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Core/JPort/src/PAHOClient.cpp</label>
+        <link refid="_p_a_h_o_client_8cpp_source"/>
+      </node>
+      <node id="4">
         <label>Core/JPort/src/W5500HC.cpp</label>
         <link refid="_w5500_h_c_8cpp_source"/>
       </node>
       <node id="6">
-        <label>Core/JPort/include/W5500HC.hpp</label>
-        <link refid="_w5500_h_c_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>Core/JPort/src/PAHOClient.cpp</label>
-        <link refid="_p_a_h_o_client_8cpp_source"/>
-      </node>
-      <node id="3">
-        <label>Core/JPort/include/PAHOClient.hpp</label>
-        <link refid="_p_a_h_o_client_8hpp_source"/>
-        <childnode refid="4" relation="include">
-        </childnode>
+        <label>Core/JPort/src/W5500Interface.cpp</label>
+        <link refid="_w5500_interface_8cpp_source"/>
       </node>
       <node id="5">
-        <label>Core/JPort/include/W5500Socket.hpp</label>
-        <link refid="_w5500_socket_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
+        <label>Core/JPort/src/W5500Socket.cpp</label>
+        <link refid="_w5500_socket_8cpp_source"/>
       </node>
       <node id="1">
         <label>JLib/JEthernet/include/NetSock.hpp</label>
         <link refid="_net_sock_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="9">
-        <label>Core/JPort/src/W5500Interface.cpp</label>
-        <link refid="_w5500_interface_8cpp_source"/>
+      <node id="7">
+        <label>JLib/JMQTT/include/Client.hpp</label>
+        <link refid="_client_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" prot="public">JETHERNET::NetSock</innerclass>
@@ -105,7 +105,7 @@
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">JETHERNET<sp/>{</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>SockConnectMode<sp/>:<sp/>uint8_t<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>SockConnectMode<sp/>:<sp/>uint8_t<sp/>{</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>TCP<sp/>=<sp/>1,<sp/></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>UDP<sp/>=<sp/>2,<sp/></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>RAWIP<sp/>=<sp/>3,</highlight></codeline>
@@ -115,27 +115,27 @@
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>forward<sp/>declare<sp/>to<sp/>circular<sp/>dependencies</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">EthernetHC;</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" kindref="compound">NetSock</ref><sp/>{</highlight></codeline>
+<codeline lineno="35" refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" kindref="compound">NetSock</ref><sp/>{</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>EthernetHC*<sp/>ethHC;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1abe1b9e145bdd796464e8666db6df511d" kindref="member">open</ref>(<ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref><sp/>ip,<sp/>uint16_t<sp/>port,<sp/>SockConnectMode<sp/>mode)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="47" refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1abe1b9e145bdd796464e8666db6df511d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1abe1b9e145bdd796464e8666db6df511d" kindref="member">open</ref>(<ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref><sp/>ip,<sp/>uint16_t<sp/>port,<sp/>SockConnectMode<sp/>mode)<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1abced4845fbe84804cd64597c39f2b1b5" kindref="member">close</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="53" refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1abced4845fbe84804cd64597c39f2b1b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1abced4845fbe84804cd64597c39f2b1b5" kindref="member">close</ref>()<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1ad4fcf93b2ec7285a632c4b51777c0beb" kindref="member">connectTCP</ref>(<ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref><sp/>ip,<sp/>uint16_t<sp/>port)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="62" refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1ad4fcf93b2ec7285a632c4b51777c0beb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1ad4fcf93b2ec7285a632c4b51777c0beb" kindref="member">connectTCP</ref>(<ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref><sp/>ip,<sp/>uint16_t<sp/>port)<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a5f4da6ea7d0538048a8e1e70f5d69ea0" kindref="member">disconnect</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="68" refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a5f4da6ea7d0538048a8e1e70f5d69ea0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a5f4da6ea7d0538048a8e1e70f5d69ea0" kindref="member">disconnect</ref>()<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a9fa1b012c538e35f38780a1fd84f618e" kindref="member">write</ref>(uint8_t<sp/>*dataIn,<sp/>uint16_t<sp/>len)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="76" refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a9fa1b012c538e35f38780a1fd84f618e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a9fa1b012c538e35f38780a1fd84f618e" kindref="member">write</ref>(uint8_t<sp/>*dataIn,<sp/>uint16_t<sp/>len)<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1ac352a31bb144160f2a060c2609cee259" kindref="member">read</ref>(uint8_t<sp/>*dataOut,<sp/>uint16_t<sp/>len)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="84" refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1ac352a31bb144160f2a060c2609cee259" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1ac352a31bb144160f2a060c2609cee259" kindref="member">read</ref>(uint8_t<sp/>*dataOut,<sp/>uint16_t<sp/>len)<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>true<sp/>if<sp/>socket<sp/>is<sp/>open<sp/>and<sp/>false<sp/>if<sp/>closed</highlight></codeline>
-<codeline lineno="92"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a41db618756cf90001a219180d152ecde" kindref="member">isConnected</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="92" refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a41db618756cf90001a219180d152ecde" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a41db618756cf90001a219180d152ecde" kindref="member">isConnected</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" kindref="compound">NetSock</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" kindref="compound">~NetSock</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="96"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"></highlight></codeline>

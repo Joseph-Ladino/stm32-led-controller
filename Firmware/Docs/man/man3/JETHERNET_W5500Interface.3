@@ -1,4 +1,4 @@
-.TH "JETHERNET::W5500Interface" 3 "Thu Apr 25 2024" "Version 0.1.1" "CSTM32LedController" \" -*- nroff -*-
+.TH "JETHERNET::W5500Interface" 3 "Version 0.1.1" "CSTM32 Led Controller" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -71,8 +71,72 @@ JETHERNET::W5500Interface
 .in -1c
 .SH "Detailed Description"
 .PP 
-Definition at line 37 of file W5500Interface\&.hpp\&.
+Definition at line \fB37\fP of file \fBW5500Interface\&.hpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool JETHERNET::W5500Interface::init (\fBW5500Config\fP config)\fR [static]\fP"
+
+.PP
+Definition at line \fB137\fP of file \fBW5500Interface\&.cpp\fP\&.
+.SS "bool JETHERNET::W5500Interface::initChip ()"
+
+.PP
+Definition at line \fB89\fP of file \fBW5500Interface\&.cpp\fP\&.
+.SS "bool JETHERNET::W5500Interface::initDHCP (\fBW5500Socket\fP & sock, \fBNetConfig\fP * conf, uint16_t timeoutMs)"
+
+.PP
+Definition at line \fB107\fP of file \fBW5500Interface\&.cpp\fP\&.
+.SS "void JETHERNET::W5500Interface::initDNS (\fBW5500Socket\fP & sock)"
+
+.PP
+Definition at line \fB132\fP of file \fBW5500Interface\&.cpp\fP\&.
+.SS "\fBW5500Interface\fP & JETHERNET::W5500Interface::instance ()\fR [static]\fP"
+
+.PP
+Definition at line \fB77\fP of file \fBW5500Interface\&.cpp\fP\&.
+.SS "void JETHERNET::W5500Interface::triggerReset ()"
+
+.PP
+Definition at line \fB82\fP of file \fBW5500Interface\&.cpp\fP\&.
+.SH "Friends And Related Symbol Documentation"
+.PP 
+.SS "void CB_DHCP_IPAssigned ()\fR [friend]\fP"
+
+.PP
+Definition at line \fB67\fP of file \fBW5500Interface\&.cpp\fP\&.
+.SS "void CB_DHCP_IPConflict ()\fR [friend]\fP"
+
+.PP
+Definition at line \fB73\fP of file \fBW5500Interface\&.cpp\fP\&.
+.SS "void disableChipSelect ()\fR [friend]\fP"
+
+.PP
+Definition at line \fB30\fP of file \fBW5500Interface\&.cpp\fP\&.
+.SS "void enableChipSelect ()\fR [friend]\fP"
+
+.PP
+Definition at line \fB25\fP of file \fBW5500Interface\&.cpp\fP\&.
+.SS "void readBuffer (uint8_t * buf, uint16_t len)\fR [friend]\fP"
+
+.PP
+Definition at line \fB35\fP of file \fBW5500Interface\&.cpp\fP\&.
+.SS "uint8_t readByte ()\fR [friend]\fP"
+
+.PP
+Definition at line \fB57\fP of file \fBW5500Interface\&.cpp\fP\&.
+.SS "friend class \fBW5500HC\fP\fR [friend]\fP"
+
+.PP
+Definition at line \fB48\fP of file \fBW5500Interface\&.hpp\fP\&.
+.SS "void writeBuffer (uint8_t * buf, uint16_t len)\fR [friend]\fP"
+
+.PP
+Definition at line \fB46\fP of file \fBW5500Interface\&.cpp\fP\&.
+.SS "void writeByte (uint8_t byte)\fR [friend]\fP"
+
+.PP
+Definition at line \fB63\fP of file \fBW5500Interface\&.cpp\fP\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for CSTM32LedController from the source code\&.
+Generated automatically by Doxygen for CSTM32 Led Controller from the source code\&.

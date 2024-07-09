@@ -1,14 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="class_j_m_q_t_t_1_1_client" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>JMQTT::Client</compoundname>
     <derivedcompoundref refid="class_j_m_q_t_t_1_1_p_a_h_o_client" prot="public" virt="non-virtual">JMQTT::PAHOClient</derivedcompoundref>
-      <sectiondef kind="public-type">
+    <sectiondef kind="public-type">
       <memberdef kind="typedef" id="class_j_m_q_t_t_1_1_client_1a5baa97eaa06bfc44647d2420a1c613b2" prot="public" static="no">
-        <type>std::function&lt; void(<ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">Client</ref> &amp;)&gt;</type>
+        <type>std::function&lt; <ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">void</ref>(<ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">Client</ref> &amp;)&gt;</type>
         <definition>using JMQTT::Client::ConnectCB =  std::function&lt;void(Client&amp;)&gt;</definition>
         <argsstring></argsstring>
         <name>ConnectCB</name>
+        <qualifiedname>JMQTT::Client::ConnectCB</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -18,10 +19,11 @@
         <location file="JLib/JMQTT/include/Client.hpp" line="51" column="1" bodyfile="JLib/JMQTT/include/Client.hpp" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="class_j_m_q_t_t_1_1_client_1afdd270cfe93363df3d9076452ace76fa" prot="public" static="no">
-        <type>std::function&lt; void(<ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">Client</ref> &amp;, <ref refid="struct_j_m_q_t_t_1_1_message" kindref="compound">Message</ref>)&gt;</type>
+        <type>std::function&lt; <ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">void</ref>(<ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">Client</ref> &amp;, <ref refid="struct_j_m_q_t_t_1_1_message" kindref="compound">Message</ref>)&gt;</type>
         <definition>using JMQTT::Client::MessageCB =  std::function&lt;void(Client&amp;, Message)&gt;</definition>
         <argsstring></argsstring>
         <name>MessageCB</name>
+        <qualifiedname>JMQTT::Client::MessageCB</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -30,13 +32,14 @@
         </inbodydescription>
         <location file="JLib/JMQTT/include/Client.hpp" line="52" column="1" bodyfile="JLib/JMQTT/include/Client.hpp" bodystart="52" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
+    </sectiondef>
+    <sectiondef kind="public-func">
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_client_1a8e4b70bb656d1d7b5ba4f11d7e64e5aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
-        <type>bool</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">bool</ref></type>
         <definition>virtual bool JMQTT::Client::publish</definition>
         <argsstring>(Message msg)=0</argsstring>
         <name>publish</name>
+        <qualifiedname>JMQTT::Client::publish</qualifiedname>
         <reimplementedby refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1a5bbf16a26e74c93a9a8b372d7548cba9">publish</reimplementedby>
         <param>
           <type><ref refid="struct_j_m_q_t_t_1_1_message" kindref="compound">Message</ref></type>
@@ -51,10 +54,11 @@
         <location file="JLib/JMQTT/include/Client.hpp" line="54" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_client_1a61f9bb3e61ba5fa6e516e2b5729074be" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
-        <type>bool</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">bool</ref></type>
         <definition>virtual bool JMQTT::Client::subscribe</definition>
         <argsstring>(string_view topic, QOS qos=QOS::QOS0)=0</argsstring>
         <name>subscribe</name>
+        <qualifiedname>JMQTT::Client::subscribe</qualifiedname>
         <reimplementedby refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1a3811ba986b402d0066c0e868d6a1113e">subscribe</reimplementedby>
         <param>
           <type>string_view</type>
@@ -74,13 +78,14 @@
         <location file="JLib/JMQTT/include/Client.hpp" line="55" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_client_1aa04cc45d722283c9e871980f4d1a27c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
-        <type>bool</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">bool</ref></type>
         <definition>virtual bool JMQTT::Client::update</definition>
         <argsstring>(uint16_t timeoutMs)=0</argsstring>
         <name>update</name>
+        <qualifiedname>JMQTT::Client::update</qualifiedname>
         <reimplementedby refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1ab6a8114c17036596b81f37a292741d7e">update</reimplementedby>
         <param>
-          <type>uint16_t</type>
+          <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">uint16_t</ref></type>
           <declname>timeoutMs</declname>
         </param>
         <briefdescription>
@@ -92,17 +97,18 @@
         <location file="JLib/JMQTT/include/Client.hpp" line="56" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_client_1a32cc54d1b9285f0ba99dfabda2a03bd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
-        <type>bool</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">bool</ref></type>
         <definition>virtual bool JMQTT::Client::connect</definition>
         <argsstring>(JETHERNET::NetSock &amp;sock, const ClientConfig config)=0</argsstring>
         <name>connect</name>
+        <qualifiedname>JMQTT::Client::connect</qualifiedname>
         <reimplementedby refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1a9a94024ef51ef3c1c26f5f6d23160c1f">connect</reimplementedby>
         <param>
           <type><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" kindref="compound">JETHERNET::NetSock</ref> &amp;</type>
           <declname>sock</declname>
         </param>
         <param>
-          <type>const <ref refid="struct_j_m_q_t_t_1_1_client_config" kindref="compound">ClientConfig</ref></type>
+          <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">const</ref> <ref refid="struct_j_m_q_t_t_1_1_client_config" kindref="compound">ClientConfig</ref></type>
           <declname>config</declname>
         </param>
         <briefdescription>
@@ -114,10 +120,11 @@
         <location file="JLib/JMQTT/include/Client.hpp" line="58" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_client_1ac2c1c3f2c2ac1938661dbaae2ecbf39c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
-        <type>bool</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">bool</ref></type>
         <definition>virtual bool JMQTT::Client::reconnect</definition>
         <argsstring>()=0</argsstring>
         <name>reconnect</name>
+        <qualifiedname>JMQTT::Client::reconnect</qualifiedname>
         <reimplementedby refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1a106782e6d80da9c3269c004eec75ec07">reconnect</reimplementedby>
         <briefdescription>
         </briefdescription>
@@ -128,10 +135,11 @@
         <location file="JLib/JMQTT/include/Client.hpp" line="59" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_client_1a3581c3e4959d19a43f30b8eb70e69493" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
-        <type>void</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">void</ref></type>
         <definition>virtual void JMQTT::Client::disconnect</definition>
         <argsstring>()=0</argsstring>
         <name>disconnect</name>
+        <qualifiedname>JMQTT::Client::disconnect</qualifiedname>
         <reimplementedby refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1a2592dfc13815f6bb46f0dc10e6b67ee4">disconnect</reimplementedby>
         <briefdescription>
         </briefdescription>
@@ -142,10 +150,11 @@
         <location file="JLib/JMQTT/include/Client.hpp" line="60" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_client_1a70dab29288dc7daad9b1c1587e569441" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
-        <type>bool</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">bool</ref></type>
         <definition>virtual bool JMQTT::Client::isConnected</definition>
         <argsstring>()=0</argsstring>
         <name>isConnected</name>
+        <qualifiedname>JMQTT::Client::isConnected</qualifiedname>
         <reimplementedby refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1a512779577f19fd55308ec4d5bb23a56c">isConnected</reimplementedby>
         <briefdescription>
         </briefdescription>
@@ -156,10 +165,11 @@
         <location file="JLib/JMQTT/include/Client.hpp" line="61" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_client_1a1fbf4f35c4d0e9bfa93d2d3f3d3c86a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
-        <type>void</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">void</ref></type>
         <definition>virtual void JMQTT::Client::setMessageCallback</definition>
         <argsstring>(MessageCB func)=0</argsstring>
         <name>setMessageCallback</name>
+        <qualifiedname>JMQTT::Client::setMessageCallback</qualifiedname>
         <reimplementedby refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1aafe1ca238b53d18a689f22a309017fdf">setMessageCallback</reimplementedby>
         <param>
           <type>MessageCB</type>
@@ -174,10 +184,11 @@
         <location file="JLib/JMQTT/include/Client.hpp" line="63" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_j_m_q_t_t_1_1_client_1a9c50f65617e65d5e863a984d94890a59" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
-        <type>void</type>
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">void</ref></type>
         <definition>virtual void JMQTT::Client::setConnectCallback</definition>
         <argsstring>(ConnectCB func)=0</argsstring>
         <name>setConnectCallback</name>
+        <qualifiedname>JMQTT::Client::setConnectCallback</qualifiedname>
         <reimplementedby refid="class_j_m_q_t_t_1_1_p_a_h_o_client_1a9e623915c12da35dc7a9d0be2cbfe8b7">setConnectCallback</reimplementedby>
         <param>
           <type>ConnectCB</type>
@@ -196,6 +207,7 @@
         <definition>virtual JMQTT::Client::~Client</definition>
         <argsstring>()</argsstring>
         <name>~Client</name>
+        <qualifiedname>JMQTT::Client::~Client</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -204,24 +216,24 @@
         </inbodydescription>
         <location file="JLib/JMQTT/include/Client.hpp" line="66" column="9" bodyfile="JLib/JMQTT/include/Client.hpp" bodystart="66" bodyend="66"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="1">
+        <label>JMQTT::Client</label>
+        <link refid="class_j_m_q_t_t_1_1_client"/>
+      </node>
       <node id="2">
         <label>JMQTT::PAHOClient</label>
         <link refid="class_j_m_q_t_t_1_1_p_a_h_o_client"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1">
-        <label>JMQTT::Client</label>
-        <link refid="class_j_m_q_t_t_1_1_client"/>
-      </node>
     </inheritancegraph>
-    <location file="JLib/JMQTT/include/Client.hpp" line="48" column="13" bodyfile="JLib/JMQTT/include/Client.hpp" bodystart="48" bodyend="68"/>
+    <location file="JLib/JMQTT/include/Client.hpp" line="48" column="1" bodyfile="JLib/JMQTT/include/Client.hpp" bodystart="48" bodyend="68"/>
     <listofallmembers>
       <member refid="class_j_m_q_t_t_1_1_client_1a32cc54d1b9285f0ba99dfabda2a03bd5" prot="public" virt="pure-virtual"><scope>JMQTT::Client</scope><name>connect</name></member>
       <member refid="class_j_m_q_t_t_1_1_client_1a5baa97eaa06bfc44647d2420a1c613b2" prot="public" virt="non-virtual"><scope>JMQTT::Client</scope><name>ConnectCB</name></member>

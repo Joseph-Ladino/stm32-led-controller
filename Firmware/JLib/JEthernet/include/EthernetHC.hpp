@@ -15,6 +15,11 @@ namespace JETHERNET {
 
 class NetIP;
 class NetSock;
+
+/**
+ * @brief Virtual class designed to represent an ethernet hardware controller
+ * @warning class name is subject to change
+ */
 class EthernetHC { // @suppress("Class has a virtual method and non-virtual destructor")
 public:
 	virtual void setConfig(NetConfig& netConfig) = 0;

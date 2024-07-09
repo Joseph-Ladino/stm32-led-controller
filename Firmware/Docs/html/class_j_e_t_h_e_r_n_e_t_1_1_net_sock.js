@@ -1,6 +1,5 @@
 var class_j_e_t_h_e_r_n_e_t_1_1_net_sock =
 [
-    [ "~NetSock", "class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#a9b8b34ac38e7cc54c2f54bf781d6d691", null ],
     [ "close", "class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#abced4845fbe84804cd64597c39f2b1b5", null ],
     [ "connectTCP", "class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#ad4fcf93b2ec7285a632c4b51777c0beb", null ],
     [ "disconnect", "class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#a5f4da6ea7d0538048a8e1e70f5d69ea0", null ],

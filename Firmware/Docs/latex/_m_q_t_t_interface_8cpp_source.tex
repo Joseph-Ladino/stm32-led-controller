@@ -1,0 +1,87 @@
+\doxysection{MQTTInterface.\+cpp}
+\hypertarget{_m_q_t_t_interface_8cpp_source}{}\label{_m_q_t_t_interface_8cpp_source}\index{JLib/JMQTT/src/MQTTInterface.cpp@{JLib/JMQTT/src/MQTTInterface.cpp}}
+\mbox{\hyperlink{_m_q_t_t_interface_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ MQTTInterface.cpp}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Mar\ 10,\ 2024}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ user}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_m_q_t_t_interface_8hpp}{MQTTInterface.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}socket.h"{}}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00011}00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_j_m_q_t_t}{JMQTT}}\ \{}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00013}00013\ \textcolor{comment}{/*\ wrappers\ for\ socket\ API\ */}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00015}00015\ \textcolor{keyword}{static}\ int8\_t\ wizSocket(uint8\_t\ sn,\ uint8\_t\ protocol,\ uint16\_t\ port,\ uint8\_t\ flag)\ \{}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{return}\ socket(sn,\ protocol,\ port,\ flag);}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00017}00017\ \}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00019}00019\ \textcolor{keyword}{static}\ int8\_t\ wizConnect(uint8\_t\ sn,\ uint8\_t\ *addr,\ uint16\_t\ port)\ \{}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{return}\ connect(sn,\ addr,\ port);}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00023}00023\ \textcolor{keyword}{static}\ int8\_t\ wizDisconnect(uint8\_t\ sn)\ \{}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{return}\ disconnect(sn);}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00027}00027\ \textcolor{comment}{/*\ MQTT\ NETWORK\ CLASS\ */}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00029}\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a4d02403adcff198cdaa44c1e7f91bbaf}{00029}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a4d02403adcff198cdaa44c1e7f91bbaf}{W5500MqttNetwork::connect}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{hostname}},\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{uint16\_t}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{port}})\ \{}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{comment}{//\ TODO:\ initiate\ DNS\ in\ W5500HC\ and\ implement\ method}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00034}\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a9192f60f83f6d5f5d7ae7ccb34cfea6b}{00034}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a4d02403adcff198cdaa44c1e7f91bbaf}{W5500MqttNetwork::connect}}(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{uint8\_t}}\ *ip,\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{uint16\_t}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{port}})\ \{}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{if}\ (wizSocket(\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a914bbdc5c0561d9938a3bf87014845d2}{socketNum}},\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{Sn\_MR\_TCP}},\ 12345,\ 0)\ !=\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a914bbdc5c0561d9938a3bf87014845d2}{socketNum}})}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{SOCK\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{if}\ (wizConnect(\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a914bbdc5c0561d9938a3bf87014845d2}{socketNum}},\ ip,\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{port}})\ !=\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{SOCK\_OK}})}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{SOCK\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{SOCK\_OK}};}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00042}00042\ \}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00044}\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_aa80e6b76bfb01c241ab91604714042cc}{00044}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_aa80e6b76bfb01c241ab91604714042cc}{W5500MqttNetwork::disconnect}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00045}00045\ \ \ \ \ wizDisconnect(\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a914bbdc5c0561d9938a3bf87014845d2}{socketNum}});}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00046}00046\ \}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00048}\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a08e3a3faead9d84bddd16177baa8574c}{00048}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a08e3a3faead9d84bddd16177baa8574c}{W5500MqttNetwork::read}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{buffer}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{len}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{timeout\_ms}})\ \{}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a41a09a8fd79d62d52f5ce0ff4d2e2723}{isConnected}}()\ \&\&\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{getSn\_RX\_RSR}}(\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a914bbdc5c0561d9938a3bf87014845d2}{socketNum}})\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{recv}}(\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a914bbdc5c0561d9938a3bf87014845d2}{socketNum}},\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{buffer}},\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{len}});}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{SOCK\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00055}\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a0614007fa4c8d9602647510fe732be38}{00055}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a0614007fa4c8d9602647510fe732be38}{W5500MqttNetwork::write}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{buffer}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{len}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{timeout\_ms}})\ \{}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a41a09a8fd79d62d52f5ce0ff4d2e2723}{isConnected}}())}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{send}}(\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a914bbdc5c0561d9938a3bf87014845d2}{socketNum}},\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{buffer}},\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{len}});}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{SOCK\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00060}00060\ \}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00062}\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a41a09a8fd79d62d52f5ce0ff4d2e2723}{00062}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a41a09a8fd79d62d52f5ce0ff4d2e2723}{W5500MqttNetwork::isConnected}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{getSn\_SR}}(\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a914bbdc5c0561d9938a3bf87014845d2}{socketNum}})\ ==\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{SOCK\_ESTABLISHED}};}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00064}00064\ \}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00066}\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_aee3fe0f042a9ed67d21ae0cb49355468}{00066}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_aee3fe0f042a9ed67d21ae0cb49355468}{W5500MqttNetwork::setSocket}}(\textcolor{keywordtype}{int}\ socketNum)\ \{}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00067}00067\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a41a09a8fd79d62d52f5ce0ff4d2e2723}{isConnected}}())}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_aa80e6b76bfb01c241ab91604714042cc}{disconnect}}();}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00069}00069\ \ \ \ \ this-\/>socketNum\ =\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a914bbdc5c0561d9938a3bf87014845d2}{socketNum}};}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00070}00070\ \}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00072}\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_a1f8ac87b3170cfdae999e40ce2d818d4}{00072}}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_aca47fb04224edb2de5e283d78d6ec174}{W5500MqttNetwork::W5500MqttNetwork}}(\textcolor{keywordtype}{int}\ socketNum)\ :}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ socketNum(socketNum)\ \{}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00074}00074\ \}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00076}\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_aca47fb04224edb2de5e283d78d6ec174}{00076}}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network_aca47fb04224edb2de5e283d78d6ec174}{W5500MqttNetwork::W5500MqttNetwork}}()\ :}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ socketNum(0)\ \{}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00078}00078\ \}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00080}00080\ \}}
+\DoxyCodeLine{\Hypertarget{_m_q_t_t_interface_8cpp_source_l00081}00081\ }
+
+\end{DoxyCode}

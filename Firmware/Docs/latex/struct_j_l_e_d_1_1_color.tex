@@ -1,0 +1,232 @@
+\doxysection{JLED\+::Color Struct Reference}
+\hypertarget{struct_j_l_e_d_1_1_color}{}\label{struct_j_l_e_d_1_1_color}\index{JLED::Color@{JLED::Color}}
+
+
+RGBW color stored internally as uint32.  
+
+
+
+
+{\ttfamily \#include $<$Color.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \& \mbox{\hyperlink{struct_j_l_e_d_1_1_color_a860ffe1eb2aeeae750675947fc463aa0}{operator\mbox{[}$\,$\mbox{]}}} (uint8\+\_\+t n)
+\item 
+const uint8\+\_\+t \& \mbox{\hyperlink{struct_j_l_e_d_1_1_color_a526e7f2d694ded86e47ddebcef3a4f67}{operator\mbox{[}$\,$\mbox{]}}} (uint8\+\_\+t n) const
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_color_a0d62a147680b13eb29c7695fda0c4898}{operator uint32\+\_\+t}} ()
+\item 
+bool \mbox{\hyperlink{struct_j_l_e_d_1_1_color_ac370745c0d987394fff68cec181eb3de}{operator==}} (const \mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \&rhs) const
+\item 
+bool \mbox{\hyperlink{struct_j_l_e_d_1_1_color_a3a29afe4842aaf7bb3733cc7e5a286dc}{operator!=}} (const \mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \&rhs) const
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \& \mbox{\hyperlink{struct_j_l_e_d_1_1_color_a6fae6a241287e82d46f0f177951f3ffe}{operator=}} (const uint32\+\_\+t rhs)
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \& \mbox{\hyperlink{struct_j_l_e_d_1_1_color_a5022c10f4f8a59b0340e944c406937f1}{operator=}} (const \mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \&rhs)=default
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_color_a53ce5313bbe5a9fa9a39f9b5faefb1c0}{Color}} ()=default
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_color_ae2db419c161dac45bf5544a6f3e32229}{Color}} (uint32\+\_\+t \mbox{\hyperlink{struct_j_l_e_d_1_1_color_a7697370bee3952e1fd6d7fdad83908fc}{num}})
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_color_afbc287e5115aab0ff3dcc64d0f4d5391}{Color}} (\mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \&c)=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>uint8\_t \mbox{\hyperlink{struct_j_l_e_d_1_1_color_a9f7236e92911fde997f9ed1a2ab9bd0f}{w}}\\
+\>\>\>{\em optional }\\
+\>\>uint8\_t \mbox{\hyperlink{struct_j_l_e_d_1_1_color_abc9619ad0b5523617ab8073e9d75a6b7}{b}}\\
+\>\>uint8\_t \mbox{\hyperlink{struct_j_l_e_d_1_1_color_a53b60a1180be5dca5879493599c3c924}{g}}\\
+\>\>uint8\_t \mbox{\hyperlink{struct_j_l_e_d_1_1_color_a450cffa91c156cbc2fdd5f4dda74b9da}{r}}\\
+\>\} \\
+\>uint8\_t \mbox{\hyperlink{struct_j_l_e_d_1_1_color_ac2553ef03f3016ee30a946ff5ab45720}{raw}} \mbox{[}4\mbox{]}\\
+\>uint32\_t \mbox{\hyperlink{struct_j_l_e_d_1_1_color_a7697370bee3952e1fd6d7fdad83908fc}{num}} = 0\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+RGBW color stored internally as uint32. 
+
+this class is largely based off of \href{https://github.com/FastLED/FastLED/blob/master/src/pixeltypes.h}{\texttt{ Fast\+LED}} (\href{https://github.com/FastLED/FastLED/tree/master?tab=MIT-1-ov-file\#readme}{\texttt{ MIT license}}) 
+
+Definition at line \mbox{\hyperlink{_color_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{_color_8hpp_source}{Color.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_j_l_e_d_1_1_color_a53ce5313bbe5a9fa9a39f9b5faefb1c0}\label{struct_j_l_e_d_1_1_color_a53ce5313bbe5a9fa9a39f9b5faefb1c0} 
+\index{JLED::Color@{JLED::Color}!Color@{Color}}
+\index{Color@{Color}!JLED::Color@{JLED::Color}}
+\doxysubsubsection{\texorpdfstring{Color()}{Color()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily JLED\+::\+Color\+::\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{struct_j_l_e_d_1_1_color_ae2db419c161dac45bf5544a6f3e32229}\label{struct_j_l_e_d_1_1_color_ae2db419c161dac45bf5544a6f3e32229} 
+\index{JLED::Color@{JLED::Color}!Color@{Color}}
+\index{Color@{Color}!JLED::Color@{JLED::Color}}
+\doxysubsubsection{\texorpdfstring{Color()}{Color()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily JLED\+::\+Color\+::\+Color (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_color_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{_color_8cpp_source}{Color.\+cpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_color_afbc287e5115aab0ff3dcc64d0f4d5391}\label{struct_j_l_e_d_1_1_color_afbc287e5115aab0ff3dcc64d0f4d5391} 
+\index{JLED::Color@{JLED::Color}!Color@{Color}}
+\index{Color@{Color}!JLED::Color@{JLED::Color}}
+\doxysubsubsection{\texorpdfstring{Color()}{Color()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily JLED\+::\+Color\+::\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_j_l_e_d_1_1_color_a0d62a147680b13eb29c7695fda0c4898}\label{struct_j_l_e_d_1_1_color_a0d62a147680b13eb29c7695fda0c4898} 
+\index{JLED::Color@{JLED::Color}!operator uint32\_t@{operator uint32\_t}}
+\index{operator uint32\_t@{operator uint32\_t}!JLED::Color@{JLED::Color}}
+\doxysubsubsection{\texorpdfstring{operator uint32\_t()}{operator uint32\_t()}}
+{\footnotesize\ttfamily JLED\+::\+Color\+::operator uint32\+\_\+t (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_color_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{_color_8cpp_source}{Color.\+cpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_color_a3a29afe4842aaf7bb3733cc7e5a286dc}\label{struct_j_l_e_d_1_1_color_a3a29afe4842aaf7bb3733cc7e5a286dc} 
+\index{JLED::Color@{JLED::Color}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!JLED::Color@{JLED::Color}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool JLED\+::\+Color\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_color_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{_color_8cpp_source}{Color.\+cpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_color_a5022c10f4f8a59b0340e944c406937f1}\label{struct_j_l_e_d_1_1_color_a5022c10f4f8a59b0340e944c406937f1} 
+\index{JLED::Color@{JLED::Color}!operator=@{operator=}}
+\index{operator=@{operator=}!JLED::Color@{JLED::Color}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \& JLED\+::\+Color\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{struct_j_l_e_d_1_1_color_a6fae6a241287e82d46f0f177951f3ffe}\label{struct_j_l_e_d_1_1_color_a6fae6a241287e82d46f0f177951f3ffe} 
+\index{JLED::Color@{JLED::Color}!operator=@{operator=}}
+\index{operator=@{operator=}!JLED::Color@{JLED::Color}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \& JLED\+::\+Color\+::operator= (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_color_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_color_8cpp_source}{Color.\+cpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_color_ac370745c0d987394fff68cec181eb3de}\label{struct_j_l_e_d_1_1_color_ac370745c0d987394fff68cec181eb3de} 
+\index{JLED::Color@{JLED::Color}!operator==@{operator==}}
+\index{operator==@{operator==}!JLED::Color@{JLED::Color}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool JLED\+::\+Color\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_color_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{_color_8cpp_source}{Color.\+cpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_color_a860ffe1eb2aeeae750675947fc463aa0}\label{struct_j_l_e_d_1_1_color_a860ffe1eb2aeeae750675947fc463aa0} 
+\index{JLED::Color@{JLED::Color}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!JLED::Color@{JLED::Color}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t \& JLED\+::\+Color\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_color_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_color_8cpp_source}{Color.\+cpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_color_a526e7f2d694ded86e47ddebcef3a4f67}\label{struct_j_l_e_d_1_1_color_a526e7f2d694ded86e47ddebcef3a4f67} 
+\index{JLED::Color@{JLED::Color}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!JLED::Color@{JLED::Color}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const uint8\+\_\+t \& JLED\+::\+Color\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{n }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_color_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_color_8cpp_source}{Color.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_j_l_e_d_1_1_color_aa57072b778f58837631241f3f819b6c1}\label{struct_j_l_e_d_1_1_color_aa57072b778f58837631241f3f819b6c1} 
+\doxysubsubsection{\texorpdfstring{[union]}{[union]}}
+{\footnotesize\ttfamily union  \{ ... \}  \mbox{\hyperlink{struct_j_l_e_d_1_1_color}{JLED\+::\+Color}}}
+
+\Hypertarget{struct_j_l_e_d_1_1_color_abc9619ad0b5523617ab8073e9d75a6b7}\label{struct_j_l_e_d_1_1_color_abc9619ad0b5523617ab8073e9d75a6b7} 
+\index{JLED::Color@{JLED::Color}!b@{b}}
+\index{b@{b}!JLED::Color@{JLED::Color}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily uint8\+\_\+t JLED\+::\+Color\+::b}
+
+
+
+Definition at line \mbox{\hyperlink{_color_8hpp_source_l00026}{26}} of file \mbox{\hyperlink{_color_8hpp_source}{Color.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_color_a53b60a1180be5dca5879493599c3c924}\label{struct_j_l_e_d_1_1_color_a53b60a1180be5dca5879493599c3c924} 
+\index{JLED::Color@{JLED::Color}!g@{g}}
+\index{g@{g}!JLED::Color@{JLED::Color}}
+\doxysubsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily uint8\+\_\+t JLED\+::\+Color\+::g}
+
+
+
+Definition at line \mbox{\hyperlink{_color_8hpp_source_l00027}{27}} of file \mbox{\hyperlink{_color_8hpp_source}{Color.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_color_a7697370bee3952e1fd6d7fdad83908fc}\label{struct_j_l_e_d_1_1_color_a7697370bee3952e1fd6d7fdad83908fc} 
+\index{JLED::Color@{JLED::Color}!num@{num}}
+\index{num@{num}!JLED::Color@{JLED::Color}}
+\doxysubsubsection{\texorpdfstring{num}{num}}
+{\footnotesize\ttfamily uint32\+\_\+t JLED\+::\+Color\+::num = 0}
+
+
+
+Definition at line \mbox{\hyperlink{_color_8hpp_source_l00031}{31}} of file \mbox{\hyperlink{_color_8hpp_source}{Color.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_color_a450cffa91c156cbc2fdd5f4dda74b9da}\label{struct_j_l_e_d_1_1_color_a450cffa91c156cbc2fdd5f4dda74b9da} 
+\index{JLED::Color@{JLED::Color}!r@{r}}
+\index{r@{r}!JLED::Color@{JLED::Color}}
+\doxysubsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily uint8\+\_\+t JLED\+::\+Color\+::r}
+
+
+
+Definition at line \mbox{\hyperlink{_color_8hpp_source_l00028}{28}} of file \mbox{\hyperlink{_color_8hpp_source}{Color.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_color_ac2553ef03f3016ee30a946ff5ab45720}\label{struct_j_l_e_d_1_1_color_ac2553ef03f3016ee30a946ff5ab45720} 
+\index{JLED::Color@{JLED::Color}!raw@{raw}}
+\index{raw@{raw}!JLED::Color@{JLED::Color}}
+\doxysubsubsection{\texorpdfstring{raw}{raw}}
+{\footnotesize\ttfamily uint8\+\_\+t JLED\+::\+Color\+::raw\mbox{[}4\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{_color_8hpp_source_l00030}{30}} of file \mbox{\hyperlink{_color_8hpp_source}{Color.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_color_a9f7236e92911fde997f9ed1a2ab9bd0f}\label{struct_j_l_e_d_1_1_color_a9f7236e92911fde997f9ed1a2ab9bd0f} 
+\index{JLED::Color@{JLED::Color}!w@{w}}
+\index{w@{w}!JLED::Color@{JLED::Color}}
+\doxysubsubsection{\texorpdfstring{w}{w}}
+{\footnotesize\ttfamily uint8\+\_\+t JLED\+::\+Color\+::w}
+
+
+
+optional 
+
+
+
+Definition at line \mbox{\hyperlink{_color_8hpp_source_l00025}{25}} of file \mbox{\hyperlink{_color_8hpp_source}{Color.\+hpp}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+JLib/\+JLED/include/\mbox{\hyperlink{_color_8hpp}{Color.\+hpp}}\item 
+JLib/\+JLED/src/\mbox{\hyperlink{_color_8cpp}{Color.\+cpp}}\end{DoxyCompactItemize}

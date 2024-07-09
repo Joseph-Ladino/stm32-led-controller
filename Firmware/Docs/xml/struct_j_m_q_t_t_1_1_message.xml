@@ -1,13 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="struct_j_m_q_t_t_1_1_message" kind="struct" language="C++" prot="public">
     <compoundname>JMQTT::Message</compoundname>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct_j_m_q_t_t_1_1_message_1a1f5f5601ec0d1b2d5b96d8c2ccfa99c2" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string JMQTT::Message::topic</definition>
         <argsstring></argsstring>
         <name>topic</name>
+        <qualifiedname>JMQTT::Message::topic</qualifiedname>
         <initializer>= &quot;&quot;</initializer>
         <briefdescription>
         </briefdescription>
@@ -22,6 +23,7 @@
         <definition>string JMQTT::Message::payload</definition>
         <argsstring></argsstring>
         <name>payload</name>
+        <qualifiedname>JMQTT::Message::payload</qualifiedname>
         <initializer>= &quot;&quot;</initializer>
         <briefdescription>
         </briefdescription>
@@ -36,6 +38,7 @@
         <definition>QOS JMQTT::Message::qos</definition>
         <argsstring></argsstring>
         <name>qos</name>
+        <qualifiedname>JMQTT::Message::qos</qualifiedname>
         <initializer>= QOS::QOS0</initializer>
         <briefdescription>
         </briefdescription>
@@ -45,15 +48,12 @@
         </inbodydescription>
         <location file="JLib/JMQTT/include/Client.hpp" line="30" column="5" bodyfile="JLib/JMQTT/include/Client.hpp" bodystart="30" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="2">
-        <label>string</label>
-      </node>
       <node id="1">
         <label>JMQTT::Message</label>
         <link refid="struct_j_m_q_t_t_1_1_message"/>
@@ -62,8 +62,11 @@
           <edgelabel>topic</edgelabel>
         </childnode>
       </node>
+      <node id="2">
+        <label>string</label>
+      </node>
     </collaborationgraph>
-    <location file="JLib/JMQTT/include/Client.hpp" line="27" column="14" bodyfile="JLib/JMQTT/include/Client.hpp" bodystart="27" bodyend="31"/>
+    <location file="JLib/JMQTT/include/Client.hpp" line="27" column="1" bodyfile="JLib/JMQTT/include/Client.hpp" bodystart="27" bodyend="31"/>
     <listofallmembers>
       <member refid="struct_j_m_q_t_t_1_1_message_1a8b052e26ae6631e381d29cabdd07d384" prot="public" virt="non-virtual"><scope>JMQTT::Message</scope><name>payload</name></member>
       <member refid="struct_j_m_q_t_t_1_1_message_1a20c27d887cf1ff51e4b65c5f6f32cf5e" prot="public" virt="non-virtual"><scope>JMQTT::Message</scope><name>qos</name></member>

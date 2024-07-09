@@ -148,7 +148,8 @@ void W5500HC::msTick() {
 	static uint32_t tick = 0;
 	tick++;
 
-	if (tick % 1000 == 0) {
+	if (tick >= 1000) {
+		tick = 0;
 		DHCP_time_handler();
 		DNS_time_handler();
 	}

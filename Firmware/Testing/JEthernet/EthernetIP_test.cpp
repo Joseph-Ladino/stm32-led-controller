@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
-#include "EthernetIP.hpp"
+#include "NetIP.hpp"
 
-using IP = JETHERNET::EthernetIP;
+using IP = JETHERNET::NetIP;
 
 TEST(EthernetIP, BasicUse) {
 	IP ip1 = { 192, 168, 1, 1 };

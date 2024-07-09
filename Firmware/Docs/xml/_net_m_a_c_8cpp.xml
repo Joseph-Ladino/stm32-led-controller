@@ -1,10 +1,16 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="_net_m_a_c_8cpp" kind="file" language="C++">
     <compoundname>NetMAC.cpp</compoundname>
     <includes refid="_net_m_a_c_8hpp" local="no">NetMAC.hpp</includes>
     <includes local="no">cstdio</includes>
     <incdepgraph>
+      <node id="2">
+        <label>NetMAC.hpp</label>
+        <link refid="_net_m_a_c_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
       <node id="1">
         <label>JLib/JEthernet/src/NetMAC.cpp</label>
         <link refid="_net_m_a_c_8cpp"/>
@@ -15,12 +21,6 @@
       </node>
       <node id="3">
         <label>cstdint</label>
-      </node>
-      <node id="2">
-        <label>NetMAC.hpp</label>
-        <link refid="_net_m_a_c_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
       </node>
       <node id="4">
         <label>cstdio</label>

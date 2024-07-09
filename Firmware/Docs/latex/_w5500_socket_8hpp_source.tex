@@ -1,0 +1,51 @@
+\doxysection{W5500\+Socket.\+hpp}
+\hypertarget{_w5500_socket_8hpp_source}{}\label{_w5500_socket_8hpp_source}\index{Core/JPort/include/W5500Socket.hpp@{Core/JPort/include/W5500Socket.hpp}}
+\mbox{\hyperlink{_w5500_socket_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00002}00002\ \textcolor{comment}{\ *\ W5500Socket.hpp}}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Mar\ 14,\ 2024}}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ user}}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ JETHERNET\_INCLUDE\_W5500SOCKET\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#define\ JETHERNET\_INCLUDE\_W5500SOCKET\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_net_sock_8hpp}{NetSock.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00014}00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_j_e_t_h_e_r_n_e_t}{JETHERNET}}\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00016}00016\ \textcolor{keyword}{class\ }W5500HC;}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00017}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket}{00017}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket}{W5500Socket}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock}{NetSock}}\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00018}00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c}{W5500HC}}*\ ethHC;}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordtype}{int}\ socketNum\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{namespace_j_e_t_h_e_r_n_e_t_a2bcff7d05aee5335790afea11e197ca1}{SockConnectMode}}\ connectMode;}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00023}00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_a8ca576edc220f26e969b55404ed9bdc6}{open}}(\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{NetIP}}\ ip,\ uint16\_t\ port,\ \mbox{\hyperlink{namespace_j_e_t_h_e_r_n_e_t_a2bcff7d05aee5335790afea11e197ca1}{SockConnectMode}}\ mode)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_a30252f2d5b5820955e2ddfc905258de4}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_ae899a9827e9773e01163d893c48deeae}{connectTCP}}(\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{NetIP}}\ ip,\ uint16\_t\ port)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_aaaa05a73924134dafddd1aa8eb0bcd02}{disconnect}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_a6405fcf9acb90e76d8b138d5ba9775a0}{write}}(uint8\_t*\ dataIn,\ uint16\_t\ len)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_a6f49d3a309be5c3b9d2e3a3aaae6a883}{read}}(uint8\_t*\ dataOut,\ uint16\_t\ len)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00031}00031\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_a3e04828e428a45fdcb75c8baa05c45d9}{getWizSocketStatus}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_a7ab00d6cd578c68d97a287367fefeb16}{getSocketNum}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_ae1e6ed02559892e71752470e125bc60e}{isConnected}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{operator}\ bool()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00036}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_ae4496b2bb9acc463e6410c3b4cf1bd20}{00036}}\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c}{W5500HC}};}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_a1f4b3dc87d3933e3e276a06b10c09ad3}{W5500Socket}}();}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_a1f4b3dc87d3933e3e276a06b10c09ad3}{W5500Socket}}(\textcolor{keywordtype}{int}\ sn);}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00040}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_a3b86269ab4b0c30ce103efb4e15c2ae7}{00040}}\ \ \ \ \ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_a3b86269ab4b0c30ce103efb4e15c2ae7}{\string~W5500Socket}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00041}00041\ \};}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00043}00043\ \}\ \textcolor{comment}{/*\ namespace\ JETHERNET\ */}}
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_w5500_socket_8hpp_source_l00045}00045\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ JETHERNET\_INCLUDE\_W5500SOCKET\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

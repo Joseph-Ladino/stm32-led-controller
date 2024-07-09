@@ -1,0 +1,242 @@
+\doxysection{JETHERNET\+::Net\+IP Struct Reference}
+\hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}\index{JETHERNET::NetIP@{JETHERNET::NetIP}}
+
+
+IP address stored internally as a uint32.  
+
+
+
+
+{\ttfamily \#include $<$Net\+IP.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_abf6814cc0fd7e20073cea1abdbc1e1a2}{c\+String}} (char \texorpdfstring{$\ast$}{*}buf)
+\begin{DoxyCompactList}\small\item\em Print formatted IP address to output buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \& \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_af39e5551f77da937526feebef81baeb4}{operator\mbox{[}$\,$\mbox{]}}} (uint8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Access IP bytes. \end{DoxyCompactList}\item 
+const uint8\+\_\+t \& \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a42698f2fadba42d38703e1603e64cb87}{operator\mbox{[}$\,$\mbox{]}}} (uint8\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Access IP bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}} \& \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a7ea22878ac717e2e2e1bb3cddbd62159}{operator=}} (const \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}} \&rhs)=default
+\item 
+\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}} \& \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_ab3e8343d4b135803c689ba6243ed8e5d}{operator=}} (const uint32\+\_\+t ip)
+\item 
+bool \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a7cf99bd3c7bf715c1769afc915af3da0}{operator==}} (const \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}} \&rhs) const
+\item 
+bool \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a4d3970e5ab85c1802a71022e4628b113}{operator!=}} (const \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}} \&rhs) const
+\item 
+\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_ae1c1e097f01e141013dbee53ebeec7ab}{Net\+IP}} ()=default
+\item 
+\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a78458fcfe4a79e82d9855e2ad9621044}{Net\+IP}} (\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}} \&addr)=default
+\item 
+\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a03deafaaa850d2e53e51f0049e764840}{Net\+IP}} (uint8\+\_\+t n0, uint8\+\_\+t n1, uint8\+\_\+t n2, uint8\+\_\+t n3)
+\item 
+\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_aa2075e36a3d56a6ad52d3a06946b9c9b}{Net\+IP}} (uint32\+\_\+t ip)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>uint32\_t \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a2b107533f39fd496cc2e485a9ecc2f99}{num}} = 0\\
+\>uint8\_t \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a232d117efc1173373972c819a0e48e64}{raw}} \mbox{[}4\mbox{]}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+IP address stored internally as a uint32. 
+
+\begin{DoxyNote}{Note}
+MSB is raw\mbox{[}0\mbox{]}, LSB is raw\mbox{[}3\mbox{]} 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock}{Net\+Sock} 
+
+\doxylink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config}{Net\+Config} 
+
+\doxylink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c}{Ethernet\+HC} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{_net_i_p_8hpp_source_l00022}{22}} of file \mbox{\hyperlink{_net_i_p_8hpp_source}{Net\+IP.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_ae1c1e097f01e141013dbee53ebeec7ab}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_ae1c1e097f01e141013dbee53ebeec7ab} 
+\index{JETHERNET::NetIP@{JETHERNET::NetIP}!NetIP@{NetIP}}
+\index{NetIP@{NetIP}!JETHERNET::NetIP@{JETHERNET::NetIP}}
+\doxysubsubsection{\texorpdfstring{NetIP()}{NetIP()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily JETHERNET\+::\+Net\+IP\+::\+Net\+IP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a78458fcfe4a79e82d9855e2ad9621044}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a78458fcfe4a79e82d9855e2ad9621044} 
+\index{JETHERNET::NetIP@{JETHERNET::NetIP}!NetIP@{NetIP}}
+\index{NetIP@{NetIP}!JETHERNET::NetIP@{JETHERNET::NetIP}}
+\doxysubsubsection{\texorpdfstring{NetIP()}{NetIP()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily JETHERNET\+::\+Net\+IP\+::\+Net\+IP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}} \&}]{addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a03deafaaa850d2e53e51f0049e764840}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a03deafaaa850d2e53e51f0049e764840} 
+\index{JETHERNET::NetIP@{JETHERNET::NetIP}!NetIP@{NetIP}}
+\index{NetIP@{NetIP}!JETHERNET::NetIP@{JETHERNET::NetIP}}
+\doxysubsubsection{\texorpdfstring{NetIP()}{NetIP()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily JETHERNET\+::\+Net\+IP\+::\+Net\+IP (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{n0,  }\item[{uint8\+\_\+t}]{n1,  }\item[{uint8\+\_\+t}]{n2,  }\item[{uint8\+\_\+t}]{n3 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_net_i_p_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{_net_i_p_8cpp_source}{Net\+IP.\+cpp}}.
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_aa2075e36a3d56a6ad52d3a06946b9c9b}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_aa2075e36a3d56a6ad52d3a06946b9c9b} 
+\index{JETHERNET::NetIP@{JETHERNET::NetIP}!NetIP@{NetIP}}
+\index{NetIP@{NetIP}!JETHERNET::NetIP@{JETHERNET::NetIP}}
+\doxysubsubsection{\texorpdfstring{NetIP()}{NetIP()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily JETHERNET\+::\+Net\+IP\+::\+Net\+IP (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ip }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_net_i_p_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{_net_i_p_8cpp_source}{Net\+IP.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_abf6814cc0fd7e20073cea1abdbc1e1a2}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_abf6814cc0fd7e20073cea1abdbc1e1a2} 
+\index{JETHERNET::NetIP@{JETHERNET::NetIP}!cString@{cString}}
+\index{cString@{cString}!JETHERNET::NetIP@{JETHERNET::NetIP}}
+\doxysubsubsection{\texorpdfstring{cString()}{cString()}}
+{\footnotesize\ttfamily int JETHERNET\+::\+Net\+IP\+::c\+String (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buf }\end{DoxyParamCaption})}
+
+
+
+Print formatted IP address to output buffer. 
+
+\begin{DoxyNote}{Note}
+maximum 15 characters written (16 w/ null char) 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & output buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes written 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_net_i_p_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_net_i_p_8cpp_source}{Net\+IP.\+cpp}}.
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a4d3970e5ab85c1802a71022e4628b113}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a4d3970e5ab85c1802a71022e4628b113} 
+\index{JETHERNET::NetIP@{JETHERNET::NetIP}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!JETHERNET::NetIP@{JETHERNET::NetIP}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool JETHERNET\+::\+Net\+IP\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_net_i_p_8cpp_source_l00044}{44}} of file \mbox{\hyperlink{_net_i_p_8cpp_source}{Net\+IP.\+cpp}}.
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a7ea22878ac717e2e2e1bb3cddbd62159}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a7ea22878ac717e2e2e1bb3cddbd62159} 
+\index{JETHERNET::NetIP@{JETHERNET::NetIP}!operator=@{operator=}}
+\index{operator=@{operator=}!JETHERNET::NetIP@{JETHERNET::NetIP}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}} \& JETHERNET\+::\+Net\+IP\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_ab3e8343d4b135803c689ba6243ed8e5d}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_ab3e8343d4b135803c689ba6243ed8e5d} 
+\index{JETHERNET::NetIP@{JETHERNET::NetIP}!operator=@{operator=}}
+\index{operator=@{operator=}!JETHERNET::NetIP@{JETHERNET::NetIP}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}} \& JETHERNET\+::\+Net\+IP\+::operator= (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{ip }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_net_i_p_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{_net_i_p_8cpp_source}{Net\+IP.\+cpp}}.
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a7cf99bd3c7bf715c1769afc915af3da0}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a7cf99bd3c7bf715c1769afc915af3da0} 
+\index{JETHERNET::NetIP@{JETHERNET::NetIP}!operator==@{operator==}}
+\index{operator==@{operator==}!JETHERNET::NetIP@{JETHERNET::NetIP}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool JETHERNET\+::\+Net\+IP\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_net_i_p_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{_net_i_p_8cpp_source}{Net\+IP.\+cpp}}.
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_af39e5551f77da937526feebef81baeb4}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_af39e5551f77da937526feebef81baeb4} 
+\index{JETHERNET::NetIP@{JETHERNET::NetIP}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!JETHERNET::NetIP@{JETHERNET::NetIP}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t \& JETHERNET\+::\+Net\+IP\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Access IP bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & (0-\/3) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+byte representing part of an IP address 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_net_i_p_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_net_i_p_8cpp_source}{Net\+IP.\+cpp}}.
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a42698f2fadba42d38703e1603e64cb87}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a42698f2fadba42d38703e1603e64cb87} 
+\index{JETHERNET::NetIP@{JETHERNET::NetIP}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!JETHERNET::NetIP@{JETHERNET::NetIP}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const uint8\+\_\+t \& JETHERNET\+::\+Net\+IP\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Access IP bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & (0-\/3) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+byte representing part of an IP address 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_net_i_p_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{_net_i_p_8cpp_source}{Net\+IP.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a13f9249293143ac671883087c22ef6ff}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a13f9249293143ac671883087c22ef6ff} 
+\doxysubsubsection{\texorpdfstring{[union]}{[union]}}
+{\footnotesize\ttfamily union  \{ ... \}  \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{JETHERNET\+::\+Net\+IP}}}
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a2b107533f39fd496cc2e485a9ecc2f99}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a2b107533f39fd496cc2e485a9ecc2f99} 
+\index{JETHERNET::NetIP@{JETHERNET::NetIP}!num@{num}}
+\index{num@{num}!JETHERNET::NetIP@{JETHERNET::NetIP}}
+\doxysubsubsection{\texorpdfstring{num}{num}}
+{\footnotesize\ttfamily uint32\+\_\+t JETHERNET\+::\+Net\+IP\+::num = 0}
+
+
+
+Definition at line \mbox{\hyperlink{_net_i_p_8hpp_source_l00024}{24}} of file \mbox{\hyperlink{_net_i_p_8hpp_source}{Net\+IP.\+hpp}}.
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a232d117efc1173373972c819a0e48e64}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a232d117efc1173373972c819a0e48e64} 
+\index{JETHERNET::NetIP@{JETHERNET::NetIP}!raw@{raw}}
+\index{raw@{raw}!JETHERNET::NetIP@{JETHERNET::NetIP}}
+\doxysubsubsection{\texorpdfstring{raw}{raw}}
+{\footnotesize\ttfamily uint8\+\_\+t JETHERNET\+::\+Net\+IP\+::raw\mbox{[}4\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{_net_i_p_8hpp_source_l00025}{25}} of file \mbox{\hyperlink{_net_i_p_8hpp_source}{Net\+IP.\+hpp}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+JLib/\+JEthernet/include/\mbox{\hyperlink{_net_i_p_8hpp}{Net\+IP.\+hpp}}\item 
+JLib/\+JEthernet/src/\mbox{\hyperlink{_net_i_p_8cpp}{Net\+IP.\+cpp}}\end{DoxyCompactItemize}

@@ -28,6 +28,7 @@
 #include "usbd_cdc_if.h"
 #include "globals.h"
 
+#define BUILD_WITH_SECRETS
 #ifdef BUILD_WITH_SECRETS
 #include "secrets.hpp"
 #endif
@@ -36,6 +37,9 @@
 //#include "MQTTInterface.hpp"
 #include "CountdownTimer.hpp"
 #include "PAHOClient.hpp"
+//#include <WS2815Strip.hpp>
+//#include "DMAControllerLED.hpp"
+#include "DMAStrip.hpp"
 
 /* USER CODE END Includes */
 
@@ -47,6 +51,10 @@ using namespace JETHERNET;
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
+// defined in HAL_TIM_Base_MspInit() in stm32g0xx_hal_msp.c
+extern DMA_HandleTypeDef hdma_tim1_ch1;
+
 extern "C" {
 int _write(int file, char *ptr, int len) {
 
@@ -123,8 +131,22 @@ static void MX_TIM3_Init(void);
 //	USB_Printf("\nDefault handler called:\n");
 //	messageArrived(md);
 //}
+void setLedPower(bool on) {
+	auto state = on ? GPIO_PIN_SET : GPIO_PIN_RESET;
+	HAL_GPIO_WritePin(LED_PWR_EN_GPIO_Port, LED_PWR_EN_Pin, state);
+}
+
+bool ledPowerReady() {
+	return HAL_GPIO_ReadPin(LED_PWR_EN_GPIO_Port, LED_PWR_EN_Pin)
+			== GPIO_PIN_SET;
+}
+
 void messageReceived(JMQTT::Client &client, JMQTT::Message msg) {
 	USB_Printf("%s: %s\n", msg.topic.data(), msg.payload.data());
+	if (msg.topic == "test/switch") {
+		setLedPower(msg.payload == "ON");
+		printf("turning LED_PWR_EN %s\n", msg.payload == "ON" ? "on" : "off");
+	}
 }
 
 void mqttOnConnected(JMQTT::Client &client) {
@@ -150,6 +172,66 @@ bool connectEth() {
 
 	return true;
 }
+using buftype = uint32_t;
+using LEDStrip = JLED::DMAStrip<300, 15, 79, buftype>;
+LEDStrip strip;
+
+void HAL_TIM_PWM_PulseFinishedHalfCpltCallback(TIM_HandleTypeDef *htim) {
+	strip.onDMAInterrupt(true);
+}
+
+void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim) {
+	strip.onDMAInterrupt(false);
+}
+
+void startDMA(buftype *buf, uint16_t len) {
+	HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_1, buf, len);
+}
+
+void stopDMA() {
+	HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_1);
+}
+
+void LED_Init(TIM_HandleTypeDef *tim) {
+	using namespace JLED;
+
+	CountdownTimer pwrTimeout(100);
+
+	setLedPower(true);
+
+	strip.setAll(0xFF00FF);
+	strip.setStartDMACallback(startDMA);
+	strip.setStopDMACallback(stopDMA);
+
+	while (!(ledPowerReady() || pwrTimeout.expired()))
+		;
+
+	if (pwrTimeout.expired()) {
+		USB_Printf("\n ERROR ENABLING LED POWER\n");
+		return;
+	}
+}
+
+void LED_Update() {
+	static int led = 0, delayMs = 100, frameMs = 7;
+	static CountdownTimer delay(delayMs);
+	static CountdownTimer frameTimer(frameMs);
+
+	static JLED::Color cols[] = { 0xff0000, 0x00ff00, 0x0000ff };
+	if (delay.expired()) {
+		delay.countdown_ms(delayMs);
+		strip.set(led, cols[(led / 3) % (sizeof(cols) / sizeof(JLED::Color))]);
+
+		led = (led + 1) % LEDStrip::NUM_PIXELS;
+	}
+
+	if(frameTimer.expired() && !strip.displayInProgress()) {
+		frameTimer.countdown_ms(frameMs);
+		strip.display();
+	}
+}
+
+//#define TEST_LED_ONLY
 
 /* USER CODE END 0 */
 
@@ -158,6 +240,7 @@ bool connectEth() {
  * @retval int
  */
 int main(void) {
+
 	/* USER CODE BEGIN 1 */
 
 	/* USER CODE END 1 */
@@ -189,7 +272,7 @@ int main(void) {
 	/* USER CODE BEGIN 2 */
 
 	HAL_TIM_Base_Start_IT(&htim3);
-
+#ifndef TEST_LED_ONLY
 #ifdef DEBUG
 	// allow time for terminal to connect to USB
 	uint32_t timeout = 1000;
@@ -213,18 +296,17 @@ int main(void) {
 	connectEth();
 
 	JMQTT::ClientConfig mqttConf;
-	auto& sock = eth.getFreeSocket();
+	auto &sock = eth.getFreeSocket();
 
 #ifdef BUILD_WITH_SECRETS
-	if(sock.connectTCP(JSECRETS::MQTT_SERVER_IP, JSECRETS::MQTT_SERVER_PORT)) {
-		USB_Printf("Connected socket to MQTT server!\n");
-	} else {
-		USB_Printf("Error connecting socket to MQTT server!\n");
-	}
-    
-	mqttConf.clientName = JSECRETS::MQTT_CLIENT_ID;
-	mqttConf.username = JSECRETS::MQTT_SERVER_USERNAME;
-	mqttConf.password = JSECRETS::MQTT_SERVER_PASSWORD;
+
+	using namespace JSECRETS;
+	mqttConf.clientName = MQTT_CLIENT_ID;
+	mqttConf.username = MQTT_SERVER_USERNAME;
+	mqttConf.password = MQTT_SERVER_PASSWORD;
+	mqttConf.brokerIP = MQTT_SERVER_IP;
+	mqttConf.brokerPort = MQTT_SERVER_PORT;
+
 #endif
 
 	mqtt.setConnectCallback(mqttOnConnected);
@@ -244,19 +326,22 @@ int main(void) {
 //	int oldRc = rc;
 	uint32_t reconnectTimeMs = 2500;
 	CountdownTimer reconnectTimer(reconnectTimeMs);
+#endif
+	LED_Init(&htim1);
+
 	while (1) {
 		/* USER CODE END WHILE */
-//		if (arrivedcount == 20) {
-//			USB_Printf("TEST\n");
-//		}
 
-		auto connected = mqtt.update(500);
+		/* USER CODE BEGIN 3 */
+		LED_Update();
+#ifndef TEST_LED_ONLY
+		auto connected = mqtt.update(1);
 		if (!connected && reconnectTimer.expired()) {
 			USB_Printf("\nClient disconnected!\n");
 
 			bool success = false;
 			// if no physical connection, try to establish one
-			if (!eth.phyLinkStatus()) {
+			if (/* !eth.phyLinkStatus() */true) {
 				eth.softReset();
 				success = connectEth(); // try to wait for connection
 				if (!success)
@@ -267,47 +352,15 @@ int main(void) {
 			// issue has to be related to client/server connection
 			success = mqtt.reconnect(eth.getFreeSocket());
 
-			if (success) {
+			RECONNECT_EXIT: if (success) {
 				USB_Printf("Connected client to MQTT server!\n");
 			} else {
 				USB_Printf("Error connecting client to MQTT server!\n");
 			}
 
-			RECONNECT_EXIT: reconnectTimer.countdown_ms(reconnectTimeMs);
+			reconnectTimer.countdown_ms(reconnectTimeMs);
 		}
-
-//		rc = client.yield();
-//		if (rc != oldRc) {
-//			USB_Printf("MQTT Return code: %d\n", rc);
-//			oldRc = rc;
-//		}
-//
-//		if (!client.isConnected()) {
-//			if (network.isConnected()) {
-//				client.disconnect();
-//			} else {
-//				network.disconnect();
-//				HAL_Delay(5);
-//				rc = network.connect(MQTT_SERVER_IP, MQTT_SERVER_PORT);
-//				if (rc != SOCK_OK) {
-//					USB_Printf("Unable to reconnect socket!!\n");
-//				} else {
-//					client.disconnect();
-//					data.cleansession = (unsigned char) 1;
-//					if (client.connect(data) == MQTT::SUCCESS) {
-//						client.setDefaultMessageHandler(messageArrivedDefault);
-//						rc = client.subscribe(topic, MQTT::QOS2,
-//								messageArrived);
-//						if (rc != MQTT::SUCCESS) {
-//							USB_Printf("Unable to subscribe to MQTT topic\n");
-//						}
-//					}
-//				}
-//			}
-//		}
-//
-//		HAL_Delay(25);
-		/* USER CODE BEGIN 3 */
+#endif
 	}
 	/* USER CODE END 3 */
 }
@@ -334,7 +387,7 @@ void SystemClock_Config(void) {
 	RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV3;
 	RCC_OscInitStruct.PLL.PLLN = 8;
 	RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-	RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
+	RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV4;
 	RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
 	if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK) {
 		Error_Handler();
@@ -375,7 +428,7 @@ static void MX_SPI1_Init(void) {
 	hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
 	hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
 	hspi1.Init.NSS = SPI_NSS_SOFT;
-	hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_8;
+	hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
 	hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
 	hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
 	hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -566,7 +619,7 @@ static void MX_DMA_Init(void) {
 
 	/* DMA interrupt init */
 	/* DMA1_Channel1_IRQn interrupt configuration */
-	HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
+	HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 1, 0);
 	HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
 
 }
@@ -591,14 +644,11 @@ static void MX_GPIO_Init(void) {
 
 	/*Configure GPIO pin Output Level */
 	HAL_GPIO_WritePin(GPIOB,
-	TEST_LED_Pin | ESP_IO2_Pin | ESP_IO0_Pin | ESP_EN_Pin | ESP_RSTn_Pin,
-			GPIO_PIN_RESET);
+			TEST_LED_Pin | LED_PWR_EN_Pin | ESP_IO2_Pin | ESP_IO0_Pin
+					| ESP_EN_Pin | ESP_RSTn_Pin, GPIO_PIN_RESET);
 
-	/*Configure GPIO pin Output Level */
-	HAL_GPIO_WritePin(LED_PWR_EN_GPIO_Port, LED_PWR_EN_Pin, GPIO_PIN_RESET);
-
-	/*Configure GPIO pins : ETH_RSTn_Pin ETH_SCSn_Pin LED_PWR_EN_Pin */
-	GPIO_InitStruct.Pin = ETH_RSTn_Pin | ETH_SCSn_Pin | LED_PWR_EN_Pin;
+	/*Configure GPIO pins : ETH_RSTn_Pin ETH_SCSn_Pin */
+	GPIO_InitStruct.Pin = ETH_RSTn_Pin | ETH_SCSn_Pin;
 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -610,10 +660,10 @@ static void MX_GPIO_Init(void) {
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
 	HAL_GPIO_Init(ETH_INTn_GPIO_Port, &GPIO_InitStruct);
 
-	/*Configure GPIO pins : TEST_LED_Pin ESP_IO2_Pin ESP_IO0_Pin ESP_EN_Pin
-	 ESP_RSTn_Pin */
-	GPIO_InitStruct.Pin = TEST_LED_Pin | ESP_IO2_Pin | ESP_IO0_Pin | ESP_EN_Pin
-			| ESP_RSTn_Pin;
+	/*Configure GPIO pins : TEST_LED_Pin LED_PWR_EN_Pin ESP_IO2_Pin ESP_IO0_Pin
+	 ESP_EN_Pin ESP_RSTn_Pin */
+	GPIO_InitStruct.Pin = TEST_LED_Pin | LED_PWR_EN_Pin | ESP_IO2_Pin
+			| ESP_IO0_Pin | ESP_EN_Pin | ESP_RSTn_Pin;
 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -622,7 +672,7 @@ static void MX_GPIO_Init(void) {
 	/*Configure GPIO pin : LED_PWR_OK_Pin */
 	GPIO_InitStruct.Pin = LED_PWR_OK_Pin;
 	GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	GPIO_InitStruct.Pull = GPIO_PULLUP;
 	HAL_GPIO_Init(LED_PWR_OK_GPIO_Port, &GPIO_InitStruct);
 
 	/* USER CODE BEGIN MX_GPIO_Init_2 */
@@ -671,10 +721,13 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 	/* USER CODE END Callback 0 */
 	if (htim->Instance == TIM6) {
 		HAL_IncTick();
+	}
+	/* USER CODE BEGIN Callback 1 */
+
+	if (htim->Instance == TIM6) {
 		CountdownTimer::msTick();
 		eth.msTick();
 	}
-	/* USER CODE BEGIN Callback 1 */
 	/* USER CODE END Callback 1 */
 }
 

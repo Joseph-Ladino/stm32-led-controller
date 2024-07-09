@@ -1,45 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="_p_a_h_o_client_8cpp" kind="file" language="C++">
     <compoundname>PAHOClient.cpp</compoundname>
     <includes local="no">cstring</includes>
     <includes refid="_p_a_h_o_client_8hpp" local="yes">PAHOClient.hpp</includes>
     <incdepgraph>
-      <node id="9">
-        <label>functional</label>
-      </node>
-      <node id="4">
-        <label>Client.hpp</label>
-        <link refid="_client_8hpp_source"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>cstdint</label>
-      </node>
-      <node id="10">
-        <label>CountdownTimer.hpp</label>
-        <link refid="_countdown_timer_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>string</label>
-      </node>
-      <node id="1">
-        <label>Core/JPort/src/PAHOClient.cpp</label>
-        <link refid="_p_a_h_o_client_8cpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
       <node id="3">
         <label>PAHOClient.hpp</label>
         <link refid="_p_a_h_o_client_8hpp_source"/>
@@ -50,6 +15,14 @@
         <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Core/JPort/src/PAHOClient.cpp</label>
+        <link refid="_p_a_h_o_client_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="6">
@@ -66,11 +39,38 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
+      <node id="4">
+        <label>Client.hpp</label>
+        <link refid="_client_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>CountdownTimer.hpp</label>
+        <link refid="_countdown_timer_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
       <node id="11">
         <label>MQTTClient.h</label>
       </node>
+      <node id="7">
+        <label>cstdint</label>
+      </node>
       <node id="2">
         <label>cstring</label>
+      </node>
+      <node id="9">
+        <label>functional</label>
+      </node>
+      <node id="8">
+        <label>string</label>
       </node>
     </incdepgraph>
     <innernamespace refid="namespace_j_m_q_t_t">JMQTT</innernamespace>
@@ -95,13 +95,13 @@
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>PAHOClient::publish(Message<sp/>msg)<sp/>{</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>client.publish(msg.topic.data(),<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)<sp/>msg.payload.data(),</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(size_t)<sp/>msg.payload.length(),<sp/>(MQTT::QoS)<sp/>msg.qos);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)<sp/>msg.payload.length(),<sp/>(MQTT::QoS)<sp/>msg.qos);</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rc<sp/>==<sp/>MQTT::SUCCESS;</highlight></codeline>
 <codeline lineno="20"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>PAHOClient::subscribe(string_view<sp/>topic,<sp/>QOS<sp/>qos)<sp/>{</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>client.subscribe(topic.data(),<sp/>(MQTT::QoS)<sp/>qos,<sp/>{<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>client.subscribe(topic.data(),<sp/>(MQTT::QoS)<sp/>qos,<sp/>{<sp/>this,</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;PAHOClient::pahoMessageReceived<sp/>});</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rc<sp/>==<sp/>MQTT::SUCCESS;</highlight></codeline>
@@ -123,8 +123,8 @@
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>data.password.cstring<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>net.conf.password.data();</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>connect<sp/>socket<sp/>to<sp/>broker</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!net.sock-&gt;isConnected()</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>!net.sock-&gt;connectTCP(net.conf.brokerIP,<sp/>net.conf.brokerPort))<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!net.sock-&gt;<ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a41db618756cf90001a219180d152ecde" kindref="member">isConnected</ref>()</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>!net.sock-&gt;<ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1ad4fcf93b2ec7285a632c4b51777c0beb" kindref="member">connectTCP</ref>(net.conf.brokerIP,<sp/>net.conf.brokerPort))<sp/>{</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
@@ -143,8 +143,8 @@
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
 <codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PAHOClient::disconnect()<sp/>{</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>client.disconnect();</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>net.sock-&gt;disconnect();</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>net.sock-&gt;close();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>net.sock-&gt;<ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a5f4da6ea7d0538048a8e1e70f5d69ea0" kindref="member">disconnect</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>net.sock-&gt;<ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1abced4845fbe84804cd64597c39f2b1b5" kindref="member">close</ref>();</highlight></codeline>
 <codeline lineno="67"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>PAHOClient::reconnect()<sp/>{</highlight></codeline>

@@ -1,0 +1,61 @@
+\doxysection{Net\+MAC.\+cpp}
+\hypertarget{_net_m_a_c_8cpp_source}{}\label{_net_m_a_c_8cpp_source}\index{JLib/JEthernet/src/NetMAC.cpp@{JLib/JEthernet/src/NetMAC.cpp}}
+\mbox{\hyperlink{_net_m_a_c_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ EthernetMAC.cpp}}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Mar\ 15,\ 2024}}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ user}}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_net_m_a_c_8hpp}{NetMAC.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <cstdio>}}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00010}00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_j_e_t_h_e_r_n_e_t}{JETHERNET}}\ \{}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00011}\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a145d5c857df32f5cad1279217b9535cb}{00011}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a145d5c857df32f5cad1279217b9535cb}{NetMAC::cString}}(\textcolor{keywordtype}{char}\ *buf)\ \{}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{return}\ sprintf(buf,\ \textcolor{stringliteral}{"{}\%02X:\%02X:\%02X:\%02X:\%02X:\%02X"{}},\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0}{raw}}[0],\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0}{raw}}[1],\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0}{raw}}[2],}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0}{raw}}[3],\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0}{raw}}[4],\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0}{raw}}[5]);}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00016}\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a8a23080bf5843f9c247661ba5ba9f895}{00016}}\ uint8\_t\&\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a8a23080bf5843f9c247661ba5ba9f895}{NetMAC::operator\ []}}(uint8\_t\ x)\ \{}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0}{raw}}[x];}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00020}\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a05e9675bc0ba6d5bcdc2b86b9c96ebcf}{00020}}\ \textcolor{keyword}{const}\ uint8\_t\&\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a8a23080bf5843f9c247661ba5ba9f895}{NetMAC::operator\ []}}(uint8\_t\ x)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0}{raw}}[x];}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00024}\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_af7dcc6bf7f5847293ff77f43d8122726}{00024}}\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c}{NetMAC}}\&\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a88fdadad8df1cbfd9dff2e47501fc935}{NetMAC::operator\ =}}(\textcolor{keyword}{const}\ uint32\_t\ mac)\ \{}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a981fc3ca441bef4f8e749f9a1ee294be}{num}}\ =\ mac;}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00029}\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a3ff7e557caf600f75272648722c74bde}{00029}}\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a3ff7e557caf600f75272648722c74bde}{NetMAC::NetMAC}}()\ :}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ num(0)\ \{}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00033}\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_aab9be044862c467ee9bfabc1a08d2ab4}{00033}}\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a3ff7e557caf600f75272648722c74bde}{NetMAC::NetMAC}}(uint8\_t\ n0,\ uint8\_t\ n1,\ uint8\_t\ n2,\ uint8\_t\ n3,\ uint8\_t\ n4,}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ uint8\_t\ n5)\ \{}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0}{raw}}[0]\ =\ n0;}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00036}00036\ \ \ \ \ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0}{raw}}[1]\ =\ n1;}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0}{raw}}[2]\ =\ n2;}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0}{raw}}[3]\ =\ n3;}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0}{raw}}[4]\ =\ n4;}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0}{raw}}[5]\ =\ n5;}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00041}00041\ \}}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00043}\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a9f29bc694d2e1708253c17030f86e82f}{00043}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a9f29bc694d2e1708253c17030f86e82f}{NetMAC::operator\ ==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c}{NetMAC}}\ \&rhs)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a981fc3ca441bef4f8e749f9a1ee294be}{num}}\ ==\ rhs.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a981fc3ca441bef4f8e749f9a1ee294be}{num}};}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00047}\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ad3f3a3b4935ce2754608f5b9223d0dff}{00047}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ad3f3a3b4935ce2754608f5b9223d0dff}{NetMAC::operator\ !=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c}{NetMAC}}\ \&rhs)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a981fc3ca441bef4f8e749f9a1ee294be}{num}}\ !=\ rhs.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a981fc3ca441bef4f8e749f9a1ee294be}{num}};}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00051}\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ad786967113504c05bf4a79c5ee69073d}{00051}}\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a3ff7e557caf600f75272648722c74bde}{NetMAC::NetMAC}}(uint64\_t\ mac)\ :}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ num(mac)\ \{}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_net_m_a_c_8cpp_source_l00055}00055\ \}}
+
+\end{DoxyCode}

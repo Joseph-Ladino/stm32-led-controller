@@ -1,4 +1,4 @@
-.TH "JETHERNET::NetMAC" 3 "Thu Apr 25 2024" "Version 0.1.1" "CSTM32LedController" \" -*- nroff -*-
+.TH "JETHERNET::NetMAC" 3 "Version 0.1.1" "CSTM32 Led Controller" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,7 +8,7 @@ JETHERNET::NetMAC \- MAC address stored internally as a 48 bit bitset\&.
 .br
 .PP
 .PP
-\fC#include <NetMAC\&.hpp>\fP
+\fR#include <NetMAC\&.hpp>\fP
 .SS "Public Member Functions"
 
 .in +1c
@@ -84,7 +84,21 @@ MSB is raw[0], LSB is raw[5]
 .PP
 
 .PP
-Definition at line 21 of file NetMAC\&.hpp\&.
+Definition at line \fB21\fP of file \fBNetMAC\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JETHERNET::NetMAC::NetMAC ()"
+
+.PP
+Definition at line \fB29\fP of file \fBNetMAC\&.cpp\fP\&.
+.SS "JETHERNET::NetMAC::NetMAC (uint8_t n0, uint8_t n1, uint8_t n2, uint8_t n3, uint8_t n4, uint8_t n5)"
+
+.PP
+Definition at line \fB33\fP of file \fBNetMAC\&.cpp\fP\&.
+.SS "JETHERNET::NetMAC::NetMAC (uint64_t mac)"
+
+.PP
+Definition at line \fB51\fP of file \fBNetMAC\&.cpp\fP\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "int JETHERNET::NetMAC::cString (char * buf)"
@@ -109,9 +123,21 @@ number of bytes written
 .PP
 
 .PP
-Definition at line 11 of file NetMAC\&.cpp\&.
+Definition at line \fB11\fP of file \fBNetMAC\&.cpp\fP\&.
 .PP
-Referenced by JETHERNET::NetConfig::cString()\&.
+Referenced by \fBJETHERNET::NetConfig::cString()\fP\&.
+.SS "bool JETHERNET::NetMAC::operator!= (const \fBNetMAC\fP & rhs) const"
+
+.PP
+Definition at line \fB47\fP of file \fBNetMAC\&.cpp\fP\&.
+.SS "\fBNetMAC\fP & JETHERNET::NetMAC::operator= (const uint32_t mac)"
+
+.PP
+Definition at line \fB24\fP of file \fBNetMAC\&.cpp\fP\&.
+.SS "bool JETHERNET::NetMAC::operator== (const \fBNetMAC\fP & rhs) const"
+
+.PP
+Definition at line \fB43\fP of file \fBNetMAC\&.cpp\fP\&.
 .SS "uint8_t & JETHERNET::NetMAC::operator[] (uint8_t index)"
 
 .PP
@@ -129,7 +155,7 @@ byte representing part of a MAC address
 .PP
 
 .PP
-Definition at line 16 of file NetMAC\&.cpp\&.
+Definition at line \fB16\fP of file \fBNetMAC\&.cpp\fP\&.
 .SS "const uint8_t & JETHERNET::NetMAC::operator[] (uint8_t index) const"
 
 .PP
@@ -147,8 +173,18 @@ byte representing part of a MAC address
 .PP
 
 .PP
-Definition at line 20 of file NetMAC\&.cpp\&.
+Definition at line \fB20\fP of file \fBNetMAC\&.cpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "uint64_t JETHERNET::NetMAC::num"
+
+.PP
+Definition at line \fB23\fP of file \fBNetMAC\&.hpp\fP\&.
+.SS "uint8_t JETHERNET::NetMAC::raw[6]"
+
+.PP
+Definition at line \fB24\fP of file \fBNetMAC\&.hpp\fP\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for CSTM32LedController from the source code\&.
+Generated automatically by Doxygen for CSTM32 Led Controller from the source code\&.

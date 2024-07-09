@@ -1,14 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="struct_j_e_t_h_e_r_n_e_t_1_1_net_config" kind="struct" language="C++" prot="public">
     <compoundname>JETHERNET::NetConfig</compoundname>
     <includes refid="_net_config_8hpp" local="no">NetConfig.hpp</includes>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_config_1a348d8f4705812bf0c808d4f692c4c1fe" prot="public" static="no" mutable="no">
         <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c" kindref="compound">NetMAC</ref></type>
         <definition>NetMAC JETHERNET::NetConfig::mac</definition>
         <argsstring></argsstring>
         <name>mac</name>
+        <qualifiedname>JETHERNET::NetConfig::mac</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -22,6 +23,7 @@
         <definition>NetIP JETHERNET::NetConfig::ip</definition>
         <argsstring></argsstring>
         <name>ip</name>
+        <qualifiedname>JETHERNET::NetConfig::ip</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -35,6 +37,7 @@
         <definition>NetIP JETHERNET::NetConfig::subnet</definition>
         <argsstring></argsstring>
         <name>subnet</name>
+        <qualifiedname>JETHERNET::NetConfig::subnet</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -48,6 +51,7 @@
         <definition>NetIP JETHERNET::NetConfig::gateway</definition>
         <argsstring></argsstring>
         <name>gateway</name>
+        <qualifiedname>JETHERNET::NetConfig::gateway</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -61,6 +65,7 @@
         <definition>NetIP JETHERNET::NetConfig::dns</definition>
         <argsstring></argsstring>
         <name>dns</name>
+        <qualifiedname>JETHERNET::NetConfig::dns</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -74,6 +79,7 @@
         <definition>bool JETHERNET::NetConfig::dhcpEnabled</definition>
         <argsstring></argsstring>
         <name>dhcpEnabled</name>
+        <qualifiedname>JETHERNET::NetConfig::dhcpEnabled</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -82,13 +88,14 @@
         </inbodydescription>
         <location file="JLib/JEthernet/include/NetConfig.hpp" line="29" column="6" bodyfile="JLib/JEthernet/include/NetConfig.hpp" bodystart="29" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
+    </sectiondef>
+    <sectiondef kind="public-func">
       <memberdef kind="function" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_config_1a8c31d1edc201aabb1ed0b0f7ee1be790" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int JETHERNET::NetConfig::cString</definition>
         <argsstring>(char *buf)</argsstring>
         <name>cString</name>
+        <qualifiedname>JETHERNET::NetConfig::cString</qualifiedname>
         <param>
           <type>char *</type>
           <declname>buf</declname>
@@ -115,10 +122,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="JLib/JEthernet/include/NetConfig.hpp" line="37" column="5" bodyfile="JLib/JEthernet/src/NetConfig.cpp" bodystart="13" bodyend="32"/>
-        <references refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a145d5c857df32f5cad1279217b9535cb" compoundref="_net_m_a_c_8cpp" startline="11" endline="14">JETHERNET::NetMAC::cString</references>
         <references refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1abf6814cc0fd7e20073cea1abdbc1e1a2" compoundref="_net_i_p_8cpp" startline="12" endline="14">JETHERNET::NetIP::cString</references>
+        <references refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_1a145d5c857df32f5cad1279217b9535cb" compoundref="_net_m_a_c_8cpp" startline="11" endline="14">JETHERNET::NetMAC::cString</references>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Network configuration. </para>
     </briefdescription>
@@ -134,14 +141,6 @@
 </para>
     </detaileddescription>
     <collaborationgraph>
-      <node id="3">
-        <label>JETHERNET::NetIP</label>
-        <link refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p"/>
-      </node>
-      <node id="2">
-        <label>JETHERNET::NetMAC</label>
-        <link refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c"/>
-      </node>
       <node id="1">
         <label>JETHERNET::NetConfig</label>
         <link refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_config"/>
@@ -150,13 +149,21 @@
         </childnode>
         <childnode refid="3" relation="usage">
           <edgelabel>dns</edgelabel>
-          <edgelabel>ip</edgelabel>
           <edgelabel>gateway</edgelabel>
+          <edgelabel>ip</edgelabel>
           <edgelabel>subnet</edgelabel>
         </childnode>
       </node>
+      <node id="3">
+        <label>JETHERNET::NetIP</label>
+        <link refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p"/>
+      </node>
+      <node id="2">
+        <label>JETHERNET::NetMAC</label>
+        <link refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c"/>
+      </node>
     </collaborationgraph>
-    <location file="JLib/JEthernet/include/NetConfig.hpp" line="23" column="16" bodyfile="JLib/JEthernet/include/NetConfig.hpp" bodystart="23" bodyend="38"/>
+    <location file="JLib/JEthernet/include/NetConfig.hpp" line="23" column="1" bodyfile="JLib/JEthernet/include/NetConfig.hpp" bodystart="23" bodyend="38"/>
     <listofallmembers>
       <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_config_1a8c31d1edc201aabb1ed0b0f7ee1be790" prot="public" virt="non-virtual"><scope>JETHERNET::NetConfig</scope><name>cString</name></member>
       <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_config_1acaecb870dd38076d47e3ace2cea2b738" prot="public" virt="non-virtual"><scope>JETHERNET::NetConfig</scope><name>dhcpEnabled</name></member>

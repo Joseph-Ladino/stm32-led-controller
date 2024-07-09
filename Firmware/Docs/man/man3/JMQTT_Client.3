@@ -1,4 +1,4 @@
-.TH "JMQTT::Client" 3 "Thu Apr 25 2024" "Version 0.1.1" "CSTM32LedController" \" -*- nroff -*-
+.TH "JMQTT::Client" 3 "Version 0.1.1" "CSTM32 Led Controller" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,47 +12,63 @@ Inherited by \fBJMQTT::PAHOClient\fP\&.
 
 .in +1c
 .ti -1c
-.RI "using \fBConnectCB\fP = std::function< void(\fBClient\fP &)>"
+.RI "\fBusing\fP \fBConnectCB\fP = std::function<\fBvoid\fP(\fBClient\fP&)>"
 .br
 .ti -1c
-.RI "using \fBMessageCB\fP = std::function< void(\fBClient\fP &, \fBMessage\fP)>"
+.RI "\fBusing\fP \fBMessageCB\fP = std::function<\fBvoid\fP(\fBClient\fP&, \fBMessage\fP)>"
 .br
 .in -1c
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "virtual bool \fBpublish\fP (\fBMessage\fP msg)=0"
+.RI "\fBvirtual\fP \fBbool\fP \fBpublish\fP (\fBMessage\fP \fBmsg\fP)=0"
 .br
 .ti -1c
-.RI "virtual bool \fBsubscribe\fP (string_view topic, QOS qos=QOS::QOS0)=0"
+.RI "\fBvirtual\fP \fBbool\fP \fBsubscribe\fP (string_view topic, QOS qos=QOS::QOS0)=0"
 .br
 .ti -1c
-.RI "virtual bool \fBupdate\fP (uint16_t timeoutMs)=0"
+.RI "\fBvirtual\fP \fBbool\fP \fBupdate\fP (\fBuint16_t\fP \fBtimeoutMs\fP)=0"
 .br
 .ti -1c
-.RI "virtual bool \fBconnect\fP (\fBJETHERNET::NetSock\fP &sock, const \fBClientConfig\fP config)=0"
+.RI "\fBvirtual\fP \fBbool\fP \fBconnect\fP (\fBJETHERNET::NetSock\fP &sock, \fBconst\fP \fBClientConfig\fP config)=0"
 .br
 .ti -1c
-.RI "virtual bool \fBreconnect\fP ()=0"
+.RI "\fBvirtual\fP \fBbool\fP \fBreconnect\fP ()=0"
 .br
 .ti -1c
-.RI "virtual void \fBdisconnect\fP ()=0"
+.RI "\fBvirtual\fP \fBvoid\fP \fBdisconnect\fP ()=0"
 .br
 .ti -1c
-.RI "virtual bool \fBisConnected\fP ()=0"
+.RI "\fBvirtual\fP \fBbool\fP \fBisConnected\fP ()=0"
 .br
 .ti -1c
-.RI "virtual void \fBsetMessageCallback\fP (MessageCB func)=0"
+.RI "\fBvirtual\fP \fBvoid\fP \fBsetMessageCallback\fP (MessageCB \fBfunc\fP)=0"
 .br
 .ti -1c
-.RI "virtual void \fBsetConnectCallback\fP (ConnectCB func)=0"
+.RI "\fBvirtual\fP \fBvoid\fP \fBsetConnectCallback\fP (ConnectCB \fBfunc\fP)=0"
 .br
 .in -1c
 .SH "Detailed Description"
 .PP 
-Definition at line 48 of file Client\&.hpp\&.
+Definition at line \fB48\fP of file \fBClient\&.hpp\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "\fBusing\fP JMQTT::Client::ConnectCB = std::function<\fBvoid\fP(\fBClient\fP&)>"
+
+.PP
+Definition at line \fB51\fP of file \fBClient\&.hpp\fP\&.
+.SS "\fBusing\fP JMQTT::Client::MessageCB = std::function<\fBvoid\fP(\fBClient\fP&, \fBMessage\fP)>"
+
+.PP
+Definition at line \fB52\fP of file \fBClient\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBvirtual\fP JMQTT::Client::~Client ()\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Definition at line \fB66\fP of file \fBClient\&.hpp\fP\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for CSTM32LedController from the source code\&.
+Generated automatically by Doxygen for CSTM32 Led Controller from the source code\&.

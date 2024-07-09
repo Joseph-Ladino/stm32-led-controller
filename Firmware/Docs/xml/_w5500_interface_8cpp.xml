@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="_w5500_interface_8cpp" kind="file" language="C++">
     <compoundname>W5500Interface.cpp</compoundname>
     <includes local="no">cstring</includes>
@@ -9,35 +9,6 @@
     <includes local="yes">globals.h</includes>
     <includes local="yes">wizchip_conf.h</includes>
     <incdepgraph>
-      <node id="6">
-        <label>cstdint</label>
-      </node>
-      <node id="16">
-        <label>CountdownTimer.hpp</label>
-        <link refid="_countdown_timer_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>NetMAC.hpp</label>
-        <link refid="_net_m_a_c_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
-        <label>dhcp.h</label>
-      </node>
-      <node id="5">
-        <label>EthernetHC.hpp</label>
-        <link refid="_ethernet_h_c_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>socket.h</label>
-      </node>
       <node id="3">
         <label>W5500Interface.hpp</label>
         <link refid="_w5500_interface_8hpp_source"/>
@@ -54,33 +25,10 @@
         <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>NetIP.hpp</label>
-        <link refid="_net_i_p_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
       <node id="14">
         <label>W5500Socket.hpp</label>
         <link refid="_w5500_socket_8hpp_source"/>
         <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="13">
-        <label>dns.h</label>
-      </node>
-      <node id="10">
-        <label>globals.h</label>
-      </node>
-      <node id="17">
-        <label>wizchip_conf.h</label>
-      </node>
-      <node id="15">
-        <label>NetSock.hpp</label>
-        <link refid="_net_sock_8hpp_source"/>
-        <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
@@ -101,11 +49,13 @@
         <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="4">
-        <label>stm32g0xx_hal.h</label>
-      </node>
-      <node id="2">
-        <label>cstring</label>
+      <node id="5">
+        <label>EthernetHC.hpp</label>
+        <link refid="_ethernet_h_c_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
       <node id="7">
         <label>NetConfig.hpp</label>
@@ -115,9 +65,59 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
+      <node id="8">
+        <label>NetIP.hpp</label>
+        <link refid="_net_i_p_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>NetMAC.hpp</label>
+        <link refid="_net_m_a_c_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>NetSock.hpp</label>
+        <link refid="_net_sock_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>CountdownTimer.hpp</label>
+        <link refid="_countdown_timer_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>cstdint</label>
+      </node>
+      <node id="2">
+        <label>cstring</label>
+      </node>
+      <node id="12">
+        <label>dhcp.h</label>
+      </node>
+      <node id="13">
+        <label>dns.h</label>
+      </node>
+      <node id="10">
+        <label>globals.h</label>
+      </node>
+      <node id="11">
+        <label>socket.h</label>
+      </node>
+      <node id="4">
+        <label>stm32g0xx_hal.h</label>
+      </node>
+      <node id="17">
+        <label>wizchip_conf.h</label>
+      </node>
     </incdepgraph>
     <innernamespace refid="namespace_j_e_t_h_e_r_n_e_t">JETHERNET</innernamespace>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="_w5500_interface_8cpp_1ad6d821d382488987802df0e58c6bde92" prot="public" static="no">
         <name>getInst</name>
         <param></param>
@@ -130,7 +130,7 @@
         </inbodydescription>
         <location file="Core/JPort/src/W5500Interface.cpp" line="18" column="9" bodyfile="Core/JPort/src/W5500Interface.cpp" bodystart="18" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

@@ -1,4 +1,4 @@
-.TH "JETHERNET::NetIP" 3 "Thu Apr 25 2024" "Version 0.1.1" "CSTM32LedController" \" -*- nroff -*-
+.TH "JETHERNET::NetIP" 3 "Version 0.1.1" "CSTM32 Led Controller" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,7 +8,7 @@ JETHERNET::NetIP \- IP address stored internally as a uint32\&.
 .br
 .PP
 .PP
-\fC#include <NetIP\&.hpp>\fP
+\fR#include <NetIP\&.hpp>\fP
 .SS "Public Member Functions"
 
 .in +1c
@@ -84,7 +84,17 @@ MSB is raw[0], LSB is raw[3]
 .PP
 
 .PP
-Definition at line 22 of file NetIP\&.hpp\&.
+Definition at line \fB22\fP of file \fBNetIP\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JETHERNET::NetIP::NetIP (uint8_t n0, uint8_t n1, uint8_t n2, uint8_t n3)"
+
+.PP
+Definition at line \fB29\fP of file \fBNetIP\&.cpp\fP\&.
+.SS "JETHERNET::NetIP::NetIP (uint32_t ip)"
+
+.PP
+Definition at line \fB36\fP of file \fBNetIP\&.cpp\fP\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "int JETHERNET::NetIP::cString (char * buf)"
@@ -109,9 +119,21 @@ number of bytes written
 .PP
 
 .PP
-Definition at line 12 of file NetIP\&.cpp\&.
+Definition at line \fB12\fP of file \fBNetIP\&.cpp\fP\&.
 .PP
-Referenced by JETHERNET::NetConfig::cString()\&.
+Referenced by \fBJETHERNET::NetConfig::cString()\fP\&.
+.SS "bool JETHERNET::NetIP::operator!= (const \fBNetIP\fP & rhs) const"
+
+.PP
+Definition at line \fB44\fP of file \fBNetIP\&.cpp\fP\&.
+.SS "\fBNetIP\fP & JETHERNET::NetIP::operator= (const uint32_t ip)"
+
+.PP
+Definition at line \fB24\fP of file \fBNetIP\&.cpp\fP\&.
+.SS "bool JETHERNET::NetIP::operator== (const \fBNetIP\fP & rhs) const"
+
+.PP
+Definition at line \fB40\fP of file \fBNetIP\&.cpp\fP\&.
 .SS "uint8_t & JETHERNET::NetIP::operator[] (uint8_t index)"
 
 .PP
@@ -129,7 +151,7 @@ byte representing part of an IP address
 .PP
 
 .PP
-Definition at line 16 of file NetIP\&.cpp\&.
+Definition at line \fB16\fP of file \fBNetIP\&.cpp\fP\&.
 .SS "const uint8_t & JETHERNET::NetIP::operator[] (uint8_t index) const"
 
 .PP
@@ -147,8 +169,18 @@ byte representing part of an IP address
 .PP
 
 .PP
-Definition at line 20 of file NetIP\&.cpp\&.
+Definition at line \fB20\fP of file \fBNetIP\&.cpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32_t JETHERNET::NetIP::num = 0"
+
+.PP
+Definition at line \fB24\fP of file \fBNetIP\&.hpp\fP\&.
+.SS "uint8_t JETHERNET::NetIP::raw[4]"
+
+.PP
+Definition at line \fB25\fP of file \fBNetIP\&.hpp\fP\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for CSTM32LedController from the source code\&.
+Generated automatically by Doxygen for CSTM32 Led Controller from the source code\&.

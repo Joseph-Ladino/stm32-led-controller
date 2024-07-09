@@ -1,0 +1,246 @@
+\doxysection{JETHERNET\+::Net\+MAC Struct Reference}
+\hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c}{}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c}\index{JETHERNET::NetMAC@{JETHERNET::NetMAC}}
+
+
+MAC address stored internally as a 48 bit bitset.  
+
+
+
+
+{\ttfamily \#include $<$Net\+MAC.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a145d5c857df32f5cad1279217b9535cb}{c\+String}} (char \texorpdfstring{$\ast$}{*}buf)
+\begin{DoxyCompactList}\small\item\em Print formatted MAC address to output buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \& \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a8a23080bf5843f9c247661ba5ba9f895}{operator\mbox{[}$\,$\mbox{]}}} (uint8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Access MAC bytes. \end{DoxyCompactList}\item 
+const uint8\+\_\+t \& \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a05e9675bc0ba6d5bcdc2b86b9c96ebcf}{operator\mbox{[}$\,$\mbox{]}}} (uint8\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Access MAC bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c}{Net\+MAC}} \& \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a88fdadad8df1cbfd9dff2e47501fc935}{operator=}} (const \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c}{Net\+MAC}} \&rhs)=default
+\item 
+\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c}{Net\+MAC}} \& \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_af7dcc6bf7f5847293ff77f43d8122726}{operator=}} (const uint32\+\_\+t mac)
+\item 
+bool \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a9f29bc694d2e1708253c17030f86e82f}{operator==}} (const \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c}{Net\+MAC}} \&rhs) const
+\item 
+bool \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ad3f3a3b4935ce2754608f5b9223d0dff}{operator!=}} (const \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c}{Net\+MAC}} \&rhs) const
+\item 
+\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a3ff7e557caf600f75272648722c74bde}{Net\+MAC}} ()
+\item 
+\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ae0545f404e4f0b2786fb28a20297479e}{Net\+MAC}} (\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c}{Net\+MAC}} \&addr)=default
+\item 
+\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_aab9be044862c467ee9bfabc1a08d2ab4}{Net\+MAC}} (uint8\+\_\+t n0, uint8\+\_\+t n1, uint8\+\_\+t n2, uint8\+\_\+t n3, uint8\+\_\+t n4, uint8\+\_\+t n5)
+\item 
+\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ad786967113504c05bf4a79c5ee69073d}{Net\+MAC}} (uint64\+\_\+t mac)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>uint64\_t \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a981fc3ca441bef4f8e749f9a1ee294be}{num}}: 48\\
+\>uint8\_t \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0}{raw}} \mbox{[}6\mbox{]}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+MAC address stored internally as a 48 bit bitset. 
+
+\begin{DoxyNote}{Note}
+MSB is raw\mbox{[}0\mbox{]}, LSB is raw\mbox{[}5\mbox{]} 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock}{Net\+Sock} 
+
+\doxylink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config}{Net\+Config} 
+
+\doxylink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c}{Ethernet\+HC} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{_net_m_a_c_8hpp_source_l00021}{21}} of file \mbox{\hyperlink{_net_m_a_c_8hpp_source}{Net\+MAC.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a3ff7e557caf600f75272648722c74bde}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a3ff7e557caf600f75272648722c74bde} 
+\index{JETHERNET::NetMAC@{JETHERNET::NetMAC}!NetMAC@{NetMAC}}
+\index{NetMAC@{NetMAC}!JETHERNET::NetMAC@{JETHERNET::NetMAC}}
+\doxysubsubsection{\texorpdfstring{NetMAC()}{NetMAC()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily JETHERNET\+::\+Net\+MAC\+::\+Net\+MAC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_net_m_a_c_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{_net_m_a_c_8cpp_source}{Net\+MAC.\+cpp}}.
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ae0545f404e4f0b2786fb28a20297479e}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ae0545f404e4f0b2786fb28a20297479e} 
+\index{JETHERNET::NetMAC@{JETHERNET::NetMAC}!NetMAC@{NetMAC}}
+\index{NetMAC@{NetMAC}!JETHERNET::NetMAC@{JETHERNET::NetMAC}}
+\doxysubsubsection{\texorpdfstring{NetMAC()}{NetMAC()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily JETHERNET\+::\+Net\+MAC\+::\+Net\+MAC (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c}{Net\+MAC}} \&}]{addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_aab9be044862c467ee9bfabc1a08d2ab4}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_aab9be044862c467ee9bfabc1a08d2ab4} 
+\index{JETHERNET::NetMAC@{JETHERNET::NetMAC}!NetMAC@{NetMAC}}
+\index{NetMAC@{NetMAC}!JETHERNET::NetMAC@{JETHERNET::NetMAC}}
+\doxysubsubsection{\texorpdfstring{NetMAC()}{NetMAC()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily JETHERNET\+::\+Net\+MAC\+::\+Net\+MAC (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{n0,  }\item[{uint8\+\_\+t}]{n1,  }\item[{uint8\+\_\+t}]{n2,  }\item[{uint8\+\_\+t}]{n3,  }\item[{uint8\+\_\+t}]{n4,  }\item[{uint8\+\_\+t}]{n5 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_net_m_a_c_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{_net_m_a_c_8cpp_source}{Net\+MAC.\+cpp}}.
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ad786967113504c05bf4a79c5ee69073d}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ad786967113504c05bf4a79c5ee69073d} 
+\index{JETHERNET::NetMAC@{JETHERNET::NetMAC}!NetMAC@{NetMAC}}
+\index{NetMAC@{NetMAC}!JETHERNET::NetMAC@{JETHERNET::NetMAC}}
+\doxysubsubsection{\texorpdfstring{NetMAC()}{NetMAC()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily JETHERNET\+::\+Net\+MAC\+::\+Net\+MAC (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{mac }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_net_m_a_c_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{_net_m_a_c_8cpp_source}{Net\+MAC.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a145d5c857df32f5cad1279217b9535cb}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a145d5c857df32f5cad1279217b9535cb} 
+\index{JETHERNET::NetMAC@{JETHERNET::NetMAC}!cString@{cString}}
+\index{cString@{cString}!JETHERNET::NetMAC@{JETHERNET::NetMAC}}
+\doxysubsubsection{\texorpdfstring{cString()}{cString()}}
+{\footnotesize\ttfamily int JETHERNET\+::\+Net\+MAC\+::c\+String (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buf }\end{DoxyParamCaption})}
+
+
+
+Print formatted MAC address to output buffer. 
+
+\begin{DoxyNote}{Note}
+maximum 17 characters written (18 w/ null char) 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & output buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes written 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_net_m_a_c_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_net_m_a_c_8cpp_source}{Net\+MAC.\+cpp}}.
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ad3f3a3b4935ce2754608f5b9223d0dff}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ad3f3a3b4935ce2754608f5b9223d0dff} 
+\index{JETHERNET::NetMAC@{JETHERNET::NetMAC}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!JETHERNET::NetMAC@{JETHERNET::NetMAC}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool JETHERNET\+::\+Net\+MAC\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c}{Net\+MAC}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_net_m_a_c_8cpp_source_l00047}{47}} of file \mbox{\hyperlink{_net_m_a_c_8cpp_source}{Net\+MAC.\+cpp}}.
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a88fdadad8df1cbfd9dff2e47501fc935}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a88fdadad8df1cbfd9dff2e47501fc935} 
+\index{JETHERNET::NetMAC@{JETHERNET::NetMAC}!operator=@{operator=}}
+\index{operator=@{operator=}!JETHERNET::NetMAC@{JETHERNET::NetMAC}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c}{Net\+MAC}} \& JETHERNET\+::\+Net\+MAC\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c}{Net\+MAC}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_af7dcc6bf7f5847293ff77f43d8122726}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_af7dcc6bf7f5847293ff77f43d8122726} 
+\index{JETHERNET::NetMAC@{JETHERNET::NetMAC}!operator=@{operator=}}
+\index{operator=@{operator=}!JETHERNET::NetMAC@{JETHERNET::NetMAC}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c}{Net\+MAC}} \& JETHERNET\+::\+Net\+MAC\+::operator= (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{mac }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_net_m_a_c_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{_net_m_a_c_8cpp_source}{Net\+MAC.\+cpp}}.
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a9f29bc694d2e1708253c17030f86e82f}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a9f29bc694d2e1708253c17030f86e82f} 
+\index{JETHERNET::NetMAC@{JETHERNET::NetMAC}!operator==@{operator==}}
+\index{operator==@{operator==}!JETHERNET::NetMAC@{JETHERNET::NetMAC}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool JETHERNET\+::\+Net\+MAC\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c}{Net\+MAC}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_net_m_a_c_8cpp_source_l00043}{43}} of file \mbox{\hyperlink{_net_m_a_c_8cpp_source}{Net\+MAC.\+cpp}}.
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a8a23080bf5843f9c247661ba5ba9f895}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a8a23080bf5843f9c247661ba5ba9f895} 
+\index{JETHERNET::NetMAC@{JETHERNET::NetMAC}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!JETHERNET::NetMAC@{JETHERNET::NetMAC}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t \& JETHERNET\+::\+Net\+MAC\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Access MAC bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & (0-\/5) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+byte representing part of a MAC address 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_net_m_a_c_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_net_m_a_c_8cpp_source}{Net\+MAC.\+cpp}}.
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a05e9675bc0ba6d5bcdc2b86b9c96ebcf}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a05e9675bc0ba6d5bcdc2b86b9c96ebcf} 
+\index{JETHERNET::NetMAC@{JETHERNET::NetMAC}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!JETHERNET::NetMAC@{JETHERNET::NetMAC}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const uint8\+\_\+t \& JETHERNET\+::\+Net\+MAC\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Access MAC bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & (0-\/5) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+byte representing part of a MAC address 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_net_m_a_c_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{_net_m_a_c_8cpp_source}{Net\+MAC.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a8f1514c2bc0bffdcf94c180df22fc3a6}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a8f1514c2bc0bffdcf94c180df22fc3a6} 
+\doxysubsubsection{\texorpdfstring{[union]}{[union]}}
+{\footnotesize\ttfamily union  \{ ... \}  \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c}{JETHERNET\+::\+Net\+MAC}}}
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a981fc3ca441bef4f8e749f9a1ee294be}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a981fc3ca441bef4f8e749f9a1ee294be} 
+\index{JETHERNET::NetMAC@{JETHERNET::NetMAC}!num@{num}}
+\index{num@{num}!JETHERNET::NetMAC@{JETHERNET::NetMAC}}
+\doxysubsubsection{\texorpdfstring{num}{num}}
+{\footnotesize\ttfamily uint64\+\_\+t JETHERNET\+::\+Net\+MAC\+::num}
+
+
+
+Definition at line \mbox{\hyperlink{_net_m_a_c_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{_net_m_a_c_8hpp_source}{Net\+MAC.\+hpp}}.
+
+\Hypertarget{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0}\label{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0} 
+\index{JETHERNET::NetMAC@{JETHERNET::NetMAC}!raw@{raw}}
+\index{raw@{raw}!JETHERNET::NetMAC@{JETHERNET::NetMAC}}
+\doxysubsubsection{\texorpdfstring{raw}{raw}}
+{\footnotesize\ttfamily uint8\+\_\+t JETHERNET\+::\+Net\+MAC\+::raw\mbox{[}6\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{_net_m_a_c_8hpp_source_l00024}{24}} of file \mbox{\hyperlink{_net_m_a_c_8hpp_source}{Net\+MAC.\+hpp}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+JLib/\+JEthernet/include/\mbox{\hyperlink{_net_m_a_c_8hpp}{Net\+MAC.\+hpp}}\item 
+JLib/\+JEthernet/src/\mbox{\hyperlink{_net_m_a_c_8cpp}{Net\+MAC.\+cpp}}\end{DoxyCompactItemize}

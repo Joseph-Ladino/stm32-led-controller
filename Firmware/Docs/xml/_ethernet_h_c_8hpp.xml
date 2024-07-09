@@ -1,33 +1,18 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="_ethernet_h_c_8hpp" kind="file" language="C++">
     <compoundname>EthernetHC.hpp</compoundname>
     <includes local="no">cstdint</includes>
     <includes refid="_net_config_8hpp" local="yes">NetConfig.hpp</includes>
-    <includedby refid="_w5500_interface_8hpp" local="yes">Core/JPort/include/W5500Interface.hpp</includedby>
     <includedby refid="_w5500_h_c_8hpp" local="yes">Core/JPort/include/W5500HC.hpp</includedby>
+    <includedby refid="_w5500_interface_8hpp" local="yes">Core/JPort/include/W5500Interface.hpp</includedby>
     <incdepgraph>
-      <node id="2">
-        <label>cstdint</label>
-      </node>
-      <node id="5">
-        <label>NetMAC.hpp</label>
-        <link refid="_net_m_a_c_8hpp_source"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="1">
         <label>JLib/JEthernet/include/EthernetHC.hpp</label>
         <link refid="_ethernet_h_c_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>NetIP.hpp</label>
-        <link refid="_net_i_p_8hpp_source"/>
-        <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -38,43 +23,58 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
+      <node id="4">
+        <label>NetIP.hpp</label>
+        <link refid="_net_i_p_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>NetMAC.hpp</label>
+        <link refid="_net_m_a_c_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="5">
-        <label>Core/JPort/src/W5500Socket.cpp</label>
-        <link refid="_w5500_socket_8cpp_source"/>
+      <node id="2">
+        <label>Core/JPort/include/W5500HC.hpp</label>
+        <link refid="_w5500_h_c_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
-      <node id="4">
+      <node id="5">
+        <label>Core/JPort/include/W5500Interface.hpp</label>
+        <link refid="_w5500_interface_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
         <label>Core/JPort/src/W5500HC.cpp</label>
         <link refid="_w5500_h_c_8cpp_source"/>
       </node>
-      <node id="3">
-        <label>Core/JPort/include/W5500HC.hpp</label>
-        <link refid="_w5500_h_c_8hpp_source"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
+      <node id="6">
+        <label>Core/JPort/src/W5500Interface.cpp</label>
+        <link refid="_w5500_interface_8cpp_source"/>
+      </node>
+      <node id="4">
+        <label>Core/JPort/src/W5500Socket.cpp</label>
+        <link refid="_w5500_socket_8cpp_source"/>
       </node>
       <node id="1">
         <label>JLib/JEthernet/include/EthernetHC.hpp</label>
         <link refid="_ethernet_h_c_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
-      </node>
-      <node id="2">
-        <label>Core/JPort/include/W5500Interface.hpp</label>
-        <link refid="_w5500_interface_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>Core/JPort/src/W5500Interface.cpp</label>
-        <link refid="_w5500_interface_8cpp_source"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c" prot="public">JETHERNET::EthernetHC</innerclass>
@@ -118,7 +118,7 @@
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref><sp/>domainToIP(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>domain,<sp/>uint16_t<sp/>timeoutMs)<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" kindref="compound">NetSock</ref>&amp;<sp/>getFreeSocket()<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c" kindref="compound">EthernetHC</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c" kindref="compound">~EthernetHC</ref>()<sp/>{};</highlight></codeline>
 <codeline lineno="36"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal">}</highlight></codeline>

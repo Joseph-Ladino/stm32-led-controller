@@ -1,12 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="_color_8cpp" kind="file" language="C++">
     <compoundname>Color.cpp</compoundname>
     <includes refid="_color_8hpp" local="yes">Color.hpp</includes>
     <incdepgraph>
-      <node id="3">
-        <label>cstdint</label>
-      </node>
       <node id="2">
         <label>Color.hpp</label>
         <link refid="_color_8hpp_source"/>
@@ -18,6 +15,9 @@
         <link refid="_color_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
       </node>
     </incdepgraph>
     <innernamespace refid="namespace_j_l_e_d">JLED</innernamespace>

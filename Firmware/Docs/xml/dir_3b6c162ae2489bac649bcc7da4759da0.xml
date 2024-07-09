@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="dir_3b6c162ae2489bac649bcc7da4759da0" kind="dir">
     <compoundname>JLib/JLED</compoundname>
     <innerdir refid="dir_3b5cc51619fe0c4181bab69a56ba03ec">JLib/JLED/include</innerdir>

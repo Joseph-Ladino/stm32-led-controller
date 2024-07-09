@@ -1,0 +1,222 @@
+\doxysection{JETHERNET\+::Net\+Sock Class Reference}
+\hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_net_sock}{}\label{class_j_e_t_h_e_r_n_e_t_1_1_net_sock}\index{JETHERNET::NetSock@{JETHERNET::NetSock}}
+
+
+Virtual class designed to represent a network socket.  
+
+
+
+
+{\ttfamily \#include $<$Net\+Sock.\+hpp$>$}
+
+Inheritance diagram for JETHERNET\+::Net\+Sock\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_j_e_t_h_e_r_n_e_t_1_1_net_sock}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_abe1b9e145bdd796464e8666db6df511d}{open}} (\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}} ip, uint16\+\_\+t port, \mbox{\hyperlink{namespace_j_e_t_h_e_r_n_e_t_a2bcff7d05aee5335790afea11e197ca1}{Sock\+Connect\+Mode}} mode)=0
+\item 
+virtual bool \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_abced4845fbe84804cd64597c39f2b1b5}{close}} ()=0
+\begin{DoxyCompactList}\small\item\em close socket \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_ad4fcf93b2ec7285a632c4b51777c0beb}{connect\+TCP}} (\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}} ip, uint16\+\_\+t port)=0
+\begin{DoxyCompactList}\small\item\em connect to TCP server \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a5f4da6ea7d0538048a8e1e70f5d69ea0}{disconnect}} ()=0
+\begin{DoxyCompactList}\small\item\em disconnect socket \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a9fa1b012c538e35f38780a1fd84f618e}{write}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}data\+In, uint16\+\_\+t len)=0
+\begin{DoxyCompactList}\small\item\em send data \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_ac352a31bb144160f2a060c2609cee259}{read}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}data\+Out, uint16\+\_\+t len)=0
+\begin{DoxyCompactList}\small\item\em receive data \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a41db618756cf90001a219180d152ecde}{is\+Connected}} () const =0
+\begin{DoxyCompactList}\small\item\em check if socket is connected/open \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a9b8b34ac38e7cc54c2f54bf781d6d691}{\texorpdfstring{$\sim$}{\string~}\+Net\+Sock}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Virtual class designed to represent a network socket. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespace_j_e_t_h_e_r_n_e_t_a2bcff7d05aee5335790afea11e197ca1}{Sock\+Connect\+Mode} 
+
+\doxylink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{_net_sock_8hpp_source_l00035}{35}} of file \mbox{\hyperlink{_net_sock_8hpp_source}{Net\+Sock.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a9b8b34ac38e7cc54c2f54bf781d6d691}\label{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a9b8b34ac38e7cc54c2f54bf781d6d691} 
+\index{JETHERNET::NetSock@{JETHERNET::NetSock}!````~NetSock@{\texorpdfstring{$\sim$}{\string~}NetSock}}
+\index{````~NetSock@{\texorpdfstring{$\sim$}{\string~}NetSock}!JETHERNET::NetSock@{JETHERNET::NetSock}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}NetSock()}{\string~NetSock()}}
+{\footnotesize\ttfamily virtual JETHERNET\+::\+Net\+Sock\+::\texorpdfstring{$\sim$}{\string~}\+Net\+Sock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{_net_sock_8hpp_source_l00093}{93}} of file \mbox{\hyperlink{_net_sock_8hpp_source}{Net\+Sock.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_abced4845fbe84804cd64597c39f2b1b5}\label{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_abced4845fbe84804cd64597c39f2b1b5} 
+\index{JETHERNET::NetSock@{JETHERNET::NetSock}!close@{close}}
+\index{close@{close}!JETHERNET::NetSock@{JETHERNET::NetSock}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual bool JETHERNET\+::\+Net\+Sock\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+close socket 
+
+\begin{DoxyReturn}{Returns}
+true if socket successfully closed 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_a30252f2d5b5820955e2ddfc905258de4}{JETHERNET\+::\+W5500\+Socket}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_ad4fcf93b2ec7285a632c4b51777c0beb}\label{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_ad4fcf93b2ec7285a632c4b51777c0beb} 
+\index{JETHERNET::NetSock@{JETHERNET::NetSock}!connectTCP@{connectTCP}}
+\index{connectTCP@{connectTCP}!JETHERNET::NetSock@{JETHERNET::NetSock}}
+\doxysubsubsection{\texorpdfstring{connectTCP()}{connectTCP()}}
+{\footnotesize\ttfamily virtual bool JETHERNET\+::\+Net\+Sock\+::connect\+TCP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}}}]{ip,  }\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+connect to TCP server 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip} & destination IP \\
+\hline
+{\em port} & destination port \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successfully connected 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+will attempt to open socket if not open when called 
+\end{DoxyNote}
+
+
+Implemented in \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_ae899a9827e9773e01163d893c48deeae}{JETHERNET\+::\+W5500\+Socket}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a5f4da6ea7d0538048a8e1e70f5d69ea0}\label{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a5f4da6ea7d0538048a8e1e70f5d69ea0} 
+\index{JETHERNET::NetSock@{JETHERNET::NetSock}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!JETHERNET::NetSock@{JETHERNET::NetSock}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily virtual bool JETHERNET\+::\+Net\+Sock\+::disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+disconnect socket 
+
+\begin{DoxyReturn}{Returns}
+true if socket successfully disconnected from server 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_aaaa05a73924134dafddd1aa8eb0bcd02}{JETHERNET\+::\+W5500\+Socket}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a41db618756cf90001a219180d152ecde}\label{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a41db618756cf90001a219180d152ecde} 
+\index{JETHERNET::NetSock@{JETHERNET::NetSock}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!JETHERNET::NetSock@{JETHERNET::NetSock}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}}
+{\footnotesize\ttfamily virtual bool JETHERNET\+::\+Net\+Sock\+::is\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+check if socket is connected/open 
+
+\begin{DoxyReturn}{Returns}
+true if socket is open or connected 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+misleading name, will probably correct in the future 
+\end{DoxyWarning}
+
+
+Implemented in \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_ae1e6ed02559892e71752470e125bc60e}{JETHERNET\+::\+W5500\+Socket}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_abe1b9e145bdd796464e8666db6df511d}\label{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_abe1b9e145bdd796464e8666db6df511d} 
+\index{JETHERNET::NetSock@{JETHERNET::NetSock}!open@{open}}
+\index{open@{open}!JETHERNET::NetSock@{JETHERNET::NetSock}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily virtual bool JETHERNET\+::\+Net\+Sock\+::open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}}}]{ip,  }\item[{uint16\+\_\+t}]{port,  }\item[{\mbox{\hyperlink{namespace_j_e_t_h_e_r_n_e_t_a2bcff7d05aee5335790afea11e197ca1}{Sock\+Connect\+Mode}}}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip} & destination IP \\
+\hline
+{\em port} & destination port \\
+\hline
+{\em mode} & connection mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if socket successfully opened 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_a8ca576edc220f26e969b55404ed9bdc6}{JETHERNET\+::\+W5500\+Socket}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_ac352a31bb144160f2a060c2609cee259}\label{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_ac352a31bb144160f2a060c2609cee259} 
+\index{JETHERNET::NetSock@{JETHERNET::NetSock}!read@{read}}
+\index{read@{read}!JETHERNET::NetSock@{JETHERNET::NetSock}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily virtual int JETHERNET\+::\+Net\+Sock\+::read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data\+Out,  }\item[{uint16\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+receive data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Out} & buffer for data to be received into \\
+\hline
+{\em len} & number of bytes to be received \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes read 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_a6f49d3a309be5c3b9d2e3a3aaae6a883}{JETHERNET\+::\+W5500\+Socket}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a9fa1b012c538e35f38780a1fd84f618e}\label{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a9fa1b012c538e35f38780a1fd84f618e} 
+\index{JETHERNET::NetSock@{JETHERNET::NetSock}!write@{write}}
+\index{write@{write}!JETHERNET::NetSock@{JETHERNET::NetSock}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily virtual int JETHERNET\+::\+Net\+Sock\+::write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data\+In,  }\item[{uint16\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+send data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+In} & data to be written \\
+\hline
+{\em len} & number of bytes to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes written 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket_a6405fcf9acb90e76d8b138d5ba9775a0}{JETHERNET\+::\+W5500\+Socket}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+JLib/\+JEthernet/include/\mbox{\hyperlink{_net_sock_8hpp}{Net\+Sock.\+hpp}}\end{DoxyCompactItemize}

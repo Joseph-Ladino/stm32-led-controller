@@ -1,14 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kind="struct" language="C++" prot="public">
     <compoundname>JETHERNET::NetIP</compoundname>
     <includes refid="_net_i_p_8hpp" local="no">NetIP.hpp</includes>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1a2b107533f39fd496cc2e485a9ecc2f99" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
         <definition>uint32_t JETHERNET::NetIP::num</definition>
         <argsstring></argsstring>
         <name>num</name>
+        <qualifiedname>JETHERNET::NetIP::num</qualifiedname>
         <initializer>= 0</initializer>
         <briefdescription>
         </briefdescription>
@@ -23,6 +24,7 @@
         <definition>uint8_t JETHERNET::NetIP::raw[4]</definition>
         <argsstring>[4]</argsstring>
         <name>raw</name>
+        <qualifiedname>JETHERNET::NetIP::raw</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -32,10 +34,11 @@
         <location file="JLib/JEthernet/include/NetIP.hpp" line="25" column="9" bodyfile="JLib/JEthernet/include/NetIP.hpp" bodystart="25" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1a13f9249293143ac671883087c22ef6ff" prot="public" static="no" mutable="no">
-        <type>union JETHERNET::NetIP::@0</type>
-        <definition>union JETHERNET::NetIP::@0 JETHERNET::NetIP::@1</definition>
+        <type>union <ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">JETHERNET::NetIP</ref></type>
+        <definition>union JETHERNET::NetIP JETHERNET::NetIP</definition>
         <argsstring></argsstring>
-        <name>@1</name>
+        <name></name>
+        <qualifiedname>JETHERNET::NetIP</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -44,13 +47,14 @@
         </inbodydescription>
         <location file="JLib/JEthernet/include/NetIP.hpp" line="26" column="1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
+    </sectiondef>
+    <sectiondef kind="public-func">
       <memberdef kind="function" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1abf6814cc0fd7e20073cea1abdbc1e1a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int JETHERNET::NetIP::cString</definition>
         <argsstring>(char *buf)</argsstring>
         <name>cString</name>
+        <qualifiedname>JETHERNET::NetIP::cString</qualifiedname>
         <param>
           <type>char *</type>
           <declname>buf</declname>
@@ -84,6 +88,7 @@
         <definition>uint8_t &amp; JETHERNET::NetIP::operator[]</definition>
         <argsstring>(uint8_t index)</argsstring>
         <name>operator[]</name>
+        <qualifiedname>JETHERNET::NetIP::operator[]</qualifiedname>
         <param>
           <type>uint8_t</type>
           <declname>index</declname>
@@ -114,6 +119,7 @@
         <definition>const uint8_t &amp; JETHERNET::NetIP::operator[]</definition>
         <argsstring>(uint8_t index) const</argsstring>
         <name>operator[]</name>
+        <qualifiedname>JETHERNET::NetIP::operator[]</qualifiedname>
         <param>
           <type>uint8_t</type>
           <declname>index</declname>
@@ -139,11 +145,12 @@
         </inbodydescription>
         <location file="JLib/JEthernet/include/NetIP.hpp" line="48" column="15" bodyfile="JLib/JEthernet/src/NetIP.cpp" bodystart="20" bodyend="22"/>
       </memberdef>
-      <memberdef kind="function" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1a562d2695488d6c851f944029fa18f590" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1a7ea22878ac717e2e2e1bb3cddbd62159" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref> &amp;</type>
-        <definition>NetIP&amp; JETHERNET::NetIP::operator=</definition>
+        <definition>NetIP &amp; JETHERNET::NetIP::operator=</definition>
         <argsstring>(const NetIP &amp;rhs)=default</argsstring>
         <name>operator=</name>
+        <qualifiedname>JETHERNET::NetIP::operator=</qualifiedname>
         <param>
           <type>const <ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref> &amp;</type>
           <declname>rhs</declname>
@@ -161,6 +168,7 @@
         <definition>NetIP &amp; JETHERNET::NetIP::operator=</definition>
         <argsstring>(const uint32_t ip)</argsstring>
         <name>operator=</name>
+        <qualifiedname>JETHERNET::NetIP::operator=</qualifiedname>
         <param>
           <type>const uint32_t</type>
           <declname>ip</declname>
@@ -178,6 +186,7 @@
         <definition>bool JETHERNET::NetIP::operator==</definition>
         <argsstring>(const NetIP &amp;rhs) const</argsstring>
         <name>operator==</name>
+        <qualifiedname>JETHERNET::NetIP::operator==</qualifiedname>
         <param>
           <type>const <ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref> &amp;</type>
           <declname>rhs</declname>
@@ -195,6 +204,7 @@
         <definition>bool JETHERNET::NetIP::operator!=</definition>
         <argsstring>(const NetIP &amp;rhs) const</argsstring>
         <name>operator!=</name>
+        <qualifiedname>JETHERNET::NetIP::operator!=</qualifiedname>
         <param>
           <type>const <ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref> &amp;</type>
           <declname>rhs</declname>
@@ -212,6 +222,7 @@
         <definition>JETHERNET::NetIP::NetIP</definition>
         <argsstring>()=default</argsstring>
         <name>NetIP</name>
+        <qualifiedname>JETHERNET::NetIP::NetIP</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -225,6 +236,7 @@
         <definition>JETHERNET::NetIP::NetIP</definition>
         <argsstring>(NetIP &amp;addr)=default</argsstring>
         <name>NetIP</name>
+        <qualifiedname>JETHERNET::NetIP::NetIP</qualifiedname>
         <param>
           <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref> &amp;</type>
           <declname>addr</declname>
@@ -242,6 +254,7 @@
         <definition>JETHERNET::NetIP::NetIP</definition>
         <argsstring>(uint8_t n0, uint8_t n1, uint8_t n2, uint8_t n3)</argsstring>
         <name>NetIP</name>
+        <qualifiedname>JETHERNET::NetIP::NetIP</qualifiedname>
         <param>
           <type>uint8_t</type>
           <declname>n0</declname>
@@ -271,6 +284,7 @@
         <definition>JETHERNET::NetIP::NetIP</definition>
         <argsstring>(uint32_t ip)</argsstring>
         <name>NetIP</name>
+        <qualifiedname>JETHERNET::NetIP::NetIP</qualifiedname>
         <param>
           <type>uint32_t</type>
           <declname>ip</declname>
@@ -283,7 +297,7 @@
         </inbodydescription>
         <location file="JLib/JEthernet/include/NetIP.hpp" line="58" column="1" bodyfile="JLib/JEthernet/src/NetIP.cpp" bodystart="36" bodyend="38"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>IP address stored internally as a uint32. </para>
     </briefdescription>
@@ -298,7 +312,7 @@
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="JLib/JEthernet/include/NetIP.hpp" line="22" column="12" bodyfile="JLib/JEthernet/include/NetIP.hpp" bodystart="22" bodyend="59"/>
+    <location file="JLib/JEthernet/include/NetIP.hpp" line="22" column="1" bodyfile="JLib/JEthernet/include/NetIP.hpp" bodystart="22" bodyend="59"/>
     <listofallmembers>
       <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1abf6814cc0fd7e20073cea1abdbc1e1a2" prot="public" virt="non-virtual"><scope>JETHERNET::NetIP</scope><name>cString</name></member>
       <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1ae1c1e097f01e141013dbee53ebeec7ab" prot="public" virt="non-virtual"><scope>JETHERNET::NetIP</scope><name>NetIP</name></member>
@@ -307,7 +321,7 @@
       <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1aa2075e36a3d56a6ad52d3a06946b9c9b" prot="public" virt="non-virtual"><scope>JETHERNET::NetIP</scope><name>NetIP</name></member>
       <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1a2b107533f39fd496cc2e485a9ecc2f99" prot="public" virt="non-virtual"><scope>JETHERNET::NetIP</scope><name>num</name></member>
       <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1a4d3970e5ab85c1802a71022e4628b113" prot="public" virt="non-virtual"><scope>JETHERNET::NetIP</scope><name>operator!=</name></member>
-      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1a562d2695488d6c851f944029fa18f590" prot="public" virt="non-virtual"><scope>JETHERNET::NetIP</scope><name>operator=</name></member>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1a7ea22878ac717e2e2e1bb3cddbd62159" prot="public" virt="non-virtual"><scope>JETHERNET::NetIP</scope><name>operator=</name></member>
       <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1ab3e8343d4b135803c689ba6243ed8e5d" prot="public" virt="non-virtual"><scope>JETHERNET::NetIP</scope><name>operator=</name></member>
       <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1a7cf99bd3c7bf715c1769afc915af3da0" prot="public" virt="non-virtual"><scope>JETHERNET::NetIP</scope><name>operator==</name></member>
       <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_1af39e5551f77da937526feebef81baeb4" prot="public" virt="non-virtual"><scope>JETHERNET::NetIP</scope><name>operator[]</name></member>

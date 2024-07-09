@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="dir_856c1a74dacf57b9e134692189e3794c" kind="dir">
     <compoundname>Core/JPort/src</compoundname>
     <innerfile refid="_p_a_h_o_client_8cpp">PAHOClient.cpp</innerfile>

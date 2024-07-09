@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="namespace_j_e_t_h_e_r_n_e_t" kind="namespace" language="C++">
     <compoundname>JETHERNET</compoundname>
     <innerclass refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c" prot="public">JETHERNET::EthernetHC</innerclass>
@@ -11,10 +11,11 @@
     <innerclass refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c" prot="public">JETHERNET::W5500HC</innerclass>
     <innerclass refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface" prot="public">JETHERNET::W5500Interface</innerclass>
     <innerclass refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket" prot="public">JETHERNET::W5500Socket</innerclass>
-      <sectiondef kind="enum">
+    <sectiondef kind="enum">
       <memberdef kind="enum" id="_net_sock_8hpp_1a2bcff7d05aee5335790afea11e197ca1" prot="public" static="no" strong="yes">
         <type>uint8_t</type>
         <name>SockConnectMode</name>
+        <qualifiedname>JETHERNET::SockConnectMode</qualifiedname>
         <enumvalue id="_net_sock_8hpp_1a2bcff7d05aee5335790afea11e197ca1ab136ef5f6a01d816991fe3cf7a6ac763" prot="public">
           <name>TCP</name>
           <initializer>= 1</initializer>
@@ -61,15 +62,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="JLib/JEthernet/include/NetSock.hpp" line="20" column="27" bodyfile="JLib/JEthernet/include/NetSock.hpp" bodystart="20" bodyend="25"/>
+        <location file="JLib/JEthernet/include/NetSock.hpp" line="20" column="1" bodyfile="JLib/JEthernet/include/NetSock.hpp" bodystart="20" bodyend="25"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="var">
+    </sectiondef>
+    <sectiondef kind="var">
       <memberdef kind="variable" id="_w5500_interface_8cpp_1a1c40bf58d99cca0c3f57450c4deb4a35" prot="public" static="no" mutable="no">
-        <type>uint8_t</type>
+        <type>volatile uint8_t</type>
         <definition>volatile uint8_t JETHERNET::DHCPBuffer[1024]</definition>
         <argsstring>[1024]</argsstring>
         <name>DHCPBuffer</name>
+        <qualifiedname>JETHERNET::DHCPBuffer</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -79,10 +81,11 @@
         <location file="Core/JPort/src/W5500Interface.cpp" line="20" column="18" bodyfile="Core/JPort/src/W5500Interface.cpp" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="_w5500_interface_8cpp_1ab3f91ca6aa8357215f5398055e8799fb" prot="public" static="no" mutable="no">
-        <type>uint8_t</type>
+        <type>volatile uint8_t</type>
         <definition>volatile uint8_t JETHERNET::DNSBuffer[1024]</definition>
         <argsstring>[1024]</argsstring>
         <name>DNSBuffer</name>
+        <qualifiedname>JETHERNET::DNSBuffer</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -91,13 +94,14 @@
         </inbodydescription>
         <location file="Core/JPort/src/W5500Interface.cpp" line="21" column="18" bodyfile="Core/JPort/src/W5500Interface.cpp" bodystart="21" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="_w5500_interface_8cpp_1a96e4747ccfa9e4e1c4d80c98d32c6e8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void JETHERNET::printNetInfo</definition>
         <argsstring>(NetConfig *)</argsstring>
         <name>printNetInfo</name>
+        <qualifiedname>JETHERNET::printNetInfo</qualifiedname>
         <param>
           <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_config" kindref="compound">NetConfig</ref> *</type>
           <defname>netConf</defname>
@@ -115,6 +119,7 @@
         <definition>void JETHERNET::enableChipSelect</definition>
         <argsstring>()</argsstring>
         <name>enableChipSelect</name>
+        <qualifiedname>JETHERNET::enableChipSelect</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -128,6 +133,7 @@
         <definition>void JETHERNET::disableChipSelect</definition>
         <argsstring>()</argsstring>
         <name>disableChipSelect</name>
+        <qualifiedname>JETHERNET::disableChipSelect</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -141,6 +147,7 @@
         <definition>void JETHERNET::readBuffer</definition>
         <argsstring>(uint8_t *buf, uint16_t len)</argsstring>
         <name>readBuffer</name>
+        <qualifiedname>JETHERNET::readBuffer</qualifiedname>
         <param>
           <type>uint8_t *</type>
           <declname>buf</declname>
@@ -162,6 +169,7 @@
         <definition>void JETHERNET::writeBuffer</definition>
         <argsstring>(uint8_t *buf, uint16_t len)</argsstring>
         <name>writeBuffer</name>
+        <qualifiedname>JETHERNET::writeBuffer</qualifiedname>
         <param>
           <type>uint8_t *</type>
           <declname>buf</declname>
@@ -183,6 +191,7 @@
         <definition>uint8_t JETHERNET::readByte</definition>
         <argsstring>()</argsstring>
         <name>readByte</name>
+        <qualifiedname>JETHERNET::readByte</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -196,6 +205,7 @@
         <definition>void JETHERNET::writeByte</definition>
         <argsstring>(uint8_t byte)</argsstring>
         <name>writeByte</name>
+        <qualifiedname>JETHERNET::writeByte</qualifiedname>
         <param>
           <type>uint8_t</type>
           <declname>byte</declname>
@@ -213,6 +223,7 @@
         <definition>void JETHERNET::CB_DHCP_IPAssigned</definition>
         <argsstring>()</argsstring>
         <name>CB_DHCP_IPAssigned</name>
+        <qualifiedname>JETHERNET::CB_DHCP_IPAssigned</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -226,6 +237,7 @@
         <definition>void JETHERNET::CB_DHCP_IPConflict</definition>
         <argsstring>()</argsstring>
         <name>CB_DHCP_IPConflict</name>
+        <qualifiedname>JETHERNET::CB_DHCP_IPConflict</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -239,6 +251,7 @@
         <definition>wiz_NetInfo JETHERNET::getNetInfo</definition>
         <argsstring>()</argsstring>
         <name>getNetInfo</name>
+        <qualifiedname>JETHERNET::getNetInfo</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -252,6 +265,7 @@
         <definition>void JETHERNET::setNetInfo</definition>
         <argsstring>(wiz_NetInfo *netInfo)</argsstring>
         <name>setNetInfo</name>
+        <qualifiedname>JETHERNET::setNetInfo</qualifiedname>
         <param>
           <type>wiz_NetInfo *</type>
           <declname>netInfo</declname>
@@ -264,11 +278,11 @@
         </inbodydescription>
         <location file="Core/JPort/src/W5500Interface.cpp" line="162" column="6" bodyfile="Core/JPort/src/W5500Interface.cpp" bodystart="162" bodyend="164"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="JLib/JEthernet/include/EthernetHC.hpp" line="14" column="19"/>
+    <location file="JLib/JEthernet/include/EthernetHC.hpp" line="14" column="1"/>
   </compounddef>
 </doxygen>

@@ -80,7 +80,7 @@ bool PAHOClient::update(uint16_t timeoutMs) {
 	CountdownTimer t(timeoutMs);
 	auto rc = client.yield(timeoutMs);
 
-	if (rc != MQTT::SUCCESS) {
+	if (rc != MQTT::SUCCESS || !net.sock->isConnected()) {
 		disconnect();
 		return false;
 	}

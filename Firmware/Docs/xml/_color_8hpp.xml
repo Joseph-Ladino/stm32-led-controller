@@ -1,18 +1,18 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="_color_8hpp" kind="file" language="C++">
     <compoundname>Color.hpp</compoundname>
     <includes local="no">cstdint</includes>
     <includedby refid="_color_8cpp" local="yes">JLib/JLED/src/Color.cpp</includedby>
     <incdepgraph>
-      <node id="2">
-        <label>cstdint</label>
-      </node>
       <node id="1">
         <label>JLib/JLED/include/Color.hpp</label>
         <link refid="_color_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+      </node>
+      <node id="2">
+        <label>cstdint</label>
       </node>
     </incdepgraph>
     <invincdepgraph>

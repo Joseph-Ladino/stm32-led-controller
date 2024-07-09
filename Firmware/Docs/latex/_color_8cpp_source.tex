@@ -1,0 +1,47 @@
+\doxysection{Color.\+cpp}
+\hypertarget{_color_8cpp_source}{}\label{_color_8cpp_source}\index{JLib/JLED/src/Color.cpp@{JLib/JLED/src/Color.cpp}}
+\mbox{\hyperlink{_color_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ Color.cpp}}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Mar\ 21,\ 2024}}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ user}}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_color_8hpp}{Color.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00010}00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_j_l_e_d}{JLED}}\ \{}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00012}\mbox{\hyperlink{struct_j_l_e_d_1_1_color_a860ffe1eb2aeeae750675947fc463aa0}{00012}}\ uint8\_t\&\ \mbox{\hyperlink{struct_j_l_e_d_1_1_color_a860ffe1eb2aeeae750675947fc463aa0}{Color::operator\ []}}(uint8\_t\ n)\ \{}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{return}\ (n\ >\ 3)\ ?\ \mbox{\hyperlink{struct_j_l_e_d_1_1_color_ac2553ef03f3016ee30a946ff5ab45720}{raw}}[0]\ :\ \mbox{\hyperlink{struct_j_l_e_d_1_1_color_ac2553ef03f3016ee30a946ff5ab45720}{raw}}[3\ -\/\ n];}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00016}\mbox{\hyperlink{struct_j_l_e_d_1_1_color_a526e7f2d694ded86e47ddebcef3a4f67}{00016}}\ \textcolor{keyword}{const}\ uint8\_t\&\ \mbox{\hyperlink{struct_j_l_e_d_1_1_color_a860ffe1eb2aeeae750675947fc463aa0}{Color::operator\ []}}(uint8\_t\ n)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{return}\ (n\ >\ 3)\ ?\ \mbox{\hyperlink{struct_j_l_e_d_1_1_color_ac2553ef03f3016ee30a946ff5ab45720}{raw}}[0]\ :\ \mbox{\hyperlink{struct_j_l_e_d_1_1_color_ac2553ef03f3016ee30a946ff5ab45720}{raw}}[3\ -\/\ n];}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00020}\mbox{\hyperlink{struct_j_l_e_d_1_1_color_ac370745c0d987394fff68cec181eb3de}{00020}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_j_l_e_d_1_1_color_ac370745c0d987394fff68cec181eb3de}{Color::operator\ ==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}}\ \&rhs)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_j_l_e_d_1_1_color_a7697370bee3952e1fd6d7fdad83908fc}{num}}\ ==\ rhs.\mbox{\hyperlink{struct_j_l_e_d_1_1_color_a7697370bee3952e1fd6d7fdad83908fc}{num}};}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00024}\mbox{\hyperlink{struct_j_l_e_d_1_1_color_a0d62a147680b13eb29c7695fda0c4898}{00024}}\ Color::operator\ uint32\_t()\ \{}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{return}\ num;}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00026}00026\ \}}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00028}\mbox{\hyperlink{struct_j_l_e_d_1_1_color_a3a29afe4842aaf7bb3733cc7e5a286dc}{00028}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_j_l_e_d_1_1_color_a3a29afe4842aaf7bb3733cc7e5a286dc}{Color::operator\ !=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}}\ \&rhs)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_j_l_e_d_1_1_color_a7697370bee3952e1fd6d7fdad83908fc}{num}}\ !=\ rhs.\mbox{\hyperlink{struct_j_l_e_d_1_1_color_a7697370bee3952e1fd6d7fdad83908fc}{num}};}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00032}\mbox{\hyperlink{struct_j_l_e_d_1_1_color_a6fae6a241287e82d46f0f177951f3ffe}{00032}}\ \mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}}\&\ \mbox{\hyperlink{struct_j_l_e_d_1_1_color_a6fae6a241287e82d46f0f177951f3ffe}{Color::operator\ =}}(\textcolor{keyword}{const}\ uint32\_t\ rhs)\ \{}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{struct_j_l_e_d_1_1_color_a7697370bee3952e1fd6d7fdad83908fc}{num}}\ =\ rhs;}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00037}\mbox{\hyperlink{struct_j_l_e_d_1_1_color_ae2db419c161dac45bf5544a6f3e32229}{00037}}\ \mbox{\hyperlink{struct_j_l_e_d_1_1_color_a53ce5313bbe5a9fa9a39f9b5faefb1c0}{Color::Color}}(uint32\_t\ num)\ :\ num(num)\ \{\}}
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_color_8cpp_source_l00041}00041\ \}\ \textcolor{comment}{/*\ namespace\ JLED\ */}}
+
+\end{DoxyCode}

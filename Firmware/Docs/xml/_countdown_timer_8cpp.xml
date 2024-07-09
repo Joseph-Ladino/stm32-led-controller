@@ -1,11 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="_countdown_timer_8cpp" kind="file" language="C++">
     <compoundname>CountdownTimer.cpp</compoundname>
     <includes refid="_countdown_timer_8hpp" local="yes">CountdownTimer.hpp</includes>
     <incdepgraph>
-      <node id="3">
-        <label>cstdint</label>
+      <node id="2">
+        <label>CountdownTimer.hpp</label>
+        <link refid="_countdown_timer_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>JLib/JMisc/src/CountdownTimer.cpp</label>
@@ -13,11 +16,8 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="2">
-        <label>CountdownTimer.hpp</label>
-        <link refid="_countdown_timer_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
+      <node id="3">
+        <label>cstdint</label>
       </node>
     </incdepgraph>
     <briefdescription>

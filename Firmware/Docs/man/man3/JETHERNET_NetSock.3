@@ -1,4 +1,4 @@
-.TH "JETHERNET::NetSock" 3 "Thu Apr 25 2024" "Version 0.1.1" "CSTM32LedController" \" -*- nroff -*-
+.TH "JETHERNET::NetSock" 3 "Version 0.1.1" "CSTM32 Led Controller" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,7 +8,7 @@ JETHERNET::NetSock \- Virtual class designed to represent a network socket\&.
 .br
 .PP
 .PP
-\fC#include <NetSock\&.hpp>\fP
+\fR#include <NetSock\&.hpp>\fP
 .PP
 Inherited by \fBJETHERNET::W5500Socket\fP\&.
 .SS "Public Member Functions"
@@ -57,10 +57,16 @@ SockConnectMode
 .PP
 
 .PP
-Definition at line 35 of file NetSock\&.hpp\&.
+Definition at line \fB35\fP of file \fBNetSock\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual JETHERNET::NetSock::~NetSock ()\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Definition at line \fB94\fP of file \fBNetSock\&.hpp\fP\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "virtual bool JETHERNET::NetSock::close ()\fC [pure virtual]\fP"
+.SS "virtual bool JETHERNET::NetSock::close ()\fR [pure virtual]\fP"
 
 .PP
 close socket 
@@ -73,7 +79,7 @@ true if socket successfully closed
 
 .PP
 Implemented in \fBJETHERNET::W5500Socket\fP\&.
-.SS "virtual bool JETHERNET::NetSock::connectTCP (\fBNetIP\fP ip, uint16_t port)\fC [pure virtual]\fP"
+.SS "virtual bool JETHERNET::NetSock::connectTCP (\fBNetIP\fP ip, uint16_t port)\fR [pure virtual]\fP"
 
 .PP
 connect to TCP server 
@@ -98,7 +104,7 @@ will attempt to open socket if not open when called
 
 .PP
 Implemented in \fBJETHERNET::W5500Socket\fP\&.
-.SS "virtual bool JETHERNET::NetSock::disconnect ()\fC [pure virtual]\fP"
+.SS "virtual bool JETHERNET::NetSock::disconnect ()\fR [pure virtual]\fP"
 
 .PP
 disconnect socket 
@@ -111,7 +117,7 @@ true if socket successfully disconnected from server
 
 .PP
 Implemented in \fBJETHERNET::W5500Socket\fP\&.
-.SS "virtual bool JETHERNET::NetSock::isConnected () const\fC [pure virtual]\fP"
+.SS "virtual bool JETHERNET::NetSock::isConnected () const\fR [pure virtual]\fP"
 
 .PP
 check if socket is connected/open 
@@ -129,7 +135,7 @@ misleading name, will probably correct in the future
 
 .PP
 Implemented in \fBJETHERNET::W5500Socket\fP\&.
-.SS "virtual bool JETHERNET::NetSock::open (\fBNetIP\fP ip, uint16_t port, SockConnectMode mode)\fC [pure virtual]\fP"
+.SS "virtual bool JETHERNET::NetSock::open (\fBNetIP\fP ip, uint16_t port, SockConnectMode mode)\fR [pure virtual]\fP"
 
 .PP
 \fBParameters\fP
@@ -138,7 +144,7 @@ Implemented in \fBJETHERNET::W5500Socket\fP\&.
 .br
 \fIport\fP destination port 
 .br
-\fImode\fP connection mode 
+\fImode\fP connection 
 .RE
 .PP
 \fBReturns\fP
@@ -149,7 +155,7 @@ true if socket successfully opened
 
 .PP
 Implemented in \fBJETHERNET::W5500Socket\fP\&.
-.SS "virtual int JETHERNET::NetSock::read (uint8_t * dataOut, uint16_t len)\fC [pure virtual]\fP"
+.SS "virtual int JETHERNET::NetSock::read (uint8_t * dataOut, uint16_t len)\fR [pure virtual]\fP"
 
 .PP
 receive data 
@@ -169,7 +175,7 @@ number of bytes read
 
 .PP
 Implemented in \fBJETHERNET::W5500Socket\fP\&.
-.SS "virtual int JETHERNET::NetSock::write (uint8_t * dataIn, uint16_t len)\fC [pure virtual]\fP"
+.SS "virtual int JETHERNET::NetSock::write (uint8_t * dataIn, uint16_t len)\fR [pure virtual]\fP"
 
 .PP
 send data 
@@ -192,4 +198,4 @@ Implemented in \fBJETHERNET::W5500Socket\fP\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for CSTM32LedController from the source code\&.
+Generated automatically by Doxygen for CSTM32 Led Controller from the source code\&.

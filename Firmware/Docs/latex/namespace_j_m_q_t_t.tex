@@ -1,0 +1,99 @@
+\doxysection{JMQTT Namespace Reference}
+\hypertarget{namespace_j_m_q_t_t}{}\label{namespace_j_m_q_t_t}\index{JMQTT@{JMQTT}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{Client}}
+\item 
+struct \mbox{\hyperlink{struct_j_m_q_t_t_1_1_client_config}{Client\+Config}}
+\item 
+struct \mbox{\hyperlink{struct_j_m_q_t_t_1_1_message}{Message}}
+\item 
+class \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client}{PAHOClient}}
+\item 
+struct \mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network}{PAHONetwork}}
+\item 
+struct \mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network}{W5500\+Mqtt\+Network}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{using}} \mbox{\hyperlink{namespace_j_m_q_t_t_a2acd0c0fe48ba1491c3f74f1c17a9bd1}{W5500\+Mqtt\+Client}} = MQTT\+::\+Client$<$\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network}{W5500\+Mqtt\+Network}}, \mbox{\hyperlink{struct_countdown_timer}{Countdown\+Timer}}, 500$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3}{QOS}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a065532b760e1ff433556caf8cff11819}{QOS0}} = 0
+, \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a42c6763919390c440401d176611e39fa}{QOS1}}
+, \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a4cc41cf3d090303c0e5d9e0bcb842165}{QOS2}}
+ \}
+\item 
+enum class \mbox{\hyperlink{namespace_j_m_q_t_t_ad2b6f21f1fd9d7e8d6be0b4eeb30fc43}{MQTTVersion}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{namespace_j_m_q_t_t_ad2b6f21f1fd9d7e8d6be0b4eeb30fc43aa1f18342e0d9cf4895a44aacce1ca57d}{MQTT3}} = 3
+, \mbox{\hyperlink{namespace_j_m_q_t_t_ad2b6f21f1fd9d7e8d6be0b4eeb30fc43a80b2283e2aabba0c02ae6f3dafa6b33a}{MQTT311}} = 4
+, \mbox{\hyperlink{namespace_j_m_q_t_t_ad2b6f21f1fd9d7e8d6be0b4eeb30fc43ad50ad0b9201edf6806fafa17de7e42d8}{MQTT5}} = 5
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{namespace_j_m_q_t_t_a2acd0c0fe48ba1491c3f74f1c17a9bd1}\label{namespace_j_m_q_t_t_a2acd0c0fe48ba1491c3f74f1c17a9bd1} 
+\index{JMQTT@{JMQTT}!W5500MqttClient@{W5500MqttClient}}
+\index{W5500MqttClient@{W5500MqttClient}!JMQTT@{JMQTT}}
+\doxysubsubsection{\texorpdfstring{W5500MqttClient}{W5500MqttClient}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{using}} \mbox{\hyperlink{namespace_j_m_q_t_t_a2acd0c0fe48ba1491c3f74f1c17a9bd1}{JMQTT\+::\+W5500\+Mqtt\+Client}} = MQTT\+::\+Client$<$\mbox{\hyperlink{struct_j_m_q_t_t_1_1_w5500_mqtt_network}{W5500\+Mqtt\+Network}}, \mbox{\hyperlink{struct_countdown_timer}{Countdown\+Timer}}, 500$>$}
+
+
+
+Definition at line \mbox{\hyperlink{_m_q_t_t_interface_8hpp_source_l00037}{37}} of file \mbox{\hyperlink{_m_q_t_t_interface_8hpp_source}{MQTTInterface.\+hpp}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespace_j_m_q_t_t_ad2b6f21f1fd9d7e8d6be0b4eeb30fc43}\label{namespace_j_m_q_t_t_ad2b6f21f1fd9d7e8d6be0b4eeb30fc43} 
+\index{JMQTT@{JMQTT}!MQTTVersion@{MQTTVersion}}
+\index{MQTTVersion@{MQTTVersion}!JMQTT@{JMQTT}}
+\doxysubsubsection{\texorpdfstring{MQTTVersion}{MQTTVersion}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{enum}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{class}} \mbox{\hyperlink{namespace_j_m_q_t_t_ad2b6f21f1fd9d7e8d6be0b4eeb30fc43}{JMQTT\+::\+MQTTVersion}} \+: \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{uint8\+\_\+t}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MQTT3@{MQTT3}!JMQTT@{JMQTT}}\index{JMQTT@{JMQTT}!MQTT3@{MQTT3}}}\Hypertarget{namespace_j_m_q_t_t_ad2b6f21f1fd9d7e8d6be0b4eeb30fc43aa1f18342e0d9cf4895a44aacce1ca57d}\label{namespace_j_m_q_t_t_ad2b6f21f1fd9d7e8d6be0b4eeb30fc43aa1f18342e0d9cf4895a44aacce1ca57d} 
+MQTT3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MQTT311@{MQTT311}!JMQTT@{JMQTT}}\index{JMQTT@{JMQTT}!MQTT311@{MQTT311}}}\Hypertarget{namespace_j_m_q_t_t_ad2b6f21f1fd9d7e8d6be0b4eeb30fc43a80b2283e2aabba0c02ae6f3dafa6b33a}\label{namespace_j_m_q_t_t_ad2b6f21f1fd9d7e8d6be0b4eeb30fc43a80b2283e2aabba0c02ae6f3dafa6b33a} 
+MQTT311&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MQTT5@{MQTT5}!JMQTT@{JMQTT}}\index{JMQTT@{JMQTT}!MQTT5@{MQTT5}}}\Hypertarget{namespace_j_m_q_t_t_ad2b6f21f1fd9d7e8d6be0b4eeb30fc43ad50ad0b9201edf6806fafa17de7e42d8}\label{namespace_j_m_q_t_t_ad2b6f21f1fd9d7e8d6be0b4eeb30fc43ad50ad0b9201edf6806fafa17de7e42d8} 
+MQTT5&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_client_8hpp_source_l00033}{33}} of file \mbox{\hyperlink{_client_8hpp_source}{Client.\+hpp}}.
+
+\Hypertarget{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3}\label{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3} 
+\index{JMQTT@{JMQTT}!QOS@{QOS}}
+\index{QOS@{QOS}!JMQTT@{JMQTT}}
+\doxysubsubsection{\texorpdfstring{QOS}{QOS}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{enum}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{class}} \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3}{JMQTT\+::\+QOS}} \+: \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{uint8\+\_\+t}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QOS0@{QOS0}!JMQTT@{JMQTT}}\index{JMQTT@{JMQTT}!QOS0@{QOS0}}}\Hypertarget{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a065532b760e1ff433556caf8cff11819}\label{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a065532b760e1ff433556caf8cff11819} 
+QOS0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QOS1@{QOS1}!JMQTT@{JMQTT}}\index{JMQTT@{JMQTT}!QOS1@{QOS1}}}\Hypertarget{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a42c6763919390c440401d176611e39fa}\label{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a42c6763919390c440401d176611e39fa} 
+QOS1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QOS2@{QOS2}!JMQTT@{JMQTT}}\index{JMQTT@{JMQTT}!QOS2@{QOS2}}}\Hypertarget{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a4cc41cf3d090303c0e5d9e0bcb842165}\label{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a4cc41cf3d090303c0e5d9e0bcb842165} 
+QOS2&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_client_8hpp_source_l00021}{21}} of file \mbox{\hyperlink{_client_8hpp_source}{Client.\+hpp}}.
+

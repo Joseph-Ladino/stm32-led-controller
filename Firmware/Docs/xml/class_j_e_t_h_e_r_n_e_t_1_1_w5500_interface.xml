@@ -1,13 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface" kind="class" language="C++" prot="public">
     <compoundname>JETHERNET::W5500Interface</compoundname>
-      <sectiondef kind="private-static-attrib">
+    <sectiondef kind="private-static-attrib">
       <memberdef kind="variable" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a926675b05c4442bdce1b085bb993ae30" prot="private" static="yes" mutable="no">
         <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config" kindref="compound">W5500Config</ref></type>
         <definition>W5500Config JETHERNET::W5500Interface::config</definition>
         <argsstring></argsstring>
         <name>config</name>
+        <qualifiedname>JETHERNET::W5500Interface::config</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -21,6 +22,7 @@
         <definition>bool JETHERNET::W5500Interface::ipAssigned</definition>
         <argsstring></argsstring>
         <name>ipAssigned</name>
+        <qualifiedname>JETHERNET::W5500Interface::ipAssigned</qualifiedname>
         <initializer>= false</initializer>
         <briefdescription>
         </briefdescription>
@@ -35,6 +37,7 @@
         <definition>bool JETHERNET::W5500Interface::dhcpEnabled</definition>
         <argsstring></argsstring>
         <name>dhcpEnabled</name>
+        <qualifiedname>JETHERNET::W5500Interface::dhcpEnabled</qualifiedname>
         <initializer>= false</initializer>
         <briefdescription>
         </briefdescription>
@@ -44,26 +47,31 @@
         </inbodydescription>
         <location file="Core/JPort/include/W5500Interface.hpp" line="41" column="20" bodyfile="Core/JPort/include/W5500Interface.hpp" bodystart="41" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="friend">
+    </sectiondef>
+    <sectiondef kind="friend">
       <memberdef kind="friend" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1ae4496b2bb9acc463e6410c3b4cf1bd20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>friend class</type>
+        <type>class</type>
         <definition>friend class W5500HC</definition>
         <argsstring></argsstring>
         <name>W5500HC</name>
+        <qualifiedname>JETHERNET::W5500Interface::W5500HC</qualifiedname>
+        <param>
+          <type><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c" kindref="compound">W5500HC</ref></type>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Core/JPort/include/W5500Interface.hpp" line="48" column="1" bodyfile="Core/JPort/include/W5500Interface.hpp" bodystart="48" bodyend="-1"/>
+        <location file="Core/JPort/include/W5500Interface.hpp" line="48" column="14" bodyfile="Core/JPort/include/W5500Interface.hpp" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="friend" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a9b867262fb1648b34b00bd3ce8ea6366" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>friend void</type>
+        <type>void</type>
         <definition>void readBuffer</definition>
         <argsstring>(uint8_t *buf, uint16_t len)</argsstring>
         <name>readBuffer</name>
+        <qualifiedname>JETHERNET::W5500Interface::readBuffer</qualifiedname>
         <param>
           <type>uint8_t *</type>
           <declname>buf</declname>
@@ -81,10 +89,11 @@
         <location file="Core/JPort/include/W5500Interface.hpp" line="50" column="13" bodyfile="Core/JPort/src/W5500Interface.cpp" bodystart="35" bodyend="44"/>
       </memberdef>
       <memberdef kind="friend" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a941d19f895de5d339c2c33444575aea9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>friend void</type>
+        <type>void</type>
         <definition>void writeBuffer</definition>
         <argsstring>(uint8_t *buf, uint16_t len)</argsstring>
         <name>writeBuffer</name>
+        <qualifiedname>JETHERNET::W5500Interface::writeBuffer</qualifiedname>
         <param>
           <type>uint8_t *</type>
           <declname>buf</declname>
@@ -102,10 +111,11 @@
         <location file="Core/JPort/include/W5500Interface.hpp" line="51" column="13" bodyfile="Core/JPort/src/W5500Interface.cpp" bodystart="46" bodyend="55"/>
       </memberdef>
       <memberdef kind="friend" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a9b760904bbc60f357339dc98253d6d17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>friend uint8_t</type>
+        <type>uint8_t</type>
         <definition>uint8_t readByte</definition>
         <argsstring>()</argsstring>
         <name>readByte</name>
+        <qualifiedname>JETHERNET::W5500Interface::readByte</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -115,10 +125,11 @@
         <location file="Core/JPort/include/W5500Interface.hpp" line="53" column="16" bodyfile="Core/JPort/src/W5500Interface.cpp" bodystart="57" bodyend="61"/>
       </memberdef>
       <memberdef kind="friend" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a699306e6c14403e4b704222c1f563a97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>friend void</type>
+        <type>void</type>
         <definition>void writeByte</definition>
         <argsstring>(uint8_t byte)</argsstring>
         <name>writeByte</name>
+        <qualifiedname>JETHERNET::W5500Interface::writeByte</qualifiedname>
         <param>
           <type>uint8_t</type>
           <declname>byte</declname>
@@ -132,10 +143,11 @@
         <location file="Core/JPort/include/W5500Interface.hpp" line="54" column="13" bodyfile="Core/JPort/src/W5500Interface.cpp" bodystart="63" bodyend="65"/>
       </memberdef>
       <memberdef kind="friend" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1afb1a7f35c6139dc58d7326c2f2c9415e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>friend void</type>
+        <type>void</type>
         <definition>void enableChipSelect</definition>
         <argsstring>()</argsstring>
         <name>enableChipSelect</name>
+        <qualifiedname>JETHERNET::W5500Interface::enableChipSelect</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -145,10 +157,11 @@
         <location file="Core/JPort/include/W5500Interface.hpp" line="56" column="13" bodyfile="Core/JPort/src/W5500Interface.cpp" bodystart="25" bodyend="28"/>
       </memberdef>
       <memberdef kind="friend" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a666e8918b1e1c3a16b84f9af2154dbcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>friend void</type>
+        <type>void</type>
         <definition>void disableChipSelect</definition>
         <argsstring>()</argsstring>
         <name>disableChipSelect</name>
+        <qualifiedname>JETHERNET::W5500Interface::disableChipSelect</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -158,10 +171,11 @@
         <location file="Core/JPort/include/W5500Interface.hpp" line="57" column="13" bodyfile="Core/JPort/src/W5500Interface.cpp" bodystart="30" bodyend="33"/>
       </memberdef>
       <memberdef kind="friend" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1ab10efff60c8c417e1d2bfd55b62d6d99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>friend void</type>
+        <type>void</type>
         <definition>void CB_DHCP_IPAssigned</definition>
         <argsstring>()</argsstring>
         <name>CB_DHCP_IPAssigned</name>
+        <qualifiedname>JETHERNET::W5500Interface::CB_DHCP_IPAssigned</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -171,10 +185,11 @@
         <location file="Core/JPort/include/W5500Interface.hpp" line="59" column="13" bodyfile="Core/JPort/src/W5500Interface.cpp" bodystart="67" bodyend="71"/>
       </memberdef>
       <memberdef kind="friend" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a39c1c2baaa63c496a10cd53ddd25dd9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>friend void</type>
+        <type>void</type>
         <definition>void CB_DHCP_IPConflict</definition>
         <argsstring>()</argsstring>
         <name>CB_DHCP_IPConflict</name>
+        <qualifiedname>JETHERNET::W5500Interface::CB_DHCP_IPConflict</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -183,13 +198,14 @@
         </inbodydescription>
         <location file="Core/JPort/include/W5500Interface.hpp" line="60" column="13" bodyfile="Core/JPort/src/W5500Interface.cpp" bodystart="73" bodyend="75"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-func">
+    </sectiondef>
+    <sectiondef kind="private-func">
       <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1aa89348093c27c5829755ca57fd8270f9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>JETHERNET::W5500Interface::W5500Interface</definition>
         <argsstring>()=default</argsstring>
         <name>W5500Interface</name>
+        <qualifiedname>JETHERNET::W5500Interface::W5500Interface</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -198,13 +214,14 @@
         </inbodydescription>
         <location file="Core/JPort/include/W5500Interface.hpp" line="43" column="1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
+    </sectiondef>
+    <sectiondef kind="public-func">
       <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1aff3e558de69fda526a439c95757ccad0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool JETHERNET::W5500Interface::initChip</definition>
         <argsstring>()</argsstring>
         <name>initChip</name>
+        <qualifiedname>JETHERNET::W5500Interface::initChip</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -218,6 +235,7 @@
         <definition>bool JETHERNET::W5500Interface::initDHCP</definition>
         <argsstring>(W5500Socket &amp;sock, NetConfig *conf, uint16_t timeoutMs)</argsstring>
         <name>initDHCP</name>
+        <qualifiedname>JETHERNET::W5500Interface::initDHCP</qualifiedname>
         <param>
           <type><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket" kindref="compound">W5500Socket</ref> &amp;</type>
           <declname>sock</declname>
@@ -243,6 +261,7 @@
         <definition>void JETHERNET::W5500Interface::initDNS</definition>
         <argsstring>(W5500Socket &amp;sock)</argsstring>
         <name>initDNS</name>
+        <qualifiedname>JETHERNET::W5500Interface::initDNS</qualifiedname>
         <param>
           <type><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket" kindref="compound">W5500Socket</ref> &amp;</type>
           <declname>sock</declname>
@@ -260,6 +279,7 @@
         <definition>void JETHERNET::W5500Interface::triggerReset</definition>
         <argsstring>()</argsstring>
         <name>triggerReset</name>
+        <qualifiedname>JETHERNET::W5500Interface::triggerReset</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -273,6 +293,7 @@
         <definition>JETHERNET::W5500Interface::W5500Interface</definition>
         <argsstring>(W5500Interface const &amp;)=delete</argsstring>
         <name>W5500Interface</name>
+        <qualifiedname>JETHERNET::W5500Interface::W5500Interface</qualifiedname>
         <param>
           <type><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface" kindref="compound">W5500Interface</ref> const &amp;</type>
         </param>
@@ -289,6 +310,7 @@
         <definition>void JETHERNET::W5500Interface::operator=</definition>
         <argsstring>(W5500Interface const &amp;)=delete</argsstring>
         <name>operator=</name>
+        <qualifiedname>JETHERNET::W5500Interface::operator=</qualifiedname>
         <param>
           <type><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface" kindref="compound">W5500Interface</ref> const &amp;</type>
         </param>
@@ -300,13 +322,14 @@
         </inbodydescription>
         <location file="Core/JPort/include/W5500Interface.hpp" line="73" column="6"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-static-func">
+    </sectiondef>
+    <sectiondef kind="public-static-func">
       <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1af79e30d3b1adb47d652f82c045832f66" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface" kindref="compound">W5500Interface</ref> &amp;</type>
         <definition>W5500Interface &amp; JETHERNET::W5500Interface::instance</definition>
         <argsstring>()</argsstring>
         <name>instance</name>
+        <qualifiedname>JETHERNET::W5500Interface::instance</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -320,6 +343,7 @@
         <definition>bool JETHERNET::W5500Interface::init</definition>
         <argsstring>(W5500Config config)</argsstring>
         <name>init</name>
+        <qualifiedname>JETHERNET::W5500Interface::init</qualifiedname>
         <param>
           <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config" kindref="compound">W5500Config</ref></type>
           <declname>config</declname>
@@ -332,12 +356,12 @@
         </inbodydescription>
         <location file="Core/JPort/include/W5500Interface.hpp" line="67" column="13" bodyfile="Core/JPort/src/W5500Interface.cpp" bodystart="137" bodyend="153"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Core/JPort/include/W5500Interface.hpp" line="37" column="21" bodyfile="Core/JPort/include/W5500Interface.hpp" bodystart="37" bodyend="74"/>
+    <location file="Core/JPort/include/W5500Interface.hpp" line="37" column="1" bodyfile="Core/JPort/include/W5500Interface.hpp" bodystart="37" bodyend="74"/>
     <listofallmembers>
       <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1ab10efff60c8c417e1d2bfd55b62d6d99" prot="public" virt="non-virtual"><scope>JETHERNET::W5500Interface</scope><name>CB_DHCP_IPAssigned</name></member>
       <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_1a39c1c2baaa63c496a10cd53ddd25dd9c" prot="public" virt="non-virtual"><scope>JETHERNET::W5500Interface</scope><name>CB_DHCP_IPConflict</name></member>

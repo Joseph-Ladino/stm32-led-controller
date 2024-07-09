@@ -1,0 +1,84 @@
+\doxysection{W5500\+Interface.\+hpp}
+\hypertarget{_w5500_interface_8hpp_source}{}\label{_w5500_interface_8hpp_source}\index{Core/JPort/include/W5500Interface.hpp@{Core/JPort/include/W5500Interface.hpp}}
+\mbox{\hyperlink{_w5500_interface_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00002}00002\ \textcolor{comment}{\ *\ W5500Interface.h}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Feb\ 17,\ 2024}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ Joseph\ Ladino}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00006}00006\ \textcolor{comment}{\ *\ \ \ \ \ \ @see\ <a\ href="{}https://github.com/afiskon/stm32-\/w5500/blob/master/Src/main.c"{}>reference\ implementation</a>}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00007}00007\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#ifndef\ W5500INTERFACE\_H\_}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#define\ W5500INTERFACE\_H\_}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}stm32g0xx\_hal.h"{}}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_ethernet_h_c_8hpp}{EthernetHC.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}globals.h"{}}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}socket.h"{}}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}dhcp.h"{}}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}dns.h"{}}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00019}00019\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_j_e_t_h_e_r_n_e_t}{JETHERNET}}\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00021}00021\ \textcolor{preprocessor}{\#ifdef\ ETH\_DEBUG}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00022}00022\ \textcolor{preprocessor}{\#define\ ETH\_Printf(...)\ USB\_Printf(\_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00023}00023\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00024}\mbox{\hyperlink{_w5500_interface_8hpp_a7d200943f83896b8be6e2c6a28d097f5}{00024}}\ \textcolor{preprocessor}{\#define\ ETH\_Printf(...)}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00025}00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00027}\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config}{00027}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config}{W5500Config}}\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00028}\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_af4b6ac2300be6775fd30e74dfa06babc}{00028}}\ \ \ \ \ SPI\_HandleTypeDef\ *\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_af4b6ac2300be6775fd30e74dfa06babc}{spi}};}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00029}\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_ab6d0e79fe1e2b8872171136977d23499}{00029}}\ \ \ \ \ GPIO\_TypeDef\ *\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_ab6d0e79fe1e2b8872171136977d23499}{chipSelectPort}};}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00030}\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_a321ce81de4647a007d957ca4b1aab38e}{00030}}\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_a321ce81de4647a007d957ca4b1aab38e}{chipSelectPin}};}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00031}\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_a0d72f294c3e7d6143642b8817cac726f}{00031}}\ \ \ \ \ GPIO\_TypeDef\ *\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_a0d72f294c3e7d6143642b8817cac726f}{resetPort}};}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00032}\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_a4989fb5f65b0849b4483891b844c104f}{00032}}\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_a4989fb5f65b0849b4483891b844c104f}{resetPin}};}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00033}00033\ \};}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00035}00035\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket}{W5500Socket}};}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00036}00036\ \textcolor{comment}{//\ singleton}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00037}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface}{00037}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface}{W5500Interface}}\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00038}00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00039}00039\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config}{W5500Config}}\ config;}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00040}00040\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ ipAssigned\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00041}00041\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ dhcpEnabled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface}{W5500Interface}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00044}00044\ \textcolor{comment}{//\ \ \ \ \ \ virtual\ \string~W5500\_Interface();}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00046}00046\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00048}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_ae4496b2bb9acc463e6410c3b4cf1bd20}{00048}}\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c}{W5500HC}};}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_a9b867262fb1648b34b00bd3ce8ea6366}{readBuffer}}(uint8\_t\ *buf,\ uint16\_t\ len);}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00051}00051\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_a941d19f895de5d339c2c33444575aea9}{writeBuffer}}(uint8\_t\ *buf,\ uint16\_t\ len);}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00053}00053\ \ \ \ \ \textcolor{keyword}{friend}\ uint8\_t\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_a9b760904bbc60f357339dc98253d6d17}{readByte}}();}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00054}00054\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_a699306e6c14403e4b704222c1f563a97}{writeByte}}(uint8\_t\ \textcolor{keywordtype}{byte});}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00056}00056\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_afb1a7f35c6139dc58d7326c2f2c9415e}{enableChipSelect}}();}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00057}00057\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_a666e8918b1e1c3a16b84f9af2154dbcc}{disableChipSelect}}();}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00059}00059\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_ab10efff60c8c417e1d2bfd55b62d6d99}{CB\_DHCP\_IPAssigned}}();}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00060}00060\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_a39c1c2baaa63c496a10cd53ddd25dd9c}{CB\_DHCP\_IPConflict}}();}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00062}00062\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_aff3e558de69fda526a439c95757ccad0}{initChip}}();}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00063}00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_a4cba0c9cc794ebe8199ffafbe342d375}{initDHCP}}(\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket}{W5500Socket}}\&\ sock,\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config}{NetConfig}}*\ conf,\ uint16\_t\ timeoutMs);}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00064}00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_af111b2830d3a6171ed28a70efc782713}{initDNS}}(\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket}{W5500Socket}}\&\ sock);}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00066}00066\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface}{W5500Interface}}\&\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_af79e30d3b1adb47d652f82c045832f66}{instance}}();}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00067}00067\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_abe7d564e593a26c9802116f740b1e4e8}{init}}(\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config}{W5500Config}}\ config);}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00069}00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_a8533e709aa935bf63b96ea9346a861b1}{triggerReset}}();}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00071}00071\ \ \ \ \ \textcolor{comment}{//\ prevent\ copies\ of\ singleton\ being\ generated}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00072}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_a68719cbb52d8c4c5388b479021cdf048}{00072}}\ \ \ \ \ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_a68719cbb52d8c4c5388b479021cdf048}{W5500Interface}}(\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface}{W5500Interface}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00073}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_a9330e7e1ae475691ebadb6aef9c17b66}{00073}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_a9330e7e1ae475691ebadb6aef9c17b66}{operator=}}(\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface}{W5500Interface}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00074}00074\ \};}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00076}00076\ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_w5500_interface_8hpp_source_l00078}00078\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ W5500INTERFACE\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,47 @@
+\doxysection{Ethernet\+HC.\+hpp}
+\hypertarget{_ethernet_h_c_8hpp_source}{}\label{_ethernet_h_c_8hpp_source}\index{JLib/JEthernet/include/EthernetHC.hpp@{JLib/JEthernet/include/EthernetHC.hpp}}
+\mbox{\hyperlink{_ethernet_h_c_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00002}00002\ \textcolor{comment}{\ *\ EthernetHC.h}}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Feb\ 21,\ 2024}}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ user}}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ INC\_ETHERNETHC\_H\_}}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#define\ INC\_ETHERNETHC\_H\_}}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_net_config_8hpp}{NetConfig.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00014}\mbox{\hyperlink{namespace_j_e_t_h_e_r_n_e_t}{00014}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_j_e_t_h_e_r_n_e_t}{JETHERNET}}\ \{}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00016}00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{NetIP}};}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00017}00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock}{NetSock}};}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00023}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c}{00023}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c}{EthernetHC}}\ \{\ \textcolor{comment}{//\ @suppress("{}Class\ has\ a\ virtual\ method\ and\ non-\/virtual\ destructor"{})}}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00024}00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00025}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a869154c83a1821b0738e13ae3f0d961f}{00025}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a869154c83a1821b0738e13ae3f0d961f}{setConfig}}(\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config}{NetConfig}}\&\ netConfig)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00026}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a06b567bffaf6eb147859edf317d4b9bb}{00026}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config}{NetConfig}}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a06b567bffaf6eb147859edf317d4b9bb}{getConfig}}()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00028}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a816685c872acf0ef6864633c90488020}{00028}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a816685c872acf0ef6864633c90488020}{msTick}}()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00029}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a92d9cc9e5308c2c635d6e97947140149}{00029}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a92d9cc9e5308c2c635d6e97947140149}{enableDHCP}}(uint16\_t\ timeoutMs)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00030}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_aec53d829385f6ee0d0296af3943ffe4a}{00030}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_aec53d829385f6ee0d0296af3943ffe4a}{phyLinkStatus}}()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00031}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a1e547d7e6984e2c800d7fecf0260d046}{00031}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a1e547d7e6984e2c800d7fecf0260d046}{waitForLink}}(uint16\_t\ timeoutMs)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00032}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a6e380cb6bb273af7aaac85f1df1de3ac}{00032}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a6e380cb6bb273af7aaac85f1df1de3ac}{init}}(\textcolor{keywordtype}{void}*)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00034}00034\ \ \ \ \ \textcolor{comment}{//\ new\ 03/14}}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00035}00035\ \textcolor{comment}{//\ \ virtual\ void\ deinit()\ =\ 0;}}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00036}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a40a80ea845fb029ca403eb106ed3e3d0}{00036}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a40a80ea845fb029ca403eb106ed3e3d0}{enableDNS}}(\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{NetIP}}\ dns)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00037}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a6036a12d452cc14f70357bfdba6e2a68}{00037}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{NetIP}}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a6036a12d452cc14f70357bfdba6e2a68}{domainToIP}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ domain,\ uint16\_t\ timeoutMs)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00038}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a58730e887e50ba72c7356657179ae7b9}{00038}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock}{NetSock}}\&\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a58730e887e50ba72c7356657179ae7b9}{getFreeSocket}}()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00040}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a5f2760472e72efc27c79d83301c9412e}{00040}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a5f2760472e72efc27c79d83301c9412e}{\string~EthernetHC}}()\ \{\};}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00041}00041\ \};}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00043}00043\ \}}
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_ethernet_h_c_8hpp_source_l00045}00045\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_ETHERNETHC\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

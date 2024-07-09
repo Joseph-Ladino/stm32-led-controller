@@ -1,4 +1,4 @@
-.TH "JMQTT::ClientConfig" 3 "Thu Apr 25 2024" "Version 0.1.1" "CSTM32LedController" \" -*- nroff -*-
+.TH "JMQTT::ClientConfig" 3 "Version 0.1.1" "CSTM32 Led Controller" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -16,7 +16,7 @@ JMQTT::ClientConfig
 .RI "\fBJETHERNET::NetIP\fP \fBbrokerIP\fP = 0"
 .br
 .ti -1c
-.RI "uint16_t \fBbrokerPort\fP = 0"
+.RI "\fBuint16_t\fP \fBbrokerPort\fP = 0"
 .br
 .ti -1c
 .RI "string \fBclientName\fP = 'JMQTTClient'"
@@ -30,8 +30,34 @@ JMQTT::ClientConfig
 .in -1c
 .SH "Detailed Description"
 .PP 
-Definition at line 39 of file Client\&.hpp\&.
+Definition at line \fB39\fP of file \fBClient\&.hpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBJETHERNET::NetIP\fP JMQTT::ClientConfig::brokerIP = 0"
+
+.PP
+Definition at line \fB41\fP of file \fBClient\&.hpp\fP\&.
+.SS "\fBuint16_t\fP JMQTT::ClientConfig::brokerPort = 0"
+
+.PP
+Definition at line \fB42\fP of file \fBClient\&.hpp\fP\&.
+.SS "string JMQTT::ClientConfig::clientName = 'JMQTTClient'"
+
+.PP
+Definition at line \fB43\fP of file \fBClient\&.hpp\fP\&.
+.SS "string JMQTT::ClientConfig::password = ''"
+
+.PP
+Definition at line \fB45\fP of file \fBClient\&.hpp\fP\&.
+.SS "string JMQTT::ClientConfig::username = ''"
+
+.PP
+Definition at line \fB44\fP of file \fBClient\&.hpp\fP\&.
+.SS "MQTTVersion JMQTT::ClientConfig::version = MQTTVersion::MQTT311"
+
+.PP
+Definition at line \fB40\fP of file \fBClient\&.hpp\fP\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for CSTM32LedController from the source code\&.
+Generated automatically by Doxygen for CSTM32 Led Controller from the source code\&.

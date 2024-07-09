@@ -1,4 +1,4 @@
-.TH "JETHERNET::W5500Socket" 3 "Thu Apr 25 2024" "Version 0.1.1" "CSTM32LedController" \" -*- nroff -*-
+.TH "JETHERNET::W5500Socket" 3 "Version 0.1.1" "CSTM32 Led Controller" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -60,10 +60,20 @@ Inherits \fBJETHERNET::NetSock\fP\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-Definition at line 17 of file W5500Socket\&.hpp\&.
+Definition at line \fB17\fP of file \fBW5500Socket\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JETHERNET::W5500Socket::W5500Socket ()"
+
+.PP
+Definition at line \fB91\fP of file \fBW5500Socket\&.cpp\fP\&.
+.SS "JETHERNET::W5500Socket::W5500Socket (int sn)"
+
+.PP
+Definition at line \fB94\fP of file \fBW5500Socket\&.cpp\fP\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "bool JETHERNET::W5500Socket::close ()\fC [override]\fP, \fC [virtual]\fP"
+.SS "bool JETHERNET::W5500Socket::close ()\fR [override]\fP, \fR [virtual]\fP"
 
 .PP
 close socket 
@@ -77,8 +87,8 @@ true if socket successfully closed
 .PP
 Implements \fBJETHERNET::NetSock\fP\&.
 .PP
-Definition at line 37 of file W5500Socket\&.cpp\&.
-.SS "bool JETHERNET::W5500Socket::connectTCP (\fBNetIP\fP ip, uint16_t port)\fC [override]\fP, \fC [virtual]\fP"
+Definition at line \fB37\fP of file \fBW5500Socket\&.cpp\fP\&.
+.SS "bool JETHERNET::W5500Socket::connectTCP (\fBNetIP\fP ip, uint16_t port)\fR [override]\fP, \fR [virtual]\fP"
 
 .PP
 connect to TCP server 
@@ -104,10 +114,10 @@ will attempt to open socket if not open when called
 .PP
 Implements \fBJETHERNET::NetSock\fP\&.
 .PP
-Definition at line 41 of file W5500Socket\&.cpp\&.
+Definition at line \fB41\fP of file \fBW5500Socket\&.cpp\fP\&.
 .PP
-References isConnected(), and open()\&.
-.SS "bool JETHERNET::W5500Socket::disconnect ()\fC [override]\fP, \fC [virtual]\fP"
+References \fBisConnected()\fP, and \fBopen()\fP\&.
+.SS "bool JETHERNET::W5500Socket::disconnect ()\fR [override]\fP, \fR [virtual]\fP"
 
 .PP
 disconnect socket 
@@ -121,8 +131,16 @@ true if socket successfully disconnected from server
 .PP
 Implements \fBJETHERNET::NetSock\fP\&.
 .PP
-Definition at line 60 of file W5500Socket\&.cpp\&.
-.SS "bool JETHERNET::W5500Socket::isConnected () const\fC [virtual]\fP"
+Definition at line \fB60\fP of file \fBW5500Socket\&.cpp\fP\&.
+.SS "int JETHERNET::W5500Socket::getSocketNum () const"
+
+.PP
+Definition at line \fB78\fP of file \fBW5500Socket\&.cpp\fP\&.
+.SS "uint8_t JETHERNET::W5500Socket::getWizSocketStatus () const"
+
+.PP
+Definition at line \fB98\fP of file \fBW5500Socket\&.cpp\fP\&.
+.SS "bool JETHERNET::W5500Socket::isConnected () const\fR [virtual]\fP"
 
 .PP
 check if socket is connected/open 
@@ -141,10 +159,10 @@ misleading name, will probably correct in the future
 .PP
 Implements \fBJETHERNET::NetSock\fP\&.
 .PP
-Definition at line 82 of file W5500Socket\&.cpp\&.
+Definition at line \fB82\fP of file \fBW5500Socket\&.cpp\fP\&.
 .PP
-Referenced by connectTCP(), read(), and write()\&.
-.SS "bool JETHERNET::W5500Socket::open (\fBNetIP\fP ip, uint16_t port, SockConnectMode mode)\fC [override]\fP, \fC [virtual]\fP"
+Referenced by \fBconnectTCP()\fP, \fBread()\fP, and \fBwrite()\fP\&.
+.SS "bool JETHERNET::W5500Socket::open (\fBNetIP\fP ip, uint16_t port, SockConnectMode mode)\fR [override]\fP, \fR [virtual]\fP"
 
 .PP
 \fBParameters\fP
@@ -153,7 +171,7 @@ Referenced by connectTCP(), read(), and write()\&.
 .br
 \fIport\fP destination port 
 .br
-\fImode\fP connection mode 
+\fImode\fP connection 
 .RE
 .PP
 \fBReturns\fP
@@ -165,10 +183,14 @@ true if socket successfully opened
 .PP
 Implements \fBJETHERNET::NetSock\fP\&.
 .PP
-Definition at line 32 of file W5500Socket\&.cpp\&.
+Definition at line \fB32\fP of file \fBW5500Socket\&.cpp\fP\&.
 .PP
-Referenced by connectTCP()\&.
-.SS "int JETHERNET::W5500Socket::read (uint8_t * dataOut, uint16_t len)\fC [override]\fP, \fC [virtual]\fP"
+Referenced by \fBconnectTCP()\fP\&.
+.SS "JETHERNET::W5500Socket::operator bool () const"
+
+.PP
+Definition at line \fB87\fP of file \fBW5500Socket\&.cpp\fP\&.
+.SS "int JETHERNET::W5500Socket::read (uint8_t * dataOut, uint16_t len)\fR [override]\fP, \fR [virtual]\fP"
 
 .PP
 receive data 
@@ -189,10 +211,10 @@ number of bytes read
 .PP
 Implements \fBJETHERNET::NetSock\fP\&.
 .PP
-Definition at line 71 of file W5500Socket\&.cpp\&.
+Definition at line \fB71\fP of file \fBW5500Socket\&.cpp\fP\&.
 .PP
-References isConnected()\&.
-.SS "int JETHERNET::W5500Socket::write (uint8_t * dataIn, uint16_t len)\fC [override]\fP, \fC [virtual]\fP"
+References \fBisConnected()\fP\&.
+.SS "int JETHERNET::W5500Socket::write (uint8_t * dataIn, uint16_t len)\fR [override]\fP, \fR [virtual]\fP"
 
 .PP
 send data 
@@ -213,10 +235,16 @@ number of bytes written
 .PP
 Implements \fBJETHERNET::NetSock\fP\&.
 .PP
-Definition at line 64 of file W5500Socket\&.cpp\&.
+Definition at line \fB64\fP of file \fBW5500Socket\&.cpp\fP\&.
 .PP
-References isConnected()\&.
+References \fBisConnected()\fP\&.
+.SH "Friends And Related Symbol Documentation"
+.PP 
+.SS "friend class \fBW5500HC\fP\fR [friend]\fP"
+
+.PP
+Definition at line \fB36\fP of file \fBW5500Socket\&.hpp\fP\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for CSTM32LedController from the source code\&.
+Generated automatically by Doxygen for CSTM32 Led Controller from the source code\&.

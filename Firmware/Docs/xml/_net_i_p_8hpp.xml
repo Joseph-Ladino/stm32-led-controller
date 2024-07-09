@@ -1,31 +1,107 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="_net_i_p_8hpp" kind="file" language="C++">
     <compoundname>NetIP.hpp</compoundname>
     <includes local="no">cstdint</includes>
+    <includedby refid="_w5500_h_c_8hpp" local="no">Core/JPort/include/W5500HC.hpp</includedby>
     <includedby refid="_net_config_8hpp" local="no">JLib/JEthernet/include/NetConfig.hpp</includedby>
     <includedby refid="_net_sock_8hpp" local="no">JLib/JEthernet/include/NetSock.hpp</includedby>
     <includedby refid="_net_i_p_8cpp" local="no">JLib/JEthernet/src/NetIP.cpp</includedby>
-    <includedby refid="_w5500_h_c_8hpp" local="no">Core/JPort/include/W5500HC.hpp</includedby>
     <incdepgraph>
-      <node id="2">
-        <label>cstdint</label>
-      </node>
       <node id="1">
         <label>JLib/JEthernet/include/NetIP.hpp</label>
         <link refid="_net_i_p_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="13">
+        <label>Core/JPort/include/PAHOClient.hpp</label>
+        <link refid="_p_a_h_o_client_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Core/JPort/include/W5500HC.hpp</label>
+        <link refid="_w5500_h_c_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
       <node id="7">
+        <label>Core/JPort/include/W5500Interface.hpp</label>
+        <link refid="_w5500_interface_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Core/JPort/include/W5500Socket.hpp</label>
+        <link refid="_w5500_socket_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Core/JPort/src/PAHOClient.cpp</label>
+        <link refid="_p_a_h_o_client_8cpp_source"/>
+      </node>
+      <node id="3">
+        <label>Core/JPort/src/W5500HC.cpp</label>
+        <link refid="_w5500_h_c_8cpp_source"/>
+      </node>
+      <node id="8">
+        <label>Core/JPort/src/W5500Interface.cpp</label>
+        <link refid="_w5500_interface_8cpp_source"/>
+      </node>
+      <node id="4">
         <label>Core/JPort/src/W5500Socket.cpp</label>
         <link refid="_w5500_socket_8cpp_source"/>
       </node>
-      <node id="11">
-        <label>JLib/JMQTT/include/Client.hpp</label>
-        <link refid="_client_8hpp_source"/>
+      <node id="6">
+        <label>JLib/JEthernet/include/EthernetHC.hpp</label>
+        <link refid="_ethernet_h_c_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>JLib/JEthernet/include/NetConfig.hpp</label>
+        <link refid="_net_config_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>JLib/JEthernet/include/NetIP.hpp</label>
+        <link refid="_net_i_p_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>JLib/JEthernet/include/NetSock.hpp</label>
+        <link refid="_net_sock_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
         <childnode refid="12" relation="include">
         </childnode>
       </node>
@@ -33,90 +109,14 @@
         <label>JLib/JEthernet/src/NetConfig.cpp</label>
         <link refid="_net_config_8cpp_source"/>
       </node>
-      <node id="6">
-        <label>Core/JPort/src/W5500HC.cpp</label>
-        <link refid="_w5500_h_c_8cpp_source"/>
-      </node>
-      <node id="5">
-        <label>Core/JPort/include/W5500HC.hpp</label>
-        <link refid="_w5500_h_c_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="13">
-        <label>Core/JPort/src/PAHOClient.cpp</label>
-        <link refid="_p_a_h_o_client_8cpp_source"/>
-      </node>
-      <node id="3">
-        <label>JLib/JEthernet/include/EthernetHC.hpp</label>
-        <link refid="_ethernet_h_c_8hpp_source"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
-        <label>Core/JPort/include/PAHOClient.hpp</label>
-        <link refid="_p_a_h_o_client_8hpp_source"/>
-        <childnode refid="13" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>Core/JPort/include/W5500Interface.hpp</label>
-        <link refid="_w5500_interface_8hpp_source"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>JLib/JEthernet/include/NetIP.hpp</label>
-        <link refid="_net_i_p_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="14">
-        <label>Core/JPort/include/W5500Socket.hpp</label>
-        <link refid="_w5500_socket_8hpp_source"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
       <node id="15">
         <label>JLib/JEthernet/src/NetIP.cpp</label>
         <link refid="_net_i_p_8cpp_source"/>
       </node>
-      <node id="10">
-        <label>JLib/JEthernet/include/NetSock.hpp</label>
-        <link refid="_net_sock_8hpp_source"/>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>Core/JPort/src/W5500Interface.cpp</label>
-        <link refid="_w5500_interface_8cpp_source"/>
-      </node>
-      <node id="2">
-        <label>JLib/JEthernet/include/NetConfig.hpp</label>
-        <link refid="_net_config_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
+      <node id="12">
+        <label>JLib/JMQTT/include/Client.hpp</label>
+        <link refid="_client_8hpp_source"/>
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -141,7 +141,7 @@
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">JETHERNET<sp/>{</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22" refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref><sp/>{</highlight></codeline>
+<codeline lineno="22" refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref><sp/>{</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>num<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>raw[4];</highlight></codeline>

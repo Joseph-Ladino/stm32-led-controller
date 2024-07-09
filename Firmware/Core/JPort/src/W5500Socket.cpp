@@ -81,6 +81,7 @@ int W5500Socket::getSocketNum() const {
 
 bool W5500Socket::isConnected() const {
 	auto rc = getWizSocketStatus();
+
 	return /* rc != SOCK_CLOSE_WAIT && */ rc != SOCK_CLOSED && ethHC->phyLinkStatus();
 }
 
