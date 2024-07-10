@@ -24,11 +24,10 @@ public:
 	const static auto HALF_DMA_BUF_LEN = NUM_PIXELS_PER_DMA
 			* LEDBase::NUM_BYTES_PER_PIXEL * 8;
 	const static auto FULL_DMA_BUF_LEN = HALF_DMA_BUF_LEN * 2;
-	const static auto NUM_ELEMENTS_PER_RESET = LEDBase::RES
-			/ LEDBase::PERIOD;
+	const static auto NUM_ELEMENTS_PER_RESET = LEDBase::RES / LEDBase::PERIOD;
 	const static auto DMA_ARR = _DMA_ARR;
-	const static uint16_t DMA_BIT_ONE = (float) LEDBase::ONE_H
-			/ LEDBase::PERIOD * DMA_ARR;
+	const static uint16_t DMA_BIT_ONE = (float) LEDBase::ONE_H / LEDBase::PERIOD
+			* DMA_ARR;
 	const static uint16_t DMA_BIT_ZERO = (float) LEDBase::ZERO_H
 			/ LEDBase::PERIOD * DMA_ARR;
 	enum DMAStatus {
@@ -46,9 +45,8 @@ public:
 	void setStartDMACallback(DMA_START_CB cb);
 	void setStopDMACallback(DMA_STOP_CB cb);
 
-	void update();
 	void display();
-	void byteToDMATiming(uint8_t byte, DMA_BUF_TYPE **outPtr);
+	static void byteToDMATiming(uint8_t byte, DMA_BUF_TYPE **outPtr);
 	void onDMAInterrupt(bool halfCompleteInterrupt);
 	bool displayInProgress();
 
@@ -57,26 +55,24 @@ public:
 
 template<uint16_t _NUM_PIXELS, uint16_t _NUM_PIXELS_PER_DMA, uint16_t _DMA_ARR,
 		typename DMA_BUF_TYPE>
-inline void DMAStrip<_NUM_PIXELS, _NUM_PIXELS_PER_DMA, _DMA_ARR, DMA_BUF_TYPE>::setStartDMACallback(DMA_START_CB cb) {
+inline void DMAStrip<_NUM_PIXELS, _NUM_PIXELS_PER_DMA, _DMA_ARR, DMA_BUF_TYPE>::setStartDMACallback(
+		DMA_START_CB cb) {
 	dmaStart = cb;
 }
 
 template<uint16_t _NUM_PIXELS, uint16_t _NUM_PIXELS_PER_DMA, uint16_t _DMA_ARR,
 		typename DMA_BUF_TYPE>
-inline void DMAStrip<_NUM_PIXELS, _NUM_PIXELS_PER_DMA, _DMA_ARR, DMA_BUF_TYPE>::setStopDMACallback(DMA_STOP_CB cb) {
+inline void DMAStrip<_NUM_PIXELS, _NUM_PIXELS_PER_DMA, _DMA_ARR, DMA_BUF_TYPE>::setStopDMACallback(
+		DMA_STOP_CB cb) {
 	dmaStop = cb;
-}
-
-template<uint16_t _NUM_PIXELS, uint16_t _NUM_PIXELS_PER_DMA, uint16_t _DMA_ARR,
-		typename DMA_BUF_TYPE>
-inline void DMAStrip<_NUM_PIXELS, _NUM_PIXELS_PER_DMA, _DMA_ARR, DMA_BUF_TYPE>::update() {
 }
 
 template<uint16_t _NUM_PIXELS, uint16_t _NUM_PIXELS_PER_DMA, uint16_t _DMA_ARR,
 		typename DMA_BUF_TYPE>
 inline void DMAStrip<_NUM_PIXELS, _NUM_PIXELS_PER_DMA, _DMA_ARR, DMA_BUF_TYPE>::display() {
 
-	if(displayInProgress()) return;
+	if (displayInProgress())
+		return;
 
 	dmaLedIT = LEDBase::begin();
 	dmaTransferStatus = IN_PROGRESS;
@@ -87,7 +83,7 @@ template<uint16_t _NUM_PIXELS, uint16_t _NUM_PIXELS_PER_DMA, uint16_t _DMA_ARR,
 		typename DMA_BUF_TYPE>
 inline void DMAStrip<_NUM_PIXELS, _NUM_PIXELS_PER_DMA, _DMA_ARR, DMA_BUF_TYPE>::byteToDMATiming(
 		uint8_t byte, DMA_BUF_TYPE **outPtr) {
-	byte = byte >> 3; // TEMPORARY BRIGHTNESS SCALING
+	byte = byte >> 2; // TEMPORARY BRIGHTNESS SCALING
 	for (uint8_t b = 0; b < 8; b++) {
 		(*outPtr)[b] = ((byte << b) & 0x80) == 0 ? DMA_BIT_ZERO : DMA_BIT_ONE;
 	}
@@ -99,15 +95,13 @@ template<uint16_t _NUM_PIXELS, uint16_t _NUM_PIXELS_PER_DMA, uint16_t _DMA_ARR,
 inline void DMAStrip<_NUM_PIXELS, _NUM_PIXELS_PER_DMA, _DMA_ARR, DMA_BUF_TYPE>::onDMAInterrupt(
 		bool halfCompleteInterrupt) {
 
-	if(dmaTransferStatus == FULL_RESET) {
-			dmaTransferStatus = DONE;
-			dmaStop();
-			// TODO: stop DMA
-			// callbacks will be needed similar to current DMAController class
-			// also, clean up main.cpp and delete DMAController, this class will replace it
-			// most likely, a class with MQTT/load switch control will either inherit or have an instance of this class
-			return;
-		}
+	// buffer ras been completely set to reset value, dma can be stopped
+	if (dmaTransferStatus == FULL_RESET) {
+		dmaTransferStatus = DONE;
+		dmaStop();
+
+		return;
+	}
 
 	DMA_BUF_TYPE *writeBuf =
 			halfCompleteInterrupt ?
@@ -129,9 +123,13 @@ inline void DMAStrip<_NUM_PIXELS, _NUM_PIXELS_PER_DMA, _DMA_ARR, DMA_BUF_TYPE>::
 
 		// fill with logic low value to transition to WS2815 reset period
 		memset(writeBuf, 0,
-				fillLeds * LEDBase::NUM_BYTES_PER_PIXEL * 8 * sizeof(DMA_BUF_TYPE));
+				fillLeds * LEDBase::NUM_BYTES_PER_PIXEL * 8
+						* sizeof(DMA_BUF_TYPE));
 
-		dmaTransferStatus = (fillLeds == NUM_PIXELS_PER_DMA && dmaTransferStatus == PARTIAL_RESET) ? FULL_RESET : PARTIAL_RESET;
+		dmaTransferStatus =
+				(fillLeds == NUM_PIXELS_PER_DMA
+						&& dmaTransferStatus == PARTIAL_RESET) ?
+						FULL_RESET : PARTIAL_RESET;
 	}
 }
 

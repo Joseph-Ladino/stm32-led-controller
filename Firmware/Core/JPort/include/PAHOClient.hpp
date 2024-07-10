@@ -50,27 +50,34 @@ private:
 	MQTT::Client<PAHONetwork, CountdownTimer> client;
 	MessageCB onMessage;
 	ConnectCB onConnect;
-	bool connect();
 
+	std::vector<MQTTMessageReceiver*> genericReceivers;
+	std::vector<std::pair<std::string, MQTTMessageReceiver*>> specificReceivers;
+	uint16_t receiverWriteIndex = 0;
+
+	bool connect();
 public:
 
 
-	bool publish(Message msg);
-	bool subscribe(string_view topic, QOS qos = QOS::QOS0);
-	bool update(uint16_t timeout);
+	bool publish(Message msg) final;
+	bool update(uint16_t timeout) final;
+	bool subscribe(string_view topic, QOS qos = QOS::QOS0) final;
+	bool subscribe(string_view topic, MQTTMessageReceiver* recv, QOS qos = QOS::QOS0) final;
 
-	bool connect(JETHERNET::NetSock &sock, const ClientConfig config);
-	bool reconnect();
+	bool connect(JETHERNET::NetSock &sock, const ClientConfig config) final;
+	bool reconnect() final;
 	bool reconnect(JETHERNET::NetSock &sock);
-	void disconnect();
-	bool isConnected();
+	void disconnect() final;
+	bool isConnected() final;
 
-	void setMessageCallback(MessageCB func);
-	void setConnectCallback(ConnectCB func);
+	void registerMessageReceiver(MQTTMessageReceiver* recv) final;
+
+	void setMessageCallback(MessageCB func) final;
+	void setConnectCallback(ConnectCB func) final;
 	void pahoMessageReceived(MQTT::MessageData &data);
 
 
-	PAHOClient();
+	PAHOClient(const uint16_t numReceivers = 10);
 	~PAHOClient();
 };
 

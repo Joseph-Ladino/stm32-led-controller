@@ -23,7 +23,19 @@ bool PAHOClient::subscribe(string_view topic, QOS qos) {
 	auto rc = client.subscribe(topic.data(), (MQTT::QoS) qos, { this,
 			&PAHOClient::pahoMessageReceived });
 
+	client.setMessageHandler(topic.data(), {}); // delete specific handler from embedded client
+
 	return rc == MQTT::SUCCESS;
+}
+
+bool PAHOClient::subscribe(string_view topic, MQTTMessageReceiver *recv,
+		QOS qos) {
+	if (!subscribe(topic, qos))
+		return false;
+
+	specificReceivers.emplace_back(topic, recv);
+
+	return true;
 }
 
 bool PAHOClient::connect(NetSock &sock, const ClientConfig config) {
@@ -92,11 +104,19 @@ bool PAHOClient::isConnected() {
 	return client.isConnected();
 }
 
-PAHOClient::PAHOClient() :
+PAHOClient::PAHOClient(const uint16_t numReceivers) :
 		client(net) {
+	genericReceivers.reserve(numReceivers);
+	specificReceivers.reserve(numReceivers);
 }
 
 PAHOClient::~PAHOClient() {
+}
+
+void PAHOClient::registerMessageReceiver(MQTTMessageReceiver *recv) {
+	if (recv == nullptr)
+		return;
+	genericReceivers.push_back(recv);
 }
 
 void PAHOClient::setMessageCallback(PAHOClient::MessageCB func) {
@@ -106,10 +126,10 @@ void PAHOClient::setMessageCallback(PAHOClient::MessageCB func) {
 void PAHOClient::setConnectCallback(PAHOClient::ConnectCB func) {
 	onConnect = func;
 }
-
+#include "globals.h"
 void PAHOClient::pahoMessageReceived(MQTT::MessageData &data) {
 
-	if (!onMessage)
+	if (!(onMessage || genericReceivers.empty() || specificReceivers.empty()))
 		return;
 
 	JMQTT::Message msg;
@@ -119,6 +139,15 @@ void PAHOClient::pahoMessageReceived(MQTT::MessageData &data) {
 	msg.qos = (JMQTT::QOS) data.message.qos;
 
 	onMessage(*this, msg);
+
+	for (auto& recv : genericReceivers) {
+		recv->onMessage(*this, msg);
+	}
+	for (auto& pair : specificReceivers) {
+		if (isTopicMatched(msg.topic, pair.first)) {
+			pair.second->onMessage(*this, msg);
+		}
+	}
 //	msg.qos = data
 }
 

@@ -44,6 +44,8 @@ public:
 	void setAll(Color &col);
 	void setAll(uint32_t col);
 
+	void display();
+
 	WS2815Strip();
 
 	struct iterator {

@@ -28,18 +28,16 @@
 #include "usbd_cdc_if.h"
 #include "globals.h"
 
-#define BUILD_WITH_SECRETS
+//#define BUILD_WITH_SECRETS
 #ifdef BUILD_WITH_SECRETS
 #include "secrets.hpp"
 #endif
 
 #include "W5500HC.hpp"
-//#include "MQTTInterface.hpp"
 #include "CountdownTimer.hpp"
 #include "PAHOClient.hpp"
-//#include <WS2815Strip.hpp>
-//#include "DMAControllerLED.hpp"
 #include "DMAStrip.hpp"
+#include <HomeAssistantStrip.hpp>
 
 /* USER CODE END Includes */
 
@@ -141,12 +139,24 @@ bool ledPowerReady() {
 			== GPIO_PIN_SET;
 }
 
-void messageReceived(JMQTT::Client &client, JMQTT::Message msg) {
-	USB_Printf("%s: %s\n", msg.topic.data(), msg.payload.data());
-	if (msg.topic == "test/switch") {
-		setLedPower(msg.payload == "ON");
-		printf("turning LED_PWR_EN %s\n", msg.payload == "ON" ? "on" : "off");
+struct MQTTMessageHandler: public JMQTT::MQTTMessageReceiver {
+	void onMessage(JMQTT::Client& client, const JMQTT::Message& msg) final {
+		USB_Printf("FROM GENERIC: %s\n", ((string)msg).data());
+		if (msg.topic == "test/switch") {
+			setLedPower(msg.payload == "ON");
+			printf("turning LED_PWR_EN %s\n",
+					msg.payload == "ON" ? "on" : "off");
+		}
 	}
+};
+
+
+void messageReceived(JMQTT::Client &client, JMQTT::Message msg) {
+//	USB_Printf("message received in OG CB handler\n");
+	USB_Printf("FROM OG: %s\n", ((string)msg).data());
+//		setLedPower(msg.payload == "ON");
+//		printf("turning LED_PWR_EN %s\n", msg.payload == "ON" ? "on" : "off");
+//	}
 }
 
 void mqttOnConnected(JMQTT::Client &client) {
@@ -174,7 +184,7 @@ bool connectEth() {
 }
 using buftype = uint32_t;
 using LEDStrip = JLED::DMAStrip<300, 15, 79, buftype>;
-LEDStrip strip;
+HomeAssistantStrip<LEDStrip> strip; // what the fuck
 
 void HAL_TIM_PWM_PulseFinishedHalfCpltCallback(TIM_HandleTypeDef *htim) {
 	strip.onDMAInterrupt(true);
@@ -185,7 +195,7 @@ void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim) {
 }
 
 void startDMA(buftype *buf, uint16_t len) {
-	HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_1, buf, len);
+	HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_1, (uint32_t*)buf, len);
 }
 
 void stopDMA() {
@@ -199,7 +209,7 @@ void LED_Init(TIM_HandleTypeDef *tim) {
 
 	setLedPower(true);
 
-	strip.setAll(0xFF00FF);
+	strip.setAll(0xFF2AFF);
 	strip.setStartDMACallback(startDMA);
 	strip.setStopDMACallback(stopDMA);
 
@@ -213,7 +223,8 @@ void LED_Init(TIM_HandleTypeDef *tim) {
 }
 
 void LED_Update() {
-	static int led = 0, delayMs = 100, frameMs = 7;
+
+	static int led = 0, delayMs = 100, frameMs = 2;
 	static CountdownTimer delay(delayMs);
 	static CountdownTimer frameTimer(frameMs);
 
@@ -225,7 +236,7 @@ void LED_Update() {
 		led = (led + 1) % LEDStrip::NUM_PIXELS;
 	}
 
-	if(frameTimer.expired() && !strip.displayInProgress()) {
+	if (frameTimer.expired() && !strip.displayInProgress()) {
 		frameTimer.countdown_ms(frameMs);
 		strip.display();
 	}
@@ -309,6 +320,10 @@ int main(void) {
 
 #endif
 
+	MQTTMessageHandler mqh;
+
+	mqtt.registerMessageReceiver(&mqh);
+
 	mqtt.setConnectCallback(mqttOnConnected);
 	mqtt.setMessageCallback(messageReceived);
 
@@ -317,6 +332,9 @@ int main(void) {
 	} else {
 		USB_Printf("Error connecting client to MQTT server!\n");
 	}
+
+	strip.attachClient(&mqtt);
+	strip.publishState();
 
 	/* USER CODE END 2 */
 
