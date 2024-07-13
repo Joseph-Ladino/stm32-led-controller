@@ -16,9 +16,9 @@ namespace JMQTT {
 	class HomeAssistantDevice : public MQTTMessageReceiver {
 
 		virtual void onMessage(Client&, const Message&) = 0;
-		virtual void publishState() = 0;
-		virtual void publishDiscovery() = 0;
-		virtual void attachClient(Client*) = 0;
+		virtual void publishState(JMQTT::Client *client) = 0;
+		virtual void publishDiscovery(JMQTT::Client *client) = 0;
+		virtual void init(Client*) = 0;
 	};
 }
 

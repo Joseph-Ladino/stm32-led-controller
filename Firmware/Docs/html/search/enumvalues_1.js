@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['one_5fh_0',['ONE_H',['../class_j_l_e_d_1_1_w_s2815_strip.html#aa56c857b1cb9d6362c0c941b2ad933d3a585d70834f7d9ea7849291b1e6b08dc7',1,'JLED::WS2815Strip']]],
-  ['one_5fl_1',['ONE_L',['../class_j_l_e_d_1_1_w_s2815_strip.html#aa56c857b1cb9d6362c0c941b2ad933d3adad4fc4fc683477cdd8d32c9c0ff92fc',1,'JLED::WS2815Strip']]]
+  ['in_5fprogress_0',['IN_PROGRESS',['../class_j_l_e_d_1_1_d_m_a_strip.html#a3b2eccb9fe4566dde83b0d3200eb0fa8a914536ca583c5228125514d649a8d5bb',1,'JLED::DMAStrip']]]
 ];

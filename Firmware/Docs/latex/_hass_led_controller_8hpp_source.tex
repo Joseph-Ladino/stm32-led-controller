@@ -1,0 +1,36 @@
+\doxysection{Hass\+Led\+Controller.\+hpp}
+\hypertarget{_hass_led_controller_8hpp_source}{}\label{_hass_led_controller_8hpp_source}\index{Core/JPort/include/HassLedController.hpp@{Core/JPort/include/HassLedController.hpp}}
+\mbox{\hyperlink{_hass_led_controller_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00002}00002\ \textcolor{comment}{\ *\ HassLedController.hpp}}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Jul\ 12,\ 2024}}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ user}}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ JPORT\_INCLUDE\_HASSLEDCONTROLLER\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#define\ JPORT\_INCLUDE\_HASSLEDCONTROLLER\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <ArduinoJson.h>}}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_d_m_a_strip_8hpp}{DMAStrip.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_home_assistant_device_8hpp}{HomeAssistantDevice.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_net_config_8hpp}{NetConfig.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}globals.h"{}}}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}boardinfo.h"{}}}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00019}00019\ \textcolor{keyword}{using\ }std::string;}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00020}00020\ \textcolor{keyword}{using\ }\mbox{\hyperlink{struct_j_l_e_d_1_1_color}{JLED::Color}};}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00022}00022\ \textcolor{keyword}{template}<uint16\_t\ \_NUM\_PIXELS\ =\ 10,\ uint16\_t\ \_NUM\_PIXELS\_PER\_DMA\ =\ 5,}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00023}00023\ \ \ \ \ \ \ \ \ uint16\_t\ \_DMA\_ARR\ =\ 79,\ \textcolor{keyword}{typename}\ DMA\_BUF\_TYPE\ =\ uint32\_t>}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00024}\mbox{\hyperlink{class_hass_led_controller}{00024}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_hass_led_controller}{HassLedController}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED::DMAStrip}}<\_NUM\_PIXELS,}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \_NUM\_PIXELS\_PER\_DMA,\ \_DMA\_ARR,\ DMA\_BUF\_TYPE>,}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_home_assistant_device}{JMQTT::HomeAssistantDevice}}\ \{}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00028}00028\ \};}
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_hass_led_controller_8hpp_source_l00030}00030\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ JPORT\_INCLUDE\_HASSLEDCONTROLLER\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

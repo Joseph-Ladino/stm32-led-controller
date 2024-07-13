@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['r_0',['r',['../struct_j_l_e_d_1_1_color.html#a450cffa91c156cbc2fdd5f4dda74b9da',1,'JLED::Color']]],
-  ['raw_1',['raw',['../struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a232d117efc1173373972c819a0e48e64',1,'JETHERNET::NetIP::raw'],['../struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#ab2d7fa28425227ed5f42f6dd29fa1fa0',1,'JETHERNET::NetMAC::raw'],['../struct_j_l_e_d_1_1_color.html#ac2553ef03f3016ee30a946ff5ab45720',1,'JLED::Color::raw'],['../class_j_l_e_d_1_1_w_s2815_strip.html#a5d65329ef1c35d1af1c7e9298e21de24',1,'JLED::WS2815Strip::raw']]],
-  ['resetpin_2',['resetPin',['../struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config.html#a4989fb5f65b0849b4483891b844c104f',1,'JETHERNET::W5500Config']]],
-  ['resetport_3',['resetPort',['../struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config.html#a0d72f294c3e7d6143642b8817cac726f',1,'JETHERNET::W5500Config']]]
+  ['num_0',['num',['../struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a2b107533f39fd496cc2e485a9ecc2f99',1,'JETHERNET::NetIP::num'],['../struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a981fc3ca441bef4f8e749f9a1ee294be',1,'JETHERNET::NetMAC::num'],['../struct_j_l_e_d_1_1_color.html#a7697370bee3952e1fd6d7fdad83908fc',1,'JLED::Color::num']]],
+  ['num_5fbytes_5fper_5fpixel_1',['NUM_BYTES_PER_PIXEL',['../class_j_l_e_d_1_1_w_s2815_strip.html#a3dc44ee35310d883f0370e6434d3ad21',1,'JLED::WS2815Strip']]],
+  ['num_5fbytes_5ftotal_2',['NUM_BYTES_TOTAL',['../class_j_l_e_d_1_1_w_s2815_strip.html#aa8164695a6895aff89a57c5ba600a5d9',1,'JLED::WS2815Strip']]],
+  ['num_5felements_5fper_5freset_3',['NUM_ELEMENTS_PER_RESET',['../class_j_l_e_d_1_1_d_m_a_strip.html#a2a3d04664989907225ca776f13d9648e',1,'JLED::DMAStrip']]],
+  ['num_5fpixels_4',['NUM_PIXELS',['../class_j_l_e_d_1_1_d_m_a_strip.html#aaa407121f2010e106a2da4cb708ef656',1,'JLED::DMAStrip::NUM_PIXELS'],['../class_j_l_e_d_1_1_w_s2815_strip.html#a92973a42758beb56a6d9173fcf3bbd38',1,'JLED::WS2815Strip::NUM_PIXELS']]],
+  ['num_5fpixels_5fper_5fdma_5',['NUM_PIXELS_PER_DMA',['../class_j_l_e_d_1_1_d_m_a_strip.html#a4ead60f1951ccd63b65709e8260050e5',1,'JLED::DMAStrip']]]
 ];

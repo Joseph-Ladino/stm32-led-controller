@@ -1,0 +1,40 @@
+\doxysection{Strip\+Types.\+hpp}
+\hypertarget{_strip_types_8hpp_source}{}\label{_strip_types_8hpp_source}\index{JLib/JLED/include/StripTypes.hpp@{JLib/JLED/include/StripTypes.hpp}}
+\mbox{\hyperlink{_strip_types_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00002}00002\ \textcolor{comment}{\ *\ StripTypes.hpp}}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Jul\ 13,\ 2024}}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ user}}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ JLED\_INCLUDE\_STRIPTYPES\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#define\ JLED\_INCLUDE\_STRIPTYPES\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_color_8hpp}{Color.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00013}00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_j_l_e_d}{JLED}}\ \{}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00015}00015\ \textcolor{keyword}{template}\ <u\textcolor{keywordtype}{int}8\_t\ BytesPerPixel,\ u\textcolor{keywordtype}{int}16\_t\ ZeroHighMs,\ u\textcolor{keywordtype}{int}16\_t\ OneHighMs,\ u\textcolor{keywordtype}{int}16\_t\ PwmPeriodMs>}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00016}\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_type}{00016}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_type}{WSStripType}}\ \{}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00017}\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_type_a316971d07579a96f9a5ec35739d48e35}{00017}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint8\_t\ \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_type_a8e1a599a79fc9533837dc1b49adaec2d}{bytesPerPixel}}\ =\ BytesPerPixel,\ \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_type_a316971d07579a96f9a5ec35739d48e35}{bitsPerPixel}}\ =\ BytesPerPixel\ *\ 8;}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00018}\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_type_ab4defe5df1ea076444fdc8162f899f92}{00018}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint16\_t\ \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_type_a0666f440c3fc4b623964355f319ea329}{zeroHighMs}}\ =\ ZeroHighMs,\ \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_type_ab4defe5df1ea076444fdc8162f899f92}{oneHighMs}}\ =\ OneHighMs,\ \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_type_a3bf6d1b04838032dfda693dfaad447f8}{pwmPeriodMs}}\ =\ PwmPeriodMs;}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00020}\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_type_af7952a4ffc571d7514709067d653eb8d}{00020}}\ \ \ \ \ \textcolor{keyword}{static}\ uint32\_t\ \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_type_af7952a4ffc571d7514709067d653eb8d}{getOrderedBytes}}(\mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}}\&\ pixel);}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00021}00021\ \};}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00023}00023\ \textcolor{keyword}{template}\ <u\textcolor{keywordtype}{int}16\_t\ ZeroHighMs,\ u\textcolor{keywordtype}{int}16\_t\ OneHighMs,\ u\textcolor{keywordtype}{int}16\_t\ PwmPeriodMs>}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00024}\mbox{\hyperlink{struct_j_l_e_d_1_1_g_r_b_strip_type}{00024}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_j_l_e_d_1_1_g_r_b_strip_type}{GRBStripType}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_type}{WSStripType}}<3,\ ZeroHighMs,\ OneHighMs,\ PwmPeriodMs>\ \{}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00025}\mbox{\hyperlink{struct_j_l_e_d_1_1_g_r_b_strip_type_a71007e549cdd5445cfac63dd8007bece}{00025}}\ \ \ \ \ \textcolor{keyword}{static}\ uint32\_t\ \mbox{\hyperlink{struct_j_l_e_d_1_1_g_r_b_strip_type_a71007e549cdd5445cfac63dd8007bece}{getOrderedBytes}}(\mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}}\&\ pixel)\ \{}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pixel.\mbox{\hyperlink{struct_j_l_e_d_1_1_color_a53b60a1180be5dca5879493599c3c924}{g}}\ <<\ 16\ |\ pixel.\mbox{\hyperlink{struct_j_l_e_d_1_1_color_a450cffa91c156cbc2fdd5f4dda74b9da}{r}}\ <<\ 8\ |\ pixel.\mbox{\hyperlink{struct_j_l_e_d_1_1_color_abc9619ad0b5523617ab8073e9d75a6b7}{b}};}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00028}00028\ \};}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00030}\mbox{\hyperlink{namespace_j_l_e_d_a57412369bef60f93939ebdbe29ae9348}{00030}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{struct_j_l_e_d_1_1_g_r_b_strip_type}{WS2815StripType}}\ =\ \mbox{\hyperlink{struct_j_l_e_d_1_1_g_r_b_strip_type}{GRBStripType<350,\ 700,\ 1250>}};}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00032}00032\ \};}
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_strip_types_8hpp_source_l00034}00034\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ JLED\_INCLUDE\_STRIPTYPES\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -8,6 +8,7 @@
 #include "CountdownTimer.hpp"
 
 void CountdownTimer::countdown_ms(uint32_t ms) {
+	lastTimerDuration = ms;
 	endMs = tick + ms;
 }
 

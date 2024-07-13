@@ -38,6 +38,13 @@ struct CountdownTimer {
 	void countdown(uint16_t sec);
 
 	/**
+	 * @brief restart timer using the last set timer duration
+	 */
+	inline void reset() {
+		countdown_ms(lastTimerDuration);
+	}
+
+	/**
 	 * @brief remaining timer duration
 	 * @return milliseconds left until timer expires
 	 * @note camelcase naming pattern is not followed due to this class being directly used in <a href="https://modelbasedtesting.co.uk/2014/08/25/porting-a-paho-embedded-c-client/">PAHOMqtt</a>
@@ -76,6 +83,7 @@ struct CountdownTimer {
 
 private:
 	uint32_t endMs = 0;
+	uint32_t lastTimerDuration = 0;
 
 protected:
 	inline static uint32_t tick = 0;

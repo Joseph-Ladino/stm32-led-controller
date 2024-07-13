@@ -22,9 +22,15 @@ Inheritance diagram for JMQTT\+::Client\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{virtual}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{bool}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client_a8e4b70bb656d1d7b5ba4f11d7e64e5aa}{publish}} (\mbox{\hyperlink{struct_j_m_q_t_t_1_1_message}{Message}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}})=0
 \item 
-\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{virtual}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{bool}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client_a61f9bb3e61ba5fa6e516e2b5729074be}{subscribe}} (string\+\_\+view topic, \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3}{QOS}} qos=\mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a065532b760e1ff433556caf8cff11819}{QOS\+::\+QOS0}})=0
+\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{virtual}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{bool}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client_a4c93aa930c740dcd179aabf654c13533}{publish}} (string topic, string message, \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3}{QOS}} qos=\mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a065532b760e1ff433556caf8cff11819}{QOS\+::\+QOS0}}) \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{final}}
 \item 
 \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{virtual}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{bool}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client_aa04cc45d722283c9e871980f4d1a27c1}{update}} (\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{uint16\+\_\+t}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{timeout\+Ms}})=0
+\item 
+\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{virtual}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{bool}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client_a61f9bb3e61ba5fa6e516e2b5729074be}{subscribe}} (string\+\_\+view topic, \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3}{QOS}} qos=\mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a065532b760e1ff433556caf8cff11819}{QOS\+::\+QOS0}})=0
+\item 
+\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{virtual}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{bool}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client_a79cfc7f5edd6cdb8382202ab4f573dd0}{subscribe}} (string\+\_\+view topic, \mbox{\hyperlink{struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver}{MQTTMessage\+Receiver}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{recv}}, \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3}{QOS}} qos=\mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a065532b760e1ff433556caf8cff11819}{QOS\+::\+QOS0}})=0
+\item 
+\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{virtual}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{bool}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client_a6c3f3a90dbafa7887cc8bd5d21b6eaba}{is\+Topic\+Matched}} (string\+\_\+view topic, string\+\_\+view \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{filter}}) \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{final}}
 \item 
 \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{virtual}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{bool}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client_a32cc54d1b9285f0ba99dfabda2a03bd5}{connect}} (\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock}{JETHERNET\+::\+Net\+Sock}} \&sock, \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{const}} \mbox{\hyperlink{struct_j_m_q_t_t_1_1_client_config}{Client\+Config}} config)=0
 \item 
@@ -33,6 +39,8 @@ Inheritance diagram for JMQTT\+::Client\+:\begin{figure}[H]
 \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{virtual}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{void}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client_a3581c3e4959d19a43f30b8eb70e69493}{disconnect}} ()=0
 \item 
 \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{virtual}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{bool}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client_a70dab29288dc7daad9b1c1587e569441}{is\+Connected}} ()=0
+\item 
+\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{virtual}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{void}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client_a145db1bc71e86f58867c58c47c5e0ac1}{register\+Message\+Receiver}} (\mbox{\hyperlink{struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver}{MQTTMessage\+Receiver}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{recv}})=0
 \item 
 \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{virtual}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{void}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client_a1fbf4f35c4d0e9bfa93d2d3f3d3c86a4}{set\+Message\+Callback}} (\mbox{\hyperlink{class_j_m_q_t_t_1_1_client_afdd270cfe93363df3d9076452ace76fa}{Message\+CB}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{func}})=0
 \item 
@@ -45,7 +53,7 @@ Inheritance diagram for JMQTT\+::Client\+:\begin{figure}[H]
 \doxysubsection{Detailed Description}
 
 
-Definition at line \mbox{\hyperlink{_client_8hpp_source_l00048}{48}} of file \mbox{\hyperlink{_client_8hpp_source}{Client.\+hpp}}.
+Definition at line \mbox{\hyperlink{_client_8hpp_source_l00062}{62}} of file \mbox{\hyperlink{_client_8hpp_source}{Client.\+hpp}}.
 
 
 
@@ -58,7 +66,7 @@ Definition at line \mbox{\hyperlink{_client_8hpp_source_l00048}{48}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{_client_8hpp_source_l00051}{51}} of file \mbox{\hyperlink{_client_8hpp_source}{Client.\+hpp}}.
+Definition at line \mbox{\hyperlink{_client_8hpp_source_l00064}{64}} of file \mbox{\hyperlink{_client_8hpp_source}{Client.\+hpp}}.
 
 \Hypertarget{class_j_m_q_t_t_1_1_client_afdd270cfe93363df3d9076452ace76fa}\label{class_j_m_q_t_t_1_1_client_afdd270cfe93363df3d9076452ace76fa} 
 \index{JMQTT::Client@{JMQTT::Client}!MessageCB@{MessageCB}}
@@ -68,7 +76,7 @@ Definition at line \mbox{\hyperlink{_client_8hpp_source_l00051}{51}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{_client_8hpp_source_l00052}{52}} of file \mbox{\hyperlink{_client_8hpp_source}{Client.\+hpp}}.
+Definition at line \mbox{\hyperlink{_client_8hpp_source_l00065}{65}} of file \mbox{\hyperlink{_client_8hpp_source}{Client.\+hpp}}.
 
 
 
@@ -81,7 +89,7 @@ Definition at line \mbox{\hyperlink{_client_8hpp_source_l00052}{52}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{_client_8hpp_source_l00066}{66}} of file \mbox{\hyperlink{_client_8hpp_source}{Client.\+hpp}}.
+Definition at line \mbox{\hyperlink{_client_8hpp_source_l00110}{110}} of file \mbox{\hyperlink{_client_8hpp_source}{Client.\+hpp}}.
 
 
 
@@ -94,7 +102,7 @@ Definition at line \mbox{\hyperlink{_client_8hpp_source_l00066}{66}} of file \mb
 
 
 
-Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a9a94024ef51ef3c1c26f5f6d23160c1f}{JMQTT\+::\+PAHOClient}}.
+Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_aeb7893b4085058e567fc89b6718fbd18}{JMQTT\+::\+PAHOClient}}.
 
 \Hypertarget{class_j_m_q_t_t_1_1_client_a3581c3e4959d19a43f30b8eb70e69493}\label{class_j_m_q_t_t_1_1_client_a3581c3e4959d19a43f30b8eb70e69493} 
 \index{JMQTT::Client@{JMQTT::Client}!disconnect@{disconnect}}
@@ -104,7 +112,7 @@ Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a9a94024ef51e
 
 
 
-Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a2592dfc13815f6bb46f0dc10e6b67ee4}{JMQTT\+::\+PAHOClient}}.
+Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_aa248683c2b1a64cad876e5c8aba844e6}{JMQTT\+::\+PAHOClient}}.
 
 \Hypertarget{class_j_m_q_t_t_1_1_client_a70dab29288dc7daad9b1c1587e569441}\label{class_j_m_q_t_t_1_1_client_a70dab29288dc7daad9b1c1587e569441} 
 \index{JMQTT::Client@{JMQTT::Client}!isConnected@{isConnected}}
@@ -114,17 +122,37 @@ Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a2592dfc13815
 
 
 
-Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a512779577f19fd55308ec4d5bb23a56c}{JMQTT\+::\+PAHOClient}}.
+Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a20baf4bc65d6a27acb56f3d05967937d}{JMQTT\+::\+PAHOClient}}.
+
+\Hypertarget{class_j_m_q_t_t_1_1_client_a6c3f3a90dbafa7887cc8bd5d21b6eaba}\label{class_j_m_q_t_t_1_1_client_a6c3f3a90dbafa7887cc8bd5d21b6eaba} 
+\index{JMQTT::Client@{JMQTT::Client}!isTopicMatched@{isTopicMatched}}
+\index{isTopicMatched@{isTopicMatched}!JMQTT::Client@{JMQTT::Client}}
+\doxysubsubsection{\texorpdfstring{isTopicMatched()}{isTopicMatched()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{virtual}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{bool}} JMQTT\+::\+Client\+::is\+Topic\+Matched (\begin{DoxyParamCaption}\item[{string\+\_\+view}]{topic,  }\item[{string\+\_\+view}]{filter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_8hpp_source_l00076}{76}} of file \mbox{\hyperlink{_client_8hpp_source}{Client.\+hpp}}.
 
 \Hypertarget{class_j_m_q_t_t_1_1_client_a8e4b70bb656d1d7b5ba4f11d7e64e5aa}\label{class_j_m_q_t_t_1_1_client_a8e4b70bb656d1d7b5ba4f11d7e64e5aa} 
 \index{JMQTT::Client@{JMQTT::Client}!publish@{publish}}
 \index{publish@{publish}!JMQTT::Client@{JMQTT::Client}}
-\doxysubsubsection{\texorpdfstring{publish()}{publish()}}
+\doxysubsubsection{\texorpdfstring{publish()}{publish()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{virtual}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{bool}} JMQTT\+::\+Client\+::publish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_m_q_t_t_1_1_message}{Message}}}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a5bbf16a26e74c93a9a8b372d7548cba9}{JMQTT\+::\+PAHOClient}}.
+Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_afe848a1c54f215fe65d088fcb123617f}{JMQTT\+::\+PAHOClient}}.
+
+\Hypertarget{class_j_m_q_t_t_1_1_client_a4c93aa930c740dcd179aabf654c13533}\label{class_j_m_q_t_t_1_1_client_a4c93aa930c740dcd179aabf654c13533} 
+\index{JMQTT::Client@{JMQTT::Client}!publish@{publish}}
+\index{publish@{publish}!JMQTT::Client@{JMQTT::Client}}
+\doxysubsubsection{\texorpdfstring{publish()}{publish()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{virtual}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{bool}} JMQTT\+::\+Client\+::publish (\begin{DoxyParamCaption}\item[{string}]{topic,  }\item[{string}]{message,  }\item[{\mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3}{QOS}}}]{qos = {\ttfamily \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a065532b760e1ff433556caf8cff11819}{QOS\+::\+QOS0}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_8hpp_source_l00068}{68}} of file \mbox{\hyperlink{_client_8hpp_source}{Client.\+hpp}}.
 
 \Hypertarget{class_j_m_q_t_t_1_1_client_ac2c1c3f2c2ac1938661dbaae2ecbf39c}\label{class_j_m_q_t_t_1_1_client_ac2c1c3f2c2ac1938661dbaae2ecbf39c} 
 \index{JMQTT::Client@{JMQTT::Client}!reconnect@{reconnect}}
@@ -134,7 +162,17 @@ Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a5bbf16a26e74
 
 
 
-Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a106782e6d80da9c3269c004eec75ec07}{JMQTT\+::\+PAHOClient}}.
+Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a3c9e4e4bd1f770736518ea312724cb5e}{JMQTT\+::\+PAHOClient}}.
+
+\Hypertarget{class_j_m_q_t_t_1_1_client_a145db1bc71e86f58867c58c47c5e0ac1}\label{class_j_m_q_t_t_1_1_client_a145db1bc71e86f58867c58c47c5e0ac1} 
+\index{JMQTT::Client@{JMQTT::Client}!registerMessageReceiver@{registerMessageReceiver}}
+\index{registerMessageReceiver@{registerMessageReceiver}!JMQTT::Client@{JMQTT::Client}}
+\doxysubsubsection{\texorpdfstring{registerMessageReceiver()}{registerMessageReceiver()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{virtual}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{void}} JMQTT\+::\+Client\+::register\+Message\+Receiver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver}{MQTTMessage\+Receiver}} \texorpdfstring{$\ast$}{*}}]{recv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_abb257a69eab13ff3db5c3d48233ecfd6}{JMQTT\+::\+PAHOClient}}.
 
 \Hypertarget{class_j_m_q_t_t_1_1_client_a9c50f65617e65d5e863a984d94890a59}\label{class_j_m_q_t_t_1_1_client_a9c50f65617e65d5e863a984d94890a59} 
 \index{JMQTT::Client@{JMQTT::Client}!setConnectCallback@{setConnectCallback}}
@@ -144,7 +182,7 @@ Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a106782e6d80d
 
 
 
-Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a9e623915c12da35dc7a9d0be2cbfe8b7}{JMQTT\+::\+PAHOClient}}.
+Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a6a9f497f3bcec8c8973295b8d1c16759}{JMQTT\+::\+PAHOClient}}.
 
 \Hypertarget{class_j_m_q_t_t_1_1_client_a1fbf4f35c4d0e9bfa93d2d3f3d3c86a4}\label{class_j_m_q_t_t_1_1_client_a1fbf4f35c4d0e9bfa93d2d3f3d3c86a4} 
 \index{JMQTT::Client@{JMQTT::Client}!setMessageCallback@{setMessageCallback}}
@@ -154,17 +192,27 @@ Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a9e623915c12d
 
 
 
-Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_aafe1ca238b53d18a689f22a309017fdf}{JMQTT\+::\+PAHOClient}}.
+Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_ae6559e72b777963037108268a1dc0178}{JMQTT\+::\+PAHOClient}}.
+
+\Hypertarget{class_j_m_q_t_t_1_1_client_a79cfc7f5edd6cdb8382202ab4f573dd0}\label{class_j_m_q_t_t_1_1_client_a79cfc7f5edd6cdb8382202ab4f573dd0} 
+\index{JMQTT::Client@{JMQTT::Client}!subscribe@{subscribe}}
+\index{subscribe@{subscribe}!JMQTT::Client@{JMQTT::Client}}
+\doxysubsubsection{\texorpdfstring{subscribe()}{subscribe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{virtual}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{bool}} JMQTT\+::\+Client\+::subscribe (\begin{DoxyParamCaption}\item[{string\+\_\+view}]{topic,  }\item[{\mbox{\hyperlink{struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver}{MQTTMessage\+Receiver}} \texorpdfstring{$\ast$}{*}}]{recv,  }\item[{\mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3}{QOS}}}]{qos = {\ttfamily \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a065532b760e1ff433556caf8cff11819}{QOS\+::\+QOS0}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a709dc06d762afff5b1640ae6dc5ddffb}{JMQTT\+::\+PAHOClient}}.
 
 \Hypertarget{class_j_m_q_t_t_1_1_client_a61f9bb3e61ba5fa6e516e2b5729074be}\label{class_j_m_q_t_t_1_1_client_a61f9bb3e61ba5fa6e516e2b5729074be} 
 \index{JMQTT::Client@{JMQTT::Client}!subscribe@{subscribe}}
 \index{subscribe@{subscribe}!JMQTT::Client@{JMQTT::Client}}
-\doxysubsubsection{\texorpdfstring{subscribe()}{subscribe()}}
+\doxysubsubsection{\texorpdfstring{subscribe()}{subscribe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{virtual}} \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{bool}} JMQTT\+::\+Client\+::subscribe (\begin{DoxyParamCaption}\item[{string\+\_\+view}]{topic,  }\item[{\mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3}{QOS}}}]{qos = {\ttfamily \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a065532b760e1ff433556caf8cff11819}{QOS\+::\+QOS0}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a3811ba986b402d0066c0e868d6a1113e}{JMQTT\+::\+PAHOClient}}.
+Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a56e726777777894ea43abe21a733a9b8}{JMQTT\+::\+PAHOClient}}.
 
 \Hypertarget{class_j_m_q_t_t_1_1_client_aa04cc45d722283c9e871980f4d1a27c1}\label{class_j_m_q_t_t_1_1_client_aa04cc45d722283c9e871980f4d1a27c1} 
 \index{JMQTT::Client@{JMQTT::Client}!update@{update}}
@@ -174,7 +222,7 @@ Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a3811ba986b40
 
 
 
-Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_ab6a8114c17036596b81f37a292741d7e}{JMQTT\+::\+PAHOClient}}.
+Implemented in \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_afae9910504f45ae20a063835f11c34a4}{JMQTT\+::\+PAHOClient}}.
 
 
 

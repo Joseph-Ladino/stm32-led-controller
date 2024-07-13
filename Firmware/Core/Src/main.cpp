@@ -28,7 +28,7 @@
 #include "usbd_cdc_if.h"
 #include "globals.h"
 
-//#define BUILD_WITH_SECRETS
+#define BUILD_WITH_SECRETS
 #ifdef BUILD_WITH_SECRETS
 #include "secrets.hpp"
 #endif
@@ -56,9 +56,11 @@ extern DMA_HandleTypeDef hdma_tim1_ch1;
 extern "C" {
 int _write(int file, char *ptr, int len) {
 
+	UNUSED(file);
+
 #ifdef USE_USB_DEBUG
 	uint8_t rc = USBD_FAIL;
-	CountdownTimer timeoutTimer(2000);
+	CountdownTimer timeoutTimer(5);
 
 	do {
 		rc = CDC_Transmit_FS((uint8_t*) ptr, len);
@@ -66,11 +68,7 @@ int _write(int file, char *ptr, int len) {
 
 	if (timeoutTimer.expired())
 		return 0;
-//
-//	if (USBD_FAIL == rc) {
-//		HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_SET);
-//		return 0;
-//	}
+
 #endif
 	return len;
 }
@@ -97,6 +95,10 @@ UART_HandleTypeDef huart1;
 W5500HC eth;
 JMQTT::PAHOClient mqtt;
 
+using buftype = uint32_t;
+using LEDStrip = HomeAssistantStrip<300, 11, 79, buftype>;
+LEDStrip strip;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -114,54 +116,29 @@ static void MX_TIM3_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-//static unsigned int arrivedcount = 0;
-//void messageArrived(MQTT::MessageData &md) {
-//	MQTT::Message &message = md.message;
-//
-//	USB_Printf("Message %d arrived: qos %d, retained %d, dup %d, packetid %d\n",
-//			++arrivedcount, message.qos, message.retained, message.dup,
-//			message.id);
-//	USB_Printf("Payload %.*s\n", (int ) message.payloadlen,
-//			(char* ) message.payload);
-//}
-//
-//void messageArrivedDefault(MQTT::MessageData &md) {
-//	USB_Printf("\nDefault handler called:\n");
-//	messageArrived(md);
-//}
 void setLedPower(bool on) {
 	auto state = on ? GPIO_PIN_SET : GPIO_PIN_RESET;
 	HAL_GPIO_WritePin(LED_PWR_EN_GPIO_Port, LED_PWR_EN_Pin, state);
-}
 
-bool ledPowerReady() {
-	return HAL_GPIO_ReadPin(LED_PWR_EN_GPIO_Port, LED_PWR_EN_Pin)
-			== GPIO_PIN_SET;
-}
+	CountdownTimer pwrTimeout(100);
+	while (!(HAL_GPIO_ReadPin(LED_PWR_EN_GPIO_Port, LED_PWR_EN_Pin) == state || pwrTimeout.expired()))
+		;
 
-struct MQTTMessageHandler: public JMQTT::MQTTMessageReceiver {
-	void onMessage(JMQTT::Client& client, const JMQTT::Message& msg) final {
-		USB_Printf("FROM GENERIC: %s\n", ((string)msg).data());
-		if (msg.topic == "test/switch") {
-			setLedPower(msg.payload == "ON");
-			printf("turning LED_PWR_EN %s\n",
-					msg.payload == "ON" ? "on" : "off");
-		}
+	if (pwrTimeout.expired()) {
+		USB_Printf("\n ERROR CHANGING LED POWER\n");
+		return;
 	}
-};
-
+}
 
 void messageReceived(JMQTT::Client &client, JMQTT::Message msg) {
-//	USB_Printf("message received in OG CB handler\n");
-	USB_Printf("FROM OG: %s\n", ((string)msg).data());
-//		setLedPower(msg.payload == "ON");
-//		printf("turning LED_PWR_EN %s\n", msg.payload == "ON" ? "on" : "off");
-//	}
+	UNUSED(client);
+	USB_Printf("FROM OG: %s\n", ((string )msg).data());
 }
 
 void mqttOnConnected(JMQTT::Client &client) {
 	client.publish( { "test", "test" });
 	client.subscribe("test/#");
+	strip.init(&client); // subscriptions not persistent on reconnect
 }
 
 bool connectEth() {
@@ -182,49 +159,38 @@ bool connectEth() {
 
 	return true;
 }
-using buftype = uint32_t;
-using LEDStrip = JLED::DMAStrip<300, 15, 79, buftype>;
-HomeAssistantStrip<LEDStrip> strip; // what the fuck
 
 void HAL_TIM_PWM_PulseFinishedHalfCpltCallback(TIM_HandleTypeDef *htim) {
+	UNUSED(htim);
 	strip.onDMAInterrupt(true);
 }
 
 void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim) {
+	UNUSED(htim);
 	strip.onDMAInterrupt(false);
 }
 
 void startDMA(buftype *buf, uint16_t len) {
-	HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_1, (uint32_t*)buf, len);
+	HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_1, (uint32_t*) buf, len);
 }
 
 void stopDMA() {
 	HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_1);
 }
 
-void LED_Init(TIM_HandleTypeDef *tim) {
+void LED_Init() {
 	using namespace JLED;
 
-	CountdownTimer pwrTimeout(100);
-
-	setLedPower(true);
-
+	strip.setPhysicalPowerCB(setLedPower);
+	strip.setPower(true);
 	strip.setAll(0xFF2AFF);
 	strip.setStartDMACallback(startDMA);
 	strip.setStopDMACallback(stopDMA);
-
-	while (!(ledPowerReady() || pwrTimeout.expired()))
-		;
-
-	if (pwrTimeout.expired()) {
-		USB_Printf("\n ERROR ENABLING LED POWER\n");
-		return;
-	}
 }
 
 void LED_Update() {
 
-	static int led = 0, delayMs = 100, frameMs = 2;
+	static int led = 0, delayMs = 100, frameMs = 5;
 	static CountdownTimer delay(delayMs);
 	static CountdownTimer frameTimer(frameMs);
 
@@ -236,10 +202,7 @@ void LED_Update() {
 		led = (led + 1) % LEDStrip::NUM_PIXELS;
 	}
 
-	if (frameTimer.expired() && !strip.displayInProgress()) {
-		frameTimer.countdown_ms(frameMs);
-		strip.display();
-	}
+	strip.display();
 }
 
 //#define TEST_LED_ONLY
@@ -307,7 +270,6 @@ int main(void) {
 	connectEth();
 
 	JMQTT::ClientConfig mqttConf;
-	auto &sock = eth.getFreeSocket();
 
 #ifdef BUILD_WITH_SECRETS
 
@@ -320,21 +282,21 @@ int main(void) {
 
 #endif
 
-	MQTTMessageHandler mqh;
-
-	mqtt.registerMessageReceiver(&mqh);
-
 	mqtt.setConnectCallback(mqttOnConnected);
-	mqtt.setMessageCallback(messageReceived);
 
-	if (mqtt.connect(sock, mqttConf)) {
+#ifdef DEBUG
+	mqtt.setMessageCallback(messageReceived);
+#endif
+
+	bool connectSuccess = mqtt.connect(eth.getFreeSocket(), mqttConf);
+
+	if (connectSuccess) {
 		USB_Printf("Connected client to MQTT server!\n");
 	} else {
 		USB_Printf("Error connecting client to MQTT server!\n");
 	}
 
-	strip.attachClient(&mqtt);
-	strip.publishState();
+	strip.init(&mqtt);
 
 	/* USER CODE END 2 */
 
@@ -342,18 +304,20 @@ int main(void) {
 	/* USER CODE BEGIN WHILE */
 
 //	int oldRc = rc;
-	uint32_t reconnectTimeMs = 2500;
-	CountdownTimer reconnectTimer(reconnectTimeMs);
+	CountdownTimer reconnectTimer(2500);
 #endif
-	LED_Init(&htim1);
+	LED_Init();
 
 	while (1) {
 		/* USER CODE END WHILE */
 
 		/* USER CODE BEGIN 3 */
+#ifdef DEBUG
 		LED_Update();
+#endif
+
 #ifndef TEST_LED_ONLY
-		auto connected = mqtt.update(1);
+		auto connected = mqtt.update(3);
 		if (!connected && reconnectTimer.expired()) {
 			USB_Printf("\nClient disconnected!\n");
 
@@ -376,7 +340,7 @@ int main(void) {
 				USB_Printf("Error connecting client to MQTT server!\n");
 			}
 
-			reconnectTimer.countdown_ms(reconnectTimeMs);
+			reconnectTimer.reset();
 		}
 #endif
 	}

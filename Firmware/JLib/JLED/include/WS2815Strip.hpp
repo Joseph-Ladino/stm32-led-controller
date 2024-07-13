@@ -10,6 +10,7 @@
 
 #include <cstdint>
 #include <iterator>
+#include <string>
 #include "Color.hpp"
 
 namespace JLED {
@@ -20,6 +21,8 @@ public:
 	const static uint16_t NUM_PIXELS = _NUM_PIXELS;
 	const static uint8_t NUM_BYTES_PER_PIXEL = 3;
 	const static uint32_t NUM_BYTES_TOTAL = NUM_PIXELS * NUM_BYTES_PER_PIXEL;
+
+	using physicalPowerCBSig = void(*)(bool);
 
 	/**
 	 * @brief Timing in nanoseconds for LED strip data transfer
@@ -33,7 +36,10 @@ public:
 		PERIOD = 1250, /**< PWM period */
 	};
 
-	uint32_t raw[NUM_PIXELS];
+	uint32_t raw[NUM_PIXELS]; // raw color values
+	uint32_t transformed[NUM_PIXELS]; // color values with effects (brightness, power) applied
+
+//	uint32_t *raw, *transformed;
 
 	uint32_t& operator[](uint16_t index);
 	const uint32_t& operator[](uint16_t index) const;
@@ -44,7 +50,14 @@ public:
 	void setAll(Color &col);
 	void setAll(uint32_t col);
 
-	void display();
+	void setBrightness(uint8_t brightness);
+	uint8_t getBrightness();
+
+	void setPhysicalPowerCB(physicalPowerCBSig cb);
+	void setPower(bool powerOn);
+	bool getPower();
+
+	virtual void display();
 
 	WS2815Strip();
 
@@ -55,7 +68,6 @@ public:
 		using pointer = uint32_t*;
 		using const_ref = const uint32_t&;
 
-		const value_type MAX_INDEX = NUM_PIXELS; // note: MAX_INDEX will be out of bounds
 		pointer data = nullptr;
 		uint16_t index = 0;
 
@@ -67,7 +79,7 @@ public:
 		}
 
 		iterator& operator++() {
-			index = (index < MAX_INDEX) ? index + 1 : MAX_INDEX;
+			index++;
 			return *this;
 		}
 
@@ -92,8 +104,8 @@ public:
 			return *(data + index);
 		}
 
-		iterator& operator=(const iterator& other) {
-			if(this != &other) {
+		iterator& operator=(const iterator &other) {
+			if (this != &other) {
 				this->data = other.data;
 				this->index = other.index;
 			}
@@ -105,20 +117,34 @@ public:
 		iterator(pointer _data) :
 				data(_data), index(0) {
 		}
-		iterator(pointer _data, uint16_t _index) : data(_data), index(_index) {}
+		iterator(pointer _data, uint16_t _index) :
+				data(_data), index(_index) {
+		}
 
 		iterator(const iterator &other) :
 				data(other.data), index(other.index) {
 		}
 	};
 
-	const iterator begin() {
+	inline const iterator begin() {
 		return iterator(raw);
 	}
-	const iterator end() {
+	inline const iterator end() {
 		return iterator(raw, NUM_PIXELS); // note: end() is not in bounds
 	}
+
+	inline const iterator beginT() {
+		return iterator(transformed);
+	}
+	inline const iterator endT() {
+		return iterator(transformed, NUM_PIXELS);
+	}
+
 private:
+	uint8_t brightness = 255;
+	bool powerOn = true;
+
+	physicalPowerCBSig physicalPowerCB = nullptr;
 };
 
 template<uint16_t NUM_PIXELS>
@@ -154,9 +180,55 @@ inline void WS2815Strip<_NUM_PIXELS>::setAll(uint32_t col) {
 	}
 }
 
+template<uint16_t _NUM_PIXELS>
+inline void WS2815Strip<_NUM_PIXELS>::display() {
+//	memcpy(transformed, raw, sizeof(raw[0])* NUM_PIXELS);
+	if(!powerOn) return;
+
+	for(uint16_t i = 0; i < NUM_PIXELS; i++) {
+		transformed[i] = raw[i] * brightness / 255;
+	}
+}
+
+template<uint16_t _NUM_PIXELS>
+inline void WS2815Strip<_NUM_PIXELS>::setBrightness(uint8_t brightness) {
+	this->brightness = brightness;
+}
+
+template<uint16_t _NUM_PIXELS>
+inline uint8_t WS2815Strip<_NUM_PIXELS>::getBrightness() {
+	return brightness;
+}
+
+template<uint16_t _NUM_PIXELS>
+inline void WS2815Strip<_NUM_PIXELS>::setPower(bool powerOn) {
+	this->powerOn = powerOn;
+
+	if(physicalPowerCB != nullptr) {
+		physicalPowerCB(powerOn);
+	}
+
+	if(!powerOn) {
+		memset(transformed, 0, sizeof(transformed[0]) * NUM_PIXELS);
+	}
+}
+
+template<uint16_t _NUM_PIXELS>
+inline bool WS2815Strip<_NUM_PIXELS>::getPower() {
+	return powerOn;
+}
+
+template<uint16_t _NUM_PIXELS>
+inline void WS2815Strip<_NUM_PIXELS>::setPhysicalPowerCB(physicalPowerCBSig cb) {
+	physicalPowerCB = cb;
+}
+
 template<uint16_t NUM_PIXELS>
 inline WS2815Strip<NUM_PIXELS>::WS2815Strip() {
 //	memset(raw, 0, NUM_BYTES_TOTAL);
+//	raw = new uint32_t[NUM_PIXELS];
+//	transformed = new uint32_t[NUM_PIXELS];
+
 	memset(raw, 0, NUM_PIXELS * sizeof(raw[0]));
 }
 

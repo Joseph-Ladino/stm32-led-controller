@@ -17,8 +17,8 @@ namespace JETHERNET {
 
 #define getInst() W5500Interface::instance()
 
-volatile uint8_t DHCPBuffer[1024];
-volatile uint8_t DNSBuffer[1024];
+uint8_t DHCPBuffer[1024];
+uint8_t DNSBuffer[1024];
 
 void printNetInfo(NetConfig*);
 

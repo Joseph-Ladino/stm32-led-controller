@@ -18,6 +18,8 @@ void \mbox{\hyperlink{struct_countdown_timer_a68daf8bef73e1544fd759f7ca29e0af4}{
 \begin{DoxyCompactList}\small\item\em set timer duration in milliseconds \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{struct_countdown_timer_a2d673c7a79fc69a2bd480f40ffb65f3c}{countdown}} (uint16\+\_\+t sec)
 \begin{DoxyCompactList}\small\item\em set timer duration in seconds \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_countdown_timer_abdef253a32d022d0e075e3a99ee667a5}{reset}} ()
+\begin{DoxyCompactList}\small\item\em restart timer using the last set timer duration \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{struct_countdown_timer_a7b3f51afa536ffed772f1c62de543e43}{left\+\_\+ms}} ()
 \begin{DoxyCompactList}\small\item\em remaining timer duration \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{struct_countdown_timer_a639e0a8ae10bb025be52dfd4b4d481c7}{left\+Ms}} ()
@@ -57,7 +59,7 @@ Definition at line \mbox{\hyperlink{_countdown_timer_8hpp_source_l00016}{16}} of
 
 
 
-Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
 
 \Hypertarget{struct_countdown_timer_a063ec0ed50acbd662071121338dd0509}\label{struct_countdown_timer_a063ec0ed50acbd662071121338dd0509} 
 \index{CountdownTimer@{CountdownTimer}!CountdownTimer@{CountdownTimer}}
@@ -76,7 +78,7 @@ initialize timer with millisecond duration
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
 
 
 
@@ -98,7 +100,7 @@ set timer duration in seconds
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
 
 \Hypertarget{struct_countdown_timer_ae938bf04669e4db43d9793ec66f451d0}\label{struct_countdown_timer_ae938bf04669e4db43d9793ec66f451d0} 
 \index{CountdownTimer@{CountdownTimer}!countdown\_ms@{countdown\_ms}}
@@ -159,7 +161,7 @@ true if timer is expired
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
 
 \Hypertarget{struct_countdown_timer_a7b3f51afa536ffed772f1c62de543e43}\label{struct_countdown_timer_a7b3f51afa536ffed772f1c62de543e43} 
 \index{CountdownTimer@{CountdownTimer}!left\_ms@{left\_ms}}
@@ -179,7 +181,7 @@ camelcase naming pattern is not followed due to this class being directly used i
 \end{DoxyNote}
 
 
-Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
 
 \Hypertarget{struct_countdown_timer_a639e0a8ae10bb025be52dfd4b4d481c7}\label{struct_countdown_timer_a639e0a8ae10bb025be52dfd4b4d481c7} 
 \index{CountdownTimer@{CountdownTimer}!leftMs@{leftMs}}
@@ -199,7 +201,7 @@ alias for \doxylink{struct_countdown_timer_a7b3f51afa536ffed772f1c62de543e43}{le
 \end{DoxyNote}
 
 
-Definition at line \mbox{\hyperlink{_countdown_timer_8hpp_source_l00052}{52}} of file \mbox{\hyperlink{_countdown_timer_8hpp_source}{Countdown\+Timer.\+hpp}}.
+Definition at line \mbox{\hyperlink{_countdown_timer_8hpp_source_l00059}{59}} of file \mbox{\hyperlink{_countdown_timer_8hpp_source}{Countdown\+Timer.\+hpp}}.
 
 \Hypertarget{struct_countdown_timer_a766d43746a33928f83b0c80e47c3da2c}\label{struct_countdown_timer_a766d43746a33928f83b0c80e47c3da2c} 
 \index{CountdownTimer@{CountdownTimer}!msTick@{msTick}}
@@ -217,7 +219,21 @@ call this method only once in the program, not once per instance
 \end{DoxyWarning}
 
 
-Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
+Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_countdown_timer_8cpp_source}{Countdown\+Timer.\+cpp}}.
+
+\Hypertarget{struct_countdown_timer_abdef253a32d022d0e075e3a99ee667a5}\label{struct_countdown_timer_abdef253a32d022d0e075e3a99ee667a5} 
+\index{CountdownTimer@{CountdownTimer}!reset@{reset}}
+\index{reset@{reset}!CountdownTimer@{CountdownTimer}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Countdown\+Timer\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+restart timer using the last set timer duration 
+
+
+
+Definition at line \mbox{\hyperlink{_countdown_timer_8hpp_source_l00043}{43}} of file \mbox{\hyperlink{_countdown_timer_8hpp_source}{Countdown\+Timer.\+hpp}}.
 
 
 
@@ -230,7 +246,7 @@ Definition at line \mbox{\hyperlink{_countdown_timer_8cpp_source_l00031}{31}} of
 
 
 
-Definition at line \mbox{\hyperlink{_countdown_timer_8hpp_source_l00081}{81}} of file \mbox{\hyperlink{_countdown_timer_8hpp_source}{Countdown\+Timer.\+hpp}}.
+Definition at line \mbox{\hyperlink{_countdown_timer_8hpp_source_l00089}{89}} of file \mbox{\hyperlink{_countdown_timer_8hpp_source}{Countdown\+Timer.\+hpp}}.
 
 
 

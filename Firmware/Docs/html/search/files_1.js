@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ethernethc_2ehpp_0',['EthernetHC.hpp',['../_ethernet_h_c_8hpp.html',1,'']]]
+  ['dmastrip_2ehpp_0',['DMAStrip.hpp',['../_d_m_a_strip_8hpp.html',1,'']]]
 ];

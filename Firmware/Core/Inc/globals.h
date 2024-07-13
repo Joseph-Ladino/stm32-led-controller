@@ -9,10 +9,10 @@
 #define INC_GLOBALS_H_
 
 #ifdef __cplusplus
+
 extern "C" {
 #endif
 #include <cstdio>
-
 #define USE_USB_DEBUG
 #define ETH_DEBUG
 

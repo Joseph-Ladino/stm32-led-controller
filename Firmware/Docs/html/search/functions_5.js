@@ -1,9 +1,14 @@
 var searchData=
 [
-  ['init_0',['init',['../class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a6e380cb6bb273af7aaac85f1df1de3ac',1,'JETHERNET::EthernetHC::init()'],['../class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c.html#a7c8f7dead6c7c61f8ac1c8d784ff3a07',1,'JETHERNET::W5500HC::init()'],['../class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface.html#abe7d564e593a26c9802116f740b1e4e8',1,'JETHERNET::W5500Interface::init(W5500Config config)']]],
-  ['initchip_1',['initChip',['../class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface.html#aff3e558de69fda526a439c95757ccad0',1,'JETHERNET::W5500Interface']]],
-  ['initdhcp_2',['initDHCP',['../class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface.html#a4cba0c9cc794ebe8199ffafbe342d375',1,'JETHERNET::W5500Interface']]],
-  ['initdns_3',['initDNS',['../class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface.html#af111b2830d3a6171ed28a70efc782713',1,'JETHERNET::W5500Interface']]],
-  ['instance_4',['instance',['../class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface.html#af79e30d3b1adb47d652f82c045832f66',1,'JETHERNET::W5500Interface']]],
-  ['isconnected_5',['isConnected',['../class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#a41db618756cf90001a219180d152ecde',1,'JETHERNET::NetSock::isConnected()'],['../class_j_m_q_t_t_1_1_client.html#a70dab29288dc7daad9b1c1587e569441',1,'JMQTT::Client::isConnected()'],['../struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#a41a09a8fd79d62d52f5ce0ff4d2e2723',1,'JMQTT::W5500MqttNetwork::isConnected()'],['../class_j_m_q_t_t_1_1_p_a_h_o_client.html#a512779577f19fd55308ec4d5bb23a56c',1,'JMQTT::PAHOClient::isConnected()'],['../class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket.html#ae1e6ed02559892e71752470e125bc60e',1,'JETHERNET::W5500Socket::isConnected()']]]
+  ['getbrightness_0',['getBrightness',['../class_j_l_e_d_1_1_w_s2815_strip.html#a1e1edf8c40bf2291f7f614170d164fe1',1,'JLED::WS2815Strip::getBrightness()'],['../class_j_l_e_d_1_1_w_s28xx_strip.html#ab556122b2ea726b12d90c939640e4ac4',1,'JLED::WS28xxStrip::getBrightness()']]],
+  ['getconfig_1',['getConfig',['../class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a06b567bffaf6eb147859edf317d4b9bb',1,'JETHERNET::EthernetHC::getConfig()'],['../class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c.html#a64c78f800ddded81d687e0689d97d765',1,'JETHERNET::W5500HC::getConfig()']]],
+  ['geteffect_2',['getEffect',['../class_j_l_e_d_1_1_w_s28xx_strip.html#a552aba68e7ee495ee00e02452339cc16',1,'JLED::WS28xxStrip']]],
+  ['getfreesocket_3',['getFreeSocket',['../class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a58730e887e50ba72c7356657179ae7b9',1,'JETHERNET::EthernetHC::getFreeSocket()'],['../class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c.html#a2c573a9eda6ad102424c056f7ed9c270',1,'JETHERNET::W5500HC::getFreeSocket()']]],
+  ['getmode_4',['getMode',['../class_j_l_e_d_1_1_w_s28xx_strip.html#a9257a41fd70a1d3dfa25e75bd5c8d7b8',1,'JLED::WS28xxStrip']]],
+  ['getnetinfo_5',['getNetInfo',['../namespace_j_e_t_h_e_r_n_e_t.html#aea849ead1fa4bbcbe6c3a8e9748435e9',1,'JETHERNET']]],
+  ['getnumpixels_6',['getNumPixels',['../class_j_l_e_d_1_1_w_s28xx_strip.html#afafcefa79080f931ab2b139196bdd28f',1,'JLED::WS28xxStrip']]],
+  ['getorderedbytes_7',['getOrderedBytes',['../struct_j_l_e_d_1_1_w_s_strip_type.html#af7952a4ffc571d7514709067d653eb8d',1,'JLED::WSStripType::getOrderedBytes()'],['../struct_j_l_e_d_1_1_g_r_b_strip_type.html#a71007e549cdd5445cfac63dd8007bece',1,'JLED::GRBStripType::getOrderedBytes()']]],
+  ['getpower_8',['getPower',['../class_j_l_e_d_1_1_w_s2815_strip.html#a581e2b88056726bfca11c7732c5372f5',1,'JLED::WS2815Strip::getPower()'],['../class_j_l_e_d_1_1_w_s28xx_strip.html#ae20cf69fe0be495d74166906e3f74e0e',1,'JLED::WS28xxStrip::getPower()']]],
+  ['getsocketnum_9',['getSocketNum',['../class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket.html#a7ab00d6cd578c68d97a287367fefeb16',1,'JETHERNET::W5500Socket']]],
+  ['getwizsocketstatus_10',['getWizSocketStatus',['../class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket.html#a3e04828e428a45fdcb75c8baa05c45d9',1,'JETHERNET::W5500Socket']]]
 ];

@@ -5,6 +5,10 @@
  *      Author: user
  */
 
+#ifndef UNUSED
+#define UNUSED(x) (void)x
+#endif
+
 #include "MQTTInterface.hpp"
 #include "socket.h"
 
@@ -46,6 +50,7 @@ void W5500MqttNetwork::disconnect() {
 }
 
 int W5500MqttNetwork::read(unsigned char *buffer, int len, int timeout_ms) {
+	UNUSED(timeout_ms);
 	if (isConnected() && getSn_RX_RSR(socketNum) > 0)
 		return recv(socketNum, buffer, len);
 
@@ -53,6 +58,7 @@ int W5500MqttNetwork::read(unsigned char *buffer, int len, int timeout_ms) {
 }
 
 int W5500MqttNetwork::write(unsigned char *buffer, int len, int timeout_ms) {
+	UNUSED(timeout_ms);
 	if (isConnected())
 		return send(socketNum, buffer, len);
 

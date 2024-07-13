@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sockconnectmode_0',['SockConnectMode',['../namespace_j_e_t_h_e_r_n_e_t.html#a2bcff7d05aee5335790afea11e197ca1',1,'JETHERNET']]]
+  ['qos_0',['QOS',['../namespace_j_m_q_t_t.html#ae20074947d69a428122e13962b0b54e3',1,'JMQTT']]]
 ];

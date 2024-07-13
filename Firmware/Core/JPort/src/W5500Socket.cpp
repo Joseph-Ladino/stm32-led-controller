@@ -30,6 +30,7 @@ static int8_t wizClose(uint8_t sn) {
 namespace JETHERNET {
 
 bool W5500Socket::open(NetIP ip, uint16_t port, SockConnectMode mode) {
+//	UNUSED(timeoutMs);
 	connectMode = mode;
 	return wizSocket(socketNum, (uint8_t) mode, port, 0) == socketNum;
 }

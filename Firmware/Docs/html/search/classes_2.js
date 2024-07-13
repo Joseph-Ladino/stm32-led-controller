@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['message_0',['Message',['../struct_j_m_q_t_t_1_1_message.html',1,'JMQTT']]]
+  ['ethernethc_0',['EthernetHC',['../class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html',1,'JETHERNET']]]
 ];

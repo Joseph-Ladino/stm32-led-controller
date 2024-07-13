@@ -17,18 +17,24 @@
 
 #include "MQTTClient.h"
 
+#ifndef UNUSED
+#define UNUSED(x) (void)x
+#endif
+
 namespace JMQTT {
 
 struct PAHONetwork {
 	JETHERNET::NetSock *sock = nullptr;
 	ClientConfig conf;
 	inline int read(uint8_t *buffer, uint16_t len, uint16_t timeoutMs) {
+		UNUSED(timeoutMs);
 		if (!this->operator bool())
 			return -1;
 
 		return sock->read(buffer, len);
 	}
 	inline int write(uint8_t *buffer, uint16_t len, uint16_t timeoutMs) {
+		UNUSED(timeoutMs);
 		if (!this->operator bool())
 			return -1;
 
@@ -47,7 +53,7 @@ public:
 
 private:
 	PAHONetwork net;
-	MQTT::Client<PAHONetwork, CountdownTimer> client;
+	MQTT::Client<PAHONetwork, CountdownTimer, 1024> client;
 	MessageCB onMessage;
 	ConnectCB onConnect;
 

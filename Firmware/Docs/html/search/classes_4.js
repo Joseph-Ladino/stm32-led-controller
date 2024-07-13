@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['pahoclient_0',['PAHOClient',['../class_j_m_q_t_t_1_1_p_a_h_o_client.html',1,'JMQTT']]],
-  ['pahonetwork_1',['PAHONetwork',['../struct_j_m_q_t_t_1_1_p_a_h_o_network.html',1,'JMQTT']]]
+  ['hassledcontroller_0',['HassLedController',['../class_hass_led_controller.html',1,'']]],
+  ['homeassistantdevice_1',['HomeAssistantDevice',['../class_j_m_q_t_t_1_1_home_assistant_device.html',1,'JMQTT']]],
+  ['homeassistantstrip_2',['HomeAssistantStrip',['../class_home_assistant_strip.html',1,'']]]
 ];

@@ -16,116 +16,145 @@
 \DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00012}00012\ }
 \DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00013}00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_j_m_q_t_t}{JMQTT}}\ \{}
 \DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00015}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a5bbf16a26e74c93a9a8b372d7548cba9}{00015}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a5bbf16a26e74c93a9a8b372d7548cba9}{PAHOClient::publish}}(\mbox{\hyperlink{struct_j_m_q_t_t_1_1_message}{Message}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}})\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00015}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_afe848a1c54f215fe65d088fcb123617f}{00015}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_afe848a1c54f215fe65d088fcb123617f}{PAHOClient::publish}}(\mbox{\hyperlink{struct_j_m_q_t_t_1_1_message}{Message}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}})\ \{}
 \DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{rc}}\ =\ client.publish(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}}.topic.data(),\ (\textcolor{keywordtype}{void}*)\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}}.payload.data(),}
 \DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{size\_t})\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}}.payload.length(),\ (MQTT::QoS)\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}}.qos);}
 \DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00018}00018\ }
 \DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{rc}}\ ==\ MQTT::SUCCESS;}
 \DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00020}00020\ \}}
 \DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00022}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a3811ba986b402d0066c0e868d6a1113e}{00022}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a3811ba986b402d0066c0e868d6a1113e}{PAHOClient::subscribe}}(string\_view\ topic,\ \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3}{QOS}}\ qos)\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00022}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a56e726777777894ea43abe21a733a9b8}{00022}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a56e726777777894ea43abe21a733a9b8}{PAHOClient::subscribe}}(string\_view\ topic,\ \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3}{QOS}}\ qos)\ \{}
 \DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{rc}}\ =\ client.subscribe(topic.data(),\ (MQTT::QoS)\ qos,\ \{\ this,}
 \DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \&PAHOClient::pahoMessageReceived\ \});}
 \DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00025}00025\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{rc}}\ ==\ MQTT::SUCCESS;}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00027}00027\ \}}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00028}00028\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00029}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a9a94024ef51ef3c1c26f5f6d23160c1f}{00029}}\ \textcolor{keywordtype}{bool}\ PAHOClient::connect(\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock}{NetSock}}\ \&sock,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_client_config}{ClientConfig}}\ config)\ \{}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00030}00030\ \ \ \ \ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_ae86aeca997e66b080f31cf0bde7a629c}{sock}}\ =\ \&sock;}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00031}00031\ \ \ \ \ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a73498b1a7ccea5e4e3e9136ba321403d}{conf}}\ =\ config;}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00032}00032\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{return}\ connect();}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00026}00026\ \ \ \ \ client.setMessageHandler(topic.data(),\ \{\});\ \textcolor{comment}{//\ delete\ specific\ handler\ from\ embedded\ client}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{rc}}\ ==\ MQTT::SUCCESS;}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00031}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a709dc06d762afff5b1640ae6dc5ddffb}{00031}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a56e726777777894ea43abe21a733a9b8}{PAHOClient::subscribe}}(string\_view\ topic,\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver}{MQTTMessageReceiver}}\ *\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{recv}},}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3}{QOS}}\ qos)\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a56e726777777894ea43abe21a733a9b8}{subscribe}}(topic,\ qos))}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00036}00036\ \textcolor{keywordtype}{bool}\ PAHOClient::connect()\ \{}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{MQTTPacket\_connectData}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{data}}\ =\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{MQTTPacket\_connectData\_initializer}};}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{data}}.MQTTVersion\ =\ (\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{uint8\_t}})\ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a73498b1a7ccea5e4e3e9136ba321403d}{conf}}.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_client_config_adaf4490b2a554690a8b155c3f0683dd5}{version}};}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{data}}.clientID.cstring\ =\ (\textcolor{keywordtype}{char}*)\ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a73498b1a7ccea5e4e3e9136ba321403d}{conf}}.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_client_config_afe121029b64aeb950a7b4ca28eeb2d3a}{clientName}}.data();}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00041}00041\ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{data}}.username.cstring\ =\ (\textcolor{keywordtype}{char}*)\ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a73498b1a7ccea5e4e3e9136ba321403d}{conf}}.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_client_config_a266098173864ed535b7d368fbf18112b}{username}}.data();}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00042}00042\ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{data}}.password.cstring\ =\ (\textcolor{keywordtype}{char}*)\ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a73498b1a7ccea5e4e3e9136ba321403d}{conf}}.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_client_config_a750576b79628cbcd0297c4e3ebf5ac73}{password}}.data();}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00043}00043\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//\ connect\ socket\ to\ broker}}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{if}\ (!net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_ae86aeca997e66b080f31cf0bde7a629c}{sock}}-\/>\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a41db618756cf90001a219180d152ecde}{isConnected}}()}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ !net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_ae86aeca997e66b080f31cf0bde7a629c}{sock}}-\/>\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_ad4fcf93b2ec7285a632c4b51777c0beb}{connectTCP}}(net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a73498b1a7ccea5e4e3e9136ba321403d}{conf}}.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_client_config_a6da016f97b0800325683bfae4d5e1cb0}{brokerIP}},\ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a73498b1a7ccea5e4e3e9136ba321403d}{conf}}.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_client_config_aa879edf93bc829164b9724b092c77669}{brokerPort}}))\ \{}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00048}00048\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{comment}{//\ connect\ client\ (through\ socket)\ to\ broker}}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{if}\ (!client.connect(data)\ ==\ MQTT::SUCCESS)}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00053}00053\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00054}00054\ \ \ \ \ client.setDefaultMessageHandler(}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a607bcae635e895968efb49dd8eae533a}{PAHOClient::pahoMessageReceived}}\ \});}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00056}00056\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{if}\ (onConnect)}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ onConnect(*\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00059}00059\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00061}00061\ \}}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00062}00062\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00063}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a2592dfc13815f6bb46f0dc10e6b67ee4}{00063}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a2592dfc13815f6bb46f0dc10e6b67ee4}{PAHOClient::disconnect}}()\ \{}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00064}00064\ \ \ \ \ client.disconnect();}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00065}00065\ \ \ \ \ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_ae86aeca997e66b080f31cf0bde7a629c}{sock}}-\/>\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a5f4da6ea7d0538048a8e1e70f5d69ea0}{disconnect}}();}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00066}00066\ \ \ \ \ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_ae86aeca997e66b080f31cf0bde7a629c}{sock}}-\/>\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_abced4845fbe84804cd64597c39f2b1b5}{close}}();}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00067}00067\ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00036}00036\ \ \ \ \ specificReceivers.emplace\_back(topic,\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{recv}});}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00039}00039\ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00041}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_aeb7893b4085058e567fc89b6718fbd18}{00041}}\ \textcolor{keywordtype}{bool}\ PAHOClient::connect(\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock}{NetSock}}\ \&sock,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_client_config}{ClientConfig}}\ config)\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00042}00042\ \ \ \ \ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_ae86aeca997e66b080f31cf0bde7a629c}{sock}}\ =\ \&sock;}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00043}00043\ \ \ \ \ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a73498b1a7ccea5e4e3e9136ba321403d}{conf}}\ =\ config;}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{return}\ connect();}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00046}00046\ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00048}00048\ \textcolor{keywordtype}{bool}\ PAHOClient::connect()\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00049}00049\ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{MQTTPacket\_connectData}}\ data\ =\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{MQTTPacket\_connectData\_initializer}};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00051}00051\ \ \ \ \ data.MQTTVersion\ =\ (\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{uint8\_t}})\ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a73498b1a7ccea5e4e3e9136ba321403d}{conf}}.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_client_config_adaf4490b2a554690a8b155c3f0683dd5}{version}};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00052}00052\ \ \ \ \ data.clientID.cstring\ =\ (\textcolor{keywordtype}{char}*)\ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a73498b1a7ccea5e4e3e9136ba321403d}{conf}}.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_client_config_afe121029b64aeb950a7b4ca28eeb2d3a}{clientName}}.data();}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00053}00053\ \ \ \ \ data.username.cstring\ =\ (\textcolor{keywordtype}{char}*)\ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a73498b1a7ccea5e4e3e9136ba321403d}{conf}}.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_client_config_a266098173864ed535b7d368fbf18112b}{username}}.data();}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00054}00054\ \ \ \ \ data.password.cstring\ =\ (\textcolor{keywordtype}{char}*)\ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a73498b1a7ccea5e4e3e9136ba321403d}{conf}}.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_client_config_a750576b79628cbcd0297c4e3ebf5ac73}{password}}.data();}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{comment}{//\ connect\ socket\ to\ broker}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{if}\ (!net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_ae86aeca997e66b080f31cf0bde7a629c}{sock}}-\/>\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a41db618756cf90001a219180d152ecde}{isConnected}}()}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ !net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_ae86aeca997e66b080f31cf0bde7a629c}{sock}}-\/>\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_ad4fcf93b2ec7285a632c4b51777c0beb}{connectTCP}}(net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a73498b1a7ccea5e4e3e9136ba321403d}{conf}}.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_client_config_a6da016f97b0800325683bfae4d5e1cb0}{brokerIP}},\ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a73498b1a7ccea5e4e3e9136ba321403d}{conf}}.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_client_config_aa879edf93bc829164b9724b092c77669}{brokerPort}}))\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00062}00062\ \ \ \ \ \textcolor{comment}{//\ connect\ client\ (through\ socket)\ to\ broker}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{if}\ (!client.connect(data)\ ==\ MQTT::SUCCESS)}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00066}00066\ \ \ \ \ client.setDefaultMessageHandler(}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a607bcae635e895968efb49dd8eae533a}{PAHOClient::pahoMessageReceived}}\ \});}
 \DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00068}00068\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00069}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a106782e6d80da9c3269c004eec75ec07}{00069}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a106782e6d80da9c3269c004eec75ec07}{PAHOClient::reconnect}}()\ \{}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{return}\ connect();}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00071}00071\ \}}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00072}00072\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00073}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_adfb668e97d68912349291000810d3e63}{00073}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a106782e6d80da9c3269c004eec75ec07}{PAHOClient::reconnect}}(\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock}{NetSock}}\ \&sock)\ \{}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00074}00074\ \ \ \ \ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_ae86aeca997e66b080f31cf0bde7a629c}{sock}}\ =\ \&sock;}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00075}00075\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00076}00076\ \ \ \ \ \textcolor{keywordflow}{return}\ connect();}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00077}00077\ \}}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00078}00078\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00079}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_ab6a8114c17036596b81f37a292741d7e}{00079}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_ab6a8114c17036596b81f37a292741d7e}{PAHOClient::update}}(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{uint16\_t}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{timeoutMs}})\ \{}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00080}00080\ \ \ \ \ \mbox{\hyperlink{struct_countdown_timer}{CountdownTimer}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{t}}(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{timeoutMs}});}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00081}00081\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{rc}}\ =\ client.yield(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{timeoutMs}});}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00082}00082\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00083}00083\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{rc}}\ !=\ MQTT::SUCCESS\ ||\ !net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_ae86aeca997e66b080f31cf0bde7a629c}{sock}}-\/>\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a41db618756cf90001a219180d152ecde}{isConnected}}())\ \{}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a2592dfc13815f6bb46f0dc10e6b67ee4}{disconnect}}();}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{if}\ (onConnect)}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ onConnect(*\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00072}00072\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00073}00073\ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00075}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_aa248683c2b1a64cad876e5c8aba844e6}{00075}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_aa248683c2b1a64cad876e5c8aba844e6}{PAHOClient::disconnect}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00076}00076\ \ \ \ \ client.disconnect();}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00077}00077\ \ \ \ \ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_ae86aeca997e66b080f31cf0bde7a629c}{sock}}-\/>\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a5f4da6ea7d0538048a8e1e70f5d69ea0}{disconnect}}();}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00078}00078\ \ \ \ \ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_ae86aeca997e66b080f31cf0bde7a629c}{sock}}-\/>\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_abced4845fbe84804cd64597c39f2b1b5}{close}}();}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00079}00079\ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00081}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a3c9e4e4bd1f770736518ea312724cb5e}{00081}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a3c9e4e4bd1f770736518ea312724cb5e}{PAHOClient::reconnect}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00082}00082\ \ \ \ \ \textcolor{keywordflow}{return}\ connect();}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00083}00083\ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00085}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_adfb668e97d68912349291000810d3e63}{00085}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a3c9e4e4bd1f770736518ea312724cb5e}{PAHOClient::reconnect}}(\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock}{NetSock}}\ \&sock)\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00086}00086\ \ \ \ \ net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_ae86aeca997e66b080f31cf0bde7a629c}{sock}}\ =\ \&sock;}
 \DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00087}00087\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00088}00088\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00088}00088\ \ \ \ \ \textcolor{keywordflow}{return}\ connect();}
 \DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00089}00089\ \}}
 \DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00090}00090\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00091}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a512779577f19fd55308ec4d5bb23a56c}{00091}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a512779577f19fd55308ec4d5bb23a56c}{PAHOClient::isConnected}}()\ \{}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{return}\ client.isConnected();}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00093}00093\ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00091}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_afae9910504f45ae20a063835f11c34a4}{00091}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_afae9910504f45ae20a063835f11c34a4}{PAHOClient::update}}(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{uint16\_t}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{timeoutMs}})\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00092}00092\ \ \ \ \ \mbox{\hyperlink{struct_countdown_timer}{CountdownTimer}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{t}}(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{timeoutMs}});}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00093}00093\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{rc}}\ =\ client.yield(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{timeoutMs}});}
 \DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00094}00094\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00095}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_abaeb8974cfc89361cafecc674b6aaf4e}{00095}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_abaeb8974cfc89361cafecc674b6aaf4e}{PAHOClient::PAHOClient}}()\ :}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ client(net)\ \{}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00097}00097\ \}}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00098}00098\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00099}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a6f0ae3731325e9ab016bb07e1f977ccb}{00099}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a6f0ae3731325e9ab016bb07e1f977ccb}{PAHOClient::\string~PAHOClient}}()\ \{}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00100}00100\ \}}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00101}00101\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00102}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_aafe1ca238b53d18a689f22a309017fdf}{00102}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_aafe1ca238b53d18a689f22a309017fdf}{PAHOClient::setMessageCallback}}(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client_afdd270cfe93363df3d9076452ace76fa}{PAHOClient::MessageCB}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{func}})\ \{}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00103}00103\ \ \ \ \ onMessage\ =\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{func}};}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00104}00104\ \}}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00105}00105\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00106}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a9e623915c12da35dc7a9d0be2cbfe8b7}{00106}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a9e623915c12da35dc7a9d0be2cbfe8b7}{PAHOClient::setConnectCallback}}(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client_a5baa97eaa06bfc44647d2420a1c613b2}{PAHOClient::ConnectCB}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{func}})\ \{}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00107}00107\ \ \ \ \ onConnect\ =\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{func}};}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00108}00108\ \}}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00109}00109\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00110}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a607bcae635e895968efb49dd8eae533a}{00110}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a607bcae635e895968efb49dd8eae533a}{PAHOClient::pahoMessageReceived}}(MQTT::MessageData\ \&\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{data}})\ \{}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00111}00111\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00112}00112\ \ \ \ \ \textcolor{keywordflow}{if}\ (!onMessage)}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00114}00114\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00115}00115\ \ \ \ \ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_message}{JMQTT::Message}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}};}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00116}00116\ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}}.topic\ =\ string(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{data}}.topicName.lenstring.data,}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{data}}.topicName.lenstring.len);}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00118}00118\ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}}.payload\ =\ string((\textcolor{keywordtype}{char}*)\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{data}}.message.payload,\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{data}}.message.payloadlen);}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00119}00119\ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}}.qos\ =\ (\mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3}{JMQTT::QOS}})\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{data}}.message.qos;}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00120}00120\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00121}00121\ \ \ \ \ onMessage(*\textcolor{keyword}{this},\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}});}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00122}00122\ \textcolor{comment}{//\ \ msg.qos\ =\ data}}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00123}00123\ \}}
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00124}00124\ }
-\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00125}00125\ \}\ \textcolor{comment}{/*\ namespace\ JMQTT\ */}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00095}00095\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{rc}}\ !=\ MQTT::SUCCESS\ ||\ !net.\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_ae86aeca997e66b080f31cf0bde7a629c}{sock}}-\/>\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a41db618756cf90001a219180d152ecde}{isConnected}}())\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_aa248683c2b1a64cad876e5c8aba844e6}{disconnect}}();}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00098}00098\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00100}00100\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00101}00101\ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00103}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a20baf4bc65d6a27acb56f3d05967937d}{00103}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a20baf4bc65d6a27acb56f3d05967937d}{PAHOClient::isConnected}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00104}00104\ \ \ \ \ \textcolor{keywordflow}{return}\ client.isConnected();}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00105}00105\ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00107}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_ab05d65dbbd073954e3045da0c31250e0}{00107}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_ab05d65dbbd073954e3045da0c31250e0}{PAHOClient::PAHOClient}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{uint16\_t}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{numReceivers}})\ :}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ client(net)\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00109}00109\ \ \ \ \ genericReceivers.reserve(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{numReceivers}});}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00110}00110\ \ \ \ \ specificReceivers.reserve(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{numReceivers}});}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00111}00111\ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00113}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a6f0ae3731325e9ab016bb07e1f977ccb}{00113}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a6f0ae3731325e9ab016bb07e1f977ccb}{PAHOClient::\string~PAHOClient}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00114}00114\ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00116}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_abb257a69eab13ff3db5c3d48233ecfd6}{00116}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_abb257a69eab13ff3db5c3d48233ecfd6}{PAHOClient::registerMessageReceiver}}(\mbox{\hyperlink{struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver}{MQTTMessageReceiver}}\ *\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{recv}})\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00117}00117\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{recv}}\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00119}00119\ \ \ \ \ genericReceivers.push\_back(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{recv}});}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00120}00120\ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00122}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_ae6559e72b777963037108268a1dc0178}{00122}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_ae6559e72b777963037108268a1dc0178}{PAHOClient::setMessageCallback}}(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client_afdd270cfe93363df3d9076452ace76fa}{PAHOClient::MessageCB}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{func}})\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00123}00123\ \ \ \ \ onMessage\ =\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{func}};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00124}00124\ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00126}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a6a9f497f3bcec8c8973295b8d1c16759}{00126}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a6a9f497f3bcec8c8973295b8d1c16759}{PAHOClient::setConnectCallback}}(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client_a5baa97eaa06bfc44647d2420a1c613b2}{PAHOClient::ConnectCB}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{func}})\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00127}00127\ \ \ \ \ onConnect\ =\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{func}};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00128}00128\ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00129}00129\ \textcolor{preprocessor}{\#include\ "{}globals.h"{}}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00130}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a607bcae635e895968efb49dd8eae533a}{00130}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a607bcae635e895968efb49dd8eae533a}{PAHOClient::pahoMessageReceived}}(MQTT::MessageData\ \&data)\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00132}00132\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(onMessage\ ||\ genericReceivers.empty()\ ||\ specificReceivers.empty()))}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00135}00135\ \ \ \ \ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_message}{JMQTT::Message}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00136}00136\ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}}.topic\ =\ string(data.topicName.lenstring.data,}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ data.topicName.lenstring.len);}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00138}00138\ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}}.payload\ =\ string((\textcolor{keywordtype}{char}*)\ data.message.payload,\ data.message.payloadlen);}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00139}00139\ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}}.qos\ =\ (\mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3}{JMQTT::QOS}})\ data.message.qos;}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00141}00141\ \ \ \ \ onMessage(*\textcolor{keyword}{this},\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}});}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00143}00143\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{recv}}\ :\ genericReceivers)\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{recv}}-\/>onMessage(*\textcolor{keyword}{this},\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}});}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00145}00145\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00146}00146\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{pair}}\ :\ specificReceivers)\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00147}00147\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_j_m_q_t_t_1_1_client_a6c3f3a90dbafa7887cc8bd5d21b6eaba}{isTopicMatched}}(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}}.topic,\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{pair}}.first))\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{pair}}.second-\/>onMessage(*\textcolor{keyword}{this},\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}});}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00149}00149\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00150}00150\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00151}00151\ \textcolor{comment}{//\ \ msg.qos\ =\ data}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00152}00152\ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8cpp_source_l00154}00154\ \}\ \textcolor{comment}{/*\ namespace\ JMQTT\ */}}
 
 \end{DoxyCode}

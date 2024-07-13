@@ -61,14 +61,11 @@ struct MQTTMessageReceiver: SignalListener<void, OnMessageData> {
 
 class Client {
 public:
-
-	// TODO: implement observer/listener patterb for message callbacks
-	// this will allow multiple classes to be notified when a message is received
-
 	using ConnectCB = std::function<void(Client&)>;
 	using MessageCB = std::function<void(Client&, Message)>;
 
 	virtual bool publish(Message msg) = 0;
+	virtual inline bool publish(string topic, string message, QOS qos = QOS::QOS0) final { return publish({topic, message, qos}); }
 	virtual bool update(uint16_t timeoutMs) = 0;
 
 	virtual bool subscribe(string_view topic, QOS qos = QOS::QOS0) = 0;
@@ -95,7 +92,6 @@ public:
 			curf++;
 			curn++;
 		}
-
 
 		return (curn == curn_end) && (*curf == '\0');
 	}

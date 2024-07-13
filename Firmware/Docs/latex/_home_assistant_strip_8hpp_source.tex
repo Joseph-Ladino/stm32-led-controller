@@ -1,0 +1,221 @@
+\doxysection{Home\+Assistant\+Strip.\+hpp}
+\hypertarget{_home_assistant_strip_8hpp_source}{}\label{_home_assistant_strip_8hpp_source}\index{Core/JPort/include/HomeAssistantStrip.hpp@{Core/JPort/include/HomeAssistantStrip.hpp}}
+\mbox{\hyperlink{_home_assistant_strip_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00002}00002\ \textcolor{comment}{\ *\ JLedstrip.hpp}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Jul\ 9,\ 2024}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ user}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ JPORT\_INCLUDE\_HOMEASSISTANTSTRIP\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#define\ JPORT\_INCLUDE\_HOMEASSISTANTSTRIP\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <ArduinoJson.h>}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_d_m_a_strip_8hpp}{DMAStrip.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_home_assistant_device_8hpp}{HomeAssistantDevice.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_net_config_8hpp}{NetConfig.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}globals.h"{}}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}boardinfo.h"{}}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00020}00020\ \textcolor{keyword}{using\ }std::string;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00021}00021\ \textcolor{keyword}{using\ }\mbox{\hyperlink{struct_j_l_e_d_1_1_color}{JLED::Color}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00023}00023\ \textcolor{keyword}{template}<uint16\_t\ \_NUM\_PIXELS\ =\ 10,\ uint16\_t\ \_NUM\_PIXELS\_PER\_DMA\ =\ 5,}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00024}00024\ \ \ \ \ \ \ \ \ uint16\_t\ \_DMA\_ARR\ =\ 79,\ \textcolor{keyword}{typename}\ DMA\_BUF\_TYPE\ =\ uint32\_t>}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00025}\mbox{\hyperlink{class_home_assistant_strip}{00025}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_home_assistant_strip}{HomeAssistantStrip}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED::DMAStrip}}<\_NUM\_PIXELS,}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \_NUM\_PIXELS\_PER\_DMA,\ \_DMA\_ARR,\ DMA\_BUF\_TYPE>,}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_home_assistant_device}{JMQTT::HomeAssistantDevice}}\ \{}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00029}00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{LEDBase}}\ =\ \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED::DMAStrip}}<\_NUM\_PIXELS,}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \_NUM\_PIXELS\_PER\_DMA,\ \_DMA\_ARR,\ DMA\_BUF\_TYPE>;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00033}00033\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ DeviceName,\ BaseTopic,\ StateTopic,\ DiscoveryTopic,\ CommandTopic,}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ AvailabilityTopic;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00036}00036\ \ \ \ \ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config}{JETHERNET::NetConfig}}\ netConf;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00039}00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00040}\mbox{\hyperlink{struct_home_assistant_strip_1_1_state}{00040}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_home_assistant_strip_1_1_state}{State}}\ \{}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00041}\mbox{\hyperlink{struct_home_assistant_strip_1_1_state_a3ff04bd99d729c66c60bebfbd32d5edc}{00041}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_home_assistant_strip_1_1_state_a3ff04bd99d729c66c60bebfbd32d5edc}{powerOn}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00042}\mbox{\hyperlink{struct_home_assistant_strip_1_1_state_a16bfb49e21ba02eed45f3a4c4a7d23ac}{00042}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}}\ \mbox{\hyperlink{struct_home_assistant_strip_1_1_state_a16bfb49e21ba02eed45f3a4c4a7d23ac}{staticColor}}\ =\ \mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}}(0xFF00FF);}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00043}\mbox{\hyperlink{struct_home_assistant_strip_1_1_state_a622359d1274647301d39b202479ce5f3}{00043}}\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_home_assistant_strip_1_1_state_a622359d1274647301d39b202479ce5f3}{brightness}}\ =\ 255;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00044}\mbox{\hyperlink{struct_home_assistant_strip_1_1_state_a4dd8ea798fe67b9acde30afef1223d94}{00044}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_home_assistant_strip_1_1_state_a4dd8ea798fe67b9acde30afef1223d94}{effect}}\ =\ \textcolor{stringliteral}{"{}none"{}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00045}\mbox{\hyperlink{struct_home_assistant_strip_1_1_state_af98a2b4f4fe63e4d450c5dd6eb7dbfb7}{00045}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_home_assistant_strip_1_1_state_af98a2b4f4fe63e4d450c5dd6eb7dbfb7}{colorMode}}\ =\ \textcolor{stringliteral}{"{}rgb"{}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00046}00046\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00048}\mbox{\hyperlink{class_home_assistant_strip_aefd147d33524816689e983bc7547b841}{00048}}\ \ \ \ \ \mbox{\hyperlink{struct_home_assistant_strip_1_1_state}{State}}\ \mbox{\hyperlink{class_home_assistant_strip_aefd147d33524816689e983bc7547b841}{state}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00050}\mbox{\hyperlink{class_home_assistant_strip_a533da2001dde06dffb06e91fcc09487d}{00050}}\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_home_assistant_strip_a533da2001dde06dffb06e91fcc09487d}{setPower}}(\textcolor{keywordtype}{bool}\ on)\ \{}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_home_assistant_strip_aefd147d33524816689e983bc7547b841}{state}}.\mbox{\hyperlink{struct_home_assistant_strip_1_1_state_a3ff04bd99d729c66c60bebfbd32d5edc}{powerOn}}\ =\ on;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_ac7348d0115d4b462bf2f92b419347700}{LEDBase::setPower}}(on);}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00056}\mbox{\hyperlink{class_home_assistant_strip_a9d8ee5972e5d0daf2101abfc2d0f7257}{00056}}\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_home_assistant_strip_a9d8ee5972e5d0daf2101abfc2d0f7257}{setBrightness}}(uint8\_t\ brightness)\ \{}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_home_assistant_strip_aefd147d33524816689e983bc7547b841}{state}}.\mbox{\hyperlink{struct_home_assistant_strip_1_1_state_a622359d1274647301d39b202479ce5f3}{brightness}}\ =\ brightness;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a5cf2a5dacc184d5c0c57769d8c241daf}{LEDBase::setBrightness}}(brightness);}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00062}00062\ \ \ \ \ \textcolor{comment}{//\ sets\ staticColor}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00063}\mbox{\hyperlink{class_home_assistant_strip_ab15dffdecf434e8bb193cfad2f67793c}{00063}}\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_home_assistant_strip_ab15dffdecf434e8bb193cfad2f67793c}{setAll}}(uint32\_t\ col)\ \{}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_home_assistant_strip_aefd147d33524816689e983bc7547b841}{state}}.\mbox{\hyperlink{struct_home_assistant_strip_1_1_state_a16bfb49e21ba02eed45f3a4c4a7d23ac}{staticColor}}\ =\ col;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_ae0fb1071573875e02ea8444ed1efba4a}{LEDBase::setAll}}(col);}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00069}00069\ \ \ \ \ \textcolor{comment}{//\ to\ be\ later\ implemented}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00070}00070\ \textcolor{comment}{//\ \ void\ setEffect(std::string\ effect);}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00071}00071\ \textcolor{comment}{//\ \ void\ setColorMode(std::string\ colorMode);}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00073}00073\ \ \ \ \ \textcolor{comment}{//\ MQTT}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00074}\mbox{\hyperlink{class_home_assistant_strip_a4840695757e512f6c1f09a5c12d570b8}{00074}}\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_home_assistant_strip_a4840695757e512f6c1f09a5c12d570b8}{onMessage}}(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{JMQTT::Client}}\ \&client,}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_message}{JMQTT::Message}}\ \&msg)\ \textcolor{keyword}{final}\ \{}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00076}00076\ \ \ \ \ \ \ \ \ USB\_Printf(\textcolor{stringliteral}{"{}FROM\ LEDSTRIP:\ \%s\(\backslash\)n"{}},\ ((\textcolor{keywordtype}{string}\ )msg).c\_str());}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (msg.topic\ ==\ CommandTopic)\ \{}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ JsonDocument\ doc;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ deserializeJson(doc,\ msg.payload);}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_home_assistant_strip_a533da2001dde06dffb06e91fcc09487d}{setPower}}(doc[\textcolor{stringliteral}{"{}state"{}}]\ ==\ \textcolor{stringliteral}{"{}ON"{}});}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (doc.containsKey(\textcolor{stringliteral}{"{}color"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ color\ =\ doc[\textcolor{stringliteral}{"{}color"{}}];}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(color.containsKey(\textcolor{stringliteral}{"{}r"{}})\ \&\&\ color.containsKey(\textcolor{stringliteral}{"{}g"{}})}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ color.containsKey(\textcolor{stringliteral}{"{}b"{}})))}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}}\ c;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c.\mbox{\hyperlink{struct_j_l_e_d_1_1_color_a450cffa91c156cbc2fdd5f4dda74b9da}{r}}\ =\ color[\textcolor{stringliteral}{"{}r"{}}];}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c.\mbox{\hyperlink{struct_j_l_e_d_1_1_color_a53b60a1180be5dca5879493599c3c924}{g}}\ =\ color[\textcolor{stringliteral}{"{}g"{}}];}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c.\mbox{\hyperlink{struct_j_l_e_d_1_1_color_abc9619ad0b5523617ab8073e9d75a6b7}{b}}\ =\ color[\textcolor{stringliteral}{"{}b"{}}];}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_home_assistant_strip_ab15dffdecf434e8bb193cfad2f67793c}{setAll}}(c);}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(doc.containsKey(\textcolor{stringliteral}{"{}brightness"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_home_assistant_strip_a9d8ee5972e5d0daf2101abfc2d0f7257}{setBrightness}}(doc[\textcolor{stringliteral}{"{}brightness"{}}]);}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_home_assistant_strip_af9e2f880c02c6519fcaed8df0bdeee14}{publishState}}(\&client);}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00105}00105\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00107}\mbox{\hyperlink{class_home_assistant_strip_af9e2f880c02c6519fcaed8df0bdeee14}{00107}}\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_home_assistant_strip_af9e2f880c02c6519fcaed8df0bdeee14}{publishState}}(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{JMQTT::Client}}\ *client)\ \textcolor{keyword}{final}\ \{}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00108}00108\ \ \ \ \ \ \ \ \ JsonDocument\ doc;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00110}00110\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}state"{}}]\ \ \ \ \ \ =\ \mbox{\hyperlink{class_home_assistant_strip_aefd147d33524816689e983bc7547b841}{state}}.\mbox{\hyperlink{struct_home_assistant_strip_1_1_state_a3ff04bd99d729c66c60bebfbd32d5edc}{powerOn}}\ ?\ \textcolor{stringliteral}{"{}ON"{}}\ :\ \textcolor{stringliteral}{"{}OFF"{}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00111}00111\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}brightness"{}}]\ =\ \mbox{\hyperlink{class_home_assistant_strip_aefd147d33524816689e983bc7547b841}{state}}.\mbox{\hyperlink{struct_home_assistant_strip_1_1_state_a622359d1274647301d39b202479ce5f3}{brightness}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00112}00112\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}effect"{}}]\ \ \ \ \ =\ \mbox{\hyperlink{class_home_assistant_strip_aefd147d33524816689e983bc7547b841}{state}}.\mbox{\hyperlink{struct_home_assistant_strip_1_1_state_a4dd8ea798fe67b9acde30afef1223d94}{effect}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00113}00113\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}color\_mode"{}}]\ =\ \mbox{\hyperlink{class_home_assistant_strip_aefd147d33524816689e983bc7547b841}{state}}.\mbox{\hyperlink{struct_home_assistant_strip_1_1_state_af98a2b4f4fe63e4d450c5dd6eb7dbfb7}{colorMode}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00114}00114\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}color"{}}][\textcolor{stringliteral}{"{}r"{}}]\ =\ \mbox{\hyperlink{class_home_assistant_strip_aefd147d33524816689e983bc7547b841}{state}}.\mbox{\hyperlink{struct_home_assistant_strip_1_1_state_a16bfb49e21ba02eed45f3a4c4a7d23ac}{staticColor}}.\mbox{\hyperlink{struct_j_l_e_d_1_1_color_a450cffa91c156cbc2fdd5f4dda74b9da}{r}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00115}00115\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}color"{}}][\textcolor{stringliteral}{"{}g"{}}]\ =\ \mbox{\hyperlink{class_home_assistant_strip_aefd147d33524816689e983bc7547b841}{state}}.\mbox{\hyperlink{struct_home_assistant_strip_1_1_state_a16bfb49e21ba02eed45f3a4c4a7d23ac}{staticColor}}.\mbox{\hyperlink{struct_j_l_e_d_1_1_color_a53b60a1180be5dca5879493599c3c924}{g}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00116}00116\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}color"{}}][\textcolor{stringliteral}{"{}b"{}}]\ =\ \mbox{\hyperlink{class_home_assistant_strip_aefd147d33524816689e983bc7547b841}{state}}.\mbox{\hyperlink{struct_home_assistant_strip_1_1_state_a16bfb49e21ba02eed45f3a4c4a7d23ac}{staticColor}}.\mbox{\hyperlink{struct_j_l_e_d_1_1_color_abc9619ad0b5523617ab8073e9d75a6b7}{b}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ stateJson;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00119}00119\ \ \ \ \ \ \ \ \ serializeJson(doc,\ stateJson);}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00121}00121\ \ \ \ \ \ \ \ \ USB\_Printf(\textcolor{stringliteral}{"{}\(\backslash\)nPublishing\ LEDStrip\ state\ to\ MQTT\ broker:\(\backslash\)n\(\backslash\)t\%s\(\backslash\)n\(\backslash\)n"{}},\ stateJson.c\_str());}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00122}00122\ \ \ \ \ \ \ \ \ client-\/>publish(StateTopic,\ stateJson);}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00123}00123\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00125}\mbox{\hyperlink{class_home_assistant_strip_a0da0d082be544dc9fda6f39ba8864186}{00125}}\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_home_assistant_strip_a0da0d082be544dc9fda6f39ba8864186}{publishDiscovery}}(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{JMQTT::Client}}\ *client)\ \textcolor{keyword}{final}\ \{}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00126}00126\ \ \ \ \ \ \ \ \ JsonDocument\ doc;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ note:\ using\ abbreviated\ property\ names\ to\ reduce\ space}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ https://www.home-\/assistant.io/integrations/mqtt}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00130}00130\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}name"{}}]\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00131}00131\ \textcolor{comment}{//\ \ \ \ \ \ doc["{}uniq\_id"{}]\ =\ DeviceName\ +\ "{}\_mqtt"{};}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00132}00132\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}platform"{}}]\ =\ \textcolor{stringliteral}{"{}mqtt"{}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00133}00133\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}schema"{}}]\ =\ \textcolor{stringliteral}{"{}json"{}};\ \textcolor{comment}{//\ deprecated}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00135}00135\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}uniq\_id"{}}]\ =\ \textcolor{stringliteral}{"{}STM32LED\_REV-\/"{}}\ LED\_CONTROLLER\_SN;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00137}00137\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}device"{}}][\textcolor{stringliteral}{"{}name"{}}]\ =\ DeviceName;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00138}00138\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}device"{}}][\textcolor{stringliteral}{"{}ids"{}}]\ =\ doc[\textcolor{stringliteral}{"{}uniq\_id"{}}];}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00139}00139\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}device"{}}][\textcolor{stringliteral}{"{}mf"{}}]\ =\ \textcolor{stringliteral}{"{}Joe\ Inc."{}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00140}00140\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}device"{}}][\textcolor{stringliteral}{"{}mdl"{}}]\ =\ \textcolor{stringliteral}{"{}v4"{}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00141}00141\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}device"{}}][\textcolor{stringliteral}{"{}hw"{}}]\ =\ LED\_CONTROLLER\_BD\_VERSION;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00142}00142\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}device"{}}][\textcolor{stringliteral}{"{}sw"{}}]\ =\ LED\_CONTROLLER\_FW\_VERSION;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00143}00143\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}device"{}}][\textcolor{stringliteral}{"{}sn"{}}]\ =\ LED\_CONTROLLER\_SN;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00145}00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(netConf.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config_a348d8f4705812bf0c808d4f692c4c1fe}{mac}}\ !=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ mac[18];}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ netConf.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config_a348d8f4705812bf0c808d4f692c4c1fe}{mac}}.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_a145d5c857df32f5cad1279217b9535cb}{cString}}(mac);}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}device"{}}][\textcolor{stringliteral}{"{}cns"{}}][0][0]\ =\ \textcolor{stringliteral}{"{}mac"{}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}device"{}}][\textcolor{stringliteral}{"{}cns"{}}][0][1]\ =\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*)\ mac;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00150}00150\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00152}00152\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(netConf.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config_a15633d6f722dc68b31dab9d8de300da7}{ip}}\ !=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ ip[16];}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ netConf.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config_a15633d6f722dc68b31dab9d8de300da7}{ip}}.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_abf6814cc0fd7e20073cea1abdbc1e1a2}{cString}}(ip);}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}device"{}}][\textcolor{stringliteral}{"{}cns"{}}][1][0]\ =\ \textcolor{stringliteral}{"{}ip"{}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}device"{}}][\textcolor{stringliteral}{"{}cns"{}}][1][1]\ =\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*)\ ip;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00157}00157\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00159}00159\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}\string~"{}}]\ =\ BaseTopic;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00160}00160\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}stat\_t"{}}]\ =\ \textcolor{stringliteral}{"{}\string~/state"{}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00161}00161\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}cmd\_t"{}}]\ =\ \textcolor{stringliteral}{"{}\string~/state/set"{}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00162}00162\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}avty\_t"{}}]\ =\ \textcolor{stringliteral}{"{}\string~/state/available"{}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00164}00164\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}brightness"{}}]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00165}00165\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}clrm"{}}]\ =\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ deprecated}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00166}00166\ \ \ \ \ \ \ \ \ doc[\textcolor{stringliteral}{"{}sup\_clrm"{}}][0]\ =\ \textcolor{stringliteral}{"{}rgb"{}};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00168}00168\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ todo:\ configure\ effects}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00169}00169\ \textcolor{comment}{//\ \ \ \ \ \ doc["{}effect"{}]\ =\ true;}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00171}00171\ \textcolor{comment}{//\ \ \ \ \ \ for\ (auto\ i\ =\ 0u;}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00172}00172\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ i\ <\ sizeof(LedstripEffects::EffectsLookup)\ /\ sizeof(String);}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00173}00173\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ i++)\ \{}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00174}00174\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ doc["{}fx\_list"{}][i]\ =\ LedstripEffects::EffectsLookup[i];}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00175}00175\ \textcolor{comment}{//\ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00176}00176\ \textcolor{comment}{//\ \ \ \ \ \ doc["{}fx\_list"{}][0]\ =\ "{}none"{};}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00177}00177\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00178}00178\ \textcolor{comment}{//\ \ \ \ \ \ auto\ size\ =\ effects.size();}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00179}00179\ \textcolor{comment}{//\ \ \ \ \ \ auto\ keys\ =\ effects.keys();}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00180}00180\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00181}00181\ \textcolor{comment}{//\ \ \ \ \ \ for\ (size\_t\ i\ =\ 0;\ i\ <\ size;\ i++)\ \{}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00182}00182\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ doc["{}fx\_list"{}][i\ +\ 1]\ =\ keys[i];}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00183}00183\ \textcolor{comment}{//\ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00185}00185\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ discoveryJson;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00186}00186\ \ \ \ \ \ \ \ \ serializeJson(doc,\ discoveryJson);}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00187}00187\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00188}00188\ \ \ \ \ \ \ \ \ USB\_Printf(\textcolor{stringliteral}{"{}\(\backslash\)nPublishing\ LEDStrip\ discovery\ to\ MQTT\ broker:\(\backslash\)n\(\backslash\)t\%s\(\backslash\)n\(\backslash\)n"{}},\ discoveryJson.c\_str());}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00189}00189\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00190}00190\ \ \ \ \ \ \ \ \ client-\/>publish(DiscoveryTopic,\ discoveryJson);}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00191}00191\ \ \ \ \ \ \ \ \ client-\/>publish(AvailabilityTopic,\ \textcolor{stringliteral}{"{}online"{}});}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00192}00192\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00194}\mbox{\hyperlink{class_home_assistant_strip_ae47825317bfd2dd75d6e6775d8afd9ab}{00194}}\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_home_assistant_strip_ae47825317bfd2dd75d6e6775d8afd9ab}{init}}(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{JMQTT::Client}}\ *client)\ \textcolor{keyword}{final}\ \{}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00195}00195\ \textcolor{comment}{//\ \ \ \ \ \ this-\/>client\ =\ client;}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00196}00196\ \ \ \ \ \ \ \ \ client-\/>subscribe(CommandTopic,\ \textcolor{keyword}{this},\ \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a4cc41cf3d090303c0e5d9e0bcb842165}{JMQTT::QOS::QOS2}});}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00198}00198\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_home_assistant_strip_a0da0d082be544dc9fda6f39ba8864186}{publishDiscovery}}(client);}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00199}00199\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_home_assistant_strip_af9e2f880c02c6519fcaed8df0bdeee14}{publishState}}(client);}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00200}00200\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00201}00201\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00202}\mbox{\hyperlink{class_home_assistant_strip_ac87794edc2b7503087e47d21e70b8fae}{00202}}\ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_home_assistant_strip_ac87794edc2b7503087e47d21e70b8fae}{HomeAssistantStrip}}(std::string\_view\ deviceName\ =\ \textcolor{stringliteral}{"{}STM32\_LEDStrip"{}},\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config}{JETHERNET::NetConfig}}\ netConf\ =\ \{\})\ :}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ LEDBase::\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a22d2e522f53d4fe6e764ae973601021f}{DMAStrip}}(),}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ DeviceName(deviceName),}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ BaseTopic(\textcolor{stringliteral}{"{}homeassistant/light/"{}}\ +\ DeviceName),\ \textcolor{comment}{//\ TODO:\ change\ base\ topic\ level\ to\ "{}homeassistant"{}\ instead\ of\ "{}test"{}}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ StateTopic(BaseTopic\ +\ \textcolor{stringliteral}{"{}/state"{}}),}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ DiscoveryTopic(BaseTopic\ +\ \textcolor{stringliteral}{"{}/config"{}}),}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ CommandTopic(StateTopic\ +\ \textcolor{stringliteral}{"{}/set"{}}),}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ AvailabilityTopic(StateTopic\ +\ \textcolor{stringliteral}{"{}/available"{}}),}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ netConf(netConf)}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00211}00211\ \ \ \ \ \{\}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00212}00212\ \}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00213}00213\ ;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_strip_8hpp_source_l00215}00215\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ JPORT\_INCLUDE\_HOMEASSISTANTSTRIP\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

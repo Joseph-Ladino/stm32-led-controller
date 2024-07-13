@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['qos_0',['QOS',['../namespace_j_m_q_t_t.html#ae20074947d69a428122e13962b0b54e3',1,'JMQTT']]]
+  ['mqttversion_0',['MQTTVersion',['../namespace_j_m_q_t_t.html#ad2b6f21f1fd9d7e8d6be0b4eeb30fc43',1,'JMQTT']]]
 ];

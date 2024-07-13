@@ -1,14 +1,21 @@
 var searchData=
 [
-  ['r_0',['r',['../struct_j_l_e_d_1_1_color.html#a450cffa91c156cbc2fdd5f4dda74b9da',1,'JLED::Color']]],
-  ['raw_1',['raw',['../struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a232d117efc1173373972c819a0e48e64',1,'JETHERNET::NetIP::raw'],['../struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#ab2d7fa28425227ed5f42f6dd29fa1fa0',1,'JETHERNET::NetMAC::raw'],['../struct_j_l_e_d_1_1_color.html#ac2553ef03f3016ee30a946ff5ab45720',1,'JLED::Color::raw'],['../class_j_l_e_d_1_1_w_s2815_strip.html#a5d65329ef1c35d1af1c7e9298e21de24',1,'JLED::WS2815Strip::raw']]],
-  ['rawip_2',['RAWIP',['../namespace_j_e_t_h_e_r_n_e_t.html#a2bcff7d05aee5335790afea11e197ca1ac5e644af7e77a1d8c565037a46b76962',1,'JETHERNET']]],
-  ['rawmac_3',['RAWMAC',['../namespace_j_e_t_h_e_r_n_e_t.html#a2bcff7d05aee5335790afea11e197ca1a5d07b94b0ac1f5024a8dc70adeefa6a0',1,'JETHERNET']]],
-  ['read_4',['read',['../class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#ac352a31bb144160f2a060c2609cee259',1,'JETHERNET::NetSock::read()'],['../struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#a08e3a3faead9d84bddd16177baa8574c',1,'JMQTT::W5500MqttNetwork::read()'],['../struct_j_m_q_t_t_1_1_p_a_h_o_network.html#aa0aa90f178a7796b44b9b3677fee09de',1,'JMQTT::PAHONetwork::read()'],['../class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket.html#a6f49d3a309be5c3b9d2e3a3aaae6a883',1,'JETHERNET::W5500Socket::read()']]],
-  ['readbuffer_5',['readBuffer',['../class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface.html#a9b867262fb1648b34b00bd3ce8ea6366',1,'JETHERNET::W5500Interface::readBuffer'],['../namespace_j_e_t_h_e_r_n_e_t.html#a495c13f1de2800e18d462a089fc38d47',1,'JETHERNET::readBuffer()']]],
-  ['readbyte_6',['readByte',['../class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface.html#a9b760904bbc60f357339dc98253d6d17',1,'JETHERNET::W5500Interface::readByte'],['../namespace_j_e_t_h_e_r_n_e_t.html#a16198c04d679e46f5e790d267be725fb',1,'JETHERNET::readByte()']]],
-  ['reconnect_7',['reconnect',['../class_j_m_q_t_t_1_1_client.html#ac2c1c3f2c2ac1938661dbaae2ecbf39c',1,'JMQTT::Client::reconnect()'],['../class_j_m_q_t_t_1_1_p_a_h_o_client.html#a106782e6d80da9c3269c004eec75ec07',1,'JMQTT::PAHOClient::reconnect()'],['../class_j_m_q_t_t_1_1_p_a_h_o_client.html#adfb668e97d68912349291000810d3e63',1,'JMQTT::PAHOClient::reconnect(JETHERNET::NetSock &amp;sock)']]],
-  ['res_8',['RES',['../class_j_l_e_d_1_1_w_s2815_strip.html#aa56c857b1cb9d6362c0c941b2ad933d3afaf911e365324452c4ff0e2dc3582daf',1,'JLED::WS2815Strip']]],
-  ['resetpin_9',['resetPin',['../struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config.html#a4989fb5f65b0849b4483891b844c104f',1,'JETHERNET::W5500Config']]],
-  ['resetport_10',['resetPort',['../struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config.html#a0d72f294c3e7d6143642b8817cac726f',1,'JETHERNET::W5500Config']]]
+  ['pahoclient_0',['PAHOClient',['../class_j_m_q_t_t_1_1_p_a_h_o_client.html',1,'JMQTT::PAHOClient'],['../class_j_m_q_t_t_1_1_p_a_h_o_client.html#ab05d65dbbd073954e3045da0c31250e0',1,'JMQTT::PAHOClient::PAHOClient()']]],
+  ['pahoclient_2ecpp_1',['PAHOClient.cpp',['../_p_a_h_o_client_8cpp.html',1,'']]],
+  ['pahoclient_2ehpp_2',['PAHOClient.hpp',['../_p_a_h_o_client_8hpp.html',1,'']]],
+  ['pahomessagereceived_3',['pahoMessageReceived',['../class_j_m_q_t_t_1_1_p_a_h_o_client.html#a607bcae635e895968efb49dd8eae533a',1,'JMQTT::PAHOClient']]],
+  ['pahonetwork_4',['PAHONetwork',['../struct_j_m_q_t_t_1_1_p_a_h_o_network.html',1,'JMQTT']]],
+  ['password_5',['password',['../struct_j_m_q_t_t_1_1_client_config.html#a750576b79628cbcd0297c4e3ebf5ac73',1,'JMQTT::ClientConfig']]],
+  ['payload_6',['payload',['../struct_j_m_q_t_t_1_1_message.html#a8b052e26ae6631e381d29cabdd07d384',1,'JMQTT::Message']]],
+  ['period_7',['PERIOD',['../class_j_l_e_d_1_1_w_s2815_strip.html#aa56c857b1cb9d6362c0c941b2ad933d3ae406e998431d722ecb7f3090a141948e',1,'JLED::WS2815Strip']]],
+  ['phylinkstatus_8',['phyLinkStatus',['../class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#aec53d829385f6ee0d0296af3943ffe4a',1,'JETHERNET::EthernetHC::phyLinkStatus()'],['../class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c.html#a8d3fb687280b9f4e521280d7a977260c',1,'JETHERNET::W5500HC::phyLinkStatus()']]],
+  ['physicalpowercbsig_9',['physicalPowerCBSig',['../class_j_l_e_d_1_1_w_s2815_strip.html#a562da1adaa9bbd4bfb16eeb18114892c',1,'JLED::WS2815Strip']]],
+  ['phytimeout_10',['phyTimeout',['../class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c.html#a66330e647066a6f6551165b7d6ce94f4',1,'JETHERNET::W5500HC']]],
+  ['pointer_11',['pointer',['../struct_j_l_e_d_1_1_w_s2815_strip_1_1iterator.html#a684fcd50a7912ceddec1cad87abe1c81',1,'JLED::WS2815Strip::iterator::pointer'],['../struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator.html#ab37a43e6637bfe230a1593a12bf9d087',1,'JLED::WS28xxStrip::Iterator::pointer']]],
+  ['poweron_12',['powerOn',['../struct_j_l_e_d_1_1_w_s_strip_state.html#a21759ab4d004cce59cebb5c103a5881d',1,'JLED::WSStripState::powerOn'],['../struct_home_assistant_strip_1_1_state.html#a3ff04bd99d729c66c60bebfbd32d5edc',1,'HomeAssistantStrip::State::powerOn']]],
+  ['printnetinfo_13',['printNetInfo',['../namespace_j_e_t_h_e_r_n_e_t.html#a96e4747ccfa9e4e1c4d80c98d32c6e8a',1,'JETHERNET']]],
+  ['publish_14',['publish',['../class_j_m_q_t_t_1_1_client.html#a8e4b70bb656d1d7b5ba4f11d7e64e5aa',1,'JMQTT::Client::publish(Message msg)=0'],['../class_j_m_q_t_t_1_1_client.html#a4c93aa930c740dcd179aabf654c13533',1,'JMQTT::Client::publish(string topic, string message, QOS qos=QOS::QOS0) final'],['../class_j_m_q_t_t_1_1_p_a_h_o_client.html#afe848a1c54f215fe65d088fcb123617f',1,'JMQTT::PAHOClient::publish()']]],
+  ['publishdiscovery_15',['publishDiscovery',['../class_home_assistant_strip.html#a0da0d082be544dc9fda6f39ba8864186',1,'HomeAssistantStrip']]],
+  ['publishstate_16',['publishState',['../class_home_assistant_strip.html#af9e2f880c02c6519fcaed8df0bdeee14',1,'HomeAssistantStrip']]],
+  ['pwmperiodms_17',['pwmPeriodMs',['../struct_j_l_e_d_1_1_w_s_strip_type.html#a3bf6d1b04838032dfda693dfaad447f8',1,'JLED::WSStripType']]]
 ];

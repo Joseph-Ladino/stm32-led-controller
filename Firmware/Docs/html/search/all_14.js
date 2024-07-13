@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['zero_5fh_0',['ZERO_H',['../class_j_l_e_d_1_1_w_s2815_strip.html#aa56c857b1cb9d6362c0c941b2ad933d3afced65582f62b8641ca05b647a941841',1,'JLED::WS2815Strip']]],
-  ['zero_5fl_1',['ZERO_L',['../class_j_l_e_d_1_1_w_s2815_strip.html#aa56c857b1cb9d6362c0c941b2ad933d3ab67332268087e770e65874529b982c8d',1,'JLED::WS2815Strip']]]
+  ['value_5ftype_0',['value_type',['../struct_j_l_e_d_1_1_w_s2815_strip_1_1iterator.html#ad6e04af1beee22ec126a63271c625fda',1,'JLED::WS2815Strip::iterator::value_type'],['../struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator.html#ab6a2f32eb6319bdf5923179bd8c52897',1,'JLED::WS28xxStrip::Iterator::value_type']]],
+  ['version_1',['version',['../struct_j_m_q_t_t_1_1_client_config.html#adaf4490b2a554690a8b155c3f0683dd5',1,'JMQTT::ClientConfig']]]
 ];
