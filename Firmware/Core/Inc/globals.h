@@ -16,7 +16,6 @@ extern "C" {
 #define USE_USB_DEBUG
 #define ETH_DEBUG
 
-
 //void USB_Printf(const char* format, ...);
 #ifdef DEBUG
 #define USB_Printf(...) printf(__VA_ARGS__)
