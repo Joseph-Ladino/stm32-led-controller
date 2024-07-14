@@ -65,39 +65,36 @@ public:
 	using MessageCB = std::function<void(Client&, Message)>;
 
 	virtual bool publish(Message msg) = 0;
-	virtual inline bool publish(string topic, string message, QOS qos = QOS::QOS0) final { return publish({topic, message, qos}); }
+	virtual inline bool publish(string topic, string message, QOS qos = QOS::QOS0) final {
+		return publish( { topic, message, qos });
+	}
 	virtual bool update(uint16_t timeoutMs) = 0;
 
 	virtual bool subscribe(string_view topic, QOS qos = QOS::QOS0) = 0;
-	virtual bool subscribe(string_view topic, MQTTMessageReceiver *recv,
-			QOS qos = QOS::QOS0) = 0;
+	virtual bool subscribe(string_view topic, MQTTMessageReceiver *recv, QOS qos = QOS::QOS0) = 0;
 
 	// stolen from: https://github.com/eclipse/paho.mqtt.embedded-c/blob/master/MQTTClient/src/MQTTClient.h#L497
 	virtual inline bool isTopicMatched(string_view topic, string_view filter) final {
 		char *curf = (char*) filter.data();
 		char *curn = (char*) topic.data();
 		char *curn_end = curn + topic.size();
-
+		
 		while (*curf && curn < curn_end) {
-			if (*curn == '/' && *curf != '/')
-				break;
-			if (*curf != '+' && *curf != '#' && *curf != *curn)
-				break;
+			if (*curn == '/' && *curf != '/') break;
+			if (*curf != '+' && *curf != '#' && *curf != *curn) break;
 			if (*curf == '+') { // skip until we meet the next separator, or end of string
 				char *nextpos = curn + 1;
 				while (nextpos < curn_end && *nextpos != '/')
 					nextpos = ++curn + 1;
-			} else if (*curf == '#')
-				curn = curn_end - 1;    // skip until end of string
+			} else if (*curf == '#') curn = curn_end - 1;    // skip until end of string
 			curf++;
 			curn++;
 		}
-
+		
 		return (curn == curn_end) && (*curf == '\0');
 	}
-
-	virtual bool connect(JETHERNET::NetSock &sock,
-			const ClientConfig config) = 0;
+	
+	virtual bool connect(JETHERNET::NetSock &sock, const ClientConfig config) = 0;
 	virtual bool reconnect() = 0;
 	virtual void disconnect() = 0;
 	virtual bool isConnected() = 0;

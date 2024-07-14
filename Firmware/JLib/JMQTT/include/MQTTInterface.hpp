@@ -19,7 +19,7 @@ struct W5500MqttNetwork {
 //		int (*mqttread) (Network*, unsigned char*, int, long);
 //		int (*mqttwrite) (Network*, unsigned char*, int, long);
 //		void (*disconnect) (Network*);
-
+	
 	bool isConnected();
 	void setSocket(int socketNum);
 

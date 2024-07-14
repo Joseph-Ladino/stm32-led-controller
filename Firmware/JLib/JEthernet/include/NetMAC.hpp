@@ -20,7 +20,7 @@ namespace JETHERNET {
  */
 struct NetMAC {
 	union {
-		uint64_t num : 48; // 48 bit int, use less memory i think
+		uint64_t num :48; // 48 bit int, use less memory i think
 		uint8_t raw[6];
 	};
 
@@ -53,8 +53,7 @@ struct NetMAC {
 
 	NetMAC();
 	NetMAC(NetMAC &addr) = default;
-	NetMAC(uint8_t n0, uint8_t n1, uint8_t n2, uint8_t n3, uint8_t n4,
-			uint8_t n5);
+	NetMAC(uint8_t n0, uint8_t n1, uint8_t n2, uint8_t n3, uint8_t n4, uint8_t n5);
 	NetMAC(uint64_t mac);
 };
 

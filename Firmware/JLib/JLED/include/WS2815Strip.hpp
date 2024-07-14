@@ -38,9 +38,9 @@ public:
 
 	uint32_t raw[NUM_PIXELS]; // raw color values
 	uint32_t transformed[NUM_PIXELS]; // color values with effects (brightness, power) applied
-
+	
 //	uint32_t *raw, *transformed;
-
+	
 	uint32_t& operator[](uint16_t index);
 	const uint32_t& operator[](uint16_t index) const;
 
@@ -77,52 +77,49 @@ public:
 		bool operator!=(iterator other) const {
 			return !(*this == other);
 		}
-
+		
 		iterator& operator++() {
 			index++;
 			return *this;
 		}
-
+		
 		iterator operator++(int) {
 			auto tmp = *this;
 			++(*this);
 			return tmp;
 		}
-
+		
 		iterator& operator--() {
 			index = (index > 0) ? index - 1 : 0;
 			return *this;
 		}
-
+		
 		iterator operator--(int) {
 			auto tmp = *this;
 			--(*this);
 			return tmp;
 		}
-
+		
 		const_ref operator*() const {
 			return *(data + index);
 		}
-
+		
 		iterator& operator=(const iterator &other) {
 			if (this != &other) {
 				this->data = other.data;
 				this->index = other.index;
 			}
-
+			
 			return *this;
 		}
-
+		
 		iterator() = default;
-		iterator(pointer _data) :
-				data(_data), index(0) {
+		iterator(pointer _data) : data(_data), index(0) {
 		}
-		iterator(pointer _data, uint16_t _index) :
-				data(_data), index(_index) {
+		iterator(pointer _data, uint16_t _index) : data(_data), index(_index) {
 		}
-
-		iterator(const iterator &other) :
-				data(other.data), index(other.index) {
+		
+		iterator(const iterator &other) : data(other.data), index(other.index) {
 		}
 	};
 
@@ -132,14 +129,14 @@ public:
 	inline const iterator end() {
 		return iterator(raw, NUM_PIXELS); // note: end() is not in bounds
 	}
-
+	
 	inline const iterator beginT() {
 		return iterator(transformed);
 	}
 	inline const iterator endT() {
 		return iterator(transformed, NUM_PIXELS);
 	}
-
+	
 private:
 	uint8_t brightness = 255;
 	bool powerOn = true;
@@ -153,8 +150,7 @@ inline uint32_t& WS2815Strip<NUM_PIXELS>::operator [](uint16_t index) {
 }
 
 template<uint16_t NUM_PIXELS>
-inline const uint32_t& WS2815Strip<NUM_PIXELS>::operator [](
-		uint16_t index) const {
+inline const uint32_t& WS2815Strip<NUM_PIXELS>::operator [](uint16_t index) const {
 	return raw[index];
 }
 
@@ -183,9 +179,9 @@ inline void WS2815Strip<_NUM_PIXELS>::setAll(uint32_t col) {
 template<uint16_t _NUM_PIXELS>
 inline void WS2815Strip<_NUM_PIXELS>::display() {
 //	memcpy(transformed, raw, sizeof(raw[0])* NUM_PIXELS);
-	if(!powerOn) return;
-
-	for(uint16_t i = 0; i < NUM_PIXELS; i++) {
+	if (!powerOn) return;
+	
+	for (uint16_t i = 0; i < NUM_PIXELS; i++) {
 		transformed[i] = raw[i] * brightness / 255;
 	}
 }
@@ -203,12 +199,12 @@ inline uint8_t WS2815Strip<_NUM_PIXELS>::getBrightness() {
 template<uint16_t _NUM_PIXELS>
 inline void WS2815Strip<_NUM_PIXELS>::setPower(bool powerOn) {
 	this->powerOn = powerOn;
-
-	if(physicalPowerCB != nullptr) {
+	
+	if (physicalPowerCB != nullptr) {
 		physicalPowerCB(powerOn);
 	}
-
-	if(!powerOn) {
+	
+	if (!powerOn) {
 		memset(transformed, 0, sizeof(transformed[0]) * NUM_PIXELS);
 	}
 }
@@ -228,7 +224,7 @@ inline WS2815Strip<NUM_PIXELS>::WS2815Strip() {
 //	memset(raw, 0, NUM_BYTES_TOTAL);
 //	raw = new uint32_t[NUM_PIXELS];
 //	transformed = new uint32_t[NUM_PIXELS];
-
+	
 	memset(raw, 0, NUM_PIXELS * sizeof(raw[0]));
 }
 

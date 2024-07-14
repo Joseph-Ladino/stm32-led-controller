@@ -17,9 +17,8 @@ void CountdownTimer::countdown(uint16_t sec) {
 }
 
 uint32_t CountdownTimer::left_ms() {
-	if (expired())
-		return 0;
-
+	if (expired()) return 0;
+	
 	return endMs - tick;
 }
 

@@ -13,15 +13,13 @@
 
 namespace JMQTT {
 
-	class HomeAssistantDevice : public MQTTMessageReceiver {
-
-		virtual void onMessage(Client&, const Message&) = 0;
-		virtual void publishState(JMQTT::Client *client) = 0;
-		virtual void publishDiscovery(JMQTT::Client *client) = 0;
-		virtual void init(Client*) = 0;
-	};
+class HomeAssistantDevice: public MQTTMessageReceiver {
+	
+	virtual void onMessage(Client&, const Message&) = 0;
+	virtual void publishState(JMQTT::Client *client) = 0;
+	virtual void publishDiscovery(JMQTT::Client *client) = 0;
+	virtual void init(Client*) = 0;
+};
 }
-
-
 
 #endif /* JMQTT_INCLUDE_HOMEASSISTANTDEVICE_HPP_ */

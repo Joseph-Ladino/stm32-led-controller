@@ -14,7 +14,7 @@
  * @brief Generic user-controlled timer with millisecond precision
  */
 struct CountdownTimer {
-
+	
 	/**
 	 * @brief set timer duration in milliseconds
 	 * @param ms milliseconds
@@ -30,7 +30,7 @@ struct CountdownTimer {
 	inline void countdownMS(uint32_t ms) {
 		countdown_ms(ms);
 	}
-
+	
 	/**
 	 * @brief set timer duration in seconds
 	 * @param sec seconds
@@ -43,7 +43,7 @@ struct CountdownTimer {
 	inline void reset() {
 		countdown_ms(lastTimerDuration);
 	}
-
+	
 	/**
 	 * @brief remaining timer duration
 	 * @return milliseconds left until timer expires
@@ -59,7 +59,7 @@ struct CountdownTimer {
 	inline uint32_t leftMs() {
 		return left_ms();
 	}
-
+	
 	/**
 	 * @brief check if timer is expired
 	 * @return true if timer is expired

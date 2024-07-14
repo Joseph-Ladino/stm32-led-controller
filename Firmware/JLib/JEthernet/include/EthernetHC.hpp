@@ -22,7 +22,7 @@ class NetSock;
  */
 class EthernetHC { // @suppress("Class has a virtual method and non-virtual destructor")
 public:
-	virtual void setConfig(NetConfig& netConfig) = 0;
+	virtual void setConfig(NetConfig &netConfig) = 0;
 	virtual NetConfig getConfig() = 0;
 
 	virtual void msTick() = 0;
@@ -34,10 +34,12 @@ public:
 	// new 03/14
 //	virtual void deinit() = 0;
 	virtual bool enableDNS(NetIP dns) = 0;
-	virtual NetIP domainToIP(const char * domain, uint16_t timeoutMs) = 0;
+	virtual NetIP domainToIP(const char *domain, uint16_t timeoutMs) = 0;
 	virtual NetSock& getFreeSocket() = 0;
 
-	virtual ~EthernetHC() {};
+	virtual ~EthernetHC() {
+	}
+	;
 };
 
 }

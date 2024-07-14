@@ -34,10 +34,10 @@ Color& Color::operator =(const uint32_t rhs) {
 	return *this;
 }
 
-Color::Color(uint32_t num) : num(num) {}
+Color::Color(uint32_t num) : num(num) {
+}
 
-Color::Color(uint8_t r, uint8_t g, uint8_t b, uint8_t w = 0): w(w), b(b), r(r), g(g) {}
-
-
+Color::Color(uint8_t r, uint8_t g, uint8_t b, uint8_t w = 0) : b(b), g(g), r(r), w(w) {
+}
 
 } /* namespace JLED */

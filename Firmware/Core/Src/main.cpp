@@ -66,8 +66,7 @@ int _write(int file, char *ptr, int len) {
 		rc = CDC_Transmit_FS((uint8_t*) ptr, len);
 	} while (USBD_OK != rc && !timeoutTimer.expired());
 
-	if (timeoutTimer.expired())
-		return 0;
+	if (timeoutTimer.expired()) return 0;
 
 #endif
 	return len;
@@ -251,8 +250,7 @@ int main(void) {
 	// allow time for terminal to connect to USB
 	uint32_t timeout = 1000;
 	CountdownTimer usbTimeout(timeout);
-	while (!usbTimeout.expired()
-			&& CDC_Get_Device_State() != USBD_STATE_CONFIGURED)
+	while (!usbTimeout.expired() && CDC_Get_Device_State() != USBD_STATE_CONFIGURED)
 		;
 	USB_Printf("\n\n");
 	USB_Printf("%lums to initialize USB\n", timeout - usbTimeout.left_ms());
@@ -326,15 +324,15 @@ int main(void) {
 			if (/* !eth.phyLinkStatus() */true) {
 				eth.softReset();
 				success = connectEth(); // try to wait for connection
-				if (!success)
-					goto RECONNECT_EXIT;
+				if (!success) goto RECONNECT_EXIT;
 			}
 
 			mqtt.disconnect();
 			// issue has to be related to client/server connection
 			success = mqtt.reconnect(eth.getFreeSocket());
 
-			RECONNECT_EXIT: if (success) {
+			RECONNECT_EXIT:
+			if (success) {
 				USB_Printf("Connected client to MQTT server!\n");
 			} else {
 				USB_Printf("Error connecting client to MQTT server!\n");
@@ -377,8 +375,7 @@ void SystemClock_Config(void) {
 
 	/** Initializes the CPU, AHB and APB buses clocks
 	 */
-	RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
-			| RCC_CLOCKTYPE_PCLK1;
+	RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1;
 	RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
 	RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
 	RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
@@ -465,8 +462,7 @@ static void MX_TIM1_Init(void) {
 	sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
 	sMasterConfig.MasterOutputTrigger2 = TIM_TRGO2_RESET;
 	sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-	if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig)
-			!= HAL_OK) {
+	if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK) {
 		Error_Handler();
 	}
 	sConfigOC.OCMode = TIM_OCMODE_PWM1;
@@ -476,8 +472,7 @@ static void MX_TIM1_Init(void) {
 	sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
 	sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
 	sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
-	if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_1)
-			!= HAL_OK) {
+	if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_1) != HAL_OK) {
 		Error_Handler();
 	}
 	sBreakDeadTimeConfig.OffStateRunMode = TIM_OSSR_DISABLE;
@@ -493,8 +488,7 @@ static void MX_TIM1_Init(void) {
 	sBreakDeadTimeConfig.Break2Filter = 0;
 	sBreakDeadTimeConfig.Break2AFMode = TIM_BREAK_AFMODE_INPUT;
 	sBreakDeadTimeConfig.AutomaticOutput = TIM_AUTOMATICOUTPUT_DISABLE;
-	if (HAL_TIMEx_ConfigBreakDeadTime(&htim1, &sBreakDeadTimeConfig)
-			!= HAL_OK) {
+	if (HAL_TIMEx_ConfigBreakDeadTime(&htim1, &sBreakDeadTimeConfig) != HAL_OK) {
 		Error_Handler();
 	}
 	/* USER CODE BEGIN TIM1_Init 2 */
@@ -536,8 +530,7 @@ static void MX_TIM3_Init(void) {
 	}
 	sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
 	sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-	if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig)
-			!= HAL_OK) {
+	if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK) {
 		Error_Handler();
 	}
 	/* USER CODE BEGIN TIM3_Init 2 */
@@ -574,12 +567,10 @@ static void MX_USART1_UART_Init(void) {
 	if (HAL_UART_Init(&huart1) != HAL_OK) {
 		Error_Handler();
 	}
-	if (HAL_UARTEx_SetTxFifoThreshold(&huart1, UART_TXFIFO_THRESHOLD_1_8)
-			!= HAL_OK) {
+	if (HAL_UARTEx_SetTxFifoThreshold(&huart1, UART_TXFIFO_THRESHOLD_1_8) != HAL_OK) {
 		Error_Handler();
 	}
-	if (HAL_UARTEx_SetRxFifoThreshold(&huart1, UART_RXFIFO_THRESHOLD_1_8)
-			!= HAL_OK) {
+	if (HAL_UARTEx_SetRxFifoThreshold(&huart1, UART_RXFIFO_THRESHOLD_1_8) != HAL_OK) {
 		Error_Handler();
 	}
 	if (HAL_UARTEx_DisableFifoMode(&huart1) != HAL_OK) {
@@ -626,8 +617,7 @@ static void MX_GPIO_Init(void) {
 
 	/*Configure GPIO pin Output Level */
 	HAL_GPIO_WritePin(GPIOB,
-			TEST_LED_Pin | LED_PWR_EN_Pin | ESP_IO2_Pin | ESP_IO0_Pin
-					| ESP_EN_Pin | ESP_RSTn_Pin, GPIO_PIN_RESET);
+	TEST_LED_Pin | LED_PWR_EN_Pin | ESP_IO2_Pin | ESP_IO0_Pin | ESP_EN_Pin | ESP_RSTn_Pin, GPIO_PIN_RESET);
 
 	/*Configure GPIO pins : ETH_RSTn_Pin ETH_SCSn_Pin */
 	GPIO_InitStruct.Pin = ETH_RSTn_Pin | ETH_SCSn_Pin;
@@ -644,8 +634,7 @@ static void MX_GPIO_Init(void) {
 
 	/*Configure GPIO pins : TEST_LED_Pin LED_PWR_EN_Pin ESP_IO2_Pin ESP_IO0_Pin
 	 ESP_EN_Pin ESP_RSTn_Pin */
-	GPIO_InitStruct.Pin = TEST_LED_Pin | LED_PWR_EN_Pin | ESP_IO2_Pin
-			| ESP_IO0_Pin | ESP_EN_Pin | ESP_RSTn_Pin;
+	GPIO_InitStruct.Pin = TEST_LED_Pin | LED_PWR_EN_Pin | ESP_IO2_Pin | ESP_IO0_Pin | ESP_EN_Pin | ESP_RSTn_Pin;
 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

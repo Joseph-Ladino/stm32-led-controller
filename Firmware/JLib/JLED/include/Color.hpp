@@ -42,7 +42,7 @@ struct Color {
 
 	Color& operator=(const uint32_t rhs);
 	Color& operator=(const Color &rhs) = default;
-
+	
 	Color() = default;
 	Color(uint32_t num);
 	Color(uint8_t r, uint8_t g, uint8_t b, uint8_t w);

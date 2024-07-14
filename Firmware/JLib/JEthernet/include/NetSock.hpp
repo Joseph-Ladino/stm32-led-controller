@@ -18,10 +18,7 @@ namespace JETHERNET {
  * @see NetSock
  */
 enum class SockConnectMode : uint8_t {
-	TCP = 1,
-	UDP = 2,
-	RAWIP = 3,
-	RAWMAC = 4
+	TCP = 1, UDP = 2, RAWIP = 3, RAWMAC = 4
 };
 
 // forward declare to circular dependencies

@@ -33,8 +33,7 @@ NetIP::NetIP(uint8_t n0, uint8_t n1, uint8_t n2, uint8_t n3) {
 	raw[3] = n3;
 }
 
-NetIP::NetIP(uint32_t ip) :
-		num(ip) {
+NetIP::NetIP(uint32_t ip) : num(ip) {
 }
 
 bool NetIP::operator ==(const NetIP &rhs) const {
