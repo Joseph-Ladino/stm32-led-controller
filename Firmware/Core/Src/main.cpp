@@ -36,8 +36,7 @@
 #include "W5500HC.hpp"
 #include "CountdownTimer.hpp"
 #include "PAHOClient.hpp"
-#include "DMAStrip.hpp"
-#include <HomeAssistantStrip.hpp>
+#include "DMAStrip2.hpp"
 
 /* USER CODE END Includes */
 
@@ -94,9 +93,14 @@ UART_HandleTypeDef huart1;
 W5500HC eth;
 JMQTT::PAHOClient mqtt;
 
-using buftype = uint32_t;
-using LEDStrip = HomeAssistantStrip<300, 11, 79, buftype>;
-LEDStrip strip;
+using DStrip = JLED::DMAStrip2<JLED::WS2815StripType>;
+using DMABufferType = DStrip::DMABufferType;
+
+const uint16_t numLeds = 300, numLedsPerDMA = 15;
+
+uint32_t rawBuf[numLeds], fxBuf[numLeds];
+DMABufferType dmaBuf[DStrip::calcDMABufferSize(numLedsPerDMA)];
+DStrip dStrip = DStrip(numLeds, numLedsPerDMA, rawBuf, fxBuf, dmaBuf);
 
 /* USER CODE END PV */
 
@@ -130,14 +134,13 @@ void setLedPower(bool on) {
 }
 
 void messageReceived(JMQTT::Client &client, JMQTT::Message msg) {
-	UNUSED(client);
-	USB_Printf("FROM OG: %s\n", ((string )msg).data());
+	UNUSED(client); USB_Printf("FROM OG: %s\n", ((string )msg).data());
 }
 
 void mqttOnConnected(JMQTT::Client &client) {
 	client.publish( { "test", "test" });
 	client.subscribe("test/#");
-	strip.init(&client); // subscriptions not persistent on reconnect
+	// strip2.init(&client); // subscriptions not persistent on reconnect
 }
 
 bool connectEth() {
@@ -161,15 +164,15 @@ bool connectEth() {
 
 void HAL_TIM_PWM_PulseFinishedHalfCpltCallback(TIM_HandleTypeDef *htim) {
 	UNUSED(htim);
-	strip.onDMAInterrupt(true);
+	dStrip.onDMAInterrupt(true);
 }
 
 void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim) {
 	UNUSED(htim);
-	strip.onDMAInterrupt(false);
+	dStrip.onDMAInterrupt(false);
 }
 
-void startDMA(buftype *buf, uint16_t len) {
+void startDMA(DMABufferType *buf, uint16_t len) {
 	HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_1, (uint32_t*) buf, len);
 }
 
@@ -178,13 +181,12 @@ void stopDMA() {
 }
 
 void LED_Init() {
-	using namespace JLED;
-
-	strip.setPhysicalPowerCB(setLedPower);
-	strip.setPower(true);
-	strip.setAll(0xFF2AFF);
-	strip.setStartDMACallback(startDMA);
-	strip.setStopDMACallback(stopDMA);
+	dStrip.setARR(79);
+	dStrip.setPhysicalPowerCB(setLedPower);
+	dStrip.setStartDMACallback(startDMA);
+	dStrip.setStopDMACallback(stopDMA);
+	dStrip.setPower(true);
+	dStrip.setAll(0xFF2AFF);
 }
 
 void LED_Update() {
@@ -195,16 +197,20 @@ void LED_Update() {
 
 	static JLED::Color cols[] = { 0xff0000, 0x00ff00, 0x0000ff };
 	if (delay.expired()) {
-		delay.countdown_ms(delayMs);
-		strip.set(led, cols[(led / 3) % (sizeof(cols) / sizeof(JLED::Color))]);
+		delay.reset();
 
-		led = (led + 1) % LEDStrip::NUM_PIXELS;
+		dStrip[led] = cols[(led / 3) % (sizeof(cols) / sizeof(JLED::Color))];
+
+		led = (led + 1) % dStrip.getNumPixels();
 	}
 
-	strip.display();
+	if (frameTimer.expired()) {
+		dStrip.display();
+		frameTimer.reset();
+	}
 }
 
-//#define TEST_LED_ONLY
+#define TEST_LED_ONLY
 
 /* USER CODE END 0 */
 
@@ -245,7 +251,7 @@ int main(void) {
 	/* USER CODE BEGIN 2 */
 
 	HAL_TIM_Base_Start_IT(&htim3);
-#ifndef TEST_LED_ONLY
+
 #ifdef DEBUG
 	// allow time for terminal to connect to USB
 	uint32_t timeout = 1000;
@@ -256,7 +262,7 @@ int main(void) {
 	USB_Printf("%lums to initialize USB\n", timeout - usbTimeout.left_ms());
 
 #endif
-
+#ifndef TEST_LED_ONLY
 	W5500Config conf { &hspi1, ETH_SCSn_GPIO_Port,
 	ETH_SCSn_Pin, ETH_RSTn_GPIO_Port, ETH_RSTn_Pin };
 
@@ -294,25 +300,24 @@ int main(void) {
 		USB_Printf("Error connecting client to MQTT server!\n");
 	}
 
-	strip.init(&mqtt);
+	// strip2.init(&mqtt);
 
-	/* USER CODE END 2 */
+  /* USER CODE END 2 */
 
-	/* Infinite loop */
-	/* USER CODE BEGIN WHILE */
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
 
 //	int oldRc = rc;
 	CountdownTimer reconnectTimer(2500);
 #endif
-	LED_Init();
+//	LED_Init();
 
 	while (1) {
 		/* USER CODE END WHILE */
 
 		/* USER CODE BEGIN 3 */
-#ifdef DEBUG
+
 		LED_Update();
-#endif
 
 #ifndef TEST_LED_ONLY
 		auto connected = mqtt.update(3);
@@ -616,8 +621,8 @@ static void MX_GPIO_Init(void) {
 	HAL_GPIO_WritePin(GPIOA, ETH_RSTn_Pin | ETH_SCSn_Pin, GPIO_PIN_SET);
 
 	/*Configure GPIO pin Output Level */
-	HAL_GPIO_WritePin(GPIOB,
-	TEST_LED_Pin | LED_PWR_EN_Pin | ESP_IO2_Pin | ESP_IO0_Pin | ESP_EN_Pin | ESP_RSTn_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(GPIOB, TEST_LED_Pin | LED_PWR_EN_Pin | ESP_IO2_Pin | ESP_IO0_Pin | ESP_EN_Pin | ESP_RSTn_Pin,
+			GPIO_PIN_RESET);
 
 	/*Configure GPIO pins : ETH_RSTn_Pin ETH_SCSn_Pin */
 	GPIO_InitStruct.Pin = ETH_RSTn_Pin | ETH_SCSn_Pin;

@@ -19,18 +19,18 @@ struct WSStripType {
 	static constexpr uint8_t bytesPerPixel = BytesPerPixel, bitsPerPixel = BytesPerPixel * 8;
 	static constexpr uint16_t zeroHighNs = ZeroHighNs, oneHighNs = OneHighNs, pwmPeriodNs = PwmPeriodNs;
 
-	static constexpr uint32_t getOrderedBytes(uint32_t pixel);
-	static constexpr uint32_t orderedToRGBW(uint32_t pixel);
+//	static constexpr uint32_t getOrderedBytes(uint32_t pixel);
+//	static constexpr uint32_t orderedToRGBW(uint32_t pixel);
 };
 
 template<uint16_t ZeroHighNs, uint16_t OneHighNs, uint16_t PwmPeriodNs>
 struct GRBStripType: public WSStripType<3, ZeroHighNs, OneHighNs, PwmPeriodNs> {
 	inline constexpr static uint32_t getOrderedBytes(uint32_t pixelRGB) {
-		return pixelRGB & 0x00FF00 << 8 | pixelRGB & 0xFF0000 | pixelRGB & 0x0000FF;
+		return ((pixelRGB & 0x00FF00) << 8) | ((pixelRGB & 0xFF0000) >> 8) | (pixelRGB & 0x0000FF);
 	}
 	
 	inline constexpr static uint32_t orderedToRGBW(uint32_t pixelGRB) {
-		return pixelGRB & 0x00FF00 << 8 | pixelGRB & 0xFF0000 >> 8 | pixelGRB & 0x0000FF;
+		return ((pixelGRB & 0x00FF00) << 8) | ((pixelGRB & 0xFF0000) >> 8) | (pixelGRB & 0x0000FF);
 	}
 };
 

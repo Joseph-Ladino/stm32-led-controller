@@ -18,6 +18,78 @@ struct WSStripState {
 	Color color = 0x00;
 	// TODO: add effect and current mode
 };
+struct StripIterator {
+	using StripIterator_category = std::bidirectional_iterator_tag;
+	using difference_type = std::ptrdiff_t;
+	using value_type = uint32_t;
+	using pointer = uint32_t*;
+	using const_ref = const uint32_t&;
+
+	inline bool operator==(const StripIterator &other) const {
+		return this->data == other.data && this->index == other.index;
+	}
+	inline bool operator!=(const StripIterator &other) const {
+		return !(*this == other);
+	}
+	inline bool operator>(const StripIterator &other) const {
+		return this->data == other.data && index > other.index;
+	}
+	inline bool operator>=(const StripIterator &other) const {
+		return this->data == other.data && index >= other.index;
+	}
+	inline bool operator<(const StripIterator &other) const {
+		return this->data == other.data && index < other.index;
+	}
+	inline bool operator<=(const StripIterator &other) const {
+		return this->data == other.data && index <= other.index;
+	}
+
+	inline StripIterator& operator++() {
+		index++;
+		return *this;
+	}
+	inline StripIterator operator++(int) {
+		auto tmp = *this;
+		++(*this);
+		return tmp;
+	}
+
+	inline StripIterator& operator--() {
+		index = (index > 0) ? index - 1 : 0;
+		return *this;
+	}
+	inline StripIterator operator--(int) {
+		auto tmp = *this;
+		--(*this);
+		return tmp;
+	}
+
+	inline const_ref operator*() const {
+		return *(data + index);
+	}
+
+	inline StripIterator& operator=(const StripIterator &other) {
+		if (this != &other) {
+			this->data = other.data;
+			this->index = other.index;
+		}
+
+		return *this;
+	}
+
+	StripIterator() = default;
+	inline StripIterator(pointer _data) : data(_data), index(0) {
+	}
+	inline StripIterator(pointer _data, uint16_t _index) : data(_data), index(_index) {
+	}
+	inline StripIterator(const StripIterator &other) : data(other.data), index(other.index) {
+	}
+
+private:
+	pointer data = nullptr;
+	uint16_t index = 0;
+
+};
 
 /**
  * @brief Basic control class for an LED strip
@@ -35,11 +107,10 @@ private:
 	PhysicalPowerCB setPhysicalPower = nullptr;
 
 protected:
+	using sType = StripType;
 	uint32_t *rawBuffer = nullptr, *fxBuffer = nullptr;
 
 public:
-
-	struct Iterator;
 
 	/**
 	 * @brief Set or read an element in the raw buffer
@@ -141,6 +212,11 @@ public:
 	inline void setPixelBuffers(uint32_t *rawBuffer, uint32_t *fxBuffer) {
 		this->rawBuffer = rawBuffer;
 		this->fxBuffer = fxBuffer;
+
+		if (rawBuffer != nullptr && fxBuffer != nullptr) {
+			memset(rawBuffer, 0, sizeof(rawBuffer[0]) * numPixels);
+			memset(fxBuffer, 0, sizeof(fxBuffer[0]) * numPixels);
+		}
 	}
 	
 	/**
@@ -156,25 +232,25 @@ public:
 		}
 	}
 	
-	inline const Iterator begin() {
+	inline const StripIterator begin() {
 		return beginRawBuffer();
 	}
-	inline const Iterator end() {
+	inline const StripIterator end() {
 		return endRawBuffer();
 	}
 	
-	inline const Iterator beginRawBuffer() {
-		return Iterator(rawBuffer, 0);
+	inline const StripIterator beginRawBuffer() {
+		return StripIterator(rawBuffer, 0);
 	}
-	inline const Iterator endRawBuffer() {
-		return Iterator(rawBuffer, numPixels);
+	inline const StripIterator endRawBuffer() {
+		return StripIterator(rawBuffer, numPixels);
 	}
 	
-	inline const Iterator beginFxBuffer() {
-		return Iterator(fxBuffer, 0);
+	inline const StripIterator beginFxBuffer() {
+		return StripIterator(fxBuffer, 0);
 	}
-	inline const Iterator endFxBuffer() {
-		return Iterator(fxBuffer, numPixels);
+	inline const StripIterator endFxBuffer() {
+		return StripIterator(fxBuffer, numPixels);
 	}
 	
 	WS28xxStrip(uint16_t numPixels = 0) : numPixels(numPixels) {
@@ -184,69 +260,7 @@ public:
 	}
 };
 
-template<typename StripType>
-struct WS28xxStrip<StripType>::Iterator {
-	using iterator_category = std::bidirectional_iterator_tag;
-	using difference_type = std::ptrdiff_t;
-	using value_type = uint32_t;
-	using pointer = uint32_t*;
-	using const_ref = const uint32_t&;
-
-	inline bool operator==(Iterator other) const {
-		return this->data == other.data && this->index == other.index;
-	}
-	inline bool operator!=(Iterator other) const {
-		return !(*this == other);
-	}
-	
-	inline Iterator& operator++() {
-		index++;
-		return *this;
-	}
-	inline Iterator operator++(int) {
-		auto tmp = *this;
-		++(*this);
-		return tmp;
-	}
-	
-	inline Iterator& operator--() {
-		index = (index > 0) ? index - 1 : 0;
-		return *this;
-	}
-	inline Iterator operator--(int) {
-		auto tmp = *this;
-		--(*this);
-		return tmp;
-	}
-	
-	inline const_ref operator*() const {
-		return *(data + index);
-	}
-	
-	inline Iterator& operator=(const Iterator &other) {
-		if (this != &other) {
-			this->data = other.data;
-			this->index = other.index;
-		}
-		
-		return *this;
-	}
-	
-	Iterator() = default;
-	inline Iterator(pointer _data) : data(_data), index(0) {
-	}
-	inline Iterator(pointer _data, uint16_t _index) : data(_data), index(_index) {
-	}
-	inline Iterator(const Iterator &other) : data(other.data), index(other.index) {
-	}
-	
-private:
-	pointer data = nullptr;
-	uint16_t index = 0;
-	
-};
-
-using WS2815Strip = WS28xxStrip<WS2815StripType>;
+//using WS2815Strip = WS28xxStrip<WS2815StripType>;
 
 } /* namespace JLED */
 

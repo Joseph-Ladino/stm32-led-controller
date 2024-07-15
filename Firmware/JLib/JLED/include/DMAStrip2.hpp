@@ -9,6 +9,7 @@
 #define JLED_INCLUDE_DMASTRIP2_HPP_
 
 #include "WS28xxStrip.hpp"
+#include "StripTypes.hpp"
 
 namespace JLED {
 
@@ -18,7 +19,7 @@ class DMAStrip2: public WS28xxStrip<StripType> {
 
 public:
 	using LEDBase = WS28xxStrip<StripType>;
-	using DMABufferType = uint8_t;
+	using DMABufferType = uint32_t;
 	//	using DMA_START_CB = std::function<void(DMA_BUF_TYPE*, uint16_t)>;
 	//	using DMA_STOP_CB = std::function<void()>;
 	using DMA_START_CB = void (*)(DMABufferType*, uint16_t);
@@ -29,14 +30,14 @@ public:
 	};
 
 private:
-	const uint16_t numPixelsPerDMA, dmaBufferSize;
+	const uint16_t numPixelsPerDMA, dmaBufferSize, halfDmaBufferSize;
 	uint8_t dmaLowBit = 0, dmaHighBit = 0;
 	uint16_t dmaARR = 0;
 	DMABufferType *dmaBuffer = nullptr;
 	DMA_START_CB dmaStart = nullptr;
 	DMA_STOP_CB dmaStop = nullptr;
 
-	typename LEDBase::Iterator dmaLedIT, dmaLedEndIT;
+	StripIterator dmaLedIT, dmaLedEndIT;
 
 	DMAStatus dmaTransferStatus = DMAStatus::DONE;
 public:
@@ -46,13 +47,15 @@ public:
 	}
 	
 	inline void colorToDMATiming(uint32_t col, DMABufferType **outPtr) {
-		static constexpr uint8_t bitOffset = 32 - StripType::bitsPerPixel;
+		static constexpr auto bitsPerPixel = StripType::bitsPerPixel;
+		static constexpr uint8_t bitOffset = 32 - bitsPerPixel;
+
 		col = col << bitOffset;
 		
-		for (uint8_t b = 0; b < StripType::bitsPerPixel; b++) {
+		for (uint8_t b = 0; b < bitsPerPixel; b++) {
 			(*outPtr)[b] = ((col << b) & 0x80000000) == 0 ? dmaLowBit : dmaHighBit;
 		}
-		(*outPtr) += StripType::bitsPerPixel;
+		(*outPtr) += bitsPerPixel;
 	}
 	
 	inline void setStartDMACallback(DMA_START_CB dmaStart) {
@@ -66,12 +69,14 @@ public:
 		this->dmaARR = dmaARR;
 		
 		dmaLowBit = dmaARR * StripType::zeroHighNs / StripType::pwmPeriodNs;
-		
 		dmaHighBit = dmaARR * StripType::oneHighNs / StripType::pwmPeriodNs;
 	}
 	
 	inline void setDMABuffer(DMABufferType *dmaBuffer) {
 		this->dmaBuffer = dmaBuffer;
+		if (dmaBuffer != nullptr) {
+			memset(dmaBuffer, 0, dmaBufferSize * sizeof(DMABufferType));
+		}
 	}
 	
 	inline void display() {
@@ -90,34 +95,35 @@ public:
 	
 	inline void onDMAInterrupt(bool halfCompleteInterrupt) {
 		
-		static DMABufferType *leftHalf = dmaBuffer, *rightHalf = dmaBuffer + dmaBufferSize / 2;
+		static DMABufferType *leftHalf = dmaBuffer, *rightHalf = dmaBuffer + halfDmaBufferSize;
+		static constexpr uint16_t bitsPerBufferElement = StripType::bitsPerPixel * sizeof(DMABufferType);
 		
+		DMABufferType *writeBuf = halfCompleteInterrupt ? (DMABufferType*) leftHalf : (DMABufferType*) rightHalf;
+
+		uint16_t curPixel;
+		for (curPixel = 0; curPixel < numPixelsPerDMA && dmaLedIT != dmaLedEndIT; dmaLedIT++, curPixel++) {
+			auto led = *dmaLedIT;
+			colorToDMATiming(led, &writeBuf);
+		}
+
 		// buffer has been completely set to reset value, dma can be stopped
 		if (dmaTransferStatus == DMAStatus::RESET_COMPLETE) {
 			dmaTransferStatus = DMAStatus::DONE;
 			dmaStop();
-			
 			//			frameDelay.reset();
 			
 			return;
-		}
-		
-		DMABufferType *writeBuf = halfCompleteInterrupt ? leftHalf : rightHalf;
-		
-		int curPixel;
-		for (curPixel = 0; curPixel < numPixelsPerDMA && dmaLedIT != dmaLedEndIT; curPixel++, dmaLedIT++) {
-			auto led = *dmaLedIT;
-			colorToDMATiming(led, &writeBuf);
 		}
 		
 		// all data in ledstrip has been written but the DMA buffer is not full of reset data
 		if (curPixel != numPixelsPerDMA) {
 			auto fillPixels = numPixelsPerDMA - curPixel;
 			
-			// fill with logic low value to transition to WS28xx reset period
-			memset(writeBuf, 0, (uint32_t) fillPixels * StripType::bitsPerPixel * sizeof(DMABufferType));
+			// fill with reset value to transition to WS28xx reset period
+			memset(writeBuf, 0, (uint32_t) fillPixels * bitsPerBufferElement);
 			
-			if (fillPixels == numPixelsPerDMA) {
+
+			if (fillPixels == numPixelsPerDMA && dmaTransferStatus != DMAStatus::IN_PROGRESS) {
 				dmaTransferStatus =
 						(dmaTransferStatus == DMAStatus::RESET_STARTED) ?
 								DMAStatus::RESET_IN_PROGRESS : DMAStatus::RESET_COMPLETE;
@@ -127,15 +133,17 @@ public:
 		}
 	}
 	
-	inline DMAStrip2(uint16_t numPixels = 0, uint16_t numPixelsPerDMA = 0) : LEDBase(numPixels), numPixelsPerDMA(
-			numPixelsPerDMA), dmaBufferSize(calcDMABufferSize(numPixelsPerDMA)) {
-		dmaLedEndIT = LEDBase::endFxBuffer();
+	inline DMAStrip2(uint16_t numPixels, uint16_t numPixelsPerDMA) : DMAStrip2(numPixels, numPixelsPerDMA, nullptr,
+			nullptr, nullptr) {
 	}
-	
+
 	inline DMAStrip2(uint16_t numPixels, uint16_t numPixelsPerDMA, uint32_t *rawBuffer, uint32_t *fxBuffer,
 			DMABufferType *dmaBuffer) : LEDBase(numPixels, rawBuffer, fxBuffer), numPixelsPerDMA(numPixelsPerDMA), dmaBufferSize(
-			calcDMABufferSize(numPixelsPerDMA)) {
+			calcDMABufferSize(numPixelsPerDMA)), halfDmaBufferSize(dmaBufferSize / 2) {
 		setDMABuffer(dmaBuffer);
+
+		dmaLedIT = LEDBase::beginFxBuffer();
+		dmaLedEndIT = LEDBase::endFxBuffer();
 	}
 }
 ;
