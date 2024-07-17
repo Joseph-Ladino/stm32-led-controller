@@ -7,7 +7,9 @@
 
 #ifndef JLED_INCLUDE_COLOR_HPP_
 #define JLED_INCLUDE_COLOR_HPP_
+
 #include <cstdint>
+#include "ColorCorrection.hpp"
 
 namespace JLED {
 
@@ -32,21 +34,48 @@ struct Color {
 	};
 
 	// ordering is reverse for raw array
-	uint8_t& operator[](uint8_t n);
-	const uint8_t& operator[](uint8_t n) const;
+	inline uint8_t& operator[](uint8_t n) {
+		return (n > 3) ? raw[0] : raw[3 - n];
+	}
+	inline const uint8_t& operator[](uint8_t n) const {
+		return (n > 3) ? raw[0] : raw[3 - n];
+	}
 
-	operator uint32_t();
+	inline operator uint32_t() const {
+		return num;
+	}
 
-	bool operator==(const Color &rhs) const;
-	bool operator!=(const Color &rhs) const;
+	inline bool operator==(const Color &rhs) const {
+		return num == rhs.num;
+	}
+	inline bool operator!=(const Color &rhs) const {
+		return num != rhs.num;
+	}
 
-	Color& operator=(const uint32_t rhs);
+	inline bool operator==(const uint32_t rhs) const {
+		return num == rhs;
+	}
+	inline bool operator!=(const uint32_t rhs) const {
+		return num != rhs;
+	}
+
 	Color& operator=(const Color &rhs) = default;
-	
+	Color& operator=(const uint32_t rhs) {
+		num = rhs;
+		return *this;
+	}
+
 	Color() = default;
-	Color(uint32_t num);
-	Color(uint8_t r, uint8_t g, uint8_t b, uint8_t w);
 	Color(Color &c) = default;
+
+	inline constexpr Color(uint32_t num) : num(num) {
+	}
+	inline constexpr Color(ColorCorrection col) : num((uint32_t) col) {
+	}
+	inline constexpr Color(TemperatureCorrection col) : num((uint32_t) col) {
+	}
+	inline constexpr Color(uint8_t r, uint8_t g, uint8_t b, uint8_t w) : b(b), g(g), r(r), w(w) {
+	}
 };
 
 } /* namespace JLED */

@@ -36,7 +36,9 @@
 #include "W5500HC.hpp"
 #include "CountdownTimer.hpp"
 #include "PAHOClient.hpp"
-#include "DMAStrip2.hpp"
+#include "DMAStrip.hpp"
+#include "StripBuilder.hpp"
+#include "HomeAssistantStripController.hpp"
 
 /* USER CODE END Includes */
 
@@ -93,7 +95,7 @@ UART_HandleTypeDef huart1;
 W5500HC eth;
 JMQTT::PAHOClient mqtt;
 
-using DStrip = JLED::DMAStrip2<JLED::WS2815StripType>;
+using DStrip = JLED::DMAStrip<JLED::WS2815Strip>;
 using DMABufferType = DStrip::DMABufferType;
 
 const uint16_t numLeds = 300, numLedsPerDMA = 15;
@@ -101,6 +103,7 @@ const uint16_t numLeds = 300, numLedsPerDMA = 15;
 uint32_t rawBuf[numLeds], fxBuf[numLeds];
 DMABufferType dmaBuf[DStrip::calcDMABufferSize(numLedsPerDMA)];
 DStrip dStrip = DStrip(numLeds, numLedsPerDMA, rawBuf, fxBuf, dmaBuf);
+HomeAssistantStripController mqttStripController = HomeAssistantStripController(dStrip);
 
 /* USER CODE END PV */
 
@@ -134,13 +137,14 @@ void setLedPower(bool on) {
 }
 
 void messageReceived(JMQTT::Client &client, JMQTT::Message msg) {
-	UNUSED(client); USB_Printf("FROM OG: %s\n", ((string )msg).data());
+	UNUSED(client);USB_Printf("FROM OG: %s\n", ((string )msg).data());
 }
 
 void mqttOnConnected(JMQTT::Client &client) {
 	client.publish( { "test", "test" });
 	client.subscribe("test/#");
-	// strip2.init(&client); // subscriptions not persistent on reconnect
+	// strip2.init(&client);
+	mqttStripController.init(&client); // subscriptions not persistent on reconnect
 }
 
 bool connectEth() {
@@ -182,35 +186,42 @@ void stopDMA() {
 
 void LED_Init() {
 	dStrip.setARR(79);
-	dStrip.setPhysicalPowerCB(setLedPower);
 	dStrip.setStartDMACallback(startDMA);
 	dStrip.setStopDMACallback(stopDMA);
-	dStrip.setPower(true);
-	dStrip.setAll(0xFF2AFF);
+
+	JLED::StripBuilder build { &dStrip };
+
+	build.setPhysicalPowerCB(setLedPower)
+		 .setPower(true)
+		 .setAll(0xFF2AFF)
+		 .setGammaCorrection(true)
+		 .setColorCorrection(JLED::ColorCorrection::WS2815)
+		 .setTemperatureCorrection(JLED::TemperatureCorrection::SodiumVapor);
 }
 
 void LED_Update() {
 
-	static int led = 0, delayMs = 100, frameMs = 5;
+	static int led = 0, ledsPerColor = 5, delayMs = 1000 / 100, frameMs = 1000 / 9000;
 	static CountdownTimer delay(delayMs);
 	static CountdownTimer frameTimer(frameMs);
 
-	static JLED::Color cols[] = { 0xff0000, 0x00ff00, 0x0000ff };
+	static JLED::Color cols[] = { 0xff0000, 0xFF7F00, 0xFFFF00, 0x00ff00, 0x0000ff, 0x8b00FF };
 	if (delay.expired()) {
 		delay.reset();
 
-		dStrip[led] = cols[(led / 3) % (sizeof(cols) / sizeof(JLED::Color))];
+		dStrip[led] = cols[(led / ledsPerColor) % (sizeof(cols) / sizeof(JLED::Color))];
 
 		led = (led + 1) % dStrip.getNumPixels();
 	}
 
 	if (frameTimer.expired()) {
 		dStrip.display();
+		mqttStripController.update();
 		frameTimer.reset();
 	}
 }
 
-#define TEST_LED_ONLY
+//#define TEST_LED_ONLY
 
 /* USER CODE END 0 */
 
@@ -302,15 +313,16 @@ int main(void) {
 
 	// strip2.init(&mqtt);
 
-  /* USER CODE END 2 */
+	/* USER CODE END 2 */
 
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
+	/* Infinite loop */
+	/* USER CODE BEGIN WHILE */
 
 //	int oldRc = rc;
 	CountdownTimer reconnectTimer(2500);
 #endif
-//	LED_Init();
+	LED_Init();
+	mqttStripController.init(&mqtt);
 
 	while (1) {
 		/* USER CODE END WHILE */

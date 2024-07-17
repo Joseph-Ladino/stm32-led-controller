@@ -21,7 +21,8 @@ using JLED::Color;
 
 template<uint16_t _NUM_PIXELS = 10, uint16_t _NUM_PIXELS_PER_DMA = 5, uint16_t _DMA_ARR = 79,
 		typename DMA_BUF_TYPE = uint32_t>
-class HomeAssistantStrip: public JLED::DMAStrip<_NUM_PIXELS, _NUM_PIXELS_PER_DMA, _DMA_ARR, DMA_BUF_TYPE>,
+class HomeAssistantStrip:
+		public JLED::DMAStrip<_NUM_PIXELS, _NUM_PIXELS_PER_DMA, _DMA_ARR, DMA_BUF_TYPE>,
 		public JMQTT::HomeAssistantDevice {
 	
 private:

@@ -8,6 +8,7 @@
 #ifndef JLED_INCLUDE_WS28XXSTRIP_HPP_
 #define JLED_INCLUDE_WS28XXSTRIP_HPP_
 
+#include <cstring>
 #include "StripTypes.hpp"
 
 namespace JLED {
@@ -15,9 +16,27 @@ namespace JLED {
 struct WSStripState {
 	bool powerOn = true;
 	uint8_t brightness = 255;
-	Color color = 0x00;
+	uint32_t color;
+	ColorCorrection colorCorrection = ColorCorrection::Uncorrected;
+	TemperatureCorrection tempCorrection = TemperatureCorrection::Uncorrected;
+	bool gammaEnabled = true;
+
 	// TODO: add effect and current mode
+
+//	inline bool operator==(const WSStripState &other) {
+//		return powerOn == other.powerOn && brightness == other.brightness && color == other.color && colorCorrection == other.colorCorrection && tempCorrection == other.tempCorrection;
+//	}
+
+	inline bool operator==(const WSStripState &other) {
+//		return num1 == other.num1 && num2 == other.num2;
+//		return num == other.num;
+		return std::memcmp(this, &other, sizeof(WSStripState)) == 0;
+	}
+	inline bool operator!=(const WSStripState &other) {
+		return !(*this == other);
+	}
 };
+
 struct StripIterator {
 	using StripIterator_category = std::bidirectional_iterator_tag;
 	using difference_type = std::ptrdiff_t;
@@ -91,15 +110,18 @@ private:
 
 };
 
+#define ASSERT_STRIPBASE_IS_DERIVED(StripBase, StripType) static_assert(std::is_base_of_v<JLED::WS28xxStrip<StripType>, StripBase>);
+
 /**
  * @brief Basic control class for an LED strip
  * @tparam StripType Strip characteristics (must be derived from JLED::StripType)
  */
-template<typename StripType>
+template<typename _StripType>
 class WS28xxStrip {
 public:
-	ASSERT_STRIPTYPE_IS_DERIVED(StripType);
+	ASSERT_STRIPTYPE_IS_DERIVED(_StripType);
 	using PhysicalPowerCB = void(*)(bool);
+	using StripType = _StripType;
 
 private:
 	const uint16_t numPixels;
@@ -107,7 +129,6 @@ private:
 	PhysicalPowerCB setPhysicalPower = nullptr;
 
 protected:
-	using sType = StripType;
 	uint32_t *rawBuffer = nullptr, *fxBuffer = nullptr;
 
 public:
@@ -138,6 +159,24 @@ public:
 		for (uint16_t i = 0; i < numPixels; i++) {
 			rawBuffer[i] = color;
 		}
+
+		state.color = color;
+	}
+
+	/**
+	 * @brief Set entire strip to color
+	 * @param color 0xWWRRGGBB
+	 */
+	inline void setStaticColor(uint32_t color) {
+		setAll(color);
+	}
+
+	/**
+	 * @brief Retrieve the last set static color
+	 * @return color 0xWWRRGGBB
+	 */
+	inline uint32_t getStaticColor() {
+		return state.color;
 	}
 	
 	/**
@@ -164,6 +203,10 @@ public:
 		return state.powerOn;
 	}
 	
+	inline WSStripState getStripState() {
+		return state;
+	}
+
 	/**
 	 * @brief Set a callback to allow disconnecting power lines to LED strip. This reduces idle current when the strip is set to "off"
 	 * @param cb function to toggle on/off a relay/mosfet/load switch
@@ -194,6 +237,30 @@ public:
 
 	inline void setMode(); // TODO: Implement mode (related to effects/animations)
 	inline void getMode() const;
+
+	inline void setColorCorrection(ColorCorrection cc) {
+		state.colorCorrection = cc;
+	}
+
+	inline ColorCorrection getColorCorrection() {
+		return state.colorCorrection;
+	}
+
+	inline void setTemperatureCorrection(TemperatureCorrection tc) {
+		state.tempCorrection = tc;
+	}
+
+	inline TemperatureCorrection getTemperatureCorrection() {
+		return state.tempCorrection;
+	}
+
+	inline void setGammaCorrection(bool on) {
+		state.gammaEnabled = on;
+	}
+
+	inline bool getGammaCorrection() {
+		return state.gammaEnabled;
+	}
 
 	/**
 	 * @brief Retrieve number of pixels being controller
@@ -227,8 +294,23 @@ public:
 		if (!state.powerOn) return;
 		
 		// TODO: filters/effects/animations
+		static Color colCrt = state.colorCorrection, tmpCrt = state.tempCorrection;
+
+		uint32_t adjust[4];
+		for (int i = 0; i < 4; i++) {
+			adjust[i] = ((((uint32_t) colCrt[i]) + 1) * (((uint32_t) tmpCrt[i]) + 1) * state.brightness) >> 16;
+		}
+
+		// at the expense of 256 extra bytes of memory, this solution felt cleaner
+		const uint8_t *gammaLookupArr = state.gammaEnabled ? gammaCorrectionLookup : gammaRawLookup;
+
 		for (uint16_t i = 0; i < numPixels; i++) {
-			fxBuffer[i] = StripType::getOrderedBytes(rawBuffer[i]) * state.brightness / 255;
+			Color pixel = rawBuffer[i];
+			for (uint8_t j = 0; j < 4; j++) {
+				pixel[j] = ((uint32_t) gammaLookupArr[pixel[j]] * adjust[j]) >> 8;
+			}
+
+			fxBuffer[i] = StripType::getOrderedBytes(pixel);
 		}
 	}
 	
@@ -260,7 +342,7 @@ public:
 	}
 };
 
-//using WS2815Strip = WS28xxStrip<WS2815StripType>;
+using WS2815Strip = WS28xxStrip<WS2815StripType>;
 
 } /* namespace JLED */
 
