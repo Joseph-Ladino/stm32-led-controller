@@ -54,8 +54,8 @@ public:
 private:
 	PAHONetwork net;
 	MQTT::Client<PAHONetwork, CountdownTimer, 1024> client;
-	MessageCB onMessage;
-	ConnectCB onConnect;
+	MessageCB onMessage;// = [](Client&, Message) -> void {};
+	ConnectCB onConnect;// = [](Client&) -> void {};
 
 	std::vector<MQTTMessageReceiver*> genericReceivers;
 	std::vector<std::pair<std::string, MQTTMessageReceiver*>> specificReceivers;

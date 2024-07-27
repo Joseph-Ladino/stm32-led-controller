@@ -31,8 +31,8 @@ private:
 	JMQTT::Client *mqtt;
 	LEDStrip &strip;
 	JLED::WSStripState lastStripState;
-	const string DeviceName, BaseTopic, StateTopic, DiscoveryTopic, CommandTopic, AvailabilityTopic;
 
+	const string DeviceName, BaseTopic, StateTopic, DiscoveryTopic, CommandTopic, AvailabilityTopic;
 public:
 
 	inline void onMessage(JMQTT::Client &client, const JMQTT::Message &msg) final {
@@ -85,7 +85,7 @@ public:
 		serializeJson(doc, stateJson);
 
 		USB_Printf("\nPublishing LEDStrip state to MQTT broker:\n\t%s\n\n", stateJson.c_str());
-		mqtt->publish(StateTopic, stateJson);
+		mqtt->publish( { StateTopic, stateJson, JMQTT::QOS::QOS2 });
 	}
 
 	inline void publishDiscovery() final {

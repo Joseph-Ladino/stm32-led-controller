@@ -7,6 +7,7 @@
 
 #include <cstring>
 #include "PAHOClient.hpp"
+#include "globals.h"
 
 using namespace JETHERNET;
 
@@ -117,21 +118,22 @@ void PAHOClient::setMessageCallback(PAHOClient::MessageCB func) {
 void PAHOClient::setConnectCallback(PAHOClient::ConnectCB func) {
 	onConnect = func;
 }
-#include "globals.h"
+
 void PAHOClient::pahoMessageReceived(MQTT::MessageData &data) {
 	
-	if (!(onMessage || genericReceivers.empty() || specificReceivers.empty())) return;
-	
+	if (!(onMessage || !genericReceivers.empty() || !specificReceivers.empty())) return;
+
 	JMQTT::Message msg;
 	msg.topic = string(data.topicName.lenstring.data, data.topicName.lenstring.len);
 	msg.payload = string((char*) data.message.payload, data.message.payloadlen);
 	msg.qos = (JMQTT::QOS) data.message.qos;
 	
-	onMessage(*this, msg);
+	if (onMessage) onMessage(*this, msg);
 	
 	for (auto &recv : genericReceivers) {
 		recv->onMessage(*this, msg);
 	}
+
 	for (auto &pair : specificReceivers) {
 		if (isTopicMatched(msg.topic, pair.first)) {
 			pair.second->onMessage(*this, msg);

@@ -137,7 +137,8 @@ void setLedPower(bool on) {
 }
 
 void messageReceived(JMQTT::Client &client, JMQTT::Message msg) {
-	UNUSED(client);USB_Printf("FROM OG: %s\n", ((string )msg).data());
+	UNUSED(client);
+	USB_Printf("FROM OG: %s\n", ((string )msg).data());
 }
 
 void mqttOnConnected(JMQTT::Client &client) {
@@ -192,11 +193,11 @@ void LED_Init() {
 	JLED::StripBuilder build { &dStrip };
 
 	build.setPhysicalPowerCB(setLedPower)
-		 .setPower(true)
-		 .setAll(0xFF2AFF)
-		 .setGammaCorrection(true)
-		 .setColorCorrection(JLED::ColorCorrection::WS2815)
-		 .setTemperatureCorrection(JLED::TemperatureCorrection::SodiumVapor);
+			.setPower(true)
+			.setAll(0xFF2AFF)
+			.setGammaCorrection(true)
+			.setColorCorrection(JLED::ColorCorrection::WS2815)
+			.setTemperatureCorrection(JLED::TemperatureCorrection::SodiumVapor);
 }
 
 void LED_Update() {
@@ -209,8 +210,9 @@ void LED_Update() {
 	if (delay.expired()) {
 		delay.reset();
 
+#ifdef DEBUG
 		dStrip[led] = cols[(led / ledsPerColor) % (sizeof(cols) / sizeof(JLED::Color))];
-
+#endif
 		led = (led + 1) % dStrip.getNumPixels();
 	}
 
