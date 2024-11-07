@@ -1,0 +1,98 @@
+\doxysection{PAHOClient.\+hpp}
+\hypertarget{_p_a_h_o_client_8hpp_source}{}\label{_p_a_h_o_client_8hpp_source}\index{Core/JPort/include/PAHOClient.hpp@{Core/JPort/include/PAHOClient.hpp}}
+\mbox{\hyperlink{_p_a_h_o_client_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00002}00002\ \textcolor{comment}{\ *\ W5500Client.hpp}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Mar\ 17,\ 2024}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ user}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ JPORT\_INCLUDE\_PAHOCLIENT\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#define\ JPORT\_INCLUDE\_PAHOCLIENT\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_client_8hpp}{Client.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_countdown_timer_8hpp}{CountdownTimer.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\#ifndef\ MQTTCLIENT\_QOS2}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00015}\mbox{\hyperlink{_p_a_h_o_client_8hpp_a9a9b4371a3a4f049f9f2cb2624f0c5ac}{00015}}\ \textcolor{preprocessor}{\#define\ MQTTCLIENT\_QOS2\ 2}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}MQTTClient.h"{}}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00020}00020\ \textcolor{preprocessor}{\#ifndef\ UNUSED}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00021}\mbox{\hyperlink{_p_a_h_o_client_8hpp_a86d500a34c624c2cae56bc25a31b12f3}{00021}}\ \textcolor{preprocessor}{\#define\ UNUSED(x)\ (void)x}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00022}00022\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00024}00024\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_j_m_q_t_t}{JMQTT}}\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00026}\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network}{00026}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network}{PAHONetwork}}\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00027}\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_ae86aeca997e66b080f31cf0bde7a629c}{00027}}\ \ \ \ \ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock}{JETHERNET::NetSock}}\ *\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_ae86aeca997e66b080f31cf0bde7a629c}{sock}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00028}\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a73498b1a7ccea5e4e3e9136ba321403d}{00028}}\ \ \ \ \ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_client_config}{ClientConfig}}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a73498b1a7ccea5e4e3e9136ba321403d}{conf}};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00029}\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_aa0aa90f178a7796b44b9b3677fee09de}{00029}}\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_aa0aa90f178a7796b44b9b3677fee09de}{read}}(uint8\_t\ *buffer,\ uint16\_t\ len,\ uint16\_t\ timeoutMs)\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_m_q_t_t_interface_8cpp_a86d500a34c624c2cae56bc25a31b12f3}{UNUSED}}(timeoutMs);}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!this-\/>\textcolor{keyword}{operator}\ \textcolor{keywordtype}{bool}())}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sock-\/>\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_ac352a31bb144160f2a060c2609cee259}{read}}(buffer,\ len);}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00036}\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a63b196ebc3e5d3d279ebc794bfbf199a}{00036}}\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a63b196ebc3e5d3d279ebc794bfbf199a}{write}}(uint8\_t\ *buffer,\ uint16\_t\ len,\ uint16\_t\ timeoutMs)\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_m_q_t_t_interface_8cpp_a86d500a34c624c2cae56bc25a31b12f3}{UNUSED}}(timeoutMs);}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!this-\/>\textcolor{keyword}{operator}\ \textcolor{keywordtype}{bool}())}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sock-\/>\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a9fa1b012c538e35f38780a1fd84f618e}{write}}(buffer,\ len);}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00044}\mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_a4b545a8666452b5ce582136c748a220b}{00044}}\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{operator}\ bool()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_ae86aeca997e66b080f31cf0bde7a629c}{sock}}\ !=\ \textcolor{keyword}{nullptr}\ \&\&\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network_ae86aeca997e66b080f31cf0bde7a629c}{sock}}-\/>\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock_a41db618756cf90001a219180d152ecde}{isConnected}}();}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00047}00047\ \};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00049}\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client}{00049}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client}{PAHOClient}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{JMQTT::Client}}\ \{}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00050}00050\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00051}00051\ \textcolor{comment}{//\ \ using\ ConnectCB\ =\ std::function<void(JMQTT::PAHOClient\&)>\ ;}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00052}00052\ \textcolor{comment}{//\ \ using\ MessageCB\ =\ std::function<void(JMQTT::PAHOClient\&,\ Message)>;}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00054}00054\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00055}00055\ \ \ \ \ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_p_a_h_o_network}{PAHONetwork}}\ net;}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00056}00056\ \ \ \ \ MQTT::Client<PAHONetwork,\ CountdownTimer,\ 1024>\ client;}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00057}00057\ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client_afdd270cfe93363df3d9076452ace76fa}{MessageCB}}\ onMessage;}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00058}00058\ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client_a5baa97eaa06bfc44647d2420a1c613b2}{ConnectCB}}\ onConnect;}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00060}00060\ \ \ \ \ std::vector<MQTTMessageReceiver*>\ genericReceivers;}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00061}00061\ \ \ \ \ std::vector<std::pair<std::string,\ MQTTMessageReceiver*>>\ specificReceivers;}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00062}00062\ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{uint16\_t}}\ receiverWriteIndex\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00064}00064\ \ \ \ \ \textcolor{keywordtype}{bool}\ connect();}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00065}00065\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00068}00068\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_afe848a1c54f215fe65d088fcb123617f}{publish}}(\mbox{\hyperlink{struct_j_m_q_t_t_1_1_message}{Message}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{msg}})\ \textcolor{keyword}{final};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00069}00069\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_afae9910504f45ae20a063835f11c34a4}{update}}(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{uint16\_t}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{timeout}})\ \textcolor{keyword}{final};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a56e726777777894ea43abe21a733a9b8}{subscribe}}(string\_view\ topic,\ \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3}{QOS}}\ qos\ =\ \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a065532b760e1ff433556caf8cff11819}{QOS::QOS0}})\ \textcolor{keyword}{final};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00071}00071\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a56e726777777894ea43abe21a733a9b8}{subscribe}}(string\_view\ topic,\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver}{MQTTMessageReceiver}}*\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{recv}},\ \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3}{QOS}}\ qos\ =\ \mbox{\hyperlink{namespace_j_m_q_t_t_ae20074947d69a428122e13962b0b54e3a065532b760e1ff433556caf8cff11819}{QOS::QOS0}})\ \textcolor{keyword}{final};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordtype}{bool}\ connect(\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock}{JETHERNET::NetSock}}\ \&sock,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_client_config}{ClientConfig}}\ config)\ \textcolor{keyword}{final};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00074}00074\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a3c9e4e4bd1f770736518ea312724cb5e}{reconnect}}()\ \textcolor{keyword}{final};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00075}00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a3c9e4e4bd1f770736518ea312724cb5e}{reconnect}}(\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_net_sock}{JETHERNET::NetSock}}\ \&sock);}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00076}00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_aa248683c2b1a64cad876e5c8aba844e6}{disconnect}}()\ \textcolor{keyword}{final};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00077}00077\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a20baf4bc65d6a27acb56f3d05967937d}{isConnected}}()\ \textcolor{keyword}{final};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_abb257a69eab13ff3db5c3d48233ecfd6}{registerMessageReceiver}}(\mbox{\hyperlink{struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver}{MQTTMessageReceiver}}*\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{recv}})\ \textcolor{keyword}{final};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00081}00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_ae6559e72b777963037108268a1dc0178}{setMessageCallback}}(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client_afdd270cfe93363df3d9076452ace76fa}{MessageCB}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{func}})\ \textcolor{keyword}{final};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00082}00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a6a9f497f3bcec8c8973295b8d1c16759}{setConnectCallback}}(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client_a5baa97eaa06bfc44647d2420a1c613b2}{ConnectCB}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{func}})\ \textcolor{keyword}{final};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00083}00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a607bcae635e895968efb49dd8eae533a}{pahoMessageReceived}}(MQTT::MessageData\ \&data);}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00086}00086\ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_ab05d65dbbd073954e3045da0c31250e0}{PAHOClient}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{uint16\_t}}\ \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{numReceivers}}\ =\ 10);}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00087}00087\ \ \ \ \ \mbox{\hyperlink{class_j_m_q_t_t_1_1_p_a_h_o_client_a6f0ae3731325e9ab016bb07e1f977ccb}{\string~PAHOClient}}();}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00088}00088\ \};}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00090}00090\ \}\ \textcolor{comment}{/*\ namespace\ JMQTT\ */}}
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_p_a_h_o_client_8hpp_source_l00092}00092\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ JPORT\_INCLUDE\_PAHOCLIENT\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

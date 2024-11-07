@@ -1,0 +1,508 @@
+\doxysection{JLED\+::DMAStrip\texorpdfstring{$<$}{<} \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_j_l_e_d_1_1_d_m_a_strip}{}\label{class_j_l_e_d_1_1_d_m_a_strip}\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+
+
+{\ttfamily \#include $<$DMAStrip.\+hpp$>$}
+
+Inheritance diagram for JLED\+::DMAStrip\texorpdfstring{$<$}{<} \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.440823cm]{class_j_l_e_d_1_1_d_m_a_strip}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8}{DMAStatus}} \{ \newline
+\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a914536ca583c5228125514d649a8d5bb}{IN\+\_\+\+PROGRESS}}
+, \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a088825b71521331c0e05f69604da6d43}{RESET\+\_\+\+STARTED}}
+, \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a8578f00ed394d0bb648d0ac02fa61550}{RESET\+\_\+\+IN\+\_\+\+PROGRESS}}
+, \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8acc41e06765a11e364498b1fad086f5c1}{RESET\+\_\+\+COMPLETE}}
+, \newline
+\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a04f6af3d541f573c3a3240d40284d26e}{DONE}}
+ \}
+\item 
+using \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_ab099719a86e8ba4067d748df142197cd}{LEDBase}} = \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip}{WS2815\+Strip}}$<$\+\_\+\+NUM\+\_\+\+PIXELS$>$
+\item 
+using \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a45d15148fcf5332bab87322eb57dbc74}{DMA\+\_\+\+START\+\_\+\+CB}} = std\+::function$<$void(DMA\+\_\+\+BUF\+\_\+\+TYPE\texorpdfstring{$\ast$}{*}, uint16\+\_\+t)$>$
+\item 
+using \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_aaa2d64e511ec5831084a9136e11f19a3}{DMA\+\_\+\+STOP\+\_\+\+CB}} = std\+::function$<$void()$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip}{JLED\+::\+WS2815\+Strip$<$ \+\_\+\+NUM\+\_\+\+PIXELS $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3}{TIMING\+\_\+\+NS}} \{ \newline
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3ab67332268087e770e65874529b982c8d}{ZERO\+\_\+L}} = 650
+, \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3afced65582f62b8641ca05b647a941841}{ZERO\+\_\+H}} = 350
+, \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3adad4fc4fc683477cdd8d32c9c0ff92fc}{ONE\+\_\+L}} = 350
+, \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3a585d70834f7d9ea7849291b1e6b08dc7}{ONE\+\_\+H}} = 700
+, \newline
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3afaf911e365324452c4ff0e2dc3582daf}{RES}} = 300000
+, \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3ae406e998431d722ecb7f3090a141948e}{PERIOD}} = 1250
+ \}
+\begin{DoxyCompactList}\small\item\em Timing in nanoseconds for LED strip data transfer. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a562da1adaa9bbd4bfb16eeb18114892c}{physical\+Power\+CBSig}} = void(\texorpdfstring{$\ast$}{*})(bool)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_ad6d6dda3a42e368f621f6bff32164162}{set\+Start\+DMACallback}} (\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a45d15148fcf5332bab87322eb57dbc74}{DMA\+\_\+\+START\+\_\+\+CB}} cb)
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a0ed4f56abecd478e055b8f92f0633461}{set\+Stop\+DMACallback}} (\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_aaa2d64e511ec5831084a9136e11f19a3}{DMA\+\_\+\+STOP\+\_\+\+CB}} cb)
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a31e2a0532c5bd78c66cacf6f16b148d7}{display}} ()
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_aac518bad0836dacff67af80090a048e1}{byte\+To\+DMATiming}} (uint8\+\_\+t byte, DMA\+\_\+\+BUF\+\_\+\+TYPE \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}out\+Ptr)
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a6dad77675b8f5cab458df7a4b3f8a118}{on\+DMAInterrupt}} (bool half\+Complete\+Interrupt)
+\item 
+bool \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_afca5f3b20e03ffde6d8aca4544d93292}{display\+In\+Progress}} ()
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a22d2e522f53d4fe6e764ae973601021f}{DMAStrip}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip}{JLED\+::\+WS2815\+Strip$<$ \+\_\+\+NUM\+\_\+\+PIXELS $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \& \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a23d4d479f78091c2536dc41d83bcbae2}{operator\mbox{[}$\,$\mbox{]}}} (uint16\+\_\+t index)
+\item 
+const uint32\+\_\+t \& \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_af1590132f4a7f1d8bfc29983e9dfcffb}{operator\mbox{[}$\,$\mbox{]}}} (uint16\+\_\+t index) const
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a40c109a054754a5539b9aa182836442f}{set}} (uint16\+\_\+t index, \mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \&col)
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_affd1f77b4ef919878b33b0f23c29dcfc}{at}} (uint16\+\_\+t index)
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_ae0fb1071573875e02ea8444ed1efba4a}{set\+All}} (\mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \&col)
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_af8c61899e441c5585289bddde7a9ccf3}{set\+All}} (uint32\+\_\+t col)
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a5cf2a5dacc184d5c0c57769d8c241daf}{set\+Brightness}} (uint8\+\_\+t brightness)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a1e1edf8c40bf2291f7f614170d164fe1}{get\+Brightness}} ()
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a41d4a8f69689c52bf48d9b6a4b053109}{set\+Physical\+Power\+CB}} (\mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a562da1adaa9bbd4bfb16eeb18114892c}{physical\+Power\+CBSig}} cb)
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_ac7348d0115d4b462bf2f92b419347700}{set\+Power}} (bool power\+On)
+\item 
+bool \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a581e2b88056726bfca11c7732c5372f5}{get\+Power}} ()
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_ad9604999d5b182973774ef3eb0c752b0}{WS2815\+Strip}} ()
+\item 
+const \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s2815_strip_1_1iterator}{iterator}} \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a62dcf521513943b122268b1ed7cfdfc3}{begin}} ()
+\item 
+const \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s2815_strip_1_1iterator}{iterator}} \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_ad1876db979e85d3fdb3d4689cafee1a3}{end}} ()
+\item 
+const \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s2815_strip_1_1iterator}{iterator}} \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a821313148b31ae3bad157ea7dcd4ed57}{beginT}} ()
+\item 
+const \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s2815_strip_1_1iterator}{iterator}} \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a4129b0c6eb9859d62d195a570be9f577}{endT}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+DMA\+\_\+\+BUF\+\_\+\+TYPE \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_ada349e9eec080906c5254db2fbdb2795}{dma\+Buffer}}
+\item 
+LEDBase\+::iterator \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a19aa27c8fb73acc5aad1f69beaff1d75}{dma\+Led\+IT}}
+\item 
+LEDBase\+::iterator \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a29da35eda03cac83f07bc1d9299f1c95}{dma\+Led\+End\+IT}}
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8}{DMAStatus}} \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_af8e50b51e5c8912f9a937af4cdbd8284}{dma\+Transfer\+Status}} = \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a04f6af3d541f573c3a3240d40284d26e}{DONE}}
+\item 
+\mbox{\hyperlink{struct_countdown_timer}{Countdown\+Timer}} \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_ae5d6c84e7a826a7024bbb9ae48e21b79}{frame\+Delay}} \{1\}
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a45d15148fcf5332bab87322eb57dbc74}{DMA\+\_\+\+START\+\_\+\+CB}} \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_af3c7a933ff8266ff8a6487c359fa732b}{dma\+Start}}
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_aaa2d64e511ec5831084a9136e11f19a3}{DMA\+\_\+\+STOP\+\_\+\+CB}} \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a62a472612fd3838c8ca7db59eddd45cc}{dma\+Stop}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip}{JLED\+::\+WS2815\+Strip$<$ \+\_\+\+NUM\+\_\+\+PIXELS $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a5d65329ef1c35d1af1c7e9298e21de24}{raw}} \mbox{[}\mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a92973a42758beb56a6d9173fcf3bbd38}{NUM\+\_\+\+PIXELS}}\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_af9e2999040a08678f54f238df221ded8}{transformed}} \mbox{[}\mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a92973a42758beb56a6d9173fcf3bbd38}{NUM\+\_\+\+PIXELS}}\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const auto \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_aaa407121f2010e106a2da4cb708ef656}{NUM\+\_\+\+PIXELS}} = LEDBase\+::\+NUM\+\_\+\+PIXELS
+\item 
+static const auto \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a4ead60f1951ccd63b65709e8260050e5}{NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA}} = \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA
+\item 
+static const auto \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a4f5e9cdcabd11e2f51eacf94166fcb74}{HALF\+\_\+\+DMA\+\_\+\+BUF\+\_\+\+LEN}}
+\item 
+static const auto \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a8cded8af6ec247834fb6f1ddd203f507}{FULL\+\_\+\+DMA\+\_\+\+BUF\+\_\+\+LEN}} = \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a4f5e9cdcabd11e2f51eacf94166fcb74}{HALF\+\_\+\+DMA\+\_\+\+BUF\+\_\+\+LEN}} \texorpdfstring{$\ast$}{*} 2
+\item 
+static const auto \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a2a3d04664989907225ca776f13d9648e}{NUM\+\_\+\+ELEMENTS\+\_\+\+PER\+\_\+\+RESET}} = \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3afaf911e365324452c4ff0e2dc3582daf}{LEDBase\+::\+RES}} / \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3ae406e998431d722ecb7f3090a141948e}{LEDBase\+::\+PERIOD}}
+\item 
+static const auto \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a1ffaf9ced961a7d5d93de15db7a19da8}{DMA\+\_\+\+ARR}} = \+\_\+\+DMA\+\_\+\+ARR
+\item 
+static const uint16\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a8653913afccccd79a1bb15c062dc1974}{DMA\+\_\+\+BIT\+\_\+\+ONE}}
+\item 
+static const uint16\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_ad72041fa800f79c08e97dd3082565f80}{DMA\+\_\+\+BIT\+\_\+\+ZERO}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip}{JLED\+::\+WS2815\+Strip$<$ \+\_\+\+NUM\+\_\+\+PIXELS $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+static const uint16\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a92973a42758beb56a6d9173fcf3bbd38}{NUM\+\_\+\+PIXELS}} = \+\_\+\+NUM\+\_\+\+PIXELS
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a3dc44ee35310d883f0370e6434d3ad21}{NUM\+\_\+\+BYTES\+\_\+\+PER\+\_\+\+PIXEL}} = 3
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa8164695a6895aff89a57c5ba600a5d9}{NUM\+\_\+\+BYTES\+\_\+\+TOTAL}} = \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a92973a42758beb56a6d9173fcf3bbd38}{NUM\+\_\+\+PIXELS}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a3dc44ee35310d883f0370e6434d3ad21}{NUM\+\_\+\+BYTES\+\_\+\+PER\+\_\+\+PIXEL}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE = uint32\+\_\+t$>$\newline
+class JLED\+::\+DMAStrip$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$}
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a45d15148fcf5332bab87322eb57dbc74}\label{class_j_l_e_d_1_1_d_m_a_strip_a45d15148fcf5332bab87322eb57dbc74} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!DMA\_START\_CB@{DMA\_START\_CB}}
+\index{DMA\_START\_CB@{DMA\_START\_CB}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{DMA\_START\_CB}{DMA\_START\_CB}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+using \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::\+DMA\+\_\+\+START\+\_\+\+CB = std\+::function$<$void(DMA\+\_\+\+BUF\+\_\+\+TYPE\texorpdfstring{$\ast$}{*}, uint16\+\_\+t)$>$}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00047}{47}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_aaa2d64e511ec5831084a9136e11f19a3}\label{class_j_l_e_d_1_1_d_m_a_strip_aaa2d64e511ec5831084a9136e11f19a3} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!DMA\_STOP\_CB@{DMA\_STOP\_CB}}
+\index{DMA\_STOP\_CB@{DMA\_STOP\_CB}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{DMA\_STOP\_CB}{DMA\_STOP\_CB}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+using \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::\+DMA\+\_\+\+STOP\+\_\+\+CB = std\+::function$<$void()$>$}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00048}{48}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_ab099719a86e8ba4067d748df142197cd}\label{class_j_l_e_d_1_1_d_m_a_strip_ab099719a86e8ba4067d748df142197cd} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!LEDBase@{LEDBase}}
+\index{LEDBase@{LEDBase}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{LEDBase}{LEDBase}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+using \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::\+LEDBase = \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip}{WS2815\+Strip}}$<$\+\_\+\+NUM\+\_\+\+PIXELS$>$}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00022}{22}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8}\label{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!DMAStatus@{DMAStatus}}
+\index{DMAStatus@{DMAStatus}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{DMAStatus}{DMAStatus}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+enum \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8}{JLED\+::\+DMAStrip\+::\+DMAStatus}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IN\_PROGRESS@{IN\_PROGRESS}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!IN\_PROGRESS@{IN\_PROGRESS}}}\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a914536ca583c5228125514d649a8d5bb}\label{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a914536ca583c5228125514d649a8d5bb} 
+IN\+\_\+\+PROGRESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RESET\_STARTED@{RESET\_STARTED}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!RESET\_STARTED@{RESET\_STARTED}}}\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a088825b71521331c0e05f69604da6d43}\label{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a088825b71521331c0e05f69604da6d43} 
+RESET\+\_\+\+STARTED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RESET\_IN\_PROGRESS@{RESET\_IN\_PROGRESS}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!RESET\_IN\_PROGRESS@{RESET\_IN\_PROGRESS}}}\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a8578f00ed394d0bb648d0ac02fa61550}\label{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a8578f00ed394d0bb648d0ac02fa61550} 
+RESET\+\_\+\+IN\+\_\+\+PROGRESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RESET\_COMPLETE@{RESET\_COMPLETE}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!RESET\_COMPLETE@{RESET\_COMPLETE}}}\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8acc41e06765a11e364498b1fad086f5c1}\label{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8acc41e06765a11e364498b1fad086f5c1} 
+RESET\+\_\+\+COMPLETE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DONE@{DONE}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!DONE@{DONE}}}\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a04f6af3d541f573c3a3240d40284d26e}\label{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a04f6af3d541f573c3a3240d40284d26e} 
+DONE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00036}{36}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a22d2e522f53d4fe6e764ae973601021f}\label{class_j_l_e_d_1_1_d_m_a_strip_a22d2e522f53d4fe6e764ae973601021f} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!DMAStrip@{DMAStrip}}
+\index{DMAStrip@{DMAStrip}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{DMAStrip()}{DMAStrip()}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR, typename DMA\+\_\+\+BUF\+\_\+\+TYPE $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::\+DMAStrip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00161}{161}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_aac518bad0836dacff67af80090a048e1}\label{class_j_l_e_d_1_1_d_m_a_strip_aac518bad0836dacff67af80090a048e1} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!byteToDMATiming@{byteToDMATiming}}
+\index{byteToDMATiming@{byteToDMATiming}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{byteToDMATiming()}{byteToDMATiming()}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR, typename DMA\+\_\+\+BUF\+\_\+\+TYPE $>$ \\
+void \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::byte\+To\+DMATiming (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{byte,  }\item[{DMA\+\_\+\+BUF\+\_\+\+TYPE \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{out\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00092}{92}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a31e2a0532c5bd78c66cacf6f16b148d7}\label{class_j_l_e_d_1_1_d_m_a_strip_a31e2a0532c5bd78c66cacf6f16b148d7} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!display@{display}}
+\index{display@{display}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR, typename DMA\+\_\+\+BUF\+\_\+\+TYPE $>$ \\
+void \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a7e764047001b27221c4aa4a4ef39bb61}{JLED\+::\+WS2815\+Strip$<$ \+\_\+\+NUM\+\_\+\+PIXELS $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00078}{78}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_afca5f3b20e03ffde6d8aca4544d93292}\label{class_j_l_e_d_1_1_d_m_a_strip_afca5f3b20e03ffde6d8aca4544d93292} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!displayInProgress@{displayInProgress}}
+\index{displayInProgress@{displayInProgress}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{displayInProgress()}{displayInProgress()}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR, typename DMA\+\_\+\+BUF\+\_\+\+TYPE $>$ \\
+bool \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::display\+In\+Progress (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00155}{155}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a6dad77675b8f5cab458df7a4b3f8a118}\label{class_j_l_e_d_1_1_d_m_a_strip_a6dad77675b8f5cab458df7a4b3f8a118} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!onDMAInterrupt@{onDMAInterrupt}}
+\index{onDMAInterrupt@{onDMAInterrupt}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{onDMAInterrupt()}{onDMAInterrupt()}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR, typename DMA\+\_\+\+BUF\+\_\+\+TYPE $>$ \\
+void \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::on\+DMAInterrupt (\begin{DoxyParamCaption}\item[{bool}]{half\+Complete\+Interrupt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00102}{102}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_ad6d6dda3a42e368f621f6bff32164162}\label{class_j_l_e_d_1_1_d_m_a_strip_ad6d6dda3a42e368f621f6bff32164162} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!setStartDMACallback@{setStartDMACallback}}
+\index{setStartDMACallback@{setStartDMACallback}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{setStartDMACallback()}{setStartDMACallback()}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR, typename DMA\+\_\+\+BUF\+\_\+\+TYPE $>$ \\
+void \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::set\+Start\+DMACallback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a45d15148fcf5332bab87322eb57dbc74}{DMA\+\_\+\+START\+\_\+\+CB}}}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00064}{64}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a0ed4f56abecd478e055b8f92f0633461}\label{class_j_l_e_d_1_1_d_m_a_strip_a0ed4f56abecd478e055b8f92f0633461} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!setStopDMACallback@{setStopDMACallback}}
+\index{setStopDMACallback@{setStopDMACallback}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{setStopDMACallback()}{setStopDMACallback()}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR, typename DMA\+\_\+\+BUF\+\_\+\+TYPE $>$ \\
+void \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::set\+Stop\+DMACallback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_aaa2d64e511ec5831084a9136e11f19a3}{DMA\+\_\+\+STOP\+\_\+\+CB}}}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00071}{71}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a1ffaf9ced961a7d5d93de15db7a19da8}\label{class_j_l_e_d_1_1_d_m_a_strip_a1ffaf9ced961a7d5d93de15db7a19da8} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!DMA\_ARR@{DMA\_ARR}}
+\index{DMA\_ARR@{DMA\_ARR}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{DMA\_ARR}{DMA\_ARR}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+const auto \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::\+DMA\+\_\+\+ARR = \+\_\+\+DMA\+\_\+\+ARR\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00030}{30}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a8653913afccccd79a1bb15c062dc1974}\label{class_j_l_e_d_1_1_d_m_a_strip_a8653913afccccd79a1bb15c062dc1974} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!DMA\_BIT\_ONE@{DMA\_BIT\_ONE}}
+\index{DMA\_BIT\_ONE@{DMA\_BIT\_ONE}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{DMA\_BIT\_ONE}{DMA\_BIT\_ONE}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+const uint16\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::\+DMA\+\_\+\+BIT\+\_\+\+ONE\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (float)\ \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3a585d70834f7d9ea7849291b1e6b08dc7}{LEDBase::ONE\_H}}\ /\ \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3ae406e998431d722ecb7f3090a141948e}{LEDBase::PERIOD}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ *\ \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a1ffaf9ced961a7d5d93de15db7a19da8}{DMA\_ARR}}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00031}{31}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_ad72041fa800f79c08e97dd3082565f80}\label{class_j_l_e_d_1_1_d_m_a_strip_ad72041fa800f79c08e97dd3082565f80} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!DMA\_BIT\_ZERO@{DMA\_BIT\_ZERO}}
+\index{DMA\_BIT\_ZERO@{DMA\_BIT\_ZERO}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{DMA\_BIT\_ZERO}{DMA\_BIT\_ZERO}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+const uint16\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::\+DMA\+\_\+\+BIT\+\_\+\+ZERO\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (float)\ \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3afced65582f62b8641ca05b647a941841}{LEDBase::ZERO\_H}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ /\ \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3ae406e998431d722ecb7f3090a141948e}{LEDBase::PERIOD}}\ *\ \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a1ffaf9ced961a7d5d93de15db7a19da8}{DMA\_ARR}}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00033}{33}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_ada349e9eec080906c5254db2fbdb2795}\label{class_j_l_e_d_1_1_d_m_a_strip_ada349e9eec080906c5254db2fbdb2795} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!dmaBuffer@{dmaBuffer}}
+\index{dmaBuffer@{dmaBuffer}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{dmaBuffer}{dmaBuffer}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+DMA\+\_\+\+BUF\+\_\+\+TYPE\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::dma\+Buffer}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00041}{41}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a29da35eda03cac83f07bc1d9299f1c95}\label{class_j_l_e_d_1_1_d_m_a_strip_a29da35eda03cac83f07bc1d9299f1c95} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!dmaLedEndIT@{dmaLedEndIT}}
+\index{dmaLedEndIT@{dmaLedEndIT}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{dmaLedEndIT}{dmaLedEndIT}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+LEDBase\+::iterator \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::dma\+Led\+End\+IT}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00042}{42}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a19aa27c8fb73acc5aad1f69beaff1d75}\label{class_j_l_e_d_1_1_d_m_a_strip_a19aa27c8fb73acc5aad1f69beaff1d75} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!dmaLedIT@{dmaLedIT}}
+\index{dmaLedIT@{dmaLedIT}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{dmaLedIT}{dmaLedIT}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+LEDBase\+::iterator \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::dma\+Led\+IT}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00042}{42}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_af3c7a933ff8266ff8a6487c359fa732b}\label{class_j_l_e_d_1_1_d_m_a_strip_af3c7a933ff8266ff8a6487c359fa732b} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!dmaStart@{dmaStart}}
+\index{dmaStart@{dmaStart}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{dmaStart}{dmaStart}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a45d15148fcf5332bab87322eb57dbc74}{DMA\+\_\+\+START\+\_\+\+CB}} \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::dma\+Start}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00049}{49}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a62a472612fd3838c8ca7db59eddd45cc}\label{class_j_l_e_d_1_1_d_m_a_strip_a62a472612fd3838c8ca7db59eddd45cc} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!dmaStop@{dmaStop}}
+\index{dmaStop@{dmaStop}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{dmaStop}{dmaStop}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_aaa2d64e511ec5831084a9136e11f19a3}{DMA\+\_\+\+STOP\+\_\+\+CB}} \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::dma\+Stop}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00050}{50}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_af8e50b51e5c8912f9a937af4cdbd8284}\label{class_j_l_e_d_1_1_d_m_a_strip_af8e50b51e5c8912f9a937af4cdbd8284} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!dmaTransferStatus@{dmaTransferStatus}}
+\index{dmaTransferStatus@{dmaTransferStatus}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{dmaTransferStatus}{dmaTransferStatus}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8}{DMAStatus}} \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::dma\+Transfer\+Status = \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a04f6af3d541f573c3a3240d40284d26e}{DONE}}}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00043}{43}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_ae5d6c84e7a826a7024bbb9ae48e21b79}\label{class_j_l_e_d_1_1_d_m_a_strip_ae5d6c84e7a826a7024bbb9ae48e21b79} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!frameDelay@{frameDelay}}
+\index{frameDelay@{frameDelay}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{frameDelay}{frameDelay}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+\mbox{\hyperlink{struct_countdown_timer}{Countdown\+Timer}} \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::frame\+Delay \{1\}}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00045}{45}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a8cded8af6ec247834fb6f1ddd203f507}\label{class_j_l_e_d_1_1_d_m_a_strip_a8cded8af6ec247834fb6f1ddd203f507} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!FULL\_DMA\_BUF\_LEN@{FULL\_DMA\_BUF\_LEN}}
+\index{FULL\_DMA\_BUF\_LEN@{FULL\_DMA\_BUF\_LEN}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{FULL\_DMA\_BUF\_LEN}{FULL\_DMA\_BUF\_LEN}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+const auto \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::\+FULL\+\_\+\+DMA\+\_\+\+BUF\+\_\+\+LEN = \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a4f5e9cdcabd11e2f51eacf94166fcb74}{HALF\+\_\+\+DMA\+\_\+\+BUF\+\_\+\+LEN}} \texorpdfstring{$\ast$}{*} 2\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00028}{28}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a4f5e9cdcabd11e2f51eacf94166fcb74}\label{class_j_l_e_d_1_1_d_m_a_strip_a4f5e9cdcabd11e2f51eacf94166fcb74} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!HALF\_DMA\_BUF\_LEN@{HALF\_DMA\_BUF\_LEN}}
+\index{HALF\_DMA\_BUF\_LEN@{HALF\_DMA\_BUF\_LEN}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{HALF\_DMA\_BUF\_LEN}{HALF\_DMA\_BUF\_LEN}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+const auto \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::\+HALF\+\_\+\+DMA\+\_\+\+BUF\+\_\+\+LEN\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a4ead60f1951ccd63b65709e8260050e5}{NUM\_PIXELS\_PER\_DMA}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ *\ \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a3dc44ee35310d883f0370e6434d3ad21}{LEDBase::NUM\_BYTES\_PER\_PIXEL}}\ *\ 8}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00026}{26}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a2a3d04664989907225ca776f13d9648e}\label{class_j_l_e_d_1_1_d_m_a_strip_a2a3d04664989907225ca776f13d9648e} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!NUM\_ELEMENTS\_PER\_RESET@{NUM\_ELEMENTS\_PER\_RESET}}
+\index{NUM\_ELEMENTS\_PER\_RESET@{NUM\_ELEMENTS\_PER\_RESET}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{NUM\_ELEMENTS\_PER\_RESET}{NUM\_ELEMENTS\_PER\_RESET}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+const auto \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::\+NUM\+\_\+\+ELEMENTS\+\_\+\+PER\+\_\+\+RESET = \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3afaf911e365324452c4ff0e2dc3582daf}{LEDBase\+::\+RES}} / \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3ae406e998431d722ecb7f3090a141948e}{LEDBase\+::\+PERIOD}}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00029}{29}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_aaa407121f2010e106a2da4cb708ef656}\label{class_j_l_e_d_1_1_d_m_a_strip_aaa407121f2010e106a2da4cb708ef656} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!NUM\_PIXELS@{NUM\_PIXELS}}
+\index{NUM\_PIXELS@{NUM\_PIXELS}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{NUM\_PIXELS}{NUM\_PIXELS}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+const auto \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::\+NUM\+\_\+\+PIXELS = LEDBase\+::\+NUM\+\_\+\+PIXELS\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_d_m_a_strip_a4ead60f1951ccd63b65709e8260050e5}\label{class_j_l_e_d_1_1_d_m_a_strip_a4ead60f1951ccd63b65709e8260050e5} 
+\index{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}!NUM\_PIXELS\_PER\_DMA@{NUM\_PIXELS\_PER\_DMA}}
+\index{NUM\_PIXELS\_PER\_DMA@{NUM\_PIXELS\_PER\_DMA}!JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{JLED::DMAStrip$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{NUM\_PIXELS\_PER\_DMA}{NUM\_PIXELS\_PER\_DMA}}
+{\footnotesize\ttfamily template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE  = uint32\+\_\+t$>$ \\
+const auto \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip}}$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$\+::\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_d_m_a_strip_8hpp_source_l00025}{25}} of file \mbox{\hyperlink{_d_m_a_strip_8hpp_source}{DMAStrip.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+JLib/\+JLED/include/\mbox{\hyperlink{_d_m_a_strip_8hpp}{DMAStrip.\+hpp}}\end{DoxyCompactItemize}

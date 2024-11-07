@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_69a9451abb0a9a5e227f3c1e82a0ea82" kind="dir">
+    <compoundname>JLib/JMQTT/include</compoundname>
+    <innerfile refid="_client_8hpp">Client.hpp</innerfile>
+    <innerfile refid="_m_q_t_t_interface_8hpp">MQTTInterface.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="JLib/JMQTT/include/"/>
+  </compounddef>
+</doxygen>

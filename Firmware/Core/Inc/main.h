@@ -67,12 +67,12 @@ void SystemClock_Config(void);
 #define ETH_SCSn_GPIO_Port GPIOA
 #define TEST_LED_Pin GPIO_PIN_1
 #define TEST_LED_GPIO_Port GPIOB
-#define LED_PWR_OK_Pin GPIO_PIN_15
-#define LED_PWR_OK_GPIO_Port GPIOB
+#define LED_PWR_EN_Pin GPIO_PIN_15
+#define LED_PWR_EN_GPIO_Port GPIOB
 #define LED_DATA_Pin GPIO_PIN_8
 #define LED_DATA_GPIO_Port GPIOA
-#define LED_PWR_EN_Pin GPIO_PIN_9
-#define LED_PWR_EN_GPIO_Port GPIOA
+#define LED_PWR_OK_Pin GPIO_PIN_9
+#define LED_PWR_OK_GPIO_Port GPIOA
 #define ESP_IO2_Pin GPIO_PIN_4
 #define ESP_IO2_GPIO_Port GPIOB
 #define ESP_IO0_Pin GPIO_PIN_5

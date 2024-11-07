@@ -6,3 +6,5 @@
 Firmware/Release/*
 Firmware/Debug/*
 !**.elf
+Firmware/Core/Inc/secrets.hpp
+Firmware/Core/Src/secrets.cpp

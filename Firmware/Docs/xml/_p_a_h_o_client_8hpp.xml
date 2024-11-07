@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_p_a_h_o_client_8hpp" kind="file" language="C++">
+    <compoundname>PAHOClient.hpp</compoundname>
+    <includes refid="_client_8hpp" local="yes">Client.hpp</includes>
+    <includes refid="_countdown_timer_8hpp" local="yes">CountdownTimer.hpp</includes>
+    <includes local="no">functional</includes>
+    <includes local="yes">MQTTClient.h</includes>
+    <includedby refid="_p_a_h_o_client_8cpp" local="yes">Core/JPort/src/PAHOClient.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Core/JPort/include/PAHOClient.hpp</label>
+        <link refid="_p_a_h_o_client_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>NetIP.hpp</label>
+        <link refid="_net_i_p_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>NetSock.hpp</label>
+        <link refid="_net_sock_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Client.hpp</label>
+        <link refid="_client_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>CountdownTimer.hpp</label>
+        <link refid="_countdown_timer_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>MQTTClient.h</label>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="7">
+        <label>functional</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>Core/JPort/include/PAHOClient.hpp</label>
+        <link refid="_p_a_h_o_client_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Core/JPort/src/PAHOClient.cpp</label>
+        <link refid="_p_a_h_o_client_8cpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_j_m_q_t_t_1_1_p_a_h_o_network" prot="public">JMQTT::PAHONetwork</innerclass>
+    <innerclass refid="class_j_m_q_t_t_1_1_p_a_h_o_client" prot="public">JMQTT::PAHOClient</innerclass>
+    <innernamespace refid="namespace_j_m_q_t_t">JMQTT</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_p_a_h_o_client_8hpp_1a9a9b4371a3a4f049f9f2cb2624f0c5ac" prot="public" static="no">
+        <name>MQTTCLIENT_QOS2</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/PAHOClient.hpp" line="15" column="9" bodyfile="Core/JPort/include/PAHOClient.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>W5500Client.hpp</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Mar<sp/>17,<sp/>2024</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>user</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>JPORT_INCLUDE_PAHOCLIENT_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JPORT_INCLUDE_PAHOCLIENT_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Client.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;CountdownTimer.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MQTTCLIENT_QOS2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MQTTCLIENT_QOS2<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;MQTTClient.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">JMQTT<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="struct_j_m_q_t_t_1_1_p_a_h_o_network" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_j_m_q_t_t_1_1_p_a_h_o_network" kindref="compound">PAHONetwork</ref><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" kindref="compound">JETHERNET::NetSock</ref><sp/>*sock<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_j_m_q_t_t_1_1_client_config" kindref="compound">ClientConfig</ref><sp/>conf;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>read(<ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">uint8_t</ref><sp/>*<ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">buffer</ref>,<sp/><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">uint16_t</ref><sp/><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">len</ref>,<sp/><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">uint16_t</ref><sp/><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">timeoutMs</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!this-&gt;</highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">())</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sock-&gt;<ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1ac352a31bb144160f2a060c2609cee259" kindref="member">read</ref>(<ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">buffer</ref>,<sp/><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">len</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>write(<ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">uint8_t</ref><sp/>*<ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">buffer</ref>,<sp/><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">uint16_t</ref><sp/><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">len</ref>,<sp/><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">uint16_t</ref><sp/><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">timeoutMs</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!this-&gt;</highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">())</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sock-&gt;<ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a9fa1b012c538e35f38780a1fd84f618e" kindref="member">write</ref>(<ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">buffer</ref>,<sp/><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">len</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">bool</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sock<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>sock-&gt;<ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock_1a41db618756cf90001a219180d152ecde" kindref="member">isConnected</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="class_j_m_q_t_t_1_1_p_a_h_o_client" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_j_m_q_t_t_1_1_p_a_h_o_client" kindref="compound">PAHOClient</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">JMQTT::Client</ref><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>using<sp/>ConnectCB<sp/>=<sp/>std::function&lt;void(JMQTT::PAHOClient&amp;)&gt;<sp/>;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>using<sp/>MessageCB<sp/>=<sp/>std::function&lt;void(JMQTT::PAHOClient&amp;,<sp/>Message)&gt;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_j_m_q_t_t_1_1_p_a_h_o_network" kindref="compound">PAHONetwork</ref><sp/>net;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>MQTT::Client&lt;PAHONetwork,<sp/>CountdownTimer&gt;<sp/>client;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageCB<sp/>onMessage;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>ConnectCB<sp/>onConnect;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>connect();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>publish(<ref refid="struct_j_m_q_t_t_1_1_message" kindref="compound">Message</ref><sp/><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">msg</ref>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>subscribe(string_view<sp/>topic,<sp/>QOS<sp/>qos<sp/>=<sp/>QOS::QOS0);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>update(<ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">uint16_t</ref><sp/><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">timeout</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>connect(<ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" kindref="compound">JETHERNET::NetSock</ref><sp/>&amp;sock,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_j_m_q_t_t_1_1_client_config" kindref="compound">ClientConfig</ref><sp/>config);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>reconnect();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>reconnect(<ref refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock" kindref="compound">JETHERNET::NetSock</ref><sp/>&amp;sock);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>disconnect();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isConnected();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setMessageCallback(MessageCB<sp/><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">func</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setConnectCallback(ConnectCB<sp/><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">func</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>pahoMessageReceived(MQTT::MessageData<sp/>&amp;<ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">data</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_j_m_q_t_t_1_1_p_a_h_o_client" kindref="compound">PAHOClient</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_j_m_q_t_t_1_1_p_a_h_o_client" kindref="compound">~PAHOClient</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>namespace<sp/>JMQTT<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>JPORT_INCLUDE_PAHOCLIENT_HPP_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="Core/JPort/include/PAHOClient.hpp"/>
+  </compounddef>
+</doxygen>

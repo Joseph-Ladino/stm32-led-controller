@@ -1,0 +1,86 @@
+.TH "CountdownTimer" 3 "Version 0.1.1" "CSTM32 Led Controller" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CountdownTimer
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcountdown_ms\fP (uint32_t ms)"
+.br
+.ti -1c
+.RI "void \fBcountdown\fP (uint16_t sec)"
+.br
+.ti -1c
+.RI "uint32_t \fBleft_ms\fP ()"
+.br
+.ti -1c
+.RI "bool \fBexpired\fP ()"
+.br
+.ti -1c
+.RI "\fBCountdownTimer\fP (uint32_t ms)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmsTick\fP ()"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static uint32_t \fBtick\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB13\fP of file \fBCountdownTimer\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CountdownTimer::CountdownTimer ()"
+
+.PP
+Definition at line \fB35\fP of file \fBCountdownTimer\&.cpp\fP\&.
+.SS "CountdownTimer::CountdownTimer (uint32_t ms)"
+
+.PP
+Definition at line \fB39\fP of file \fBCountdownTimer\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void CountdownTimer::countdown (uint16_t sec)"
+
+.PP
+Definition at line \fB14\fP of file \fBCountdownTimer\&.cpp\fP\&.
+.SS "void CountdownTimer::countdown_ms (uint32_t ms)"
+
+.PP
+Definition at line \fB10\fP of file \fBCountdownTimer\&.cpp\fP\&.
+.SS "bool CountdownTimer::expired ()"
+
+.PP
+Definition at line \fB25\fP of file \fBCountdownTimer\&.cpp\fP\&.
+.SS "uint32_t CountdownTimer::left_ms ()"
+
+.PP
+Definition at line \fB18\fP of file \fBCountdownTimer\&.cpp\fP\&.
+.SS "void CountdownTimer::msTick ()\fR [static]\fP"
+
+.PP
+Definition at line \fB31\fP of file \fBCountdownTimer\&.cpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32_t CountdownTimer::tick = 0\fR [inline]\fP, \fR [static]\fP, \fR [protected]\fP"
+
+.PP
+Definition at line \fB30\fP of file \fBCountdownTimer\&.hpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSTM32 Led Controller from the source code\&.

@@ -1,0 +1,190 @@
+.TH "JETHERNET::NetMAC" 3 "Version 0.1.1" "CSTM32 Led Controller" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JETHERNET::NetMAC \- MAC address stored internally as a 48 bit bitset\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <NetMAC\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBcString\fP (char *buf)"
+.br
+.RI "Print formatted MAC address to output buffer\&. "
+.ti -1c
+.RI "uint8_t & \fBoperator[]\fP (uint8_t index)"
+.br
+.RI "Access MAC bytes\&. "
+.ti -1c
+.RI "const uint8_t & \fBoperator[]\fP (uint8_t index) const"
+.br
+.RI "Access MAC bytes\&. "
+.ti -1c
+.RI "\fBNetMAC\fP & \fBoperator=\fP (const \fBNetMAC\fP &rhs)=default"
+.br
+.ti -1c
+.RI "\fBNetMAC\fP & \fBoperator=\fP (const uint32_t mac)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBNetMAC\fP &rhs) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBNetMAC\fP &rhs) const"
+.br
+.ti -1c
+.RI "\fBNetMAC\fP (\fBNetMAC\fP &addr)=default"
+.br
+.ti -1c
+.RI "\fBNetMAC\fP (uint8_t n0, uint8_t n1, uint8_t n2, uint8_t n3, uint8_t n4, uint8_t n5)"
+.br
+.ti -1c
+.RI "\fBNetMAC\fP (uint64_t mac)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   uint64_t \fBnum\fP: 48"
+.br
+.ti -1c
+.RI "   uint8_t \fBraw\fP [6]"
+.br
+.ti -1c
+.RI "}; "
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+MAC address stored internally as a 48 bit bitset\&. 
+
+
+.PP
+\fBNote\fP
+.RS 4
+MSB is raw[0], LSB is raw[5] 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBNetSock\fP 
+.PP
+\fBNetConfig\fP 
+.PP
+\fBEthernetHC\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB21\fP of file \fBNetMAC\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JETHERNET::NetMAC::NetMAC ()"
+
+.PP
+Definition at line \fB29\fP of file \fBNetMAC\&.cpp\fP\&.
+.SS "JETHERNET::NetMAC::NetMAC (uint8_t n0, uint8_t n1, uint8_t n2, uint8_t n3, uint8_t n4, uint8_t n5)"
+
+.PP
+Definition at line \fB33\fP of file \fBNetMAC\&.cpp\fP\&.
+.SS "JETHERNET::NetMAC::NetMAC (uint64_t mac)"
+
+.PP
+Definition at line \fB51\fP of file \fBNetMAC\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int JETHERNET::NetMAC::cString (char * buf)"
+
+.PP
+Print formatted MAC address to output buffer\&. 
+.PP
+\fBNote\fP
+.RS 4
+maximum 17 characters written (18 w/ null char) 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIbuf\fP output buffer 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+number of bytes written 
+.RE
+.PP
+
+.PP
+Definition at line \fB11\fP of file \fBNetMAC\&.cpp\fP\&.
+.PP
+Referenced by \fBJETHERNET::NetConfig::cString()\fP\&.
+.SS "bool JETHERNET::NetMAC::operator!= (const \fBNetMAC\fP & rhs) const"
+
+.PP
+Definition at line \fB47\fP of file \fBNetMAC\&.cpp\fP\&.
+.SS "\fBNetMAC\fP & JETHERNET::NetMAC::operator= (const uint32_t mac)"
+
+.PP
+Definition at line \fB24\fP of file \fBNetMAC\&.cpp\fP\&.
+.SS "bool JETHERNET::NetMAC::operator== (const \fBNetMAC\fP & rhs) const"
+
+.PP
+Definition at line \fB43\fP of file \fBNetMAC\&.cpp\fP\&.
+.SS "uint8_t & JETHERNET::NetMAC::operator[] (uint8_t index)"
+
+.PP
+Access MAC bytes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP (0-5) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+byte representing part of a MAC address 
+.RE
+.PP
+
+.PP
+Definition at line \fB16\fP of file \fBNetMAC\&.cpp\fP\&.
+.SS "const uint8_t & JETHERNET::NetMAC::operator[] (uint8_t index) const"
+
+.PP
+Access MAC bytes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP (0-5) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+byte representing part of a MAC address 
+.RE
+.PP
+
+.PP
+Definition at line \fB20\fP of file \fBNetMAC\&.cpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "uint64_t JETHERNET::NetMAC::num"
+
+.PP
+Definition at line \fB23\fP of file \fBNetMAC\&.hpp\fP\&.
+.SS "uint8_t JETHERNET::NetMAC::raw[6]"
+
+.PP
+Definition at line \fB24\fP of file \fBNetMAC\&.hpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSTM32 Led Controller from the source code\&.

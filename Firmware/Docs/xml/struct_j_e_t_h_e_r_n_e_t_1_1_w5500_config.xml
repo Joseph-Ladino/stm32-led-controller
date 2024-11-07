@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config" kind="struct" language="C++" prot="public">
+    <compoundname>JETHERNET::W5500Config</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_1af4b6ac2300be6775fd30e74dfa06babc" prot="public" static="no" mutable="no">
+        <type>SPI_HandleTypeDef *</type>
+        <definition>SPI_HandleTypeDef* JETHERNET::W5500Config::spi</definition>
+        <argsstring></argsstring>
+        <name>spi</name>
+        <qualifiedname>JETHERNET::W5500Config::spi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Interface.hpp" line="28" column="19" bodyfile="Core/JPort/include/W5500Interface.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_1ab6d0e79fe1e2b8872171136977d23499" prot="public" static="no" mutable="no">
+        <type>GPIO_TypeDef *</type>
+        <definition>GPIO_TypeDef* JETHERNET::W5500Config::chipSelectPort</definition>
+        <argsstring></argsstring>
+        <name>chipSelectPort</name>
+        <qualifiedname>JETHERNET::W5500Config::chipSelectPort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Interface.hpp" line="29" column="14" bodyfile="Core/JPort/include/W5500Interface.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_1a321ce81de4647a007d957ca4b1aab38e" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t JETHERNET::W5500Config::chipSelectPin</definition>
+        <argsstring></argsstring>
+        <name>chipSelectPin</name>
+        <qualifiedname>JETHERNET::W5500Config::chipSelectPin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Interface.hpp" line="30" column="10" bodyfile="Core/JPort/include/W5500Interface.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_1a0d72f294c3e7d6143642b8817cac726f" prot="public" static="no" mutable="no">
+        <type>GPIO_TypeDef *</type>
+        <definition>GPIO_TypeDef* JETHERNET::W5500Config::resetPort</definition>
+        <argsstring></argsstring>
+        <name>resetPort</name>
+        <qualifiedname>JETHERNET::W5500Config::resetPort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Interface.hpp" line="31" column="14" bodyfile="Core/JPort/include/W5500Interface.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_1a4989fb5f65b0849b4483891b844c104f" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t JETHERNET::W5500Config::resetPin</definition>
+        <argsstring></argsstring>
+        <name>resetPin</name>
+        <qualifiedname>JETHERNET::W5500Config::resetPin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500Interface.hpp" line="32" column="10" bodyfile="Core/JPort/include/W5500Interface.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Core/JPort/include/W5500Interface.hpp" line="27" column="1" bodyfile="Core/JPort/include/W5500Interface.hpp" bodystart="27" bodyend="33"/>
+    <listofallmembers>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_1a321ce81de4647a007d957ca4b1aab38e" prot="public" virt="non-virtual"><scope>JETHERNET::W5500Config</scope><name>chipSelectPin</name></member>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_1ab6d0e79fe1e2b8872171136977d23499" prot="public" virt="non-virtual"><scope>JETHERNET::W5500Config</scope><name>chipSelectPort</name></member>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_1a4989fb5f65b0849b4483891b844c104f" prot="public" virt="non-virtual"><scope>JETHERNET::W5500Config</scope><name>resetPin</name></member>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_1a0d72f294c3e7d6143642b8817cac726f" prot="public" virt="non-virtual"><scope>JETHERNET::W5500Config</scope><name>resetPort</name></member>
+      <member refid="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config_1af4b6ac2300be6775fd30e74dfa06babc" prot="public" virt="non-virtual"><scope>JETHERNET::W5500Config</scope><name>spi</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

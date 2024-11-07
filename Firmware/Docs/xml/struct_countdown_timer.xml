@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="struct_countdown_timer" kind="struct" language="C++" prot="public">
+    <compoundname>CountdownTimer</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="struct_countdown_timer_1aec9aa3f7dfa76848d41da8ac01398c1f" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t CountdownTimer::endMs</definition>
+        <argsstring></argsstring>
+        <name>endMs</name>
+        <qualifiedname>CountdownTimer::endMs</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMisc/include/CountdownTimer.hpp" line="27" column="10" bodyfile="JLib/JMisc/include/CountdownTimer.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="struct_countdown_timer_1adc81e626332259b1811fdb9012efcb5c" prot="protected" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t CountdownTimer::tick</definition>
+        <argsstring></argsstring>
+        <name>tick</name>
+        <qualifiedname>CountdownTimer::tick</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMisc/include/CountdownTimer.hpp" line="30" column="24" bodyfile="JLib/JMisc/include/CountdownTimer.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_countdown_timer_1ae938bf04669e4db43d9793ec66f451d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CountdownTimer::countdown_ms</definition>
+        <argsstring>(uint32_t ms)</argsstring>
+        <name>countdown_ms</name>
+        <qualifiedname>CountdownTimer::countdown_ms</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>ms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMisc/include/CountdownTimer.hpp" line="15" column="6" bodyfile="JLib/JMisc/src/CountdownTimer.cpp" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_countdown_timer_1a2d673c7a79fc69a2bd480f40ffb65f3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CountdownTimer::countdown</definition>
+        <argsstring>(uint16_t sec)</argsstring>
+        <name>countdown</name>
+        <qualifiedname>CountdownTimer::countdown</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>sec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMisc/include/CountdownTimer.hpp" line="16" column="6" bodyfile="JLib/JMisc/src/CountdownTimer.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_countdown_timer_1a7b3f51afa536ffed772f1c62de543e43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t CountdownTimer::left_ms</definition>
+        <argsstring>()</argsstring>
+        <name>left_ms</name>
+        <qualifiedname>CountdownTimer::left_ms</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMisc/include/CountdownTimer.hpp" line="18" column="10" bodyfile="JLib/JMisc/src/CountdownTimer.cpp" bodystart="18" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_countdown_timer_1a3c03271b786ef9a0d43f0b2937fe8183" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CountdownTimer::expired</definition>
+        <argsstring>()</argsstring>
+        <name>expired</name>
+        <qualifiedname>CountdownTimer::expired</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMisc/include/CountdownTimer.hpp" line="19" column="6" bodyfile="JLib/JMisc/src/CountdownTimer.cpp" bodystart="25" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_countdown_timer_1a4d930a016b5118d0a5fc4e8ff04f668f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CountdownTimer::CountdownTimer</definition>
+        <argsstring>()</argsstring>
+        <name>CountdownTimer</name>
+        <qualifiedname>CountdownTimer::CountdownTimer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMisc/include/CountdownTimer.hpp" line="21" column="1" bodyfile="JLib/JMisc/src/CountdownTimer.cpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_countdown_timer_1a063ec0ed50acbd662071121338dd0509" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CountdownTimer::CountdownTimer</definition>
+        <argsstring>(uint32_t ms)</argsstring>
+        <name>CountdownTimer</name>
+        <qualifiedname>CountdownTimer::CountdownTimer</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>ms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMisc/include/CountdownTimer.hpp" line="22" column="1" bodyfile="JLib/JMisc/src/CountdownTimer.cpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="struct_countdown_timer_1a766d43746a33928f83b0c80e47c3da2c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CountdownTimer::msTick</definition>
+        <argsstring>()</argsstring>
+        <name>msTick</name>
+        <qualifiedname>CountdownTimer::msTick</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMisc/include/CountdownTimer.hpp" line="24" column="13" bodyfile="JLib/JMisc/src/CountdownTimer.cpp" bodystart="31" bodyend="33"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="JLib/JMisc/include/CountdownTimer.hpp" line="13" column="1" bodyfile="JLib/JMisc/include/CountdownTimer.hpp" bodystart="13" bodyend="31"/>
+    <listofallmembers>
+      <member refid="struct_countdown_timer_1a2d673c7a79fc69a2bd480f40ffb65f3c" prot="public" virt="non-virtual"><scope>CountdownTimer</scope><name>countdown</name></member>
+      <member refid="struct_countdown_timer_1ae938bf04669e4db43d9793ec66f451d0" prot="public" virt="non-virtual"><scope>CountdownTimer</scope><name>countdown_ms</name></member>
+      <member refid="struct_countdown_timer_1a4d930a016b5118d0a5fc4e8ff04f668f" prot="public" virt="non-virtual"><scope>CountdownTimer</scope><name>CountdownTimer</name></member>
+      <member refid="struct_countdown_timer_1a063ec0ed50acbd662071121338dd0509" prot="public" virt="non-virtual"><scope>CountdownTimer</scope><name>CountdownTimer</name></member>
+      <member refid="struct_countdown_timer_1aec9aa3f7dfa76848d41da8ac01398c1f" prot="private" virt="non-virtual"><scope>CountdownTimer</scope><name>endMs</name></member>
+      <member refid="struct_countdown_timer_1a3c03271b786ef9a0d43f0b2937fe8183" prot="public" virt="non-virtual"><scope>CountdownTimer</scope><name>expired</name></member>
+      <member refid="struct_countdown_timer_1a7b3f51afa536ffed772f1c62de543e43" prot="public" virt="non-virtual"><scope>CountdownTimer</scope><name>left_ms</name></member>
+      <member refid="struct_countdown_timer_1a766d43746a33928f83b0c80e47c3da2c" prot="public" virt="non-virtual"><scope>CountdownTimer</scope><name>msTick</name></member>
+      <member refid="struct_countdown_timer_1adc81e626332259b1811fdb9012efcb5c" prot="protected" virt="non-virtual"><scope>CountdownTimer</scope><name>tick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

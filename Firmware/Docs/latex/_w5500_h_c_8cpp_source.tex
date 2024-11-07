@@ -1,0 +1,168 @@
+\doxysection{W5500\+HC.\+cpp}
+\hypertarget{_w5500_h_c_8cpp_source}{}\label{_w5500_h_c_8cpp_source}\index{Core/JPort/src/W5500HC.cpp@{Core/JPort/src/W5500HC.cpp}}
+\mbox{\hyperlink{_w5500_h_c_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ W500HC.cpp}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Feb\ 22,\ 2024}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ DRTNT}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}wizchip\_conf.h"{}}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}dhcp.h"{}}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_w5500_h_c_8hpp}{W5500HC.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_w5500_socket_8hpp}{W5500Socket.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_countdown_timer_8hpp}{CountdownTimer.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00018}00018\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_j_e_t_h_e_r_n_e_t}{JETHERNET}}\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00020}\mbox{\hyperlink{_w5500_h_c_8cpp_a86203bdf1ba3e5632f4c78c9194434f8}{00020}}\ \textcolor{preprocessor}{\#define\ MemcopyConfig(member1,\ member2)\ memcpy(member1,\ member2,\ (sizeof(member1)\ <\ sizeof(member2))\ ?\ sizeof(member1)\ :\ sizeof(member2))}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00022}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_aacca281855fcad880940cd893c52ca8d}{00022}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_aacca281855fcad880940cd893c52ca8d}{W5500HC::setConfig}}(\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config}{NetConfig}}\ \&netConfig)\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00023}00023\ \ \ \ \ setSHAR(netConfig.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config_a348d8f4705812bf0c808d4f692c4c1fe}{mac}}.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0}{raw}});}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00024}00024\ \ \ \ \ setGAR(netConfig.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config_abd640ce8bf534dfed2edb6d4d30eb708}{gateway}}.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a232d117efc1173373972c819a0e48e64}{raw}});}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00025}00025\ \ \ \ \ setSUBR(netConfig.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config_a0a29b0b50f49a334107bc987557fb0e2}{subnet}}.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a232d117efc1173373972c819a0e48e64}{raw}});}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00026}00026\ \ \ \ \ setSIPR(netConfig.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config_a15633d6f722dc68b31dab9d8de300da7}{ip}}.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a232d117efc1173373972c819a0e48e64}{raw}});}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{comment}{//\ ignore\ dhcpEnabled\ as\ that\ is\ set\ via\ enableDHCP}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{comment}{//\ dhcpEnabled\ =\ netConfig.dhcpEnabled}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{if}(netConfig.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config_a4834d9cd546a8cdd754de6aba2b83cc9}{dns}}.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a2b107533f39fd496cc2e485a9ecc2f99}{num}}\ !=\ 0)\ dnsAddress\ =\ netConfig.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config_a4834d9cd546a8cdd754de6aba2b83cc9}{dns}};}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00033}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a64c78f800ddded81d687e0689d97d765}{00033}}\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config}{NetConfig}}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a64c78f800ddded81d687e0689d97d765}{W5500HC::getConfig}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00034}00034\ \ \ \ \ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config}{NetConfig}}\ netConfig;}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00036}00036\ \ \ \ \ getSHAR(netConfig.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config_a348d8f4705812bf0c808d4f692c4c1fe}{mac}}.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c_ab2d7fa28425227ed5f42f6dd29fa1fa0}{raw}});}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00037}00037\ \ \ \ \ getGAR(netConfig.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config_abd640ce8bf534dfed2edb6d4d30eb708}{gateway}}.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a232d117efc1173373972c819a0e48e64}{raw}});}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00038}00038\ \ \ \ \ getSUBR(netConfig.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config_a0a29b0b50f49a334107bc987557fb0e2}{subnet}}.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a232d117efc1173373972c819a0e48e64}{raw}});}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00039}00039\ \ \ \ \ getSIPR(netConfig.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config_a15633d6f722dc68b31dab9d8de300da7}{ip}}.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a232d117efc1173373972c819a0e48e64}{raw}});}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00041}00041\ \ \ \ \ netConfig.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config_acaecb870dd38076d47e3ace2cea2b738}{dhcpEnabled}}\ =\ dhcpEnabled;}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00042}00042\ \ \ \ \ netConfig.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config_a4834d9cd546a8cdd754de6aba2b83cc9}{dns}}\ =\ dnsAddress;}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{return}\ netConfig;}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00047}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a8d3fb687280b9f4e521280d7a977260c}{00047}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a8d3fb687280b9f4e521280d7a977260c}{W5500HC::phyLinkStatus}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keyword}{auto}\ state\ =\ wizphy\_getphylink();}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{if}\ (state\ ==\ -\/1)\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_w5500_interface_8hpp_a7d200943f83896b8be6e2c6a28d097f5}{ETH\_Printf}}(\textcolor{stringliteral}{"{}UNABLE\ TO\ GET\ PHY\ STATE"{}});}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{return}\ state\ ==\ PHY\_LINK\_ON;}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00056}00056\ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00058}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a7832805e05a042f25c71b1f8cbc0109f}{00058}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a7832805e05a042f25c71b1f8cbc0109f}{W5500HC::enableDHCP}}(uint16\_t\ timeoutMs)\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_ad159ed22180c186a3947a5a9f5d1b694}{initSuccess}}\ \&\&\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a8d3fb687280b9f4e521280d7a977260c}{phyLinkStatus}}()))}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00062}00062\ \ \ \ \ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config}{NetConfig}}\ netConfig\ =\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a64c78f800ddded81d687e0689d97d765}{getConfig}}();}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00064}00064\ \ \ \ \ netConfig.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config_a348d8f4705812bf0c808d4f692c4c1fe}{mac}}\ =\ \{\ 0x00,\ 0x08,\ 0xDC,\ 0x11,\ 0x22,\ 0x33\ \};}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00066}00066\ \ \ \ \ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a4d4950762a8d89067160c7754a97ce52}{dhcpSuccess}}\ =\ hw.\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_a4cba0c9cc794ebe8199ffafbe342d375}{initDHCP}}(\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a2c573a9eda6ad102424c056f7ed9c270}{getFreeSocket}}(),\ \&netConfig,\ timeoutMs);}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00067}00067\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a4d4950762a8d89067160c7754a97ce52}{dhcpSuccess}})\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ dhcpEnabled\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_aacca281855fcad880940cd893c52ca8d}{setConfig}}(netConfig);}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00070}00070\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ dhcpEnabled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00072}00072\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00074}00074\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a4d4950762a8d89067160c7754a97ce52}{dhcpSuccess}};}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00075}00075\ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00077}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a3e0c3dfaf31ead59c516baa72570cfd6}{00077}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a3e0c3dfaf31ead59c516baa72570cfd6}{W5500HC::enableDNS}}(\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{NetIP}}\ dns)\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00078}00078\ \ \ \ \ \textcolor{keywordflow}{if}(dns.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a2b107533f39fd496cc2e485a9ecc2f99}{num}}\ !=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ dnsAddress\ =\ dns;}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00080}00080\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(dnsAddress.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a2b107533f39fd496cc2e485a9ecc2f99}{num}}\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00085}00085\ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00087}00087\ \textcolor{comment}{//\ ip\ will\ be\ 0\ if\ failure}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00088}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_ade44d55a425f5c775db9e12b9c37383b}{00088}}\ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{NetIP}}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_ade44d55a425f5c775db9e12b9c37383b}{W5500HC::domainToIP}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ domain,\ uint16\_t\ timeoutMs)\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00089}00089\ \ \ \ \ \mbox{\hyperlink{struct_countdown_timer}{CountdownTimer}}\ t(timeoutMs);}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00090}00090\ \ \ \ \ \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{NetIP}}\ ip;}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{comment}{//\ socket\ is\ closed\ in\ DNS\_run}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00093}00093\ \ \ \ \ hw.\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_af111b2830d3a6171ed28a70efc782713}{initDNS}}(\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a2c573a9eda6ad102424c056f7ed9c270}{getFreeSocket}}());}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00094}00094\ \ \ \ \ \textcolor{keywordflow}{while}(DNS\_run(dnsAddress.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a232d117efc1173373972c819a0e48e64}{raw}},\ (uint8\_t\ *)domain,\ ip.\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p_a232d117efc1173373972c819a0e48e64}{raw}})\ !=\ 1\ \&\&\ !t.\mbox{\hyperlink{struct_countdown_timer_a3c03271b786ef9a0d43f0b2937fe8183}{expired}}());}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00096}00096\ \ \ \ \ \textcolor{keywordflow}{return}\ ip;}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00097}00097\ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00100}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_aa94ada9cbdc61fda72a8d8f081501b6d}{00100}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_aa94ada9cbdc61fda72a8d8f081501b6d}{W5500HC::softReset}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00101}00101\ \ \ \ \ dhcpEnabled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00102}00102\ \ \ \ \ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a4d4950762a8d89067160c7754a97ce52}{dhcpSuccess}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00103}00103\ \ \ \ \ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a66330e647066a6f6551165b7d6ce94f4}{phyTimeout}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00104}00104\ \ \ \ \ dnsAddress\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00106}00106\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\&\ s\ :\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a6922de2cabee2f645173cd2f6fd3ca93}{sockets}})\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ s.close();}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ s.disconnect();}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00109}00109\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00110}00110\ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00112}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a7c8f7dead6c7c61f8ac1c8d784ff3a07}{00112}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a7c8f7dead6c7c61f8ac1c8d784ff3a07}{W5500HC::init}}(\textcolor{keywordtype}{void}\ *config)\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00113}00113\ \ \ \ \ hwConfig\ =\ *(\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config}{W5500Config}}*)\ config;}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00114}00114\ \ \ \ \ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_ad159ed22180c186a3947a5a9f5d1b694}{initSuccess}}\ =\ hw.\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface_abe7d564e593a26c9802116f740b1e4e8}{init}}(hwConfig);}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00116}00116\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_ad159ed22180c186a3947a5a9f5d1b694}{initSuccess}})\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint8\_t\ i\ =\ 0;\ i\ <\ 8;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a6922de2cabee2f645173cd2f6fd3ca93}{sockets}}[i].socketNum\ =\ i;}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a6922de2cabee2f645173cd2f6fd3ca93}{sockets}}[i].ethHC\ =\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00121}00121\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00123}00123\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_ad159ed22180c186a3947a5a9f5d1b694}{initSuccess}};}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00124}00124\ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00126}00126\ \textcolor{comment}{//\ returns\ true\ if\ PHY\ becomes\ available\ before\ timeout}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00127}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a005dc035acbb966e4de3734c27118f33}{00127}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a005dc035acbb966e4de3734c27118f33}{W5500HC::waitForLink}}(uint16\_t\ timeoutMs)\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00128}00128\ \ \ \ \ \mbox{\hyperlink{struct_countdown_timer}{CountdownTimer}}\ timer(timeoutMs);}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00129}00129\ \ \ \ \ \textcolor{keywordflow}{while}\ (!(\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a8d3fb687280b9f4e521280d7a977260c}{phyLinkStatus}}()\ ||\ timer.\mbox{\hyperlink{struct_countdown_timer_a3c03271b786ef9a0d43f0b2937fe8183}{expired}}()))}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00132}00132\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a8d3fb687280b9f4e521280d7a977260c}{phyLinkStatus}}();}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00133}00133\ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00135}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a2c573a9eda6ad102424c056f7ed9c270}{00135}}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket}{W5500Socket}}\&\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a2c573a9eda6ad102424c056f7ed9c270}{W5500HC::getFreeSocket}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00136}00136\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket}{W5500Socket}}\ empty;}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00138}00138\ \ \ \ \ \textcolor{keywordflow}{for}\ (uint8\_t\ i\ =\ 0;\ i\ <\ 8;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \&sock\ =\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a6922de2cabee2f645173cd2f6fd3ca93}{sockets}}[i];}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!sock.isConnected())}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sock;}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00142}00142\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00144}00144\ \ \ \ \ \textcolor{keywordflow}{return}\ empty;}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00145}00145\ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00147}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_aa45237fe2b5d878be315a8fd3420e864}{00147}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_aa45237fe2b5d878be315a8fd3420e864}{W5500HC::msTick}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00148}00148\ \ \ \ \ \textcolor{keyword}{static}\ uint32\_t\ tick\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00149}00149\ \ \ \ \ tick++;}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00151}00151\ \ \ \ \ \textcolor{keywordflow}{if}\ (tick\ >=\ 1000)\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00152}00152\ \ \ \ \ \ \ \ \ tick\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00153}00153\ \ \ \ \ \ \ \ \ DHCP\_time\_handler();}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00154}00154\ \ \ \ \ \ \ \ \ DNS\_time\_handler();}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00155}00155\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00156}00156\ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00158}\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_ac0da98304ab49a78c4291b7673fc87ce}{00158}}\ \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_ac0da98304ab49a78c4291b7673fc87ce}{W5500HC::\string~W5500HC}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00160}00160\ \}}
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{_w5500_h_c_8cpp_source_l00162}00162\ \}\ \textcolor{comment}{/*\ namespace\ JOELIB\ */}}
+
+\end{DoxyCode}

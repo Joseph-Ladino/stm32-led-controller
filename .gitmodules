@@ -1,3 +1,12 @@
 [submodule "Firmware/ioLibrary"]
 	path = Firmware/ioLibrary
 	url = https://github.com/Wiznet/ioLibrary_Driver.git
+[submodule "Firmware/MQTT"]
+	path = Firmware/MQTT
+	url = https://github.com/Joseph-Ladino/paho.mqtt.embedded-c.git
+[submodule "Firmware/Obfuscate"]
+	path = Firmware/Obfuscate
+	url = https://github.com/adamyaxley/Obfuscate.git
+[submodule "Firmware/ArduinoJson"]
+	path = Firmware/ArduinoJson
+	url = https://github.com/bblanchon/ArduinoJson

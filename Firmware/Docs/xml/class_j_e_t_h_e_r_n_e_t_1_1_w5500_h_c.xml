@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c" kind="class" language="C++" prot="public">
+    <compoundname>JETHERNET::W5500HC</compoundname>
+    <basecompoundref refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c" prot="public" virt="non-virtual">JETHERNET::EthernetHC</basecompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a4d4950762a8d89067160c7754a97ce52" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool JETHERNET::W5500HC::dhcpSuccess</definition>
+        <argsstring></argsstring>
+        <name>dhcpSuccess</name>
+        <qualifiedname>JETHERNET::W5500HC::dhcpSuccess</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="20" column="6" bodyfile="Core/JPort/include/W5500HC.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1ad159ed22180c186a3947a5a9f5d1b694" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool JETHERNET::W5500HC::initSuccess</definition>
+        <argsstring></argsstring>
+        <name>initSuccess</name>
+        <qualifiedname>JETHERNET::W5500HC::initSuccess</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="21" column="6" bodyfile="Core/JPort/include/W5500HC.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a66330e647066a6f6551165b7d6ce94f4" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool JETHERNET::W5500HC::phyTimeout</definition>
+        <argsstring></argsstring>
+        <name>phyTimeout</name>
+        <qualifiedname>JETHERNET::W5500HC::phyTimeout</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="22" column="6" bodyfile="Core/JPort/include/W5500HC.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a6922de2cabee2f645173cd2f6fd3ca93" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket" kindref="compound">W5500Socket</ref></type>
+        <definition>W5500Socket JETHERNET::W5500HC::sockets[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>sockets</name>
+        <qualifiedname>JETHERNET::W5500HC::sockets</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="24" column="13" bodyfile="Core/JPort/include/W5500HC.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1ae40e90cf376217f41325d954d1261512" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_w5500_config" kindref="compound">W5500Config</ref></type>
+        <definition>W5500Config JETHERNET::W5500HC::hwConfig</definition>
+        <argsstring></argsstring>
+        <name>hwConfig</name>
+        <qualifiedname>JETHERNET::W5500HC::hwConfig</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="27" column="13" bodyfile="Core/JPort/include/W5500HC.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a743ab4c02a729459a580c20a183acf78" prot="private" static="no" mutable="no">
+        <type><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_interface" kindref="compound">W5500Interface</ref> &amp;</type>
+        <definition>W5500Interface&amp; JETHERNET::W5500HC::hw</definition>
+        <argsstring></argsstring>
+        <name>hw</name>
+        <qualifiedname>JETHERNET::W5500HC::hw</qualifiedname>
+        <initializer>= W5500Interface::instance()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="28" column="16" bodyfile="Core/JPort/include/W5500HC.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a5123b81991bb027f4e0371c62c3835e4" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref></type>
+        <definition>NetIP JETHERNET::W5500HC::dnsAddress</definition>
+        <argsstring></argsstring>
+        <name>dnsAddress</name>
+        <qualifiedname>JETHERNET::W5500HC::dnsAddress</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="29" column="7" bodyfile="Core/JPort/include/W5500HC.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a0ce5227bcab6fdd0538c78c64c0dbbbb" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool JETHERNET::W5500HC::dhcpEnabled</definition>
+        <argsstring></argsstring>
+        <name>dhcpEnabled</name>
+        <qualifiedname>JETHERNET::W5500HC::dhcpEnabled</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="30" column="6" bodyfile="Core/JPort/include/W5500HC.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1aacca281855fcad880940cd893c52ca8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void JETHERNET::W5500HC::setConfig</definition>
+        <argsstring>(NetConfig &amp;netConfig) override</argsstring>
+        <name>setConfig</name>
+        <qualifiedname>JETHERNET::W5500HC::setConfig</qualifiedname>
+        <reimplements refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a869154c83a1821b0738e13ae3f0d961f">setConfig</reimplements>
+        <param>
+          <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_config" kindref="compound">NetConfig</ref> &amp;</type>
+          <declname>netConfig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="33" column="6" bodyfile="Core/JPort/src/W5500HC.cpp" bodystart="22" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a64c78f800ddded81d687e0689d97d765" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_config" kindref="compound">NetConfig</ref></type>
+        <definition>NetConfig JETHERNET::W5500HC::getConfig</definition>
+        <argsstring>() override</argsstring>
+        <name>getConfig</name>
+        <qualifiedname>JETHERNET::W5500HC::getConfig</qualifiedname>
+        <reimplements refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a06b567bffaf6eb147859edf317d4b9bb">getConfig</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="34" column="11" bodyfile="Core/JPort/src/W5500HC.cpp" bodystart="33" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1aa45237fe2b5d878be315a8fd3420e864" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void JETHERNET::W5500HC::msTick</definition>
+        <argsstring>() override</argsstring>
+        <name>msTick</name>
+        <qualifiedname>JETHERNET::W5500HC::msTick</qualifiedname>
+        <reimplements refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a816685c872acf0ef6864633c90488020">msTick</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="36" column="6" bodyfile="Core/JPort/src/W5500HC.cpp" bodystart="147" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a7832805e05a042f25c71b1f8cbc0109f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool JETHERNET::W5500HC::enableDHCP</definition>
+        <argsstring>(uint16_t timeoutMs) override</argsstring>
+        <name>enableDHCP</name>
+        <qualifiedname>JETHERNET::W5500HC::enableDHCP</qualifiedname>
+        <reimplements refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a92d9cc9e5308c2c635d6e97947140149">enableDHCP</reimplements>
+        <param>
+          <type>uint16_t</type>
+          <declname>timeoutMs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="38" column="6" bodyfile="Core/JPort/src/W5500HC.cpp" bodystart="58" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a3e0c3dfaf31ead59c516baa72570cfd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool JETHERNET::W5500HC::enableDNS</definition>
+        <argsstring>(NetIP dns=0) override</argsstring>
+        <name>enableDNS</name>
+        <qualifiedname>JETHERNET::W5500HC::enableDNS</qualifiedname>
+        <reimplements refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a40a80ea845fb029ca403eb106ed3e3d0">enableDNS</reimplements>
+        <param>
+          <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref></type>
+          <declname>dns</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="39" column="6" bodyfile="Core/JPort/src/W5500HC.cpp" bodystart="77" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1ade44d55a425f5c775db9e12b9c37383b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">NetIP</ref></type>
+        <definition>NetIP JETHERNET::W5500HC::domainToIP</definition>
+        <argsstring>(const char *domain, uint16_t timeoutMs) override</argsstring>
+        <name>domainToIP</name>
+        <qualifiedname>JETHERNET::W5500HC::domainToIP</qualifiedname>
+        <reimplements refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a6036a12d452cc14f70357bfdba6e2a68">domainToIP</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>domain</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>timeoutMs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="40" column="7" bodyfile="Core/JPort/src/W5500HC.cpp" bodystart="88" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a8d3fb687280b9f4e521280d7a977260c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool JETHERNET::W5500HC::phyLinkStatus</definition>
+        <argsstring>() override</argsstring>
+        <name>phyLinkStatus</name>
+        <qualifiedname>JETHERNET::W5500HC::phyLinkStatus</qualifiedname>
+        <reimplements refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1aec53d829385f6ee0d0296af3943ffe4a">phyLinkStatus</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="42" column="6" bodyfile="Core/JPort/src/W5500HC.cpp" bodystart="47" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a005dc035acbb966e4de3734c27118f33" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool JETHERNET::W5500HC::waitForLink</definition>
+        <argsstring>(uint16_t timeoutMs) override</argsstring>
+        <name>waitForLink</name>
+        <qualifiedname>JETHERNET::W5500HC::waitForLink</qualifiedname>
+        <reimplements refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a1e547d7e6984e2c800d7fecf0260d046">waitForLink</reimplements>
+        <param>
+          <type>uint16_t</type>
+          <declname>timeoutMs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="43" column="6" bodyfile="Core/JPort/src/W5500HC.cpp" bodystart="127" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1aa94ada9cbdc61fda72a8d8f081501b6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void JETHERNET::W5500HC::softReset</definition>
+        <argsstring>()</argsstring>
+        <name>softReset</name>
+        <qualifiedname>JETHERNET::W5500HC::softReset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="44" column="6" bodyfile="Core/JPort/src/W5500HC.cpp" bodystart="100" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a7c8f7dead6c7c61f8ac1c8d784ff3a07" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool JETHERNET::W5500HC::init</definition>
+        <argsstring>(void *) override</argsstring>
+        <name>init</name>
+        <qualifiedname>JETHERNET::W5500HC::init</qualifiedname>
+        <reimplements refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a6e380cb6bb273af7aaac85f1df1de3ac">init</reimplements>
+        <param>
+          <type>void *</type>
+          <defname>config</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="45" column="6" bodyfile="Core/JPort/src/W5500HC.cpp" bodystart="112" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a2c573a9eda6ad102424c056f7ed9c270" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket" kindref="compound">W5500Socket</ref> &amp;</type>
+        <definition>W5500Socket &amp; JETHERNET::W5500HC::getFreeSocket</definition>
+        <argsstring>()</argsstring>
+        <name>getFreeSocket</name>
+        <qualifiedname>JETHERNET::W5500HC::getFreeSocket</qualifiedname>
+        <reimplements refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a58730e887e50ba72c7356657179ae7b9">getFreeSocket</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="47" column="13" bodyfile="Core/JPort/src/W5500HC.cpp" bodystart="135" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1ac0da98304ab49a78c4291b7673fc87ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JETHERNET::W5500HC::~W5500HC</definition>
+        <argsstring>()</argsstring>
+        <name>~W5500HC</name>
+        <qualifiedname>JETHERNET::W5500HC::~W5500HC</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/JPort/include/W5500HC.hpp" line="49" column="1" bodyfile="Core/JPort/src/W5500HC.cpp" bodystart="157" bodyend="159"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>JETHERNET::EthernetHC</label>
+        <link refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c"/>
+      </node>
+      <node id="1">
+        <label>JETHERNET::W5500HC</label>
+        <link refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>JETHERNET::EthernetHC</label>
+        <link refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c"/>
+      </node>
+      <node id="4">
+        <label>JETHERNET::NetSock</label>
+        <link refid="class_j_e_t_h_e_r_n_e_t_1_1_net_sock"/>
+      </node>
+      <node id="1">
+        <label>JETHERNET::W5500HC</label>
+        <link refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>sockets</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>JETHERNET::W5500Socket</label>
+        <link refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Core/JPort/include/W5500HC.hpp" line="18" column="1" bodyfile="Core/JPort/include/W5500HC.hpp" bodystart="18" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a0ce5227bcab6fdd0538c78c64c0dbbbb" prot="private" virt="non-virtual"><scope>JETHERNET::W5500HC</scope><name>dhcpEnabled</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a4d4950762a8d89067160c7754a97ce52" prot="protected" virt="non-virtual"><scope>JETHERNET::W5500HC</scope><name>dhcpSuccess</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a5123b81991bb027f4e0371c62c3835e4" prot="private" virt="non-virtual"><scope>JETHERNET::W5500HC</scope><name>dnsAddress</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1ade44d55a425f5c775db9e12b9c37383b" prot="public" virt="virtual"><scope>JETHERNET::W5500HC</scope><name>domainToIP</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a7832805e05a042f25c71b1f8cbc0109f" prot="public" virt="virtual"><scope>JETHERNET::W5500HC</scope><name>enableDHCP</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a3e0c3dfaf31ead59c516baa72570cfd6" prot="public" virt="virtual"><scope>JETHERNET::W5500HC</scope><name>enableDNS</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a64c78f800ddded81d687e0689d97d765" prot="public" virt="virtual"><scope>JETHERNET::W5500HC</scope><name>getConfig</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a2c573a9eda6ad102424c056f7ed9c270" prot="public" virt="virtual"><scope>JETHERNET::W5500HC</scope><name>getFreeSocket</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a743ab4c02a729459a580c20a183acf78" prot="private" virt="non-virtual"><scope>JETHERNET::W5500HC</scope><name>hw</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1ae40e90cf376217f41325d954d1261512" prot="private" virt="non-virtual"><scope>JETHERNET::W5500HC</scope><name>hwConfig</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a7c8f7dead6c7c61f8ac1c8d784ff3a07" prot="public" virt="virtual"><scope>JETHERNET::W5500HC</scope><name>init</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1ad159ed22180c186a3947a5a9f5d1b694" prot="protected" virt="non-virtual"><scope>JETHERNET::W5500HC</scope><name>initSuccess</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1aa45237fe2b5d878be315a8fd3420e864" prot="public" virt="virtual"><scope>JETHERNET::W5500HC</scope><name>msTick</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a8d3fb687280b9f4e521280d7a977260c" prot="public" virt="virtual"><scope>JETHERNET::W5500HC</scope><name>phyLinkStatus</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a66330e647066a6f6551165b7d6ce94f4" prot="protected" virt="non-virtual"><scope>JETHERNET::W5500HC</scope><name>phyTimeout</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1aacca281855fcad880940cd893c52ca8d" prot="public" virt="virtual"><scope>JETHERNET::W5500HC</scope><name>setConfig</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a6922de2cabee2f645173cd2f6fd3ca93" prot="protected" virt="non-virtual"><scope>JETHERNET::W5500HC</scope><name>sockets</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1aa94ada9cbdc61fda72a8d8f081501b6d" prot="public" virt="non-virtual"><scope>JETHERNET::W5500HC</scope><name>softReset</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1a005dc035acbb966e4de3734c27118f33" prot="public" virt="virtual"><scope>JETHERNET::W5500HC</scope><name>waitForLink</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_1a5f2760472e72efc27c79d83301c9412e" prot="public" virt="virtual"><scope>JETHERNET::W5500HC</scope><name>~EthernetHC</name></member>
+      <member refid="class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_1ac0da98304ab49a78c4291b7673fc87ce" prot="public" virt="non-virtual"><scope>JETHERNET::W5500HC</scope><name>~W5500HC</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

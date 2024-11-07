@@ -1,0 +1,96 @@
+.TH "JMQTT::W5500MqttNetwork" 3 "Version 0.1.1" "CSTM32 Led Controller" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JMQTT::W5500MqttNetwork
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBbool\fP \fBisConnected\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetSocket\fP (\fBint\fP socketNum)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBconnect\fP (\fBconst\fP \fBchar\fP *\fBhostname\fP, \fBuint16_t\fP \fBport\fP)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBconnect\fP (\fBuint8_t\fP *ip, \fBuint16_t\fP \fBport\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBdisconnect\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBread\fP (\fBunsigned\fP \fBchar\fP *\fBbuffer\fP, \fBint\fP \fBlen\fP, \fBint\fP \fBtimeout_ms\fP)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBwrite\fP (\fBunsigned\fP \fBchar\fP *\fBbuffer\fP, \fBint\fP \fBlen\fP, \fBint\fP \fBtimeout\fP)"
+.br
+.ti -1c
+.RI "\fBW5500MqttNetwork\fP (\fBint\fP socketNum)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBsocketNum\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB17\fP of file \fBMQTTInterface\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JMQTT::W5500MqttNetwork::W5500MqttNetwork ()"
+
+.PP
+Definition at line \fB76\fP of file \fBMQTTInterface\&.cpp\fP\&.
+.SS "JMQTT::W5500MqttNetwork::W5500MqttNetwork (\fBint\fP socketNum)"
+
+.PP
+Definition at line \fB72\fP of file \fBMQTTInterface\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBint\fP JMQTT::W5500MqttNetwork::connect (\fBconst\fP \fBchar\fP * hostname, \fBuint16_t\fP port)"
+
+.PP
+Definition at line \fB29\fP of file \fBMQTTInterface\&.cpp\fP\&.
+.SS "\fBint\fP JMQTT::W5500MqttNetwork::connect (\fBuint8_t\fP * ip, \fBuint16_t\fP port)"
+
+.PP
+Definition at line \fB34\fP of file \fBMQTTInterface\&.cpp\fP\&.
+.SS "\fBvoid\fP JMQTT::W5500MqttNetwork::disconnect ()"
+
+.PP
+Definition at line \fB44\fP of file \fBMQTTInterface\&.cpp\fP\&.
+.SS "\fBbool\fP JMQTT::W5500MqttNetwork::isConnected ()"
+
+.PP
+Definition at line \fB62\fP of file \fBMQTTInterface\&.cpp\fP\&.
+.SS "\fBint\fP JMQTT::W5500MqttNetwork::read (\fBunsigned\fP \fBchar\fP * buffer, \fBint\fP len, \fBint\fP timeout_ms)"
+
+.PP
+Definition at line \fB48\fP of file \fBMQTTInterface\&.cpp\fP\&.
+.SS "\fBvoid\fP JMQTT::W5500MqttNetwork::setSocket (\fBint\fP socketNum)"
+
+.PP
+Definition at line \fB66\fP of file \fBMQTTInterface\&.cpp\fP\&.
+.SS "\fBint\fP JMQTT::W5500MqttNetwork::write (\fBunsigned\fP \fBchar\fP * buffer, \fBint\fP len, \fBint\fP timeout)"
+
+.PP
+Definition at line \fB55\fP of file \fBMQTTInterface\&.cpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBint\fP JMQTT::W5500MqttNetwork::socketNum"
+
+.PP
+Definition at line \fB18\fP of file \fBMQTTInterface\&.hpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSTM32 Led Controller from the source code\&.

@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="struct_j_m_q_t_t_1_1_client_config" kind="struct" language="C++" prot="public">
+    <compoundname>JMQTT::ClientConfig</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_j_m_q_t_t_1_1_client_config_1adaf4490b2a554690a8b155c3f0683dd5" prot="public" static="no" mutable="no">
+        <type>MQTTVersion</type>
+        <definition>MQTTVersion JMQTT::ClientConfig::version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <qualifiedname>JMQTT::ClientConfig::version</qualifiedname>
+        <initializer>= MQTTVersion::MQTT311</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/Client.hpp" line="40" column="13" bodyfile="JLib/JMQTT/include/Client.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_m_q_t_t_1_1_client_config_1a6da016f97b0800325683bfae4d5e1cb0" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p" kindref="compound">JETHERNET::NetIP</ref></type>
+        <definition>JETHERNET::NetIP JMQTT::ClientConfig::brokerIP</definition>
+        <argsstring></argsstring>
+        <name>brokerIP</name>
+        <qualifiedname>JMQTT::ClientConfig::brokerIP</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/Client.hpp" line="41" column="18" bodyfile="JLib/JMQTT/include/Client.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_m_q_t_t_1_1_client_config_1aa879edf93bc829164b9724b092c77669" prot="public" static="no" mutable="no">
+        <type><ref refid="class_j_m_q_t_t_1_1_client" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t JMQTT::ClientConfig::brokerPort</definition>
+        <argsstring></argsstring>
+        <name>brokerPort</name>
+        <qualifiedname>JMQTT::ClientConfig::brokerPort</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/Client.hpp" line="42" column="10" bodyfile="JLib/JMQTT/include/Client.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_m_q_t_t_1_1_client_config_1afe121029b64aeb950a7b4ca28eeb2d3a" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string JMQTT::ClientConfig::clientName</definition>
+        <argsstring></argsstring>
+        <name>clientName</name>
+        <qualifiedname>JMQTT::ClientConfig::clientName</qualifiedname>
+        <initializer>= &quot;JMQTTClient&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/Client.hpp" line="43" column="8" bodyfile="JLib/JMQTT/include/Client.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_m_q_t_t_1_1_client_config_1a266098173864ed535b7d368fbf18112b" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string JMQTT::ClientConfig::username</definition>
+        <argsstring></argsstring>
+        <name>username</name>
+        <qualifiedname>JMQTT::ClientConfig::username</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/Client.hpp" line="44" column="8" bodyfile="JLib/JMQTT/include/Client.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_m_q_t_t_1_1_client_config_1a750576b79628cbcd0297c4e3ebf5ac73" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string JMQTT::ClientConfig::password</definition>
+        <argsstring></argsstring>
+        <name>password</name>
+        <qualifiedname>JMQTT::ClientConfig::password</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JLib/JMQTT/include/Client.hpp" line="45" column="8" bodyfile="JLib/JMQTT/include/Client.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>JETHERNET::NetIP</label>
+        <link refid="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p"/>
+      </node>
+      <node id="1">
+        <label>JMQTT::ClientConfig</label>
+        <link refid="struct_j_m_q_t_t_1_1_client_config"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>brokerIP</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>clientName</edgelabel>
+          <edgelabel>password</edgelabel>
+          <edgelabel>username</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="JLib/JMQTT/include/Client.hpp" line="39" column="1" bodyfile="JLib/JMQTT/include/Client.hpp" bodystart="39" bodyend="46"/>
+    <listofallmembers>
+      <member refid="struct_j_m_q_t_t_1_1_client_config_1a6da016f97b0800325683bfae4d5e1cb0" prot="public" virt="non-virtual"><scope>JMQTT::ClientConfig</scope><name>brokerIP</name></member>
+      <member refid="struct_j_m_q_t_t_1_1_client_config_1aa879edf93bc829164b9724b092c77669" prot="public" virt="non-virtual"><scope>JMQTT::ClientConfig</scope><name>brokerPort</name></member>
+      <member refid="struct_j_m_q_t_t_1_1_client_config_1afe121029b64aeb950a7b4ca28eeb2d3a" prot="public" virt="non-virtual"><scope>JMQTT::ClientConfig</scope><name>clientName</name></member>
+      <member refid="struct_j_m_q_t_t_1_1_client_config_1a750576b79628cbcd0297c4e3ebf5ac73" prot="public" virt="non-virtual"><scope>JMQTT::ClientConfig</scope><name>password</name></member>
+      <member refid="struct_j_m_q_t_t_1_1_client_config_1a266098173864ed535b7d368fbf18112b" prot="public" virt="non-virtual"><scope>JMQTT::ClientConfig</scope><name>username</name></member>
+      <member refid="struct_j_m_q_t_t_1_1_client_config_1adaf4490b2a554690a8b155c3f0683dd5" prot="public" virt="non-virtual"><scope>JMQTT::ClientConfig</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

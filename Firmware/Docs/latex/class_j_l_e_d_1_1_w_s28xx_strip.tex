@@ -1,0 +1,248 @@
+\doxysection{JLED\+::WS28xx\+Strip\texorpdfstring{$<$}{<} Strip\+Type \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_j_l_e_d_1_1_w_s28xx_strip}{}\label{class_j_l_e_d_1_1_w_s28xx_strip}\index{JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}}
+
+
+Basic control class for an LED strip.  
+
+
+
+
+{\ttfamily \#include $<$WS28xx\+Strip.\+hpp$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator}{Iterator}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \& \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_a797933819fc1af8c3c84e4390a649109}{operator\mbox{[}$\,$\mbox{]}}} (uint16\+\_\+t index)
+\item 
+const uint32\+\_\+t \& \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_af475a92610d2305431f492b71728d1d9}{operator\mbox{[}$\,$\mbox{]}}} (uint16\+\_\+t index) const
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_abd2cbba3caec98c3adf7554d55d828db}{set\+All}} (uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Set entire strip to color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_a592fb7548a3f629fa8acf688eb6f9aec}{set\+Power}} (bool power\+On)
+\begin{DoxyCompactList}\small\item\em Update power state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_ae20cf69fe0be495d74166906e3f74e0e}{get\+Power}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve power state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_a77686c687fcf6b3a6d16908cf5237bc9}{set\+Brightness}} (uint8\+\_\+t brightness)
+\begin{DoxyCompactList}\small\item\em Set global strip brightness scalar. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_ab556122b2ea726b12d90c939640e4ac4}{get\+Brightness}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve global strip brightness. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_a8fc438d50bbb7857328da22aabe08448}{set\+Effect}} ()
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_a552aba68e7ee495ee00e02452339cc16}{get\+Effect}} () const
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_a93a8c7391ee4427819814712db09012d}{set\+Mode}} ()
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_a9257a41fd70a1d3dfa25e75bd5c8d7b8}{get\+Mode}} () const
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_afafcefa79080f931ab2b139196bdd28f}{get\+Num\+Pixels}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve number of pixels being controller. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_adfbf310d03f8669ee536a1507c414c34}{set\+Pixel\+Buffers}} (uint32\+\_\+t \texorpdfstring{$\ast$}{*}raw\+Buffer, uint32\+\_\+t \texorpdfstring{$\ast$}{*}fx\+Buffer)
+\begin{DoxyCompactList}\small\item\em Set raw\+Buffer and fx\+Buffer after construction. \end{DoxyCompactList}\item 
+s \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_a0cf39df171c790036674e9c1c5d80ab2}{WS28xx\+Strip}} (uint16\+\_\+t num\+Pixels)
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_abe1aff3c7a9b89ac2915babcff3ca677}{WS28xx\+Strip}} (uint16\+\_\+t num\+Pixels, uint32\+\_\+t \texorpdfstring{$\ast$}{*}raw\+Buffer, uint32\+\_\+t \texorpdfstring{$\ast$}{*}fx\+Buffer)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Strip\+Type = WS2815\+Strip\+Type$>$\newline
+class JLED\+::\+WS28xx\+Strip$<$ Strip\+Type $>$}
+Basic control class for an LED strip. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Strip\+Type} & Strip characteristics (must be derived from JLED\+::\+Strip\+Type) \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00030}{30}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_j_l_e_d_1_1_w_s28xx_strip_a0cf39df171c790036674e9c1c5d80ab2}\label{class_j_l_e_d_1_1_w_s28xx_strip_a0cf39df171c790036674e9c1c5d80ab2} 
+\index{JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}!WS28xxStrip@{WS28xxStrip}}
+\index{WS28xxStrip@{WS28xxStrip}!JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}}
+\doxysubsubsection{\texorpdfstring{WS28xxStrip()}{WS28xxStrip()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+WS28xx\+Strip (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{num\+Pixels }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00104}{104}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_w_s28xx_strip_abe1aff3c7a9b89ac2915babcff3ca677}\label{class_j_l_e_d_1_1_w_s28xx_strip_abe1aff3c7a9b89ac2915babcff3ca677} 
+\index{JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}!WS28xxStrip@{WS28xxStrip}}
+\index{WS28xxStrip@{WS28xxStrip}!JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}}
+\doxysubsubsection{\texorpdfstring{WS28xxStrip()}{WS28xxStrip()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+WS28xx\+Strip (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{num\+Pixels,  }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{raw\+Buffer,  }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{fx\+Buffer }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_j_l_e_d_1_1_w_s28xx_strip_ab556122b2ea726b12d90c939640e4ac4}\label{class_j_l_e_d_1_1_w_s28xx_strip_ab556122b2ea726b12d90c939640e4ac4} 
+\index{JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}!getBrightness@{getBrightness}}
+\index{getBrightness@{getBrightness}!JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}}
+\doxysubsubsection{\texorpdfstring{getBrightness()}{getBrightness()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+uint8\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::get\+Brightness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieve global strip brightness. 
+
+\begin{DoxyReturn}{Returns}
+0 = off, 255 = max brightness 
+\end{DoxyReturn}
+\Hypertarget{class_j_l_e_d_1_1_w_s28xx_strip_a552aba68e7ee495ee00e02452339cc16}\label{class_j_l_e_d_1_1_w_s28xx_strip_a552aba68e7ee495ee00e02452339cc16} 
+\index{JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}!getEffect@{getEffect}}
+\index{getEffect@{getEffect}!JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}}
+\doxysubsubsection{\texorpdfstring{getEffect()}{getEffect()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::get\+Effect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_j_l_e_d_1_1_w_s28xx_strip_a9257a41fd70a1d3dfa25e75bd5c8d7b8}\label{class_j_l_e_d_1_1_w_s28xx_strip_a9257a41fd70a1d3dfa25e75bd5c8d7b8} 
+\index{JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}!getMode@{getMode}}
+\index{getMode@{getMode}!JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}}
+\doxysubsubsection{\texorpdfstring{getMode()}{getMode()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::get\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_j_l_e_d_1_1_w_s28xx_strip_afafcefa79080f931ab2b139196bdd28f}\label{class_j_l_e_d_1_1_w_s28xx_strip_afafcefa79080f931ab2b139196bdd28f} 
+\index{JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}!getNumPixels@{getNumPixels}}
+\index{getNumPixels@{getNumPixels}!JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}}
+\doxysubsubsection{\texorpdfstring{getNumPixels()}{getNumPixels()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type $>$ \\
+uint16\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::get\+Num\+Pixels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve number of pixels being controller. 
+
+\begin{DoxyReturn}{Returns}
+number of pixels being controller 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00099}{99}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_w_s28xx_strip_ae20cf69fe0be495d74166906e3f74e0e}\label{class_j_l_e_d_1_1_w_s28xx_strip_ae20cf69fe0be495d74166906e3f74e0e} 
+\index{JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}!getPower@{getPower}}
+\index{getPower@{getPower}!JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}}
+\doxysubsubsection{\texorpdfstring{getPower()}{getPower()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+bool \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::get\+Power (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieve power state. 
+
+\begin{DoxyReturn}{Returns}
+true = on, false = off 
+\end{DoxyReturn}
+\Hypertarget{class_j_l_e_d_1_1_w_s28xx_strip_a797933819fc1af8c3c84e4390a649109}\label{class_j_l_e_d_1_1_w_s28xx_strip_a797933819fc1af8c3c84e4390a649109} 
+\index{JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+uint32\+\_\+t \& \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+\Hypertarget{class_j_l_e_d_1_1_w_s28xx_strip_af475a92610d2305431f492b71728d1d9}\label{class_j_l_e_d_1_1_w_s28xx_strip_af475a92610d2305431f492b71728d1d9} 
+\index{JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+const uint32\+\_\+t \& \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{index }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_j_l_e_d_1_1_w_s28xx_strip_abd2cbba3caec98c3adf7554d55d828db}\label{class_j_l_e_d_1_1_w_s28xx_strip_abd2cbba3caec98c3adf7554d55d828db} 
+\index{JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}!setAll@{setAll}}
+\index{setAll@{setAll}!JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}}
+\doxysubsubsection{\texorpdfstring{setAll()}{setAll()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::set\+All (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Set entire strip to color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & 0x\+WWRRGGBB \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_j_l_e_d_1_1_w_s28xx_strip_a77686c687fcf6b3a6d16908cf5237bc9}\label{class_j_l_e_d_1_1_w_s28xx_strip_a77686c687fcf6b3a6d16908cf5237bc9} 
+\index{JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}!setBrightness@{setBrightness}}
+\index{setBrightness@{setBrightness}!JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}}
+\doxysubsubsection{\texorpdfstring{setBrightness()}{setBrightness()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::set\+Brightness (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{brightness }\end{DoxyParamCaption})}
+
+
+
+Set global strip brightness scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em brightness} & 0 = off, 255 = max brightness \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_j_l_e_d_1_1_w_s28xx_strip_a8fc438d50bbb7857328da22aabe08448}\label{class_j_l_e_d_1_1_w_s28xx_strip_a8fc438d50bbb7857328da22aabe08448} 
+\index{JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}!setEffect@{setEffect}}
+\index{setEffect@{setEffect}!JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}}
+\doxysubsubsection{\texorpdfstring{setEffect()}{setEffect()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::set\+Effect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_j_l_e_d_1_1_w_s28xx_strip_a93a8c7391ee4427819814712db09012d}\label{class_j_l_e_d_1_1_w_s28xx_strip_a93a8c7391ee4427819814712db09012d} 
+\index{JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}!setMode@{setMode}}
+\index{setMode@{setMode}!JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}}
+\doxysubsubsection{\texorpdfstring{setMode()}{setMode()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::set\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_j_l_e_d_1_1_w_s28xx_strip_adfbf310d03f8669ee536a1507c414c34}\label{class_j_l_e_d_1_1_w_s28xx_strip_adfbf310d03f8669ee536a1507c414c34} 
+\index{JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}!setPixelBuffers@{setPixelBuffers}}
+\index{setPixelBuffers@{setPixelBuffers}!JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}}
+\doxysubsubsection{\texorpdfstring{setPixelBuffers()}{setPixelBuffers()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::set\+Pixel\+Buffers (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{raw\+Buffer,  }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{fx\+Buffer }\end{DoxyParamCaption})}
+
+
+
+Set raw\+Buffer and fx\+Buffer after construction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+Buffer} & array of raw color data \\
+\hline
+{\em fx\+Buffer} & array of color data with brightness and other effects applied \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_j_l_e_d_1_1_w_s28xx_strip_a592fb7548a3f629fa8acf688eb6f9aec}\label{class_j_l_e_d_1_1_w_s28xx_strip_a592fb7548a3f629fa8acf688eb6f9aec} 
+\index{JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}!setPower@{setPower}}
+\index{setPower@{setPower}!JLED::WS28xxStrip$<$ StripType $>$@{JLED::WS28xxStrip$<$ StripType $>$}}
+\doxysubsubsection{\texorpdfstring{setPower()}{setPower()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::set\+Power (\begin{DoxyParamCaption}\item[{bool}]{power\+On }\end{DoxyParamCaption})}
+
+
+
+Update power state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em power\+On} & true = on, false = off \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+JLib/\+JLED/include/\mbox{\hyperlink{_w_s28xx_strip_8hpp}{WS28xx\+Strip.\+hpp}}\end{DoxyCompactItemize}

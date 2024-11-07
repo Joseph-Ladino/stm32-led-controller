@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_9fc67812253a94405d4ea53f5861f347" kind="dir">
+    <compoundname>JLib/JMisc/src</compoundname>
+    <innerfile refid="_countdown_timer_8cpp">CountdownTimer.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="JLib/JMisc/src/"/>
+  </compounddef>
+</doxygen>

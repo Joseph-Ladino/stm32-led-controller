@@ -1,0 +1,277 @@
+\doxysection{JETHERNET\+::W5500\+HC Class Reference}
+\hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c}{}\label{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c}\index{JETHERNET::W5500HC@{JETHERNET::W5500HC}}
+
+
+{\ttfamily \#include $<$W5500\+HC.\+hpp$>$}
+
+Inheritance diagram for JETHERNET\+::W5500\+HC\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_aacca281855fcad880940cd893c52ca8d}{set\+Config}} (\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config}{Net\+Config}} \&net\+Config) override
+\item 
+\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config}{Net\+Config}} \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a64c78f800ddded81d687e0689d97d765}{get\+Config}} () override
+\item 
+void \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_aa45237fe2b5d878be315a8fd3420e864}{ms\+Tick}} () override
+\item 
+bool \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a7832805e05a042f25c71b1f8cbc0109f}{enable\+DHCP}} (uint16\+\_\+t timeout\+Ms) override
+\item 
+bool \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a3e0c3dfaf31ead59c516baa72570cfd6}{enable\+DNS}} (\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}} dns=0) override
+\item 
+\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}} \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_ade44d55a425f5c775db9e12b9c37383b}{domain\+To\+IP}} (const char \texorpdfstring{$\ast$}{*}domain, uint16\+\_\+t timeout\+Ms) override
+\item 
+bool \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a8d3fb687280b9f4e521280d7a977260c}{phy\+Link\+Status}} () override
+\item 
+bool \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a005dc035acbb966e4de3734c27118f33}{wait\+For\+Link}} (uint16\+\_\+t timeout\+Ms) override
+\item 
+void \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_aa94ada9cbdc61fda72a8d8f081501b6d}{soft\+Reset}} ()
+\item 
+bool \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a7c8f7dead6c7c61f8ac1c8d784ff3a07}{init}} (void \texorpdfstring{$\ast$}{*}) override
+\item 
+\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket}{W5500\+Socket}} \& \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a2c573a9eda6ad102424c056f7ed9c270}{get\+Free\+Socket}} ()
+\item 
+\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_ac0da98304ab49a78c4291b7673fc87ce}{\texorpdfstring{$\sim$}{\string~}\+W5500\+HC}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c}{JETHERNET\+::\+Ethernet\+HC}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a5f2760472e72efc27c79d83301c9412e}{\texorpdfstring{$\sim$}{\string~}\+Ethernet\+HC}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a4d4950762a8d89067160c7754a97ce52}{dhcp\+Success}} = false
+\item 
+bool \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_ad159ed22180c186a3947a5a9f5d1b694}{init\+Success}} = false
+\item 
+bool \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a66330e647066a6f6551165b7d6ce94f4}{phy\+Timeout}} = false
+\item 
+\mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket}{W5500\+Socket}} \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a6922de2cabee2f645173cd2f6fd3ca93}{sockets}} \mbox{[}8\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_w5500_h_c_8hpp_source_l00018}{18}} of file \mbox{\hyperlink{_w5500_h_c_8hpp_source}{W5500\+HC.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_ac0da98304ab49a78c4291b7673fc87ce}\label{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_ac0da98304ab49a78c4291b7673fc87ce} 
+\index{JETHERNET::W5500HC@{JETHERNET::W5500HC}!````~W5500HC@{\texorpdfstring{$\sim$}{\string~}W5500HC}}
+\index{````~W5500HC@{\texorpdfstring{$\sim$}{\string~}W5500HC}!JETHERNET::W5500HC@{JETHERNET::W5500HC}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}W5500HC()}{\string~W5500HC()}}
+{\footnotesize\ttfamily JETHERNET\+::\+W5500\+HC\+::\texorpdfstring{$\sim$}{\string~}\+W5500\+HC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_w5500_h_c_8cpp_source_l00158}{158}} of file \mbox{\hyperlink{_w5500_h_c_8cpp_source}{W5500\+HC.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_ade44d55a425f5c775db9e12b9c37383b}\label{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_ade44d55a425f5c775db9e12b9c37383b} 
+\index{JETHERNET::W5500HC@{JETHERNET::W5500HC}!domainToIP@{domainToIP}}
+\index{domainToIP@{domainToIP}!JETHERNET::W5500HC@{JETHERNET::W5500HC}}
+\doxysubsubsection{\texorpdfstring{domainToIP()}{domainToIP()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}} JETHERNET\+::\+W5500\+HC\+::domain\+To\+IP (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{domain,  }\item[{uint16\+\_\+t}]{timeout\+Ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a6036a12d452cc14f70357bfdba6e2a68}{JETHERNET\+::\+Ethernet\+HC}}.
+
+
+
+Definition at line \mbox{\hyperlink{_w5500_h_c_8cpp_source_l00088}{88}} of file \mbox{\hyperlink{_w5500_h_c_8cpp_source}{W5500\+HC.\+cpp}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a7832805e05a042f25c71b1f8cbc0109f}\label{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a7832805e05a042f25c71b1f8cbc0109f} 
+\index{JETHERNET::W5500HC@{JETHERNET::W5500HC}!enableDHCP@{enableDHCP}}
+\index{enableDHCP@{enableDHCP}!JETHERNET::W5500HC@{JETHERNET::W5500HC}}
+\doxysubsubsection{\texorpdfstring{enableDHCP()}{enableDHCP()}}
+{\footnotesize\ttfamily bool JETHERNET\+::\+W5500\+HC\+::enable\+DHCP (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{timeout\+Ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a92d9cc9e5308c2c635d6e97947140149}{JETHERNET\+::\+Ethernet\+HC}}.
+
+
+
+Definition at line \mbox{\hyperlink{_w5500_h_c_8cpp_source_l00058}{58}} of file \mbox{\hyperlink{_w5500_h_c_8cpp_source}{W5500\+HC.\+cpp}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a3e0c3dfaf31ead59c516baa72570cfd6}\label{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a3e0c3dfaf31ead59c516baa72570cfd6} 
+\index{JETHERNET::W5500HC@{JETHERNET::W5500HC}!enableDNS@{enableDNS}}
+\index{enableDNS@{enableDNS}!JETHERNET::W5500HC@{JETHERNET::W5500HC}}
+\doxysubsubsection{\texorpdfstring{enableDNS()}{enableDNS()}}
+{\footnotesize\ttfamily bool JETHERNET\+::\+W5500\+HC\+::enable\+DNS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p}{Net\+IP}}}]{dns = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a40a80ea845fb029ca403eb106ed3e3d0}{JETHERNET\+::\+Ethernet\+HC}}.
+
+
+
+Definition at line \mbox{\hyperlink{_w5500_h_c_8cpp_source_l00077}{77}} of file \mbox{\hyperlink{_w5500_h_c_8cpp_source}{W5500\+HC.\+cpp}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a64c78f800ddded81d687e0689d97d765}\label{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a64c78f800ddded81d687e0689d97d765} 
+\index{JETHERNET::W5500HC@{JETHERNET::W5500HC}!getConfig@{getConfig}}
+\index{getConfig@{getConfig}!JETHERNET::W5500HC@{JETHERNET::W5500HC}}
+\doxysubsubsection{\texorpdfstring{getConfig()}{getConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config}{Net\+Config}} JETHERNET\+::\+W5500\+HC\+::get\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a06b567bffaf6eb147859edf317d4b9bb}{JETHERNET\+::\+Ethernet\+HC}}.
+
+
+
+Definition at line \mbox{\hyperlink{_w5500_h_c_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{_w5500_h_c_8cpp_source}{W5500\+HC.\+cpp}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a2c573a9eda6ad102424c056f7ed9c270}\label{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a2c573a9eda6ad102424c056f7ed9c270} 
+\index{JETHERNET::W5500HC@{JETHERNET::W5500HC}!getFreeSocket@{getFreeSocket}}
+\index{getFreeSocket@{getFreeSocket}!JETHERNET::W5500HC@{JETHERNET::W5500HC}}
+\doxysubsubsection{\texorpdfstring{getFreeSocket()}{getFreeSocket()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket}{W5500\+Socket}} \& JETHERNET\+::\+W5500\+HC\+::get\+Free\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a58730e887e50ba72c7356657179ae7b9}{JETHERNET\+::\+Ethernet\+HC}}.
+
+
+
+Definition at line \mbox{\hyperlink{_w5500_h_c_8cpp_source_l00135}{135}} of file \mbox{\hyperlink{_w5500_h_c_8cpp_source}{W5500\+HC.\+cpp}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a7c8f7dead6c7c61f8ac1c8d784ff3a07}\label{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a7c8f7dead6c7c61f8ac1c8d784ff3a07} 
+\index{JETHERNET::W5500HC@{JETHERNET::W5500HC}!init@{init}}
+\index{init@{init}!JETHERNET::W5500HC@{JETHERNET::W5500HC}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool JETHERNET\+::\+W5500\+HC\+::init (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a6e380cb6bb273af7aaac85f1df1de3ac}{JETHERNET\+::\+Ethernet\+HC}}.
+
+
+
+Definition at line \mbox{\hyperlink{_w5500_h_c_8cpp_source_l00112}{112}} of file \mbox{\hyperlink{_w5500_h_c_8cpp_source}{W5500\+HC.\+cpp}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_aa45237fe2b5d878be315a8fd3420e864}\label{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_aa45237fe2b5d878be315a8fd3420e864} 
+\index{JETHERNET::W5500HC@{JETHERNET::W5500HC}!msTick@{msTick}}
+\index{msTick@{msTick}!JETHERNET::W5500HC@{JETHERNET::W5500HC}}
+\doxysubsubsection{\texorpdfstring{msTick()}{msTick()}}
+{\footnotesize\ttfamily void JETHERNET\+::\+W5500\+HC\+::ms\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a816685c872acf0ef6864633c90488020}{JETHERNET\+::\+Ethernet\+HC}}.
+
+
+
+Definition at line \mbox{\hyperlink{_w5500_h_c_8cpp_source_l00147}{147}} of file \mbox{\hyperlink{_w5500_h_c_8cpp_source}{W5500\+HC.\+cpp}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a8d3fb687280b9f4e521280d7a977260c}\label{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a8d3fb687280b9f4e521280d7a977260c} 
+\index{JETHERNET::W5500HC@{JETHERNET::W5500HC}!phyLinkStatus@{phyLinkStatus}}
+\index{phyLinkStatus@{phyLinkStatus}!JETHERNET::W5500HC@{JETHERNET::W5500HC}}
+\doxysubsubsection{\texorpdfstring{phyLinkStatus()}{phyLinkStatus()}}
+{\footnotesize\ttfamily bool JETHERNET\+::\+W5500\+HC\+::phy\+Link\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_aec53d829385f6ee0d0296af3943ffe4a}{JETHERNET\+::\+Ethernet\+HC}}.
+
+
+
+Definition at line \mbox{\hyperlink{_w5500_h_c_8cpp_source_l00047}{47}} of file \mbox{\hyperlink{_w5500_h_c_8cpp_source}{W5500\+HC.\+cpp}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_aacca281855fcad880940cd893c52ca8d}\label{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_aacca281855fcad880940cd893c52ca8d} 
+\index{JETHERNET::W5500HC@{JETHERNET::W5500HC}!setConfig@{setConfig}}
+\index{setConfig@{setConfig}!JETHERNET::W5500HC@{JETHERNET::W5500HC}}
+\doxysubsubsection{\texorpdfstring{setConfig()}{setConfig()}}
+{\footnotesize\ttfamily void JETHERNET\+::\+W5500\+HC\+::set\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_e_t_h_e_r_n_e_t_1_1_net_config}{Net\+Config}} \&}]{net\+Config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a869154c83a1821b0738e13ae3f0d961f}{JETHERNET\+::\+Ethernet\+HC}}.
+
+
+
+Definition at line \mbox{\hyperlink{_w5500_h_c_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{_w5500_h_c_8cpp_source}{W5500\+HC.\+cpp}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_aa94ada9cbdc61fda72a8d8f081501b6d}\label{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_aa94ada9cbdc61fda72a8d8f081501b6d} 
+\index{JETHERNET::W5500HC@{JETHERNET::W5500HC}!softReset@{softReset}}
+\index{softReset@{softReset}!JETHERNET::W5500HC@{JETHERNET::W5500HC}}
+\doxysubsubsection{\texorpdfstring{softReset()}{softReset()}}
+{\footnotesize\ttfamily void JETHERNET\+::\+W5500\+HC\+::soft\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_w5500_h_c_8cpp_source_l00100}{100}} of file \mbox{\hyperlink{_w5500_h_c_8cpp_source}{W5500\+HC.\+cpp}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a005dc035acbb966e4de3734c27118f33}\label{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a005dc035acbb966e4de3734c27118f33} 
+\index{JETHERNET::W5500HC@{JETHERNET::W5500HC}!waitForLink@{waitForLink}}
+\index{waitForLink@{waitForLink}!JETHERNET::W5500HC@{JETHERNET::W5500HC}}
+\doxysubsubsection{\texorpdfstring{waitForLink()}{waitForLink()}}
+{\footnotesize\ttfamily bool JETHERNET\+::\+W5500\+HC\+::wait\+For\+Link (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{timeout\+Ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c_a1e547d7e6984e2c800d7fecf0260d046}{JETHERNET\+::\+Ethernet\+HC}}.
+
+
+
+Definition at line \mbox{\hyperlink{_w5500_h_c_8cpp_source_l00127}{127}} of file \mbox{\hyperlink{_w5500_h_c_8cpp_source}{W5500\+HC.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a4d4950762a8d89067160c7754a97ce52}\label{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a4d4950762a8d89067160c7754a97ce52} 
+\index{JETHERNET::W5500HC@{JETHERNET::W5500HC}!dhcpSuccess@{dhcpSuccess}}
+\index{dhcpSuccess@{dhcpSuccess}!JETHERNET::W5500HC@{JETHERNET::W5500HC}}
+\doxysubsubsection{\texorpdfstring{dhcpSuccess}{dhcpSuccess}}
+{\footnotesize\ttfamily bool JETHERNET\+::\+W5500\+HC\+::dhcp\+Success = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_w5500_h_c_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{_w5500_h_c_8hpp_source}{W5500\+HC.\+hpp}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_ad159ed22180c186a3947a5a9f5d1b694}\label{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_ad159ed22180c186a3947a5a9f5d1b694} 
+\index{JETHERNET::W5500HC@{JETHERNET::W5500HC}!initSuccess@{initSuccess}}
+\index{initSuccess@{initSuccess}!JETHERNET::W5500HC@{JETHERNET::W5500HC}}
+\doxysubsubsection{\texorpdfstring{initSuccess}{initSuccess}}
+{\footnotesize\ttfamily bool JETHERNET\+::\+W5500\+HC\+::init\+Success = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_w5500_h_c_8hpp_source_l00021}{21}} of file \mbox{\hyperlink{_w5500_h_c_8hpp_source}{W5500\+HC.\+hpp}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a66330e647066a6f6551165b7d6ce94f4}\label{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a66330e647066a6f6551165b7d6ce94f4} 
+\index{JETHERNET::W5500HC@{JETHERNET::W5500HC}!phyTimeout@{phyTimeout}}
+\index{phyTimeout@{phyTimeout}!JETHERNET::W5500HC@{JETHERNET::W5500HC}}
+\doxysubsubsection{\texorpdfstring{phyTimeout}{phyTimeout}}
+{\footnotesize\ttfamily bool JETHERNET\+::\+W5500\+HC\+::phy\+Timeout = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_w5500_h_c_8hpp_source_l00022}{22}} of file \mbox{\hyperlink{_w5500_h_c_8hpp_source}{W5500\+HC.\+hpp}}.
+
+\Hypertarget{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a6922de2cabee2f645173cd2f6fd3ca93}\label{class_j_e_t_h_e_r_n_e_t_1_1_w5500_h_c_a6922de2cabee2f645173cd2f6fd3ca93} 
+\index{JETHERNET::W5500HC@{JETHERNET::W5500HC}!sockets@{sockets}}
+\index{sockets@{sockets}!JETHERNET::W5500HC@{JETHERNET::W5500HC}}
+\doxysubsubsection{\texorpdfstring{sockets}{sockets}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_j_e_t_h_e_r_n_e_t_1_1_w5500_socket}{W5500\+Socket}} JETHERNET\+::\+W5500\+HC\+::sockets\mbox{[}8\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_w5500_h_c_8hpp_source_l00024}{24}} of file \mbox{\hyperlink{_w5500_h_c_8hpp_source}{W5500\+HC.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Core/\+JPort/include/\mbox{\hyperlink{_w5500_h_c_8hpp}{W5500\+HC.\+hpp}}\item 
+Core/\+JPort/src/\mbox{\hyperlink{_w5500_h_c_8cpp}{W5500\+HC.\+cpp}}\end{DoxyCompactItemize}

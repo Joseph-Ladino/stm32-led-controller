@@ -1,0 +1,140 @@
+.TH "JMQTT::PAHOClient" 3 "Version 0.1.1" "CSTM32 Led Controller" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JMQTT::PAHOClient
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBJMQTT::Client\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBbool\fP \fBpublish\fP (\fBMessage\fP \fBmsg\fP)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBsubscribe\fP (string_view topic, QOS qos=QOS::QOS0)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBupdate\fP (\fBuint16_t\fP \fBtimeout\fP)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBconnect\fP (\fBJETHERNET::NetSock\fP &sock, \fBconst\fP \fBClientConfig\fP config)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBreconnect\fP ()"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBreconnect\fP (\fBJETHERNET::NetSock\fP &sock)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBdisconnect\fP ()"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBisConnected\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetMessageCallback\fP (MessageCB \fBfunc\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetConnectCallback\fP (ConnectCB \fBfunc\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBpahoMessageReceived\fP (MQTT::MessageData &\fBdata\fP)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+Public Types inherited from \fBJMQTT::Client\fP
+.in +1c
+.ti -1c
+.RI "\fBusing\fP \fBConnectCB\fP = std::function<\fBvoid\fP(\fBClient\fP&)>"
+.br
+.ti -1c
+.RI "\fBusing\fP \fBMessageCB\fP = std::function<\fBvoid\fP(\fBClient\fP&, \fBMessage\fP)>"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB43\fP of file \fBPAHOClient\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JMQTT::PAHOClient::PAHOClient ()"
+
+.PP
+Definition at line \fB95\fP of file \fBPAHOClient\&.cpp\fP\&.
+.SS "JMQTT::PAHOClient::~PAHOClient ()"
+
+.PP
+Definition at line \fB99\fP of file \fBPAHOClient\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBbool\fP JMQTT::PAHOClient::connect (\fBJETHERNET::NetSock\fP & sock, \fBconst\fP \fBClientConfig\fP config)\fR [virtual]\fP"
+
+.PP
+Implements \fBJMQTT::Client\fP\&.
+.PP
+Definition at line \fB29\fP of file \fBPAHOClient\&.cpp\fP\&.
+.SS "\fBvoid\fP JMQTT::PAHOClient::disconnect ()\fR [virtual]\fP"
+
+.PP
+Implements \fBJMQTT::Client\fP\&.
+.PP
+Definition at line \fB63\fP of file \fBPAHOClient\&.cpp\fP\&.
+.SS "\fBbool\fP JMQTT::PAHOClient::isConnected ()\fR [virtual]\fP"
+
+.PP
+Implements \fBJMQTT::Client\fP\&.
+.PP
+Definition at line \fB91\fP of file \fBPAHOClient\&.cpp\fP\&.
+.SS "\fBvoid\fP JMQTT::PAHOClient::pahoMessageReceived (MQTT::MessageData & data)"
+
+.PP
+Definition at line \fB110\fP of file \fBPAHOClient\&.cpp\fP\&.
+.SS "\fBbool\fP JMQTT::PAHOClient::publish (\fBMessage\fP msg)\fR [virtual]\fP"
+
+.PP
+Implements \fBJMQTT::Client\fP\&.
+.PP
+Definition at line \fB15\fP of file \fBPAHOClient\&.cpp\fP\&.
+.SS "\fBbool\fP JMQTT::PAHOClient::reconnect ()\fR [virtual]\fP"
+
+.PP
+Implements \fBJMQTT::Client\fP\&.
+.PP
+Definition at line \fB69\fP of file \fBPAHOClient\&.cpp\fP\&.
+.SS "\fBbool\fP JMQTT::PAHOClient::reconnect (\fBJETHERNET::NetSock\fP & sock)"
+
+.PP
+Definition at line \fB73\fP of file \fBPAHOClient\&.cpp\fP\&.
+.SS "\fBvoid\fP JMQTT::PAHOClient::setConnectCallback (PAHOClient::ConnectCB func)\fR [virtual]\fP"
+
+.PP
+Implements \fBJMQTT::Client\fP\&.
+.PP
+Definition at line \fB106\fP of file \fBPAHOClient\&.cpp\fP\&.
+.SS "\fBvoid\fP JMQTT::PAHOClient::setMessageCallback (PAHOClient::MessageCB func)\fR [virtual]\fP"
+
+.PP
+Implements \fBJMQTT::Client\fP\&.
+.PP
+Definition at line \fB102\fP of file \fBPAHOClient\&.cpp\fP\&.
+.SS "\fBbool\fP JMQTT::PAHOClient::subscribe (string_view topic, QOS qos = \fRQOS::QOS0\fP)\fR [virtual]\fP"
+
+.PP
+Implements \fBJMQTT::Client\fP\&.
+.PP
+Definition at line \fB22\fP of file \fBPAHOClient\&.cpp\fP\&.
+.SS "\fBbool\fP JMQTT::PAHOClient::update (\fBuint16_t\fP timeout)\fR [virtual]\fP"
+
+.PP
+Implements \fBJMQTT::Client\fP\&.
+.PP
+Definition at line \fB79\fP of file \fBPAHOClient\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSTM32 Led Controller from the source code\&.

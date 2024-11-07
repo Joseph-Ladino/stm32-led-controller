@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_de5be4730c0b17ffbde58f2b18780e9a" kind="dir">
+    <compoundname>JLib</compoundname>
+    <innerdir refid="dir_05830cfb6e7906158397cbaffc637a8b">JLib/JEthernet</innerdir>
+    <innerdir refid="dir_3b6c162ae2489bac649bcc7da4759da0">JLib/JLED</innerdir>
+    <innerdir refid="dir_f71ce90c3b32c022ba4c95c8cd55af10">JLib/JMisc</innerdir>
+    <innerdir refid="dir_02ba1ab2af44d6b16119dc7dfd8fc61c">JLib/JMQTT</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="JLib/"/>
+  </compounddef>
+</doxygen>

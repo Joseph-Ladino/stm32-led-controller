@@ -1,0 +1,174 @@
+\doxysection{Hass\+Led\+Controller\texorpdfstring{$<$}{<} \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_hass_led_controller}{}\label{class_hass_led_controller}\index{HassLedController$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$@{HassLedController$<$ \_NUM\_PIXELS, \_NUM\_PIXELS\_PER\_DMA, \_DMA\_ARR, DMA\_BUF\_TYPE $>$}}
+
+
+{\ttfamily \#include $<$Hass\+Led\+Controller.\+hpp$>$}
+
+Inheritance diagram for Hass\+Led\+Controller\texorpdfstring{$<$}{<} \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.931034cm]{class_hass_led_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8}{DMAStatus}} \{ \newline
+\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a914536ca583c5228125514d649a8d5bb}{IN\+\_\+\+PROGRESS}}
+, \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a088825b71521331c0e05f69604da6d43}{RESET\+\_\+\+STARTED}}
+, \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a8578f00ed394d0bb648d0ac02fa61550}{RESET\+\_\+\+IN\+\_\+\+PROGRESS}}
+, \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8acc41e06765a11e364498b1fad086f5c1}{RESET\+\_\+\+COMPLETE}}
+, \newline
+\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a04f6af3d541f573c3a3240d40284d26e}{DONE}}
+ \}
+\item 
+using \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_ab099719a86e8ba4067d748df142197cd}{LEDBase}} = \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip}{WS2815\+Strip}}$<$\+\_\+\+NUM\+\_\+\+PIXELS$>$
+\item 
+using \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a45d15148fcf5332bab87322eb57dbc74}{DMA\+\_\+\+START\+\_\+\+CB}} = std\+::function$<$void(DMA\+\_\+\+BUF\+\_\+\+TYPE\texorpdfstring{$\ast$}{*}, uint16\+\_\+t)$>$
+\item 
+using \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_aaa2d64e511ec5831084a9136e11f19a3}{DMA\+\_\+\+STOP\+\_\+\+CB}} = std\+::function$<$void()$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip}{JLED\+::\+WS2815\+Strip$<$ \+\_\+\+NUM\+\_\+\+PIXELS $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3}{TIMING\+\_\+\+NS}} \{ \newline
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3ab67332268087e770e65874529b982c8d}{ZERO\+\_\+L}} = 650
+, \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3afced65582f62b8641ca05b647a941841}{ZERO\+\_\+H}} = 350
+, \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3adad4fc4fc683477cdd8d32c9c0ff92fc}{ONE\+\_\+L}} = 350
+, \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3a585d70834f7d9ea7849291b1e6b08dc7}{ONE\+\_\+H}} = 700
+, \newline
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3afaf911e365324452c4ff0e2dc3582daf}{RES}} = 300000
+, \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3ae406e998431d722ecb7f3090a141948e}{PERIOD}} = 1250
+ \}
+\begin{DoxyCompactList}\small\item\em Timing in nanoseconds for LED strip data transfer. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a562da1adaa9bbd4bfb16eeb18114892c}{physical\+Power\+CBSig}} = void(\texorpdfstring{$\ast$}{*})(bool)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_ad6d6dda3a42e368f621f6bff32164162}{set\+Start\+DMACallback}} (\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a45d15148fcf5332bab87322eb57dbc74}{DMA\+\_\+\+START\+\_\+\+CB}} cb)
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a0ed4f56abecd478e055b8f92f0633461}{set\+Stop\+DMACallback}} (\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_aaa2d64e511ec5831084a9136e11f19a3}{DMA\+\_\+\+STOP\+\_\+\+CB}} cb)
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a31e2a0532c5bd78c66cacf6f16b148d7}{display}} ()
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_aac518bad0836dacff67af80090a048e1}{byte\+To\+DMATiming}} (uint8\+\_\+t byte, DMA\+\_\+\+BUF\+\_\+\+TYPE \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}out\+Ptr)
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a6dad77675b8f5cab458df7a4b3f8a118}{on\+DMAInterrupt}} (bool half\+Complete\+Interrupt)
+\item 
+bool \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_afca5f3b20e03ffde6d8aca4544d93292}{display\+In\+Progress}} ()
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a22d2e522f53d4fe6e764ae973601021f}{DMAStrip}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip}{JLED\+::\+WS2815\+Strip$<$ \+\_\+\+NUM\+\_\+\+PIXELS $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \& \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a23d4d479f78091c2536dc41d83bcbae2}{operator\mbox{[}$\,$\mbox{]}}} (uint16\+\_\+t index)
+\item 
+const uint32\+\_\+t \& \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_af1590132f4a7f1d8bfc29983e9dfcffb}{operator\mbox{[}$\,$\mbox{]}}} (uint16\+\_\+t index) const
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a40c109a054754a5539b9aa182836442f}{set}} (uint16\+\_\+t index, \mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \&col)
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_affd1f77b4ef919878b33b0f23c29dcfc}{at}} (uint16\+\_\+t index)
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_ae0fb1071573875e02ea8444ed1efba4a}{set\+All}} (\mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \&col)
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_af8c61899e441c5585289bddde7a9ccf3}{set\+All}} (uint32\+\_\+t col)
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a5cf2a5dacc184d5c0c57769d8c241daf}{set\+Brightness}} (uint8\+\_\+t brightness)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a1e1edf8c40bf2291f7f614170d164fe1}{get\+Brightness}} ()
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a41d4a8f69689c52bf48d9b6a4b053109}{set\+Physical\+Power\+CB}} (\mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a562da1adaa9bbd4bfb16eeb18114892c}{physical\+Power\+CBSig}} cb)
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_ac7348d0115d4b462bf2f92b419347700}{set\+Power}} (bool power\+On)
+\item 
+bool \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a581e2b88056726bfca11c7732c5372f5}{get\+Power}} ()
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_ad9604999d5b182973774ef3eb0c752b0}{WS2815\+Strip}} ()
+\item 
+const \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s2815_strip_1_1iterator}{iterator}} \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a62dcf521513943b122268b1ed7cfdfc3}{begin}} ()
+\item 
+const \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s2815_strip_1_1iterator}{iterator}} \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_ad1876db979e85d3fdb3d4689cafee1a3}{end}} ()
+\item 
+const \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s2815_strip_1_1iterator}{iterator}} \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a821313148b31ae3bad157ea7dcd4ed57}{beginT}} ()
+\item 
+const \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s2815_strip_1_1iterator}{iterator}} \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a4129b0c6eb9859d62d195a570be9f577}{endT}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver}{JMQTT\+::\+MQTTMessage\+Receiver}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{void}} \mbox{\hyperlink{struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver_a46fdd685ce6d6b0f8c64eee2214c9257}{signal}} (\mbox{\hyperlink{struct_j_m_q_t_t_1_1_on_message_data}{On\+Message\+Data}} data) \mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{final}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_signal_listener}{Signal\+Listener$<$ void, On\+Message\+Data $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_signal_listener_a9e60c4e34c3072699a58599dac85d546}{signal}} (On\+Message\+Data)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+DMA\+\_\+\+BUF\+\_\+\+TYPE \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_ada349e9eec080906c5254db2fbdb2795}{dma\+Buffer}}
+\item 
+LEDBase\+::iterator \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a19aa27c8fb73acc5aad1f69beaff1d75}{dma\+Led\+IT}}
+\item 
+LEDBase\+::iterator \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a29da35eda03cac83f07bc1d9299f1c95}{dma\+Led\+End\+IT}}
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8}{DMAStatus}} \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_af8e50b51e5c8912f9a937af4cdbd8284}{dma\+Transfer\+Status}} = \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a3b2eccb9fe4566dde83b0d3200eb0fa8a04f6af3d541f573c3a3240d40284d26e}{DONE}}
+\item 
+\mbox{\hyperlink{struct_countdown_timer}{Countdown\+Timer}} \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_ae5d6c84e7a826a7024bbb9ae48e21b79}{frame\+Delay}} \{1\}
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a45d15148fcf5332bab87322eb57dbc74}{DMA\+\_\+\+START\+\_\+\+CB}} \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_af3c7a933ff8266ff8a6487c359fa732b}{dma\+Start}}
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_aaa2d64e511ec5831084a9136e11f19a3}{DMA\+\_\+\+STOP\+\_\+\+CB}} \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a62a472612fd3838c8ca7db59eddd45cc}{dma\+Stop}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip}{JLED\+::\+WS2815\+Strip$<$ \+\_\+\+NUM\+\_\+\+PIXELS $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a5d65329ef1c35d1af1c7e9298e21de24}{raw}} \mbox{[}\mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a92973a42758beb56a6d9173fcf3bbd38}{NUM\+\_\+\+PIXELS}}\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_af9e2999040a08678f54f238df221ded8}{transformed}} \mbox{[}\mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a92973a42758beb56a6d9173fcf3bbd38}{NUM\+\_\+\+PIXELS}}\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip}{JLED\+::\+DMAStrip$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+static const auto \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_aaa407121f2010e106a2da4cb708ef656}{NUM\+\_\+\+PIXELS}} = LEDBase\+::\+NUM\+\_\+\+PIXELS
+\item 
+static const auto \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a4ead60f1951ccd63b65709e8260050e5}{NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA}} = \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA
+\item 
+static const auto \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a4f5e9cdcabd11e2f51eacf94166fcb74}{HALF\+\_\+\+DMA\+\_\+\+BUF\+\_\+\+LEN}}
+\item 
+static const auto \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a8cded8af6ec247834fb6f1ddd203f507}{FULL\+\_\+\+DMA\+\_\+\+BUF\+\_\+\+LEN}} = \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a4f5e9cdcabd11e2f51eacf94166fcb74}{HALF\+\_\+\+DMA\+\_\+\+BUF\+\_\+\+LEN}} \texorpdfstring{$\ast$}{*} 2
+\item 
+static const auto \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a2a3d04664989907225ca776f13d9648e}{NUM\+\_\+\+ELEMENTS\+\_\+\+PER\+\_\+\+RESET}} = \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3afaf911e365324452c4ff0e2dc3582daf}{LEDBase\+::\+RES}} / \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa56c857b1cb9d6362c0c941b2ad933d3ae406e998431d722ecb7f3090a141948e}{LEDBase\+::\+PERIOD}}
+\item 
+static const auto \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a1ffaf9ced961a7d5d93de15db7a19da8}{DMA\+\_\+\+ARR}} = \+\_\+\+DMA\+\_\+\+ARR
+\item 
+static const uint16\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_a8653913afccccd79a1bb15c062dc1974}{DMA\+\_\+\+BIT\+\_\+\+ONE}}
+\item 
+static const uint16\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_d_m_a_strip_ad72041fa800f79c08e97dd3082565f80}{DMA\+\_\+\+BIT\+\_\+\+ZERO}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip}{JLED\+::\+WS2815\+Strip$<$ \+\_\+\+NUM\+\_\+\+PIXELS $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+static const uint16\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a92973a42758beb56a6d9173fcf3bbd38}{NUM\+\_\+\+PIXELS}} = \+\_\+\+NUM\+\_\+\+PIXELS
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a3dc44ee35310d883f0370e6434d3ad21}{NUM\+\_\+\+BYTES\+\_\+\+PER\+\_\+\+PIXEL}} = 3
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_aa8164695a6895aff89a57c5ba600a5d9}{NUM\+\_\+\+BYTES\+\_\+\+TOTAL}} = \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a92973a42758beb56a6d9173fcf3bbd38}{NUM\+\_\+\+PIXELS}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_j_l_e_d_1_1_w_s2815_strip_a3dc44ee35310d883f0370e6434d3ad21}{NUM\+\_\+\+BYTES\+\_\+\+PER\+\_\+\+PIXEL}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS = 10, uint16\+\_\+t \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA = 5, uint16\+\_\+t \+\_\+\+DMA\+\_\+\+ARR = 79, typename DMA\+\_\+\+BUF\+\_\+\+TYPE = uint32\+\_\+t$>$\newline
+class Hass\+Led\+Controller$<$ \+\_\+\+NUM\+\_\+\+PIXELS, \+\_\+\+NUM\+\_\+\+PIXELS\+\_\+\+PER\+\_\+\+DMA, \+\_\+\+DMA\+\_\+\+ARR, DMA\+\_\+\+BUF\+\_\+\+TYPE $>$}
+
+
+Definition at line \mbox{\hyperlink{_hass_led_controller_8hpp_source_l00024}{24}} of file \mbox{\hyperlink{_hass_led_controller_8hpp_source}{Hass\+Led\+Controller.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core/\+JPort/include/\mbox{\hyperlink{_hass_led_controller_8hpp}{Hass\+Led\+Controller.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,284 @@
+\doxysection{JLED\+::WS28xx\+Strip\texorpdfstring{$<$}{<} Strip\+Type \texorpdfstring{$>$}{>}\+::Iterator Struct Reference}
+\hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator}{}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator}\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+
+
+{\ttfamily \#include $<$WS28xx\+Strip.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_af883bc8c05e9437e5de2e001118022d6}{iterator\+\_\+category}} = std\+::bidirectional\+\_\+iterator\+\_\+tag
+\item 
+using \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a644c90b1d29be4408f233ac5f9519de5}{difference\+\_\+type}} = std\+::ptrdiff\+\_\+t
+\item 
+using \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_ab6a2f32eb6319bdf5923179bd8c52897}{value\+\_\+type}} = uint32\+\_\+t
+\item 
+using \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_ab37a43e6637bfe230a1593a12bf9d087}{pointer}} = uint32\+\_\+t\texorpdfstring{$\ast$}{*}
+\item 
+using \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a13256861d5f5b660d28ad960d1696943}{const\+\_\+ref}} = const uint32\+\_\+t\&
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a5d7654a8f75cb93f6ac502067e056b1a}{operator==}} (\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator}{Iterator}} other) const
+\item 
+bool \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a7fb20f1d1113c01532136c36463f97e3}{operator!=}} (\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator}{Iterator}} other) const
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator}{Iterator}} \& \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_ae991df19f87a75788f41559b6a199859}{operator++}} ()
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator}{Iterator}} \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_ab6edc18ee2e34ed553d814ab64ee3ec3}{operator++}} (int)
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator}{Iterator}} \& \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_aaf0c3df4065ef6afa11b380407d6a6e6}{operator-\/-\/}} ()
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator}{Iterator}} \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a68b607e0908b77b20f11827f2483ba9a}{operator-\/-\/}} (int)
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a13256861d5f5b660d28ad960d1696943}{const\+\_\+ref}} \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a9f5178b4b80726bf9b2294f4869b3b57}{operator\texorpdfstring{$\ast$}{*}}} () const
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator}{Iterator}} \& \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a191218b2394dd39b00065a0f3690b299}{operator=}} (const \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator}{Iterator}} \&other)
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_add46a241a82b18caee686be47a56959f}{Iterator}} ()=default
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a6f6077243a7698926e9cb0c5d302e8e7}{Iterator}} (\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_ab37a43e6637bfe230a1593a12bf9d087}{pointer}} \+\_\+data)
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a3a40d0d68e668554dd1f62101895f114}{Iterator}} (\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_ab37a43e6637bfe230a1593a12bf9d087}{pointer}} \+\_\+data, uint16\+\_\+t \+\_\+index)
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a8fe127d58a90ba105fd4c38095e23be6}{Iterator}} (const \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator}{Iterator}} \&other)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_ab37a43e6637bfe230a1593a12bf9d087}{pointer}} \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a69099a9eaff703519c780bc733c55e00}{data}} = nullptr
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a46b6d56ca5b0cdad10a00e1655e37bba}{index}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Strip\+Type = WS2815\+Strip\+Type$>$\newline
+struct JLED\+::\+WS28xx\+Strip$<$ Strip\+Type $>$\+::\+Iterator}
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00109}{109}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a13256861d5f5b660d28ad960d1696943}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a13256861d5f5b660d28ad960d1696943} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!const\_ref@{const\_ref}}
+\index{const\_ref@{const\_ref}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{const\_ref}{const\_ref}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+using \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::const\+\_\+ref = const uint32\+\_\+t\&}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00114}{114}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a644c90b1d29be4408f233ac5f9519de5}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a644c90b1d29be4408f233ac5f9519de5} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+using \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::difference\+\_\+type = std\+::ptrdiff\+\_\+t}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00111}{111}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_af883bc8c05e9437e5de2e001118022d6}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_af883bc8c05e9437e5de2e001118022d6} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!iterator\_category@{iterator\_category}}
+\index{iterator\_category@{iterator\_category}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{iterator\_category}{iterator\_category}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+using \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::iterator\+\_\+category = std\+::bidirectional\+\_\+iterator\+\_\+tag}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00110}{110}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_ab37a43e6637bfe230a1593a12bf9d087}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_ab37a43e6637bfe230a1593a12bf9d087} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!pointer@{pointer}}
+\index{pointer@{pointer}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+using \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::pointer = uint32\+\_\+t\texorpdfstring{$\ast$}{*}}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00113}{113}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_ab6a2f32eb6319bdf5923179bd8c52897}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_ab6a2f32eb6319bdf5923179bd8c52897} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+using \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::value\+\_\+type = uint32\+\_\+t}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00112}{112}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_add46a241a82b18caee686be47a56959f}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_add46a241a82b18caee686be47a56959f} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a6f6077243a7698926e9cb0c5d302e8e7}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a6f6077243a7698926e9cb0c5d302e8e7} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::\+Iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_ab37a43e6637bfe230a1593a12bf9d087}{pointer}}}]{\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00195}{195}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a3a40d0d68e668554dd1f62101895f114}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a3a40d0d68e668554dd1f62101895f114} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::\+Iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_ab37a43e6637bfe230a1593a12bf9d087}{pointer}}}]{\+\_\+data,  }\item[{uint16\+\_\+t}]{\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00200}{200}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a8fe127d58a90ba105fd4c38095e23be6}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a8fe127d58a90ba105fd4c38095e23be6} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::\+Iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator}{Iterator}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00206}{206}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a7fb20f1d1113c01532136c36463f97e3}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a7fb20f1d1113c01532136c36463f97e3} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+bool \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator}{Iterator}}}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00145}{145}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a9f5178b4b80726bf9b2294f4869b3b57}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a9f5178b4b80726bf9b2294f4869b3b57} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{WS28xx\+Strip}}$<$ Strip\+Type $>$\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a13256861d5f5b660d28ad960d1696943}{\+::\+Iterator\+::const\+\_\+ref}} \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00179}{179}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_ae991df19f87a75788f41559b6a199859}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_ae991df19f87a75788f41559b6a199859} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{WS28xx\+Strip}}$<$ Strip\+Type $>$\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_add46a241a82b18caee686be47a56959f}{\+::\+Iterator}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00151}{151}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_ab6edc18ee2e34ed553d814ab64ee3ec3}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_ab6edc18ee2e34ed553d814ab64ee3ec3} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{WS28xx\+Strip}}$<$ Strip\+Type $>$\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_add46a241a82b18caee686be47a56959f}{\+::\+Iterator}} \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00157}{157}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_aaf0c3df4065ef6afa11b380407d6a6e6}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_aaf0c3df4065ef6afa11b380407d6a6e6} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{WS28xx\+Strip}}$<$ Strip\+Type $>$\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_add46a241a82b18caee686be47a56959f}{\+::\+Iterator}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00165}{165}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a68b607e0908b77b20f11827f2483ba9a}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a68b607e0908b77b20f11827f2483ba9a} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{WS28xx\+Strip}}$<$ Strip\+Type $>$\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_add46a241a82b18caee686be47a56959f}{\+::\+Iterator}} \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00171}{171}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a191218b2394dd39b00065a0f3690b299}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a191218b2394dd39b00065a0f3690b299} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!operator=@{operator=}}
+\index{operator=@{operator=}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{WS28xx\+Strip}}$<$ Strip\+Type $>$\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_add46a241a82b18caee686be47a56959f}{\+::\+Iterator}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator}{Iterator}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00184}{184}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a5d7654a8f75cb93f6ac502067e056b1a}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a5d7654a8f75cb93f6ac502067e056b1a} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+bool \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator}{Iterator}}}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00139}{139}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a69099a9eaff703519c780bc733c55e00}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a69099a9eaff703519c780bc733c55e00} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!data@{data}}
+\index{data@{data}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+\mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_ab37a43e6637bfe230a1593a12bf9d087}{pointer}} \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::data = nullptr}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00116}{116}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a46b6d56ca5b0cdad10a00e1655e37bba}\label{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator_a46b6d56ca5b0cdad10a00e1655e37bba} 
+\index{JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}!index@{index}}
+\index{index@{index}!JLED::WS28xxStrip$<$ StripType $>$::Iterator@{JLED::WS28xxStrip$<$ StripType $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily template$<$typename Strip\+Type  = WS2815\+Strip\+Type$>$ \\
+uint16\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$ Strip\+Type $>$\+::\+Iterator\+::index = 0}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00117}{117}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+JLib/\+JLED/include/\mbox{\hyperlink{_w_s28xx_strip_8hpp}{WS28xx\+Strip.\+hpp}}\end{DoxyCompactItemize}

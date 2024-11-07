@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_58519601c452f60486f278062753da6d" kind="dir">
+    <compoundname>Core/JPort</compoundname>
+    <innerdir refid="dir_32b6bbc23b3f9ec0f315f3c0f75d7d18">Core/JPort/include</innerdir>
+    <innerdir refid="dir_856c1a74dacf57b9e134692189e3794c">Core/JPort/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Core/JPort/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,160 @@
+.TH "JETHERNET::W5500HC" 3 "Version 0.1.1" "CSTM32 Led Controller" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JETHERNET::W5500HC
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBJETHERNET::EthernetHC\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetConfig\fP (\fBNetConfig\fP &netConfig) override"
+.br
+.ti -1c
+.RI "\fBNetConfig\fP \fBgetConfig\fP () override"
+.br
+.ti -1c
+.RI "void \fBmsTick\fP () override"
+.br
+.ti -1c
+.RI "bool \fBenableDHCP\fP (uint16_t timeoutMs) override"
+.br
+.ti -1c
+.RI "bool \fBenableDNS\fP (\fBNetIP\fP dns=0) override"
+.br
+.ti -1c
+.RI "\fBNetIP\fP \fBdomainToIP\fP (const char *domain, uint16_t timeoutMs) override"
+.br
+.ti -1c
+.RI "bool \fBphyLinkStatus\fP () override"
+.br
+.ti -1c
+.RI "bool \fBwaitForLink\fP (uint16_t timeoutMs) override"
+.br
+.ti -1c
+.RI "void \fBsoftReset\fP ()"
+.br
+.ti -1c
+.RI "bool \fBinit\fP (void *) override"
+.br
+.ti -1c
+.RI "\fBW5500Socket\fP & \fBgetFreeSocket\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBdhcpSuccess\fP = false"
+.br
+.ti -1c
+.RI "bool \fBinitSuccess\fP = false"
+.br
+.ti -1c
+.RI "bool \fBphyTimeout\fP = false"
+.br
+.ti -1c
+.RI "\fBW5500Socket\fP \fBsockets\fP [8]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB18\fP of file \fBW5500HC\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JETHERNET::W5500HC::~W5500HC ()"
+
+.PP
+Definition at line \fB157\fP of file \fBW5500HC\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBNetIP\fP JETHERNET::W5500HC::domainToIP (const char * domain, uint16_t timeoutMs)\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBJETHERNET::EthernetHC\fP\&.
+.PP
+Definition at line \fB88\fP of file \fBW5500HC\&.cpp\fP\&.
+.SS "bool JETHERNET::W5500HC::enableDHCP (uint16_t timeoutMs)\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBJETHERNET::EthernetHC\fP\&.
+.PP
+Definition at line \fB58\fP of file \fBW5500HC\&.cpp\fP\&.
+.SS "bool JETHERNET::W5500HC::enableDNS (\fBNetIP\fP dns = \fR0\fP)\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBJETHERNET::EthernetHC\fP\&.
+.PP
+Definition at line \fB77\fP of file \fBW5500HC\&.cpp\fP\&.
+.SS "\fBNetConfig\fP JETHERNET::W5500HC::getConfig ()\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBJETHERNET::EthernetHC\fP\&.
+.PP
+Definition at line \fB33\fP of file \fBW5500HC\&.cpp\fP\&.
+.SS "\fBW5500Socket\fP & JETHERNET::W5500HC::getFreeSocket ()\fR [virtual]\fP"
+
+.PP
+Implements \fBJETHERNET::EthernetHC\fP\&.
+.PP
+Definition at line \fB135\fP of file \fBW5500HC\&.cpp\fP\&.
+.SS "bool JETHERNET::W5500HC::init (void * config)\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBJETHERNET::EthernetHC\fP\&.
+.PP
+Definition at line \fB112\fP of file \fBW5500HC\&.cpp\fP\&.
+.SS "void JETHERNET::W5500HC::msTick ()\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBJETHERNET::EthernetHC\fP\&.
+.PP
+Definition at line \fB147\fP of file \fBW5500HC\&.cpp\fP\&.
+.SS "bool JETHERNET::W5500HC::phyLinkStatus ()\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBJETHERNET::EthernetHC\fP\&.
+.PP
+Definition at line \fB47\fP of file \fBW5500HC\&.cpp\fP\&.
+.SS "void JETHERNET::W5500HC::setConfig (\fBNetConfig\fP & netConfig)\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBJETHERNET::EthernetHC\fP\&.
+.PP
+Definition at line \fB22\fP of file \fBW5500HC\&.cpp\fP\&.
+.SS "void JETHERNET::W5500HC::softReset ()"
+
+.PP
+Definition at line \fB100\fP of file \fBW5500HC\&.cpp\fP\&.
+.SS "bool JETHERNET::W5500HC::waitForLink (uint16_t timeoutMs)\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBJETHERNET::EthernetHC\fP\&.
+.PP
+Definition at line \fB127\fP of file \fBW5500HC\&.cpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool JETHERNET::W5500HC::dhcpSuccess = false\fR [protected]\fP"
+
+.PP
+Definition at line \fB20\fP of file \fBW5500HC\&.hpp\fP\&.
+.SS "bool JETHERNET::W5500HC::initSuccess = false\fR [protected]\fP"
+
+.PP
+Definition at line \fB21\fP of file \fBW5500HC\&.hpp\fP\&.
+.SS "bool JETHERNET::W5500HC::phyTimeout = false\fR [protected]\fP"
+
+.PP
+Definition at line \fB22\fP of file \fBW5500HC\&.hpp\fP\&.
+.SS "\fBW5500Socket\fP JETHERNET::W5500HC::sockets[8]\fR [protected]\fP"
+
+.PP
+Definition at line \fB24\fP of file \fBW5500HC\&.hpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSTM32 Led Controller from the source code\&.
