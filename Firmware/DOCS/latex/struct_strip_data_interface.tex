@@ -1,0 +1,115 @@
+\doxysection{Strip\+Data\+Interface Struct Reference}
+\hypertarget{struct_strip_data_interface}{}\label{struct_strip_data_interface}\index{StripDataInterface@{StripDataInterface}}
+
+
+{\ttfamily \#include $<$Strip\+Data\+Interface.\+hpp$>$}
+
+
+
+Inheritance diagram for Strip\+Data\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{struct_strip_data_interface__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Strip\+Data\+Interface\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{struct_strip_data_interface__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual uint32\+\_\+t \& \mbox{\hyperlink{struct_strip_data_interface_add2089274c4622733d4b84a6d8201caa}{operator\mbox{[}$\,$\mbox{]}}} (uint16\+\_\+t index)=0
+\item 
+virtual const uint32\+\_\+t \& \mbox{\hyperlink{struct_strip_data_interface_aac34584ced0d76b85e0eb983d4e72d6d}{operator\mbox{[}$\,$\mbox{]}}} (uint16\+\_\+t index) const =0
+\item 
+virtual void \mbox{\hyperlink{struct_strip_data_interface_a67817254169c2c5d43166fc55740ac32}{set\+All}} (uint32\+\_\+t color)=0
+\item 
+virtual uint16\+\_\+t \mbox{\hyperlink{struct_strip_data_interface_a06b01eb70b230a919ba4b5c9112249a8}{get\+Num\+Pixels}} () const =0
+\item 
+virtual const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \mbox{\hyperlink{struct_strip_data_interface_a01c3454918738ff53490d7a77ca5f459}{begin}} ()=0
+\item 
+virtual const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \mbox{\hyperlink{struct_strip_data_interface_a5df3ba2988da7d8aa4aaf9bb0a908e5d}{end}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00086}{86}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_strip_data_interface_a01c3454918738ff53490d7a77ca5f459}\label{struct_strip_data_interface_a01c3454918738ff53490d7a77ca5f459} 
+\index{StripDataInterface@{StripDataInterface}!begin@{begin}}
+\index{begin@{begin}!StripDataInterface@{StripDataInterface}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily virtual const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} Strip\+Data\+Interface\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_a7126b30a4a5cf2cab29a0f83082e25f5}{JLED\+::\+WS28xx\+Strip$<$ \+\_\+\+Strip\+Type $>$}}.
+
+\Hypertarget{struct_strip_data_interface_a5df3ba2988da7d8aa4aaf9bb0a908e5d}\label{struct_strip_data_interface_a5df3ba2988da7d8aa4aaf9bb0a908e5d} 
+\index{StripDataInterface@{StripDataInterface}!end@{end}}
+\index{end@{end}!StripDataInterface@{StripDataInterface}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily virtual const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} Strip\+Data\+Interface\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_a30985eebe68bb6a6f9f37b9e8be25c8a}{JLED\+::\+WS28xx\+Strip$<$ \+\_\+\+Strip\+Type $>$}}.
+
+\Hypertarget{struct_strip_data_interface_a06b01eb70b230a919ba4b5c9112249a8}\label{struct_strip_data_interface_a06b01eb70b230a919ba4b5c9112249a8} 
+\index{StripDataInterface@{StripDataInterface}!getNumPixels@{getNumPixels}}
+\index{getNumPixels@{getNumPixels}!StripDataInterface@{StripDataInterface}}
+\doxysubsubsection{\texorpdfstring{getNumPixels()}{getNumPixels()}}
+{\footnotesize\ttfamily virtual uint16\+\_\+t Strip\+Data\+Interface\+::get\+Num\+Pixels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_a5543638a11565c1a1de22376d1f81fdf}{JLED\+::\+WS28xx\+Strip$<$ \+\_\+\+Strip\+Type $>$}}.
+
+\Hypertarget{struct_strip_data_interface_aac34584ced0d76b85e0eb983d4e72d6d}\label{struct_strip_data_interface_aac34584ced0d76b85e0eb983d4e72d6d} 
+\index{StripDataInterface@{StripDataInterface}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!StripDataInterface@{StripDataInterface}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual const uint32\+\_\+t \& Strip\+Data\+Interface\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_a7ad712c5b2fec366fd9efcd00c65bdb0}{JLED\+::\+WS28xx\+Strip$<$ \+\_\+\+Strip\+Type $>$}}.
+
+\Hypertarget{struct_strip_data_interface_add2089274c4622733d4b84a6d8201caa}\label{struct_strip_data_interface_add2089274c4622733d4b84a6d8201caa} 
+\index{StripDataInterface@{StripDataInterface}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!StripDataInterface@{StripDataInterface}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t \& Strip\+Data\+Interface\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_a5f5a47fd216b1f902575b8ecf15f2f43}{JLED\+::\+WS28xx\+Strip$<$ \+\_\+\+Strip\+Type $>$}}.
+
+\Hypertarget{struct_strip_data_interface_a67817254169c2c5d43166fc55740ac32}\label{struct_strip_data_interface_a67817254169c2c5d43166fc55740ac32} 
+\index{StripDataInterface@{StripDataInterface}!setAll@{setAll}}
+\index{setAll@{setAll}!StripDataInterface@{StripDataInterface}}
+\doxysubsubsection{\texorpdfstring{setAll()}{setAll()}}
+{\footnotesize\ttfamily virtual void Strip\+Data\+Interface\+::set\+All (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip_ae29183f24877138f1ed50ade23b7a3d8}{JLED\+::\+WS28xx\+Strip$<$ \+\_\+\+Strip\+Type $>$}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+LIBRARIES/\+JLib/\+JLED/include/\mbox{\hyperlink{_strip_data_interface_8hpp}{Strip\+Data\+Interface.\+hpp}}\end{DoxyCompactItemize}

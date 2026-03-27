@@ -1,20 +1,52 @@
-\doxysection{JLib/\+JLED/include/\+Strip\+Types.hpp File Reference}
-\hypertarget{_strip_types_8hpp}{}\label{_strip_types_8hpp}\index{JLib/JLED/include/StripTypes.hpp@{JLib/JLED/include/StripTypes.hpp}}
+\doxysection{LIBRARIES/\+JLib/\+JLED/include/\+Strip\+Types.hpp File Reference}
+\hypertarget{_strip_types_8hpp}{}\label{_strip_types_8hpp}\index{LIBRARIES/JLib/JLED/include/StripTypes.hpp@{LIBRARIES/JLib/JLED/include/StripTypes.hpp}}
 {\ttfamily \#include "{}Color.\+hpp"{}}\newline
+Include dependency graph for Strip\+Types.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{_strip_types_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{_strip_types_8hpp__dep__incl}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_type}{JLED\+::\+WSStrip\+Type$<$ Bytes\+Per\+Pixel, Zero\+High\+Ms, One\+High\+Ms, Pwm\+Period\+Ms $>$}}
+struct \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_type}{JLED\+::\+WSStrip\+Type$<$ Bytes\+Per\+Pixel, Zero\+High\+Ns, One\+High\+Ns, Pwm\+Period\+Ns $>$}}
 \item 
-struct \mbox{\hyperlink{struct_j_l_e_d_1_1_g_r_b_strip_type}{JLED\+::\+GRBStrip\+Type$<$ Zero\+High\+Ms, One\+High\+Ms, Pwm\+Period\+Ms $>$}}
+struct \mbox{\hyperlink{struct_j_l_e_d_1_1_g_r_b_strip_type}{JLED\+::\+GRBStrip\+Type$<$ Zero\+High\+Ns, One\+High\+Ns, Pwm\+Period\+Ns $>$}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
 namespace \mbox{\hyperlink{namespace_j_l_e_d}{JLED}}
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_strip_types_8hpp_ab189709710cedf5a51d42d9b00810c69}{ASSERT\+\_\+\+STRIPTYPE\+\_\+\+IS\+\_\+\+DERIVED}}(Strip\+Type)~static\+\_\+assert(std\+::is\+\_\+base\+\_\+of\+\_\+v$<$WSStrip\+Type$<$Strip\+Type\+::bytes\+Per\+Pixel, Strip\+Type\+::zero\+High\+Ns, Strip\+Type\+::one\+High\+Ns, Strip\+Type\+::pwm\+Period\+Ns$>$, Strip\+Type$>$, "{}Strip\+Type must be derived from JLED\+::\+Strip\+Type"{})
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 using \mbox{\hyperlink{namespace_j_l_e_d_a57412369bef60f93939ebdbe29ae9348}{JLED\+::\+WS2815\+Strip\+Type}} = \mbox{\hyperlink{struct_j_l_e_d_1_1_g_r_b_strip_type}{GRBStrip\+Type}}$<$350, 700, 1250$>$
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_strip_types_8hpp_ab189709710cedf5a51d42d9b00810c69}\label{_strip_types_8hpp_ab189709710cedf5a51d42d9b00810c69} 
+\index{StripTypes.hpp@{StripTypes.hpp}!ASSERT\_STRIPTYPE\_IS\_DERIVED@{ASSERT\_STRIPTYPE\_IS\_DERIVED}}
+\index{ASSERT\_STRIPTYPE\_IS\_DERIVED@{ASSERT\_STRIPTYPE\_IS\_DERIVED}!StripTypes.hpp@{StripTypes.hpp}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_STRIPTYPE\_IS\_DERIVED}{ASSERT\_STRIPTYPE\_IS\_DERIVED}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+STRIPTYPE\+\_\+\+IS\+\_\+\+DERIVED(\begin{DoxyParamCaption}\item[{}]{Strip\+Type }\end{DoxyParamCaption})~static\+\_\+assert(std\+::is\+\_\+base\+\_\+of\+\_\+v$<$WSStrip\+Type$<$Strip\+Type\+::bytes\+Per\+Pixel, Strip\+Type\+::zero\+High\+Ns, Strip\+Type\+::one\+High\+Ns, Strip\+Type\+::pwm\+Period\+Ns$>$, Strip\+Type$>$, "{}Strip\+Type must be derived from JLED\+::\+Strip\+Type"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_types_8hpp_source_l00013}{13}} of file \mbox{\hyperlink{_strip_types_8hpp_source}{Strip\+Types.\+hpp}}.
+

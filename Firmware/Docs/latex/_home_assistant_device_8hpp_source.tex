@@ -1,5 +1,5 @@
 \doxysection{Home\+Assistant\+Device.\+hpp}
-\hypertarget{_home_assistant_device_8hpp_source}{}\label{_home_assistant_device_8hpp_source}\index{JLib/JMQTT/include/HomeAssistantDevice.hpp@{JLib/JMQTT/include/HomeAssistantDevice.hpp}}
+\hypertarget{_home_assistant_device_8hpp_source}{}\label{_home_assistant_device_8hpp_source}\index{LIBRARIES/JLib/JMQTT/include/HomeAssistantDevice.hpp@{LIBRARIES/JLib/JMQTT/include/HomeAssistantDevice.hpp}}
 \mbox{\hyperlink{_home_assistant_device_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00001}00001\ \textcolor{comment}{/*}}
@@ -17,17 +17,16 @@
 \DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00013}00013\ }
 \DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00014}00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_j_m_q_t_t}{JMQTT}}\ \{}
 \DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00016}\mbox{\hyperlink{class_j_m_q_t_t_1_1_home_assistant_device}{00016}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_j_m_q_t_t_1_1_home_assistant_device}{HomeAssistantDevice}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver}{MQTTMessageReceiver}}\ \{}
-\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00017}00017\ }
-\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ onMessage(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{Client}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_message}{Message}}\&)\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ publishState(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{JMQTT::Client}}\ *client)\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ publishDiscovery(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{JMQTT::Client}}\ *client)\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ init(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{Client}}*)\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00022}00022\ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00023}00023\ \}}
-\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00016}\mbox{\hyperlink{class_j_m_q_t_t_1_1_home_assistant_device}{00016}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_j_m_q_t_t_1_1_home_assistant_device}{HomeAssistantDevice}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver}{MQTTMessageReceiver}}\ \{}
+\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00017}00017\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ onMessage(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{Client}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_j_m_q_t_t_1_1_message}{Message}}\&)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ publishState()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ publishDiscovery()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ update()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ init(\mbox{\hyperlink{class_j_m_q_t_t_1_1_client}{Client}}*\ client)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00023}00023\ \};}
+\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00024}00024\ \}}
 \DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00025}00025\ }
-\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00027}00027\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ JMQTT\_INCLUDE\_HOMEASSISTANTDEVICE\_HPP\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{_home_assistant_device_8hpp_source_l00026}00026\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ JMQTT\_INCLUDE\_HOMEASSISTANTDEVICE\_HPP\_\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

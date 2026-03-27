@@ -1,0 +1,226 @@
+\doxysection{JLED\+::Strip\+Builder\texorpdfstring{$<$}{<} Strip\+Base \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_j_l_e_d_1_1_strip_builder}{}\label{class_j_l_e_d_1_1_strip_builder}\index{JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}}
+
+
+{\ttfamily \#include $<$Strip\+Builder.\+hpp$>$}
+
+
+
+Collaboration diagram for JLED\+::Strip\+Builder\texorpdfstring{$<$}{<} Strip\+Base \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_j_l_e_d_1_1_strip_builder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder_aea71ef37bc2c5867dba3ecf6d1b780a3}{LEDBase}} = Strip\+Base
+\item 
+using \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder_a5b6d3571008c5ea9c8274ee8ff3ec6fd}{Strip\+Type}} = typename LEDBase\+::\+Strip\+Type
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder_ad19cc3a14d4213c9f523a9bf5d8ac071}{set\+All}} (uint32\+\_\+t color)
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder_a91fd5bc3b39c3c01297b02a89944ccd4}{set\+Static\+Color}} (uint32\+\_\+t color)
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder_a48f2b0445c586b70f01ef1249d1f4705}{set\+Power}} (bool power\+On)
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder_a87b84f3b9e552e0e4d0a19b7ad8fcfb0}{set\+Physical\+Power\+CB}} (typename LEDBase\+::\+Physical\+Power\+CB cb)
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder_aa634f8fb60f9fa53a272dcdd7760622a}{set\+Brightness}} (uint8\+\_\+t brightness)
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder_ad016ffc01d5608f0ca43d12345380af7}{set\+Effect}} ()
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder_aae64d7bd41f12903efa3f4e6f6c5aecc}{set\+Mode}} ()
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder_a776c2cf6461bc3f6420af9017b5dae84}{set\+Color\+Correction}} (\mbox{\hyperlink{namespace_j_l_e_d_a88321436a1a22cbe4bdfc6071292ec0a}{Color\+Correction}} cc)
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder_a2e3aa936bc4efe29deecd2be7490f667}{set\+Temperature\+Correction}} (\mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4}{Temperature\+Correction}} tc)
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder_a6f398cb634e2c37cde2b4a63f6e310b1}{set\+Gamma\+Correction}} (bool on)
+\item 
+Strip\+Base \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder_a9a3934a45eca5f0cb11742d6541a75e4}{build}} ()
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder_a5db5c1570963143f57dfa58171d66b2e}{Strip\+Builder}} (Strip\+Base \texorpdfstring{$\ast$}{*}strip)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Strip\+Base$>$\newline
+class JLED\+::\+Strip\+Builder$<$ Strip\+Base $>$}
+
+
+Definition at line \mbox{\hyperlink{_strip_builder_8hpp_source_l00016}{16}} of file \mbox{\hyperlink{_strip_builder_8hpp_source}{Strip\+Builder.\+hpp}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_j_l_e_d_1_1_strip_builder_aea71ef37bc2c5867dba3ecf6d1b780a3}\label{class_j_l_e_d_1_1_strip_builder_aea71ef37bc2c5867dba3ecf6d1b780a3} 
+\index{JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}!LEDBase@{LEDBase}}
+\index{LEDBase@{LEDBase}!JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}}
+\doxysubsubsection{\texorpdfstring{LEDBase}{LEDBase}}
+{\footnotesize\ttfamily template$<$typename Strip\+Base $>$ \\
+using \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{JLED\+::\+Strip\+Builder}}$<$ Strip\+Base $>$\+::\+LEDBase = Strip\+Base}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_builder_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{_strip_builder_8hpp_source}{Strip\+Builder.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_builder_a5b6d3571008c5ea9c8274ee8ff3ec6fd}\label{class_j_l_e_d_1_1_strip_builder_a5b6d3571008c5ea9c8274ee8ff3ec6fd} 
+\index{JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}!StripType@{StripType}}
+\index{StripType@{StripType}!JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}}
+\doxysubsubsection{\texorpdfstring{StripType}{StripType}}
+{\footnotesize\ttfamily template$<$typename Strip\+Base $>$ \\
+using \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{JLED\+::\+Strip\+Builder}}$<$ Strip\+Base $>$\+::\+Strip\+Type = typename LEDBase\+::\+Strip\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_builder_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{_strip_builder_8hpp_source}{Strip\+Builder.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_j_l_e_d_1_1_strip_builder_a5db5c1570963143f57dfa58171d66b2e}\label{class_j_l_e_d_1_1_strip_builder_a5db5c1570963143f57dfa58171d66b2e} 
+\index{JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}!StripBuilder@{StripBuilder}}
+\index{StripBuilder@{StripBuilder}!JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}}
+\doxysubsubsection{\texorpdfstring{StripBuilder()}{StripBuilder()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Base $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{JLED\+::\+Strip\+Builder}}$<$ Strip\+Base $>$\+::\+Strip\+Builder (\begin{DoxyParamCaption}\item[{Strip\+Base \texorpdfstring{$\ast$}{*}}]{strip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_builder_8hpp_source_l00078}{78}} of file \mbox{\hyperlink{_strip_builder_8hpp_source}{Strip\+Builder.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_j_l_e_d_1_1_strip_builder_a9a3934a45eca5f0cb11742d6541a75e4}\label{class_j_l_e_d_1_1_strip_builder_a9a3934a45eca5f0cb11742d6541a75e4} 
+\index{JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}!build@{build}}
+\index{build@{build}!JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Base $>$ \\
+Strip\+Base \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{JLED\+::\+Strip\+Builder}}$<$ Strip\+Base $>$\+::build (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_builder_8hpp_source_l00074}{74}} of file \mbox{\hyperlink{_strip_builder_8hpp_source}{Strip\+Builder.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_builder_ad19cc3a14d4213c9f523a9bf5d8ac071}\label{class_j_l_e_d_1_1_strip_builder_ad19cc3a14d4213c9f523a9bf5d8ac071} 
+\index{JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}!setAll@{setAll}}
+\index{setAll@{setAll}!JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}}
+\doxysubsubsection{\texorpdfstring{setAll()}{setAll()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Base $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{JLED\+::\+Strip\+Builder}}$<$ Strip\+Base $>$\+::set\+All (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_builder_8hpp_source_l00024}{24}} of file \mbox{\hyperlink{_strip_builder_8hpp_source}{Strip\+Builder.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_builder_aa634f8fb60f9fa53a272dcdd7760622a}\label{class_j_l_e_d_1_1_strip_builder_aa634f8fb60f9fa53a272dcdd7760622a} 
+\index{JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}!setBrightness@{setBrightness}}
+\index{setBrightness@{setBrightness}!JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}}
+\doxysubsubsection{\texorpdfstring{setBrightness()}{setBrightness()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Base $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{JLED\+::\+Strip\+Builder}}$<$ Strip\+Base $>$\+::set\+Brightness (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{brightness }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_builder_8hpp_source_l00044}{44}} of file \mbox{\hyperlink{_strip_builder_8hpp_source}{Strip\+Builder.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_builder_a776c2cf6461bc3f6420af9017b5dae84}\label{class_j_l_e_d_1_1_strip_builder_a776c2cf6461bc3f6420af9017b5dae84} 
+\index{JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}!setColorCorrection@{setColorCorrection}}
+\index{setColorCorrection@{setColorCorrection}!JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}}
+\doxysubsubsection{\texorpdfstring{setColorCorrection()}{setColorCorrection()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Base $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{JLED\+::\+Strip\+Builder}}$<$ Strip\+Base $>$\+::set\+Color\+Correction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_j_l_e_d_a88321436a1a22cbe4bdfc6071292ec0a}{Color\+Correction}}}]{cc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_builder_8hpp_source_l00059}{59}} of file \mbox{\hyperlink{_strip_builder_8hpp_source}{Strip\+Builder.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_builder_ad016ffc01d5608f0ca43d12345380af7}\label{class_j_l_e_d_1_1_strip_builder_ad016ffc01d5608f0ca43d12345380af7} 
+\index{JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}!setEffect@{setEffect}}
+\index{setEffect@{setEffect}!JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}}
+\doxysubsubsection{\texorpdfstring{setEffect()}{setEffect()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Base $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{JLED\+::\+Strip\+Builder}}$<$ Strip\+Base $>$\+::set\+Effect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_builder_8hpp_source_l00049}{49}} of file \mbox{\hyperlink{_strip_builder_8hpp_source}{Strip\+Builder.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_builder_a6f398cb634e2c37cde2b4a63f6e310b1}\label{class_j_l_e_d_1_1_strip_builder_a6f398cb634e2c37cde2b4a63f6e310b1} 
+\index{JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}!setGammaCorrection@{setGammaCorrection}}
+\index{setGammaCorrection@{setGammaCorrection}!JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}}
+\doxysubsubsection{\texorpdfstring{setGammaCorrection()}{setGammaCorrection()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Base $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{JLED\+::\+Strip\+Builder}}$<$ Strip\+Base $>$\+::set\+Gamma\+Correction (\begin{DoxyParamCaption}\item[{bool}]{on }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_builder_8hpp_source_l00069}{69}} of file \mbox{\hyperlink{_strip_builder_8hpp_source}{Strip\+Builder.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_builder_aae64d7bd41f12903efa3f4e6f6c5aecc}\label{class_j_l_e_d_1_1_strip_builder_aae64d7bd41f12903efa3f4e6f6c5aecc} 
+\index{JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}!setMode@{setMode}}
+\index{setMode@{setMode}!JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}}
+\doxysubsubsection{\texorpdfstring{setMode()}{setMode()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Base $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{JLED\+::\+Strip\+Builder}}$<$ Strip\+Base $>$\+::set\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_builder_8hpp_source_l00054}{54}} of file \mbox{\hyperlink{_strip_builder_8hpp_source}{Strip\+Builder.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_builder_a87b84f3b9e552e0e4d0a19b7ad8fcfb0}\label{class_j_l_e_d_1_1_strip_builder_a87b84f3b9e552e0e4d0a19b7ad8fcfb0} 
+\index{JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}!setPhysicalPowerCB@{setPhysicalPowerCB}}
+\index{setPhysicalPowerCB@{setPhysicalPowerCB}!JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}}
+\doxysubsubsection{\texorpdfstring{setPhysicalPowerCB()}{setPhysicalPowerCB()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Base $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{JLED\+::\+Strip\+Builder}}$<$ Strip\+Base $>$\+::set\+Physical\+Power\+CB (\begin{DoxyParamCaption}\item[{typename LEDBase\+::\+Physical\+Power\+CB}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_builder_8hpp_source_l00039}{39}} of file \mbox{\hyperlink{_strip_builder_8hpp_source}{Strip\+Builder.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_builder_a48f2b0445c586b70f01ef1249d1f4705}\label{class_j_l_e_d_1_1_strip_builder_a48f2b0445c586b70f01ef1249d1f4705} 
+\index{JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}!setPower@{setPower}}
+\index{setPower@{setPower}!JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}}
+\doxysubsubsection{\texorpdfstring{setPower()}{setPower()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Base $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{JLED\+::\+Strip\+Builder}}$<$ Strip\+Base $>$\+::set\+Power (\begin{DoxyParamCaption}\item[{bool}]{power\+On }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_builder_8hpp_source_l00034}{34}} of file \mbox{\hyperlink{_strip_builder_8hpp_source}{Strip\+Builder.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_builder_a91fd5bc3b39c3c01297b02a89944ccd4}\label{class_j_l_e_d_1_1_strip_builder_a91fd5bc3b39c3c01297b02a89944ccd4} 
+\index{JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}!setStaticColor@{setStaticColor}}
+\index{setStaticColor@{setStaticColor}!JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}}
+\doxysubsubsection{\texorpdfstring{setStaticColor()}{setStaticColor()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Base $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{JLED\+::\+Strip\+Builder}}$<$ Strip\+Base $>$\+::set\+Static\+Color (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_builder_8hpp_source_l00029}{29}} of file \mbox{\hyperlink{_strip_builder_8hpp_source}{Strip\+Builder.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_builder_a2e3aa936bc4efe29deecd2be7490f667}\label{class_j_l_e_d_1_1_strip_builder_a2e3aa936bc4efe29deecd2be7490f667} 
+\index{JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}!setTemperatureCorrection@{setTemperatureCorrection}}
+\index{setTemperatureCorrection@{setTemperatureCorrection}!JLED::StripBuilder$<$ StripBase $>$@{JLED::StripBuilder$<$ StripBase $>$}}
+\doxysubsubsection{\texorpdfstring{setTemperatureCorrection()}{setTemperatureCorrection()}}
+{\footnotesize\ttfamily template$<$typename Strip\+Base $>$ \\
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{Strip\+Builder}} \& \mbox{\hyperlink{class_j_l_e_d_1_1_strip_builder}{JLED\+::\+Strip\+Builder}}$<$ Strip\+Base $>$\+::set\+Temperature\+Correction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4}{Temperature\+Correction}}}]{tc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_builder_8hpp_source_l00064}{64}} of file \mbox{\hyperlink{_strip_builder_8hpp_source}{Strip\+Builder.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+LIBRARIES/\+JLib/\+JLED/include/\mbox{\hyperlink{_strip_builder_8hpp}{Strip\+Builder.\+hpp}}\end{DoxyCompactItemize}

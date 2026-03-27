@@ -1,0 +1,10 @@
+<map id="LIBRARIES/JLib/JEthernet/include/NetConfig.hpp" name="LIBRARIES/JLib/JEthernet/include/NetConfig.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="10,5,191,48"/>
+<area shape="rect" id="Node000002" href="$_net_i_p_8hpp.html" title=" " alt="" coords="5,96,84,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,50,64,85,60,82,84,47"/>
+<area shape="rect" id="Node000004" href="$_net_m_a_c_8hpp.html" title=" " alt="" coords="108,96,205,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="117,47,141,82,137,85,113,50"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="70,171,131,197"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="56,122,84,157,80,160,52,125"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="149,125,121,160,117,157,145,122"/>
+</map>

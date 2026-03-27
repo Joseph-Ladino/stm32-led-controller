@@ -1,0 +1,7 @@
+<map id="JLED::StripAnimation" name="JLED::StripAnimation">
+<area shape="rect" id="Node000001" title=" " alt="" coords="104,5,243,96"/>
+<area shape="rect" id="Node000002" href="$struct_j_l_e_d_1_1_rainbow_animation.html" title=" " alt="" coords="5,144,168,235"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,110,117,146,112,143,135,107"/>
+<area shape="rect" id="Node000003" href="$struct_j_l_e_d_1_1_test_animation.html" title=" " alt="" coords="193,144,330,235"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="212,107,235,143,231,146,208,110"/>
+</map>

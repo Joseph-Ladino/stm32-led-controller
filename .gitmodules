@@ -1,12 +1,12 @@
-[submodule "Firmware/ioLibrary"]
-	path = Firmware/ioLibrary
+[submodule "Firmware/LIBRARIES/ioLibrary"]
+	path = Firmware/LIBRARIES/ioLibrary
 	url = https://github.com/Wiznet/ioLibrary_Driver.git
-[submodule "Firmware/MQTT"]
-	path = Firmware/MQTT
+[submodule "Firmware/LIBRARIES/MQTT"]
+	path = Firmware/LIBRARIES/MQTT
 	url = https://github.com/Joseph-Ladino/paho.mqtt.embedded-c.git
-[submodule "Firmware/Obfuscate"]
-	path = Firmware/Obfuscate
+[submodule "Firmware/LIBRARIES/Obfuscate"]
+	path = Firmware/LIBRARIES/Obfuscate
 	url = https://github.com/adamyaxley/Obfuscate.git
-[submodule "Firmware/ArduinoJson"]
-	path = Firmware/ArduinoJson
+[submodule "Firmware/LIBRARIES/ArduinoJson"]
+	path = Firmware/LIBRARIES/ArduinoJson
 	url = https://github.com/bblanchon/ArduinoJson

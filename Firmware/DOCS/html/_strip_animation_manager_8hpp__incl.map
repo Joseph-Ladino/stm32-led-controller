@@ -1,0 +1,13 @@
+<map id="LIBRARIES/JLib/JLED/include/StripAnimationManager.hpp" name="LIBRARIES/JLib/JLED/include/StripAnimationManager.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="35,5,266,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,93,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,51,79,88,75,84,123,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="116,96,184,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="153,49,153,80,148,80,148,49"/>
+<area shape="rect" id="Node000004" href="$_strip_animation_8hpp.html" title=" " alt="" coords="209,96,340,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="184,46,244,85,241,90,181,51"/>
+<area shape="rect" id="Node000005" href="$_strip_data_interface_8hpp.html" title=" " alt="" coords="198,171,350,197"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="277,123,277,155,272,155,272,123"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="244,245,304,272"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="277,198,277,230,272,230,272,198"/>
+</map>

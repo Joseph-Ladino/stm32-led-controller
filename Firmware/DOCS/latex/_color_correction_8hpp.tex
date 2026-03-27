@@ -1,0 +1,56 @@
+\doxysection{LIBRARIES/\+JLib/\+JLED/include/\+Color\+Correction.hpp File Reference}
+\hypertarget{_color_correction_8hpp}{}\label{_color_correction_8hpp}\index{LIBRARIES/JLib/JLED/include/ColorCorrection.hpp@{LIBRARIES/JLib/JLED/include/ColorCorrection.hpp}}
+{\ttfamily \#include "{}Gamma\+Correction.\+hpp"{}}\newline
+Include dependency graph for Color\+Correction.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{_color_correction_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{_color_correction_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_j_l_e_d}{JLED}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespace_j_l_e_d_a88321436a1a22cbe4bdfc6071292ec0a}{JLED\+::\+Color\+Correction}} \+: uint32\+\_\+t \{ \mbox{\hyperlink{namespace_j_l_e_d_a88321436a1a22cbe4bdfc6071292ec0aabae71e8715ff83748c59a8d4c6c50286}{JLED\+::\+WS2815}} = 0x\+FFB0\+F0
+, \mbox{\hyperlink{namespace_j_l_e_d_a88321436a1a22cbe4bdfc6071292ec0aa1014e0b7bef22636812497a1ba50b930}{JLED\+::\+Uncorrected}} = 0x\+FFFFFF
+ \}
+\item 
+enum class \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4}{JLED\+::\+Temperature\+Correction}} \+: uint32\+\_\+t \{ \newline
+\mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4ae966b2e6caa2b8a2f49802e3baf6fbf2}{JLED\+::\+Candle}} = 0x\+FF9329
+, \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4aee88bbc96721f92bfce1e571ecf223fa}{JLED\+::\+Tungsten40W}} = 0x\+FFC58F
+, \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a21ef7bd88384a1a51ea0305358fd0217}{JLED\+::\+Tungsten100W}} = 0x\+FFD6\+AA
+, \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4ad16c1fc42d70cf5fba9ab09f3de26f60}{JLED\+::\+Halogen}} = 0x\+FFF1\+E0
+, \newline
+\mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4ac29bb2bc26516672fb271be2d3e94197}{JLED\+::\+Carbon\+Arc}} = 0x\+FFFAF4
+, \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a3949bf103125b5848c60b23007640438}{JLED\+::\+High\+Noon\+Sun}} = 0x\+FFFFFB
+, \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4aea06408c5ec417f208456c97fdd325f6}{JLED\+::\+Direct\+Sunlight}} = 0x\+FFFFFF
+, \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a7fc8ed40dc9c18fa1ea151eaf1dffbe4}{JLED\+::\+Overcast\+Sky}} = 0x\+C9\+E2\+FF
+, \newline
+\mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a0a12b38dbac82b338a866cdd48cfd0cf}{JLED\+::\+Clear\+Blue\+Sky}} = 0x409\+CFF
+, \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a804cccb032108b98f8e743f16bac76ab}{JLED\+::\+Warm\+Fluorescent}} = 0x\+FFF4\+E5
+, \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a61c79af6a3cd29d8b07c8b4de4103667}{JLED\+::\+Standard\+Fluorescent}} = 0x\+F4\+FFFA
+, \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a2fa00dff2714a2a3898086716a29c0d6}{JLED\+::\+Cool\+White\+Fluorescent}} = 0x\+D4\+EBFF
+, \newline
+\mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a60addf791fc630020a0b22b14cf642ef}{JLED\+::\+Full\+Spectrum\+Fluorescent}} = 0x\+FFF4\+F2
+, \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a423124da141863b87eecde65ee516412}{JLED\+::\+Grow\+Light\+Fluorescent}} = 0x\+FFEFF7
+, \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a1e252096403a340317b6321905c6feab}{JLED\+::\+Black\+Light\+Fluorescent}} = 0x\+A700\+FF
+, \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4ac3a9df0dbbdebff52f16e863152e6f72}{JLED\+::\+Mercury\+Vapor}} = 0x\+D8\+F7\+FF
+, \newline
+\mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a38d0f7adda90745b63d6d4ce4bf905da}{JLED\+::\+Sodium\+Vapor}} = 0x\+FFD1\+B2
+, \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a3123a56983e6b146a593f59812fbd699}{JLED\+::\+Metal\+Halide}} = 0x\+F2\+FCFF
+, \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a1cba1f306dd29c60dc3dace0fab12a53}{JLED\+::\+High\+Pressure\+Sodium}} = 0x\+FFB74C
+, \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a1014e0b7bef22636812497a1ba50b930}{JLED\+::\+Uncorrected}} = 0x\+FFFFFF
+ \}
+\end{DoxyCompactItemize}

@@ -149,12 +149,12 @@ void mqttOnConnected(JMQTT::Client &client) {
 }
 
 bool connectEth() {
-	if (!eth.waitForLink(5000)) {
+	if (!eth.waitForLink(1000)) {
 		USB_Printf("Unable to get PHY link connection\n");
 		return false;
 	}
 
-	if (!eth.enableDHCP(5000)) {
+	if (!eth.enableDHCP(1000)) {
 		USB_Printf("Unable to initiate DHCP\n");
 		return false;
 	}
@@ -211,10 +211,12 @@ void LED_Update() {
 		delay.reset();
 
 #ifdef DEBUG
-		dStrip[led] = cols[(led / ledsPerColor) % (sizeof(cols) / sizeof(JLED::Color))];
+//		dStrip[led] = cols[(led / ledsPerColor) % (sizeof(cols) / sizeof(JLED::Color))];
+		dStrip.update();
 #endif
 		led = (led + 1) % dStrip.getNumPixels();
 	}
+
 
 	if (frameTimer.expired()) {
 		dStrip.display();
@@ -276,6 +278,10 @@ int main(void) {
 
 #endif
 #ifndef TEST_LED_ONLY
+
+	// incase reset button pressed after W5500 initially configured
+	eth.hardReset();
+
 	W5500Config conf { &hspi1, ETH_SCSn_GPIO_Port,
 	ETH_SCSn_Pin, ETH_RSTn_GPIO_Port, ETH_RSTn_Pin };
 
@@ -324,6 +330,9 @@ int main(void) {
 	CountdownTimer reconnectTimer(2500);
 #endif
 	LED_Init();
+//	dStrip.setEffect("NONE");
+//	dStrip.setEffect("RAINBOW");
+//	dStrip.setEffect("TEST");
 	mqttStripController.init(&mqtt);
 
 	while (1) {
@@ -339,22 +348,25 @@ int main(void) {
 			USB_Printf("\nClient disconnected!\n");
 
 			bool success = false;
-			// if no physical connection, try to establish one
-			if (/* !eth.phyLinkStatus() */true) {
-				eth.softReset();
-				success = connectEth(); // try to wait for connection
-				if (!success) goto RECONNECT_EXIT;
+
+			eth.softReset();
+			success = connectEth(); // try to wait for connection
+
+
+			if (success) {
+				mqtt.disconnect();
+				// issue has to be related to client/server connection
+				success = mqtt.reconnect(eth.getFreeSocket());
 			}
 
-			mqtt.disconnect();
-			// issue has to be related to client/server connection
-			success = mqtt.reconnect(eth.getFreeSocket());
 
-			RECONNECT_EXIT:
 			if (success) {
 				USB_Printf("Connected client to MQTT server!\n");
 			} else {
-				USB_Printf("Error connecting client to MQTT server!\n");
+				USB_Printf("Error connecting client to MQTT server!\nAttempting hard reset...\n");
+
+				eth.hardReset();
+				eth.reinit();
 			}
 
 			reconnectTimer.reset();

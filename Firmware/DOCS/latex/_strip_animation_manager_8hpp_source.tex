@@ -1,0 +1,85 @@
+\doxysection{Strip\+Animation\+Manager.\+hpp}
+\hypertarget{_strip_animation_manager_8hpp_source}{}\label{_strip_animation_manager_8hpp_source}\index{LIBRARIES/JLib/JLED/include/StripAnimationManager.hpp@{LIBRARIES/JLib/JLED/include/StripAnimationManager.hpp}}
+\mbox{\hyperlink{_strip_animation_manager_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00002}00002\ \textcolor{comment}{\ *\ StripAnimation.hpp}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Jul\ 19,\ 2024}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ user}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ JLED\_INCLUDE\_STRIPANIMATIONMANAGER\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#define\ JLED\_INCLUDE\_STRIPANIMATIONMANAGER\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <string\_view>}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_strip_animation_8hpp}{StripAnimation.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00014}00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_j_l_e_d}{JLED}}\ \{}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00016}\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager}{00016}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager}{StripAnimationManager}}\ \{}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00017}00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00019}\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{00019}}\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{AnimationType}}\ \{}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00020}\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1a25733f09ce6beaa7c08b8d6bd94fe436}{00020}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1a25733f09ce6beaa7c08b8d6bd94fe436}{NONE}},\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1a35f33dcd33c5a851a76446aa445dc608}{RAINBOW}},\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1aa6442bd8d08d961a27fa5b5be75b5cf6}{TEST}},}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00021}00021\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00023}\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ac0e169b0c9ba3fc90d2d252466198499}{00023}}\ \ \ \ \ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{AnimationType}}\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ac0e169b0c9ba3fc90d2d252466198499}{activeAnimation}};}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00024}\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ab4ac276f2bba07e746cdd73834d50e0b}{00024}}\ \ \ \ \ std::unique\_ptr<StripAnimation>\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ab4ac276f2bba07e746cdd73834d50e0b}{animInst}};}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00026}\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_aa010399e03dd329528c9b41ea79a941a}{00026}}\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\_view\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_aa010399e03dd329528c9b41ea79a941a}{getName}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ab4ac276f2bba07e746cdd73834d50e0b}{animInst}}-\/>getName();}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00030}\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ab738ada47464cb8b42a6b78acba821eb}{00030}}\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ab738ada47464cb8b42a6b78acba821eb}{run}}(\mbox{\hyperlink{struct_strip_data_interface}{StripDataInterface}}\ *strip)\ \{}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ab4ac276f2bba07e746cdd73834d50e0b}{animInst}}-\/>run(strip);}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00034}\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ada84980279994ad204c31d4ecb46596e}{00034}}\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ std::string\_view\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ada84980279994ad204c31d4ecb46596e}{animTypes}}[]\ =\ \{\ \textcolor{stringliteral}{"{}NONE"{}},\ \textcolor{stringliteral}{"{}RAINBOW"{}},\ \textcolor{stringliteral}{"{}TEST"{}}\ \};}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00035}\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a44ff29f5ab94702376ce38fbe305ffc2}{00035}}\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint16\_t\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a44ff29f5ab94702376ce38fbe305ffc2}{numAnimTypes}}\ =\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ada84980279994ad204c31d4ecb46596e}{animTypes}})\ /\ \textcolor{keyword}{sizeof}(std::string\_view);}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00037}\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_add21fc6eff78c43e09ba245aa33cea70}{00037}}\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ std::string\_view*\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_add21fc6eff78c43e09ba245aa33cea70}{getAnimationTypes}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ada84980279994ad204c31d4ecb46596e}{animTypes}};}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00041}\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a16b91141784fe247106ab552fbdce2b3}{00041}}\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{AnimationType}}\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a16b91141784fe247106ab552fbdce2b3}{getAnimationTypeFromName}}(std::string\_view\ name)\ \{}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint16\_t\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a44ff29f5ab94702376ce38fbe305ffc2}{numAnimTypes}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (name\ ==\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ada84980279994ad204c31d4ecb46596e}{animTypes}}[i])\ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{AnimationType}})\ i;}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1a25733f09ce6beaa7c08b8d6bd94fe436}{NONE}};}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00049}\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_acddf7f35ea0a35f7a1225576533086eb}{00049}}\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_acddf7f35ea0a35f7a1225576533086eb}{setAnimationType}}(\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{AnimationType}}\ anim)\ \{}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00051}00051\ \textcolor{preprocessor}{\#define\ setInst(type)\ animInst.reset(new\ type())}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (anim)\ \{}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1a35f33dcd33c5a851a76446aa445dc608}{RAINBOW}}:}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_strip_animation_manager_8hpp_aabbf02971b8d053e45eedbeafa3f68f7}{setInst}}(\mbox{\hyperlink{struct_j_l_e_d_1_1_rainbow_animation}{RainbowAnimation}});}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1aa6442bd8d08d961a27fa5b5be75b5cf6}{TEST}}:}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_strip_animation_manager_8hpp_aabbf02971b8d053e45eedbeafa3f68f7}{setInst}}(\mbox{\hyperlink{struct_j_l_e_d_1_1_test_animation}{TestAnimation}});}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1a25733f09ce6beaa7c08b8d6bd94fe436}{NONE}}:}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_strip_animation_manager_8hpp_aabbf02971b8d053e45eedbeafa3f68f7}{setInst}}(\mbox{\hyperlink{struct_j_l_e_d_1_1_strip_animation}{StripAnimation}});}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00066}00066\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00068}\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_abf758862fc8bb3c8986be8c9bd096685}{00068}}\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_abf758862fc8bb3c8986be8c9bd096685}{setAnimationTypeFromName}}(std::string\_view\ name)\ \{}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_acddf7f35ea0a35f7a1225576533086eb}{setAnimationType}}(\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a16b91141784fe247106ab552fbdce2b3}{getAnimationTypeFromName}}(name));}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00072}\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_af13cdd46976b65b75a71e15092717ddc}{00072}}\ \ \ \ \ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_af13cdd46976b65b75a71e15092717ddc}{StripAnimationManager}}(\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{AnimationType}}\ animType\ =\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1a25733f09ce6beaa7c08b8d6bd94fe436}{NONE}})\ :\ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ac0e169b0c9ba3fc90d2d252466198499}{activeAnimation}}(animType)\ \{}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_acddf7f35ea0a35f7a1225576533086eb}{setAnimationType}}(animType);}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00074}00074\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00075}00075\ \};}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00077}00077\ \}\ \textcolor{comment}{/*\ namespace\ JLED\ */}}
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_strip_animation_manager_8hpp_source_l00079}00079\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ JLED\_INCLUDE\_STRIPANIMATIONMANAGER\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

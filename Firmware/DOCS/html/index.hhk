@@ -1,0 +1,1809 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a831caf76bae7b62254b78db9eb3bfcab"><param name="Name" value="ASSERT_STRIPBASE_IS_DERIVED(StripBase, StripType)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a831caf76bae7b62254b78db9eb3bfcab"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="_w_s28xx_strip_8hpp.html#ae34ebad0d15a0cf6b88c891700047ddf"><param name="Name" value="ASSERT_STRIPBASE_IS_DERIVED(StripBase, StripType)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_w_s28xx_strip_8hpp.html#ae34ebad0d15a0cf6b88c891700047ddf"><param name="Name" value="WS28xxStrip.hpp"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="_strip_types_8hpp.html#ab189709710cedf5a51d42d9b00810c69"><param name="Name" value="ASSERT_STRIPTYPE_IS_DERIVED(StripType)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a3f2bfa857155d086a4163c2a023576a4"><param name="Name" value="ASSERT_STRIPTYPE_IS_DERIVED(_StripType)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#a265aa23667425ac3a9e0748d82f8d4d1"><param name="Name" value="AnimationType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a1e252096403a340317b6321905c6feab"><param name="Name" value="BlackLightFluorescent"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4ae966b2e6caa2b8a2f49802e3baf6fbf2"><param name="Name" value="Candle"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4ac29bb2bc26516672fb271be2d3e94197"><param name="Name" value="CarbonArc"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a0a12b38dbac82b338a866cdd48cfd0cf"><param name="Name" value="ClearBlueSky"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a53ce5313bbe5a9fa9a39f9b5faefb1c0"><param name="Name" value="Color()=default"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#afbc287e5115aab0ff3dcc64d0f4d5391"><param name="Name" value="Color(Color &amp;c)=default"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a15b83c035d344735531ade65f2c57cfc"><param name="Name" value="Color(ColorCorrection col)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a10bdce92283f426a106a3ba1ad875815"><param name="Name" value="Color(TemperatureCorrection col)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a8f540f21fb67172ec502210a787c41a6"><param name="Name" value="Color(uint32_t num)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a326ee7825c4610316ade845a0bc04eaf"><param name="Name" value="Color(uint8_t r, uint8_t g, uint8_t b, uint8_t w)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#a88321436a1a22cbe4bdfc6071292ec0a"><param name="Name" value="ColorCorrection"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a5baa97eaa06bfc44647d2420a1c613b2"><param name="Name" value="ConnectCB"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a2fa00dff2714a2a3898086716a29c0d6"><param name="Name" value="CoolWhiteFluorescent"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html"><param name="Name" value="CountdownTimer"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#a4d930a016b5118d0a5fc4e8ff04f668f"><param name="Name" value="CountdownTimer()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#a063ec0ed50acbd662071121338dd0509"><param name="Name" value="CountdownTimer(uint32_t ms)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html"><param name="Name" value="CountdownTimer"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#a4d930a016b5118d0a5fc4e8ff04f668f"><param name="Name" value="CountdownTimer()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html"><param name="Name" value="CountdownTimer"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#a063ec0ed50acbd662071121338dd0509"><param name="Name" value="CountdownTimer(uint32_t ms)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html"><param name="Name" value="CountdownTimer"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#a2d673c7a79fc69a2bd480f40ffb65f3c"><param name="Name" value="countdown(uint16_t sec)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html"><param name="Name" value="CountdownTimer"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#a68daf8bef73e1544fd759f7ca29e0af4"><param name="Name" value="countdownMS(uint32_t ms)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html"><param name="Name" value="CountdownTimer"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#ae938bf04669e4db43d9793ec66f451d0"><param name="Name" value="countdown_ms(uint32_t ms)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html"><param name="Name" value="CountdownTimer"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#a3c03271b786ef9a0d43f0b2937fe8183"><param name="Name" value="expired()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html"><param name="Name" value="CountdownTimer"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#a639e0a8ae10bb025be52dfd4b4d481c7"><param name="Name" value="leftMs()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html"><param name="Name" value="CountdownTimer"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#a7b3f51afa536ffed772f1c62de543e43"><param name="Name" value="left_ms()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html"><param name="Name" value="CountdownTimer"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#a766d43746a33928f83b0c80e47c3da2c"><param name="Name" value="msTick()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html"><param name="Name" value="CountdownTimer"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#abdef253a32d022d0e075e3a99ee667a5"><param name="Name" value="reset()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html"><param name="Name" value="CountdownTimer"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#adc81e626332259b1811fdb9012efcb5c"><param name="Name" value="tick"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#ab4ff8fd05c2ba9195634de39d748e6d9"><param name="Name" value="DMABufferType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a1dc30dd0c974e4bf3d1ccc0ad417c89f"><param name="Name" value="DMAStatus"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a8b2b0cb241e0ba60c987091d86066e6b"><param name="Name" value="DMAStrip(uint16_t numPixels, uint16_t numPixelsPerDMA)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a5fa8997e084bd8d8958e79654ed7fccd"><param name="Name" value="DMAStrip(uint16_t numPixels, uint16_t numPixelsPerDMA, uint32_t *rawBuffer, uint32_t *fxBuffer, DMABufferType *dmaBuffer)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#addf1d00d1d50811aad0b18ea26c798d3"><param name="Name" value="DMA_START_CB"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#abe4bca40f34500b0ba0b9a163cbf8002"><param name="Name" value="DMA_STOP_CB"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a1dc30dd0c974e4bf3d1ccc0ad417c89fa2ba22e58ca17bb728d522bba36cf8350"><param name="Name" value="DONE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4aea06408c5ec417f208456c97fdd325f6"><param name="Name" value="DirectSunlight"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a60addf791fc630020a0b22b14cf642ef"><param name="Name" value="FullSpectrumFluorescent"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="_gamma_correction_8hpp.html"><param name="Name" value="GammaCorrection.hpp"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_gamma_correction_8hpp.html#ab3f7414200596bc9beda9557cd00f2ad"><param name="Name" value="gammaCorrectionLookup[256]"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="_gamma_correction_8hpp.html"><param name="Name" value="GammaCorrection.hpp"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="_gamma_correction_8hpp.html#a2bff5e5b65dc57f64e86a0768d7f778b"><param name="Name" value="gammaRawLookup[256]"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a423124da141863b87eecde65ee516412"><param name="Name" value="GrowLightFluorescent"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4ad16c1fc42d70cf5fba9ab09f3de26f60"><param name="Name" value="Halogen"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a3949bf103125b5848c60b23007640438"><param name="Name" value="HighNoonSun"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a1cba1f306dd29c60dc3dace0fab12a53"><param name="Name" value="HighPressureSodium"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a1dc30dd0c974e4bf3d1ccc0ad417c89faca69f96c768067fbff6c911ca87bccc9"><param name="Name" value="IN_PROGRESS"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_e_t_h_e_r_n_e_t.html"><param name="Name" value="JETHERNET"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html"><param name="Name" value="JETHERNET::EthernetHC"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html"><param name="Name" value="JETHERNET::EthernetHC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a6036a12d452cc14f70357bfdba6e2a68"><param name="Name" value="domainToIP(const char *domain, uint16_t timeoutMs)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html"><param name="Name" value="JETHERNET::EthernetHC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a92d9cc9e5308c2c635d6e97947140149"><param name="Name" value="enableDHCP(uint16_t timeoutMs)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html"><param name="Name" value="JETHERNET::EthernetHC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a40a80ea845fb029ca403eb106ed3e3d0"><param name="Name" value="enableDNS(NetIP dns)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html"><param name="Name" value="JETHERNET::EthernetHC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a06b567bffaf6eb147859edf317d4b9bb"><param name="Name" value="getConfig()=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html"><param name="Name" value="JETHERNET::EthernetHC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a58730e887e50ba72c7356657179ae7b9"><param name="Name" value="getFreeSocket()=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html"><param name="Name" value="JETHERNET::EthernetHC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a6e380cb6bb273af7aaac85f1df1de3ac"><param name="Name" value="init(void *)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html"><param name="Name" value="JETHERNET::EthernetHC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a816685c872acf0ef6864633c90488020"><param name="Name" value="msTick()=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html"><param name="Name" value="JETHERNET::EthernetHC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#aec53d829385f6ee0d0296af3943ffe4a"><param name="Name" value="phyLinkStatus()=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html"><param name="Name" value="JETHERNET::EthernetHC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a869154c83a1821b0738e13ae3f0d961f"><param name="Name" value="setConfig(NetConfig &amp;netConfig)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html"><param name="Name" value="JETHERNET::EthernetHC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a1e547d7e6984e2c800d7fecf0260d046"><param name="Name" value="waitForLink(uint16_t timeoutMs)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html"><param name="Name" value="JETHERNET::EthernetHC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a5f2760472e72efc27c79d83301c9412e"><param name="Name" value="~EthernetHC()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html"><param name="Name" value="JETHERNET::NetConfig"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html"><param name="Name" value="JETHERNET::NetConfig"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html#a8c31d1edc201aabb1ed0b0f7ee1be790"><param name="Name" value="cString(char *buf)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html"><param name="Name" value="JETHERNET::NetConfig"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html#acaecb870dd38076d47e3ace2cea2b738"><param name="Name" value="dhcpEnabled"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html"><param name="Name" value="JETHERNET::NetConfig"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html#a4834d9cd546a8cdd754de6aba2b83cc9"><param name="Name" value="dns"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html"><param name="Name" value="JETHERNET::NetConfig"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html#abd640ce8bf534dfed2edb6d4d30eb708"><param name="Name" value="gateway"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html"><param name="Name" value="JETHERNET::NetConfig"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html#a15633d6f722dc68b31dab9d8de300da7"><param name="Name" value="ip"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html"><param name="Name" value="JETHERNET::NetConfig"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html#a348d8f4705812bf0c808d4f692c4c1fe"><param name="Name" value="mac"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html"><param name="Name" value="JETHERNET::NetConfig"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html#a0a29b0b50f49a334107bc987557fb0e2"><param name="Name" value="subnet"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#ae1c1e097f01e141013dbee53ebeec7ab"><param name="Name" value="NetIP()=default"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a78458fcfe4a79e82d9855e2ad9621044"><param name="Name" value="NetIP(NetIP &amp;addr)=default"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#aa2075e36a3d56a6ad52d3a06946b9c9b"><param name="Name" value="NetIP(uint32_t ip)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a03deafaaa850d2e53e51f0049e764840"><param name="Name" value="NetIP(uint8_t n0, uint8_t n1, uint8_t n2, uint8_t n3)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#abf6814cc0fd7e20073cea1abdbc1e1a2"><param name="Name" value="cString(char *buf)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a2b107533f39fd496cc2e485a9ecc2f99"><param name="Name" value="num"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a4d3970e5ab85c1802a71022e4628b113"><param name="Name" value="operator!=(const NetIP &amp;rhs) const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a7ea22878ac717e2e2e1bb3cddbd62159"><param name="Name" value="operator=(const NetIP &amp;rhs)=default"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#ab3e8343d4b135803c689ba6243ed8e5d"><param name="Name" value="operator=(const uint32_t ip)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a7cf99bd3c7bf715c1769afc915af3da0"><param name="Name" value="operator==(const NetIP &amp;rhs) const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#af39e5551f77da937526feebef81baeb4"><param name="Name" value="operator[](uint8_t index)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a42698f2fadba42d38703e1603e64cb87"><param name="Name" value="operator[](uint8_t index) const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a232d117efc1173373972c819a0e48e64"><param name="Name" value="raw[4]"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html"><param name="Name" value="JETHERNET::NetMAC"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html"><param name="Name" value="JETHERNET::NetMAC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a3ff7e557caf600f75272648722c74bde"><param name="Name" value="NetMAC()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html"><param name="Name" value="JETHERNET::NetMAC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#ae0545f404e4f0b2786fb28a20297479e"><param name="Name" value="NetMAC(NetMAC &amp;addr)=default"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html"><param name="Name" value="JETHERNET::NetMAC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#ad786967113504c05bf4a79c5ee69073d"><param name="Name" value="NetMAC(uint64_t mac)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html"><param name="Name" value="JETHERNET::NetMAC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#aab9be044862c467ee9bfabc1a08d2ab4"><param name="Name" value="NetMAC(uint8_t n0, uint8_t n1, uint8_t n2, uint8_t n3, uint8_t n4, uint8_t n5)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html"><param name="Name" value="JETHERNET::NetMAC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a145d5c857df32f5cad1279217b9535cb"><param name="Name" value="cString(char *buf)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html"><param name="Name" value="JETHERNET::NetMAC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a981fc3ca441bef4f8e749f9a1ee294be"><param name="Name" value="num"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html"><param name="Name" value="JETHERNET::NetMAC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#ad3f3a3b4935ce2754608f5b9223d0dff"><param name="Name" value="operator!=(const NetMAC &amp;rhs) const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html"><param name="Name" value="JETHERNET::NetMAC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a88fdadad8df1cbfd9dff2e47501fc935"><param name="Name" value="operator=(const NetMAC &amp;rhs)=default"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html"><param name="Name" value="JETHERNET::NetMAC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#af7dcc6bf7f5847293ff77f43d8122726"><param name="Name" value="operator=(const uint32_t mac)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html"><param name="Name" value="JETHERNET::NetMAC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a9f29bc694d2e1708253c17030f86e82f"><param name="Name" value="operator==(const NetMAC &amp;rhs) const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html"><param name="Name" value="JETHERNET::NetMAC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a8a23080bf5843f9c247661ba5ba9f895"><param name="Name" value="operator[](uint8_t index)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html"><param name="Name" value="JETHERNET::NetMAC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a05e9675bc0ba6d5bcdc2b86b9c96ebcf"><param name="Name" value="operator[](uint8_t index) const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html"><param name="Name" value="JETHERNET::NetMAC"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#ab2d7fa28425227ed5f42f6dd29fa1fa0"><param name="Name" value="raw[6]"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html"><param name="Name" value="JETHERNET::NetSock"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html"><param name="Name" value="JETHERNET::NetSock"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#abced4845fbe84804cd64597c39f2b1b5"><param name="Name" value="close()=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html"><param name="Name" value="JETHERNET::NetSock"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#ad4fcf93b2ec7285a632c4b51777c0beb"><param name="Name" value="connectTCP(NetIP ip, uint16_t port)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html"><param name="Name" value="JETHERNET::NetSock"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#a5f4da6ea7d0538048a8e1e70f5d69ea0"><param name="Name" value="disconnect()=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html"><param name="Name" value="JETHERNET::NetSock"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#a41db618756cf90001a219180d152ecde"><param name="Name" value="isConnected() const =0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html"><param name="Name" value="JETHERNET::NetSock"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#abe1b9e145bdd796464e8666db6df511d"><param name="Name" value="open(NetIP ip, uint16_t port, SockConnectMode mode)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html"><param name="Name" value="JETHERNET::NetSock"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#ac352a31bb144160f2a060c2609cee259"><param name="Name" value="read(uint8_t *dataOut, uint16_t len)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html"><param name="Name" value="JETHERNET::NetSock"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#a9fa1b012c538e35f38780a1fd84f618e"><param name="Name" value="write(uint8_t *dataIn, uint16_t len)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html"><param name="Name" value="JETHERNET::NetSock"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#a9b8b34ac38e7cc54c2f54bf781d6d691"><param name="Name" value="~NetSock()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_e_t_h_e_r_n_e_t.html"><param name="Name" value="JETHERNET"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_e_t_h_e_r_n_e_t.html#a2bcff7d05aee5335790afea11e197ca1ac5e644af7e77a1d8c565037a46b76962"><param name="Name" value="RAWIP"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_e_t_h_e_r_n_e_t.html"><param name="Name" value="JETHERNET"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_e_t_h_e_r_n_e_t.html#a2bcff7d05aee5335790afea11e197ca1a5d07b94b0ac1f5024a8dc70adeefa6a0"><param name="Name" value="RAWMAC"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_e_t_h_e_r_n_e_t.html"><param name="Name" value="JETHERNET"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_e_t_h_e_r_n_e_t.html#a2bcff7d05aee5335790afea11e197ca1"><param name="Name" value="SockConnectMode"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_e_t_h_e_r_n_e_t.html"><param name="Name" value="JETHERNET"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_e_t_h_e_r_n_e_t.html#a2bcff7d05aee5335790afea11e197ca1ab136ef5f6a01d816991fe3cf7a6ac763"><param name="Name" value="TCP"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_e_t_h_e_r_n_e_t.html"><param name="Name" value="JETHERNET"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_e_t_h_e_r_n_e_t.html#a2bcff7d05aee5335790afea11e197ca1af5ef036b4d8b630721e51fe23489fbc9"><param name="Name" value="UDP"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a53ce5313bbe5a9fa9a39f9b5faefb1c0"><param name="Name" value="Color()=default"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#afbc287e5115aab0ff3dcc64d0f4d5391"><param name="Name" value="Color(Color &amp;c)=default"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a15b83c035d344735531ade65f2c57cfc"><param name="Name" value="Color(ColorCorrection col)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a10bdce92283f426a106a3ba1ad875815"><param name="Name" value="Color(TemperatureCorrection col)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a8f540f21fb67172ec502210a787c41a6"><param name="Name" value="Color(uint32_t num)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a326ee7825c4610316ade845a0bc04eaf"><param name="Name" value="Color(uint8_t r, uint8_t g, uint8_t b, uint8_t w)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#abc9619ad0b5523617ab8073e9d75a6b7"><param name="Name" value="b"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a53b60a1180be5dca5879493599c3c924"><param name="Name" value="g"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a7697370bee3952e1fd6d7fdad83908fc"><param name="Name" value="num"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a136608a222544e27cceed578afc1a8e4"><param name="Name" value="operator uint32_t() const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a3a29afe4842aaf7bb3733cc7e5a286dc"><param name="Name" value="operator!=(const Color &amp;rhs) const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a2afcbba495c59be6a78af2512512243d"><param name="Name" value="operator!=(const uint32_t rhs) const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a5022c10f4f8a59b0340e944c406937f1"><param name="Name" value="operator=(const Color &amp;rhs)=default"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a6fae6a241287e82d46f0f177951f3ffe"><param name="Name" value="operator=(const uint32_t rhs)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#ac370745c0d987394fff68cec181eb3de"><param name="Name" value="operator==(const Color &amp;rhs) const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a8b79569fb8331fea30f92533d1848557"><param name="Name" value="operator==(const uint32_t rhs) const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a860ffe1eb2aeeae750675947fc463aa0"><param name="Name" value="operator[](uint8_t n)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a526e7f2d694ded86e47ddebcef3a4f67"><param name="Name" value="operator[](uint8_t n) const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a450cffa91c156cbc2fdd5f4dda74b9da"><param name="Name" value="r"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#ac2553ef03f3016ee30a946ff5ab45720"><param name="Name" value="raw[4]"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html"><param name="Name" value="JLED::Color"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a9f7236e92911fde997f9ed1a2ab9bd0f"><param name="Name" value="w"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a831caf76bae7b62254b78db9eb3bfcab"><param name="Name" value="ASSERT_STRIPBASE_IS_DERIVED(StripBase, StripType)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#ab4ff8fd05c2ba9195634de39d748e6d9"><param name="Name" value="DMABufferType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a1dc30dd0c974e4bf3d1ccc0ad417c89f"><param name="Name" value="DMAStatus"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a8b2b0cb241e0ba60c987091d86066e6b"><param name="Name" value="DMAStrip(uint16_t numPixels, uint16_t numPixelsPerDMA)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a5fa8997e084bd8d8958e79654ed7fccd"><param name="Name" value="DMAStrip(uint16_t numPixels, uint16_t numPixelsPerDMA, uint32_t *rawBuffer, uint32_t *fxBuffer, DMABufferType *dmaBuffer)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#addf1d00d1d50811aad0b18ea26c798d3"><param name="Name" value="DMA_START_CB"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#abe4bca40f34500b0ba0b9a163cbf8002"><param name="Name" value="DMA_STOP_CB"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a1dc30dd0c974e4bf3d1ccc0ad417c89fa2ba22e58ca17bb728d522bba36cf8350"><param name="Name" value="DONE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a1dc30dd0c974e4bf3d1ccc0ad417c89faca69f96c768067fbff6c911ca87bccc9"><param name="Name" value="IN_PROGRESS"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#ac24ab44d7861bce45a9ee44654641b43"><param name="Name" value="LEDBase"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a1dc30dd0c974e4bf3d1ccc0ad417c89fab476221b8068309c2b1d452cc08a1a98"><param name="Name" value="RESET_COMPLETE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a1dc30dd0c974e4bf3d1ccc0ad417c89fa76789c1bbf640954b22f3cdb385d5eb1"><param name="Name" value="RESET_IN_PROGRESS"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a1dc30dd0c974e4bf3d1ccc0ad417c89fa6d1e94ceaeb7b25d0a7389e64ce4fd71"><param name="Name" value="RESET_STARTED"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#ac00736fc8bd5eaae6884a992d20dd88c"><param name="Name" value="StripType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a4342943d5613b1d6ac825df4667e121a"><param name="Name" value="calcDMABufferSize(uint16_t numPixelsPerDMA)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#ab3f1cd5b527f012daed0749bed85a867"><param name="Name" value="colorToDMATiming(uint32_t col, DMABufferType **outPtr)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#abbf84f935eb53211fe9820cac8572427"><param name="Name" value="display()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#acc9b067468dc936fb97a1fe1a18dbd28"><param name="Name" value="displayInProgress()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#aaf795591d004a0973911b7746f909798"><param name="Name" value="onDMAInterrupt(bool halfCompleteInterrupt)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a53f20e369b479ff0b9fcab87ef3f3fd5"><param name="Name" value="setARR(uint16_t dmaARR)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a58f38287918b1f5881806e964bd571f9"><param name="Name" value="setDMABuffer(DMABufferType *dmaBuffer)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a6caaaf62378e2d337bd44b88575021d7"><param name="Name" value="setStartDMACallback(DMA_START_CB dmaStart)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#afc7f465649147dbe14fba97b47545cb1"><param name="Name" value="setStopDMACallback(DMA_STOP_CB dmaStart)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_g_r_b_strip_type.html"><param name="Name" value="JLED::GRBStripType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_g_r_b_strip_type.html"><param name="Name" value="JLED::GRBStripType"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_g_r_b_strip_type.html#a21d463a54c4ba01aa62389322cf8c3eb"><param name="Name" value="getOrderedBytes(uint32_t pixelRGB)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_g_r_b_strip_type.html"><param name="Name" value="JLED::GRBStripType"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_g_r_b_strip_type.html#a9f4087e8e6f5bee11810ce3a59f51b9f"><param name="Name" value="orderedToRGBW(uint32_t pixelGRB)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_rainbow_animation.html"><param name="Name" value="JLED::RainbowAnimation"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_rainbow_animation.html"><param name="Name" value="JLED::RainbowAnimation"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_rainbow_animation.html#a83561a655d4eceabcecbb9a5eaab03a9"><param name="Name" value="getName() final"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_rainbow_animation.html"><param name="Name" value="JLED::RainbowAnimation"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_rainbow_animation.html#a2ed34babd90ae40d517d2956e0832738"><param name="Name" value="run(StripDataInterface *strip) final"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_strip_animation.html"><param name="Name" value="JLED::StripAnimation"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_strip_animation.html"><param name="Name" value="JLED::StripAnimation"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_strip_animation.html#a80e33abe9e9800879e39d426f1c43ac8"><param name="Name" value="getName()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_strip_animation.html"><param name="Name" value="JLED::StripAnimation"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_strip_animation.html#add00a83a35cdb23b1ce96804188850f1"><param name="Name" value="run(StripDataInterface *strip)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html"><param name="Name" value="JLED::StripAnimationManager"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html"><param name="Name" value="JLED::StripAnimationManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#a265aa23667425ac3a9e0748d82f8d4d1"><param name="Name" value="AnimationType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html"><param name="Name" value="JLED::StripAnimationManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#a265aa23667425ac3a9e0748d82f8d4d1a25733f09ce6beaa7c08b8d6bd94fe436"><param name="Name" value="NONE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html"><param name="Name" value="JLED::StripAnimationManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#a265aa23667425ac3a9e0748d82f8d4d1a35f33dcd33c5a851a76446aa445dc608"><param name="Name" value="RAINBOW"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html"><param name="Name" value="JLED::StripAnimationManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#af13cdd46976b65b75a71e15092717ddc"><param name="Name" value="StripAnimationManager(AnimationType animType=NONE)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html"><param name="Name" value="JLED::StripAnimationManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#a265aa23667425ac3a9e0748d82f8d4d1aa6442bd8d08d961a27fa5b5be75b5cf6"><param name="Name" value="TEST"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html"><param name="Name" value="JLED::StripAnimationManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#ac0e169b0c9ba3fc90d2d252466198499"><param name="Name" value="activeAnimation"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html"><param name="Name" value="JLED::StripAnimationManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#ab4ac276f2bba07e746cdd73834d50e0b"><param name="Name" value="animInst"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html"><param name="Name" value="JLED::StripAnimationManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#ada84980279994ad204c31d4ecb46596e"><param name="Name" value="animTypes[]"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html"><param name="Name" value="JLED::StripAnimationManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#a16b91141784fe247106ab552fbdce2b3"><param name="Name" value="getAnimationTypeFromName(std::string_view name)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html"><param name="Name" value="JLED::StripAnimationManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#add21fc6eff78c43e09ba245aa33cea70"><param name="Name" value="getAnimationTypes()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html"><param name="Name" value="JLED::StripAnimationManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#aa010399e03dd329528c9b41ea79a941a"><param name="Name" value="getName()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html"><param name="Name" value="JLED::StripAnimationManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#a44ff29f5ab94702376ce38fbe305ffc2"><param name="Name" value="numAnimTypes"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html"><param name="Name" value="JLED::StripAnimationManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#ab738ada47464cb8b42a6b78acba821eb"><param name="Name" value="run(StripDataInterface *strip)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html"><param name="Name" value="JLED::StripAnimationManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#acddf7f35ea0a35f7a1225576533086eb"><param name="Name" value="setAnimationType(AnimationType anim)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html"><param name="Name" value="JLED::StripAnimationManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#abf758862fc8bb3c8986be8c9bd096685"><param name="Name" value="setAnimationTypeFromName(std::string_view name)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#aea71ef37bc2c5867dba3ecf6d1b780a3"><param name="Name" value="LEDBase"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a5db5c1570963143f57dfa58171d66b2e"><param name="Name" value="StripBuilder(StripBase *strip)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a5b6d3571008c5ea9c8274ee8ff3ec6fd"><param name="Name" value="StripType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a9a3934a45eca5f0cb11742d6541a75e4"><param name="Name" value="build()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#ad19cc3a14d4213c9f523a9bf5d8ac071"><param name="Name" value="setAll(uint32_t color)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#aa634f8fb60f9fa53a272dcdd7760622a"><param name="Name" value="setBrightness(uint8_t brightness)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a776c2cf6461bc3f6420af9017b5dae84"><param name="Name" value="setColorCorrection(ColorCorrection cc)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#ad016ffc01d5608f0ca43d12345380af7"><param name="Name" value="setEffect()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a6f398cb634e2c37cde2b4a63f6e310b1"><param name="Name" value="setGammaCorrection(bool on)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#aae64d7bd41f12903efa3f4e6f6c5aecc"><param name="Name" value="setMode()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a87b84f3b9e552e0e4d0a19b7ad8fcfb0"><param name="Name" value="setPhysicalPowerCB(typename LEDBase::PhysicalPowerCB cb)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a48f2b0445c586b70f01ef1249d1f4705"><param name="Name" value="setPower(bool powerOn)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a91fd5bc3b39c3c01297b02a89944ccd4"><param name="Name" value="setStaticColor(uint32_t color)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a2e3aa936bc4efe29deecd2be7490f667"><param name="Name" value="setTemperatureCorrection(TemperatureCorrection tc)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_test_animation.html"><param name="Name" value="JLED::TestAnimation"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_test_animation.html"><param name="Name" value="JLED::TestAnimation"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_test_animation.html#a564000523514486bb2c69f642ce0bd21"><param name="Name" value="getName() final"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_test_animation.html"><param name="Name" value="JLED::TestAnimation"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_test_animation.html#a0644525622e3f20d9ca5d3fd0eaa42ef"><param name="Name" value="run(StripDataInterface *strip) final"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a3f2bfa857155d086a4163c2a023576a4"><param name="Name" value="ASSERT_STRIPTYPE_IS_DERIVED(_StripType)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#aca3119170e63bb7f52cc788309cce308"><param name="Name" value="PhysicalPowerCB"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a083d751721c14d8266637ebf50c47a7e"><param name="Name" value="StripType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a183f1acfeee6544d1d5471c23de7b900"><param name="Name" value="WS28xxStrip(uint16_t numPixels, uint32_t *rawBuffer, uint32_t *fxBuffer)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a2d1c10d2fd66cbb2447b9eebd7857775"><param name="Name" value="WS28xxStrip(uint16_t numPixels=0)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a7126b30a4a5cf2cab29a0f83082e25f5"><param name="Name" value="begin() override"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a8e0438bf8da5cb413d4a4790ce63b4cd"><param name="Name" value="beginFxBuffer()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#ae9d91e59eaa457dbc31a31beada8fbe8"><param name="Name" value="beginRawBuffer()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#aa897b6ec4e5e08401af745745c5e7435"><param name="Name" value="display()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a30985eebe68bb6a6f9f37b9e8be25c8a"><param name="Name" value="end() override"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a8da86f5d07b8cbd8ee25ff9bcd7757a0"><param name="Name" value="endFxBuffer()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a1a8e256e4658a235be0223427eee0ec1"><param name="Name" value="endRawBuffer()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#ac33053f38132be683868eb1b3d14f00a"><param name="Name" value="fxBuffer"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#aa641bacc8024c320520643e8d2472a1a"><param name="Name" value="getBrightness() const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a58947a451d389427fd55ca49838d936d"><param name="Name" value="getColorCorrection()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a905949f887557113aecd12641ffad06c"><param name="Name" value="getEffect() const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a37b8c731fb966bb65cb0773b6d6e1c25"><param name="Name" value="getGammaCorrection()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a61b1ab1e8df157f227288048015bc20b"><param name="Name" value="getMode() const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a5543638a11565c1a1de22376d1f81fdf"><param name="Name" value="getNumPixels() const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a22fea4e89fe43ee80cb034b6e4f740f9"><param name="Name" value="getPower() const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a360fa6d428c0914d5884cda345671fcb"><param name="Name" value="getStaticColor()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a1bdefc29b8b9d32de0c6e9c841aa57fb"><param name="Name" value="getStripState()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#ad16bca32c38adb291362759d0342436a"><param name="Name" value="getTemperatureCorrection()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a5f5a47fd216b1f902575b8ecf15f2f43"><param name="Name" value="operator[](uint16_t index)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a7ad712c5b2fec366fd9efcd00c65bdb0"><param name="Name" value="operator[](uint16_t index) const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a42b0ca298fafd6afd9b3edbc6af270af"><param name="Name" value="rawBuffer"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#ae29183f24877138f1ed50ade23b7a3d8"><param name="Name" value="setAll(uint32_t color)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a52af5c69234b5ed2e2072e93c66ba572"><param name="Name" value="setBrightness(uint8_t brightness)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a0b6010d460d73643b99301661a7c15f2"><param name="Name" value="setColorCorrection(ColorCorrection cc)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a95cee1122988a80c66b1b1eea3e88875"><param name="Name" value="setEffect(std::string_view name)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a3856ed1ba1972f075306cd0277656bcc"><param name="Name" value="setGammaCorrection(bool on)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#ac46e3a5007420b69060450a3b821c9f3"><param name="Name" value="setMode()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#adb026c75e20f9d3e56bf998b0a58e2c8"><param name="Name" value="setPhysicalPowerCB(PhysicalPowerCB cb)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a537bded9bbeab068029ee25ed219a442"><param name="Name" value="setPixelBuffers(uint32_t *rawBuffer, uint32_t *fxBuffer)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#ac81622c3ac40b249cf3328ac2a90212c"><param name="Name" value="setPower(bool powerOn)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a71c5156bb0c2221c811b4430af9b8a11"><param name="Name" value="setStaticColor(uint32_t color)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a4d8c7c780dc2d62b82866152047bf273"><param name="Name" value="setTemperatureCorrection(TemperatureCorrection tc)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a6c1d750c62624ee215fd5c3bea4d1a83"><param name="Name" value="update()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html"><param name="Name" value="JLED::WSStripState"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html"><param name="Name" value="JLED::WSStripState"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html#a834a00dd7ac6f502170b3b3b66570ecd"><param name="Name" value="animation"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html"><param name="Name" value="JLED::WSStripState"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html#accae5ea75f69a22b5d39cf75248c4d27"><param name="Name" value="brightness"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html"><param name="Name" value="JLED::WSStripState"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html#a3763ab849f75e2f5eb2cb257597d4034"><param name="Name" value="color"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html"><param name="Name" value="JLED::WSStripState"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html#a08495c43b03b10a74f0874d28991ee98"><param name="Name" value="colorCorrection"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html"><param name="Name" value="JLED::WSStripState"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html#ad61a621030d3df3cd67c20c4244ed5f0"><param name="Name" value="gammaEnabled"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html"><param name="Name" value="JLED::WSStripState"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html#a85e4ab42d15c9aeeee4c40117395eaa4"><param name="Name" value="operator!=(const WSStripState &amp;other)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html"><param name="Name" value="JLED::WSStripState"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html#afab8d9c9d9c637fa1d7944313493a5a7"><param name="Name" value="operator==(const WSStripState &amp;other)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html"><param name="Name" value="JLED::WSStripState"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html#a21759ab4d004cce59cebb5c103a5881d"><param name="Name" value="powerOn"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html"><param name="Name" value="JLED::WSStripState"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html#ac4907e9aa75b767f829c6b82409bd819"><param name="Name" value="tempCorrection"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html"><param name="Name" value="JLED::WSStripType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html"><param name="Name" value="JLED::WSStripType"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#af88a642674e64b17df6ce178500e0af3"><param name="Name" value="bitsPerPixel"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html"><param name="Name" value="JLED::WSStripType"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#a136d4f17667d476a0561a215d6b1506f"><param name="Name" value="bytesPerPixel"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html"><param name="Name" value="JLED::WSStripType"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#abc958717bb04d76f594dad0b509ae4e9"><param name="Name" value="oneHighNs"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html"><param name="Name" value="JLED::WSStripType"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#af485b4f49f4d754855c6287a1555216b"><param name="Name" value="pwmPeriodNs"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html"><param name="Name" value="JLED::WSStripType"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#ab4544e18dd5a54e5997766aa65002335"><param name="Name" value="zeroHighNs"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a1e252096403a340317b6321905c6feab"><param name="Name" value="BlackLightFluorescent"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4ae966b2e6caa2b8a2f49802e3baf6fbf2"><param name="Name" value="Candle"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4ac29bb2bc26516672fb271be2d3e94197"><param name="Name" value="CarbonArc"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a0a12b38dbac82b338a866cdd48cfd0cf"><param name="Name" value="ClearBlueSky"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#a88321436a1a22cbe4bdfc6071292ec0a"><param name="Name" value="ColorCorrection"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a2fa00dff2714a2a3898086716a29c0d6"><param name="Name" value="CoolWhiteFluorescent"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4aea06408c5ec417f208456c97fdd325f6"><param name="Name" value="DirectSunlight"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a60addf791fc630020a0b22b14cf642ef"><param name="Name" value="FullSpectrumFluorescent"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a423124da141863b87eecde65ee516412"><param name="Name" value="GrowLightFluorescent"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4ad16c1fc42d70cf5fba9ab09f3de26f60"><param name="Name" value="Halogen"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a3949bf103125b5848c60b23007640438"><param name="Name" value="HighNoonSun"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a1cba1f306dd29c60dc3dace0fab12a53"><param name="Name" value="HighPressureSodium"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4ac3a9df0dbbdebff52f16e863152e6f72"><param name="Name" value="MercuryVapor"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a3123a56983e6b146a593f59812fbd699"><param name="Name" value="MetalHalide"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a7fc8ed40dc9c18fa1ea151eaf1dffbe4"><param name="Name" value="OvercastSky"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a38d0f7adda90745b63d6d4ce4bf905da"><param name="Name" value="SodiumVapor"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a61c79af6a3cd29d8b07c8b4de4103667"><param name="Name" value="StandardFluorescent"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4"><param name="Name" value="TemperatureCorrection"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a21ef7bd88384a1a51ea0305358fd0217"><param name="Name" value="Tungsten100W"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4aee88bbc96721f92bfce1e571ecf223fa"><param name="Name" value="Tungsten40W"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a1014e0b7bef22636812497a1ba50b930"><param name="Name" value="Uncorrected"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#a88321436a1a22cbe4bdfc6071292ec0aa1014e0b7bef22636812497a1ba50b930"><param name="Name" value="Uncorrected"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#a88321436a1a22cbe4bdfc6071292ec0aabae71e8715ff83748c59a8d4c6c50286"><param name="Name" value="WS2815"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#a37705cc67d6d733de6107a730a585829"><param name="Name" value="WS2815Strip"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#a57412369bef60f93939ebdbe29ae9348"><param name="Name" value="WS2815StripType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html"><param name="Name" value="JLED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a804cccb032108b98f8e743f16bac76ab"><param name="Name" value="WarmFluorescent"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html"><param name="Name" value="JMQTT"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html"><param name="Name" value="JMQTT::Client"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html"><param name="Name" value="JMQTT::Client"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a5baa97eaa06bfc44647d2420a1c613b2"><param name="Name" value="ConnectCB"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html"><param name="Name" value="JMQTT::Client"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#afdd270cfe93363df3d9076452ace76fa"><param name="Name" value="MessageCB"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html"><param name="Name" value="JMQTT::Client"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a32cc54d1b9285f0ba99dfabda2a03bd5"><param name="Name" value="connect(JETHERNET::NetSock &amp;sock, const ClientConfig config)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html"><param name="Name" value="JMQTT::Client"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a3581c3e4959d19a43f30b8eb70e69493"><param name="Name" value="disconnect()=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html"><param name="Name" value="JMQTT::Client"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a70dab29288dc7daad9b1c1587e569441"><param name="Name" value="isConnected()=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html"><param name="Name" value="JMQTT::Client"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a6c3f3a90dbafa7887cc8bd5d21b6eaba"><param name="Name" value="isTopicMatched(string_view topic, string_view filter) final"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html"><param name="Name" value="JMQTT::Client"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a8e4b70bb656d1d7b5ba4f11d7e64e5aa"><param name="Name" value="publish(Message msg)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html"><param name="Name" value="JMQTT::Client"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a4c93aa930c740dcd179aabf654c13533"><param name="Name" value="publish(string topic, string message, QOS qos=QOS::QOS0) final"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html"><param name="Name" value="JMQTT::Client"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#ac2c1c3f2c2ac1938661dbaae2ecbf39c"><param name="Name" value="reconnect()=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html"><param name="Name" value="JMQTT::Client"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a145db1bc71e86f58867c58c47c5e0ac1"><param name="Name" value="registerMessageReceiver(MQTTMessageReceiver *recv)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html"><param name="Name" value="JMQTT::Client"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a9c50f65617e65d5e863a984d94890a59"><param name="Name" value="setConnectCallback(ConnectCB func)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html"><param name="Name" value="JMQTT::Client"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a1fbf4f35c4d0e9bfa93d2d3f3d3c86a4"><param name="Name" value="setMessageCallback(MessageCB func)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html"><param name="Name" value="JMQTT::Client"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a79cfc7f5edd6cdb8382202ab4f573dd0"><param name="Name" value="subscribe(string_view topic, MQTTMessageReceiver *recv, QOS qos=QOS::QOS0)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html"><param name="Name" value="JMQTT::Client"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a61f9bb3e61ba5fa6e516e2b5729074be"><param name="Name" value="subscribe(string_view topic, QOS qos=QOS::QOS0)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html"><param name="Name" value="JMQTT::Client"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#aa04cc45d722283c9e871980f4d1a27c1"><param name="Name" value="update(uint16_t timeoutMs)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html"><param name="Name" value="JMQTT::Client"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a75de2ea57ef30e60bc7fbd6350e47a1d"><param name="Name" value="~Client()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html"><param name="Name" value="JMQTT::ClientConfig"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html"><param name="Name" value="JMQTT::ClientConfig"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html#a6da016f97b0800325683bfae4d5e1cb0"><param name="Name" value="brokerIP"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html"><param name="Name" value="JMQTT::ClientConfig"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html#aa879edf93bc829164b9724b092c77669"><param name="Name" value="brokerPort"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html"><param name="Name" value="JMQTT::ClientConfig"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html#afe121029b64aeb950a7b4ca28eeb2d3a"><param name="Name" value="clientName"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html"><param name="Name" value="JMQTT::ClientConfig"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html#a750576b79628cbcd0297c4e3ebf5ac73"><param name="Name" value="password"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html"><param name="Name" value="JMQTT::ClientConfig"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html#a266098173864ed535b7d368fbf18112b"><param name="Name" value="username"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html"><param name="Name" value="JMQTT::ClientConfig"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html#adaf4490b2a554690a8b155c3f0683dd5"><param name="Name" value="version"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_home_assistant_device.html"><param name="Name" value="JMQTT::HomeAssistantDevice"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver.html"><param name="Name" value="JMQTT::MQTTMessageReceiver"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver.html"><param name="Name" value="JMQTT::MQTTMessageReceiver"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver.html#ac85356f79c66d459d784515be33d6743"><param name="Name" value="onMessage(Client &amp;, const Message &amp;)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver.html"><param name="Name" value="JMQTT::MQTTMessageReceiver"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver.html#a46fdd685ce6d6b0f8c64eee2214c9257"><param name="Name" value="signal(OnMessageData data) final"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_message.html"><param name="Name" value="JMQTT::Message"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_message.html"><param name="Name" value="JMQTT::Message"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_message.html#ae6ff5a1208f6ebbdcfe5da7332daeb11"><param name="Name" value="operator string() const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_message.html"><param name="Name" value="JMQTT::Message"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_message.html#a8b052e26ae6631e381d29cabdd07d384"><param name="Name" value="payload"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_message.html"><param name="Name" value="JMQTT::Message"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_message.html#a20c27d887cf1ff51e4b65c5f6f32cf5e"><param name="Name" value="qos"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_message.html"><param name="Name" value="JMQTT::Message"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_message.html#a1f5f5601ec0d1b2d5b96d8c2ccfa99c2"><param name="Name" value="topic"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_on_message_data.html"><param name="Name" value="JMQTT::OnMessageData"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_on_message_data.html"><param name="Name" value="JMQTT::OnMessageData"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_on_message_data.html#abf011d01abaa7d6558721acfdc13de46"><param name="Name" value="client"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_on_message_data.html"><param name="Name" value="JMQTT::OnMessageData"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_on_message_data.html#a96aa267666f5ede3e25c7c4f5444cc93"><param name="Name" value="message"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html"><param name="Name" value="JMQTT::W5500MqttNetwork"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html"><param name="Name" value="JMQTT::W5500MqttNetwork"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#aca47fb04224edb2de5e283d78d6ec174"><param name="Name" value="W5500MqttNetwork()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html"><param name="Name" value="JMQTT::W5500MqttNetwork"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#a1f8ac87b3170cfdae999e40ce2d818d4"><param name="Name" value="W5500MqttNetwork(int socketNum)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html"><param name="Name" value="JMQTT::W5500MqttNetwork"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#a4d02403adcff198cdaa44c1e7f91bbaf"><param name="Name" value="connect(const char *hostname, uint16_t port)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html"><param name="Name" value="JMQTT::W5500MqttNetwork"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#a9192f60f83f6d5f5d7ae7ccb34cfea6b"><param name="Name" value="connect(uint8_t *ip, uint16_t port)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html"><param name="Name" value="JMQTT::W5500MqttNetwork"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#aa80e6b76bfb01c241ab91604714042cc"><param name="Name" value="disconnect()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html"><param name="Name" value="JMQTT::W5500MqttNetwork"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#a41a09a8fd79d62d52f5ce0ff4d2e2723"><param name="Name" value="isConnected()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html"><param name="Name" value="JMQTT::W5500MqttNetwork"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#a08e3a3faead9d84bddd16177baa8574c"><param name="Name" value="read(unsigned char *buffer, int len, int timeout_ms)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html"><param name="Name" value="JMQTT::W5500MqttNetwork"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#aee3fe0f042a9ed67d21ae0cb49355468"><param name="Name" value="setSocket(int socketNum)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html"><param name="Name" value="JMQTT::W5500MqttNetwork"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#a914bbdc5c0561d9938a3bf87014845d2"><param name="Name" value="socketNum"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html"><param name="Name" value="JMQTT::W5500MqttNetwork"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#a0614007fa4c8d9602647510fe732be38"><param name="Name" value="write(unsigned char *buffer, int len, int timeout)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html"><param name="Name" value="JMQTT"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html#ad2b6f21f1fd9d7e8d6be0b4eeb30fc43aa1f18342e0d9cf4895a44aacce1ca57d"><param name="Name" value="MQTT3"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html"><param name="Name" value="JMQTT"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html#ad2b6f21f1fd9d7e8d6be0b4eeb30fc43a80b2283e2aabba0c02ae6f3dafa6b33a"><param name="Name" value="MQTT311"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html"><param name="Name" value="JMQTT"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html#ad2b6f21f1fd9d7e8d6be0b4eeb30fc43ad50ad0b9201edf6806fafa17de7e42d8"><param name="Name" value="MQTT5"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html"><param name="Name" value="JMQTT"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html#ad2b6f21f1fd9d7e8d6be0b4eeb30fc43"><param name="Name" value="MQTTVersion"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html"><param name="Name" value="JMQTT"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html#ae20074947d69a428122e13962b0b54e3"><param name="Name" value="QOS"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html"><param name="Name" value="JMQTT"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html#ae20074947d69a428122e13962b0b54e3a065532b760e1ff433556caf8cff11819"><param name="Name" value="QOS0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html"><param name="Name" value="JMQTT"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html#ae20074947d69a428122e13962b0b54e3a42c6763919390c440401d176611e39fa"><param name="Name" value="QOS1"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html"><param name="Name" value="JMQTT"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html#ae20074947d69a428122e13962b0b54e3a4cc41cf3d090303c0e5d9e0bcb842165"><param name="Name" value="QOS2"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html"><param name="Name" value="JMQTT"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html#a2acd0c0fe48ba1491c3f74f1c17a9bd1"><param name="Name" value="W5500MqttClient"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#ac24ab44d7861bce45a9ee44654641b43"><param name="Name" value="LEDBase"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#ac24ab44d7861bce45a9ee44654641b43"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#aea71ef37bc2c5867dba3ecf6d1b780a3"><param name="Name" value="LEDBase"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#aea71ef37bc2c5867dba3ecf6d1b780a3"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html#ad2b6f21f1fd9d7e8d6be0b4eeb30fc43a80b2283e2aabba0c02ae6f3dafa6b33a"><param name="Name" value="MQTT311"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html#ad2b6f21f1fd9d7e8d6be0b4eeb30fc43aa1f18342e0d9cf4895a44aacce1ca57d"><param name="Name" value="MQTT3"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html#ad2b6f21f1fd9d7e8d6be0b4eeb30fc43ad50ad0b9201edf6806fafa17de7e42d8"><param name="Name" value="MQTT5"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="_m_q_t_t_interface_8cpp.html#a86d500a34c624c2cae56bc25a31b12f3"><param name="Name" value="MQTTInterface.cpp"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html#ad2b6f21f1fd9d7e8d6be0b4eeb30fc43"><param name="Name" value="MQTTVersion"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4ac3a9df0dbbdebff52f16e863152e6f72"><param name="Name" value="MercuryVapor"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#afdd270cfe93363df3d9076452ace76fa"><param name="Name" value="MessageCB"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a3123a56983e6b146a593f59812fbd699"><param name="Name" value="MetalHalide"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#a265aa23667425ac3a9e0748d82f8d4d1a25733f09ce6beaa7c08b8d6bd94fe436"><param name="Name" value="NONE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#ae1c1e097f01e141013dbee53ebeec7ab"><param name="Name" value="NetIP()=default"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a78458fcfe4a79e82d9855e2ad9621044"><param name="Name" value="NetIP(NetIP &amp;addr)=default"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#aa2075e36a3d56a6ad52d3a06946b9c9b"><param name="Name" value="NetIP(uint32_t ip)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a03deafaaa850d2e53e51f0049e764840"><param name="Name" value="NetIP(uint8_t n0, uint8_t n1, uint8_t n2, uint8_t n3)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a3ff7e557caf600f75272648722c74bde"><param name="Name" value="NetMAC()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#ae0545f404e4f0b2786fb28a20297479e"><param name="Name" value="NetMAC(NetMAC &amp;addr)=default"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#ad786967113504c05bf4a79c5ee69073d"><param name="Name" value="NetMAC(uint64_t mac)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#aab9be044862c467ee9bfabc1a08d2ab4"><param name="Name" value="NetMAC(uint8_t n0, uint8_t n1, uint8_t n2, uint8_t n3, uint8_t n4, uint8_t n5)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a7fc8ed40dc9c18fa1ea151eaf1dffbe4"><param name="Name" value="OvercastSky"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#aca3119170e63bb7f52cc788309cce308"><param name="Name" value="PhysicalPowerCB"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html#ae20074947d69a428122e13962b0b54e3a065532b760e1ff433556caf8cff11819"><param name="Name" value="QOS0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html#ae20074947d69a428122e13962b0b54e3a42c6763919390c440401d176611e39fa"><param name="Name" value="QOS1"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html#ae20074947d69a428122e13962b0b54e3a4cc41cf3d090303c0e5d9e0bcb842165"><param name="Name" value="QOS2"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html#ae20074947d69a428122e13962b0b54e3"><param name="Name" value="QOS"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#a265aa23667425ac3a9e0748d82f8d4d1a35f33dcd33c5a851a76446aa445dc608"><param name="Name" value="RAINBOW"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_e_t_h_e_r_n_e_t.html#a2bcff7d05aee5335790afea11e197ca1ac5e644af7e77a1d8c565037a46b76962"><param name="Name" value="RAWIP"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_e_t_h_e_r_n_e_t.html#a2bcff7d05aee5335790afea11e197ca1a5d07b94b0ac1f5024a8dc70adeefa6a0"><param name="Name" value="RAWMAC"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a1dc30dd0c974e4bf3d1ccc0ad417c89fab476221b8068309c2b1d452cc08a1a98"><param name="Name" value="RESET_COMPLETE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a1dc30dd0c974e4bf3d1ccc0ad417c89fa76789c1bbf640954b22f3cdb385d5eb1"><param name="Name" value="RESET_IN_PROGRESS"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a1dc30dd0c974e4bf3d1ccc0ad417c89fa6d1e94ceaeb7b25d0a7389e64ce4fd71"><param name="Name" value="RESET_STARTED"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_signal_listener.html"><param name="Name" value="SignalListener"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_signal_listener.html"><param name="Name" value="SignalListener&lt; void, OnMessageData &gt;"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_signal_listener.html"><param name="Name" value="SignalListener&lt; void, OnMessageData &gt;"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_signal_listener.html#a9e60c4e34c3072699a58599dac85d546"><param name="Name" value="signal(OnMessageData)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_signal_listener.html#a9e60c4e34c3072699a58599dac85d546"><param name="Name" value="SignalListener"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_e_t_h_e_r_n_e_t.html#a2bcff7d05aee5335790afea11e197ca1"><param name="Name" value="SockConnectMode"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a38d0f7adda90745b63d6d4ce4bf905da"><param name="Name" value="SodiumVapor"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a61c79af6a3cd29d8b07c8b4de4103667"><param name="Name" value="StandardFluorescent"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#af13cdd46976b65b75a71e15092717ddc"><param name="Name" value="StripAnimationManager(AnimationType animType=NONE)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="_strip_animation_manager_8hpp.html#aabbf02971b8d053e45eedbeafa3f68f7"><param name="Name" value="StripAnimationManager.hpp"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a5db5c1570963143f57dfa58171d66b2e"><param name="Name" value="StripBuilder(StripBase *strip)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html"><param name="Name" value="StripDataInterface"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html"><param name="Name" value="StripDataInterface"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html#a01c3454918738ff53490d7a77ca5f459"><param name="Name" value="begin()=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html"><param name="Name" value="StripDataInterface"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html#a5df3ba2988da7d8aa4aaf9bb0a908e5d"><param name="Name" value="end()=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html"><param name="Name" value="StripDataInterface"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html#a06b01eb70b230a919ba4b5c9112249a8"><param name="Name" value="getNumPixels() const =0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html"><param name="Name" value="StripDataInterface"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html#aac34584ced0d76b85e0eb983d4e72d6d"><param name="Name" value="operator[](uint16_t index) const =0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html"><param name="Name" value="StripDataInterface"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html#add2089274c4622733d4b84a6d8201caa"><param name="Name" value="operator[](uint16_t index)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html"><param name="Name" value="StripDataInterface"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html#a67817254169c2c5d43166fc55740ac32"><param name="Name" value="setAll(uint32_t color)=0"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a7925af8254b51d5034a316fddef18c9f"><param name="Name" value="StripIterator()=default"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#ae596ac0ca0c33095537d80cc738a78e4"><param name="Name" value="StripIterator(const StripIterator &amp;other)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a5b7e00d8ed0cc08de75e2a170c1b0ba9"><param name="Name" value="StripIterator(pointer _data)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a68af6cea1d42c70fbb658f55e90d5551"><param name="Name" value="StripIterator(pointer _data, uint16_t _index)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a7925af8254b51d5034a316fddef18c9f"><param name="Name" value="StripIterator()=default"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#ae596ac0ca0c33095537d80cc738a78e4"><param name="Name" value="StripIterator(const StripIterator &amp;other)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a5b7e00d8ed0cc08de75e2a170c1b0ba9"><param name="Name" value="StripIterator(pointer _data)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a68af6cea1d42c70fbb658f55e90d5551"><param name="Name" value="StripIterator(pointer _data, uint16_t _index)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a325150fd2d1514143bc135d01616c928"><param name="Name" value="StripIterator_category"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#abd3a535cc566e979e408c72f2b8ac797"><param name="Name" value="const_ref"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#aa0d5cbda0db3c2375dbf18e3b767f1c5"><param name="Name" value="difference_type"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a7c399982644b29e5ef44d33667c90f59"><param name="Name" value="operator!=(const StripIterator &amp;other) const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a7f379e709ece2ac3ffd1b5b911a917b8"><param name="Name" value="operator*() const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#aab1b5da68c3f4a74121bac4e9f40db78"><param name="Name" value="operator++()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a370db6c6113fc3c101544d6ccd2781cc"><param name="Name" value="operator++(int)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#ae64cf43f87e7ed63fbf06af9a80ecacc"><param name="Name" value="operator--()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a8562cf2431fcb383ac052ec82ea254b3"><param name="Name" value="operator--(int)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#ae7e8cc068622ff3df88c12f163ba337f"><param name="Name" value="operator&lt;(const StripIterator &amp;other) const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a79188e7bb2e04d45b6fd061db5ac765e"><param name="Name" value="operator&lt;=(const StripIterator &amp;other) const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a47c8d7e32f86494b03e841055c4fe4a5"><param name="Name" value="operator=(const StripIterator &amp;other)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a096d50f09cfd9c9ed953aedaafbaf16d"><param name="Name" value="operator==(const StripIterator &amp;other) const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#ae5108fa80e276ea0e814cde56f9d52cf"><param name="Name" value="operator&gt;(const StripIterator &amp;other) const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a6b653640640147448c07b344cb184a19"><param name="Name" value="operator&gt;=(const StripIterator &amp;other) const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a175978c6d88531721269a0beda527c0c"><param name="Name" value="pointer"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html"><param name="Name" value="StripIterator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a1f36636deb2ba4330028716304df711b"><param name="Name" value="value_type"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a325150fd2d1514143bc135d01616c928"><param name="Name" value="StripIterator_category"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#ac00736fc8bd5eaae6884a992d20dd88c"><param name="Name" value="StripType"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#ac00736fc8bd5eaae6884a992d20dd88c"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a5b6d3571008c5ea9c8274ee8ff3ec6fd"><param name="Name" value="StripType"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a5b6d3571008c5ea9c8274ee8ff3ec6fd"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a083d751721c14d8266637ebf50c47a7e"><param name="Name" value="StripType"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a083d751721c14d8266637ebf50c47a7e"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="_strip_types_8hpp.html#ab189709710cedf5a51d42d9b00810c69"><param name="Name" value="StripTypes.hpp"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_e_t_h_e_r_n_e_t.html#a2bcff7d05aee5335790afea11e197ca1ab136ef5f6a01d816991fe3cf7a6ac763"><param name="Name" value="TCP"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#a265aa23667425ac3a9e0748d82f8d4d1aa6442bd8d08d961a27fa5b5be75b5cf6"><param name="Name" value="TEST"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4"><param name="Name" value="TemperatureCorrection"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a21ef7bd88384a1a51ea0305358fd0217"><param name="Name" value="Tungsten100W"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4aee88bbc96721f92bfce1e571ecf223fa"><param name="Name" value="Tungsten40W"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_e_t_h_e_r_n_e_t.html#a2bcff7d05aee5335790afea11e197ca1af5ef036b4d8b630721e51fe23489fbc9"><param name="Name" value="UDP"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="_m_q_t_t_interface_8cpp.html#a86d500a34c624c2cae56bc25a31b12f3"><param name="Name" value="UNUSED(x)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a1014e0b7bef22636812497a1ba50b930"><param name="Name" value="Uncorrected"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a1014e0b7bef22636812497a1ba50b930"><param name="Name" value="JLED"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#a88321436a1a22cbe4bdfc6071292ec0aa1014e0b7bef22636812497a1ba50b930"><param name="Name" value="Uncorrected"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#a88321436a1a22cbe4bdfc6071292ec0aa1014e0b7bef22636812497a1ba50b930"><param name="Name" value="JLED"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_m_q_t_t.html#a2acd0c0fe48ba1491c3f74f1c17a9bd1"><param name="Name" value="W5500MqttClient"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#aca47fb04224edb2de5e283d78d6ec174"><param name="Name" value="W5500MqttNetwork()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#a1f8ac87b3170cfdae999e40ce2d818d4"><param name="Name" value="W5500MqttNetwork(int socketNum)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#a88321436a1a22cbe4bdfc6071292ec0aabae71e8715ff83748c59a8d4c6c50286"><param name="Name" value="WS2815"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#a37705cc67d6d733de6107a730a585829"><param name="Name" value="WS2815Strip"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#a57412369bef60f93939ebdbe29ae9348"><param name="Name" value="WS2815StripType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a183f1acfeee6544d1d5471c23de7b900"><param name="Name" value="WS28xxStrip(uint16_t numPixels, uint32_t *rawBuffer, uint32_t *fxBuffer)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a2d1c10d2fd66cbb2447b9eebd7857775"><param name="Name" value="WS28xxStrip(uint16_t numPixels=0)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="_w_s28xx_strip_8hpp.html#ae34ebad0d15a0cf6b88c891700047ddf"><param name="Name" value="WS28xxStrip.hpp"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html"><param name="Name" value="WSStripType&lt; 3, ZeroHighNs, OneHighNs, PwmPeriodNs &gt;"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html"><param name="Name" value="WSStripType&lt; 3, ZeroHighNs, OneHighNs, PwmPeriodNs &gt;"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#af88a642674e64b17df6ce178500e0af3"><param name="Name" value="bitsPerPixel"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html"><param name="Name" value="WSStripType&lt; 3, ZeroHighNs, OneHighNs, PwmPeriodNs &gt;"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#a136d4f17667d476a0561a215d6b1506f"><param name="Name" value="bytesPerPixel"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html"><param name="Name" value="WSStripType&lt; 3, ZeroHighNs, OneHighNs, PwmPeriodNs &gt;"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#abc958717bb04d76f594dad0b509ae4e9"><param name="Name" value="oneHighNs"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html"><param name="Name" value="WSStripType&lt; 3, ZeroHighNs, OneHighNs, PwmPeriodNs &gt;"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#af485b4f49f4d754855c6287a1555216b"><param name="Name" value="pwmPeriodNs"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html"><param name="Name" value="WSStripType&lt; 3, ZeroHighNs, OneHighNs, PwmPeriodNs &gt;"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#ab4544e18dd5a54e5997766aa65002335"><param name="Name" value="zeroHighNs"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_j_l_e_d.html#ad8646c36e795f7e093254dacd8a88ed4a804cccb032108b98f8e743f16bac76ab"><param name="Name" value="WarmFluorescent"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#ac0e169b0c9ba3fc90d2d252466198499"><param name="Name" value="activeAnimation"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#ab4ac276f2bba07e746cdd73834d50e0b"><param name="Name" value="animInst"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#ada84980279994ad204c31d4ecb46596e"><param name="Name" value="animTypes[]"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html#a834a00dd7ac6f502170b3b3b66570ecd"><param name="Name" value="animation"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#abc9619ad0b5523617ab8073e9d75a6b7"><param name="Name" value="b"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a7126b30a4a5cf2cab29a0f83082e25f5"><param name="Name" value="begin() override"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html#a01c3454918738ff53490d7a77ca5f459"><param name="Name" value="begin()=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a8e0438bf8da5cb413d4a4790ce63b4cd"><param name="Name" value="beginFxBuffer()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#ae9d91e59eaa457dbc31a31beada8fbe8"><param name="Name" value="beginRawBuffer()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#af88a642674e64b17df6ce178500e0af3"><param name="Name" value="bitsPerPixel"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#af88a642674e64b17df6ce178500e0af3"><param name="Name" value="JLED::WSStripType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#af88a642674e64b17df6ce178500e0af3"><param name="Name" value="bitsPerPixel"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#af88a642674e64b17df6ce178500e0af3"><param name="Name" value="WSStripType&lt; 3, ZeroHighNs, OneHighNs, PwmPeriodNs &gt;"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html#accae5ea75f69a22b5d39cf75248c4d27"><param name="Name" value="brightness"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html#a6da016f97b0800325683bfae4d5e1cb0"><param name="Name" value="brokerIP"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html#aa879edf93bc829164b9724b092c77669"><param name="Name" value="brokerPort"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a9a3934a45eca5f0cb11742d6541a75e4"><param name="Name" value="build()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#a136d4f17667d476a0561a215d6b1506f"><param name="Name" value="bytesPerPixel"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#a136d4f17667d476a0561a215d6b1506f"><param name="Name" value="JLED::WSStripType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#a136d4f17667d476a0561a215d6b1506f"><param name="Name" value="bytesPerPixel"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#a136d4f17667d476a0561a215d6b1506f"><param name="Name" value="WSStripType&lt; 3, ZeroHighNs, OneHighNs, PwmPeriodNs &gt;"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html#a8c31d1edc201aabb1ed0b0f7ee1be790"><param name="Name" value="cString(char *buf)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html#a8c31d1edc201aabb1ed0b0f7ee1be790"><param name="Name" value="JETHERNET::NetConfig"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#abf6814cc0fd7e20073cea1abdbc1e1a2"><param name="Name" value="cString(char *buf)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#abf6814cc0fd7e20073cea1abdbc1e1a2"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a145d5c857df32f5cad1279217b9535cb"><param name="Name" value="cString(char *buf)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a145d5c857df32f5cad1279217b9535cb"><param name="Name" value="JETHERNET::NetMAC"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a4342943d5613b1d6ac825df4667e121a"><param name="Name" value="calcDMABufferSize(uint16_t numPixelsPerDMA)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_on_message_data.html#abf011d01abaa7d6558721acfdc13de46"><param name="Name" value="client"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html#afe121029b64aeb950a7b4ca28eeb2d3a"><param name="Name" value="clientName"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#abced4845fbe84804cd64597c39f2b1b5"><param name="Name" value="close()=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html#a3763ab849f75e2f5eb2cb257597d4034"><param name="Name" value="color"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html#a08495c43b03b10a74f0874d28991ee98"><param name="Name" value="colorCorrection"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#ab3f1cd5b527f012daed0749bed85a867"><param name="Name" value="colorToDMATiming(uint32_t col, DMABufferType **outPtr)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a32cc54d1b9285f0ba99dfabda2a03bd5"><param name="Name" value="connect(JETHERNET::NetSock &amp;sock, const ClientConfig config)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#a4d02403adcff198cdaa44c1e7f91bbaf"><param name="Name" value="connect(const char *hostname, uint16_t port)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#a9192f60f83f6d5f5d7ae7ccb34cfea6b"><param name="Name" value="connect(uint8_t *ip, uint16_t port)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#ad4fcf93b2ec7285a632c4b51777c0beb"><param name="Name" value="connectTCP(NetIP ip, uint16_t port)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#abd3a535cc566e979e408c72f2b8ac797"><param name="Name" value="const_ref"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#a2d673c7a79fc69a2bd480f40ffb65f3c"><param name="Name" value="countdown(uint16_t sec)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#a68daf8bef73e1544fd759f7ca29e0af4"><param name="Name" value="countdownMS(uint32_t ms)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#ae938bf04669e4db43d9793ec66f451d0"><param name="Name" value="countdown_ms(uint32_t ms)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html#acaecb870dd38076d47e3ace2cea2b738"><param name="Name" value="dhcpEnabled"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#aa0d5cbda0db3c2375dbf18e3b767f1c5"><param name="Name" value="difference_type"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#a5f4da6ea7d0538048a8e1e70f5d69ea0"><param name="Name" value="disconnect()=0"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#a5f4da6ea7d0538048a8e1e70f5d69ea0"><param name="Name" value="JETHERNET::NetSock"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a3581c3e4959d19a43f30b8eb70e69493"><param name="Name" value="disconnect()=0"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a3581c3e4959d19a43f30b8eb70e69493"><param name="Name" value="JMQTT::Client"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#aa80e6b76bfb01c241ab91604714042cc"><param name="Name" value="disconnect()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#abbf84f935eb53211fe9820cac8572427"><param name="Name" value="display()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#abbf84f935eb53211fe9820cac8572427"><param name="Name" value="JLED::DMAStrip"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#aa897b6ec4e5e08401af745745c5e7435"><param name="Name" value="display()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#aa897b6ec4e5e08401af745745c5e7435"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#acc9b067468dc936fb97a1fe1a18dbd28"><param name="Name" value="displayInProgress()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html#a4834d9cd546a8cdd754de6aba2b83cc9"><param name="Name" value="dns"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a6036a12d452cc14f70357bfdba6e2a68"><param name="Name" value="domainToIP(const char *domain, uint16_t timeoutMs)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a92d9cc9e5308c2c635d6e97947140149"><param name="Name" value="enableDHCP(uint16_t timeoutMs)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a40a80ea845fb029ca403eb106ed3e3d0"><param name="Name" value="enableDNS(NetIP dns)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a30985eebe68bb6a6f9f37b9e8be25c8a"><param name="Name" value="end() override"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html#a5df3ba2988da7d8aa4aaf9bb0a908e5d"><param name="Name" value="end()=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a8da86f5d07b8cbd8ee25ff9bcd7757a0"><param name="Name" value="endFxBuffer()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a1a8e256e4658a235be0223427eee0ec1"><param name="Name" value="endRawBuffer()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#a3c03271b786ef9a0d43f0b2937fe8183"><param name="Name" value="expired()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacegenerate_gamma_table.html#ac0e54df0dbef884d86d80bdf672d2822"><param name="Name" value="folderPath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#ac33053f38132be683868eb1b3d14f00a"><param name="Name" value="fxBuffer"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a53b60a1180be5dca5879493599c3c924"><param name="Name" value="g"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacegenerate_gamma_table.html#a97a3b23b76df03002d09671208c0aaf8"><param name="Name" value="gamma(nsteps, gamma)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="_gamma_correction_8hpp.html#ab3f7414200596bc9beda9557cd00f2ad"><param name="Name" value="gammaCorrectionLookup[256]"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html#ad61a621030d3df3cd67c20c4244ed5f0"><param name="Name" value="gammaEnabled"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="_gamma_correction_8hpp.html#a2bff5e5b65dc57f64e86a0768d7f778b"><param name="Name" value="gammaRawLookup[256]"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html#abd640ce8bf534dfed2edb6d4d30eb708"><param name="Name" value="gateway"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacegenerate_gamma_table.html"><param name="Name" value="generateGammaTable"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacegenerate_gamma_table.html"><param name="Name" value="generateGammaTable"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacegenerate_gamma_table.html#ac0e54df0dbef884d86d80bdf672d2822"><param name="Name" value="folderPath"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacegenerate_gamma_table.html"><param name="Name" value="generateGammaTable"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacegenerate_gamma_table.html#a97a3b23b76df03002d09671208c0aaf8"><param name="Name" value="gamma(nsteps, gamma)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacegenerate_gamma_table.html"><param name="Name" value="generateGammaTable"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacegenerate_gamma_table.html#ac74eb108847e8b6138df3ddbe5feba72"><param name="Name" value="myGamma"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacegenerate_gamma_table.html"><param name="Name" value="generateGammaTable"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacegenerate_gamma_table.html#ad6effa0817a0a45977db2012b6619e1d"><param name="Name" value="rounder(topValue, gammas)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacegenerate_gamma_table.html"><param name="Name" value="generateGammaTable"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacegenerate_gamma_table.html#ad7cb0c8edbef4fdf9db9c07588cce9f0"><param name="Name" value="steps"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#a16b91141784fe247106ab552fbdce2b3"><param name="Name" value="getAnimationTypeFromName(std::string_view name)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#add21fc6eff78c43e09ba245aa33cea70"><param name="Name" value="getAnimationTypes()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#aa641bacc8024c320520643e8d2472a1a"><param name="Name" value="getBrightness() const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a58947a451d389427fd55ca49838d936d"><param name="Name" value="getColorCorrection()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a06b567bffaf6eb147859edf317d4b9bb"><param name="Name" value="getConfig()=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a905949f887557113aecd12641ffad06c"><param name="Name" value="getEffect() const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a58730e887e50ba72c7356657179ae7b9"><param name="Name" value="getFreeSocket()=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a37b8c731fb966bb65cb0773b6d6e1c25"><param name="Name" value="getGammaCorrection()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a61b1ab1e8df157f227288048015bc20b"><param name="Name" value="getMode() const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_rainbow_animation.html#a83561a655d4eceabcecbb9a5eaab03a9"><param name="Name" value="getName() final"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_rainbow_animation.html#a83561a655d4eceabcecbb9a5eaab03a9"><param name="Name" value="JLED::RainbowAnimation"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_test_animation.html#a564000523514486bb2c69f642ce0bd21"><param name="Name" value="getName() final"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_test_animation.html#a564000523514486bb2c69f642ce0bd21"><param name="Name" value="JLED::TestAnimation"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_strip_animation.html#a80e33abe9e9800879e39d426f1c43ac8"><param name="Name" value="getName()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_strip_animation.html#a80e33abe9e9800879e39d426f1c43ac8"><param name="Name" value="JLED::StripAnimation"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#aa010399e03dd329528c9b41ea79a941a"><param name="Name" value="getName()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#aa010399e03dd329528c9b41ea79a941a"><param name="Name" value="JLED::StripAnimationManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html#a06b01eb70b230a919ba4b5c9112249a8"><param name="Name" value="getNumPixels() const =0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a5543638a11565c1a1de22376d1f81fdf"><param name="Name" value="getNumPixels() const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_g_r_b_strip_type.html#a21d463a54c4ba01aa62389322cf8c3eb"><param name="Name" value="getOrderedBytes(uint32_t pixelRGB)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a22fea4e89fe43ee80cb034b6e4f740f9"><param name="Name" value="getPower() const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a360fa6d428c0914d5884cda345671fcb"><param name="Name" value="getStaticColor()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a1bdefc29b8b9d32de0c6e9c841aa57fb"><param name="Name" value="getStripState()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#ad16bca32c38adb291362759d0342436a"><param name="Name" value="getTemperatureCorrection()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a6e380cb6bb273af7aaac85f1df1de3ac"><param name="Name" value="init(void *)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html#a15633d6f722dc68b31dab9d8de300da7"><param name="Name" value="ip"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#a41db618756cf90001a219180d152ecde"><param name="Name" value="isConnected() const =0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a70dab29288dc7daad9b1c1587e569441"><param name="Name" value="isConnected()=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#a41a09a8fd79d62d52f5ce0ff4d2e2723"><param name="Name" value="isConnected()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a6c3f3a90dbafa7887cc8bd5d21b6eaba"><param name="Name" value="isTopicMatched(string_view topic, string_view filter) final"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#a639e0a8ae10bb025be52dfd4b4d481c7"><param name="Name" value="leftMs()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#a7b3f51afa536ffed772f1c62de543e43"><param name="Name" value="left_ms()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html#a348d8f4705812bf0c808d4f692c4c1fe"><param name="Name" value="mac"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_on_message_data.html#a96aa267666f5ede3e25c7c4f5444cc93"><param name="Name" value="message"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a816685c872acf0ef6864633c90488020"><param name="Name" value="msTick()=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#a766d43746a33928f83b0c80e47c3da2c"><param name="Name" value="msTick()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacegenerate_gamma_table.html#ac74eb108847e8b6138df3ddbe5feba72"><param name="Name" value="myGamma"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a2b107533f39fd496cc2e485a9ecc2f99"><param name="Name" value="num"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a2b107533f39fd496cc2e485a9ecc2f99"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a981fc3ca441bef4f8e749f9a1ee294be"><param name="Name" value="num"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a981fc3ca441bef4f8e749f9a1ee294be"><param name="Name" value="JETHERNET::NetMAC"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a7697370bee3952e1fd6d7fdad83908fc"><param name="Name" value="num"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a7697370bee3952e1fd6d7fdad83908fc"><param name="Name" value="JLED::Color"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#a44ff29f5ab94702376ce38fbe305ffc2"><param name="Name" value="numAnimTypes"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#aaf795591d004a0973911b7746f909798"><param name="Name" value="onDMAInterrupt(bool halfCompleteInterrupt)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver.html#ac85356f79c66d459d784515be33d6743"><param name="Name" value="onMessage(Client &amp;, const Message &amp;)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#abc958717bb04d76f594dad0b509ae4e9"><param name="Name" value="oneHighNs"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#abc958717bb04d76f594dad0b509ae4e9"><param name="Name" value="JLED::WSStripType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#abc958717bb04d76f594dad0b509ae4e9"><param name="Name" value="oneHighNs"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#abc958717bb04d76f594dad0b509ae4e9"><param name="Name" value="WSStripType&lt; 3, ZeroHighNs, OneHighNs, PwmPeriodNs &gt;"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#abe1b9e145bdd796464e8666db6df511d"><param name="Name" value="open(NetIP ip, uint16_t port, SockConnectMode mode)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_message.html#ae6ff5a1208f6ebbdcfe5da7332daeb11"><param name="Name" value="operator string() const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a136608a222544e27cceed578afc1a8e4"><param name="Name" value="operator uint32_t() const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a3a29afe4842aaf7bb3733cc7e5a286dc"><param name="Name" value="operator!=(const Color &amp;rhs) const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a4d3970e5ab85c1802a71022e4628b113"><param name="Name" value="operator!=(const NetIP &amp;rhs) const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#ad3f3a3b4935ce2754608f5b9223d0dff"><param name="Name" value="operator!=(const NetMAC &amp;rhs) const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a7c399982644b29e5ef44d33667c90f59"><param name="Name" value="operator!=(const StripIterator &amp;other) const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html#a85e4ab42d15c9aeeee4c40117395eaa4"><param name="Name" value="operator!=(const WSStripState &amp;other)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a2afcbba495c59be6a78af2512512243d"><param name="Name" value="operator!=(const uint32_t rhs) const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a7f379e709ece2ac3ffd1b5b911a917b8"><param name="Name" value="operator*() const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#aab1b5da68c3f4a74121bac4e9f40db78"><param name="Name" value="operator++()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a370db6c6113fc3c101544d6ccd2781cc"><param name="Name" value="operator++(int)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#ae64cf43f87e7ed63fbf06af9a80ecacc"><param name="Name" value="operator--()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a8562cf2431fcb383ac052ec82ea254b3"><param name="Name" value="operator--(int)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#ae7e8cc068622ff3df88c12f163ba337f"><param name="Name" value="operator&lt;(const StripIterator &amp;other) const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a79188e7bb2e04d45b6fd061db5ac765e"><param name="Name" value="operator&lt;=(const StripIterator &amp;other) const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a5022c10f4f8a59b0340e944c406937f1"><param name="Name" value="operator=(const Color &amp;rhs)=default"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a7ea22878ac717e2e2e1bb3cddbd62159"><param name="Name" value="operator=(const NetIP &amp;rhs)=default"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a88fdadad8df1cbfd9dff2e47501fc935"><param name="Name" value="operator=(const NetMAC &amp;rhs)=default"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a47c8d7e32f86494b03e841055c4fe4a5"><param name="Name" value="operator=(const StripIterator &amp;other)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#ab3e8343d4b135803c689ba6243ed8e5d"><param name="Name" value="operator=(const uint32_t ip)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#af7dcc6bf7f5847293ff77f43d8122726"><param name="Name" value="operator=(const uint32_t mac)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a6fae6a241287e82d46f0f177951f3ffe"><param name="Name" value="operator=(const uint32_t rhs)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#ac370745c0d987394fff68cec181eb3de"><param name="Name" value="operator==(const Color &amp;rhs) const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a7cf99bd3c7bf715c1769afc915af3da0"><param name="Name" value="operator==(const NetIP &amp;rhs) const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a9f29bc694d2e1708253c17030f86e82f"><param name="Name" value="operator==(const NetMAC &amp;rhs) const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a096d50f09cfd9c9ed953aedaafbaf16d"><param name="Name" value="operator==(const StripIterator &amp;other) const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html#afab8d9c9d9c637fa1d7944313493a5a7"><param name="Name" value="operator==(const WSStripState &amp;other)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a8b79569fb8331fea30f92533d1848557"><param name="Name" value="operator==(const uint32_t rhs) const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#ae5108fa80e276ea0e814cde56f9d52cf"><param name="Name" value="operator&gt;(const StripIterator &amp;other) const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a6b653640640147448c07b344cb184a19"><param name="Name" value="operator&gt;=(const StripIterator &amp;other) const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html#aac34584ced0d76b85e0eb983d4e72d6d"><param name="Name" value="operator[](uint16_t index) const =0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a7ad712c5b2fec366fd9efcd00c65bdb0"><param name="Name" value="operator[](uint16_t index) const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html#add2089274c4622733d4b84a6d8201caa"><param name="Name" value="operator[](uint16_t index)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a5f5a47fd216b1f902575b8ecf15f2f43"><param name="Name" value="operator[](uint16_t index)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a42698f2fadba42d38703e1603e64cb87"><param name="Name" value="operator[](uint8_t index) const"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a42698f2fadba42d38703e1603e64cb87"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a05e9675bc0ba6d5bcdc2b86b9c96ebcf"><param name="Name" value="operator[](uint8_t index) const"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a05e9675bc0ba6d5bcdc2b86b9c96ebcf"><param name="Name" value="JETHERNET::NetMAC"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#af39e5551f77da937526feebef81baeb4"><param name="Name" value="operator[](uint8_t index)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#af39e5551f77da937526feebef81baeb4"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a8a23080bf5843f9c247661ba5ba9f895"><param name="Name" value="operator[](uint8_t index)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#a8a23080bf5843f9c247661ba5ba9f895"><param name="Name" value="JETHERNET::NetMAC"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a526e7f2d694ded86e47ddebcef3a4f67"><param name="Name" value="operator[](uint8_t n) const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a860ffe1eb2aeeae750675947fc463aa0"><param name="Name" value="operator[](uint8_t n)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_g_r_b_strip_type.html#a9f4087e8e6f5bee11810ce3a59f51b9f"><param name="Name" value="orderedToRGBW(uint32_t pixelGRB)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html#a750576b79628cbcd0297c4e3ebf5ac73"><param name="Name" value="password"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_message.html#a8b052e26ae6631e381d29cabdd07d384"><param name="Name" value="payload"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#aec53d829385f6ee0d0296af3943ffe4a"><param name="Name" value="phyLinkStatus()=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a175978c6d88531721269a0beda527c0c"><param name="Name" value="pointer"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html#a21759ab4d004cce59cebb5c103a5881d"><param name="Name" value="powerOn"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a8e4b70bb656d1d7b5ba4f11d7e64e5aa"><param name="Name" value="publish(Message msg)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a4c93aa930c740dcd179aabf654c13533"><param name="Name" value="publish(string topic, string message, QOS qos=QOS::QOS0) final"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#af485b4f49f4d754855c6287a1555216b"><param name="Name" value="pwmPeriodNs"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#af485b4f49f4d754855c6287a1555216b"><param name="Name" value="JLED::WSStripType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#af485b4f49f4d754855c6287a1555216b"><param name="Name" value="pwmPeriodNs"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#af485b4f49f4d754855c6287a1555216b"><param name="Name" value="WSStripType&lt; 3, ZeroHighNs, OneHighNs, PwmPeriodNs &gt;"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_message.html#a20c27d887cf1ff51e4b65c5f6f32cf5e"><param name="Name" value="qos"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a450cffa91c156cbc2fdd5f4dda74b9da"><param name="Name" value="r"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a42b0ca298fafd6afd9b3edbc6af270af"><param name="Name" value="rawBuffer"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a232d117efc1173373972c819a0e48e64"><param name="Name" value="raw[4]"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html#a232d117efc1173373972c819a0e48e64"><param name="Name" value="JETHERNET::NetIP"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#ac2553ef03f3016ee30a946ff5ab45720"><param name="Name" value="raw[4]"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#ac2553ef03f3016ee30a946ff5ab45720"><param name="Name" value="JLED::Color"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html#ab2d7fa28425227ed5f42f6dd29fa1fa0"><param name="Name" value="raw[6]"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#ac352a31bb144160f2a060c2609cee259"><param name="Name" value="read(uint8_t *dataOut, uint16_t len)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#a08e3a3faead9d84bddd16177baa8574c"><param name="Name" value="read(unsigned char *buffer, int len, int timeout_ms)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#ac2c1c3f2c2ac1938661dbaae2ecbf39c"><param name="Name" value="reconnect()=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a145db1bc71e86f58867c58c47c5e0ac1"><param name="Name" value="registerMessageReceiver(MQTTMessageReceiver *recv)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#abdef253a32d022d0e075e3a99ee667a5"><param name="Name" value="reset()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacegenerate_gamma_table.html#ad6effa0817a0a45977db2012b6619e1d"><param name="Name" value="rounder(topValue, gammas)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_rainbow_animation.html#a2ed34babd90ae40d517d2956e0832738"><param name="Name" value="run(StripDataInterface *strip) final"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_rainbow_animation.html#a2ed34babd90ae40d517d2956e0832738"><param name="Name" value="JLED::RainbowAnimation"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_test_animation.html#a0644525622e3f20d9ca5d3fd0eaa42ef"><param name="Name" value="run(StripDataInterface *strip) final"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_test_animation.html#a0644525622e3f20d9ca5d3fd0eaa42ef"><param name="Name" value="JLED::TestAnimation"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_strip_animation.html#add00a83a35cdb23b1ce96804188850f1"><param name="Name" value="run(StripDataInterface *strip)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_strip_animation.html#add00a83a35cdb23b1ce96804188850f1"><param name="Name" value="JLED::StripAnimation"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#ab738ada47464cb8b42a6b78acba821eb"><param name="Name" value="run(StripDataInterface *strip)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#ab738ada47464cb8b42a6b78acba821eb"><param name="Name" value="JLED::StripAnimationManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a53f20e369b479ff0b9fcab87ef3f3fd5"><param name="Name" value="setARR(uint16_t dmaARR)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_data_interface.html#a67817254169c2c5d43166fc55740ac32"><param name="Name" value="setAll(uint32_t color)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#ad19cc3a14d4213c9f523a9bf5d8ac071"><param name="Name" value="setAll(uint32_t color)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#ad19cc3a14d4213c9f523a9bf5d8ac071"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#ae29183f24877138f1ed50ade23b7a3d8"><param name="Name" value="setAll(uint32_t color)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#ae29183f24877138f1ed50ade23b7a3d8"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#acddf7f35ea0a35f7a1225576533086eb"><param name="Name" value="setAnimationType(AnimationType anim)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_animation_manager.html#abf758862fc8bb3c8986be8c9bd096685"><param name="Name" value="setAnimationTypeFromName(std::string_view name)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#aa634f8fb60f9fa53a272dcdd7760622a"><param name="Name" value="setBrightness(uint8_t brightness)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#aa634f8fb60f9fa53a272dcdd7760622a"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a52af5c69234b5ed2e2072e93c66ba572"><param name="Name" value="setBrightness(uint8_t brightness)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a52af5c69234b5ed2e2072e93c66ba572"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a776c2cf6461bc3f6420af9017b5dae84"><param name="Name" value="setColorCorrection(ColorCorrection cc)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a776c2cf6461bc3f6420af9017b5dae84"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a0b6010d460d73643b99301661a7c15f2"><param name="Name" value="setColorCorrection(ColorCorrection cc)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a0b6010d460d73643b99301661a7c15f2"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a869154c83a1821b0738e13ae3f0d961f"><param name="Name" value="setConfig(NetConfig &amp;netConfig)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a9c50f65617e65d5e863a984d94890a59"><param name="Name" value="setConnectCallback(ConnectCB func)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a58f38287918b1f5881806e964bd571f9"><param name="Name" value="setDMABuffer(DMABufferType *dmaBuffer)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#ad016ffc01d5608f0ca43d12345380af7"><param name="Name" value="setEffect()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a95cee1122988a80c66b1b1eea3e88875"><param name="Name" value="setEffect(std::string_view name)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a6f398cb634e2c37cde2b4a63f6e310b1"><param name="Name" value="setGammaCorrection(bool on)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a6f398cb634e2c37cde2b4a63f6e310b1"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a3856ed1ba1972f075306cd0277656bcc"><param name="Name" value="setGammaCorrection(bool on)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a3856ed1ba1972f075306cd0277656bcc"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="_strip_animation_manager_8hpp.html#aabbf02971b8d053e45eedbeafa3f68f7"><param name="Name" value="setInst(type)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a1fbf4f35c4d0e9bfa93d2d3f3d3c86a4"><param name="Name" value="setMessageCallback(MessageCB func)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#aae64d7bd41f12903efa3f4e6f6c5aecc"><param name="Name" value="setMode()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#aae64d7bd41f12903efa3f4e6f6c5aecc"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#ac46e3a5007420b69060450a3b821c9f3"><param name="Name" value="setMode()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#ac46e3a5007420b69060450a3b821c9f3"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#adb026c75e20f9d3e56bf998b0a58e2c8"><param name="Name" value="setPhysicalPowerCB(PhysicalPowerCB cb)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a87b84f3b9e552e0e4d0a19b7ad8fcfb0"><param name="Name" value="setPhysicalPowerCB(typename LEDBase::PhysicalPowerCB cb)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a537bded9bbeab068029ee25ed219a442"><param name="Name" value="setPixelBuffers(uint32_t *rawBuffer, uint32_t *fxBuffer)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a48f2b0445c586b70f01ef1249d1f4705"><param name="Name" value="setPower(bool powerOn)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a48f2b0445c586b70f01ef1249d1f4705"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#ac81622c3ac40b249cf3328ac2a90212c"><param name="Name" value="setPower(bool powerOn)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#ac81622c3ac40b249cf3328ac2a90212c"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#aee3fe0f042a9ed67d21ae0cb49355468"><param name="Name" value="setSocket(int socketNum)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#a6caaaf62378e2d337bd44b88575021d7"><param name="Name" value="setStartDMACallback(DMA_START_CB dmaStart)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a91fd5bc3b39c3c01297b02a89944ccd4"><param name="Name" value="setStaticColor(uint32_t color)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a91fd5bc3b39c3c01297b02a89944ccd4"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a71c5156bb0c2221c811b4430af9b8a11"><param name="Name" value="setStaticColor(uint32_t color)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a71c5156bb0c2221c811b4430af9b8a11"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_d_m_a_strip.html#afc7f465649147dbe14fba97b47545cb1"><param name="Name" value="setStopDMACallback(DMA_STOP_CB dmaStart)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a2e3aa936bc4efe29deecd2be7490f667"><param name="Name" value="setTemperatureCorrection(TemperatureCorrection tc)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_strip_builder.html#a2e3aa936bc4efe29deecd2be7490f667"><param name="Name" value="JLED::StripBuilder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a4d8c7c780dc2d62b82866152047bf273"><param name="Name" value="setTemperatureCorrection(TemperatureCorrection tc)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a4d8c7c780dc2d62b82866152047bf273"><param name="Name" value="JLED::WS28xxStrip"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_signal_listener.html#a9e60c4e34c3072699a58599dac85d546"><param name="Name" value="signal(ARG_T)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver.html#a46fdd685ce6d6b0f8c64eee2214c9257"><param name="Name" value="signal(OnMessageData data) final"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_signal_listener.html#a9e60c4e34c3072699a58599dac85d546"><param name="Name" value="signal(OnMessageData)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#a914bbdc5c0561d9938a3bf87014845d2"><param name="Name" value="socketNum"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacegenerate_gamma_table.html#ad7cb0c8edbef4fdf9db9c07588cce9f0"><param name="Name" value="steps"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_e_t_h_e_r_n_e_t_1_1_net_config.html#a0a29b0b50f49a334107bc987557fb0e2"><param name="Name" value="subnet"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a79cfc7f5edd6cdb8382202ab4f573dd0"><param name="Name" value="subscribe(string_view topic, MQTTMessageReceiver *recv, QOS qos=QOS::QOS0)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a61f9bb3e61ba5fa6e516e2b5729074be"><param name="Name" value="subscribe(string_view topic, QOS qos=QOS::QOS0)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_state.html#ac4907e9aa75b767f829c6b82409bd819"><param name="Name" value="tempCorrection"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_countdown_timer.html#adc81e626332259b1811fdb9012efcb5c"><param name="Name" value="tick"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_message.html#a1f5f5601ec0d1b2d5b96d8c2ccfa99c2"><param name="Name" value="topic"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_l_e_d_1_1_w_s28xx_strip.html#a6c1d750c62624ee215fd5c3bea4d1a83"><param name="Name" value="update()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#aa04cc45d722283c9e871980f4d1a27c1"><param name="Name" value="update(uint16_t timeoutMs)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html#a266098173864ed535b7d368fbf18112b"><param name="Name" value="username"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_strip_iterator.html#a1f36636deb2ba4330028716304df711b"><param name="Name" value="value_type"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_client_config.html#adaf4490b2a554690a8b155c3f0683dd5"><param name="Name" value="version"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_color.html#a9f7236e92911fde997f9ed1a2ab9bd0f"><param name="Name" value="w"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a1e547d7e6984e2c800d7fecf0260d046"><param name="Name" value="waitForLink(uint16_t timeoutMs)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#a9fa1b012c538e35f38780a1fd84f618e"><param name="Name" value="write(uint8_t *dataIn, uint16_t len)=0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_m_q_t_t_1_1_w5500_mqtt_network.html#a0614007fa4c8d9602647510fe732be38"><param name="Name" value="write(unsigned char *buffer, int len, int timeout)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#ab4544e18dd5a54e5997766aa65002335"><param name="Name" value="zeroHighNs"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#ab4544e18dd5a54e5997766aa65002335"><param name="Name" value="JLED::WSStripType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#ab4544e18dd5a54e5997766aa65002335"><param name="Name" value="zeroHighNs"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_j_l_e_d_1_1_w_s_strip_type.html#ab4544e18dd5a54e5997766aa65002335"><param name="Name" value="WSStripType&lt; 3, ZeroHighNs, OneHighNs, PwmPeriodNs &gt;"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_m_q_t_t_1_1_client.html#a75de2ea57ef30e60bc7fbd6350e47a1d"><param name="Name" value="~Client()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_ethernet_h_c.html#a5f2760472e72efc27c79d83301c9412e"><param name="Name" value="~EthernetHC()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_j_e_t_h_e_r_n_e_t_1_1_net_sock.html#a9b8b34ac38e7cc54c2f54bf781d6d691"><param name="Name" value="~NetSock()"></OBJECT>
+</UL>
+</BODY>
+</HTML>

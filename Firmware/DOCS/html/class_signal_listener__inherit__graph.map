@@ -1,0 +1,9 @@
+<map id="SignalListener&lt; RETURN_T, ARG_T &gt;" name="SignalListener&lt; RETURN_T, ARG_T &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="26,5,190,91"/>
+<area shape="rect" id="Node000002" href="$class_signal_listener.html" title=" " alt="" coords="41,155,175,240"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,106,111,155,105,155,105,106"/>
+<area shape="rect" id="Node000003" href="$struct_j_m_q_t_t_1_1_m_q_t_t_message_receiver.html" title=" " alt="" coords="5,289,211,380"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="111,255,111,290,105,290,105,255"/>
+<area shape="rect" id="Node000004" href="$class_j_m_q_t_t_1_1_home_assistant_device.html" title=" " alt="" coords="11,429,205,499"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="111,395,111,430,105,430,105,395"/>
+</map>

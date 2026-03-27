@@ -1,20 +1,55 @@
-\doxysection{JLib/\+JLED/include/\+WS28xx\+Strip.hpp File Reference}
-\hypertarget{_w_s28xx_strip_8hpp}{}\label{_w_s28xx_strip_8hpp}\index{JLib/JLED/include/WS28xxStrip.hpp@{JLib/JLED/include/WS28xxStrip.hpp}}
-{\ttfamily \#include $<$cstdint$>$}\newline
-{\ttfamily \#include $<$iterator$>$}\newline
-{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+\doxysection{LIBRARIES/\+JLib/\+JLED/include/\+WS28xx\+Strip.hpp File Reference}
+\hypertarget{_w_s28xx_strip_8hpp}{}\label{_w_s28xx_strip_8hpp}\index{LIBRARIES/JLib/JLED/include/WS28xxStrip.hpp@{LIBRARIES/JLib/JLED/include/WS28xxStrip.hpp}}
+{\ttfamily \#include $<$Strip\+Data\+Interface.\+hpp$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
 {\ttfamily \#include "{}Strip\+Types.\+hpp"{}}\newline
+{\ttfamily \#include "{}Strip\+Animation\+Manager.\+hpp"{}}\newline
+Include dependency graph for WS28xx\+Strip.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_w_s28xx_strip_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{_w_s28xx_strip_8hpp__dep__incl}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_state}{JLED\+::\+WSStrip\+State}}
 \item 
-class \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip$<$ Strip\+Type $>$}}
-\begin{DoxyCompactList}\small\item\em Basic control class for an LED strip. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s28xx_strip_1_1_iterator}{JLED\+::\+WS28xx\+Strip$<$ Strip\+Type $>$\+::\+Iterator}}
-\end{DoxyCompactItemize}
+class \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip$<$ \+\_\+\+Strip\+Type $>$}}
+\begin{DoxyCompactList}\small\item\em Basic control class for an LED strip. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
 namespace \mbox{\hyperlink{namespace_j_l_e_d}{JLED}}
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_w_s28xx_strip_8hpp_ae34ebad0d15a0cf6b88c891700047ddf}{ASSERT\+\_\+\+STRIPBASE\+\_\+\+IS\+\_\+\+DERIVED}}(Strip\+Base,  Strip\+Type)~static\+\_\+assert(std\+::is\+\_\+base\+\_\+of\+\_\+v$<$\mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$Strip\+Type$>$, Strip\+Base$>$);
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespace_j_l_e_d_a37705cc67d6d733de6107a730a585829}{JLED\+::\+WS2815\+Strip}} = \mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{WS28xx\+Strip}}$<$\mbox{\hyperlink{namespace_j_l_e_d_a57412369bef60f93939ebdbe29ae9348}{WS2815\+Strip\+Type}}$>$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_w_s28xx_strip_8hpp_ae34ebad0d15a0cf6b88c891700047ddf}\label{_w_s28xx_strip_8hpp_ae34ebad0d15a0cf6b88c891700047ddf} 
+\index{WS28xxStrip.hpp@{WS28xxStrip.hpp}!ASSERT\_STRIPBASE\_IS\_DERIVED@{ASSERT\_STRIPBASE\_IS\_DERIVED}}
+\index{ASSERT\_STRIPBASE\_IS\_DERIVED@{ASSERT\_STRIPBASE\_IS\_DERIVED}!WS28xxStrip.hpp@{WS28xxStrip.hpp}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_STRIPBASE\_IS\_DERIVED}{ASSERT\_STRIPBASE\_IS\_DERIVED}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+STRIPBASE\+\_\+\+IS\+\_\+\+DERIVED(\begin{DoxyParamCaption}\item[{}]{Strip\+Base,  }\item[{}]{Strip\+Type }\end{DoxyParamCaption})~static\+\_\+assert(std\+::is\+\_\+base\+\_\+of\+\_\+v$<$\mbox{\hyperlink{class_j_l_e_d_1_1_w_s28xx_strip}{JLED\+::\+WS28xx\+Strip}}$<$Strip\+Type$>$, Strip\+Base$>$);}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00043}{43}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+

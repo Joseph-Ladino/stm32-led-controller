@@ -1,0 +1,31 @@
+<map id="LIBRARIES/JLib/JLED/include/DMAStrip.hpp" name="LIBRARIES/JLib/JLED/include/DMAStrip.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="236,5,393,48"/>
+<area shape="rect" id="Node000002" href="$_w_s28xx_strip_8hpp.html" title=" " alt="" coords="203,96,326,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="304,50,283,84,278,81,299,47"/>
+<area shape="rect" id="Node000006" href="$_strip_types_8hpp.html" title=" " alt="" coords="380,171,488,197"/>
+<area shape="poly" id="edge16_Node000001_Node000006" title=" " alt="" coords="332,47,417,156,413,160,328,50"/>
+<area shape="rect" id="Node000003" href="$_strip_data_interface_8hpp.html" title=" " alt="" coords="205,320,357,347"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="234,126,198,145,164,173,142,198,126,221,121,245,124,257,131,270,157,296,191,313,188,318,154,300,127,274,119,259,116,245,121,219,138,194,160,169,195,140,231,121"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,171,66,197"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="226,126,81,171,80,166,224,121"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="295,121,391,162,389,167,293,126"/>
+<area shape="rect" id="Node000010" href="$_strip_animation_manager_8hpp.html" title=" " alt="" coords="174,171,356,197"/>
+<area shape="poly" id="edge11_Node000002_Node000010" title=" " alt="" coords="268,123,268,155,262,155,262,123"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="413,469,474,496"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="292,345,319,380,357,419,411,459,407,463,354,423,315,383,288,348"/>
+<area shape="rect" id="Node000007" href="$_color_8hpp.html" title=" " alt="" coords="501,245,578,272"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="454,196,510,234,507,238,451,200"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="545,272,550,300,552,339,548,382,534,423,514,447,489,464,486,460,510,443,529,420,543,381,547,339,544,301,540,273"/>
+<area shape="rect" id="Node000008" href="$_color_correction_8hpp.html" title=" " alt="" coords="382,320,519,347"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="526,275,479,312,476,308,522,270"/>
+<area shape="rect" id="Node000009" href="$_gamma_correction_8hpp.html" title=" " alt="" coords="367,395,520,421"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="452,347,449,379,443,379,446,347"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="446,422,446,454,441,454,441,422"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="389,245,476,272"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="295,195,391,236,388,241,293,200"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="141,245,210,272"/>
+<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="251,200,204,237,201,233,248,196"/>
+<area shape="rect" id="Node000013" href="$_strip_animation_8hpp.html" title=" " alt="" coords="234,245,365,272"/>
+<area shape="poly" id="edge14_Node000010_Node000013" title=" " alt="" coords="273,197,289,230,285,232,268,199"/>
+<area shape="poly" id="edge15_Node000013_Node000003" title=" " alt="" coords="299,273,290,305,285,304,294,272"/>
+</map>

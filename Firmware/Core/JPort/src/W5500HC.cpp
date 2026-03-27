@@ -108,6 +108,11 @@ void W5500HC::softReset() {
 	}
 }
 
+void W5500HC::hardReset() {
+	hw.triggerReset();
+	waitForLink(5);
+}
+
 bool W5500HC::init(void *config) {
 	hwConfig = *(W5500Config*) config;
 	initSuccess = hw.init(hwConfig);
@@ -122,6 +127,11 @@ bool W5500HC::init(void *config) {
 	return initSuccess;
 }
 
+bool W5500HC::reinit() {
+	softReset();
+	return hw.init(hwConfig);
+}
+
 // returns true if PHY becomes available before timeout
 bool W5500HC::waitForLink(uint16_t timeoutMs) {
 	CountdownTimer timer(timeoutMs);
@@ -131,6 +141,8 @@ bool W5500HC::waitForLink(uint16_t timeoutMs) {
 	return phyLinkStatus();
 }
 
+
+// TODO: consider replacing socket array with stack
 W5500Socket& W5500HC::getFreeSocket() {
 	static W5500Socket empty;
 	
@@ -152,6 +164,7 @@ void W5500HC::msTick() {
 		DNS_time_handler();
 	}
 }
+
 
 W5500HC::~W5500HC() {
 	

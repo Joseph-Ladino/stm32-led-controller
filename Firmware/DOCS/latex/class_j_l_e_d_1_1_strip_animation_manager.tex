@@ -1,0 +1,215 @@
+\doxysection{JLED\+::Strip\+Animation\+Manager Class Reference}
+\hypertarget{class_j_l_e_d_1_1_strip_animation_manager}{}\label{class_j_l_e_d_1_1_strip_animation_manager}\index{JLED::StripAnimationManager@{JLED::StripAnimationManager}}
+
+
+{\ttfamily \#include $<$Strip\+Animation\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for JLED\+::Strip\+Animation\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{class_j_l_e_d_1_1_strip_animation_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{Animation\+Type}} \{ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1a25733f09ce6beaa7c08b8d6bd94fe436}{NONE}}
+, \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1a35f33dcd33c5a851a76446aa445dc608}{RAINBOW}}
+, \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1aa6442bd8d08d961a27fa5b5be75b5cf6}{TEST}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string\+\_\+view \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_aa010399e03dd329528c9b41ea79a941a}{get\+Name}} ()
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ab738ada47464cb8b42a6b78acba821eb}{run}} (\mbox{\hyperlink{struct_strip_data_interface}{Strip\+Data\+Interface}} \texorpdfstring{$\ast$}{*}strip)
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_acddf7f35ea0a35f7a1225576533086eb}{set\+Animation\+Type}} (\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{Animation\+Type}} anim)
+\item 
+void \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_abf758862fc8bb3c8986be8c9bd096685}{set\+Animation\+Type\+From\+Name}} (std\+::string\+\_\+view name)
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_af13cdd46976b65b75a71e15092717ddc}{Strip\+Animation\+Manager}} (\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{Animation\+Type}} anim\+Type=\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1a25733f09ce6beaa7c08b8d6bd94fe436}{NONE}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string\+\_\+view \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_add21fc6eff78c43e09ba245aa33cea70}{get\+Animation\+Types}} ()
+\item 
+static \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{Animation\+Type}} \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a16b91141784fe247106ab552fbdce2b3}{get\+Animation\+Type\+From\+Name}} (std\+::string\+\_\+view name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{Animation\+Type}} \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ac0e169b0c9ba3fc90d2d252466198499}{active\+Animation}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_j_l_e_d_1_1_strip_animation}{Strip\+Animation}} $>$ \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ab4ac276f2bba07e746cdd73834d50e0b}{anim\+Inst}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string\+\_\+view \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ada84980279994ad204c31d4ecb46596e}{anim\+Types}} \mbox{[}$\,$\mbox{]} = \{ "{}NONE"{}, "{}RAINBOW"{}, "{}TEST"{} \}
+\item 
+static constexpr uint16\+\_\+t \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a44ff29f5ab94702376ce38fbe305ffc2}{num\+Anim\+Types}} = sizeof(\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ada84980279994ad204c31d4ecb46596e}{anim\+Types}}) / sizeof(std\+::string\+\_\+view)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_strip_animation_manager_8hpp_source_l00016}{16}} of file \mbox{\hyperlink{_strip_animation_manager_8hpp_source}{Strip\+Animation\+Manager.\+hpp}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}\label{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1} 
+\index{JLED::StripAnimationManager@{JLED::StripAnimationManager}!AnimationType@{AnimationType}}
+\index{AnimationType@{AnimationType}!JLED::StripAnimationManager@{JLED::StripAnimationManager}}
+\doxysubsubsection{\texorpdfstring{AnimationType}{AnimationType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{JLED\+::\+Strip\+Animation\+Manager\+::\+Animation\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!JLED::StripAnimationManager@{JLED::StripAnimationManager}}\index{JLED::StripAnimationManager@{JLED::StripAnimationManager}!NONE@{NONE}}}\Hypertarget{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1a25733f09ce6beaa7c08b8d6bd94fe436}\label{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1a25733f09ce6beaa7c08b8d6bd94fe436} 
+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RAINBOW@{RAINBOW}!JLED::StripAnimationManager@{JLED::StripAnimationManager}}\index{JLED::StripAnimationManager@{JLED::StripAnimationManager}!RAINBOW@{RAINBOW}}}\Hypertarget{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1a35f33dcd33c5a851a76446aa445dc608}\label{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1a35f33dcd33c5a851a76446aa445dc608} 
+RAINBOW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST@{TEST}!JLED::StripAnimationManager@{JLED::StripAnimationManager}}\index{JLED::StripAnimationManager@{JLED::StripAnimationManager}!TEST@{TEST}}}\Hypertarget{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1aa6442bd8d08d961a27fa5b5be75b5cf6}\label{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1aa6442bd8d08d961a27fa5b5be75b5cf6} 
+TEST&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_strip_animation_manager_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{_strip_animation_manager_8hpp_source}{Strip\+Animation\+Manager.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_j_l_e_d_1_1_strip_animation_manager_af13cdd46976b65b75a71e15092717ddc}\label{class_j_l_e_d_1_1_strip_animation_manager_af13cdd46976b65b75a71e15092717ddc} 
+\index{JLED::StripAnimationManager@{JLED::StripAnimationManager}!StripAnimationManager@{StripAnimationManager}}
+\index{StripAnimationManager@{StripAnimationManager}!JLED::StripAnimationManager@{JLED::StripAnimationManager}}
+\doxysubsubsection{\texorpdfstring{StripAnimationManager()}{StripAnimationManager()}}
+{\footnotesize\ttfamily JLED\+::\+Strip\+Animation\+Manager\+::\+Strip\+Animation\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{Animation\+Type}}}]{anim\+Type = {\ttfamily \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1a25733f09ce6beaa7c08b8d6bd94fe436}{NONE}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_animation_manager_8hpp_source_l00072}{72}} of file \mbox{\hyperlink{_strip_animation_manager_8hpp_source}{Strip\+Animation\+Manager.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_j_l_e_d_1_1_strip_animation_manager_a16b91141784fe247106ab552fbdce2b3}\label{class_j_l_e_d_1_1_strip_animation_manager_a16b91141784fe247106ab552fbdce2b3} 
+\index{JLED::StripAnimationManager@{JLED::StripAnimationManager}!getAnimationTypeFromName@{getAnimationTypeFromName}}
+\index{getAnimationTypeFromName@{getAnimationTypeFromName}!JLED::StripAnimationManager@{JLED::StripAnimationManager}}
+\doxysubsubsection{\texorpdfstring{getAnimationTypeFromName()}{getAnimationTypeFromName()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{Animation\+Type}} JLED\+::\+Strip\+Animation\+Manager\+::get\+Animation\+Type\+From\+Name (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_animation_manager_8hpp_source_l00041}{41}} of file \mbox{\hyperlink{_strip_animation_manager_8hpp_source}{Strip\+Animation\+Manager.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_animation_manager_add21fc6eff78c43e09ba245aa33cea70}\label{class_j_l_e_d_1_1_strip_animation_manager_add21fc6eff78c43e09ba245aa33cea70} 
+\index{JLED::StripAnimationManager@{JLED::StripAnimationManager}!getAnimationTypes@{getAnimationTypes}}
+\index{getAnimationTypes@{getAnimationTypes}!JLED::StripAnimationManager@{JLED::StripAnimationManager}}
+\doxysubsubsection{\texorpdfstring{getAnimationTypes()}{getAnimationTypes()}}
+{\footnotesize\ttfamily static std\+::string\+\_\+view \texorpdfstring{$\ast$}{*} JLED\+::\+Strip\+Animation\+Manager\+::get\+Animation\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_animation_manager_8hpp_source_l00037}{37}} of file \mbox{\hyperlink{_strip_animation_manager_8hpp_source}{Strip\+Animation\+Manager.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_animation_manager_aa010399e03dd329528c9b41ea79a941a}\label{class_j_l_e_d_1_1_strip_animation_manager_aa010399e03dd329528c9b41ea79a941a} 
+\index{JLED::StripAnimationManager@{JLED::StripAnimationManager}!getName@{getName}}
+\index{getName@{getName}!JLED::StripAnimationManager@{JLED::StripAnimationManager}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string\+\_\+view JLED\+::\+Strip\+Animation\+Manager\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_animation_manager_8hpp_source_l00026}{26}} of file \mbox{\hyperlink{_strip_animation_manager_8hpp_source}{Strip\+Animation\+Manager.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_animation_manager_ab738ada47464cb8b42a6b78acba821eb}\label{class_j_l_e_d_1_1_strip_animation_manager_ab738ada47464cb8b42a6b78acba821eb} 
+\index{JLED::StripAnimationManager@{JLED::StripAnimationManager}!run@{run}}
+\index{run@{run}!JLED::StripAnimationManager@{JLED::StripAnimationManager}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void JLED\+::\+Strip\+Animation\+Manager\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_strip_data_interface}{Strip\+Data\+Interface}} \texorpdfstring{$\ast$}{*}}]{strip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_animation_manager_8hpp_source_l00030}{30}} of file \mbox{\hyperlink{_strip_animation_manager_8hpp_source}{Strip\+Animation\+Manager.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_animation_manager_acddf7f35ea0a35f7a1225576533086eb}\label{class_j_l_e_d_1_1_strip_animation_manager_acddf7f35ea0a35f7a1225576533086eb} 
+\index{JLED::StripAnimationManager@{JLED::StripAnimationManager}!setAnimationType@{setAnimationType}}
+\index{setAnimationType@{setAnimationType}!JLED::StripAnimationManager@{JLED::StripAnimationManager}}
+\doxysubsubsection{\texorpdfstring{setAnimationType()}{setAnimationType()}}
+{\footnotesize\ttfamily void JLED\+::\+Strip\+Animation\+Manager\+::set\+Animation\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{Animation\+Type}}}]{anim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_animation_manager_8hpp_source_l00049}{49}} of file \mbox{\hyperlink{_strip_animation_manager_8hpp_source}{Strip\+Animation\+Manager.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_animation_manager_abf758862fc8bb3c8986be8c9bd096685}\label{class_j_l_e_d_1_1_strip_animation_manager_abf758862fc8bb3c8986be8c9bd096685} 
+\index{JLED::StripAnimationManager@{JLED::StripAnimationManager}!setAnimationTypeFromName@{setAnimationTypeFromName}}
+\index{setAnimationTypeFromName@{setAnimationTypeFromName}!JLED::StripAnimationManager@{JLED::StripAnimationManager}}
+\doxysubsubsection{\texorpdfstring{setAnimationTypeFromName()}{setAnimationTypeFromName()}}
+{\footnotesize\ttfamily void JLED\+::\+Strip\+Animation\+Manager\+::set\+Animation\+Type\+From\+Name (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_animation_manager_8hpp_source_l00068}{68}} of file \mbox{\hyperlink{_strip_animation_manager_8hpp_source}{Strip\+Animation\+Manager.\+hpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_j_l_e_d_1_1_strip_animation_manager_ac0e169b0c9ba3fc90d2d252466198499}\label{class_j_l_e_d_1_1_strip_animation_manager_ac0e169b0c9ba3fc90d2d252466198499} 
+\index{JLED::StripAnimationManager@{JLED::StripAnimationManager}!activeAnimation@{activeAnimation}}
+\index{activeAnimation@{activeAnimation}!JLED::StripAnimationManager@{JLED::StripAnimationManager}}
+\doxysubsubsection{\texorpdfstring{activeAnimation}{activeAnimation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{Animation\+Type}} JLED\+::\+Strip\+Animation\+Manager\+::active\+Animation}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_animation_manager_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{_strip_animation_manager_8hpp_source}{Strip\+Animation\+Manager.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_animation_manager_ab4ac276f2bba07e746cdd73834d50e0b}\label{class_j_l_e_d_1_1_strip_animation_manager_ab4ac276f2bba07e746cdd73834d50e0b} 
+\index{JLED::StripAnimationManager@{JLED::StripAnimationManager}!animInst@{animInst}}
+\index{animInst@{animInst}!JLED::StripAnimationManager@{JLED::StripAnimationManager}}
+\doxysubsubsection{\texorpdfstring{animInst}{animInst}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{struct_j_l_e_d_1_1_strip_animation}{Strip\+Animation}}$>$ JLED\+::\+Strip\+Animation\+Manager\+::anim\+Inst}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_animation_manager_8hpp_source_l00024}{24}} of file \mbox{\hyperlink{_strip_animation_manager_8hpp_source}{Strip\+Animation\+Manager.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_animation_manager_ada84980279994ad204c31d4ecb46596e}\label{class_j_l_e_d_1_1_strip_animation_manager_ada84980279994ad204c31d4ecb46596e} 
+\index{JLED::StripAnimationManager@{JLED::StripAnimationManager}!animTypes@{animTypes}}
+\index{animTypes@{animTypes}!JLED::StripAnimationManager@{JLED::StripAnimationManager}}
+\doxysubsubsection{\texorpdfstring{animTypes}{animTypes}}
+{\footnotesize\ttfamily std\+::string\+\_\+view JLED\+::\+Strip\+Animation\+Manager\+::anim\+Types\mbox{[}$\,$\mbox{]} = \{ "{}NONE"{}, "{}RAINBOW"{}, "{}TEST"{} \}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_animation_manager_8hpp_source_l00034}{34}} of file \mbox{\hyperlink{_strip_animation_manager_8hpp_source}{Strip\+Animation\+Manager.\+hpp}}.
+
+\Hypertarget{class_j_l_e_d_1_1_strip_animation_manager_a44ff29f5ab94702376ce38fbe305ffc2}\label{class_j_l_e_d_1_1_strip_animation_manager_a44ff29f5ab94702376ce38fbe305ffc2} 
+\index{JLED::StripAnimationManager@{JLED::StripAnimationManager}!numAnimTypes@{numAnimTypes}}
+\index{numAnimTypes@{numAnimTypes}!JLED::StripAnimationManager@{JLED::StripAnimationManager}}
+\doxysubsubsection{\texorpdfstring{numAnimTypes}{numAnimTypes}}
+{\footnotesize\ttfamily constexpr uint16\+\_\+t JLED\+::\+Strip\+Animation\+Manager\+::num\+Anim\+Types = sizeof(\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_ada84980279994ad204c31d4ecb46596e}{anim\+Types}}) / sizeof(std\+::string\+\_\+view)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_animation_manager_8hpp_source_l00035}{35}} of file \mbox{\hyperlink{_strip_animation_manager_8hpp_source}{Strip\+Animation\+Manager.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+LIBRARIES/\+JLib/\+JLED/include/\mbox{\hyperlink{_strip_animation_manager_8hpp}{Strip\+Animation\+Manager.\+hpp}}\end{DoxyCompactItemize}

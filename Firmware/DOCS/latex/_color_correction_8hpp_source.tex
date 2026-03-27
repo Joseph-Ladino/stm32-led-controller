@@ -1,0 +1,62 @@
+\doxysection{Color\+Correction.\+hpp}
+\hypertarget{_color_correction_8hpp_source}{}\label{_color_correction_8hpp_source}\index{LIBRARIES/JLib/JLED/include/ColorCorrection.hpp@{LIBRARIES/JLib/JLED/include/ColorCorrection.hpp}}
+\mbox{\hyperlink{_color_correction_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00002}00002\ \textcolor{comment}{\ *\ ColorCorrection.hpp}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Jul\ 16,\ 2024}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ user}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ JLED\_INCLUDE\_COLORCORRECTION\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#define\ JLED\_INCLUDE\_COLORCORRECTION\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00011}00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_j_l_e_d}{JLED}}\ \{}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_gamma_correction_8hpp}{GammaCorrection.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00015}00015\ \textcolor{comment}{//\ borrowed\ from\ https://github.com/FastLED/FastLED/blob/master/src/color.h}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00016}00016\ \textcolor{comment}{//\ FASTLed\ license:\ https://github.com/FastLED/FastLED/blob/master/LICENSE}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00018}\mbox{\hyperlink{namespace_j_l_e_d_a88321436a1a22cbe4bdfc6071292ec0a}{00018}}\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespace_j_l_e_d_a88321436a1a22cbe4bdfc6071292ec0a}{ColorCorrection}}\ :\ uint32\_t\ \{}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_a88321436a1a22cbe4bdfc6071292ec0aabae71e8715ff83748c59a8d4c6c50286}{WS2815}}\ =\ 0xFFB0F0,}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_a88321436a1a22cbe4bdfc6071292ec0aa1014e0b7bef22636812497a1ba50b930}{Uncorrected}}\ =\ 0xFFFFFF}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00021}00021\ \};}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00023}\mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4}{00023}}\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4}{TemperatureCorrection}}\ :\ uint32\_t\ \{}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00024}00024\ \ \ \ \ \textcolor{comment}{//\ Black\ Body\ Radiators}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//\ @\{}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4ae966b2e6caa2b8a2f49802e3baf6fbf2}{Candle}}\ =\ 0xFF9329\ \textcolor{comment}{/*\ 1900\ K,\ 255,\ 147,\ 41\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4aee88bbc96721f92bfce1e571ecf223fa}{Tungsten40W}}\ =\ 0xFFC58F\ \textcolor{comment}{/*\ 2600\ K,\ 255,\ 197,\ 143\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a21ef7bd88384a1a51ea0305358fd0217}{Tungsten100W}}\ =\ 0xFFD6AA\ \textcolor{comment}{/*\ 2850\ K,\ 255,\ 214,\ 170\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4ad16c1fc42d70cf5fba9ab09f3de26f60}{Halogen}}\ =\ 0xFFF1E0\ \textcolor{comment}{/*\ 3200\ K,\ 255,\ 241,\ 224\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4ac29bb2bc26516672fb271be2d3e94197}{CarbonArc}}\ =\ 0xFFFAF4\ \textcolor{comment}{/*\ 5200\ K,\ 255,\ 250,\ 244\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a3949bf103125b5848c60b23007640438}{HighNoonSun}}\ =\ 0xFFFFFB\ \textcolor{comment}{/*\ 5400\ K,\ 255,\ 255,\ 251\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4aea06408c5ec417f208456c97fdd325f6}{DirectSunlight}}\ =\ 0xFFFFFF\ \textcolor{comment}{/*\ 6000\ K,\ 255,\ 255,\ 255\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00041}00041\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a7fc8ed40dc9c18fa1ea151eaf1dffbe4}{OvercastSky}}\ =\ 0xC9E2FF\ \textcolor{comment}{/*\ 7000\ K,\ 201,\ 226,\ 255\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a0a12b38dbac82b338a866cdd48cfd0cf}{ClearBlueSky}}\ =\ 0x409CFF\ \textcolor{comment}{/*\ 20000\ K,\ 64,\ 156,\ 255\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//\ @\}}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00046}00046\ \ \ \ \ \textcolor{comment}{//\ Gaseous\ Light\ Sources}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00047}00047\ \ \ \ \ \textcolor{comment}{//\ @\{}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00049}00049\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a804cccb032108b98f8e743f16bac76ab}{WarmFluorescent}}\ =\ 0xFFF4E5\ \textcolor{comment}{/*\ 0\ K,\ 255,\ 244,\ 229\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00051}00051\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a61c79af6a3cd29d8b07c8b4de4103667}{StandardFluorescent}}\ =\ 0xF4FFFA\ \textcolor{comment}{/*\ 0\ K,\ 244,\ 255,\ 250\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00053}00053\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a2fa00dff2714a2a3898086716a29c0d6}{CoolWhiteFluorescent}}\ =\ 0xD4EBFF\ \textcolor{comment}{/*\ 0\ K,\ 212,\ 235,\ 255\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00055}00055\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a60addf791fc630020a0b22b14cf642ef}{FullSpectrumFluorescent}}\ =\ 0xFFF4F2\ \textcolor{comment}{/*\ 0\ K,\ 255,\ 244,\ 242\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00057}00057\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a423124da141863b87eecde65ee516412}{GrowLightFluorescent}}\ =\ 0xFFEFF7\ \textcolor{comment}{/*\ 0\ K,\ 255,\ 239,\ 247\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00059}00059\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a1e252096403a340317b6321905c6feab}{BlackLightFluorescent}}\ =\ 0xA700FF\ \textcolor{comment}{/*\ 0\ K,\ 167,\ 0,\ 255\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00061}00061\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4ac3a9df0dbbdebff52f16e863152e6f72}{MercuryVapor}}\ =\ 0xD8F7FF\ \textcolor{comment}{/*\ 0\ K,\ 216,\ 247,\ 255\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00063}00063\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a38d0f7adda90745b63d6d4ce4bf905da}{SodiumVapor}}\ =\ 0xFFD1B2\ \textcolor{comment}{/*\ 0\ K,\ 255,\ 209,\ 178\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00065}00065\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a3123a56983e6b146a593f59812fbd699}{MetalHalide}}\ =\ 0xF2FCFF\ \textcolor{comment}{/*\ 0\ K,\ 242,\ 252,\ 255\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00067}00067\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a1cba1f306dd29c60dc3dace0fab12a53}{HighPressureSodium}}\ =\ 0xFFB74C\ \textcolor{comment}{/*\ 0\ K,\ 255,\ 183,\ 76\ */},}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00068}00068\ \ \ \ \ \textcolor{comment}{//\ @\}}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00071}00071\ \ \ \ \ \mbox{\hyperlink{namespace_j_l_e_d_a88321436a1a22cbe4bdfc6071292ec0aa1014e0b7bef22636812497a1ba50b930}{Uncorrected}}\ =\ 0xFFFFFF\ \textcolor{comment}{/*\ 255,\ 255,\ 255\ */}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00072}00072\ \};}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00074}00074\ \}\ \textcolor{comment}{/*\ namespace\ JLED\ */}}
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_color_correction_8hpp_source_l00076}00076\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ JLED\_INCLUDE\_COLORCORRECTION\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

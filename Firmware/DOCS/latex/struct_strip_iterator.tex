@@ -1,0 +1,291 @@
+\doxysection{Strip\+Iterator Struct Reference}
+\hypertarget{struct_strip_iterator}{}\label{struct_strip_iterator}\index{StripIterator@{StripIterator}}
+
+
+{\ttfamily \#include $<$Strip\+Data\+Interface.\+hpp$>$}
+
+
+
+Collaboration diagram for Strip\+Iterator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{struct_strip_iterator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{struct_strip_iterator_a325150fd2d1514143bc135d01616c928}{Strip\+Iterator\+\_\+category}} = std\+::bidirectional\+\_\+iterator\+\_\+tag
+\item 
+using \mbox{\hyperlink{struct_strip_iterator_aa0d5cbda0db3c2375dbf18e3b767f1c5}{difference\+\_\+type}} = std\+::ptrdiff\+\_\+t
+\item 
+using \mbox{\hyperlink{struct_strip_iterator_a1f36636deb2ba4330028716304df711b}{value\+\_\+type}} = uint32\+\_\+t
+\item 
+using \mbox{\hyperlink{struct_strip_iterator_a175978c6d88531721269a0beda527c0c}{pointer}} = uint32\+\_\+t\texorpdfstring{$\ast$}{*}
+\item 
+using \mbox{\hyperlink{struct_strip_iterator_abd3a535cc566e979e408c72f2b8ac797}{const\+\_\+ref}} = const uint32\+\_\+t\&
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_strip_iterator_a096d50f09cfd9c9ed953aedaafbaf16d}{operator==}} (const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \&other) const
+\item 
+bool \mbox{\hyperlink{struct_strip_iterator_a7c399982644b29e5ef44d33667c90f59}{operator!=}} (const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \&other) const
+\item 
+bool \mbox{\hyperlink{struct_strip_iterator_ae5108fa80e276ea0e814cde56f9d52cf}{operator$>$}} (const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \&other) const
+\item 
+bool \mbox{\hyperlink{struct_strip_iterator_a6b653640640147448c07b344cb184a19}{operator$>$=}} (const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \&other) const
+\item 
+bool \mbox{\hyperlink{struct_strip_iterator_ae7e8cc068622ff3df88c12f163ba337f}{operator$<$}} (const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \&other) const
+\item 
+bool \mbox{\hyperlink{struct_strip_iterator_a79188e7bb2e04d45b6fd061db5ac765e}{operator$<$=}} (const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \&other) const
+\item 
+\mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \& \mbox{\hyperlink{struct_strip_iterator_aab1b5da68c3f4a74121bac4e9f40db78}{operator++}} ()
+\item 
+\mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \mbox{\hyperlink{struct_strip_iterator_a370db6c6113fc3c101544d6ccd2781cc}{operator++}} (int)
+\item 
+\mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \& \mbox{\hyperlink{struct_strip_iterator_ae64cf43f87e7ed63fbf06af9a80ecacc}{operator-\/-\/}} ()
+\item 
+\mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \mbox{\hyperlink{struct_strip_iterator_a8562cf2431fcb383ac052ec82ea254b3}{operator-\/-\/}} (int)
+\item 
+\mbox{\hyperlink{struct_strip_iterator_abd3a535cc566e979e408c72f2b8ac797}{const\+\_\+ref}} \mbox{\hyperlink{struct_strip_iterator_a7f379e709ece2ac3ffd1b5b911a917b8}{operator\texorpdfstring{$\ast$}{*}}} () const
+\item 
+\mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \& \mbox{\hyperlink{struct_strip_iterator_a47c8d7e32f86494b03e841055c4fe4a5}{operator=}} (const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \&other)
+\item 
+\mbox{\hyperlink{struct_strip_iterator_a7925af8254b51d5034a316fddef18c9f}{Strip\+Iterator}} ()=default
+\item 
+\mbox{\hyperlink{struct_strip_iterator_a5b7e00d8ed0cc08de75e2a170c1b0ba9}{Strip\+Iterator}} (\mbox{\hyperlink{struct_strip_iterator_a175978c6d88531721269a0beda527c0c}{pointer}} \+\_\+data)
+\item 
+\mbox{\hyperlink{struct_strip_iterator_a68af6cea1d42c70fbb658f55e90d5551}{Strip\+Iterator}} (\mbox{\hyperlink{struct_strip_iterator_a175978c6d88531721269a0beda527c0c}{pointer}} \+\_\+data, uint16\+\_\+t \+\_\+index)
+\item 
+\mbox{\hyperlink{struct_strip_iterator_ae596ac0ca0c33095537d80cc738a78e4}{Strip\+Iterator}} (const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \&other)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00013}{13}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{struct_strip_iterator_abd3a535cc566e979e408c72f2b8ac797}\label{struct_strip_iterator_abd3a535cc566e979e408c72f2b8ac797} 
+\index{StripIterator@{StripIterator}!const\_ref@{const\_ref}}
+\index{const\_ref@{const\_ref}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{const\_ref}{const\_ref}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{struct_strip_iterator_abd3a535cc566e979e408c72f2b8ac797}{Strip\+Iterator\+::const\+\_\+ref}} = const uint32\+\_\+t\&}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00018}{18}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+\Hypertarget{struct_strip_iterator_aa0d5cbda0db3c2375dbf18e3b767f1c5}\label{struct_strip_iterator_aa0d5cbda0db3c2375dbf18e3b767f1c5} 
+\index{StripIterator@{StripIterator}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{struct_strip_iterator_aa0d5cbda0db3c2375dbf18e3b767f1c5}{Strip\+Iterator\+::difference\+\_\+type}} = std\+::ptrdiff\+\_\+t}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00015}{15}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+\Hypertarget{struct_strip_iterator_a175978c6d88531721269a0beda527c0c}\label{struct_strip_iterator_a175978c6d88531721269a0beda527c0c} 
+\index{StripIterator@{StripIterator}!pointer@{pointer}}
+\index{pointer@{pointer}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{struct_strip_iterator_a175978c6d88531721269a0beda527c0c}{Strip\+Iterator\+::pointer}} = uint32\+\_\+t\texorpdfstring{$\ast$}{*}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00017}{17}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+\Hypertarget{struct_strip_iterator_a325150fd2d1514143bc135d01616c928}\label{struct_strip_iterator_a325150fd2d1514143bc135d01616c928} 
+\index{StripIterator@{StripIterator}!StripIterator\_category@{StripIterator\_category}}
+\index{StripIterator\_category@{StripIterator\_category}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{StripIterator\_category}{StripIterator\_category}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{struct_strip_iterator_a325150fd2d1514143bc135d01616c928}{Strip\+Iterator\+::\+Strip\+Iterator\+\_\+category}} = std\+::bidirectional\+\_\+iterator\+\_\+tag}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00014}{14}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+\Hypertarget{struct_strip_iterator_a1f36636deb2ba4330028716304df711b}\label{struct_strip_iterator_a1f36636deb2ba4330028716304df711b} 
+\index{StripIterator@{StripIterator}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{struct_strip_iterator_a1f36636deb2ba4330028716304df711b}{Strip\+Iterator\+::value\+\_\+type}} = uint32\+\_\+t}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00016}{16}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_strip_iterator_a7925af8254b51d5034a316fddef18c9f}\label{struct_strip_iterator_a7925af8254b51d5034a316fddef18c9f} 
+\index{StripIterator@{StripIterator}!StripIterator@{StripIterator}}
+\index{StripIterator@{StripIterator}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{StripIterator()}{StripIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Strip\+Iterator\+::\+Strip\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{struct_strip_iterator_a5b7e00d8ed0cc08de75e2a170c1b0ba9}\label{struct_strip_iterator_a5b7e00d8ed0cc08de75e2a170c1b0ba9} 
+\index{StripIterator@{StripIterator}!StripIterator@{StripIterator}}
+\index{StripIterator@{StripIterator}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{StripIterator()}{StripIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Strip\+Iterator\+::\+Strip\+Iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_strip_iterator_a175978c6d88531721269a0beda527c0c}{pointer}}}]{\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00073}{73}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+\Hypertarget{struct_strip_iterator_a68af6cea1d42c70fbb658f55e90d5551}\label{struct_strip_iterator_a68af6cea1d42c70fbb658f55e90d5551} 
+\index{StripIterator@{StripIterator}!StripIterator@{StripIterator}}
+\index{StripIterator@{StripIterator}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{StripIterator()}{StripIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Strip\+Iterator\+::\+Strip\+Iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_strip_iterator_a175978c6d88531721269a0beda527c0c}{pointer}}}]{\+\_\+data,  }\item[{uint16\+\_\+t}]{\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00075}{75}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+\Hypertarget{struct_strip_iterator_ae596ac0ca0c33095537d80cc738a78e4}\label{struct_strip_iterator_ae596ac0ca0c33095537d80cc738a78e4} 
+\index{StripIterator@{StripIterator}!StripIterator@{StripIterator}}
+\index{StripIterator@{StripIterator}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{StripIterator()}{StripIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Strip\+Iterator\+::\+Strip\+Iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00077}{77}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_strip_iterator_a7c399982644b29e5ef44d33667c90f59}\label{struct_strip_iterator_a7c399982644b29e5ef44d33667c90f59} 
+\index{StripIterator@{StripIterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Strip\+Iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+\Hypertarget{struct_strip_iterator_a7f379e709ece2ac3ffd1b5b911a917b8}\label{struct_strip_iterator_a7f379e709ece2ac3ffd1b5b911a917b8} 
+\index{StripIterator@{StripIterator}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_strip_iterator_abd3a535cc566e979e408c72f2b8ac797}{const\+\_\+ref}} Strip\+Iterator\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00059}{59}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+\Hypertarget{struct_strip_iterator_aab1b5da68c3f4a74121bac4e9f40db78}\label{struct_strip_iterator_aab1b5da68c3f4a74121bac4e9f40db78} 
+\index{StripIterator@{StripIterator}!operator++@{operator++}}
+\index{operator++@{operator++}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \& Strip\+Iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00039}{39}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+\Hypertarget{struct_strip_iterator_a370db6c6113fc3c101544d6ccd2781cc}\label{struct_strip_iterator_a370db6c6113fc3c101544d6ccd2781cc} 
+\index{StripIterator@{StripIterator}!operator++@{operator++}}
+\index{operator++@{operator++}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} Strip\+Iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00043}{43}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+\Hypertarget{struct_strip_iterator_ae64cf43f87e7ed63fbf06af9a80ecacc}\label{struct_strip_iterator_ae64cf43f87e7ed63fbf06af9a80ecacc} 
+\index{StripIterator@{StripIterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \& Strip\+Iterator\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00049}{49}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+\Hypertarget{struct_strip_iterator_a8562cf2431fcb383ac052ec82ea254b3}\label{struct_strip_iterator_a8562cf2431fcb383ac052ec82ea254b3} 
+\index{StripIterator@{StripIterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} Strip\+Iterator\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00053}{53}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+\Hypertarget{struct_strip_iterator_ae7e8cc068622ff3df88c12f163ba337f}\label{struct_strip_iterator_ae7e8cc068622ff3df88c12f163ba337f} 
+\index{StripIterator@{StripIterator}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Strip\+Iterator\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00032}{32}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+\Hypertarget{struct_strip_iterator_a79188e7bb2e04d45b6fd061db5ac765e}\label{struct_strip_iterator_a79188e7bb2e04d45b6fd061db5ac765e} 
+\index{StripIterator@{StripIterator}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily bool Strip\+Iterator\+::operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00035}{35}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+\Hypertarget{struct_strip_iterator_a47c8d7e32f86494b03e841055c4fe4a5}\label{struct_strip_iterator_a47c8d7e32f86494b03e841055c4fe4a5} 
+\index{StripIterator@{StripIterator}!operator=@{operator=}}
+\index{operator=@{operator=}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \& Strip\+Iterator\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00063}{63}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+\Hypertarget{struct_strip_iterator_a096d50f09cfd9c9ed953aedaafbaf16d}\label{struct_strip_iterator_a096d50f09cfd9c9ed953aedaafbaf16d} 
+\index{StripIterator@{StripIterator}!operator==@{operator==}}
+\index{operator==@{operator==}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Strip\+Iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+\Hypertarget{struct_strip_iterator_ae5108fa80e276ea0e814cde56f9d52cf}\label{struct_strip_iterator_ae5108fa80e276ea0e814cde56f9d52cf} 
+\index{StripIterator@{StripIterator}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Strip\+Iterator\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00026}{26}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+\Hypertarget{struct_strip_iterator_a6b653640640147448c07b344cb184a19}\label{struct_strip_iterator_a6b653640640147448c07b344cb184a19} 
+\index{StripIterator@{StripIterator}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!StripIterator@{StripIterator}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily bool Strip\+Iterator\+::operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_strip_iterator}{Strip\+Iterator}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_strip_data_interface_8hpp_source_l00029}{29}} of file \mbox{\hyperlink{_strip_data_interface_8hpp_source}{Strip\+Data\+Interface.\+hpp}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+LIBRARIES/\+JLib/\+JLED/include/\mbox{\hyperlink{_strip_data_interface_8hpp}{Strip\+Data\+Interface.\+hpp}}\end{DoxyCompactItemize}

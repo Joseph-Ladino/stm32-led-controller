@@ -42,7 +42,9 @@ public:
 	bool phyLinkStatus() override;
 	bool waitForLink(uint16_t timeoutMs) override;
 	void softReset();
+	void hardReset();
 	bool init(void*) override;
+	bool reinit();
 
 	W5500Socket& getFreeSocket() ;
 

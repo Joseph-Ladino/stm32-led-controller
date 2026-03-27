@@ -1,0 +1,16 @@
+<map id="LIBRARIES/JLib/JLED/include/GammaCorrection.hpp" name="LIBRARIES/JLib/JLED/include/GammaCorrection.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="45,5,246,48"/>
+<area shape="rect" id="Node000002" href="$_color_correction_8hpp.html" title=" " alt="" coords="52,96,238,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,64,148,96,143,96,143,64"/>
+<area shape="rect" id="Node000003" href="$_color_8hpp.html" title=" " alt="" coords="67,187,224,229"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="148,154,148,186,143,186,143,154"/>
+<area shape="rect" id="Node000004" href="$_strip_types_8hpp.html" title=" " alt="" coords="67,277,224,320"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="148,245,148,277,143,277,143,245"/>
+<area shape="rect" id="Node000005" href="$_d_m_a_strip_8hpp.html" title=" " alt="" coords="5,459,163,501"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="128,335,112,369,98,417,90,459,84,458,93,415,107,367,123,332"/>
+<area shape="rect" id="Node000006" href="$_w_s28xx_strip_8hpp.html" title=" " alt="" coords="122,368,294,411"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="171,331,196,366,191,369,166,334"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="168,422,115,460,111,456,165,418"/>
+<area shape="rect" id="Node000007" href="$_strip_builder_8hpp.html" title=" " alt="" coords="187,459,349,501"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="233,422,256,457,252,460,228,425"/>
+</map>

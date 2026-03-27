@@ -4,6 +4,22 @@
 
 {\ttfamily \#include $<$WS28xx\+Strip.\+hpp$>$}
 
+
+
+Collaboration diagram for JLED\+::WSStrip\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{struct_j_l_e_d_1_1_w_s_strip_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_state_afab8d9c9d9c637fa1d7944313493a5a7}{operator==}} (const \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_state}{WSStrip\+State}} \&other)
+\item 
+bool \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_state_a85e4ab42d15c9aeeee4c40117395eaa4}{operator!=}} (const \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_state}{WSStrip\+State}} \&other)
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -11,7 +27,15 @@ bool \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_state_a21759ab4d004cce59cebb5
 \item 
 uint8\+\_\+t \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_state_accae5ea75f69a22b5d39cf75248c4d27}{brightness}} = 255
 \item 
-\mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_state_a30c3ea8510a34f45033db6ca38f4b1b4}{color}} = 0x00
+uint32\+\_\+t \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_state_a3763ab849f75e2f5eb2cb257597d4034}{color}}
+\item 
+\mbox{\hyperlink{namespace_j_l_e_d_a88321436a1a22cbe4bdfc6071292ec0a}{Color\+Correction}} \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_state_a08495c43b03b10a74f0874d28991ee98}{color\+Correction}} = \mbox{\hyperlink{namespace_j_l_e_d_a88321436a1a22cbe4bdfc6071292ec0aa1014e0b7bef22636812497a1ba50b930}{Color\+Correction\+::\+Uncorrected}}
+\item 
+\mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4}{Temperature\+Correction}} \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_state_ac4907e9aa75b767f829c6b82409bd819}{temp\+Correction}} = \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a1014e0b7bef22636812497a1ba50b930}{Temperature\+Correction\+::\+Uncorrected}}
+\item 
+bool \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_state_ad61a621030d3df3cd67c20c4244ed5f0}{gamma\+Enabled}} = true
+\item 
+\mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{Strip\+Animation\+Manager\+::\+Animation\+Type}} \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_state_a834a00dd7ac6f502170b3b3b66570ecd}{animation}}
 \end{DoxyCompactItemize}
 
 
@@ -22,7 +46,40 @@ Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00018}{18}} of f
 
 
 
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_j_l_e_d_1_1_w_s_strip_state_a85e4ab42d15c9aeeee4c40117395eaa4}\label{struct_j_l_e_d_1_1_w_s_strip_state_a85e4ab42d15c9aeeee4c40117395eaa4} 
+\index{JLED::WSStripState@{JLED::WSStripState}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!JLED::WSStripState@{JLED::WSStripState}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool JLED\+::\+WSStrip\+State\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_state}{WSStrip\+State}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00038}{38}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_w_s_strip_state_afab8d9c9d9c637fa1d7944313493a5a7}\label{struct_j_l_e_d_1_1_w_s_strip_state_afab8d9c9d9c637fa1d7944313493a5a7} 
+\index{JLED::WSStripState@{JLED::WSStripState}!operator==@{operator==}}
+\index{operator==@{operator==}!JLED::WSStripState@{JLED::WSStripState}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool JLED\+::\+WSStrip\+State\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_j_l_e_d_1_1_w_s_strip_state}{WSStrip\+State}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00033}{33}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+
+
 \doxysubsection{Member Data Documentation}
+\Hypertarget{struct_j_l_e_d_1_1_w_s_strip_state_a834a00dd7ac6f502170b3b3b66570ecd}\label{struct_j_l_e_d_1_1_w_s_strip_state_a834a00dd7ac6f502170b3b3b66570ecd} 
+\index{JLED::WSStripState@{JLED::WSStripState}!animation@{animation}}
+\index{animation@{animation}!JLED::WSStripState@{JLED::WSStripState}}
+\doxysubsubsection{\texorpdfstring{animation}{animation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_j_l_e_d_1_1_strip_animation_manager_a265aa23667425ac3a9e0748d82f8d4d1}{Strip\+Animation\+Manager\+::\+Animation\+Type}} JLED\+::\+WSStrip\+State\+::animation}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00027}{27}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
 \Hypertarget{struct_j_l_e_d_1_1_w_s_strip_state_accae5ea75f69a22b5d39cf75248c4d27}\label{struct_j_l_e_d_1_1_w_s_strip_state_accae5ea75f69a22b5d39cf75248c4d27} 
 \index{JLED::WSStripState@{JLED::WSStripState}!brightness@{brightness}}
 \index{brightness@{brightness}!JLED::WSStripState@{JLED::WSStripState}}
@@ -33,15 +90,35 @@ Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00018}{18}} of f
 
 Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
 
-\Hypertarget{struct_j_l_e_d_1_1_w_s_strip_state_a30c3ea8510a34f45033db6ca38f4b1b4}\label{struct_j_l_e_d_1_1_w_s_strip_state_a30c3ea8510a34f45033db6ca38f4b1b4} 
+\Hypertarget{struct_j_l_e_d_1_1_w_s_strip_state_a3763ab849f75e2f5eb2cb257597d4034}\label{struct_j_l_e_d_1_1_w_s_strip_state_a3763ab849f75e2f5eb2cb257597d4034} 
 \index{JLED::WSStripState@{JLED::WSStripState}!color@{color}}
 \index{color@{color}!JLED::WSStripState@{JLED::WSStripState}}
 \doxysubsubsection{\texorpdfstring{color}{color}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_j_l_e_d_1_1_color}{Color}} JLED\+::\+WSStrip\+State\+::color = 0x00}
+{\footnotesize\ttfamily uint32\+\_\+t JLED\+::\+WSStrip\+State\+::color}
 
 
 
 Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00021}{21}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_w_s_strip_state_a08495c43b03b10a74f0874d28991ee98}\label{struct_j_l_e_d_1_1_w_s_strip_state_a08495c43b03b10a74f0874d28991ee98} 
+\index{JLED::WSStripState@{JLED::WSStripState}!colorCorrection@{colorCorrection}}
+\index{colorCorrection@{colorCorrection}!JLED::WSStripState@{JLED::WSStripState}}
+\doxysubsubsection{\texorpdfstring{colorCorrection}{colorCorrection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_j_l_e_d_a88321436a1a22cbe4bdfc6071292ec0a}{Color\+Correction}} JLED\+::\+WSStrip\+State\+::color\+Correction = \mbox{\hyperlink{namespace_j_l_e_d_a88321436a1a22cbe4bdfc6071292ec0aa1014e0b7bef22636812497a1ba50b930}{Color\+Correction\+::\+Uncorrected}}}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00022}{22}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
+\Hypertarget{struct_j_l_e_d_1_1_w_s_strip_state_ad61a621030d3df3cd67c20c4244ed5f0}\label{struct_j_l_e_d_1_1_w_s_strip_state_ad61a621030d3df3cd67c20c4244ed5f0} 
+\index{JLED::WSStripState@{JLED::WSStripState}!gammaEnabled@{gammaEnabled}}
+\index{gammaEnabled@{gammaEnabled}!JLED::WSStripState@{JLED::WSStripState}}
+\doxysubsubsection{\texorpdfstring{gammaEnabled}{gammaEnabled}}
+{\footnotesize\ttfamily bool JLED\+::\+WSStrip\+State\+::gamma\+Enabled = true}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00024}{24}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
 
 \Hypertarget{struct_j_l_e_d_1_1_w_s_strip_state_a21759ab4d004cce59cebb5c103a5881d}\label{struct_j_l_e_d_1_1_w_s_strip_state_a21759ab4d004cce59cebb5c103a5881d} 
 \index{JLED::WSStripState@{JLED::WSStripState}!powerOn@{powerOn}}
@@ -53,8 +130,18 @@ Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00021}{21}} of f
 
 Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
 
+\Hypertarget{struct_j_l_e_d_1_1_w_s_strip_state_ac4907e9aa75b767f829c6b82409bd819}\label{struct_j_l_e_d_1_1_w_s_strip_state_ac4907e9aa75b767f829c6b82409bd819} 
+\index{JLED::WSStripState@{JLED::WSStripState}!tempCorrection@{tempCorrection}}
+\index{tempCorrection@{tempCorrection}!JLED::WSStripState@{JLED::WSStripState}}
+\doxysubsubsection{\texorpdfstring{tempCorrection}{tempCorrection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4}{Temperature\+Correction}} JLED\+::\+WSStrip\+State\+::temp\+Correction = \mbox{\hyperlink{namespace_j_l_e_d_ad8646c36e795f7e093254dacd8a88ed4a1014e0b7bef22636812497a1ba50b930}{Temperature\+Correction\+::\+Uncorrected}}}
+
+
+
+Definition at line \mbox{\hyperlink{_w_s28xx_strip_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{_w_s28xx_strip_8hpp_source}{WS28xx\+Strip.\+hpp}}.
+
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-JLib/\+JLED/include/\mbox{\hyperlink{_w_s28xx_strip_8hpp}{WS28xx\+Strip.\+hpp}}\end{DoxyCompactItemize}
+LIBRARIES/\+JLib/\+JLED/include/\mbox{\hyperlink{_w_s28xx_strip_8hpp}{WS28xx\+Strip.\+hpp}}\end{DoxyCompactItemize}

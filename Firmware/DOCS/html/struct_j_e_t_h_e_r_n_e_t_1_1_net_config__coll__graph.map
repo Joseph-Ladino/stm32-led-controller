@@ -1,0 +1,7 @@
+<map id="JETHERNET::NetConfig" name="JETHERNET::NetConfig">
+<area shape="rect" id="Node000001" title="Network configuration." alt="" coords="84,443,243,512"/>
+<area shape="rect" id="Node000002" href="$struct_j_e_t_h_e_r_n_e_t_1_1_net_m_a_c.html" title="MAC address stored internally as a 48 bit bitset." alt="" coords="5,5,156,331"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,330,153,426,147,427,121,331"/>
+<area shape="rect" id="Node000003" href="$struct_j_e_t_h_e_r_n_e_t_1_1_net_i_p.html" title="IP address stored internally as a uint32." alt="" coords="181,5,314,331"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="218,331,193,419,189,428,184,427,187,418,213,330"/>
+</map>
